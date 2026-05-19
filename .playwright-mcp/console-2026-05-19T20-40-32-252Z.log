@@ -1,0 +1,19 @@
+[     264ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[     264ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0
+[     265ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[     265ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0
+[     435ms] [LOG] TypeError: window.__gpp is not a function
+    at new P (https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:1:22327)
+    at <instance_members_initializer> (https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:1:130468)
+    at new Cn (https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:1:130414)
+    at new Mn (https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:1:136973)
+    at Ti (https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:1:148694)
+    at https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/sdk.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:2:399733 @ https://sdk.privacy-center.org/sdk/e0bf57ced25a19e7e26c167b511d816f7387ecc5/modern/gpp-library.e0bf57ced25a19e7e26c167b511d816f7387ecc5.js:0
+[    3968ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[    3968ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0
+[    3968ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[    3968ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0
+[    4002ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[    4002ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0
+[    4002ms] [WARNING] Failed to decode downloaded font: https://calai.app/Inter-Regular.ttf @ https://calai.app/tos:0
+[    4002ms] [WARNING] OTS parsing error: invalid sfntVersion: 168430090 @ https://calai.app/tos:0

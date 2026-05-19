@@ -1,0 +1,2 @@
+3. [GET] https://calai.app/_astro/access.PNxYe3gj.css => [200] 
+27. [GET] https://calai.app/_astro/bricolage-grotesque-latin-wght-normal.SiLHXWCe.woff2 => [200] 

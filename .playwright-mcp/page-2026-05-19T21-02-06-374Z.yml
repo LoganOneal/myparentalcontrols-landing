@@ -1,0 +1,258 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Cal AI Logo" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "Cal AI Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "Home" [ref=e8] [cursor=pointer]:
+            - /url: /
+          - link "Blog" [ref=e9] [cursor=pointer]:
+            - /url: /blog
+          - link "Jobs" [ref=e10] [cursor=pointer]:
+            - /url: mailto:apply@calai.app
+          - link "Press" [ref=e11] [cursor=pointer]:
+            - /url: /press
+          - link "Manage Subscription" [ref=e12] [cursor=pointer]:
+            - /url: /manage-subscription
+          - link "Login" [ref=e13] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e14]:
+        - link "Download on the App Store" [ref=e15] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img [ref=e16]
+        - link "Get it on Google Play" [ref=e22] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Get it on Google Play" [ref=e23]
+  - main [ref=e24]:
+    - article [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Privacy Policy" [level=1] [ref=e27]
+        - paragraph [ref=e28]: "Last Updated: November 28, 2025"
+        - paragraph [ref=e29]: This Privacy Policy describes how Cal AI, Inc. collects, uses, processes, shares, and protects Your information when You use the Cal AI mobile application, website, and related services (collectively, the “Service”). By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+        - heading "1. Interpretation and Definitions" [level=2] [ref=e30]
+        - heading "1.1 Interpretation" [level=3] [ref=e31]
+        - paragraph [ref=e32]: Capitalized terms have the meanings assigned to them in this Policy.
+        - heading "1.2 Definitions" [level=3] [ref=e33]
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - strong [ref=e36]: Account
+            - text: means the unique profile created for You to access the Service.
+          - listitem [ref=e37]:
+            - strong [ref=e38]: Application
+            - text: means the mobile application titled “Cal AI – Calorie Tracker.”
+          - listitem [ref=e39]:
+            - strong [ref=e40]: Company, We, Us, or Our
+            - text: "means Cal AI, Inc., a Delaware corporation, with mailing address 160 W. Camino Real #594, Boca Raton, FL 33432, United States."
+          - listitem [ref=e41]:
+            - strong [ref=e42]: Device
+            - text: means any device used to access the Service.
+          - listitem [ref=e43]:
+            - strong [ref=e44]: Personal Data
+            - text: means information that identifies or can reasonably be linked to an individual. Personal Data includes identifiable health information.
+          - listitem [ref=e45]:
+            - strong [ref=e46]: Health Data
+            - text: means information You provide relating to Your physical characteristics, health, nutrition, goals, or activity, including weight, height, food logs, health attributes, body composition, and progress photos.
+          - listitem [ref=e47]:
+            - strong [ref=e48]: Usage Data
+            - text: means data collected automatically through use of the Service, including device information, activity logs, and analytics data.
+          - listitem [ref=e49]:
+            - strong [ref=e50]: User Content
+            - text: means photos, images, text, food entries, metadata, or other inputs You upload or submit through the Service.
+          - listitem [ref=e51]:
+            - strong [ref=e52]: Website
+            - text: means calai.app.
+          - listitem [ref=e53]:
+            - strong [ref=e54]: You
+            - text: means the individual using the Service or the organization on whose behalf the Service is used.
+        - heading "2. Types of Data We Collect" [level=2] [ref=e55]
+        - paragraph [ref=e56]: We collect the categories of data described below. Certain categories may qualify as health information, sensitive personal information, or biometric-adjacent data under various privacy laws.
+        - heading "2.1 Personal Data You Provide" [level=3] [ref=e57]
+        - paragraph [ref=e58]: "We may collect the following Personal Data when You create an Account or use the Service:"
+        - list [ref=e59]:
+          - listitem [ref=e60]: First name
+          - listitem [ref=e61]: Last name
+          - listitem [ref=e62]: Email address
+          - listitem [ref=e63]: Optional profile details You provide
+        - heading "2.2 Health and Nutrition Data" [level=3] [ref=e64]
+        - paragraph [ref=e65]: "To provide calorie estimation and nutrition tracking features, We collect:"
+        - list [ref=e66]:
+          - listitem [ref=e67]: Weight
+          - listitem [ref=e68]: Height
+          - listitem [ref=e69]: Food logs and food data (including items photographed, scanned, or logged manually)
+          - listitem [ref=e70]: Progress photos
+          - listitem [ref=e71]: Nutrition goals
+          - listitem [ref=e72]: Any other health information You choose to enter into the Application
+        - paragraph [ref=e73]: You decide which health information to provide. The Service cannot function properly without basic nutrition data, such as food entries and photos.
+        - heading "2.3 User Content (Including Photos)" [level=3] [ref=e74]
+        - paragraph [ref=e75]: "User Content includes:"
+        - list [ref=e76]:
+          - listitem [ref=e77]: Photos of food uploaded for calorie analysis
+          - listitem [ref=e78]: Progress photos
+          - listitem [ref=e79]: Text entries and logs
+        - paragraph [ref=e80]:
+          - strong [ref=e81]: "Important:"
+          - text: We may use anonymized or aggregated food images to improve Our models, algorithms, and product features. We do not associate such images with Your identity when used for internal development.
+        - heading "2.4 Usage Data" [level=3] [ref=e82]
+        - paragraph [ref=e83]: "We automatically collect:"
+        - list [ref=e84]:
+          - listitem [ref=e85]: Device type, operating system, and app version
+          - listitem [ref=e86]: IP address
+          - listitem [ref=e87]: Time stamps and activity logs
+          - listitem [ref=e88]: Crash data
+          - listitem [ref=e89]: Feature usage analytics
+          - listitem [ref=e90]: Performance data
+        - paragraph [ref=e91]: This data helps Us secure, improve, and optimize the Service.
+        - heading "2.5 Cookies and Tracking Technologies" [level=3] [ref=e92]
+        - paragraph [ref=e93]: The Website uses cookies, tags, and similar technologies for analytics, functionality, and security. The Application may use mobile identifiers for analytics.
+        - heading "3. How We Use Your Data" [level=2] [ref=e94]
+        - paragraph [ref=e95]: "We use the collected data for the following purposes:"
+        - heading "3.1 To Provide and Improve the Service" [level=3] [ref=e96]
+        - list [ref=e97]:
+          - listitem [ref=e98]: Food identification and calorie estimation
+          - listitem [ref=e99]: Nutrition tracking
+          - listitem [ref=e100]: Personalization and recommendations
+          - listitem [ref=e101]: Machine learning model improvement
+          - listitem [ref=e102]: Account management
+          - listitem [ref=e103]: Service stability and debugging
+        - heading "3.2 To Improve AI and Computer Vision Models" [level=3] [ref=e104]
+        - paragraph [ref=e105]: "We use food images and related User Content to:"
+        - list [ref=e106]:
+          - listitem [ref=e107]: Train and improve AI models
+          - listitem [ref=e108]: Enhance accuracy of calorie estimates
+          - listitem [ref=e109]: Improve overall product performance
+        - paragraph [ref=e110]: Such use is strictly anonymized or aggregated and not linked to Your identity.
+        - heading "3.3 Communications" [level=3] [ref=e111]
+        - paragraph [ref=e112]: "We may contact You about:"
+        - list [ref=e113]:
+          - listitem [ref=e114]: Updates and new features
+          - listitem [ref=e115]: Service-related notifications
+          - listitem [ref=e116]: Customer support responses
+        - heading "3.4 Marketing (Optional)" [level=3] [ref=e117]
+        - paragraph [ref=e118]: We may send You promotional emails unless You opt out.
+        - heading "3.5 Legal and Compliance" [level=3] [ref=e119]
+        - paragraph [ref=e120]: "We may use Your data to:"
+        - list [ref=e121]:
+          - listitem [ref=e122]: Detect or prevent fraud
+          - listitem [ref=e123]: Comply with law enforcement obligations
+          - listitem [ref=e124]: Protect Our rights
+        - heading "3.6 Business Transfers" [level=3] [ref=e125]
+        - paragraph [ref=e126]: If We engage in a merger, acquisition, financing, or asset sale, Your information may be transferred as permitted by law.
+        - heading "4. Legal Bases for Processing (For GDPR-Covered Users)" [level=2] [ref=e127]
+        - paragraph [ref=e128]: "Where applicable, We rely on:"
+        - list [ref=e129]:
+          - listitem [ref=e130]: Consent
+          - listitem [ref=e131]: Contract performance
+          - listitem [ref=e132]: Legitimate interests (e.g., service improvement, security)
+          - listitem [ref=e133]: Legal obligations
+        - heading "5. How We Share Personal Data" [level=2] [ref=e134]
+        - paragraph [ref=e135]: "We may share Personal Data:"
+        - heading "5.1 Service Providers" [level=3] [ref=e136]
+        - paragraph [ref=e137]: "With vendors who support the Service, such as:"
+        - list [ref=e138]:
+          - listitem [ref=e139]: Cloud hosting
+          - listitem [ref=e140]: Analytics providers
+          - listitem [ref=e141]: Customer support tools
+        - heading "5.2 Business Transfers" [level=3] [ref=e142]
+        - paragraph [ref=e143]: As part of corporate transactions.
+        - heading "5.3 Legal Compliance" [level=3] [ref=e144]
+        - paragraph [ref=e145]: With law enforcement or regulators when legally required.
+        - heading "5.4 With Your Consent" [level=3] [ref=e146]
+        - paragraph [ref=e147]: Where You direct Us to share information.
+        - heading "5.5 Aggregated or Anonymized Data" [level=3] [ref=e148]
+        - paragraph [ref=e149]:
+          - text: We may share aggregated or non-identifiable data for analytics, research, or business purposes.
+          - strong [ref=e150]: We do not sell Your Personal Data.
+        - heading "6. User Content and License Rights" [level=2] [ref=e151]
+        - paragraph [ref=e152]: By submitting User Content, You grant the Company a worldwide, royalty-free, sublicensable license to use, store, process, reproduce, modify, and create derivative works from Your User Content solely to operate, maintain, and improve the Service, including internal AI model training.
+        - paragraph [ref=e153]: We do not publicly display Your photos or content without Your express consent.
+        - paragraph [ref=e154]:
+          - strong [ref=e155]: Progress photos are never used for model training.
+        - heading "7. Retention of Data" [level=2] [ref=e156]
+        - paragraph [ref=e157]: "We retain:"
+        - list [ref=e158]:
+          - listitem [ref=e159]: Personal Data for as long as Your Account is active or necessary for the purposes described
+          - listitem [ref=e160]: Health Data until You delete it or delete Your Account
+          - listitem [ref=e161]: Usage Data for a shorter period unless needed for security
+          - listitem [ref=e162]: Backups for limited periods as part of standard retention practices
+        - paragraph [ref=e163]: We delete or anonymize data when no longer needed unless legally required to retain it.
+        - heading "8. Data Transfers" [level=2] [ref=e164]
+        - paragraph [ref=e165]: Your information may be transferred to and processed on servers outside Your jurisdiction. We implement safeguards as required by law, including standard contractual clauses for international transfers.
+        - heading "9. Your Privacy Rights" [level=2] [ref=e166]
+        - paragraph [ref=e167]: "Depending on Your jurisdiction, You may have rights to:"
+        - list [ref=e168]:
+          - listitem [ref=e169]: Access Your Personal Data
+          - listitem [ref=e170]: Correct inaccurate data
+          - listitem [ref=e171]: Delete Personal Data
+          - listitem [ref=e172]: Export Your data
+          - listitem [ref=e173]: Withdraw consent
+          - listitem [ref=e174]: Object to processing
+          - listitem [ref=e175]: Request restriction of processing
+        - paragraph [ref=e176]: You may exercise rights through in-app settings or by contacting Us at support@calai.app.
+        - heading "10. Deleting Your Personal Data" [level=2] [ref=e177]
+        - paragraph [ref=e178]: "You may request deletion of:"
+        - list [ref=e179]:
+          - listitem [ref=e180]: Account
+          - listitem [ref=e181]: Progress photos
+          - listitem [ref=e182]: Food logs
+          - listitem [ref=e183]: Profile data
+        - paragraph [ref=e184]: Some data may persist where legally required.
+        - heading "11. Security" [level=2] [ref=e185]
+        - paragraph [ref=e186]: We use administrative, technical, and physical safeguards to protect Your data. However, no online system is entirely secure.
+        - heading "12. Children’s Privacy" [level=2] [ref=e187]
+        - paragraph [ref=e188]: The Service is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+        - heading "13. Third-Party Links" [level=2] [ref=e189]
+        - paragraph [ref=e190]: The Service may contain links to third-party websites or services. Their privacy practices are their own, and We do not control or endorse them.
+        - heading "14. Changes to This Privacy Policy" [level=2] [ref=e191]
+        - paragraph [ref=e192]: We may update this Policy from time to time. Updates become effective when posted. We may notify You by email or through the Application for material changes.
+        - heading "15. Contact Us" [level=2] [ref=e193]
+        - paragraph [ref=e194]: "If You have questions or requests related to this Privacy Policy, You may contact Us:"
+        - list [ref=e195]:
+          - listitem [ref=e196]: "Email: support@calai.app"
+  - contentinfo [ref=e197]:
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - img "Cal AI Logo" [ref=e200]
+        - paragraph [ref=e201]: Download Cal AI
+        - generic [ref=e202]:
+          - link "Download on the App Store" [ref=e203] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img [ref=e204]
+          - link "Get it on Google Play" [ref=e210] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Get it on Google Play" [ref=e211]
+      - generic [ref=e212]:
+        - heading "Legal" [level=3] [ref=e213]
+        - list [ref=e214]:
+          - listitem [ref=e215]:
+            - link "Privacy Policy" [ref=e216] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e217]:
+            - link "Terms of use" [ref=e218] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e219]:
+            - link "Sweepstakes Rules" [ref=e220] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e221]:
+            - button "Manage Cookie Preferences" [ref=e222]
+      - generic [ref=e223]:
+        - heading "Company" [level=3] [ref=e224]
+        - list [ref=e225]:
+          - listitem [ref=e226]:
+            - link "Contact" [ref=e227] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e228]:
+      - paragraph [ref=e229]: © Copyright 2026, All rights reserved
+      - generic [ref=e230]:
+        - link "LinkedIn" [ref=e231] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e232]
+        - link "Instagram" [ref=e234] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e235]
+        - link "TikTok" [ref=e239] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e240]
+  - button "Open Next.js Dev Tools" [ref=e247] [cursor=pointer]:
+    - img [ref=e248]

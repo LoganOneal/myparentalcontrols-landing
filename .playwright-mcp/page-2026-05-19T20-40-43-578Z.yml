@@ -1,0 +1,496 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Cal AI Logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Cal AI Logo" [ref=e7]
+        - generic [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Blog" [ref=e10] [cursor=pointer]:
+            - /url: /blog
+          - link "Jobs" [ref=e11] [cursor=pointer]:
+            - /url: mailto:apply@calai.app
+          - link "Press" [ref=e12] [cursor=pointer]:
+            - /url: /press
+          - link "Manage Subscription" [ref=e13] [cursor=pointer]:
+            - /url: /manage-subscription
+          - link "Login" [ref=e14] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e15]:
+        - link [ref=e16] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img [ref=e17]
+        - link "Google Play" [ref=e42] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e43]
+  - generic [ref=e44]:
+    - generic [ref=e45]:
+      - heading "Is the Zone Diet Healthy? Pros & Cons Explained" [level=1] [ref=e46]
+      - generic [ref=e47]:
+        - generic [ref=e48]: •
+        - time [ref=e49]: April 27, 2025
+      - img "Is the Zone Diet Healthy? Pros & Cons Explained" [ref=e50]
+    - generic [ref=e51]:
+      - paragraph [ref=e52]:
+        - text: Many people struggle with weight loss and maintenance, leading them to try different diets to help them achieve their goals. The Zone Diet is an option that has been around for a while and may help some people meet their weight loss goals. But as with any diet, it's essential to determine whether the Zone Diet is healthy before getting started.
+        - link "How Long Does Reverse Dieting Take" [ref=e53] [cursor=pointer]:
+          - /url: https://www.calai.app/blog/how-long-does-reverse-dieting-take
+        - text: "? This article will help you answer the question, is the Zone Diet healthy?, to achieve improved health, sustainable weight management, and increased energy levels through a balanced and practical dietary approach like the Zone Diet. Calorie tracking can also help you achieve your objectives on the Zone Diet. Cal AI’s"
+        - link "calorie tracker" [ref=e54] [cursor=pointer]:
+          - /url: https://www.calai.app
+        - text: can help you understand how many calories you're consuming and how they fit into the Zone Diet's unique macronutrient ratios for improved health and sustainable weight management.
+      - heading "What is the Zone Diet?" [level=2] [ref=e55]
+      - img "Person Eating - Is the Zone Diet Healthy" [ref=e56]
+      - paragraph [ref=e57]:
+        - text: The Zone Diet is a dietary approach developed by Dr. Barry Sears. It
+        - link "emphasizes a balanced ratio" [ref=e58] [cursor=pointer]:
+          - /url: https://www.healthline.com/nutrition/zone-diet
+        - text: "of macronutrients:"
+      - list [ref=e59]:
+        - listitem [ref=e60]: 40% carbohydrates
+        - listitem [ref=e61]: 30% protein
+        - listitem [ref=e62]: 30% fat
+      - paragraph
+      - paragraph [ref=e63]: "The goal is to promote hormonal balance and reduce inflammation. This can help you:"
+      - list [ref=e64]:
+        - listitem [ref=e65]: Lose weight
+        - listitem [ref=e66]: Improve your health
+        - listitem [ref=e67]: Increase your energy levels
+      - paragraph
+      - paragraph [ref=e68]: The diet has many ways to follow, and its main pillars are essential to remember.
+      - heading "Can You Burn Fat Even in Your Sleep, Without Feeling Hungry" [level=3] [ref=e69]
+      - paragraph [ref=e70]:
+        - text: Barry Sears, PhD, the biochemist who created this best-selling diet, claims it can happen in “
+        - emphasis [ref=e71]: The Zone
+        - text: ".” The Zone Diet instructs its followers to stick to eating a specific ratio of:"
+      - list [ref=e72]:
+        - listitem [ref=e73]: 40% carbs
+        - listitem [ref=e74]: 30% protein
+        - listitem [ref=e75]: 30% fat
+      - paragraph
+      - paragraph [ref=e76]: As part of the diet, carbs should have a low glycemic index. This means they provide a slow release of sugar into the blood to keep you fuller for longer. Protein should be lean, and fat should be mostly monounsaturated.
+      - heading "A Little Background on the Zone Diet" [level=3] [ref=e77]
+      - paragraph [ref=e78]:
+        - text: The Zone Diet was developed over 30 years ago by an American biochemist, Barry Sears. His best-selling book,
+        - emphasis [ref=e79]: The Zone
+        - text: ", was published in 1995. Dr. Sears created this diet after losing family members to early deaths from heart attacks. He felt he was at risk unless he found a way to fight it. The Zone Diet claims to reduce the inflammation in your body."
+      - 'heading "The Zone Diet: An Overview of Claims and Rankings" [level=4] [ref=e80]'
+      - paragraph [ref=e81]: Dr. Sears proposed that inflammation was why people gain weight, become sick, and age faster. Proponents of the diet claim that once you reduce inflammation, you will lose fat at the fastest rate possible, slow down aging, reduce your risk of chronic disease, and improve your performance.
+      - paragraph
+      - paragraph [ref=e82]:
+        - text: The 2021 U.S. News and World Report Best Diets ranks the
+        - link "Zone Diet number 20" [ref=e83] [cursor=pointer]:
+          - /url: https://www.verywellfit.com/the-zone-diet-4769505
+        - text: in Best Diets Overall, giving it an overall score 3/5. The Zone Diet has no specific phases and is designed to be followed for a lifetime.
+      - heading "Two Ways to Follow the Zone Diet" [level=3] [ref=e84]
+      - paragraph [ref=e85]: Two ways to follow the Zone Diet are the hand-eye method or Zone food blocks. Most people start with the hand-eye method and progress to using Zone food blocks later, as it is more advanced. You can switch between both methods whenever you feel like it, as they each have their benefits.
+      - heading "The Hand-eye Method" [level=4] [ref=e86]
+      - paragraph [ref=e87]:
+        - text: The hand-eye method is the easiest way to start the Zone Diet. As the name suggests,
+        - link "your hand and eye" [ref=e88] [cursor=pointer]:
+          - /url: https://blog.zoneliving.com/lifestyletips/zone-diet-everything-you-need-to-know
+        - text: are the only tools you need to get started, although wearing a watch is also recommended to keep an eye on when to eat. In this method, your hand takes on several uses. You use it to determine your portion sizes. Your five fingers remind you to eat five times daily and never go without food for five hours. Meanwhile, you use your eyes to estimate portions on your plate.
+      - paragraph
+      - paragraph [ref=e89]: To design a Zone-friendly plate, you first need to divide your plate into thirds.
+      - list [ref=e90]:
+        - listitem [ref=e91]:
+          - strong [ref=e92]: "One-third lean protein:"
+          - text: One-third of your plate should have a source of lean protein, roughly the size and thickness of your palm.
+        - listitem [ref=e93]:
+          - strong [ref=e94]: "Two-thirds carbs:"
+          - text: Two-thirds of your plate should be filled with carbs with a low glycemic index.
+        - listitem [ref=e95]:
+          - strong [ref=e96]: "A little fat:"
+          - text: "Add a dash of monounsaturated fat to your plate, such as:"
+          - list [ref=e97]:
+            - listitem [ref=e98]: Olive oil
+            - listitem [ref=e99]: Avocado
+            - listitem [ref=e100]: Almonds
+      - paragraph
+      - paragraph [ref=e101]: The hand-eye method is a simple way for a beginner to follow the Zone Diet. It is also flexible and allows you to eat at restaurants on the Zone Diet. Use your hand and eyes as tools to choose options that fit Zone recommendations.
+      - heading "The Zone Food Block Method" [level=4] [ref=e102]
+      - paragraph [ref=e103]:
+        - text: Zone food blocks allow you to
+        - link "personalize the Zone Diet" [ref=e104] [cursor=pointer]:
+          - /url: https://catalystfitness.typepad.com/files/food-block-guide.pdf
+        - text: "to your body by calculating how many grams of protein, carbs, and fat you can have per day. The number of Zone blocks you should eat per day depends on your measurements of your:"
+      - list [ref=e105]:
+        - listitem [ref=e106]: Weight
+        - listitem [ref=e107]: Height
+        - listitem [ref=e108]: Waist
+        - listitem [ref=e109]: Hip
+      - paragraph
+      - paragraph [ref=e110]: You can calculate your number here. The average male eats 14 Zone blocks daily, while the average female eats 11 Zone blocks daily.
+      - paragraph
+      - paragraph [ref=e111]: "A main meal, such as breakfast, lunch, or dinner, contains three to five Zone blocks, while a snack always contains one Zone block. Each Zone block is made of a:"
+      - list [ref=e112]:
+        - listitem [ref=e113]:
+          - strong [ref=e114]: "Protein block:"
+          - text: Contains 7 grams of protein
+        - listitem [ref=e115]:
+          - strong [ref=e116]: "Fat block:"
+          - text: Contains 1.5 grams of fat.
+        - listitem [ref=e117]:
+          - strong [ref=e118]: "Carb block:"
+          - text: Contains 9 grams of carbs
+      - heading "Four Pillars of the Zone Diet" [level=3] [ref=e119]
+      - paragraph [ref=e120]: The Zone Diet also has four pillars. Bringing these together can make the Zone part of a person’s way of life.
+      - paragraph
+      - paragraph [ref=e121]: "A person should:"
+      - list [ref=e122]:
+        - listitem [ref=e123]:
+          - strong [ref=e124]: "Restrict calories without hunger or fatigue:"
+          - text: If a person consumes
+          - link "more calories than they need" [ref=e125] [cursor=pointer]:
+            - /url: https://www.medicalnewstoday.com/articles/245588
+          - text: ", the body will convert this extra energy to fat, and excess fat can cause problems in the body. One way to do this is to avoid high-calorie, processed foods."
+        - listitem [ref=e126]:
+          - strong [ref=e127]: "Manage inflammation levels in the body:"
+          - text: Short-term inflammation is a natural reaction that is part of the body’s immune response. However, chronic inflammation can adversely impact health in many ways. Supporters of the diet say, “you need some inflammation, but not too much.” Followers of the Zone Diet may take supplements to help achieve suitable levels. The diet does not appear to specify precise levels of inflammation, and a person can only know how much is present by taking a blood test.
+        - listitem [ref=e128]:
+          - strong [ref=e129]: "Use dietary polyphenols to activate genes to enhance wellbeing:"
+          - text: This involves eating plenty of fresh fruits and vegetables and possibly taking supplements.
+        - listitem [ref=e130]:
+          - strong [ref=e131]: "Control inflammation that comes from gut microbes:"
+          - text: Do this by consuming polyphenols, omega-3, and fermentable fiber. Balancing these aspects should help a person achieve and maintain a healthy body and mind. A person should aim for a lifelong strategy rather than a short-term diet.
+      - heading "Related Reading" [level=3] [ref=e132]
+      - list [ref=e133]:
+        - listitem [ref=e134]:
+          - link "Why Am I Gaining Weight in a Calorie Deficit" [ref=e135] [cursor=pointer]:
+            - /url: https://www.calai.app/blog/why-am-i-gaining-weight-in-a-calorie-deficit
+        - listitem [ref=e136]:
+          - link "Can You Drink Protein Shakes While Intermittent Fasting" [ref=e137] [cursor=pointer]:
+            - /url: https://www.calai.app/blog/can-you-drink-protein-shakes-while-intermittent-fasting
+        - listitem [ref=e138]: Why Does My Weight Keep Going Up and Down While Dieting
+        - listitem [ref=e139]: Can Dieting Cause Heart Palpitations
+        - listitem [ref=e140]: Why Dieting Doesn't Usually Work
+        - listitem [ref=e141]: What Are Macros in Dieting
+        - listitem [ref=e142]: Does Gluten-Free Have Fewer Carbs
+      - heading "What Foods Can/Can’t You Eat on the Zone Diet?" [level=2] [ref=e143]
+      - img "People Eating - Is the Zone Diet Healthy" [ref=e144]
+      - paragraph [ref=e145]:
+        - link "The Zone Diet emphasizes balance" [ref=e146] [cursor=pointer]:
+          - /url: https://www.webmd.com/diet/zone-what-it-is
+        - text: ", focusing heavily on:"
+      - list [ref=e147]:
+        - listitem [ref=e148]: Lean protein
+        - listitem [ref=e149]: Healthy fats
+        - listitem [ref=e150]: Low-glycemic carbohydrates
+      - paragraph
+      - paragraph [ref=e151]: "To follow the Zone Diet, you’ll want to keep your meals within a specific macronutrient ratio:"
+      - list [ref=e152]:
+        - listitem [ref=e153]: 40% carbohydrates
+        - listitem [ref=e154]: 30% protein
+        - listitem [ref=e155]: 30% fat
+      - paragraph
+      - paragraph [ref=e156]: The following lists detail the foods allowed on the Zone Diet.
+      - heading "Foods Allowed on the Zone Diet" [level=4] [ref=e157]
+      - heading "Lean Protein" [level=5] [ref=e158]
+      - paragraph [ref=e159]: Protein options in the Zone Diet should be lean.
+      - paragraph
+      - paragraph [ref=e160]: "Good options include:"
+      - list [ref=e161]:
+        - listitem [ref=e162]: Lean beef, pork, lamb, veal, and game
+        - listitem [ref=e163]: Skinless chicken and turkey breast
+        - listitem [ref=e164]: Fish and shellfish
+        - listitem [ref=e165]: Vegetarian protein, tofu, and other soy products
+        - listitem [ref=e166]: Egg whites
+        - listitem [ref=e167]: Low-fat cheeses
+        - listitem [ref=e168]: Low-fat milk and yogurt
+      - heading "Fat" [level=5] [ref=e169]
+      - paragraph [ref=e170]: The Zone Diet encourages choosing a type of monounsaturated fat.
+      - paragraph
+      - paragraph [ref=e171]: "Good options include:"
+      - list [ref=e172]:
+        - listitem [ref=e173]: Avocados
+        - listitem [ref=e174]:
+          - text: "Nuts, such as:"
+          - list [ref=e175]:
+            - listitem [ref=e176]: Macadamia
+            - listitem [ref=e177]: Peanuts
+            - listitem [ref=e178]: Cashews
+            - listitem [ref=e179]: Almonds
+            - listitem [ref=e180]: Pistachios
+        - listitem [ref=e181]: Peanut butter
+        - listitem [ref=e182]: Tahini
+        - listitem [ref=e183]:
+          - text: "Oils such as:"
+          - list [ref=e184]:
+            - listitem [ref=e185]: Canola oil
+            - listitem [ref=e186]: Sesame oil
+            - listitem [ref=e187]: Peanut oil
+            - listitem [ref=e188]: Olive oil
+      - heading "Carbs" [level=5] [ref=e189]
+      - paragraph [ref=e190]: The Zone Diet encourages its followers to choose vegetables with a low glycemic index and a little fruit.
+      - paragraph
+      - paragraph [ref=e191]: "Good options include:"
+      - list [ref=e192]:
+        - listitem [ref=e193]:
+          - text: "Fruit such as:"
+          - list [ref=e194]:
+            - listitem [ref=e195]: Berries
+            - listitem [ref=e196]: Apples
+            - listitem [ref=e197]: Oranges
+            - listitem [ref=e198]: Plums and more
+        - listitem [ref=e199]:
+          - text: "Vegetables such as:"
+          - list [ref=e200]:
+            - listitem [ref=e201]: Cucumbers
+            - listitem [ref=e202]: Peppers
+            - listitem [ref=e203]: Spinach
+            - listitem [ref=e204]: Tomatoes
+            - listitem [ref=e205]: Mushrooms
+            - listitem [ref=e206]: Yellow squash
+            - listitem [ref=e207]: Chickpeas and more
+        - listitem [ref=e208]:
+          - text: "Grains such as:"
+          - list [ref=e209]:
+            - listitem [ref=e210]: Oatmeal
+            - listitem [ref=e211]: Barley
+      - heading "What Can’t You Eat on the Zone Diet?" [level=3] [ref=e212]
+      - paragraph [ref=e213]:
+        - text: Nothing is strictly banned on the Zone Diet. Confident food choices are
+        - link "considered unfavorable because they promote inflammation" [ref=e214] [cursor=pointer]:
+          - /url: https://www.checkli.com/checklists/dietcompare/the-zone-diet-foods-you-can-and-cant-eat-while-on-the-diet
+        - text: .
+      - list [ref=e215]:
+        - listitem [ref=e216]:
+          - strong [ref=e217]: "High-sugar fruits:"
+          - list [ref=e218]:
+            - listitem [ref=e219]: Bananas
+            - listitem [ref=e220]: Grapes
+            - listitem [ref=e221]: Raisins
+            - listitem [ref=e222]: Dried fruits and mangoes
+        - listitem [ref=e223]:
+          - strong [ref=e224]: "High-sugar or starchy vegetables:"
+          - list [ref=e225]:
+            - listitem [ref=e226]: Peas
+            - listitem [ref=e227]: Corn
+            - listitem [ref=e228]: Carrots
+            - listitem [ref=e229]: Potatoes
+        - listitem [ref=e230]:
+          - strong [ref=e231]: "Refined and processed carbs:"
+          - list [ref=e232]:
+            - listitem [ref=e233]: Bread
+            - listitem [ref=e234]: Bagels
+            - listitem [ref=e235]: Pasta
+            - listitem [ref=e236]: Noodles
+            - listitem [ref=e237]: Other white-flour products
+        - listitem [ref=e238]:
+          - strong [ref=e239]: Other processed foods
+          - text: ":"
+          - list [ref=e240]:
+            - listitem [ref=e241]: Breakfast cereals
+            - listitem [ref=e242]: Muffins
+        - listitem [ref=e243]:
+          - strong [ref=e244]: "Foods with added sugar:"
+          - list [ref=e245]:
+            - listitem [ref=e246]: Candy
+            - listitem [ref=e247]: Cakes
+            - listitem [ref=e248]: Cookies
+        - listitem [ref=e249]:
+          - strong [ref=e250]: "Soft drinks:"
+          - list [ref=e251]:
+            - listitem [ref=e252]: Neither sugar-sweetened
+            - listitem [ref=e253]: Sugar-free beverages are recommended.
+        - listitem [ref=e254]:
+          - strong [ref=e255]: "Coffee and tea:"
+          - text: Keep these to a minimum, since water is the beverage of choice.
+      - paragraph [ref=e256]: No food is banned on the Zone Diet, but foods not encouraged include those high in sugar and starch, processed, refined carbs, or added sugar. Water is the recommended beverage.
+      - heading "How to Prepare the Zone Diet & Tips" [level=3] [ref=e257]
+      - paragraph [ref=e258]:
+        - text: When following the Zone Diet, you're urged to view food as a potent drug that has a powerful impact on your body and your health, more powerful
+        - emphasis [ref=e259]: "\"than any drug your doctor could ever prescribe,\""
+        - text: "according to Dr. Sears. Every meal and snack should have the desired balance of macronutrients that produce an appropriate and favorable hormonal response, like:"
+      - list [ref=e260]:
+        - listitem [ref=e261]: Protein
+        - listitem [ref=e262]: Carbohydrates
+        - listitem [ref=e263]: Fat
+      - heading "Determining Individual Protein Requirements and Meal Distribution in the Zone Diet" [level=4] [ref=e264]
+      - paragraph [ref=e265]:
+        - text: You'll determine your
+        - link "total daily protein requirement" [ref=e266] [cursor=pointer]:
+          - /url: https://pressbooks.calstate.edu/nutritionandfitness/chapter/7-5-estimating-protein-needs/#:~:text=Examples,training%20and%20increasing%20protein%20intake.
+        - text: . That amount of protein should be spread evenly throughout the day so that every meal contains roughly equal amounts and every snack includes a smaller amount. According to Dr. Sears, everyone's daily protein requirement is unique. To calculate yours, first, calculate your percentage of body fat. Then, you use the tables provided by Dr. Sears in his book to calculate total and lean body mass.
+      - 'heading "The Zone Diet''s Macronutrient Balance: Protein, Carbohydrates, and Fat at Each Meal" [level=4] [ref=e267]'
+      - paragraph [ref=e268]: Then, you’ll balance your protein with carbohydrate foods. Again, every meal and every snack should balance protein with carbohydrate, with a ratio of around one-third to two-thirds. You need to eat some fat at every meal. Fat in your diet helps to tell your body that you're full and don't need to eat any more food, and it serves as an essential building block of the eicosanoid hormones that the Zone Diet is attempting to promote.
+      - heading "The Importance of Meal Timing and Frequency in Maintaining 'the Zone' on the Diet" [level=4] [ref=e269]
+      - paragraph [ref=e270]: "The Zone Diet focuses heavily on keeping your body in \"the Zone.\" Therefore, timing your daily food intake is critical to accomplish the diet's goals. Specifically, following the Zone Diet, you’ll eat three meals daily:"
+      - list [ref=e271]:
+        - listitem [ref=e272]: Breakfast
+        - listitem [ref=e273]: Lunch
+        - listitem [ref=e274]: Dinner
+      - paragraph [ref=e275]: Your meals will be evenly spaced throughout the day. Skipping meals is not recommended, nor is loading up at one meal and eating lightly at another. Just as you balance your food intake between protein, carbs, and fats, you'll balance it time-wise. People follow many other types of diets, such as gluten-free, vegetarian, or a diet that omits specific allergens, such as nuts or cow's milk.
+      - heading "Adapting the Zone Diet for Vegetarian/Vegan Lifestyles, Gluten Sensitivity, and Considerations for Diabetics" [level=4] [ref=e276]
+      - paragraph [ref=e277]: The Zone Diet doesn't require animal-based foods, so if you're a vegetarian or vegan, you can try the Zone Diet. You should be aware that many plant-based staple foods, including
+      - paragraph [ref=e278]: grains and beans, are off-limits on the Zone Diet due to their high starch content. Since the Zone Diet omits all grain-based foods (many of which contain gluten), it's easy to make it gluten-free.
+      - paragraph
+      - paragraph [ref=e279]:
+        - text: Therefore, people who have celiac disease or non-celiac gluten sensitivity may find that this diet fits in well with their goals and needs. If you have diabetes,
+        - link "make sure to talk with your doctor" [ref=e280] [cursor=pointer]:
+          - /url: https://www.sciencedirect.com/science/article/pii/S2161831322004896#:~:text=In%20individuals%20with%20type%202,side%20effects%20associated%20with%20overmedication.
+        - text: before trying the Zone Diet. The program is designed to help balance blood sugar, but people with diabetes could run into trouble by eliminating so many common foods at once.
+      - heading "Related Reading" [level=3] [ref=e281]
+      - list [ref=e282]:
+        - listitem [ref=e283]: Zigzag Dieting
+        - listitem [ref=e284]: Galveston Diet Meal Plan
+        - listitem [ref=e285]: Are Pickles Good for Dieting
+        - listitem [ref=e286]: No Salt
+        - listitem [ref=e287]: No Sugar Diet Meal Plan
+        - listitem [ref=e288]: What Is Yo-Yo Dieting
+        - listitem [ref=e289]: Best Macros for Perimenopause Weight Loss
+        - listitem [ref=e290]: Flexible Dieting
+        - listitem [ref=e291]: Paleo Diet Macros
+        - listitem [ref=e292]: Macros for the Mediterranean Diet
+        - listitem [ref=e293]: Zone Diet Plans
+        - listitem [ref=e294]: How Long to Reverse Diet Before Cutting Again
+      - heading "Is the Zone Diet Healthy" [level=2] [ref=e295]
+      - img "A Diet Bowl - Is the Zone Diet Healthy" [ref=e296]
+      - paragraph [ref=e297]:
+        - emphasis [ref=e298]:
+          - text: “There's nothing magical about the fact that
+          - link "this diet encourages primarily whole" [ref=e299] [cursor=pointer]:
+            - /url: https://www.businessinsider.com/guides/health/diet-nutrition/zone-diet
+          - text: ", less processed foods,”"
+        - text: says Lauren Harris-Pincus, a registered dietitian and founder of Nutrition Starring YOU.
+        - emphasis [ref=e300]: “Any nutritious diet will improve blood sugar and inflammation and may also help you lose weight. So, you don't have to follow the carbs-protein-fat ratio of the Zone Diet to achieve those results.”
+      - heading "What are the Concerns With the Zone Diet?" [level=3] [ref=e301]
+      - paragraph [ref=e302]:
+        - text: It's unlikely that following the diet would cause real harm, says Harris-Pincus, but the bans on certain foods don't make sense health-wise.
+        - emphasis [ref=e303]: “Any diet that discourages consumption of foods known to be beneficial to human health concerns me,”
+        - text: Harris-Pincus says, adding that the diet discourages eating many different fruits and whole grains, which, as part of a balanced diet, reduce the risk of diabetes and heart disease.
+      - heading "Is There Any Research on the Zone Diet?" [level=3] [ref=e304]
+      - paragraph [ref=e305]:
+        - link "There has been very little research" [ref=e306] [cursor=pointer]:
+          - /url: https://en.wikipedia.org/wiki/Zone_diet
+        - text: "on the Zone Diet, and the small existing studies don’t live up to the diet’s claims of improvements in:"
+      - list [ref=e307]:
+        - listitem [ref=e308]: Blood sugar
+        - listitem [ref=e309]: Reduced inflammation
+        - listitem [ref=e310]: Weight loss
+      - paragraph
+      - paragraph [ref=e311]: For example, a small three-week survey from 2004 found that people on the Zone Diet showed no added improvement in blood sugar or weight reduction compared with people eating their regular diets.
+      - paragraph
+      - paragraph [ref=e312]: Admittedly, 3 weeks is a short time. Two other studies found that people who were overweight and followed the Zone Diet for a year did not improve blood sugar levels and only lost about 3.5 pounds.
+      - heading "Pros of the Zone Diet" [level=3] [ref=e313]
+      - heading "General Nutrition" [level=4] [ref=e314]
+      - paragraph [ref=e315]: The Zone Diet follows nutritional guidance that calls for meals primarily of carbohydrates, with less protein and minimal fat. Lean proteins are stressed, and the diet encourages the consumption of lots of vegetables and fruit. Sugary drinks and other "junk food," such as candy and chips, are eliminated.
+      - heading "Flexibility" [level=4] [ref=e316]
+      - paragraph [ref=e317]: The diet allows various foods, so it’s pretty flexible. People who have other dietary restrictions should find it relatively simple to adapt. You will need to eat similarly sized meals thrice daily, but many people already do this, so it won’t be a significant change. Meal planning is also too tricky since many food combinations will work.
+      - heading "Healthy Protein Sources" [level=4] [ref=e318]
+      - paragraph [ref=e319]: "The protein sources consumed in the Zone Diet are lean meats, tofu, egg whites, and low-fat dairy. Higher-fat meats are consumed much less, leaving room for healthier unsaturated fats in the diet. Eating a higher-protein diet can prevent:"
+      - list [ref=e320]:
+        - listitem [ref=e321]: Muscle loss
+        - listitem [ref=e322]: Increase calorie burn
+        - listitem [ref=e323]: Keep you feeling full
+      - heading "Cons of the Zone Diet" [level=3] [ref=e324]
+      - heading "Difficult to Sustain" [level=4] [ref=e325]
+      - paragraph [ref=e326]: Some people may find sticking to the Zone Diet difficult because of the specific meal components. It is challenging to ensure you eat the correct amount of protein, carbohydrates, and fats at each meal, especially if you are not at home. Some people may feel deprived due to the limited food choices, making a long-term commitment to this diet less likely.
+      - heading "Complicated Tracking" [level=4] [ref=e327]
+      - paragraph [ref=e328]: "Most diets call for tracking something:"
+      - list [ref=e329]:
+        - listitem [ref=e330]: Calories
+        - listitem [ref=e331]: Carbs
+        - listitem [ref=e332]: Fat
+      - paragraph
+      - paragraph [ref=e333]: The Zone Diet is especially tricky since you'll need to count protein, fat, and carb grams all at once and ensure you consume the right quantities.
+      - heading "Unsubstantiated Claims" [level=4] [ref=e334]
+      - paragraph [ref=e335]: Although the Zone Diet is touted as one that can help you ward off severe chronic health conditions such as heart disease, diabetes, and cancer, people who have already been diagnosed with those conditions should talk to their doctors about whether the food restrictions in the diet are suitable for them.
+      - heading "Lacking Fiber" [level=4] [ref=e336]
+      - paragraph [ref=e337]:
+        - text: The Zone Diet eliminates many healthy food choices, such as whole-grain bread, cereal, pasta, beans, legumes, and fruits. Getting
+        - link "enough dietary fiber" [ref=e338] [cursor=pointer]:
+          - /url: https://www.verywellfit.com/gluten-free-food-list-562788
+        - text: on this diet may be challenging simply because it places so many good fiber choices off-limits. Fiber has been shown to help prevent and manage type 2 diabetes, cardiovascular disease, and some cancers.
+      - heading "Is the Zone Diet a Healthy Choice for You?" [level=3] [ref=e339]
+      - paragraph [ref=e340]:
+        - text: While the Zone Diet generally earns positive reviews from nutritionists, it diverges from the
+        - link "U.S. Department of Agriculture (USDA)" [ref=e341] [cursor=pointer]:
+          - /url: https://www.usda.gov
+        - text: "dietary guidelines. The USDA’s MyPlate model emphasizes filling half the plate with fruits and vegetables and the other half with protein and grains or starchy vegetables, tailored to individual factors like:"
+      - list [ref=e342]:
+        - listitem [ref=e343]: Gender
+        - listitem [ref=e344]: Activity level
+        - listitem [ref=e345]: Weight goals
+      - paragraph
+      - paragraph [ref=e346]: Although protein recommendations are comparable, the Zone Diet notably restricts grains. Calorically, it aligns pretty well with USDA standards, but its primary focus is improving overall health rather than significant calorie reduction or weight loss.
+      - heading "Track Your Calories within Less Than 15 Seconds with Our Calorie Tracker App" [level=2] [ref=e347]
+      - paragraph [ref=e348]:
+        - link "Cal AI" [ref=e349] [cursor=pointer]:
+          - /url: https://www.calai.app
+        - text: takes the hassle out of calorie tracking. With revolutionary technology, our app instantly analyzes your meals with a simple photo.
+      - paragraph
+      - paragraph [ref=e350]: "Our software combines your phone’s depth sensor with advanced AI models to:"
+      - list [ref=e351]:
+        - listitem [ref=e352]: Analyze food volume
+        - listitem [ref=e353]: Identify ingredients
+        - listitem [ref=e354]: Instantly calculate calories, protein, carbs, and fat content.
+      - paragraph [ref=e355]: Our system boasts an accuracy of 90% on visible foods. If you're tracking a complex item like a smoothie, Cal AI has multiple tracking options, such as barcode scanning, food label recognition, and manual description, to make tracking easier. Within seconds, you get accurate nutritional information without the tedious manual logging of traditional calorie-tracking apps.
+      - paragraph
+      - paragraph [ref=e356]:
+        - text: Whether you're scanning a full meal or a quick snack,
+        - link "Cal AI" [ref=e357] [cursor=pointer]:
+          - /url: https://www.calai.app
+        - text: makes nutrition tracking effortless. Plus, our AI learns from your feedback, continuously improving its accuracy. Stay on track with personalized insights and smart reminders. Cal AI makes achieving your fitness goals straightforward.
+      - heading "Related Reading" [level=3] [ref=e358]
+      - list [ref=e359]:
+        - listitem [ref=e360]: Dieting Tea
+        - listitem [ref=e361]: A Positive Blood Type Diet to Lose Weight
+        - listitem [ref=e362]: Macro Balanced Meals
+        - listitem [ref=e363]: Valencia Diet Meal Plan
+        - listitem [ref=e364]: Macros for a 1200 Calorie Diet
+        - listitem [ref=e365]: Atkins Diet Macros
+        - listitem [ref=e366]: List of High Fiber Foods Chart
+        - listitem [ref=e367]: Atkins vs Keto vs Paleo
+        - listitem [ref=e368]: Best Milk for Weight Loss
+        - listitem [ref=e369]: Snacks for Dieting
+      - paragraph [ref=e370]
+    - link "← Back to Blog" [ref=e372] [cursor=pointer]:
+      - /url: /blog
+  - contentinfo [ref=e373]:
+    - generic [ref=e374]:
+      - generic [ref=e375]:
+        - img [ref=e377]
+        - paragraph [ref=e385]: Download Cal AI
+        - generic [ref=e386]:
+          - link [ref=e387] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img [ref=e388]
+          - link "Google Play" [ref=e413] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Google Play" [ref=e414]
+      - generic [ref=e415]:
+        - heading "Legal" [level=3] [ref=e416]
+        - list [ref=e417]:
+          - listitem [ref=e418]:
+            - link "Privacy Policy" [ref=e419] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e420]:
+            - link "Terms of use" [ref=e421] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e422]:
+            - link "Sweepstakes Rules" [ref=e423] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e424]:
+            - button "Manage Cookie Preferences" [ref=e425] [cursor=pointer]
+      - generic [ref=e426]:
+        - heading "Company" [level=3] [ref=e427]
+        - list [ref=e428]:
+          - listitem [ref=e429]:
+            - link "Contact" [ref=e430] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e431]:
+      - paragraph [ref=e432]: © Copyright 2026, All rights reserved
+      - generic [ref=e433]:
+        - link "LinkedIn" [ref=e434] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e435]
+        - link "Instagram" [ref=e441] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e442]
+        - link "TikTok" [ref=e446] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e447]:
+            - generic "tiktok" [ref=e448]

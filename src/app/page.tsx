@@ -1,9 +1,25 @@
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Hero } from "@/components/home/Hero";
+import { InfluencerGrid } from "@/components/home/InfluencerGrid";
+import { FeatureSwitcher } from "@/components/home/FeatureSwitcher";
+import { WhyChoose } from "@/components/home/WhyChoose";
+import { DarkModeBanner } from "@/components/home/DarkModeBanner";
+import { UserTestimonials } from "@/components/home/UserTestimonials";
+import { FinalCTA } from "@/components/home/FinalCTA";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <SiteHeader />
+      <Hero />
+      <InfluencerGrid />
+      <FeatureSwitcher />
+      <WhyChoose />
+      <DarkModeBanner />
+      <UserTestimonials />
+      <FinalCTA />
+      <SiteFooter />
+    </>
   );
 }

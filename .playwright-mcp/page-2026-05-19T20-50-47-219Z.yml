@@ -1,0 +1,247 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Cal AI Logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Cal AI Logo" [ref=e7]
+        - generic [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Blog" [ref=e10] [cursor=pointer]:
+            - /url: /blog
+          - link "Jobs" [ref=e11] [cursor=pointer]:
+            - /url: mailto:apply@calai.app
+          - link "Press" [ref=e12] [cursor=pointer]:
+            - /url: /press
+          - link "Manage Subscription" [ref=e13] [cursor=pointer]:
+            - /url: /manage-subscription
+          - link "Login" [ref=e14] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e15]:
+        - link [ref=e16] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img [ref=e17]
+        - link "Google Play" [ref=e42] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e43]
+  - main [ref=e44]:
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - img "used by 1" [ref=e48]
+          - img "used by 2" [ref=e49]
+          - img "used by 3" [ref=e50]
+        - generic [ref=e51]: Loved by 5M users with ⭐ 4.9 rating
+      - heading "Meet Cal AI Track your calories with just a picture" [level=1] [ref=e52]:
+        - text: Meet Cal AI
+        - generic [ref=e53]:
+          - text: Track your calories
+          - text: with just a picture
+      - paragraph [ref=e54]: Meet Cal AI, the AI-powered app for easy calorie tracking. Snap a photo, scan a barcode, or describe your meal and get instant calorie and nutrient info.
+      - generic [ref=e55]:
+        - link [ref=e56] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img [ref=e57]
+        - link "Google Play" [ref=e82] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e83]
+    - img "hero-preview" [ref=e85]
+  - heading "Used by your favorite fitness influencers 👀" [level=2] [ref=e86]
+  - generic [ref=e87]:
+    - generic [ref=e88]:
+      - link "View Jeremiah Jones testimonial video" [ref=e89] [cursor=pointer]:
+        - /url: https://www.instagram.com/reel/DI4l3TiPJUQ/
+        - generic [ref=e90]:
+          - img "Jeremiah Jones testimonial" [ref=e91]
+          - generic [ref=e92]:
+            - paragraph [ref=e93]: "\""
+            - heading "Jeremiah Jones" [level=3] [ref=e94]
+            - paragraph [ref=e95]: Make a healthier choice for your latenight snack and use the Cal AI app to track your calories
+      - link "View Kadin Kerns testimonial video" [ref=e96] [cursor=pointer]:
+        - /url: https://www.instagram.com/reel/DGrQlrhOXjy/
+        - generic [ref=e97]:
+          - img "Kadin Kerns testimonial" [ref=e98]
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: "\""
+            - heading "Kadin Kerns" [level=3] [ref=e101]
+            - paragraph [ref=e102]: Looking good as usual and my calories are too with Cal AI 🔥
+    - generic [ref=e103]:
+      - link "View Dawson Gibbs testimonial video" [ref=e104] [cursor=pointer]:
+        - /url: https://www.instagram.com/reel/DDNnKQGSLe4/
+        - generic [ref=e105]:
+          - img "Dawson Gibbs testimonial" [ref=e106]
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: "\""
+            - heading "Dawson Gibbs" [level=3] [ref=e109]
+            - paragraph [ref=e110]: Track with Cal AI app, if you're not tracking your calories while going for your goals then you're doing it all wrong.
+      - link "View Jeremiah Jones testimonial video" [ref=e111] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e112]:
+          - img "Jeremiah Jones testimonial" [ref=e113]
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: "\""
+            - heading "Brian Wallack" [level=3] [ref=e116]
+            - paragraph [ref=e117]: Cal AI can literally track anything 🤯
+    - generic [ref=e118]:
+      - link "View Hussein Farhat testimonial video" [ref=e119] [cursor=pointer]:
+        - /url: https://www.instagram.com/reel/DIojs7AszIX/
+        - generic [ref=e120]:
+          - img "Hussein Farhat testimonial" [ref=e121]
+          - generic [ref=e122]:
+            - paragraph [ref=e123]: "\""
+            - heading "Hussein Farhat" [level=3] [ref=e124]
+            - paragraph [ref=e125]: If you're tracking your calories and macros correctly with Cal AI, you can get away with eating almost anything and still get in shape as long as it matches your daily goals.
+      - link "View Alex Eubank testimonial video" [ref=e126] [cursor=pointer]:
+        - /url: https://www.instagram.com/reel/DHPBOhAJZ5C/
+        - generic [ref=e127]:
+          - img "Alex Eubank testimonial" [ref=e128]
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: "\""
+            - heading "Alex Eubank" [level=3] [ref=e131]
+            - paragraph [ref=e132]: Cal AI is literally the best calorie tracker. Fastest and most accurate I've ever used.
+  - generic [ref=e133]:
+    - heading "What does Cal AI include?" [level=2] [ref=e134]
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - img "Track Your Food With Just a Picture preview" [ref=e137]
+        - generic [ref=e138]:
+          - 'button "Go to feature: Track Your Food With Just a Picture" [ref=e139] [cursor=pointer]'
+          - 'button "Go to feature: Search Our Database of over 1 million foods" [ref=e140] [cursor=pointer]'
+          - 'button "Go to feature: Complete Progress Tracking and AI suggestions" [ref=e141] [cursor=pointer]'
+          - 'button "Go to feature: Keep track of your water and daily exercise" [ref=e142] [cursor=pointer]'
+      - generic [ref=e143]:
+        - generic [ref=e144] [cursor=pointer]:
+          - heading "Track Your Food With Just a Picture" [level=3] [ref=e145]
+          - paragraph [ref=e146]: Snap a photo with Cal AI, and your phone's depth sensor calculates food volume. Our AI then analyzes and breaks down your meal to determine calories, protein, carbs, and fat.
+        - generic [ref=e147] [cursor=pointer]:
+          - heading "Search Our Database of over 1 million foods" [level=3] [ref=e148]
+          - paragraph [ref=e149]: Quickly find and log foods from our extensive database. Search by name, brand, or scan barcodes for instant nutritional information.
+        - generic [ref=e150] [cursor=pointer]:
+          - heading "Complete Progress Tracking and AI suggestions" [level=3] [ref=e151]
+          - paragraph [ref=e152]: Monitor your weight, measurements, and nutrition goals. Get personalized AI suggestions to stay on track and optimize your diet.
+        - generic [ref=e153] [cursor=pointer]:
+          - heading "Keep track of your water and daily exercise" [level=3] [ref=e154]
+          - paragraph [ref=e155]: Log your water intake and daily exercise effortlessly. Cal AI helps you stay hydrated and active, integrating seamlessly with your fitness routine.
+  - heading "Why choose Cal AI?" [level=2] [ref=e156]
+  - generic [ref=e157]:
+    - paragraph [ref=e158]: Cal AI is the most advanced calorie tracker.
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - img [ref=e162]
+        - heading "Free up your time" [level=3] [ref=e168]
+        - paragraph [ref=e169]: Cal AI automatically calculates your calories, protein, carbs, and fat. You can also add your own foods and recipes. So no need to calculate calories manually.
+      - generic [ref=e170]:
+        - img [ref=e172]
+        - heading "Integrate with your favorite fitness products" [level=3] [ref=e176]
+        - paragraph [ref=e177]: Cal AI integrates with your favorite fitness products. So you can track your calories, protein, carbs, fat AND exercises.
+      - generic [ref=e178]:
+        - img [ref=e180]
+        - heading "Lose weight effortlessly" [level=3] [ref=e186]
+        - paragraph [ref=e187]: Snap a photo with Cal AI, and your phone's depth sensor calculates food volume. Our AI then analyzes and breaks down your meal to determine calories, protein, carbs, and fat.
+  - generic [ref=e189]:
+    - generic [ref=e190]:
+      - generic [ref=e191]: New feature
+      - heading "Dark Mode for a sleek tracking experience! 🌙✨" [level=2] [ref=e192]:
+        - text: Dark Mode
+        - text: for a sleek tracking
+        - text: experience! 🌙✨
+      - paragraph [ref=e193]: New features weekly :)
+    - img "Cal AI Dark Mode Preview" [ref=e195]
+  - generic [ref=e197]:
+    - heading "Thousands of users talk about us" [level=2] [ref=e198]
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - img "Aryan Thakur testimonial" [ref=e202]
+          - paragraph [ref=e203]: pree.palmer
+        - paragraph [ref=e204]: "\"im ngl I've lost 17 lbs with it doesn't need to be exact it's pretty decent\""
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - img "Ordinary Tony" [ref=e207]
+          - paragraph [ref=e208]: Ordinary Tony
+        - paragraph [ref=e209]: "\"IVE BEEN BULKING FOR A YEAR STRAIGHT W APP FR 👏👏👏\""
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - img "Parth Israni testimonial" [ref=e212]
+          - paragraph [ref=e213]: 2025weightlossa...
+        - paragraph [ref=e214]: "\"I love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓\""
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - img "Adam McKinney testimonial" [ref=e217]
+          - paragraph [ref=e218]: Mathias
+        - paragraph [ref=e219]: "\"I started to use it yesterday and im already giving it 5⭐️\""
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - generic [ref=e223]: D
+          - paragraph [ref=e224]: Ms Nsofor
+        - paragraph [ref=e225]: "\"For people that want to control their calories @calai.app is the app for you 🙌🔥\""
+  - generic [ref=e226]:
+    - img "Background gradient" [ref=e227]
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - img "Laurel wreath" [ref=e230]
+        - generic [ref=e231]:
+          - generic [ref=e232]: ⭐⭐⭐⭐⭐
+          - heading "Over 100k 5-star ratings" [level=2] [ref=e233]
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - img [ref=e236]
+              - generic [ref=e238]: 4.8/5
+            - generic [ref=e239]: •
+            - generic [ref=e240]:
+              - img [ref=e241]
+              - generic [ref=e243]: 4.7/5
+        - img "Laurel wreath" [ref=e244]
+      - generic [ref=e245]:
+        - link [ref=e246] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img [ref=e247]
+        - link "Google Play" [ref=e272] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e273]
+  - contentinfo [ref=e274]:
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - img [ref=e278]
+        - paragraph [ref=e286]: Download Cal AI
+        - generic [ref=e287]:
+          - link [ref=e288] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img [ref=e289]
+          - link "Google Play" [ref=e314] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Google Play" [ref=e315]
+      - generic [ref=e316]:
+        - heading "Legal" [level=3] [ref=e317]
+        - list [ref=e318]:
+          - listitem [ref=e319]:
+            - link "Privacy Policy" [ref=e320] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e321]:
+            - link "Terms of use" [ref=e322] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e323]:
+            - link "Sweepstakes Rules" [ref=e324] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e325]:
+            - button "Manage Cookie Preferences" [ref=e326] [cursor=pointer]
+      - generic [ref=e327]:
+        - heading "Company" [level=3] [ref=e328]
+        - list [ref=e329]:
+          - listitem [ref=e330]:
+            - link "Contact" [ref=e331] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e332]:
+      - paragraph [ref=e333]: © Copyright 2026, All rights reserved
+      - generic [ref=e334]:
+        - link "LinkedIn" [ref=e335] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e336]
+        - link "Instagram" [ref=e342] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e343]
+        - link "TikTok" [ref=e347] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e348]:
+            - generic "tiktok" [ref=e349]

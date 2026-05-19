@@ -1,0 +1,113 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Cal AI Logo" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "Cal AI Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "Home" [ref=e8] [cursor=pointer]:
+            - /url: /
+          - link "Blog" [ref=e9] [cursor=pointer]:
+            - /url: /blog
+          - link "Jobs" [ref=e10] [cursor=pointer]:
+            - /url: mailto:apply@calai.app
+          - link "Press" [ref=e11] [cursor=pointer]:
+            - /url: /press
+          - link "Manage Subscription" [ref=e12] [cursor=pointer]:
+            - /url: /manage-subscription
+          - link "Login" [ref=e13] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e14]:
+        - link "Download on the App Store" [ref=e15] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img "Download on the App Store" [ref=e16]
+        - link "Get it on Google Play" [ref=e17] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Get it on Google Play" [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - heading "Is the Zone Diet Healthy? Pros & Cons Explained" [level=1] [ref=e22]
+        - generic [ref=e23]:
+          - generic [ref=e24]: •
+          - time [ref=e25]: 4/27/2025
+        - generic [ref=e27]: Is the Zone Diet Healthy? Pros & Cons Explained
+      - generic [ref=e28]:
+        - paragraph [ref=e29]:
+          - text: This is a clone of
+          - link "calai.app/blog" [ref=e30] [cursor=pointer]:
+            - /url: https://calai.app/blog
+          - text: . The full article content is hosted on the original site.
+        - paragraph [ref=e31]:
+          - link "Read this article on the original Cal AI blog →" [ref=e32] [cursor=pointer]:
+            - /url: https://calai.app/blog/is-the-zone-diet-healthy
+        - heading "Looking for similar posts?" [level=2] [ref=e33]
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Can You Drink Protein Shakes While Intermittent Fasting" [ref=e36] [cursor=pointer]:
+              - /url: /blog/can-you-drink-protein-shakes-while-intermittent-fasting
+            - text: 4/26/2025
+          - listitem [ref=e37]:
+            - link "Why Am I Gaining Weight in a Calorie Deficit?" [ref=e38] [cursor=pointer]:
+              - /url: /blog/why-am-i-gaining-weight-in-a-calorie-deficit
+            - text: 4/17/2025
+          - listitem [ref=e39]:
+            - link "How Long Does Reverse Dieting Take to Work Well?" [ref=e40] [cursor=pointer]:
+              - /url: /blog/how-long-does-reverse-dieting-take
+            - text: 4/16/2025
+          - listitem [ref=e41]:
+            - link "In-Depth MyNetDiary vs Lose It Comparison" [ref=e42] [cursor=pointer]:
+              - /url: /blog/mynetdiary-vs-lose-it
+            - text: 4/15/2025
+          - listitem [ref=e43]:
+            - link "A Head-to-Head MyPlate vs MyFitnessPal Comparison" [ref=e44] [cursor=pointer]:
+              - /url: /blog/myplate-vs-myfitnesspal
+            - text: 4/14/2025
+  - contentinfo [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - img "Cal AI Logo" [ref=e48]
+        - paragraph [ref=e49]: Download Cal AI
+        - generic [ref=e50]:
+          - link "Download on the App Store" [ref=e51] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img "Download on the App Store" [ref=e52]
+          - link "Get it on Google Play" [ref=e53] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Get it on Google Play" [ref=e54]
+      - generic [ref=e55]:
+        - heading "Legal" [level=3] [ref=e56]
+        - list [ref=e57]:
+          - listitem [ref=e58]:
+            - link "Privacy Policy" [ref=e59] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e60]:
+            - link "Terms of use" [ref=e61] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e62]:
+            - link "Sweepstakes Rules" [ref=e63] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e64]:
+            - button "Manage Cookie Preferences" [ref=e65]
+      - generic [ref=e66]:
+        - heading "Company" [level=3] [ref=e67]
+        - list [ref=e68]:
+          - listitem [ref=e69]:
+            - link "Contact" [ref=e70] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e71]:
+      - paragraph [ref=e72]: © Copyright 2026, All rights reserved
+      - generic [ref=e73]:
+        - link "LinkedIn" [ref=e74] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e75]
+        - link "Instagram" [ref=e77] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e78]
+        - link "TikTok" [ref=e82] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e83]
+  - button "Open Next.js Dev Tools" [ref=e90] [cursor=pointer]:
+    - img [ref=e91]
+  - alert [ref=e94]
