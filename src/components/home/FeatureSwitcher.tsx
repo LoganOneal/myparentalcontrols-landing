@@ -8,33 +8,30 @@ type Feature = {
   image: string;
 };
 
-// TODO: replace shared mpc-app-preview.png with four per-feature screenshots
-// (alert toast, platform-coverage screen, flagged-event timeline, captured-DM
-// detail) once design assets land in public/images/features/.
 const FEATURES: Feature[] = [
   {
     title: "Real-time alerts the moment a predator makes contact",
     description:
       "MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.",
-    image: "/images/mpc-app-preview.png",
+    image: "/images/features/alerts.svg",
   },
   {
     title: "Coverage across 40+ apps, games, and chat platforms",
     description:
       "One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.",
-    image: "/images/mpc-app-preview.png",
+    image: "/images/features/platforms.svg",
   },
   {
     title: "Catches self-harm, sexual content, and bullying — not just predators",
     description:
       "The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.",
-    image: "/images/mpc-app-preview.png",
+    image: "/images/features/categories.svg",
   },
   {
     title: "Sees encrypted and disappearing messages on the device",
     description:
       "End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.",
-    image: "/images/mpc-app-preview.png",
+    image: "/images/features/captured.svg",
   },
 ];
 

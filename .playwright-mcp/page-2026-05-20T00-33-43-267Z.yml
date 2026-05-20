@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "MyParentalControls MyParentalControls" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e6]:
+            - img [ref=e7]
+            - generic [ref=e8]: MyParentalControls
+            - generic [ref=e9]: MyParentalControls
+        - generic [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+          - link "App Reviews" [ref=e12] [cursor=pointer]:
+            - /url: /app-reviews
+          - link "Blog" [ref=e13] [cursor=pointer]:
+            - /url: /blog
+          - link "Press" [ref=e14] [cursor=pointer]:
+            - /url: /press
+          - link "Manage Subscription" [ref=e15] [cursor=pointer]:
+            - /url: /manage-subscription
+          - link "Login" [ref=e16] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e17]:
+        - link "Download on the App Store" [ref=e18] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img "Download on the App Store" [ref=e19]
+        - link "Get it on Google Play" [ref=e20] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Get it on Google Play" [ref=e21]
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - img [ref=e27]
+          - img [ref=e28]
+        - generic [ref=e29]: 12,000+ parents already protected
+      - heading "Stop online predators before they reach your child." [level=1] [ref=e30]
+      - paragraph [ref=e31]:
+        - text: MyParentalControls runs quietly on your child’s PC and alerts your phone the moment someone targets them in
+        - generic [ref=e32]:
+          - img [ref=e34]
+          - generic [ref=e35]: Roblox
+        - text: ","
+        - generic [ref=e36]:
+          - img [ref=e38]
+          - generic [ref=e39]: Discord
+        - text: ","
+        - generic [ref=e40]:
+          - img [ref=e42]
+          - generic [ref=e56]: Minecraft
+        - text: ", or"
+        - generic [ref=e57]:
+          - img [ref=e59]
+          - generic [ref=e60]: Fortnite
+        - text: —
+        - link "and 40+ more apps →" [ref=e61] [cursor=pointer]:
+          - /url: /platforms
+        - text: . You’ll know before they do harm.
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - textbox "you@example.com" [ref=e64]
+          - button "Protect my child now" [ref=e65]
+        - link "See how it works →" [ref=e66] [cursor=pointer]:
+          - /url: "#how-it-works"
+        - paragraph [ref=e67]: 5-min setup · We’re at capacity — join 12,000+ parents on the waitlist.
+    - img "MyParentalControls app — alerts dashboard" [ref=e69]
+  - generic [ref=e70]:
+    - heading "Why parents are taking Roblox to court 📰" [level=2] [ref=e71]
+    - paragraph [ref=e72]: State attorneys general, regulators, and families are filing lawsuits against the platforms where predators target kids. Don’t wait for the next headline to be about your family.
+  - generic [ref=e73]:
+    - button "Scroll left" [ref=e74]:
+      - generic [ref=e75]: ‹
+    - button "Scroll right" [ref=e76]:
+      - generic [ref=e77]: ›
+    - generic [ref=e78]:
+      - 'link "CBS News: Oklahoma becomes latest state to sue Roblox over child safety concerns" [ref=e79] [cursor=pointer]':
+        - /url: https://www.cbsnews.com/news/oklahoma-becomes-latest-state-to-sue-roblox-over-child-safety-concerns/
+        - img "Oklahoma becomes latest state to sue Roblox over child safety concerns" [ref=e81]
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: CBS News
+            - generic [ref=e85]: •
+            - generic [ref=e86]: "2024"
+          - heading "Oklahoma becomes latest state to sue Roblox over child safety concerns" [level=3] [ref=e87]
+      - 'link "Associated Press: Roblox reaches $12M settlement with Nevada to expand youth protections" [ref=e88] [cursor=pointer]':
+        - /url: https://apnews.com/article/roblox-nevada-settlement-28b3d7d7a483dc28462a7504b67c9bbc
+        - img "Roblox reaches $12M settlement with Nevada to expand youth protections" [ref=e90]
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: Associated Press
+            - generic [ref=e94]: •
+            - generic [ref=e95]: "2025"
+          - heading "Roblox reaches $12M settlement with Nevada to expand youth protections" [level=3] [ref=e96]
+      - 'link "BBC News: Texas sues Roblox, alleging it put ''paedophiles and profits'' over safety" [ref=e97] [cursor=pointer]':
+        - /url: https://www.bbc.co.uk/news/articles/cy0kd4kk0kqo
+        - img "Texas sues Roblox, alleging it put 'paedophiles and profits' over safety" [ref=e99]
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: BBC News
+            - generic [ref=e103]: •
+            - generic [ref=e104]: Nov 2025
+          - heading "Texas sues Roblox, alleging it put 'paedophiles and profits' over safety" [level=3] [ref=e105]
+      - 'link "NPR: Roblox bets on facial scanning to keep its youngest users safe" [ref=e106] [cursor=pointer]':
+        - /url: https://www.npr.org/2025/11/21/nx-s1-5614161/roblox-bets-on-facial-scanning-to-keep-its-youngest-users-safe
+        - img "Roblox bets on facial scanning to keep its youngest users safe" [ref=e108]
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: NPR
+            - generic [ref=e112]: •
+            - generic [ref=e113]: Nov 2025
+          - heading "Roblox bets on facial scanning to keep its youngest users safe" [level=3] [ref=e114]
+      - 'link "NBC News: Nebraska becomes the latest state to sue Roblox over child safety failures" [ref=e115] [cursor=pointer]':
+        - /url: https://www.nbcnews.com/tech/tech-news/roblox-lawsuit-nebraska-attorney-general-what-to-know-rcna261733
+        - img "Nebraska becomes the latest state to sue Roblox over child safety failures" [ref=e117]
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: NBC News
+            - generic [ref=e121]: •
+            - generic [ref=e122]: "2025"
+          - heading "Nebraska becomes the latest state to sue Roblox over child safety failures" [level=3] [ref=e123]
+      - 'link "CNN: Louisiana sues Roblox, alleging the gaming site fails to protect children" [ref=e124] [cursor=pointer]':
+        - /url: https://www.cnn.com/2025/08/15/us/louisiana-roblox-lawsuit-child-protection-hnk
+        - img "Louisiana sues Roblox, alleging the gaming site fails to protect children" [ref=e126]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: CNN
+            - generic [ref=e130]: •
+            - generic [ref=e131]: Aug 2025
+          - heading "Louisiana sues Roblox, alleging the gaming site fails to protect children" [level=3] [ref=e132]
+  - generic [ref=e134]:
+    - heading "What does MyParentalControls include?" [level=2] [ref=e135]
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - img "Real-time alerts the moment a predator makes contact preview" [ref=e138]
+        - generic [ref=e139]:
+          - 'button "Go to feature: Real-time alerts the moment a predator makes contact" [ref=e140]'
+          - 'button "Go to feature: Coverage across 40+ apps, games, and chat platforms" [ref=e141]'
+          - 'button "Go to feature: Catches self-harm, sexual content, and bullying — not just predators" [ref=e142]'
+          - 'button "Go to feature: Sees encrypted and disappearing messages on the device" [ref=e143]'
+      - generic [ref=e144]:
+        - generic [ref=e145] [cursor=pointer]:
+          - heading "Real-time alerts the moment a predator makes contact" [level=3] [ref=e146]
+          - paragraph [ref=e147]: MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.
+        - generic [ref=e148] [cursor=pointer]:
+          - heading "Coverage across 40+ apps, games, and chat platforms" [level=3] [ref=e149]
+          - paragraph [ref=e150]: One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.
+        - generic [ref=e151] [cursor=pointer]:
+          - heading "Catches self-harm, sexual content, and bullying — not just predators" [level=3] [ref=e152]
+          - paragraph [ref=e153]: The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.
+        - generic [ref=e154] [cursor=pointer]:
+          - heading "Sees encrypted and disappearing messages on the device" [level=3] [ref=e155]
+          - paragraph [ref=e156]: End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.
+  - heading "Why choose Cal AI?" [level=2] [ref=e157]
+  - generic [ref=e158]:
+    - paragraph [ref=e159]: Cal AI is the most advanced calorie tracker.
+    - generic [ref=e160]:
+      - generic [ref=e161]:
+        - img [ref=e163]
+        - heading "Free up your time" [level=3] [ref=e169]
+        - paragraph [ref=e170]: Cal AI automatically calculates your calories, protein, carbs, and fat. You can also add your own foods and recipes. So no need to calculate calories manually.
+      - generic [ref=e171]:
+        - img [ref=e173]
+        - heading "Integrate with your favorite fitness products" [level=3] [ref=e177]
+        - paragraph [ref=e178]: Cal AI integrates with your favorite fitness products. So you can track your calories, protein, carbs, fat AND exercises.
+      - generic [ref=e179]:
+        - img [ref=e181]
+        - heading "Lose weight effortlessly" [level=3] [ref=e186]
+        - paragraph [ref=e187]: Snap a photo with Cal AI, and your phone's depth sensor calculates food volume. Our AI then analyzes and breaks down your meal to determine calories, protein, carbs, and fat.
+  - generic [ref=e189]:
+    - heading "Thousands of users talk about us" [level=2] [ref=e190]
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - img "pree.palmer testimonial" [ref=e194]
+          - paragraph [ref=e195]: pree.palmer
+        - paragraph [ref=e196]: “im ngl I've lost 17 lbs with it doesn't need to be exact it's pretty decent”
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - img "Ordinary Tony testimonial" [ref=e199]
+          - paragraph [ref=e200]: Ordinary Tony
+        - paragraph [ref=e201]: “IVE BEEN BULKING FOR A YEAR STRAIGHT W APP FR 👏👏👏”
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - img "2025weightlossa... testimonial" [ref=e204]
+          - paragraph [ref=e205]: 2025weightlossa...
+        - paragraph [ref=e206]: “I love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓”
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - img "Mathias testimonial" [ref=e209]
+          - paragraph [ref=e210]: Mathias
+        - paragraph [ref=e211]: “I started to use it yesterday and im already giving it 5⭐️”
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - generic [ref=e214]: D
+          - paragraph [ref=e215]: Ms Nsofor
+        - paragraph [ref=e216]: “For people that want to control their calories @calai.app is the app for you 🙌🔥”
+  - generic [ref=e217]:
+    - img "Background gradient" [ref=e218]
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - img "Laurel wreath" [ref=e221]
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - generic [ref=e224]: ⭐
+            - generic [ref=e225]: ⭐
+            - generic [ref=e226]: ⭐
+            - generic [ref=e227]: ⭐
+            - generic [ref=e228]: ⭐
+          - heading "Over 100k 5-star ratings" [level=2] [ref=e229]
+          - generic [ref=e230]:
+            - generic [ref=e231]:
+              - img [ref=e232]
+              - generic [ref=e234]: 4.8/5
+            - generic [ref=e235]: •
+            - generic [ref=e236]:
+              - img [ref=e237]
+              - generic [ref=e239]: 4.7/5
+        - img "Laurel wreath" [ref=e240]
+      - generic [ref=e241]:
+        - link "Download on the App Store" [ref=e242] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img "Download on the App Store" [ref=e243]
+        - link "Get it on Google Play" [ref=e244] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e245]
+  - contentinfo [ref=e246]:
+    - generic [ref=e247]:
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - img [ref=e250]
+          - generic [ref=e251]: MyParentalControls
+          - generic [ref=e252]: MyParentalControls
+        - paragraph [ref=e253]: Download MyParentalControls
+        - generic [ref=e254]:
+          - link "Download on the App Store" [ref=e255] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img "Download on the App Store" [ref=e256]
+          - link "Get it on Google Play" [ref=e257] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Get it on Google Play" [ref=e258]
+      - generic [ref=e259]:
+        - heading "Legal" [level=3] [ref=e260]
+        - list [ref=e261]:
+          - listitem [ref=e262]:
+            - link "Privacy Policy" [ref=e263] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e264]:
+            - link "Terms of use" [ref=e265] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e266]:
+            - link "Sweepstakes Rules" [ref=e267] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e268]:
+            - button "Manage Cookie Preferences" [ref=e269]
+      - generic [ref=e270]:
+        - heading "Company" [level=3] [ref=e271]
+        - list [ref=e272]:
+          - listitem [ref=e273]:
+            - link "Contact" [ref=e274] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e275]:
+      - paragraph [ref=e276]: © Copyright 2026, All rights reserved
+      - generic [ref=e277]:
+        - link "LinkedIn" [ref=e278] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e279]
+        - link "Instagram" [ref=e281] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e282]
+        - link "TikTok" [ref=e286] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e287]
+  - button "Open Next.js Dev Tools" [ref=e294] [cursor=pointer]:
+    - img [ref=e295]

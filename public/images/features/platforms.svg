@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 740" width="360" height="740">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif; fill: #2D2A33; }
+    .muted { fill: #7A7480; }
+    .invert { fill: #FFFFFF; }
+    .h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 1.4px; }
+    .body { font-size: 12px; font-weight: 400; }
+    .small { font-size: 11px; font-weight: 500; }
+    .label { font-size: 11px; font-weight: 600; }
+    .pill { font-size: 9.5px; font-weight: 700; letter-spacing: 0.3px; }
+    .tab { font-size: 9.5px; font-weight: 600; letter-spacing: 0.2px; }
+    .mono { font-size: 18px; font-weight: 800; }
+    .mono-sm { font-size: 14px; font-weight: 800; }
+  </style>
+  <defs>
+    <clipPath id="screen"><rect x="9" y="9" width="342" height="722" rx="46"/></clipPath>
+  </defs>
+
+  <rect width="360" height="740" rx="54" fill="#1a1a1a"/>
+  <rect x="0.5" y="0.5" width="359" height="739" rx="53.5" fill="none" stroke="#2d2d2d"/>
+  <rect x="6" y="6" width="348" height="728" rx="48" fill="#0d0d0d"/>
+
+  <g clip-path="url(#screen)">
+    <rect x="9" y="9" width="342" height="722" fill="#FAF8F5"/>
+    <!-- Sage wash -->
+    <rect x="9" y="9" width="342" height="200" fill="#E8F0EC"/>
+    <circle cx="320" cy="60" r="100" fill="#D7E5DF" opacity="0.7"/>
+
+    <!-- Status -->
+    <text x="32" y="38" class="small">9:41</text>
+    <g transform="translate(285, 30)">
+      <rect x="0" y="6" width="3" height="3" rx="0.5" fill="#2D2A33"/>
+      <rect x="5" y="4" width="3" height="5" rx="0.5" fill="#2D2A33"/>
+      <rect x="10" y="2" width="3" height="7" rx="0.5" fill="#2D2A33"/>
+      <rect x="15" y="0" width="3" height="9" rx="0.5" fill="#2D2A33"/>
+      <path d="M26,7 Q31,2 36,7 M28,9 Q31,6 34,9" fill="none" stroke="#2D2A33" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="31" cy="10.5" r="1" fill="#2D2A33"/>
+      <rect x="42" y="2" width="22" height="9" rx="2.5" fill="none" stroke="#2D2A33" stroke-width="1"/>
+      <rect x="64.5" y="4.5" width="1.5" height="4" rx="0.5" fill="#2D2A33"/>
+      <rect x="43.5" y="3.5" width="16" height="6" rx="1" fill="#2D2A33"/>
+    </g>
+    <rect x="135" y="22" width="90" height="28" rx="14" fill="#0d0d0d"/>
+
+    <!-- Header -->
+    <text x="26" y="92" class="eyebrow muted">MONITORED</text>
+    <text x="26" y="124" class="h1">42 apps watched</text>
+    <text x="26" y="148" class="body muted">Roblox, Discord, Snap, TikTok and 38 more</text>
+
+    <!-- Status pill -->
+    <g transform="translate(280, 110)">
+      <rect x="-30" y="-13" width="60" height="26" rx="13" fill="#7DA395"/>
+      <circle cx="-18" cy="0" r="3" fill="#FFFFFF"/>
+      <text x="-10" y="4" class="pill invert">ACTIVE</text>
+    </g>
+
+    <!-- Search bar -->
+    <g transform="translate(20, 184)">
+      <rect width="320" height="44" rx="14" fill="#FFFFFF" stroke="#ECE7DE"/>
+      <circle cx="22" cy="22" r="6" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <line x1="26.5" y1="26.5" x2="31" y2="31" stroke="#B0A8B6" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="42" y="27" class="body muted">Search apps and games…</text>
+      <g transform="translate(290, 22)">
+        <rect x="-9" y="-9" width="18" height="18" rx="6" fill="#F0EBE2"/>
+        <path d="M-3,0 L3,0 M0,-3 L0,3" stroke="#7A7480" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- Filter chips -->
+    <g transform="translate(20, 246)">
+      <g>
+        <rect width="44" height="28" rx="14" fill="#2D2A33"/>
+        <text x="22" y="18" class="pill invert" text-anchor="middle">ALL</text>
+      </g>
+      <g transform="translate(52, 0)">
+        <rect width="60" height="28" rx="14" fill="#FFFFFF" stroke="#ECE7DE"/>
+        <text x="30" y="18" class="pill muted" text-anchor="middle">GAMES</text>
+      </g>
+      <g transform="translate(120, 0)">
+        <rect width="50" height="28" rx="14" fill="#FFFFFF" stroke="#ECE7DE"/>
+        <text x="25" y="18" class="pill muted" text-anchor="middle">CHAT</text>
+      </g>
+      <g transform="translate(178, 0)">
+        <rect width="60" height="28" rx="14" fill="#FFFFFF" stroke="#ECE7DE"/>
+        <text x="30" y="18" class="pill muted" text-anchor="middle">VIDEO</text>
+      </g>
+      <g transform="translate(246, 0)">
+        <rect width="42" height="28" rx="14" fill="#FFFFFF" stroke="#ECE7DE"/>
+        <text x="21" y="18" class="pill muted" text-anchor="middle">AI</text>
+      </g>
+    </g>
+
+    <!-- Grid of platforms (4 cols x 4 rows, cell width 76, gap 8 - tile 60x60) -->
+    <!-- Start at x=24, y=294. Cell pitch x=76, y=82 -->
+
+    <!-- Helper: each tile group -->
+    <!-- Row 1 -->
+    <g transform="translate(28, 294)">
+      <rect width="60" height="60" rx="16" fill="#E2231A"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">R</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Roblox</text>
+    </g>
+    <g transform="translate(108, 294)">
+      <rect width="60" height="60" rx="16" fill="#5865F2"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">D</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Discord</text>
+    </g>
+    <g transform="translate(188, 294)">
+      <rect width="60" height="60" rx="16" fill="#FFFC00"/>
+      <text x="30" y="40" class="mono" text-anchor="middle">S</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Snap</text>
+    </g>
+    <g transform="translate(268, 294)">
+      <rect width="60" height="60" rx="16" fill="#111111"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">t</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">TikTok</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(28, 386)">
+      <rect width="60" height="60" rx="16" fill="#E1306C"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">i</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Instagram</text>
+    </g>
+    <g transform="translate(108, 386)">
+      <rect width="60" height="60" rx="16" fill="#5BA63B"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">M</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Minecraft</text>
+    </g>
+    <g transform="translate(188, 386)">
+      <rect width="60" height="60" rx="16" fill="#2A3F8F"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">F</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Fortnite</text>
+    </g>
+    <g transform="translate(268, 386)">
+      <rect width="60" height="60" rx="16" fill="#10A37F"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">G</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">ChatGPT</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(28, 478)">
+      <rect width="60" height="60" rx="16" fill="#111111"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">B</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">BeReal</text>
+    </g>
+    <g transform="translate(108, 478)">
+      <rect width="60" height="60" rx="16" fill="#7C6BAA"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">c</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Char.AI</text>
+    </g>
+    <g transform="translate(188, 478)">
+      <rect width="60" height="60" rx="16" fill="#9146FF"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">T</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Twitch</text>
+    </g>
+    <g transform="translate(268, 478)">
+      <rect width="60" height="60" rx="16" fill="#25D366"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">w</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">WhatsApp</text>
+    </g>
+
+    <!-- Row 4 - last with "+30 more" tile -->
+    <g transform="translate(28, 570)">
+      <rect width="60" height="60" rx="16" fill="#FF4500"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">r</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Reddit</text>
+    </g>
+    <g transform="translate(108, 570)">
+      <rect width="60" height="60" rx="16" fill="#DA7756"/>
+      <text x="30" y="40" class="mono-sm invert" text-anchor="middle">CL</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">Claude</text>
+    </g>
+    <g transform="translate(188, 570)">
+      <rect width="60" height="60" rx="16" fill="#FF0000"/>
+      <text x="30" y="40" class="mono invert" text-anchor="middle">Y</text>
+      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
+      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <text x="30" y="76" class="label" text-anchor="middle">YouTube</text>
+    </g>
+    <g transform="translate(268, 570)">
+      <rect width="60" height="60" rx="16" fill="#ECE5F6" stroke="#DCD2EE" stroke-dasharray="3 3"/>
+      <text x="30" y="38" class="mono" fill="#7C6BAA" text-anchor="middle">+30</text>
+      <text x="30" y="76" class="label muted" text-anchor="middle">more</text>
+    </g>
+
+    <!-- Tab bar -->
+    <rect x="9" y="660" width="342" height="71" fill="#FFFFFF"/>
+    <rect x="9" y="660" width="342" height="1" fill="#ECE7DE"/>
+    <g transform="translate(48, 678)">
+      <path d="M-7,-3 C-7,-8 -3,-11 0,-11 C3,-11 7,-8 7,-3 L8,3 L-8,3 Z" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <path d="M-2,4 C-2,6 -1,7 0,7 C1,7 2,6 2,4 Z" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <text y="22" class="tab muted" text-anchor="middle">Alerts</text>
+    </g>
+    <g transform="translate(132, 678)">
+      <rect x="-8" y="-8" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
+      <rect x="1" y="-8" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
+      <rect x="-8" y="1" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
+      <rect x="1" y="1" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
+      <text y="22" class="tab" fill="#7C6BAA" text-anchor="middle">Apps</text>
+    </g>
+    <g transform="translate(216, 678)">
+      <circle cx="-4" cy="-2" r="4" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <circle cx="4" cy="-2" r="4" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <path d="M-10,8 C-10,4 -7,2 -4,2 M10,8 C10,4 7,2 4,2" fill="none" stroke="#B0A8B6" stroke-width="1.8" stroke-linecap="round"/>
+      <text y="22" class="tab muted" text-anchor="middle">Children</text>
+    </g>
+    <g transform="translate(300, 678)">
+      <circle r="6" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>
+      <path d="M0,-8.5 L0,-6 M0,6 L0,8.5 M-8.5,0 L-6,0 M6,0 L8.5,0 M-6,-6 L-4,-4 M4,4 L6,6 M-6,6 L-4,4 M4,-4 L6,-6" stroke="#B0A8B6" stroke-width="1.8" stroke-linecap="round"/>
+      <text y="22" class="tab muted" text-anchor="middle">Settings</text>
+    </g>
+
+    <rect x="123" y="717" width="114" height="5" rx="2.5" fill="#2D2A33"/>
+  </g>
+</svg>

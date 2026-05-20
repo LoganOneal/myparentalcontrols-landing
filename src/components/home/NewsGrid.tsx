@@ -85,46 +85,47 @@ function NewsCard({ item }: { item: NewsItem }) {
       aria-label={`${item.source}: ${item.headline}`}
       target={item.href.startsWith("http") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="snap-start shrink-0 w-[300px] sm:w-[360px] relative rounded-3xl overflow-hidden shadow-lg group block bg-white"
+      className="snap-start shrink-0 w-[340px] sm:w-[440px] lg:w-[500px] rounded-2xl overflow-hidden bg-white border border-gray-200/80 hover:border-gray-300 transition-colors group block"
     >
-      <div className="aspect-[373/280] bg-gradient-to-br from-gray-100 via-gray-50 to-gray-200 relative">
+      <div className="aspect-[4/3] bg-gray-50 relative border-b border-gray-200/80">
         {item.screenshot ? (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={`/images/news/${item.screenshot}`}
             alt={item.headline}
             className="w-full h-full object-cover object-top"
+            loading="lazy"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-6">
             <div className="text-center">
               <div
-                className="inline-block text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full"
+                className="inline-block text-white text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-1.5 rounded-full"
                 style={{ background: item.sourceColor ?? "#1E1A24" }}
               >
                 {item.source}
               </div>
-              <p className="mt-3 text-gray-500 text-xs">Article screenshot</p>
+              <p className="mt-3 text-gray-400 text-xs">Article screenshot</p>
             </div>
           </div>
         )}
       </div>
-      <div className="p-5 flex flex-col gap-2">
-        <div className="flex items-center justify-between text-xs">
+      <div className="p-6 flex flex-col gap-3">
+        <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em]">
           <span
-            className="font-semibold uppercase tracking-wide"
+            className="font-bold"
             style={{ color: item.sourceColor ?? "#1E1A24" }}
           >
             {item.source}
           </span>
-          <span className="text-gray-500">{item.date}</span>
+          <span className="text-gray-300" aria-hidden>
+            •
+          </span>
+          <span className="text-gray-500 font-medium">{item.date}</span>
         </div>
-        <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-snug">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 leading-snug line-clamp-3 group-hover:text-black transition-colors">
           {item.headline}
         </h3>
-        <span className="text-sm text-gray-700 group-hover:underline mt-1">
-          Read coverage →
-        </span>
       </div>
     </Link>
   );
@@ -144,9 +145,9 @@ function ArrowButton({
       aria-label={direction === "left" ? "Scroll left" : "Scroll right"}
       className={`absolute top-1/2 -translate-y-1/2 ${
         direction === "left" ? "left-3 sm:left-6 lg:left-10" : "right-3 sm:right-6 lg:right-10"
-      } z-10 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-50 transition items-center justify-center text-gray-700 hidden md:flex`}
+      } z-10 w-12 h-12 rounded-full bg-white/95 backdrop-blur border border-gray-200 hover:bg-white hover:border-gray-300 transition items-center justify-center text-gray-900 hidden md:flex`}
     >
-      <span aria-hidden className="text-xl leading-none">
+      <span aria-hidden className="text-2xl leading-none -mt-0.5">
         {direction === "left" ? "‹" : "›"}
       </span>
     </button>
@@ -194,9 +195,6 @@ export function NewsGrid() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-500 text-center mt-6 max-w-2xl mx-auto px-4">
-        Drag, swipe, or use the arrows to browse coverage.
-      </p>
     </>
   );
 }
