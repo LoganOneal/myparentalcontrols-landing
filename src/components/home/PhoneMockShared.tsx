@@ -1,10 +1,13 @@
 /**
  * Shared building blocks for the AlertsForDangers feature mockups. Every
- * mock screen uses the same phone shell + red MPC hero header so the
- * mockups feel like screens of one real app.
+ * mock screen renders inside an iPhone X bezel (via react-device-frameset,
+ * which wraps marvelapp/devices.css) so the mockups read as screens of one
+ * real app on a real device.
  */
 
 import * as React from "react";
+import { DeviceFrameset } from "react-device-frameset";
+import "react-device-frameset/styles/marvel-devices.min.css";
 
 /**
  * `red/redDeep/redDark` are vestigially named — they hold the brand/theme
@@ -32,11 +35,12 @@ export const COLORS = {
 };
 
 /**
- * Fixed-aspect-ratio iPhone frame. `aspect-[9/19.5]` matches an iPhone 14
- * logical display (390×844 ~= 9:19.5). Combined with flex-col + mt-auto
- * on the BottomNav, every mock renders at exactly the same width × height
- * regardless of how much body content it has — short mocks get extra space
- * before the bottom nav, dense mocks fit snugly.
+ * iPhone X bezel + screen wrapper. The library renders the bezel, notch,
+ * and home indicator; we render the screen content inside a flex-col so
+ * BottomNav (with `mt-auto`) pins to the bottom of the screen area.
+ *
+ * Width/height match the iPhone X default in marvelapp/devices.css
+ * (375×812). Responsive scaling happens in the parent via CSS transform.
  */
 export function PhoneFrame({
   children,
@@ -48,11 +52,12 @@ export function PhoneFrame({
   style?: React.CSSProperties;
 }) {
   return (
-    <div
-      className={`bg-white rounded-[36px] overflow-hidden shadow-2xl ring-1 ring-black/5 flex flex-col aspect-[9/19.5] ${className}`}
-      style={style}
-    >
-      {children}
+    <div className={className} style={style}>
+      <DeviceFrameset device="iPhone X" width={375} height={812}>
+        <div className="flex flex-col h-full w-full bg-white overflow-hidden">
+          {children}
+        </div>
+      </DeviceFrameset>
     </div>
   );
 }
@@ -219,7 +224,7 @@ export function BottomNav({
   ];
   return (
     <>
-      <div className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-3">
+      <div className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-2">
         {tabs.map((t) => {
           const active = t.label === activeTab;
           return (
@@ -244,9 +249,6 @@ export function BottomNav({
             </div>
           );
         })}
-      </div>
-      <div className="h-1 flex justify-center pb-2">
-        <span className="block w-24 h-1 rounded-full bg-gray-300" />
       </div>
     </>
   );

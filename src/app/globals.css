@@ -152,13 +152,17 @@
   }
   html {
     font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
-    overflow-x: hidden;
+    /* `overflow-x: clip` clips horizontal overflow WITHOUT creating a new
+       scroll container, so `position: sticky` descendants still stick to
+       the viewport. `overflow-x: hidden` would compute as `hidden auto`
+       on overflow shorthand and break sticky. */
+    overflow-x: clip;
   }
   body {
     background: #ffffff;
     color: #000000;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 

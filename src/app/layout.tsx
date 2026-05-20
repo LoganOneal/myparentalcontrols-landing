@@ -42,7 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${bricolage.variable} ${archivoBlack.variable} antialiased`}>
-      <body className="overflow-x-hidden">{children}</body>
+      {/* overflow-x-clip prevents horizontal overflow without turning the
+          body into a scroll container — keeps position:sticky working in
+          descendants. overflow-x-hidden would break scroll-lock sections. */}
+      <body className="overflow-x-clip">{children}</body>
     </html>
   );
 }

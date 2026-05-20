@@ -7,7 +7,7 @@ import Link from "next/link";
  */
 export function SubHeaderBar() {
   return (
-    <div className="bg-white border-b border-gray-200 w-full">
+    <div className="bg-white border-b border-gray-200 w-full sticky top-0 z-40">
       <div className="max-w-[1280px] mx-auto h-[68px] px-5 lg:px-8 flex items-center justify-between gap-4">
         <div className="flex flex-col leading-tight">
           <span
