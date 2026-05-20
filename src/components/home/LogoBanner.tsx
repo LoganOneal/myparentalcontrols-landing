@@ -13,6 +13,10 @@ import * as React from "react";
 type Platform = {
   name: string;
   src: string;
+  // Skip the brightness/invert filter for assets that already read as
+  // white-on-dark (e.g. the official GTA V PNG has a baked-in black
+  // background; inverting it produces a solid white block).
+  rawColor?: boolean;
 };
 
 // High-risk video games for children based on commonly flagged concerns:
@@ -24,7 +28,7 @@ const PLATFORMS: Platform[] = [
   { name: "Roblox", src: "/images/platforms/wordmarks-clean/roblox.svg" },
   { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png" },
   { name: "Minecraft", src: "/images/platforms/wordmarks-clean/minecraft.svg" },
-  { name: "Grand Theft Auto V", src: "/images/platforms/games/gta-v.png" },
+  { name: "Grand Theft Auto V", src: "/images/platforms/games/gta-v.png", rawColor: true },
   { name: "Call of Duty", src: "/images/platforms/games/call-of-duty.svg" },
   { name: "Valorant", src: "/images/platforms/games/valorant.svg" },
   { name: "League of Legends", src: "/images/platforms/games/league-of-legends.svg" },
@@ -36,19 +40,33 @@ const PLATFORMS: Platform[] = [
   { name: "Steam", src: "/images/platforms/wordmarks-clean/steam.svg" },
 ];
 
-function Logo({ name, src }: Platform) {
+function Logo({ name, src, rawColor }: Platform) {
   // On the dark #121212 banner we flatten each logo to a single light tone
   // so they read uniformly as a desaturated press strip. brightness(0)
   // collapses all color to black, invert(1) flips it to white, and the
   // opacity softens it just enough to avoid harsh contrast.
+  //
+  // For PNGs that already ship with a black background baked in (e.g. the
+  // official GTA V wordmark), we skip the inversion and let `mix-blend-mode:
+  // screen` knock the black out against the dark banner — only the white
+  // letterforms remain visible. We also let those assets render at double
+  // height since stacked square logos read poorly at row height.
   return (
-    <div className="flex items-center shrink-0 h-9 sm:h-10 lg:h-11">
+    <div
+      className={`flex items-center shrink-0 ${
+        rawColor ? "h-16 sm:h-20 lg:h-24" : "h-9 sm:h-10 lg:h-11"
+      }`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={name}
         className="h-full w-auto block"
-        style={{ filter: "brightness(0) invert(1) opacity(0.75)" }}
+        style={
+          rawColor
+            ? { mixBlendMode: "screen", opacity: 0.9 }
+            : { filter: "brightness(0) invert(1) opacity(0.75)" }
+        }
       />
     </div>
   );
@@ -85,7 +103,7 @@ export function LogoBanner() {
             textTransform: "uppercase",
           }}
         >
-          Watching the apps where <Highlight>predators</Highlight>,{" "}
+          Watching the games where <Highlight>predators</Highlight>,{" "}
           <Highlight>cyber bullies</Highlight>, and{" "}
           <Highlight>scammers</Highlight> target your children
         </h2>

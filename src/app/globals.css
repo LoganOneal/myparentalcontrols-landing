@@ -215,6 +215,48 @@
   );
 }
 
+/* Hero floating decoration animations — gentle bob for the platform badges
+   and audio pill so the hero feels alive without being noisy. Four
+   variants with different durations break up the synchrony. */
+@keyframes hero-float-a {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes hero-float-b {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes hero-float-c {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes hero-float-d {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.animate-hero-float-a { animation: hero-float-a 5s   ease-in-out infinite; }
+.animate-hero-float-b { animation: hero-float-b 6s   ease-in-out infinite; }
+.animate-hero-float-c { animation: hero-float-c 7s   ease-in-out infinite; }
+.animate-hero-float-d { animation: hero-float-d 4.5s ease-in-out infinite; }
+
+/* Waveform bar — scaleY pulses to mimic an audio level meter. Each bar's
+   animation-delay is set inline so the wave moves left to right. */
+@keyframes hero-wave-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50%      { transform: scaleY(1); }
+}
+.animate-hero-wave-bar {
+  animation: hero-wave-bar 1s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Recording dot — pulses opacity to convey active recording. */
+@keyframes hero-rec-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+.animate-hero-rec-pulse { animation: hero-rec-pulse 1.3s ease-in-out infinite; }
+
 /* Legal / prose styles — content rendered inside .prose-cal gets browser-default-like styling, scaled */
 .prose-cal h1 {
   font-size: 2.25rem;
