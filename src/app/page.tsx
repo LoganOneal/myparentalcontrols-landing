@@ -4,7 +4,6 @@ import { Hero } from "@/components/home/Hero";
 import { NewsGrid } from "@/components/home/NewsGrid";
 import { FeatureSwitcher } from "@/components/home/FeatureSwitcher";
 import { WhyChoose } from "@/components/home/WhyChoose";
-import { DarkModeBanner } from "@/components/home/DarkModeBanner";
 import { UserTestimonials } from "@/components/home/UserTestimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <NewsGrid />
       <FeatureSwitcher />
       <WhyChoose />
-      <DarkModeBanner />
       <UserTestimonials />
       <FinalCTA />
       <SiteFooter />

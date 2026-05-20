@@ -8,30 +8,33 @@ type Feature = {
   image: string;
 };
 
+// TODO: replace shared mpc-app-preview.png with four per-feature screenshots
+// (alert toast, platform-coverage screen, flagged-event timeline, captured-DM
+// detail) once design assets land in public/images/features/.
 const FEATURES: Feature[] = [
   {
-    title: "Track Your Food With Just a Picture",
+    title: "Real-time alerts the moment a predator makes contact",
     description:
-      "Snap a photo with Cal AI, and your phone's depth sensor calculates food volume. Our AI then analyzes and breaks down your meal to determine calories, protein, carbs, and fat.",
-    image: "/images/analyzed.png",
+      "MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.",
+    image: "/images/mpc-app-preview.png",
   },
   {
-    title: "Search Our Database of over 1 million foods",
+    title: "Coverage across 40+ apps, games, and chat platforms",
     description:
-      "Quickly find and log foods from our extensive database. Search by name, brand, or scan barcodes for instant nutritional information.",
-    image: "/images/search-food-db.png",
+      "One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.",
+    image: "/images/mpc-app-preview.png",
   },
   {
-    title: "Complete Progress Tracking and AI suggestions",
+    title: "Catches self-harm, sexual content, and bullying — not just predators",
     description:
-      "Monitor your weight, measurements, and nutrition goals. Get personalized AI suggestions to stay on track and optimize your diet.",
-    image: "/images/food-db.png",
+      "The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.",
+    image: "/images/mpc-app-preview.png",
   },
   {
-    title: "Keep track of your water and daily exercise",
+    title: "Sees encrypted and disappearing messages on the device",
     description:
-      "Log your water intake and daily exercise effortlessly. Cal AI helps you stay hydrated and active, integrating seamlessly with your fitness routine.",
-    image: "/images/water.png",
+      "End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.",
+    image: "/images/mpc-app-preview.png",
   },
 ];
 
@@ -75,7 +78,7 @@ export function FeatureSwitcher() {
   return (
     <section className="py-16 lg:py-24 px-4">
       <h2 className="text-center text-3xl sm:text-4xl lg:text-[48px] font-medium mb-12 lg:mb-16 mt-36">
-        What does Cal AI include?
+        What does MyParentalControls include?
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">

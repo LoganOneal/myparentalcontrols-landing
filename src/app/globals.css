@@ -167,6 +167,15 @@
   }
 }
 
+/* Hide horizontal scrollbar on carousels — keeps native scroll behavior intact. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Legal / prose styles — content rendered inside .prose-cal gets browser-default-like styling, scaled */
 .prose-cal h1 {
   font-size: 2.25rem;

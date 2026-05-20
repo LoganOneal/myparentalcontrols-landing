@@ -1,14 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
 
 /**
  * News & lawsuits coverage about Roblox / Discord child-safety issues.
  *
- * Each card carries a `screenshot` slot — drop a PNG of the article header
- * into `public/images/news/<filename>.png` and set the filename here. Until
- * a screenshot is set, the card renders a tasteful source-color placeholder.
- *
- * Headlines below reference real publicly-reported lawsuits and coverage —
- * verify the URLs and replace before launch.
+ * Horizontal snap-scroll carousel: cards lined up in one row, native
+ * scroll on touch devices, prev/next buttons on desktop. Drop a screenshot
+ * into public/images/news/<filename>.png and set `screenshot` on the entry
+ * to swap it in.
  */
 
 type NewsItem = {
@@ -20,7 +21,7 @@ type NewsItem = {
   screenshot?: string;
 };
 
-const COLUMN_1: NewsItem[] = [
+const ITEMS: NewsItem[] = [
   {
     source: "CBS News",
     sourceColor: "#0033A0",
@@ -39,9 +40,6 @@ const COLUMN_1: NewsItem[] = [
     href: "https://apnews.com/article/roblox-nevada-settlement-28b3d7d7a483dc28462a7504b67c9bbc",
     screenshot: "ap-nevada.png",
   },
-];
-
-const COLUMN_2: NewsItem[] = [
   {
     source: "BBC News",
     sourceColor: "#BB1919",
@@ -60,9 +58,6 @@ const COLUMN_2: NewsItem[] = [
     href: "https://www.npr.org/2025/11/21/nx-s1-5614161/roblox-bets-on-facial-scanning-to-keep-its-youngest-users-safe",
     screenshot: "npr-facial-scanning.png",
   },
-];
-
-const COLUMN_3: NewsItem[] = [
   {
     source: "NBC News",
     sourceColor: "#0A6EBD",
@@ -90,16 +85,15 @@ function NewsCard({ item }: { item: NewsItem }) {
       aria-label={`${item.source}: ${item.headline}`}
       target={item.href.startsWith("http") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="relative rounded-3xl overflow-hidden shadow-lg group block bg-white"
+      className="snap-start shrink-0 w-[300px] sm:w-[360px] relative rounded-3xl overflow-hidden shadow-lg group block bg-white"
     >
-      {/* Screenshot slot */}
       <div className="aspect-[373/280] bg-gradient-to-br from-gray-100 via-gray-50 to-gray-200 relative">
         {item.screenshot ? (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={`/images/news/${item.screenshot}`}
             alt={item.headline}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -110,9 +104,7 @@ function NewsCard({ item }: { item: NewsItem }) {
               >
                 {item.source}
               </div>
-              <p className="mt-3 text-gray-500 text-xs">
-                Article screenshot
-              </p>
+              <p className="mt-3 text-gray-500 text-xs">Article screenshot</p>
             </div>
           </div>
         )}
@@ -138,7 +130,40 @@ function NewsCard({ item }: { item: NewsItem }) {
   );
 }
 
+function ArrowButton({
+  direction,
+  onClick,
+}: {
+  direction: "left" | "right";
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={direction === "left" ? "Scroll left" : "Scroll right"}
+      className={`absolute top-1/2 -translate-y-1/2 ${
+        direction === "left" ? "left-3 sm:left-6 lg:left-10" : "right-3 sm:right-6 lg:right-10"
+      } z-10 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-50 transition items-center justify-center text-gray-700 hidden md:flex`}
+    >
+      <span aria-hidden className="text-xl leading-none">
+        {direction === "left" ? "‹" : "›"}
+      </span>
+    </button>
+  );
+}
+
 export function NewsGrid() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  function scrollByCard(direction: 1 | -1) {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const firstCard = el.querySelector<HTMLElement>("a");
+    const cardWidth = firstCard?.offsetWidth ?? 360;
+    el.scrollBy({ left: direction * (cardWidth + 24), behavior: "smooth" });
+  }
+
   return (
     <>
       <div className="text-center sm:mt-52 mt-24 px-4 max-w-3xl mx-auto">
@@ -153,30 +178,24 @@ export function NewsGrid() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-16 sm:mt-24 px-4 max-w-screen-xl mx-auto">
-        <div className="flex flex-col gap-[21px]">
-          {COLUMN_1.map((i) => (
-            <NewsCard key={i.headline} item={i} />
+      {/* Full-bleed carousel — spans the entire viewport width */}
+      <div className="relative w-full mt-12 sm:mt-16">
+        <ArrowButton direction="left" onClick={() => scrollByCard(-1)} />
+        <ArrowButton direction="right" onClick={() => scrollByCard(1)} />
+        <div
+          ref={scrollerRef}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth py-2 px-4 sm:px-8 lg:px-16 no-scrollbar"
+        >
+          {ITEMS.map((item) => (
+            <NewsCard key={item.headline} item={item} />
           ))}
-        </div>
-        <div className="md:-translate-y-20 translate-y-0 flex flex-col gap-[21px]">
-          {COLUMN_2.map((i) => (
-            <NewsCard key={i.headline} item={i} />
-          ))}
-        </div>
-        <div className="flex flex-col gap-[21px]">
-          {COLUMN_3.map((i) => (
-            <NewsCard key={i.headline} item={i} />
-          ))}
+          {/* Trailing spacer so the last card has breathing room past the edge */}
+          <span aria-hidden className="shrink-0 w-4" />
         </div>
       </div>
 
-      <p className="text-xs text-gray-500 text-center mt-10 max-w-2xl mx-auto px-4">
-        Drop your own article screenshots into{" "}
-        <code className="font-mono bg-gray-100 px-1.5 py-0.5 rounded">
-          public/images/news/
-        </code>{" "}
-        and set the filename on each card to replace the placeholders.
+      <p className="text-xs text-gray-500 text-center mt-6 max-w-2xl mx-auto px-4">
+        Drag, swipe, or use the arrows to browse coverage.
       </p>
     </>
   );
