@@ -22,10 +22,7 @@
   <rect x="6" y="6" width="348" height="728" rx="48" fill="#0d0d0d"/>
 
   <g clip-path="url(#screen)">
-    <rect x="9" y="9" width="342" height="722" fill="#FAF8F5"/>
-    <!-- Sage wash -->
-    <rect x="9" y="9" width="342" height="200" fill="#E8F0EC"/>
-    <circle cx="320" cy="60" r="100" fill="#D7E5DF" opacity="0.7"/>
+    <rect x="9" y="9" width="342" height="722" fill="#FFFFFF"/>
 
     <!-- Status -->
     <text x="32" y="38" class="small">9:41</text>
@@ -49,7 +46,7 @@
 
     <!-- Status pill -->
     <g transform="translate(280, 110)">
-      <rect x="-30" y="-13" width="60" height="26" rx="13" fill="#7DA395"/>
+      <rect x="-30" y="-13" width="60" height="26" rx="13" fill="#14B8A6"/>
       <circle cx="-18" cy="0" r="3" fill="#FFFFFF"/>
       <text x="-10" y="4" class="pill invert">ACTIVE</text>
     </g>
@@ -98,29 +95,29 @@
     <g transform="translate(28, 294)">
       <rect width="60" height="60" rx="16" fill="#E2231A"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">R</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Roblox</text>
     </g>
     <g transform="translate(108, 294)">
       <rect width="60" height="60" rx="16" fill="#5865F2"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">D</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Discord</text>
     </g>
     <g transform="translate(188, 294)">
       <rect width="60" height="60" rx="16" fill="#FFFC00"/>
       <text x="30" y="40" class="mono" text-anchor="middle">S</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Snap</text>
     </g>
     <g transform="translate(268, 294)">
       <rect width="60" height="60" rx="16" fill="#111111"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">t</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">TikTok</text>
     </g>
 
@@ -128,29 +125,29 @@
     <g transform="translate(28, 386)">
       <rect width="60" height="60" rx="16" fill="#E1306C"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">i</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Instagram</text>
     </g>
     <g transform="translate(108, 386)">
       <rect width="60" height="60" rx="16" fill="#5BA63B"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">M</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Minecraft</text>
     </g>
     <g transform="translate(188, 386)">
       <rect width="60" height="60" rx="16" fill="#2A3F8F"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">F</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Fortnite</text>
     </g>
     <g transform="translate(268, 386)">
       <rect width="60" height="60" rx="16" fill="#10A37F"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">G</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">ChatGPT</text>
     </g>
 
@@ -158,29 +155,29 @@
     <g transform="translate(28, 478)">
       <rect width="60" height="60" rx="16" fill="#111111"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">B</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">BeReal</text>
     </g>
     <g transform="translate(108, 478)">
-      <rect width="60" height="60" rx="16" fill="#7C6BAA"/>
+      <rect width="60" height="60" rx="16" fill="#14B8A6"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">c</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Char.AI</text>
     </g>
     <g transform="translate(188, 478)">
       <rect width="60" height="60" rx="16" fill="#9146FF"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">T</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Twitch</text>
     </g>
     <g transform="translate(268, 478)">
       <rect width="60" height="60" rx="16" fill="#25D366"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">w</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">WhatsApp</text>
     </g>
 
@@ -188,27 +185,27 @@
     <g transform="translate(28, 570)">
       <rect width="60" height="60" rx="16" fill="#FF4500"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">r</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Reddit</text>
     </g>
     <g transform="translate(108, 570)">
       <rect width="60" height="60" rx="16" fill="#DA7756"/>
       <text x="30" y="40" class="mono-sm invert" text-anchor="middle">CL</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">Claude</text>
     </g>
     <g transform="translate(188, 570)">
       <rect width="60" height="60" rx="16" fill="#FF0000"/>
       <text x="30" y="40" class="mono invert" text-anchor="middle">Y</text>
-      <circle cx="55" cy="5" r="5" fill="#FAF8F5"/>
-      <circle cx="55" cy="5" r="3" fill="#7DA395"/>
+      <circle cx="55" cy="5" r="5" fill="#FFFFFF"/>
+      <circle cx="55" cy="5" r="3" fill="#14B8A6"/>
       <text x="30" y="76" class="label" text-anchor="middle">YouTube</text>
     </g>
     <g transform="translate(268, 570)">
-      <rect width="60" height="60" rx="16" fill="#ECE5F6" stroke="#DCD2EE" stroke-dasharray="3 3"/>
-      <text x="30" y="38" class="mono" fill="#7C6BAA" text-anchor="middle">+30</text>
+      <rect width="60" height="60" rx="16" fill="#F0FDFA" stroke="#99F6E4" stroke-dasharray="3 3"/>
+      <text x="30" y="38" class="mono" fill="#14B8A6" text-anchor="middle">+30</text>
       <text x="30" y="76" class="label muted" text-anchor="middle">more</text>
     </g>
 
@@ -221,11 +218,11 @@
       <text y="22" class="tab muted" text-anchor="middle">Alerts</text>
     </g>
     <g transform="translate(132, 678)">
-      <rect x="-8" y="-8" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
-      <rect x="1" y="-8" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
-      <rect x="-8" y="1" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
-      <rect x="1" y="1" width="7" height="7" rx="1.5" fill="#7C6BAA"/>
-      <text y="22" class="tab" fill="#7C6BAA" text-anchor="middle">Apps</text>
+      <rect x="-8" y="-8" width="7" height="7" rx="1.5" fill="#14B8A6"/>
+      <rect x="1" y="-8" width="7" height="7" rx="1.5" fill="#14B8A6"/>
+      <rect x="-8" y="1" width="7" height="7" rx="1.5" fill="#14B8A6"/>
+      <rect x="1" y="1" width="7" height="7" rx="1.5" fill="#14B8A6"/>
+      <text y="22" class="tab" fill="#14B8A6" text-anchor="middle">Apps</text>
     </g>
     <g transform="translate(216, 678)">
       <circle cx="-4" cy="-2" r="4" fill="none" stroke="#B0A8B6" stroke-width="1.8"/>

@@ -1,0 +1,429 @@
+[
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/themes/bark/dist/img/primary-logo.svg",
+    "alt": "Bark",
+    "width": 235,
+    "height": 60,
+    "parentClasses": "bark-logo"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2025/02/half-dashboard-850x1024.webp",
+    "alt": "",
+    "width": 850,
+    "height": 1024,
+    "parentClasses": "aligncenter size-large is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/bloomberg.svg",
+    "alt": "Bloomberg",
+    "width": 300,
+    "height": 65,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cbsnews.svg",
+    "alt": "CBS News",
+    "width": 300,
+    "height": 86,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cnbc_4.svg",
+    "alt": "CNBC",
+    "width": 204,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cnn.svg",
+    "alt": "CNN",
+    "width": 260,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/forbes.svg",
+    "alt": "Forbes",
+    "width": 300,
+    "height": 125,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/good_morning_america.svg",
+    "alt": "Good Morning America",
+    "width": 249,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/mashable.svg",
+    "alt": "Mashable",
+    "width": 300,
+    "height": 77,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/techchrunch.svg",
+    "alt": "TechCrunch",
+    "width": 300,
+    "height": 63,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/the_doctors_oblique.svg",
+    "alt": "The Doctors",
+    "width": 300,
+    "height": 103,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/nbc.svg",
+    "alt": "Today",
+    "width": 197,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/usatoday.svg",
+    "alt": "USA Today",
+    "width": 300,
+    "height": 73,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/vogue.svg",
+    "alt": "Vogue",
+    "width": 300,
+    "height": 135,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/10/BBC-01-1.svg",
+    "alt": "",
+    "width": 300,
+    "height": 98,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/10/new-york-times.svg",
+    "alt": "",
+    "width": 300,
+    "height": 42,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/07/Drew_Barrymore_Show_logo.svg",
+    "alt": "",
+    "width": 224,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/bloomberg.svg",
+    "alt": "Bloomberg",
+    "width": 300,
+    "height": 65,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cbsnews.svg",
+    "alt": "CBS News",
+    "width": 300,
+    "height": 86,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cnbc_4.svg",
+    "alt": "CNBC",
+    "width": 204,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/cnn.svg",
+    "alt": "CNN",
+    "width": 260,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/forbes.svg",
+    "alt": "Forbes",
+    "width": 300,
+    "height": 125,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/good_morning_america.svg",
+    "alt": "Good Morning America",
+    "width": 249,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/mashable.svg",
+    "alt": "Mashable",
+    "width": 300,
+    "height": 77,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/techchrunch.svg",
+    "alt": "TechCrunch",
+    "width": 300,
+    "height": 63,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/the_doctors_oblique.svg",
+    "alt": "The Doctors",
+    "width": 300,
+    "height": 103,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/nbc.svg",
+    "alt": "Today",
+    "width": 197,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/usatoday.svg",
+    "alt": "USA Today",
+    "width": 300,
+    "height": 73,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/06/vogue.svg",
+    "alt": "Vogue",
+    "width": 300,
+    "height": 135,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/10/BBC-01-1.svg",
+    "alt": "",
+    "width": 300,
+    "height": 98,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/10/new-york-times.svg",
+    "alt": "",
+    "width": 300,
+    "height": 42,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2021/07/Drew_Barrymore_Show_logo.svg",
+    "alt": "",
+    "width": 224,
+    "height": 150,
+    "parentClasses": "logo-scroller "
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/07/iphone15-with-nav-shadow.webp",
+    "alt": "",
+    "width": 1004,
+    "height": 1816,
+    "parentClasses": "phone-container"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2026/02/starter-phone-lp-size.webp",
+    "alt": "",
+    "width": 2230,
+    "height": 840,
+    "parentClasses": "content-image full-width"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/location-hero-e1718307319478-900x500.webp",
+    "alt": "image of teen girl buckling up in car driver's seat",
+    "width": 2230,
+    "height": 759,
+    "parentClasses": "content-image full-width"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/blocking-app-dad-e1718391518339-900x500.webp",
+    "alt": "image of dad looking at a phone with social media logos around him",
+    "width": 2068,
+    "height": 899,
+    "parentClasses": "content-image full-width"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/screentime-app-v2-e1718391495441-900x500.webp",
+    "alt": "image of young boy in a dark room looking at screen",
+    "width": 2200,
+    "height": 777,
+    "parentClasses": "content-image full-width"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/works-on-devices-mobile-900x500.webp",
+    "alt": "",
+    "width": 2066,
+    "height": 500,
+    "parentClasses": "content-image full-width"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/device-logos-only.svg",
+    "alt": "",
+    "width": 556,
+    "height": 71,
+    "parentClasses": "aligncenter size-large is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2025/03/app-pricing-topper-1024x464.webp",
+    "alt": "",
+    "width": 1024,
+    "height": 464,
+    "parentClasses": "block-image flex flex-justify-center"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/5-stars-blue-1024x188.png",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "aligncenter size-large is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/07/testimonial-1.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "alignleft size-full is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/07/testimonial-2.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "alignright size-full is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/07/testimonial-3.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "wp-block-image size-full is-resized fade-into-view desktop-hidden"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/testimonial-1-1024x454.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "alignleft size-large is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/testimonial-2-1024x472.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "alignright size-large is-resized"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/testimonial-3-1024x409.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "wp-block-image size-large is-resized fade-into-view"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/login-hand-circle-e1718649767988.webp",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": "image-container flex flex-direction-column flex-align-center flex-justify-center"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/1.svg",
+    "alt": "",
+    "width": 82,
+    "height": 82,
+    "parentClasses": "link-list-item"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/2.svg",
+    "alt": "",
+    "width": 82,
+    "height": 82,
+    "parentClasses": "link-list-item"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/06/3.svg",
+    "alt": "",
+    "width": 82,
+    "height": 82,
+    "parentClasses": "link-list-item"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/themes/bark/dist/img/footer-logo.svg",
+    "alt": "Bark",
+    "width": 142,
+    "height": 36,
+    "parentClasses": "logo-link"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/themes/bark/dist/img/app-store.svg",
+    "alt": "Apple App Store",
+    "width": 152,
+    "height": 47,
+    "parentClasses": "mb-xxs"
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/themes/bark/dist/img/google-play.svg",
+    "alt": "Google Play",
+    "width": 157,
+    "height": 48,
+    "parentClasses": ""
+  },
+  {
+    "src": "https://d12jofbmgge65s.cloudfront.net/wp-content/uploads/2024/10/watch-180x180-1.webp",
+    "alt": "",
+    "width": 180,
+    "height": 189,
+    "parentClasses": ""
+  },
+  {
+    "src": "https://bat.bing.com/action/0?ti=56293783&Ver=2&mid=d1396c32-9a5a-4fdc-8ec3-9732873f0d4b&bo=1&sid=21d1b0b053e911f1af3af3ca4aa71a1a&vid=21d1dcb053e911f1843b59d34193a99e&vids=1&msclkid=N&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Bark%20Parental%20Control%20App%20%7C%20Bark&p=https%3A%2F%2Fwww.bark.us%2Fbark-app%2F&r=&lt=4845&mtp=10&evt=pageLoad&sv=2&cdb=ARoR&rn=407486",
+    "alt": "",
+    "width": 0,
+    "height": 0,
+    "parentClasses": ""
+  },
+  {
+    "src": "https://t.co/i/adsct?bci=4&dv=America%2FLos_Angeles%26en-US%26Google%20Inc.%26Win32%26255%261440%26900%268%2624%261440%26900%2610%26na&eci=2&event_id=e8b9dbc7-45f5-4415-bad9-6f9c43344763&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=cc2c0f05-b5c9-4235-8401-99317ff714f5&pt=Bark%20Parental%20Control%20App%20%7C%20Bark&tw_document_href=https%3A%2F%2Fwww.bark.us%2Fbark-app%2F&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&twpid=tw.1779239618636.999876622164570746&txn_id=o658d&type=javascript&version=2.3.53",
+    "alt": "",
+    "width": 1,
+    "height": 1,
+    "parentClasses": "wp-singular page-template-default page page-id-81641 wp-theme-bark header-nav-template--default is-l"
+  },
+  {
+    "src": "https://analytics.twitter.com/i/adsct?bci=4&dv=America%2FLos_Angeles%26en-US%26Google%20Inc.%26Win32%26255%261440%26900%268%2624%261440%26900%2610%26na&eci=2&event_id=e8b9dbc7-45f5-4415-bad9-6f9c43344763&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=cc2c0f05-b5c9-4235-8401-99317ff714f5&pt=Bark%20Parental%20Control%20App%20%7C%20Bark&tw_document_href=https%3A%2F%2Fwww.bark.us%2Fbark-app%2F&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&twpid=tw.1779239618636.999876622164570746&txn_id=o658d&type=javascript&version=2.3.53",
+    "alt": "",
+    "width": 1,
+    "height": 1,
+    "parentClasses": "wp-singular page-template-default page page-id-81641 wp-theme-bark header-nav-template--default is-l"
+  },
+  {
+    "src": "https://t.co/1/i/adsct?bci=4&dv=America%2FLos_Angeles%26en-US%26Google%20Inc.%26Win32%26255%261440%26900%268%2624%261440%26900%2610%26na&eci=3&event=%7B%7D&event_id=696178b6-8f96-4654-ad3b-2f47fd93620e&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=cc2c0f05-b5c9-4235-8401-99317ff714f5&pt=Bark%20Parental%20Control%20App%20%7C%20Bark&tw_document_href=https%3A%2F%2Fwww.bark.us%2Fbark-app%2F&tw_iframe_status=0&tw_pid_src=1&twpid=tw.1779239618636.999876622164570746&txn_id=o658d&type=javascript&version=2.3.53",
+    "alt": "",
+    "width": 1,
+    "height": 1,
+    "parentClasses": "wp-singular page-template-default page page-id-81641 wp-theme-bark header-nav-template--default is-l"
+  },
+  {
+    "src": "https://analytics.twitter.com/1/i/adsct?bci=4&dv=America%2FLos_Angeles%26en-US%26Google%20Inc.%26Win32%26255%261440%26900%268%2624%261440%26900%2610%26na&eci=3&event=%7B%7D&event_id=696178b6-8f96-4654-ad3b-2f47fd93620e&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=cc2c0f05-b5c9-4235-8401-99317ff714f5&pt=Bark%20Parental%20Control%20App%20%7C%20Bark&tw_document_href=https%3A%2F%2Fwww.bark.us%2Fbark-app%2F&tw_iframe_status=0&tw_pid_src=1&twpid=tw.1779239618636.999876622164570746&txn_id=o658d&type=javascript&version=2.3.53",
+    "alt": "",
+    "width": 1,
+    "height": 1,
+    "parentClasses": "wp-singular page-template-default page page-id-81641 wp-theme-bark header-nav-template--default is-l"
+  },
+  {
+    "src": "https://downloads.intercomcdn.com/i/o/aumc18c1/886997/141570259a65fccb28cefd0ae516/3bd5fd1de4cb705515b7c2fb7c8803ed.png",
+    "alt": "",
+    "width": 72,
+    "height": 72,
+    "parentClasses": "intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open"
+  }
+]

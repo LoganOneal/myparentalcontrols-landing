@@ -22,7 +22,7 @@
   <rect x="6" y="6" width="348" height="728" rx="48" fill="#0d0d0d"/>
 
   <g clip-path="url(#screen)">
-    <rect x="9" y="9" width="342" height="722" fill="#FAF8F5"/>
+    <rect x="9" y="9" width="342" height="722" fill="#FFFFFF"/>
     <rect x="9" y="9" width="342" height="138" fill="#FFFFFF"/>
     <rect x="9" y="146" width="342" height="1" fill="#ECE7DE"/>
 
@@ -43,7 +43,7 @@
 
     <!-- Back arrow -->
     <g transform="translate(30, 88)">
-      <path d="M0,-7 L-8,0 L0,7 M-8,0 L10,0" fill="none" stroke="#7C6BAA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0,-7 L-8,0 L0,7 M-8,0 L10,0" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
 
     <!-- Header info -->
@@ -57,12 +57,12 @@
 
     <!-- Recovery banner -->
     <g transform="translate(20, 122)">
-      <rect width="320" height="34" rx="12" fill="#ECE5F6"/>
+      <rect width="320" height="34" rx="12" fill="#F0FDFA"/>
       <g transform="translate(18, 17)">
-        <rect x="-6" y="-2" width="12" height="9" rx="1.5" fill="none" stroke="#7C6BAA" stroke-width="1.6"/>
-        <path d="M-4,-2 L-4,-5 C-4,-7 -2,-9 0,-9 C2,-9 4,-7 4,-5 L4,-2" fill="none" stroke="#7C6BAA" stroke-width="1.6"/>
+        <rect x="-6" y="-2" width="12" height="9" rx="1.5" fill="none" stroke="#14B8A6" stroke-width="1.6"/>
+        <path d="M-4,-2 L-4,-5 C-4,-7 -2,-9 0,-9 C2,-9 4,-7 4,-5 L4,-2" fill="none" stroke="#14B8A6" stroke-width="1.6"/>
       </g>
-      <text x="40" y="22" class="small" fill="#5A4988">6 disappearing messages recovered on device</text>
+      <text x="40" y="22" class="small" fill="#0D9488">6 disappearing messages recovered on device</text>
     </g>
 
     <!-- Date divider -->
@@ -97,7 +97,7 @@
 
     <!-- Message 3: child reply -->
     <g transform="translate(208, 370)">
-      <path d="M132,12 Q132,0 120,0 L12,0 Q0,0 0,12 L0,32 Q0,44 12,44 L124,44 Q132,44 128,48 L132,52 L130,44 Q132,42 132,32 Z" fill="#DCD2EE"/>
+      <path d="M132,12 Q132,0 120,0 L12,0 Q0,0 0,12 L0,32 Q0,44 12,44 L124,44 Q132,44 128,48 L132,52 L130,44 Q132,42 132,32 Z" fill="#CCFBF1"/>
       <text x="120" y="28" class="body" text-anchor="end">i can't, my mom checks</text>
     </g>
     <text x="340" y="435" class="stamp muted" text-anchor="end">Lily · 2:35</text>
@@ -110,22 +110,22 @@
     </g>
     <text x="20" y="525" class="stamp muted">stranger_249x · 2:37</text>
     <g transform="translate(132, 515)">
-      <rect width="84" height="14" rx="7" fill="#ECE5F6"/>
-      <text x="42" y="10" class="pill" fill="#5A4988" text-anchor="middle">FLAGGED · OFF-PLATFORM</text>
+      <rect width="84" height="14" rx="7" fill="#F0FDFA"/>
+      <text x="42" y="10" class="pill" fill="#0D9488" text-anchor="middle">FLAGGED · OFF-PLATFORM</text>
     </g>
 
     <!-- AI summary card -->
     <g transform="translate(20, 548)">
       <rect width="320" height="88" rx="18" fill="#FFFFFF" stroke="#ECE7DE"/>
       <g transform="translate(18, 20)">
-        <rect width="32" height="32" rx="10" fill="#ECE5F6"/>
-        <path d="M16,8 L19,14 L25,15 L21,19 L22,25 L16,22 L10,25 L11,19 L7,15 L13,14 Z" fill="#7C6BAA"/>
+        <rect width="32" height="32" rx="10" fill="#F0FDFA"/>
+        <path d="M16,8 L19,14 L25,15 L21,19 L22,25 L16,22 L10,25 L11,19 L7,15 L13,14 Z" fill="#14B8A6"/>
       </g>
       <text x="62" y="32" class="h2">Why this was flagged</text>
       <text x="62" y="52" class="small muted">Stranger requested off-platform move</text>
       <text x="62" y="68" class="small muted">+ image of minor · classic grooming pattern</text>
       <g transform="translate(304, 32)">
-        <text class="pill" fill="#7C6BAA" text-anchor="end">SEE PLAYBOOK →</text>
+        <text class="pill" fill="#14B8A6" text-anchor="end">SEE PLAYBOOK →</text>
       </g>
     </g>
 
@@ -133,11 +133,11 @@
     <rect x="9" y="660" width="342" height="71" fill="#FFFFFF"/>
     <rect x="9" y="660" width="342" height="1" fill="#ECE7DE"/>
     <g transform="translate(48, 678)">
-      <path d="M-7,-3 C-7,-8 -3,-11 0,-11 C3,-11 7,-8 7,-3 L8,3 L-8,3 Z" fill="#7C6BAA"/>
-      <path d="M-2,4 C-2,6 -1,7 0,7 C1,7 2,6 2,4 Z" fill="#7C6BAA"/>
-      <circle cx="6" cy="-7" r="3" fill="#FAF8F5"/>
-      <circle cx="6" cy="-7" r="1.8" fill="#C99F6F"/>
-      <text y="22" class="tab" fill="#7C6BAA" text-anchor="middle">Alerts</text>
+      <path d="M-7,-3 C-7,-8 -3,-11 0,-11 C3,-11 7,-8 7,-3 L8,3 L-8,3 Z" fill="#14B8A6"/>
+      <path d="M-2,4 C-2,6 -1,7 0,7 C1,7 2,6 2,4 Z" fill="#14B8A6"/>
+      <circle cx="6" cy="-7" r="3" fill="#FFFFFF"/>
+      <circle cx="6" cy="-7" r="1.8" fill="#14B8A6"/>
+      <text y="22" class="tab" fill="#14B8A6" text-anchor="middle">Alerts</text>
     </g>
     <g transform="translate(132, 678)">
       <path d="M-8,4 L-3,-1 L1,3 L7,-5" fill="none" stroke="#B0A8B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

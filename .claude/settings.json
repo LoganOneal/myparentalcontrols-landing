@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/logan -maxdepth 4 -name \"*.png\" -size +1M -mtime -1 2>/dev/null | head -30)",
+      "Read(//c/Users/logan/**)",
+      "Bash(kill %1 %2)"
+    ]
+  }
+}

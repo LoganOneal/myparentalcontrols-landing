@@ -176,6 +176,45 @@
   scrollbar-width: none;
 }
 
+/* Infinite marquee — pair with a track containing the content duplicated
+   twice. translateX(-50%) lands exactly on the start of the second copy,
+   which is identical to the first, so the reset is invisible. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Soft fade on the marquee's left and right edges so logos don't appear to
+   pop in/out at the viewport boundary. */
+.marquee-fade-edges {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
 /* Legal / prose styles — content rendered inside .prose-cal gets browser-default-like styling, scaled */
 .prose-cal h1 {
   font-size: 2.25rem;
