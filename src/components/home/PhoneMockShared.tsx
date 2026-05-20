@@ -194,7 +194,7 @@ export function HeroHeader({
 }) {
   return (
     <div
-      className="relative px-4 pt-3 pb-14 overflow-hidden"
+      className="relative shrink-0 px-4 pt-3 pb-8 overflow-hidden"
       style={{
         background: `
           radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,255,255,0.25), transparent 70%),
@@ -262,7 +262,7 @@ export function HeroHeader({
           </span>
         </div>
         <h2
-          className="text-center text-white font-bold leading-[1.05] mt-3 tracking-tight"
+          className="text-center text-white font-bold leading-[1.05] mt-4 tracking-tight"
           style={{
             fontSize: "21px",
             textShadow: "0 1px 0 rgba(0,0,0,0.10)",
@@ -271,8 +271,8 @@ export function HeroHeader({
           {title}
         </h2>
         <p
-          className="text-center text-white/85 mt-2.5"
-          style={{ fontSize: "11px", lineHeight: "1.5" }}
+          className="text-center text-white/85 mt-4"
+          style={{ fontSize: "11px", lineHeight: "1.55" }}
         >
           {subtitle}
         </p>

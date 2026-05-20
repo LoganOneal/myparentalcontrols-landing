@@ -84,7 +84,7 @@ export function AIScannerScreenMock({
         }
       />
 
-      <div className="px-3 -mt-5 relative z-10">
+      <div className="px-3 mt-3 relative z-10">
         <div
           className="bg-white rounded-2xl px-3 py-3 flex items-center justify-around ring-1 ring-black/5"
           style={{

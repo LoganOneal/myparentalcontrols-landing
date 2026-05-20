@@ -36,13 +36,6 @@ const EVIDENCE: EvidenceRow[] = [
     badge: "voice",
     icon: <PlatformBox src="/images/platforms/discord.svg" bg={COLORS.discord} size={7} />,
   },
-  {
-    time: "3:31 PM",
-    source: "Snapchat",
-    detail: "Vanishing message recovered",
-    badge: "capture",
-    icon: <PlatformBox src="/images/platforms/snapchat.svg" bg={COLORS.snapchat} size={7} />,
-  },
 ];
 
 function BadgeIcon({ kind }: { kind: EvidenceRow["badge"] }) {
@@ -137,7 +130,7 @@ function RecordingCard() {
     >
       {/* Looping clip. `bg-black` is the fallback while the video loads
           so we never flash a white rectangle. */}
-      <div className="relative bg-black" style={{ aspectRatio: "16 / 9" }}>
+      <div className="relative bg-black" style={{ aspectRatio: "16 / 8" }}>
         <video
           src="/videos/minecraft-gameplay.webm"
           autoPlay
@@ -248,10 +241,10 @@ function RecordingCard() {
 
       {/* Waveform + transcript section — visually attached to the clip,
           like closed captions / audio review. */}
-      <div className="px-2.5 py-2">
+      <div className="px-2.5 py-1.5">
         <Waveform />
 
-        <div className="mt-1.5 space-y-[3px]">
+        <div className="mt-1 space-y-[2px]">
           <TranscriptLine
             sender="Stranger_77"
             senderColor={COLORS.high}
@@ -351,7 +344,7 @@ export function EvidenceScreenMock({
         }
       />
 
-      <div className="px-3 -mt-5 relative z-10">
+      <div className="px-3 mt-2 relative z-10">
         <div
           className="bg-white rounded-2xl px-3 py-3 grid grid-cols-4 gap-1 items-center ring-1 ring-black/5"
           style={{

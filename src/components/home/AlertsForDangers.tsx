@@ -8,7 +8,7 @@ import { EvidenceScreenMock } from "@/components/home/EvidenceScreenMock";
 import { BlocksScreenMock } from "@/components/home/BlocksScreenMock";
 
 /**
- * "Get alerts for dangers — online and in real life"
+ * "We see what every other parental control misses."
  *
  * Two distinct experiences gated by viewport size:
  *
@@ -194,7 +194,7 @@ export function AlertsForDangers() {
               lineHeight: 1.2,
             }}
           >
-            Get alerts for dangers — online and in real life
+            We see what every other parental control misses.
           </h2>
 
           <div className="mt-7 text-center">
@@ -202,9 +202,9 @@ export function AlertsForDangers() {
               className="mx-auto max-w-[800px] px-5 text-base sm:text-lg"
               style={{ color: "rgb(68, 68, 68)", lineHeight: 1.5 }}
             >
-              Our award-winning parental control app scans for dangers like
-              predators, suicidal ideation, violence, and more. You&rsquo;ll
-              get notified if there&rsquo;s something wrong.
+              Network filters and screen-time apps can&rsquo;t read in-game
+              chats, hear voice calls, or see DMs &mdash; the places grooming
+              actually starts. We can, on every device your child touches.
             </p>
           </div>
         </div>

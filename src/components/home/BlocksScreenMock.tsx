@@ -119,7 +119,7 @@ export function BlocksScreenMock({
         }
       />
 
-      <div className="px-3 -mt-5 relative z-10">
+      <div className="px-3 mt-3 relative z-10">
         <div
           className="relative rounded-2xl px-3 py-3 flex items-center gap-3 overflow-hidden"
           style={{

@@ -60,61 +60,75 @@ const CONTRAST_CARDS: Array<{
 function CellIcon({ cell }: { cell: Cell }) {
   if (cell.value === "yes") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5 text-emerald-500"
-        fill="none"
+      <span
+        className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-50 ring-1 ring-emerald-200/70"
         aria-label="Yes"
       >
-        <path
-          d="M5 12l4.5 4.5L19 7"
-          stroke="currentColor"
-          strokeWidth={3}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+        <svg
+          viewBox="0 0 24 24"
+          className="w-4 h-4 text-emerald-600"
+          fill="none"
+          aria-hidden
+        >
+          <path
+            d="M5 12l4.5 4.5L19 7"
+            stroke="currentColor"
+            strokeWidth={3.25}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
     );
   }
   if (cell.value === "no") {
     return (
       <span
-        className="block w-5 h-[2px] bg-gray-300 rounded-full"
+        className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-100 ring-1 ring-gray-200/80"
         aria-label="No"
-      />
+      >
+        <span className="block w-3 h-[2px] bg-gray-400 rounded-full" aria-hidden />
+      </span>
     );
   }
   if (cell.value === "partial") {
     return (
-      <span className="inline-flex items-center gap-1 text-amber-600">
-        <span className="block w-2 h-2 rounded-full bg-amber-500" aria-hidden />
-        <span className="text-xs font-semibold">Partial</span>
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 ring-1 ring-amber-200/80 px-2 py-1 text-amber-700">
+        <span className="block w-1.5 h-1.5 rounded-full bg-amber-500" aria-hidden />
+        <span className="text-[11px] font-semibold tracking-tight">Partial</span>
       </span>
     );
   }
   return (
-    <span className="text-xs font-semibold text-amber-700">{cell.label}</span>
+    <span className="inline-flex items-center rounded-full bg-amber-50 ring-1 ring-amber-200/80 px-2 py-1 text-[11px] font-semibold tracking-tight text-amber-700">
+      {cell.label}
+    </span>
   );
 }
 
-/** MPC's cell uses a bolder cobalt check to draw the eye. */
+/** MPC's cell uses a solid cobalt check on a tinted halo to draw the eye. */
 function MpcCellIcon({ cell }: { cell: Cell }) {
   if (cell.value === "yes") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-6 h-6 text-[#2563EB]"
-        fill="none"
+      <span
+        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#2563EB] shadow-[0_4px_14px_-4px_rgba(37,99,235,0.55)] ring-2 ring-white"
         aria-label="Yes"
       >
-        <path
-          d="M5 12l4.5 4.5L19 7"
-          stroke="currentColor"
-          strokeWidth={3.5}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+        <svg
+          viewBox="0 0 24 24"
+          className="w-4 h-4 text-white"
+          fill="none"
+          aria-hidden
+        >
+          <path
+            d="M5 12l4.5 4.5L19 7"
+            stroke="currentColor"
+            strokeWidth={3.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
     );
   }
   return <CellIcon cell={cell} />;
@@ -128,7 +142,17 @@ function ColumnHeader({
   highlighted: boolean;
 }) {
   return (
-    <div className="flex flex-col items-center gap-2 px-2 py-4">
+    <div className="relative flex flex-col items-center gap-2 px-2 pt-10 pb-4">
+      {highlighted ? (
+        <span
+          className="absolute top-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-[#2563EB] text-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] shadow-[0_6px_16px_-4px_rgba(37,99,235,0.55)] ring-2 ring-white whitespace-nowrap"
+        >
+          <svg viewBox="0 0 24 24" className="w-3 h-3" fill="currentColor" aria-hidden>
+            <path d="M12 2l2.39 6.96H22l-6.18 4.49 2.36 7.05L12 16.9l-6.18 3.6 2.36-7.05L2 8.96h7.61z" />
+          </svg>
+          Best for kids
+        </span>
+      ) : null}
       {column.logo ? (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -153,7 +177,7 @@ function ColumnHeader({
         </>
       ) : (
         <span
-          className="font-bold text-base sm:text-lg"
+          className="font-extrabold text-base sm:text-lg tracking-tight"
           style={{ color: column.fallbackColor }}
         >
           {column.name}
@@ -208,20 +232,20 @@ export function CompetitorComparison() {
         <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="min-w-[760px] sm:min-w-0">
             <div
-              className="grid border border-gray-200 rounded-2xl overflow-hidden bg-white"
+              className="grid rounded-3xl overflow-hidden bg-white ring-1 ring-black/10 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.18)]"
               style={{
                 gridTemplateColumns: `minmax(220px, 1.4fr) repeat(${COLUMNS.length}, minmax(110px, 1fr))`,
               }}
             >
               {/* Header row */}
-              <div className="bg-gray-50 border-b border-gray-200" />
+              <div className="bg-gradient-to-b from-gray-50 to-white border-b border-gray-200" />
               {COLUMNS.map((c) => (
                 <div
                   key={c.key}
-                  className={`border-b border-gray-200 ${
+                  className={`border-b ${
                     c.key === MPC_KEY
-                      ? "bg-[#EFF6FF] border-x border-[#BFDBFE]"
-                      : "bg-gray-50"
+                      ? "bg-gradient-to-b from-[#DBEAFE] to-[#EFF6FF] border-[#2563EB]/20 border-x border-x-[#2563EB]/15"
+                      : "bg-gradient-to-b from-gray-50 to-white border-gray-200"
                   }`}
                 >
                   <ColumnHeader column={c} highlighted={c.key === MPC_KEY} />
@@ -229,26 +253,36 @@ export function CompetitorComparison() {
               ))}
 
               {/* Body — groups + rows */}
-              {GROUPS.map((group) => (
+              {GROUPS.map((group, gi) => (
                 <React.Fragment key={group.title}>
                   {/* Group title spans all columns */}
                   <div
-                    className="col-span-full bg-gray-100/70 border-y border-gray-200 px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-700"
+                    className={`col-span-full px-5 py-3 text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] text-gray-600 bg-gray-50/80 border-b border-gray-200 ${
+                      gi > 0 ? "border-t" : ""
+                    }`}
                     style={{
                       gridColumn: `1 / span ${COLUMNS.length + 1}`,
                     }}
                   >
-                    {group.title}
+                    <span className="inline-flex items-center gap-2">
+                      <span
+                        aria-hidden
+                        className="block w-1 h-3.5 rounded-sm bg-gradient-to-b from-[#2563EB] to-[#1D4ED8]"
+                      />
+                      {group.title}
+                    </span>
                   </div>
 
                   {group.rows.map((row, ri) => (
                     <React.Fragment key={row.feature}>
                       <div
                         className={`px-5 py-3.5 text-sm text-gray-800 ${
-                          ri > 0 ? "border-t border-gray-100" : ""
+                          ri > 0 ? "border-t border-gray-200/70" : ""
                         }`}
                       >
-                        <div className="font-medium">{row.feature}</div>
+                        <div className="font-semibold text-gray-900">
+                          {row.feature}
+                        </div>
                         {row.hint ? (
                           <div className="text-xs text-gray-500 mt-0.5">
                             {row.hint}
@@ -267,13 +301,21 @@ export function CompetitorComparison() {
                           <div
                             key={c.key}
                             className={`flex items-center justify-center px-3 py-3.5 ${
-                              ri > 0 ? "border-t border-gray-100" : ""
-                            } ${isMpc ? "bg-[#EFF6FF]/60 border-x border-[#BFDBFE]" : ""}`}
+                              ri > 0
+                                ? isMpc
+                                  ? "border-t border-[#2563EB]/10"
+                                  : "border-t border-gray-200/70"
+                                : ""
+                            } ${
+                              isMpc
+                                ? "bg-[#EFF6FF]/70 border-x border-x-[#2563EB]/15"
+                                : ""
+                            }`}
                           >
                             <div className="flex items-center gap-1">
                               {isMpc ? <MpcCellIcon cell={cell} /> : <CellIcon cell={cell} />}
                               {fn ? (
-                                <sup className="text-[10px] text-gray-500 font-semibold">
+                                <sup className="text-[10px] text-gray-500 font-semibold ml-0.5">
                                   {fn}
                                 </sup>
                               ) : null}
@@ -312,10 +354,10 @@ export function CompetitorComparison() {
           {CONTRAST_CARDS.map((card) => (
             <article
               key={card.competitor}
-              className="rounded-2xl border border-gray-200 bg-white overflow-hidden flex flex-col"
+              className="rounded-2xl ring-1 ring-black/10 bg-white overflow-hidden flex flex-col shadow-[0_1px_2px_rgba(15,23,42,0.04),0_16px_32px_-20px_rgba(15,23,42,0.18)]"
             >
               {/* MPC side — top, highlighted cobalt */}
-              <div className="px-5 py-5 bg-[#EFF6FF] border-b border-[#BFDBFE]">
+              <div className="px-5 py-5 bg-gradient-to-b from-[#DBEAFE] to-[#EFF6FF] border-b border-[#2563EB]/15">
                 <div className="flex items-center gap-2 mb-2">
                   <span
                     className="font-bold uppercase tracking-[0.14em]"
