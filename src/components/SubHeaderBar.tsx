@@ -21,10 +21,10 @@ export function SubHeaderBar() {
           </span>
         </div>
         <Link
-          href="/#waitlist"
-          className="bg-black text-white rounded-full px-5 py-2.5 text-[14px] font-semibold whitespace-nowrap hover:bg-gray-900 transition-colors"
+          href="/signup"
+          className="bg-[#2563EB] text-white rounded-full px-5 py-2.5 text-[14px] font-semibold whitespace-nowrap hover:bg-[#1D4ED8] transition-colors"
         >
-          Join the waitlist
+          Try for Free
         </Link>
       </div>
     </div>

@@ -105,11 +105,11 @@ export function SiteHeader() {
               Sign in
             </Link>
             <Link
-              href="/#waitlist"
+              href="/signup"
               onClick={() => setMobileOpen(false)}
-              className="mt-3 bg-black text-white rounded-full px-5 py-3 font-semibold text-center"
+              className="mt-3 bg-[#2563EB] text-white rounded-full px-5 py-3 font-semibold text-center hover:bg-[#1D4ED8] transition-colors"
             >
-              Join the waitlist
+              Try for Free
             </Link>
           </nav>
         </div>

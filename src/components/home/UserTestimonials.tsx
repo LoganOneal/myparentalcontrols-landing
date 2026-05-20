@@ -40,7 +40,14 @@ export function UserTestimonials() {
   return (
     <section className="py-16 lg:py-40 px-4 bg-[#1E1A24] text-white">
       <div>
-        <h2 className="text-center text-3xl sm:text-[48px] font-medium mb-12">
+        <h2
+          className="text-center text-3xl sm:text-[48px] mb-12"
+          style={{
+            fontFamily: "Moderat-Black, sans-serif",
+            fontWeight: 700,
+            lineHeight: 1.2,
+          }}
+        >
           Thousands of users talk about us
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

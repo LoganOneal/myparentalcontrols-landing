@@ -103,10 +103,10 @@ export function Pricing() {
         </div>
 
         <Link
-          href="#waitlist"
-          className="mt-8 lg:mt-10 inline-flex items-center justify-center bg-[#2E54FF] hover:bg-[#1F45EE] text-white rounded-full px-8 py-4 font-semibold text-base sm:text-lg transition-colors"
+          href="/signup"
+          className="mt-8 lg:mt-10 inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full px-8 py-4 font-semibold text-base sm:text-lg transition-colors"
         >
-          Join the waitlist
+          Try for Free
         </Link>
       </div>
     </section>

@@ -168,9 +168,14 @@ export function NewsGrid() {
   return (
     <>
       <div className="text-center sm:mt-52 mt-24 px-4 max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-[48px] font-medium leading-tight">
-          Why parents are taking{" "}
-          <span className="font-bold">Roblox to court</span> 📰
+        <h2
+          className="text-3xl sm:text-[48px] leading-tight"
+          style={{
+            fontFamily: "Moderat-Black, sans-serif",
+            fontWeight: 700,
+          }}
+        >
+          Why parents are taking Roblox to court 📰
         </h2>
         <p className="mt-4 text-base sm:text-lg text-gray-700">
           State attorneys general, regulators, and families are filing

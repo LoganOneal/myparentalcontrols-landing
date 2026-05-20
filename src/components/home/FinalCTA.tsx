@@ -25,7 +25,13 @@ export function FinalCTA() {
                 <span key={i} aria-hidden>⭐</span>
               ))}
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-medium leading-tight text-black">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-[48px] leading-tight text-black"
+              style={{
+                fontFamily: "Moderat-Black, sans-serif",
+                fontWeight: 700,
+              }}
+            >
               Over 100k 5-star ratings
             </h2>
             <div className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-800">

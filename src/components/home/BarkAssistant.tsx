@@ -46,7 +46,7 @@ export function BarkAssistant() {
             style={{
               fontFamily: "Moderat-Black, sans-serif",
               fontStyle: "normal",
-              fontWeight: 400,
+              fontWeight: 700,
               color: "#FFFFFF",
               lineHeight: 1.2,
             }}

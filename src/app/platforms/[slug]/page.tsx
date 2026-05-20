@@ -259,10 +259,10 @@ export default async function PlatformDetailPage({
                 {platform.recommendation}
               </p>
               <Link
-                href="/#waitlist"
-                className="inline-flex mt-5 items-center justify-center px-5 h-11 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition"
+                href="/signup"
+                className="inline-flex mt-5 items-center justify-center px-5 h-11 rounded-full bg-[#2563EB] text-white font-semibold hover:bg-[#1D4ED8] transition"
               >
-                Get on the waitlist
+                Try for Free
               </Link>
             </section>
           </article>
