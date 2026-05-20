@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Archivo_Black } from "next/font/google";
+import { Archivo_Black } from "next/font/google";
 import "./globals.css";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
-
 // Free open-license fallback for Moderat-Black. The hero applies a font stack
-// of "Moderat-Black, Archivo Black, sans-serif" — Archivo Black renders until
-// you drop a licensed Moderat-Black.woff2 into public/fonts/.
+// of "Moderat-Black, sans-serif" — Archivo Black renders if the licensed
+// Moderat-Black.woff2 file is missing from public/fonts/.
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
   subsets: ["latin"],
@@ -41,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${archivoBlack.variable} antialiased`}>
+    <html lang="en" className={`${archivoBlack.variable} antialiased`}>
       {/* overflow-x-clip prevents horizontal overflow without turning the
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}

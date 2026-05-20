@@ -150,7 +150,7 @@ export function AlertsForDangers() {
             className="text-center text-[30px] sm:text-4xl lg:text-[46px]"
             style={{
               fontFamily:
-                '"Moderat-Black", var(--font-bricolage), sans-serif',
+                "Moderat-Black, sans-serif",
               fontWeight: 700,
               color: "rgb(30, 30, 30)",
               lineHeight: 1.2,
@@ -174,121 +174,135 @@ export function AlertsForDangers() {
         {/* Scroll runway — desktop only. Mobile sees a normal-flow stacked
             layout where the inner content sits below the header. */}
         <div ref={runwayRef} className="lg:h-[500vh]">
-          {/* Sticky inner — pins to viewport top on lg+. */}
-          <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center pb-10">
-            <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                {/* Phone column */}
-                <div className="flex flex-col items-center gap-4 lg:ml-auto">
-                  {(() => {
-                    const mockClass =
-                      "transition-opacity duration-200 ease-in-out";
-                    if (activeIndex === 0) return <GamesScreenMock className={mockClass} />;
-                    if (activeIndex === 1) return <DevicesScreenMock className={mockClass} />;
-                    if (activeIndex === 2) return <AIScannerScreenMock className={mockClass} />;
-                    if (activeIndex === 3) return <EvidenceScreenMock className={mockClass} />;
-                    return <BlocksScreenMock className={mockClass} />;
-                  })()}
-                  {/* Scroll-progress affordance — explicitly tells the user
-                      they need to keep scrolling, and shows where they are.
-                      Bar fills continuously with scroll position; dots are
-                      clickable jump-points; the bouncing chevron + label
-                      fade out once they reach the final feature. */}
-                  <div className="flex flex-col items-center gap-2.5 mt-1 w-[220px] max-w-full">
-                    {/* Continuous progress bar */}
-                    <div
-                      className="w-full h-1 rounded-full overflow-hidden"
-                      style={{ background: "#E5E7EB" }}
-                      aria-hidden
-                    >
-                      <div
-                        className="h-full rounded-full"
-                        style={{
-                          width: `${Math.round(scrollProgress * 100)}%`,
-                          background: "#2563EB",
-                          transition: "width 100ms linear",
-                        }}
-                      />
-                    </div>
+          {/* Sticky inner — pins to viewport top on lg+. Flex column so the
+              main content takes all available space and the scroll cue
+              docks to the bottom of the viewport. */}
+          <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col pt-4 pb-2">
+            {/* Main content — phone left, cards right, vertically centered
+                in the remaining space above the bottom cue. */}
+            <div className="flex-1 flex items-center min-h-0">
+              <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                  {/* Phone column — just the phone, no affordance underneath. */}
+                  <div className="flex justify-center lg:justify-end">
+                    {(() => {
+                      const mockClass =
+                        "transition-opacity duration-200 ease-in-out";
+                      if (activeIndex === 0) return <GamesScreenMock className={mockClass} />;
+                      if (activeIndex === 1) return <DevicesScreenMock className={mockClass} />;
+                      if (activeIndex === 2) return <AIScannerScreenMock className={mockClass} />;
+                      if (activeIndex === 3) return <EvidenceScreenMock className={mockClass} />;
+                      return <BlocksScreenMock className={mockClass} />;
+                    })()}
+                  </div>
 
-                    {/* Discrete dot jumps */}
-                    <div className="flex items-center justify-center gap-2">
-                      {FEATURES.map((f, i) => (
+                  {/* Cards column — tight stack, all visible at once. */}
+                  <div className="flex flex-col gap-3 lg:gap-4">
+                    {FEATURES.map((f, i) => {
+                      const active = i === activeIndex;
+                      return (
                         <button
                           key={f.title}
                           type="button"
-                          aria-label={`Show feature: ${f.title}`}
                           onClick={() => handleSelect(i)}
-                          className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                            i === activeIndex
-                              ? "bg-[#2563EB]"
-                              : "bg-gray-300 hover:bg-gray-400"
+                          className={`w-full text-left cursor-pointer p-5 lg:p-6 rounded-2xl border transition-all duration-300 ${
+                            active
+                              ? "border-[#2563EB] bg-[#EFF6FF] lg:scale-[1.02]"
+                              : "border-gray-200 bg-white hover:border-gray-300"
                           }`}
-                        />
-                      ))}
-                    </div>
-
-                    {/* Animated "keep scrolling" cue, fades out at the last
-                        feature so users know the section is wrapping up. */}
-                    <div
-                      aria-hidden
-                      className="flex flex-col items-center gap-1 transition-opacity duration-300"
-                      style={{
-                        opacity:
-                          scrollProgress >= 0.85 || !isDesktop ? 0 : 1,
-                      }}
-                    >
-                      <span
-                        className="text-[10px] font-bold uppercase tracking-[1.4px]"
-                        style={{ color: "#64748B" }}
-                      >
-                        Scroll to see more
-                      </span>
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#2563EB"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="animate-bounce"
-                      >
-                        <polyline points="6 9 12 15 18 9" />
-                      </svg>
-                    </div>
+                        >
+                          <h3 className="text-base lg:text-lg font-bold mb-1.5 text-[rgb(30,30,30)]">
+                            {f.title}
+                          </h3>
+                          <p
+                            className="text-sm"
+                            style={{ color: "rgb(68, 68, 68)", lineHeight: 1.45 }}
+                          >
+                            {f.description}
+                          </p>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Cards column — tight stack, all visible at once. */}
-                <div className="flex flex-col gap-3 lg:gap-4">
-                  {FEATURES.map((f, i) => {
-                    const active = i === activeIndex;
-                    return (
-                      <button
-                        key={f.title}
-                        type="button"
-                        onClick={() => handleSelect(i)}
-                        className={`w-full text-left cursor-pointer p-5 lg:p-6 rounded-2xl border transition-all duration-300 ${
-                          active
-                            ? "border-[#2563EB] bg-[#EFF6FF] lg:scale-[1.02]"
-                            : "border-gray-200 bg-white hover:border-gray-300"
-                        }`}
-                      >
-                        <h3 className="text-base lg:text-lg font-bold mb-1.5 text-[rgb(30,30,30)]">
-                          {f.title}
-                        </h3>
-                        <p
-                          className="text-sm"
-                          style={{ color: "rgb(68, 68, 68)", lineHeight: 1.45 }}
-                        >
-                          {f.description}
-                        </p>
-                      </button>
-                    );
-                  })}
-                </div>
+            {/* Bottom scroll affordance — only renders inside the sticky on
+                lg+. Animated mouse-wheel SVG + step counter + continuous
+                progress bar. Sits at the bottom of the viewport while the
+                section is scroll-locked. Fades out as the user reaches the
+                last feature so they know the lock is about to release. */}
+            <div
+              aria-hidden
+              className="hidden lg:flex flex-col items-center gap-2.5 pt-2 transition-opacity duration-300"
+              style={{ opacity: scrollProgress >= 0.93 ? 0 : 1 }}
+            >
+              {/* Animated mouse-scroll icon — dot rolls from top to bottom
+                  inside the mouse outline on a 1.5s loop. */}
+              <svg
+                width="24"
+                height="38"
+                viewBox="0 0 24 38"
+                fill="none"
+                aria-hidden
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="34"
+                  rx="10"
+                  stroke="#2563EB"
+                  strokeWidth="2"
+                />
+                <circle cx="12" cy="10" r="2.5" fill="#2563EB">
+                  <animate
+                    attributeName="cy"
+                    values="10;24"
+                    keyTimes="0;1"
+                    dur="1.5s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="1;1;0"
+                    keyTimes="0;0.6;1"
+                    dur="1.5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </svg>
+
+              <div className="flex items-center gap-2.5">
+                <span
+                  className="text-[11px] font-bold uppercase tracking-[1.8px]"
+                  style={{ color: "rgb(30, 30, 30)" }}
+                >
+                  Scroll to continue
+                </span>
+                <span
+                  className="text-[11px] font-bold tabular-nums px-2 py-0.5 rounded-full"
+                  style={{ background: "#EFF6FF", color: "#1D4ED8" }}
+                >
+                  {activeIndex + 1} / {FEATURES.length}
+                </span>
+              </div>
+
+              {/* Continuous progress bar — fills with the actual scroll
+                  position, not just discrete index changes. */}
+              <div
+                className="w-[280px] h-1 rounded-full overflow-hidden"
+                style={{ background: "#E5E7EB" }}
+              >
+                <div
+                  className="h-full rounded-full"
+                  style={{
+                    width: `${Math.round(scrollProgress * 100)}%`,
+                    background: "#2563EB",
+                    transition: "width 80ms linear",
+                  }}
+                />
               </div>
             </div>
           </div>

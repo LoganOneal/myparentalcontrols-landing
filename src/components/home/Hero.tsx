@@ -73,8 +73,10 @@ export function Hero() {
         {/* Right column — phone screenshot. Right-aligned on lg+ so the
             phone's right edge sits at the container right edge (visually
             lined up with the "Sign in" / waitlist navbar text above).
-            Stays centered on mobile/tablet. */}
-        <div className="flex justify-center lg:justify-end items-start self-start">
+            Hidden on mobile/tablet — the AlertsForDangers section below
+            already shows mockups; doubling them up on a small screen just
+            steals attention from the headline + CTA. */}
+        <div className="hidden lg:flex lg:justify-end items-start self-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/mpc-app-preview.png"

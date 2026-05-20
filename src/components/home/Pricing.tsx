@@ -49,7 +49,7 @@ export function Pricing() {
           className="text-center"
           style={{
             color: "rgb(255, 255, 255)",
-            fontFamily: '"Moderat-Black", var(--font-bricolage), sans-serif',
+            fontFamily: "Moderat-Black, sans-serif",
             fontSize: "clamp(32px, 4vw, 46px)",
             fontWeight: 700,
             lineHeight: 1.2,
@@ -87,7 +87,7 @@ export function Pricing() {
               className="text-white tracking-tight"
               style={{
                 fontFamily:
-                  '"Moderat-Black", var(--font-bricolage), sans-serif',
+                  "Moderat-Black, sans-serif",
                 fontSize: "clamp(56px, 8vw, 96px)",
                 fontWeight: 700,
                 lineHeight: 1,
