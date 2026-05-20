@@ -20,7 +20,9 @@
 export function BarkAssistant() {
   return (
     <section className="px-[15px] mt-[15px]">
-      <div className="rounded-lg overflow-hidden mx-auto max-w-[1395px]">
+      {/* No max-width cap — card always spans viewport - 30px, matching
+          bark.us behavior on wide monitors (1920px → 1875px wide). */}
+      <div className="rounded-lg overflow-hidden">
         {/* Lifestyle photo — picture element for desktop/mobile variants */}
         <div className="relative bg-[#1E1E1E]">
           <picture>

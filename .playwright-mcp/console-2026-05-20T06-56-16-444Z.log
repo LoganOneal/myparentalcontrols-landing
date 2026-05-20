@@ -1,0 +1,7 @@
+[    1356ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://d12jofbmgge65s.cloudfront.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    2927ms] [WARNING] [TikTok Pixel] - Missing 'content_id' paramter
+Issue: The 'content_id' parameter isn't being received. This is required for Video Shopping Ads (VSA).
+Suggestion: Include the 'content_id' parameter in your source code. This is required for Video Shopping Ads (VSA). See https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2 for more information. @ https://analytics.tiktok.com/i18n/pixel/static/main.MWJkOTJmOWRkOQ.js:0
+[    2928ms] [WARNING] [TikTok Pixel] - Missing "value" parameter
+Issue: Events shared are missing a 'value' parameter'. This is used calculate ROAS for people and the bid for your highest value customers. 
+Suggestion: Go to your source code and include the "value" parameter. See https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2 for more information. @ https://analytics.tiktok.com/i18n/pixel/static/main.MWJkOTJmOWRkOQ.js:0

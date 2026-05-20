@@ -1,63 +1,78 @@
 /**
- * Infinite-marquee logo banner.
+ * Infinite-marquee logo banner — wide-form wordmark logos.
  *
- * Every platform is rendered as a uniform "wide form" lockup: brand-colored
- * icon + brand-colored name, sitting in a fixed-width slot. This gives every
- * entry the same visual weight regardless of whether the official brand has a
- * wide wordmark or just an icon.
+ * Most platforms use a 2:1 "ar21" wordmark sourced from vectorlogo.zone,
+ * which gives uniform aspect ratios across the row. Roblox and Fortnite
+ * aren't published in that format, so we use their cleanest public wordmark
+ * file and let `object-fit: contain` in a 2:1 slot equalize the visual size.
  *
- * Icon coloring uses CSS `mask-image` so the source SVG (any flat single-path
- * silhouette) renders in any brand color we want at runtime — no per-icon
- * fill edits, no SVG cloning per color.
+ * Each logo lives in a fixed-size slot with the same max-height so the
+ * marquee rhythm and the per-logo visual weight stay consistent.
  */
+
+import * as React from "react";
 
 type Platform = {
   name: string;
-  icon: string;
-  /** Brand color used for both the icon mask and the name text. */
-  color: string;
+  src: string;
+  /** Optional per-logo vertical-fill multiplier (0–1) when the source SVG
+   *  has unusually much (or little) internal padding. 1 = fills slot. */
+  fill?: number;
 };
 
 const PLATFORMS: Platform[] = [
-  { name: "Roblox", icon: "/images/platforms/roblox.svg", color: "#E2231A" },
-  { name: "Discord", icon: "/images/platforms/discord.svg", color: "#5865F2" },
-  { name: "Minecraft", icon: "/images/platforms/minecraft.svg", color: "#5BA63B" },
-  { name: "Fortnite", icon: "/images/platforms/fortnite.svg", color: "#1B1B1B" },
-  { name: "Snapchat", icon: "/images/platforms/snapchat.svg", color: "#1B1B1B" },
-  { name: "TikTok", icon: "/images/platforms/tiktok.svg", color: "#1B1B1B" },
-  { name: "Instagram", icon: "/images/platforms/instagram.svg", color: "#E1306C" },
-  { name: "YouTube", icon: "/images/platforms/youtube.svg", color: "#FF0000" },
-  { name: "WhatsApp", icon: "/images/platforms/whatsapp.svg", color: "#25D366" },
-  { name: "Twitch", icon: "/images/platforms/twitch.svg", color: "#9146FF" },
-  { name: "Reddit", icon: "/images/platforms/reddit.svg", color: "#FF4500" },
-  { name: "Steam", icon: "/images/platforms/steam.svg", color: "#171A21" },
+  { name: "Roblox", src: "/images/platforms/wordmarks/roblox.svg", fill: 0.75 },
+  { name: "Discord", src: "/images/platforms/wordmarks-v2/discord.svg", fill: 0.85 },
+  { name: "Minecraft", src: "/images/platforms/wordmarks-v2/minecraft.svg", fill: 0.85 },
+  { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png", fill: 0.75 },
+  { name: "Snapchat", src: "/images/platforms/wordmarks-v2/snapchat.svg", fill: 0.95 },
+  { name: "TikTok", src: "/images/platforms/wordmarks-v2/tiktok.svg", fill: 0.95 },
+  { name: "Instagram", src: "/images/platforms/wordmarks-v2/instagram.svg", fill: 0.95 },
+  { name: "YouTube", src: "/images/platforms/wordmarks-v2/youtube.svg", fill: 0.9 },
+  { name: "WhatsApp", src: "/images/platforms/wordmarks-v2/whatsapp.svg", fill: 0.85 },
+  { name: "Twitch", src: "/images/platforms/wordmarks-v2/twitch.svg", fill: 0.95 },
+  { name: "Reddit", src: "/images/platforms/wordmarks-v2/reddit.svg", fill: 0.95 },
+  { name: "Steam", src: "/images/platforms/wordmarks-v2/steam.svg", fill: 0.95 },
 ];
 
-function Lockup({ name, icon, color }: Platform) {
+function Slot({
+  name,
+  src,
+  fill = 1,
+}: Platform) {
+  // Fixed-aspect 2:1 box. Width drives the layout; height is derived from
+  // padding-bottom: 50% trick so the slot stays a perfect 2:1 even when
+  // children shrink.
   return (
-    <div className="flex items-center justify-center shrink-0 gap-2.5 h-10 sm:h-12 lg:h-14 w-[170px] sm:w-[200px] lg:w-[230px]">
-      <span
-        aria-hidden
-        className="block w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 shrink-0"
-        style={{
-          backgroundColor: color,
-          WebkitMaskImage: `url(${icon})`,
-          maskImage: `url(${icon})`,
-          WebkitMaskRepeat: "no-repeat",
-          maskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          maskPosition: "center",
-          WebkitMaskSize: "contain",
-          maskSize: "contain",
-        }}
-      />
-      <span
-        className="font-bold whitespace-nowrap leading-none"
-        style={{ fontSize: "clamp(18px, 1.6vw, 22px)", color }}
+    <div className="shrink-0 w-[170px] sm:w-[200px] lg:w-[230px] flex items-center justify-center px-2">
+      <div
+        className="relative w-full"
+        style={{ aspectRatio: "2 / 1" }}
       >
-        {name}
-      </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={name}
+          className="absolute inset-0 m-auto object-contain"
+          style={{
+            maxHeight: `${fill * 100}%`,
+            maxWidth: "100%",
+          }}
+        />
+      </div>
     </div>
+  );
+}
+
+/** Inline accent for threat words in the section heading. */
+function Highlight({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      className="font-extrabold whitespace-nowrap"
+      style={{ color: "#FF3838" }}
+    >
+      {children}
+    </span>
   );
 }
 
@@ -67,31 +82,32 @@ export function LogoBanner() {
 
   return (
     <section className="bg-white border-y border-gray-200 pt-5 lg:pt-6 pb-12 lg:pb-16 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-5 lg:px-8 mb-8 sm:mb-10 text-center">
+      <div className="max-w-[1100px] mx-auto px-5 lg:px-8 mb-10 sm:mb-12 text-center">
         <h2
+          className="leading-tight sm:leading-none sm:whitespace-nowrap"
           style={{
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
             fontStyle: "normal",
             fontWeight: 600,
-            fontSize: "20px",
-            lineHeight: "26px",
+            fontSize: "clamp(16px, 2.2vw, 28px)",
             color: "rgb(153, 153, 153)",
-            textTransform: "uppercase",
           }}
         >
-          Watching the apps where predators, cyber bullies, and scammers target kids
+          Watching the apps where <Highlight>predators</Highlight>,{" "}
+          <Highlight>cyber bullies</Highlight>, and{" "}
+          <Highlight>scammers</Highlight> target kids
         </h2>
       </div>
 
       <div className="relative marquee-fade-edges">
         <div className="flex w-max items-center animate-marquee">
           {track.map((p, i) => (
-            <Lockup
+            <Slot
               key={`${p.name}-${i}`}
               name={p.name}
-              icon={p.icon}
-              color={p.color}
+              src={p.src}
+              fill={p.fill}
             />
           ))}
         </div>
