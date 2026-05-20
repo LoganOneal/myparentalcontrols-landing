@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HeroWaitlist } from "@/components/home/HeroWaitlist";
 
 /**
@@ -112,11 +113,19 @@ export function Hero() {
           </div>
         </div>
 
-        {/* H1 — threat-first */}
-        <h1 className="text-[40px] sm:text-[52px] font-bold leading-tight max-w-[560px]">
-          Stop online predators
-          <br />
-          <span className="font-medium">before they reach your child.</span>
+        {/* H1 — threat-first. Uses Moderat-Black when its file is present in
+            public/fonts/, otherwise falls through to Bricolage Grotesque at
+            700 weight (less heavy than Archivo Black, matches site type). */}
+        <h1
+          className="text-[28px] sm:text-[36px] leading-[1.15] max-w-[520px]"
+          style={{
+            fontFamily:
+              '"Moderat-Black", var(--font-bricolage), sans-serif',
+            fontWeight: 700,
+            color: "rgb(30, 30, 30)",
+          }}
+        >
+          Stop online predators before they reach your child.
         </h1>
 
         <p className="opacity-80 text-base sm:text-lg font-normal max-w-[560px] leading-relaxed">
@@ -135,8 +144,22 @@ export function Hero() {
             bg="#5865F2"
             whiteLogo
           />
-          , or{" "}
+          ,{" "}
           <GrassBlockChip name="Minecraft" />
+          , or{" "}
+          <BrandChip
+            name="Fortnite"
+            src="/images/games/fortnite.svg"
+            bg="#2A3F8F"
+            whiteLogo
+          />
+          {" "}—{" "}
+          <Link
+            href="/platforms"
+            className="font-semibold text-[#1E66E8] hover:underline whitespace-nowrap"
+          >
+            and 40+ more apps &rarr;
+          </Link>
           . You&rsquo;ll know before they do harm.
         </p>
 

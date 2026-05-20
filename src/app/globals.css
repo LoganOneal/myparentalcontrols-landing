@@ -2,6 +2,27 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/**
+ * Moderat-Black is a commercial typeface from TightType. We declare a
+ * @font-face entry here so that — once a licensed Moderat-Black.woff2 file
+ * is dropped into public/fonts/ — the browser picks it up automatically.
+ * Until then, the hero font stack falls through to Archivo Black (loaded
+ * via next/font/google in src/app/layout.tsx), a free, open-license
+ * substitute with a similar heavy display weight.
+ *
+ * Hero font stack is: "Moderat-Black", var(--font-archivo-black), sans-serif
+ */
+@font-face {
+  font-family: "Moderat-Black";
+  src: url("/fonts/Moderat-Black.woff2") format("woff2"),
+       url("/fonts/Moderat-Black.woff") format("woff");
+  /* Match any requested weight so the fallback stack stays flexible —
+     the file itself is the Black variant; weight number is informational. */
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

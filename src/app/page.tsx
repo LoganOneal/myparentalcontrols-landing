@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Hero } from "@/components/home/Hero";
-import { InfluencerGrid } from "@/components/home/InfluencerGrid";
+import { NewsGrid } from "@/components/home/NewsGrid";
 import { FeatureSwitcher } from "@/components/home/FeatureSwitcher";
 import { WhyChoose } from "@/components/home/WhyChoose";
 import { DarkModeBanner } from "@/components/home/DarkModeBanner";
@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <Hero />
-      <InfluencerGrid />
+      <NewsGrid />
       <FeatureSwitcher />
       <WhyChoose />
       <DarkModeBanner />

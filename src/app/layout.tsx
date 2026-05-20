@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Archivo_Black } from "next/font/google";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -7,6 +7,16 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   display: "swap",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
+// Free open-license fallback for Moderat-Black. The hero applies a font stack
+// of "Moderat-Black, Archivo Black, sans-serif" — Archivo Black renders until
+// you drop a licensed Moderat-Black.woff2 into public/fonts/.
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo-black",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bricolage.variable} antialiased`}>
+    <html lang="en" className={`${bricolage.variable} ${archivoBlack.variable} antialiased`}>
       <body className="overflow-x-hidden">{children}</body>
     </html>
   );

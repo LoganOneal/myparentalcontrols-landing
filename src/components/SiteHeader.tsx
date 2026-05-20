@@ -3,8 +3,8 @@ import { MyParentalControlsLogo, AppStoreBadge } from "@/components/icons";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/app-reviews", label: "App Reviews" },
   { href: "/blog", label: "Blog" },
-  { href: "mailto:apply@calai.app", label: "Jobs" },
   { href: "/press", label: "Press" },
   { href: "/manage-subscription", label: "Manage Subscription" },
   { href: "/login", label: "Login" },

@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
     <linearGradient id="mpcShieldFill" x1="32" y1="2" x2="32" y2="62" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF3B4D"/>
-      <stop offset="0.55" stop-color="#EF1530"/>
-      <stop offset="1" stop-color="#C00A1E"/>
+      <stop offset="0" stop-color="#3B8DFF"/>
+      <stop offset="0.55" stop-color="#1E66E8"/>
+      <stop offset="1" stop-color="#0A3FB2"/>
     </linearGradient>
     <linearGradient id="mpcShieldGloss" x1="32" y1="2" x2="32" y2="34" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="white" stop-opacity="0.35"/>
       <stop offset="1" stop-color="white" stop-opacity="0"/>
     </linearGradient>
     <filter id="mpcShadow" x="-20%" y="-10%" width="140%" height="130%">
-      <feDropShadow dx="0" dy="1.4" stdDeviation="1.6" flood-color="#7A0511" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="1.4" stdDeviation="1.6" flood-color="#062B7A" flood-opacity="0.30"/>
     </filter>
   </defs>
 
@@ -55,7 +55,7 @@
   />
   <path
     d="M27.2 32.4 L30.6 35.8 L37.4 28.6"
-    stroke="#EF1530"
+    stroke="#1E66E8"
     stroke-width="2.6"
     stroke-linecap="round"
     stroke-linejoin="round"
