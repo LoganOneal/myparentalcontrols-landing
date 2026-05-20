@@ -155,12 +155,7 @@
     overflow-x: hidden;
   }
   body {
-    background: linear-gradient(
-      rgb(255, 255, 255),
-      rgb(255, 255, 240),
-      rgb(240, 248, 255),
-      rgb(255, 255, 240)
-    );
+    background: #ffffff;
     color: #000000;
     min-height: 100vh;
     overflow-x: hidden;
@@ -176,20 +171,21 @@
   scrollbar-width: none;
 }
 
-/* Infinite marquee — pair with a track containing the content duplicated
-   twice. translateX(-50%) lands exactly on the start of the second copy,
-   which is identical to the first, so the reset is invisible. */
+/* Infinite marquee — content is duplicated twice in the track. Animating
+   from translateX(-50%) to translateX(0) makes the track shift rightward,
+   so logos appear to scroll from left to right. The wrap is invisible
+   because the second copy is identical to the first. */
 @keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 70s linear infinite;
   will-change: transform;
 }
 .animate-marquee:hover {

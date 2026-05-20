@@ -1,0 +1,27 @@
+{
+  "headings": [
+    {
+      "tag": "h2",
+      "text": "Pricing & Details"
+    }
+  ],
+  "lis": [
+    "Monitor texts, email, YouTube, and 30+ apps and platforms",
+    "Monitor web searches and saved photos & videos",
+    "Receive parental monitoring alerts for issues like cyberbullying, online predators, suicidal ideation, and more",
+    "Get insights into your child’s digital activities",
+    "Learn how to address issues with child-psychologist advice and tips",
+    "Manage screen time",
+    "Block websites and apps",
+    "Keep up with kids with location alerts and check-ins"
+  ],
+  "paragraphs": [
+    "Starts at"
+  ],
+  "buttons": [
+    {
+      "text": "Try for free",
+      "href": "https://www.bark.us/signup/"
+    }
+  ]
+}

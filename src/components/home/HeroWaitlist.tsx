@@ -1,16 +1,15 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
 /**
  * Inline waitlist capture for the hero.
  *
- * Layout: [ email input ] [ Protect my child now ]
- *         See how it works →
+ * Layout: a single rounded-pill input wrapper containing the email field
+ * and the submit button — the button sits flush inside the right edge of
+ * the field. The whole form fills the width of its parent container.
  *
- * On submit, replaces the form with a success confirmation. Hook
- * `onSubmit` to your real CRM/mailing provider later.
+ * Hook `onSubmit` to your CRM / mailing-list provider when ready.
  */
 export function HeroWaitlist() {
   const [email, setEmail] = useState("");
@@ -23,44 +22,34 @@ export function HeroWaitlist() {
     // TODO: POST to /api/waitlist or your mailing-list provider
   }
 
+  if (submitted) {
+    return (
+      <div className="w-full rounded-2xl bg-green-50 border border-green-200 text-green-900 px-5 py-4">
+        ✓ You&rsquo;re on the list. We&rsquo;ll email the moment a spot opens.
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col gap-2 max-w-[510px]">
-      {submitted ? (
-        <div className="rounded-2xl bg-green-50 border border-green-200 text-green-900 px-5 py-4">
-          ✓ You&rsquo;re on the list. We&rsquo;ll email the moment a spot opens.
-        </div>
-      ) : (
-        <form
-          onSubmit={onSubmit}
-          className="flex flex-col sm:flex-row gap-2 w-full"
-        >
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            className="flex-1 border border-gray-300 rounded-full px-5 py-3 text-base bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10"
-          />
-          <button
-            type="submit"
-            className="bg-black text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap hover:bg-gray-900 transition-colors"
-          >
-            Protect my child now
-          </button>
-        </form>
-      )}
-
-      <Link
-        href="#how-it-works"
-        className="text-sm text-gray-700 hover:text-black hover:underline font-medium w-fit"
+    <form
+      onSubmit={onSubmit}
+      className="w-full flex items-center bg-white border border-gray-300 rounded-full pl-5 pr-1 py-1 focus-within:ring-2 focus-within:ring-black/10 transition-shadow"
+    >
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="you@example.com"
+        aria-label="Email address"
+        className="flex-1 min-w-0 bg-transparent border-none outline-none text-base py-2 placeholder-gray-400"
+      />
+      <button
+        type="submit"
+        className="shrink-0 bg-black text-white rounded-full px-5 py-2.5 font-semibold whitespace-nowrap hover:bg-gray-900 transition-colors"
       >
-        See how it works →
-      </Link>
-
-      <p className="text-xs text-gray-600 mt-1">
-        5-min setup · We&rsquo;re at capacity — join 12,000+ parents on the waitlist.
-      </p>
-    </div>
+        Protect my child now
+      </button>
+    </form>
   );
 }

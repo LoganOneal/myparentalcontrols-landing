@@ -4,9 +4,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Hero } from "@/components/home/Hero";
 import { LogoBanner } from "@/components/home/LogoBanner";
 import { AlertsForDangers } from "@/components/home/AlertsForDangers";
+import { BarkAssistant } from "@/components/home/BarkAssistant";
 import { NewsGrid } from "@/components/home/NewsGrid";
-import { FeatureSwitcher } from "@/components/home/FeatureSwitcher";
-import { WhyChoose } from "@/components/home/WhyChoose";
+import { Pricing } from "@/components/home/Pricing";
 import { UserTestimonials } from "@/components/home/UserTestimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
@@ -18,9 +18,9 @@ export default function Home() {
       <Hero />
       <LogoBanner />
       <AlertsForDangers />
+      <BarkAssistant />
       <NewsGrid />
-      <FeatureSwitcher />
-      <WhyChoose />
+      <Pricing />
       <UserTestimonials />
       <FinalCTA />
       <SiteFooter />
