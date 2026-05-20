@@ -1,0 +1,1148 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Bark" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Bark" [ref=e7]
+      - navigation [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Products" [ref=e11] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e12]: Products
+              - text: 
+            - generic [ref=e13]:
+              - generic [ref=e14] [cursor=pointer]:
+                - generic [ref=e15]: 
+                - text: Products
+              - list [ref=e16]:
+                - listitem [ref=e17]:
+                  - link "Bark Watch" [ref=e18] [cursor=pointer]:
+                    - /url: https://www.bark.us/bark-watch/
+                - listitem [ref=e19]:
+                  - link "Bark Phone" [ref=e20] [cursor=pointer]:
+                    - /url: https://www.bark.us/bark-phone/
+                - listitem [ref=e21]:
+                  - link "Bark Phone Pro" [ref=e22] [cursor=pointer]:
+                    - /url: https://www.bark.us/bark-phone-pro/
+                - listitem [ref=e23]:
+                  - link "Bark App" [ref=e24] [cursor=pointer]:
+                    - /url: https://www.bark.us/bark-app/
+                - listitem [ref=e25]:
+                  - link "Bark Home" [ref=e26] [cursor=pointer]:
+                    - /url: https://www.bark.us/learn/bark-home/
+          - listitem [ref=e27]:
+            - link "Parental Controls" [ref=e28] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e29]: Parental Controls
+              - text: 
+            - generic [ref=e30]:
+              - generic [ref=e31] [cursor=pointer]:
+                - generic [ref=e32]: 
+                - text: Parental Controls
+              - list [ref=e33]:
+                - listitem [ref=e34]:
+                  - link "How Bark Works" [ref=e35] [cursor=pointer]:
+                    - /url: https://www.bark.us/how/
+                - listitem [ref=e36]:
+                  - link "What Bark Monitors" [ref=e37] [cursor=pointer]:
+                    - /url: https://www.bark.us/what-bark-monitors/
+                - listitem [ref=e38]:
+                  - link "Monitor Content" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.bark.us/monitor-content/
+                - listitem [ref=e40]:
+                  - link "Manage Screen Time" [ref=e41] [cursor=pointer]:
+                    - /url: https://www.bark.us/manage-screen-time/
+                - listitem [ref=e42]:
+                  - link "Block Websites & Apps" [ref=e43] [cursor=pointer]:
+                    - /url: https://www.bark.us/website-blocking/
+                - listitem [ref=e44]:
+                  - link "Location Sharing" [ref=e45] [cursor=pointer]:
+                    - /url: https://www.bark.us/location-sharing/
+          - listitem [ref=e46]:
+            - link "Pricing" [ref=e47] [cursor=pointer]:
+              - /url: "https://www.bark.us/pricing/ "
+          - listitem [ref=e48]:
+            - link "Reviews" [ref=e49] [cursor=pointer]:
+              - /url: https://www.bark.us/learn/bark-reviews-and-testimonials/
+          - listitem [ref=e50]:
+            - link "Resources" [ref=e51] [cursor=pointer]:
+              - /url: https://www.bark.us/learn/resources/
+          - listitem [ref=e52]:
+            - link "Blog" [ref=e53] [cursor=pointer]:
+              - /url: https://www.bark.us/blog/
+          - listitem [ref=e54]:
+            - link "For Organizations" [ref=e55] [cursor=pointer]:
+              - /url: https://www.bark.us/learn/solutions/
+        - generic [ref=e57]:
+          - link "Get started" [ref=e58] [cursor=pointer]:
+            - /url: https://www.bark.us/learn/get-started/
+          - link "Already a Bark Parent? Log in" [ref=e59] [cursor=pointer]:
+            - /url: https://www.bark.us/login
+            - text: Already a Bark Parent?
+            - generic [ref=e60]: Log in
+      - generic [ref=e63]:
+        - link "Get started" [ref=e64] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/get-started/
+        - button "Open and close navigation menu" [ref=e65] [cursor=pointer]
+  - main [ref=e66]:
+    - generic [ref=e70]:
+      - heading "Parental controls reimagined" [level=1] [ref=e72]
+      - paragraph [ref=e74]: Advanced content monitoring for all your kid’s devices
+      - link "Get started" [ref=e78] [cursor=pointer]:
+        - /url: https://www.bark.us/learn/get-started/
+        - generic [ref=e79]: Get started
+    - list [ref=e87]:
+      - listitem [ref=e88]:
+        - generic [ref=e90]:
+          - heading "7.3 million" [level=3] [ref=e91]
+          - paragraph [ref=e92]: children covered by Bark
+      - listitem [ref=e93]:
+        - generic [ref=e95]:
+          - heading "5.4 million" [level=3] [ref=e96]
+          - paragraph [ref=e97]: severe self-harm situations detected
+      - listitem [ref=e98]:
+        - generic [ref=e100]:
+          - heading "8.5 million" [level=3] [ref=e101]
+          - paragraph [ref=e102]: severe bullying situations detected
+    - generic [ref=e104]:
+      - heading "Featured On:" [level=3] [ref=e105]
+      - generic:
+        - img "Bloomberg"
+        - img "CBS News"
+        - img "CNBC"
+        - img "CNN"
+        - img "Forbes"
+        - img "Good Morning America"
+        - img "Mashable"
+        - img "TechCrunch"
+        - img "The Doctors"
+        - img "Today"
+        - img "USA Today"
+      - generic:
+        - img "Bloomberg"
+        - img "CBS News"
+        - img "CNBC"
+        - img "CNN"
+        - img "Forbes"
+        - img "Good Morning America"
+        - img "Mashable"
+        - img "TechCrunch"
+        - img "The Doctors"
+        - img "Today"
+        - img "USA Today"
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - heading "Change parental controls easily with one tap" [level=3] [ref=e112]
+        - paragraph [ref=e114]: Adjust settings on the fly, or take quick action when you need to. With the Bark Assistant, you can manage everything effortlessly from your parent dashboard.
+        - link "See it in action" [ref=e117] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/get-started/
+          - generic [ref=e118]: See it in action
+      - generic [ref=e122]:
+        - figure [ref=e123]
+        - figure [ref=e124]
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - heading "Monitor texts, social media, search, and more" [level=3] [ref=e130]
+        - paragraph [ref=e132]: Bark scans your child’s text messages, 30+ social media apps, web browsers, emails, and other online activity, keeping you informed and your child protected.
+        - link "Get connected today" [ref=e135] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/get-started/
+          - generic [ref=e136]: Get connected today
+      - generic [ref=e140]:
+        - figure [ref=e141]
+        - figure [ref=e142]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - heading "AI-powered safety alerts in over 29 categories" [level=3] [ref=e148]
+        - paragraph [ref=e150]: Bark goes beyond device mirroring, using advanced AI to scan texts, social media, images, videos, and audio for threats like cyberbullying and pornography, ensuring unparalleled safety for your child.
+        - link "Don’t miss out" [ref=e153] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/get-started/
+          - generic [ref=e154]: Don’t miss out
+      - figure [ref=e157]
+    - generic [ref=e160]:
+      - generic [ref=e161]:
+        - heading "Personalized insights & expert recommendations" [level=3] [ref=e163]
+        - paragraph [ref=e164]: Receive personalized reports on your child’s online activity and expert guidance with every alert, better equipping you to handle those challenging moments.
+        - link "Try risk free" [ref=e167] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/get-started/
+          - generic [ref=e168]: Try risk free
+      - generic [ref=e172]:
+        - figure [ref=e173]
+        - figure [ref=e174]
+    - heading "Bark can also help you…" [level=2] [ref=e177]
+    - generic [ref=e180]:
+      - generic [ref=e181]:
+        - heading "⏳ Manage screen time" [level=4] [ref=e183]
+        - paragraph [ref=e185]: Create custom schedules for app use or pause the internet altogether to create healthy boundaries.
+      - generic [ref=e186]:
+        - heading "🚫 Block websites & apps" [level=4] [ref=e188]
+        - paragraph [ref=e190]: Decide which apps and websites your child can use and filter inappropriate content.
+      - generic [ref=e191]:
+        - heading "🧭 Track location" [level=4] [ref=e193]
+        - paragraph [ref=e195]: Worry less when your kid is out and about with our live GPS, location alerts, and check-ins.
+    - generic [ref=e196]:
+      - heading "Our products" [level=3] [ref=e198]
+      - generic [ref=e199]:
+        - list [ref=e201]:
+          - listitem [ref=e202]:
+            - generic [ref=e206]:
+              - heading "Bark Phone" [level=3] [ref=e207]
+              - paragraph [ref=e208]: Get the phone with custom controls and Bark's monitoring built-in
+              - generic [ref=e209]:
+                - strong [ref=e211]: Starts at $29/mo
+                - generic [ref=e212]: + device
+              - generic [ref=e213]:
+                - link "Order now" [ref=e214] [cursor=pointer]:
+                  - /url: https://www.bark.us/app/order/bark-phone/#phone_order_hp_product_card
+                - link "Learn more" [ref=e215] [cursor=pointer]:
+                  - /url: https://www.bark.us/bark-phone/#phone_learn_hp_product_card
+              - generic [ref=e216]:
+                - paragraph [ref=e217]: Features
+                - list [ref=e219]:
+                  - listitem [ref=e220]: Monitor texts and apps
+                  - listitem [ref=e222]: Get alerts for concerning content
+                  - listitem [ref=e224]: Tamper-proof controls
+                  - listitem [ref=e226]: Block apps & websites
+                  - listitem [ref=e228]: Set screen time limits
+                  - listitem [ref=e230]: Approve or deny contacts
+                  - listitem [ref=e232]: Track location
+                  - listitem [ref=e234]: Pause or disable the internet
+          - listitem [ref=e236]:
+            - generic [ref=e240]:
+              - heading "Bark Phone Pro" [level=3] [ref=e241]
+              - paragraph [ref=e242]: For active kids & teens who need more power
+              - generic [ref=e243]:
+                - strong [ref=e245]: Starts at $29/mo
+                - generic [ref=e246]: + device
+              - generic [ref=e247]:
+                - link "Order now" [ref=e248] [cursor=pointer]:
+                  - /url: https://www.bark.us/app/order/bark-phone/#phone_order_hp_product_card
+                - link "Learn more" [ref=e249] [cursor=pointer]:
+                  - /url: https://www.bark.us/bark-phone-pro
+              - generic [ref=e250]:
+                - paragraph [ref=e251]: Features
+                - list [ref=e253]:
+                  - listitem [ref=e254]: Monitor texts and apps
+                  - listitem [ref=e256]: Get alerts for concerning content
+                  - listitem [ref=e258]: Tamper-proof controls
+                  - listitem [ref=e260]: Block apps & websites
+                  - listitem [ref=e262]: Set screen time limits
+                  - listitem [ref=e264]: Approve or deny contacts
+                  - listitem [ref=e266]: Track location
+                  - listitem [ref=e268]: Pause or disable the internet
+                  - listitem [ref=e270]: IP67 water resistance
+                  - listitem [ref=e272]: Gorilla®️ Glass screen
+                  - listitem [ref=e274]: Faster processor and more memory
+                  - listitem [ref=e276]: Seamless video calls and streaming
+          - listitem [ref=e278]:
+            - generic [ref=e282]:
+              - heading "Bark Watch" [level=3] [ref=e283]
+              - paragraph [ref=e284]: Monitor texts, track location, and manage contacts
+              - generic [ref=e285]:
+                - strong [ref=e287]: $15/mo
+                - generic [ref=e288]: + device
+              - generic [ref=e289]:
+                - link "Order now" [ref=e290] [cursor=pointer]:
+                  - /url: "https://www.bark.us/app/order/bark-watch/#watch_order_hp_product_card "
+                - link "Learn more" [ref=e291] [cursor=pointer]:
+                  - /url: https://www.bark.us/bark-watch/#watch_learn_hp_product_card
+              - generic [ref=e292]:
+                - paragraph [ref=e293]: Features
+                - list [ref=e295]:
+                  - listitem [ref=e296]: Monitor texts
+                  - listitem [ref=e298]: Get alerts for concerning content
+                  - listitem [ref=e300]: Tamper-proof controls
+                  - listitem [ref=e302]: Approve or deny contacts
+                  - listitem [ref=e304]: Track location
+                  - listitem [ref=e306]: No games, browsers, or social media
+          - listitem [ref=e308]:
+            - generic [ref=e312]:
+              - heading "Bark App" [level=3] [ref=e313]
+              - paragraph [ref=e314]: Add Bark’s monitoring and parental controls to your kid’s devices
+              - generic [ref=e315]:
+                - strong [ref=e317]: Starts at $14/mo
+                - generic [ref=e318]: 7-day free trial
+              - generic [ref=e319]:
+                - link "Try for free" [ref=e320] [cursor=pointer]:
+                  - /url: "https://www.bark.us/signup/#app_signup_hp_product_card "
+                - link "Learn more" [ref=e321] [cursor=pointer]:
+                  - /url: "https://www.bark.us/bark-app/#app_learn_hp_product_card "
+              - generic [ref=e322]:
+                - paragraph [ref=e323]: Features
+                - list [ref=e325]:
+                  - listitem [ref=e326]: Monitor texts and apps
+                  - listitem [ref=e328]: Get alerts for concerning content
+                  - listitem [ref=e330]: Block apps & websites
+                  - listitem [ref=e332]: Set screen time limits
+                  - listitem [ref=e334]: Track location
+                  - listitem [ref=e336]: Pause the internet
+          - listitem [ref=e338]:
+            - generic [ref=e342]:
+              - heading "Bark Sync" [level=3] [ref=e343]
+              - paragraph [ref=e344]: The iOS monitoring solution for Bark families
+              - generic [ref=e345]:
+                - strong [ref=e347]: Starts at $6/mo
+                - generic [ref=e348]: + Bark plan
+              - generic [ref=e349]:
+                - link "Order now" [ref=e350] [cursor=pointer]:
+                  - /url: https://www.bark.us/signup/
+                - link "Learn more" [ref=e351] [cursor=pointer]:
+                  - /url: https://www.bark.us/bark-sync/
+              - generic [ref=e352]:
+                - paragraph [ref=e353]: Features
+                - list [ref=e355]:
+                  - listitem [ref=e356]: Monitor iPhones and iPads easily
+                  - listitem [ref=e358]: Scans while charging
+                  - listitem [ref=e360]: Get alerts while traveling
+                  - listitem [ref=e362]: No computer needed
+          - listitem [ref=e364]:
+            - generic [ref=e368]:
+              - heading "Bark Home" [level=3] [ref=e369]
+              - paragraph [ref=e370]: Set screen time limits on devices in your home
+              - generic [ref=e371]:
+                - strong [ref=e373]: Starts at $6/mo
+                - generic [ref=e374]: Free shipping
+              - generic [ref=e375]:
+                - link "Order now" [ref=e376] [cursor=pointer]:
+                  - /url: https://www.bark.us/app/order/bark-home/#clicked_home_button
+                - link "Learn more" [ref=e377] [cursor=pointer]:
+                  - /url: https://www.bark.us/learn/bark-home/
+              - generic [ref=e378]:
+                - paragraph [ref=e379]: Features
+                - list [ref=e381]:
+                  - listitem [ref=e382]: Block apps & websites
+                  - listitem [ref=e384]: Set screen time limits
+                  - listitem [ref=e386]: Filter content
+                  - listitem [ref=e388]: Pause the internet
+        - generic [ref=e390]:
+          - button "1" [ref=e391]
+          - button "2" [ref=e392]
+          - button "3" [ref=e393]
+          - button "4" [ref=e394]
+          - button "5" [ref=e395]
+        - generic:
+          - button "Previous"
+          - button "Next" [ref=e396] [cursor=pointer]
+    - generic [ref=e399]:
+      - generic [ref=e400]:
+        - heading "Not sure which Bark product is right for your child?" [level=3] [ref=e402]
+        - paragraph [ref=e405]: Take our 5-question quiz to find the perfect fit.
+        - link "Take the quiz" [ref=e410] [cursor=pointer]:
+          - /url: https://www.bark.us/learn/product-quiz/#clicked_product_quiz
+          - generic [ref=e411]: Take the quiz
+      - figure [ref=e414]
+    - generic [ref=e415]:
+      - heading "Real-life Bark families. Real-life stories." [level=3] [ref=e417]
+      - generic [ref=e418]:
+        - list [ref=e420]:
+          - listitem [ref=e421]:
+            - generic [ref=e422]:
+              - generic [ref=e423]:
+                - generic [ref=e425]: Lauren C.
+                - generic [ref=e426]: January 10
+              - paragraph [ref=e429]: Bark potentially saved my daughters life…if you are contemplating this…don’t! It alerted me to more than I ever would have known. I can’t even repay you for what you have given me
+              - generic [ref=e430]:
+                - generic [ref=e432]:
+                  - generic [ref=e433]:
+                    - img "Heart" [ref=e435]
+                    - img "Hug" [ref=e437]
+                  - text: "4"
+                - generic [ref=e438]: 11 comments
+          - listitem [ref=e439]:
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - generic [ref=e443]: Lori E.
+                - generic [ref=e444]: March 3
+              - paragraph [ref=e447]: I really really have to recommend this service. We’ve used other programs in the past that were great at shutting down programs or setting time limitations… But they didn’t really help monitor. One of the things that I really appreciate is that it addresses the kids directly during set up letting them know that we don’t want to invade their privacy, just that we want to help keep them safe.
+              - generic [ref=e448]:
+                - generic [ref=e450]:
+                  - img "Heart" [ref=e453]
+                  - text: "8"
+                - generic [ref=e454]: 3 comments
+          - listitem [ref=e455]:
+            - generic [ref=e456]:
+              - generic [ref=e457]:
+                - generic [ref=e459]: Heather W.
+                - generic [ref=e460]: October 9
+              - paragraph [ref=e463]: I have used the bark app (and now, the bark phone for my youngest) across both droid and apple devices to keep me updated on current lingo and issues that I need to address with my kids for over 5 years. Thank you for the education, extra set of eyes/ears, and your heart, Bark people!
+              - generic [ref=e464]:
+                - generic [ref=e466]:
+                  - generic [ref=e467]:
+                    - img "Like" [ref=e469]
+                    - img "Heart" [ref=e471]
+                    - img "Hug" [ref=e473]
+                  - text: "9"
+                - generic [ref=e474]: 5 comments
+          - listitem [ref=e475]:
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - generic [ref=e479]: Dorothea S.
+                - generic [ref=e480]: February 12
+              - paragraph [ref=e483]: Love! love! love! the bark phone!!!! I can’t say enough good things about Bark. This is everything i wanted in a phone for my daughter. You have no idea this moms frustration trying to find something easy and where my kid can’t disable the VPN that makes it work!!! every parent needs this for their kid…of any age!!!!!
+              - generic [ref=e484]:
+                - generic [ref=e486]:
+                  - generic [ref=e487]:
+                    - img "Like" [ref=e489]
+                    - img "Heart" [ref=e491]
+                  - text: "6"
+                - generic [ref=e492]: 2 comments
+          - listitem [ref=e493]:
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e497]: Jena R.
+                - generic [ref=e498]: January 10
+              - paragraph [ref=e501]: Bark is the best decision my husband and I made. We have a 15 year old and although that may sound a bit old for monitoring, it is the best thing for us and our teen because it alerts us on potentially dangerous situations and it holds her accountable for how she conducts herself online. I can’t see why anyone would discourage this. Thanks Bark!
+              - generic [ref=e502]:
+                - generic [ref=e504]:
+                  - generic [ref=e505]:
+                    - img "Like" [ref=e507]
+                    - img "Heart" [ref=e509]
+                    - img "Star" [ref=e511]
+                  - text: "2"
+                - generic [ref=e512]: 4 comments
+          - listitem [ref=e513]:
+            - generic [ref=e514]:
+              - generic [ref=e515]:
+                - generic [ref=e517]: Kimberly S.
+                - generic [ref=e518]: December 5
+              - paragraph [ref=e521]: I have had this for about a month. It has absolutely produced excellent conversations and has built trust. My approach is not “gotcha” but “I love you and this helps me support you”. My children understand I trust them but I need to be alerted to some things. This has been a great fit for our family.
+              - generic [ref=e522]:
+                - generic [ref=e524]:
+                  - generic [ref=e525]:
+                    - img "Like" [ref=e527]
+                    - img "Heart" [ref=e529]
+                    - img "Hug" [ref=e531]
+                  - text: "9"
+                - generic [ref=e532]: 12 comments
+          - listitem [ref=e533]:
+            - generic [ref=e534]:
+              - generic [ref=e535]:
+                - generic [ref=e537]: Lisa W.
+                - generic [ref=e538]: June 10
+              - paragraph [ref=e541]: I’ve tried most parental control apps for my now 10 year old and this is by far the best. The integration with my son’s apps and accounts means he can start to have access to the things some of his older friends are into but I can be notified of content that might be inappropriate or concerning.
+              - generic [ref=e542]:
+                - generic [ref=e544]:
+                  - generic [ref=e545]:
+                    - img "Like" [ref=e547]
+                    - img "Hug" [ref=e549]
+                  - text: "6"
+                - generic [ref=e550]: 2 comments
+          - listitem [ref=e551]:
+            - generic [ref=e552]:
+              - generic [ref=e553]:
+                - generic [ref=e555]: Marianne H.
+                - generic [ref=e556]: September 2
+              - paragraph [ref=e559]: Thanks a ton. You have not only helped me protect my kids, but helped us have better and more open conversations. My kids live in a blended home, and this helps us be on the same page when we teach right and wrong and flat out dangerous
+              - generic [ref=e560]:
+                - generic [ref=e562]:
+                  - generic [ref=e563]:
+                    - img "Like" [ref=e565]
+                    - img "Heart-Eyes" [ref=e567]
+                  - text: "4"
+                - generic [ref=e568]: 6 comments
+          - listitem [ref=e569]:
+            - generic [ref=e570]:
+              - generic [ref=e571]:
+                - generic [ref=e573]: Maureen A.
+                - generic [ref=e574]: July 27
+              - paragraph [ref=e577]: I put bark on my children’s phone for my oldest son who is 15. Never thinking that my 11-year-old daughter would have alerts much to my surprise when I hooked up her phone I got 97 alerts for her phone. brought attention to things in never considered! Thank you so much.
+              - generic [ref=e578]:
+                - generic [ref=e580]:
+                  - img "Like" [ref=e583]
+                  - text: "9"
+                - generic [ref=e584]: 3 comments
+          - listitem [ref=e585]:
+            - generic [ref=e586]:
+              - generic [ref=e587]:
+                - generic [ref=e589]: Russell S.
+                - generic [ref=e590]: December 10
+              - paragraph [ref=e593]: I have been impressed with this app over and over again. Some of the things it was capturing from my son’s phone and alerting me to would have certainly gone undetected on a different service. Super impressed and happy with the service. Best out there hands down. We’ve used other services and I’m so glad we found Bark.
+              - generic [ref=e594]:
+                - generic [ref=e596]:
+                  - generic [ref=e597]:
+                    - img "Like" [ref=e599]
+                    - img "Heart" [ref=e601]
+                  - text: "8"
+                - generic [ref=e602]: 4 comments
+          - listitem [ref=e603]:
+            - generic [ref=e604]:
+              - generic [ref=e605]:
+                - generic [ref=e607]: Sarah S.
+                - generic [ref=e608]: August 8
+              - paragraph [ref=e611]: I decided it was time I got more involved in what my daughter sees and reads. So within 3 minutes of downloading, Bark found an extremely inappropriate issue!!! Though it did not involve her, it did alert me to a picture she took a screen shot of. It was a message from a boy to a friend of hers. It made my stomach turn. Thank you!
+              - generic [ref=e612]:
+                - generic [ref=e614]:
+                  - generic [ref=e615]:
+                    - img "Hug" [ref=e617]
+                    - img "Heart" [ref=e619]
+                  - text: "12"
+                - generic [ref=e620]: 7 comments
+        - generic [ref=e622]:
+          - button "Slide 1" [ref=e623]: "1"
+          - button "Slide 2" [ref=e624]: "2"
+          - button "Slide 3" [ref=e625]: "3"
+          - button "Slide 4" [ref=e626]: "4"
+          - button "Slide 5" [ref=e627]: "5"
+          - button "Slide 6" [ref=e628]: "6"
+          - button "Slide 7" [ref=e629]: "7"
+          - button "Slide 8" [ref=e630]: "8"
+          - button "Slide 9" [ref=e631]: "9"
+          - button "Slide 10" [ref=e632]: "10"
+          - button "Slide 11" [ref=e633]: "11"
+        - generic:
+          - button "Previous"
+          - button "Previous" [ref=e634] [cursor=pointer]
+    - generic [ref=e635]:
+      - heading "Explore all of Bark’s parental controls" [level=3] [ref=e637]
+      - generic [ref=e639]:
+        - button "Bark Assistant" [ref=e640] [cursor=pointer]
+        - button "Require contact approvals" [ref=e641] [cursor=pointer]
+        - button "Control app downloads" [ref=e642] [cursor=pointer]
+        - button "Limit App Store access" [ref=e643] [cursor=pointer]
+        - button "Set app time limits" [ref=e644] [cursor=pointer]
+        - button "Driving mode" [ref=e645] [cursor=pointer]
+        - button "Stop text deletion" [ref=e646] [cursor=pointer]
+        - button "Manage smart devices" [ref=e647] [cursor=pointer]
+        - button "Manage screen time" [ref=e648] [cursor=pointer]
+        - button "Block apps & websites" [ref=e649] [cursor=pointer]
+        - button "Track location" [ref=e650] [cursor=pointer]
+        - button "Monitor content" [ref=e651] [cursor=pointer]
+        - button "Set remote alarms" [ref=e652] [cursor=pointer]
+      - generic [ref=e653]:
+        - list [ref=e655]:
+          - listitem [ref=e656]:
+            - generic [ref=e658]:
+              - generic [ref=e659]:
+                - heading "Manage everything easily from your dashboard" [level=3] [ref=e660]
+                - paragraph [ref=e661]: Ask about screen time, block apps, or get insights—the Bark Assistant helps you manage everything in one place.
+              - generic [ref=e662]:
+                - paragraph [ref=e663]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e664]:
+                  - listitem [ref=e665]:
+                    - link "Bark Phone" [ref=e666] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+                  - listitem [ref=e667]:
+                    - link "Bark Watch" [ref=e668] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-watch/
+                  - listitem [ref=e669]:
+                    - link "Bark App" [ref=e670] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-app/
+                  - listitem [ref=e671]:
+                    - link "Bark Home" [ref=e672] [cursor=pointer]:
+                      - /url: https://www.bark.us/learn/bark-home/
+          - listitem [ref=e674]:
+            - generic [ref=e675]:
+              - generic [ref=e676]:
+                - generic [ref=e677]:
+                  - heading "Say goodbye to texts from strangers" [level=3] [ref=e678]
+                  - paragraph [ref=e679]: Help protect your kid from strangers by choosing who they can talk to.
+                - generic [ref=e680]:
+                  - paragraph [ref=e681]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e682]:
+                    - listitem [ref=e683]:
+                      - link "Bark Phone" [ref=e684] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone/
+                    - listitem [ref=e685]:
+                      - link "Bark Watch" [ref=e686] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-watch
+              - img "Approve contacts on your kid's phone" [ref=e688]
+          - listitem [ref=e689]:
+            - generic [ref=e690]:
+              - generic [ref=e691]:
+                - generic [ref=e692]:
+                  - heading "Approve or deny app downloads" [level=3] [ref=e693]
+                  - paragraph [ref=e694]: When your child tries to download an app, you'll get a request to approve or deny the app.
+                - generic [ref=e695]:
+                  - paragraph [ref=e696]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e697]:
+                    - listitem [ref=e698]:
+                      - link "Bark Phone" [ref=e699] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone/
+              - img "Approve apps on your kid's phone" [ref=e701]
+          - listitem [ref=e702]:
+            - generic [ref=e703]:
+              - generic [ref=e704]:
+                - generic [ref=e705]:
+                  - heading "Allow or block access to App Store" [level=3] [ref=e706]
+                  - paragraph [ref=e707]: Decide if your child is allowed to access the Google Play Store by simply toggling a button.
+                - generic [ref=e708]:
+                  - paragraph [ref=e709]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e710]:
+                    - listitem [ref=e711]:
+                      - link "Bark Phone" [ref=e712] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone/
+              - img "Control access to the Google Play Store on your kid's phone" [ref=e714]
+          - listitem [ref=e715]:
+            - generic [ref=e716]:
+              - generic [ref=e717]:
+                - generic [ref=e718]:
+                  - heading "Encourage healthy boundaries" [level=3] [ref=e719]
+                  - paragraph [ref=e720]: Whether it’s two hours a day of YouTube, 30 minutes of social media, or somewhere in between — you call the shots.
+                - generic [ref=e721]:
+                  - paragraph [ref=e722]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e723]:
+                    - listitem [ref=e724]:
+                      - link "Bark Phone" [ref=e725] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone/
+              - img "Control app time limits on your kid's phone" [ref=e727]
+          - listitem [ref=e728]:
+            - generic [ref=e730]:
+              - generic [ref=e731]:
+                - heading "Limit distractions while they’re driving" [level=3] [ref=e732]
+                - paragraph [ref=e733]: Automatically pause the Bark Phone when it detects your child is in a moving vehicle.
+              - generic [ref=e734]:
+                - paragraph [ref=e735]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e736]:
+                  - listitem [ref=e737]:
+                    - link "Bark Phone" [ref=e738] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+          - listitem [ref=e740]:
+            - generic [ref=e741]:
+              - generic [ref=e742]:
+                - generic [ref=e743]:
+                  - heading "Prevent texts from being deleted" [level=3] [ref=e744]
+                  - paragraph [ref=e745]: Choose whether or not your child can delete text messages on their phone.
+                - generic [ref=e746]:
+                  - paragraph [ref=e747]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e748]:
+                    - listitem [ref=e749]:
+                      - link "Bark Phone" [ref=e750] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone
+              - img "Prevent your child from deleting texts" [ref=e752]
+          - listitem [ref=e753]:
+            - generic [ref=e755]:
+              - generic [ref=e756]:
+                - heading "Add parental controls to smart devices" [level=3] [ref=e757]
+                - paragraph [ref=e758]: Limit screen time, block content, and pause the internet on smart devices like TVs and gaming consoles.
+              - generic [ref=e759]:
+                - paragraph [ref=e760]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e761]:
+                  - listitem [ref=e762]:
+                    - link "Bark Home" [ref=e763] [cursor=pointer]:
+                      - /url: https://www.bark.us/learn/bark-home/
+          - listitem [ref=e765]:
+            - generic [ref=e767]:
+              - generic [ref=e768]:
+                - heading "Create custom schedules for app use" [level=3] [ref=e769]
+                - paragraph [ref=e770]: From school time to bedtime, decide what apps your kid can use and when.
+              - generic [ref=e771]:
+                - paragraph [ref=e772]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e773]:
+                  - listitem [ref=e774]:
+                    - link "Bark Phone" [ref=e775] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+                  - listitem [ref=e776]:
+                    - link "Bark App" [ref=e777] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-app/
+                  - listitem [ref=e778]:
+                    - link "Bark Watch" [ref=e779] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-watch
+                  - listitem [ref=e780]:
+                    - link "Bark Home" [ref=e781] [cursor=pointer]:
+                      - /url: https://www.bark.us/learn/bark-home/
+          - listitem [ref=e783]:
+            - generic [ref=e784]:
+              - generic [ref=e785]:
+                - generic [ref=e786]:
+                  - heading "Protect your kid from inappropriate content" [level=3] [ref=e787]
+                  - paragraph [ref=e788]: Our web filter lets you block categories of content as well as specific sites and apps.
+                - generic [ref=e789]:
+                  - paragraph [ref=e790]: "INCLUDED WITH:"
+                  - list "INCLUDED WITH:" [ref=e791]:
+                    - listitem [ref=e792]:
+                      - link "Bark Phone" [ref=e793] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-phone/
+                    - listitem [ref=e794]:
+                      - link "Bark App" [ref=e795] [cursor=pointer]:
+                        - /url: https://www.bark.us/bark-app/
+                    - listitem [ref=e796]:
+                      - link "Bark Home" [ref=e797] [cursor=pointer]:
+                        - /url: https://www.bark.us/learn/bark-home/
+              - img "Block and filter websites on your kid's devices" [ref=e799]
+          - listitem [ref=e800]:
+            - generic [ref=e802]:
+              - generic [ref=e803]:
+                - heading "Worry less when your kid is out and about" [level=3] [ref=e804]
+                - paragraph [ref=e805]: Stay on top of your kid's location with our GPS-powered real-time map, location alerts, and check-ins.
+              - generic [ref=e806]:
+                - paragraph [ref=e807]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e808]:
+                  - listitem [ref=e809]:
+                    - link "Bark Phone" [ref=e810] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+                  - listitem [ref=e811]:
+                    - link "Bark App" [ref=e812] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-app/
+                  - listitem [ref=e813]:
+                    - link "Bark Watch" [ref=e814] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-watch
+          - listitem [ref=e816]:
+            - generic [ref=e818]:
+              - generic [ref=e819]:
+                - heading "Get important insights about your child’s world" [level=3] [ref=e820]
+                - paragraph [ref=e821]: Bark saves you time and gives peace of mind by monitoring texts, social media and online content to alert you to potential dangers.
+              - generic [ref=e822]:
+                - paragraph [ref=e823]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e824]:
+                  - listitem [ref=e825]:
+                    - link "Bark Phone" [ref=e826] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+                  - listitem [ref=e827]:
+                    - link "Bark App" [ref=e828] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-app/
+                  - listitem [ref=e829]:
+                    - link "Bark Watch" [ref=e830] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-watch
+          - listitem [ref=e832]:
+            - generic [ref=e834]:
+              - generic [ref=e835]:
+                - heading "Make morning wake-ups a little easier" [level=3] [ref=e836]
+                - paragraph [ref=e837]: Set one-time or recurring alarms to go off on your child’s Bark Phone.
+              - generic [ref=e838]:
+                - paragraph [ref=e839]: "INCLUDED WITH:"
+                - list "INCLUDED WITH:" [ref=e840]:
+                  - listitem [ref=e841]:
+                    - link "Bark Phone" [ref=e842] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-phone/
+                  - listitem [ref=e843]:
+                    - link "Bark Watch" [ref=e844] [cursor=pointer]:
+                      - /url: https://www.bark.us/bark-watch
+        - generic [ref=e847]:
+          - button "Slide 1" [ref=e848]: "1"
+          - button "Slide 2" [ref=e849]: "2"
+          - button "Slide 3" [ref=e850]: "3"
+          - button "Slide 4" [ref=e851]: "4"
+          - button "Slide 5" [ref=e852]: "5"
+          - button "Slide 6" [ref=e853]: "6"
+          - button "Slide 7" [ref=e854]: "7"
+          - button "Slide 8" [ref=e855]: "8"
+          - button "Slide 9" [ref=e856]: "9"
+          - button "Slide 10" [ref=e857]: "10"
+          - button "Slide 11" [ref=e858]: "11"
+          - button "Slide 12" [ref=e859]: "12"
+          - button "Slide 13" [ref=e860]: "13"
+        - generic:
+          - button "Previous"
+          - button "Next" [ref=e861] [cursor=pointer]
+    - generic [ref=e863]:
+      - heading "FAQs" [level=2] [ref=e864]
+      - generic [ref=e865]:
+        - generic [ref=e866]:
+          - generic [ref=e867] [cursor=pointer]:
+            - strong [ref=e868]: How much does the Bark Watch cost?
+            - generic [ref=e869]: 
+          - generic [ref=e870]:
+            - paragraph [ref=e871]:
+              - text: The Bark Watch has no activation fee, and
+              - strong [ref=e872]
+              - text: the total monthly charge is $22/month.
+            - paragraph [ref=e873]: This breaks down to a $7/month installment over 24 months to cover the cost of the device, plus $15/month for cell service and our parental controls.
+        - generic [ref=e874]:
+          - generic [ref=e875] [cursor=pointer]:
+            - strong [ref=e876]: How much does the Bark app cost?
+            - generic [ref=e877]: 
+          - generic [ref=e878]:
+            - paragraph [ref=e879]:
+              - text: We offer two plans —
+              - link "Bark Premium" [ref=e880] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-premium/
+              - text: and
+              - link "Bark Jr" [ref=e881] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-jr
+              - text: "— a single subscription covers every child and device in your family, with no limit on accounts, devices, or kids. Both plans come with a 7-day free trial:"
+            - paragraph [ref=e882]:
+              - link "Bark Premium" [ref=e883] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-premium/
+              - text: ($14/month or $99/year)
+            - list [ref=e884]:
+              - listitem [ref=e885]: Parent’s top choice for comprehensive coverage.
+              - listitem [ref=e886]: Monitor and receive alerts for your child’s social media, phones, tablets, and computers.
+              - listitem [ref=e887]: Manage screen time, block specific websites and apps, and track their location.
+            - paragraph [ref=e888]:
+              - link "Bark Jr" [ref=e889] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-jr
+              - text: ($5/month or $49/year)
+            - list [ref=e890]:
+              - listitem [ref=e891]: Gain control over screen time, block unwanted websites and apps, and filter inappropriate content.
+              - listitem [ref=e892]: Track your child's whereabouts with live GPS, location alerts, and check-in features.
+        - generic [ref=e893]:
+          - generic [ref=e894] [cursor=pointer]:
+            - strong [ref=e895]: How much does the Bark Phone cost?
+            - generic [ref=e896]: 
+          - generic [ref=e897]:
+            - paragraph [ref=e898]:
+              - text: The Bark Phone and Bark Phone Pro are paid for monthly over 24 months. This monthly cost covers the
+              - strong [ref=e899]: device only
+              - text: . A Bark wireless plan is required for activating your Bark Phone.
+            - list [ref=e900]:
+              - listitem [ref=e901]:
+                - strong [ref=e902]: "Bark Phone:"
+                - text: $10/month for 24 months (device payment)
+              - listitem [ref=e903]:
+                - strong [ref=e904]: "Bark Phone Pro:"
+                - text: $25/month for 24 months (device payment)
+            - paragraph [ref=e905]: There is no activation fee with either phone.
+            - paragraph [ref=e906]:
+              - strong [ref=e907]: "Your wireless plan cost is separate from your device payment and includes:"
+            - list [ref=e908]:
+              - listitem [ref=e909]: A Bark Premium subscription for the entire family
+              - listitem [ref=e910]: Built-in parental controls
+              - listitem [ref=e911]: Unlimited talk & text
+              - listitem [ref=e912]: Mobile data (if you choose a data plan)
+            - paragraph [ref=e913]:
+              - strong [ref=e914]: Starter plan
+              - text: ":"
+            - list [ref=e915]:
+              - listitem [ref=e916]: $29/month for unlimited talk, text, and no internet, app store, or games
+            - paragraph [ref=e917]:
+              - strong [ref=e918]: "Advanced plans:"
+            - list [ref=e919]:
+              - listitem [ref=e920]: $39/month for unlimited talk, text, and Wi-Fi only (no data)
+              - listitem [ref=e921]: $49/month for unlimited talk, text, and 4GB data
+              - listitem [ref=e922]: $59/month for unlimited talk, text, and 8GB data
+              - listitem [ref=e923]:
+                - text: $79/month for unlimited talk, text, and data
+                - superscript [ref=e924]: "1"
+            - paragraph [ref=e925]:
+              - superscript [ref=e926]: "1"
+              - text: After exceeding 35GB/month of data use, data speeds will be reduced for the remainder of the monthly billing cycle. After exceeding 50GB/month of data usage, data speeds may be reduced further and/or data connection may be turned off for the remainder of the monthly billing cycle.
+        - generic [ref=e927]:
+          - generic [ref=e928] [cursor=pointer]:
+            - strong [ref=e929]: How does content monitoring work?
+            - generic [ref=e930]: 
+          - generic [ref=e931]:
+            - paragraph [ref=e932]:
+              - text: Add one of your child's devices or social media accounts to be
+              - link "monitored" [ref=e933] [cursor=pointer]:
+                - /url: https://www.bark.us/monitor-content/
+              - text: . Then — thanks to our comprehensive AI, we'll start sending you alerts about potentially harmful activities on those devices and accounts.
+            - paragraph [ref=e934]: You can also customize how sensitive you would like the alerts to be. Don't care about profanity but want all alerts about drugs? No problem.
+        - generic [ref=e935]:
+          - generic [ref=e936] [cursor=pointer]:
+            - strong [ref=e937]: What devices does Bark cover?
+            - generic [ref=e938]: 
+          - paragraph [ref=e940]:
+            - text: The Bark app is compatible with iPhones, iPads, Android phones, Android tablets, laptops, computers, Chromebooks, and Amazon Fire tablets. Check out
+            - link "our full list" [ref=e941] [cursor=pointer]:
+              - /url: https://www.bark.us/what-bark-monitors/
+            - text: of everything Bark can monitor on each device.
+        - generic [ref=e942]:
+          - generic [ref=e943] [cursor=pointer]:
+            - strong [ref=e944]: Does Bark have an iOS app?
+            - generic [ref=e945]: 
+          - generic [ref=e946]:
+            - paragraph [ref=e947]:
+              - text: Yes,
+              - link "click here to download our iOS app for parents" [ref=e948] [cursor=pointer]:
+                - /url: https://apps.apple.com/us/app/bark-parental-controls/id1477619146
+              - text: . This app allows you to review alerts, add children, connect accounts, update notification settings, and more.
+            - paragraph [ref=e949]: The Bark Kids app will need to be installed on your child's iOS device to block apps and sites.
+            - paragraph [ref=e950]:
+              - text: The
+              - link "Bark Desktop App" [ref=e951] [cursor=pointer]:
+                - /url: https://www.bark.us/ios/
+              - text: will need to be installed on a Windows or Mac computer to monitor the iOS device texts, photos, videos, WhatsApp, and Kik for issues. (Don't have a computer? You can use the
+              - link "Bark Home" [ref=e952] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/bark-home/
+              - text: in place of a computer for iOS monitoring).
+        - generic [ref=e953]:
+          - generic [ref=e954] [cursor=pointer]:
+            - strong [ref=e955]: What can I do with Bark's parental controls for iOS?
+            - generic [ref=e956]: 
+          - generic [ref=e957]:
+            - paragraph [ref=e958]: Bark's parental controls for iOS devices give you the power to monitor your child’s online activities in a groundbreaking way.
+            - paragraph [ref=e959]:
+              - text: Our content monitoring uses advanced AI to scan messages, posts, comments, replies, web searches, and so much more to find potential dangers. If something concerning is found, you’ll get a timely alert so you can check in and make sure everything is okay. Learn more about what Bark monitors on iOS devices
+              - link "here" [ref=e960] [cursor=pointer]:
+                - /url: https://www.bark.us/what-bark-monitors/ios-devices/
+              - text: .
+            - paragraph [ref=e961]: In addition to monitoring, Bark also lets you manage screen time, block websites & apps, and track location 24/7.
+            - paragraph [ref=e962]: These key features of our iPhone parental monitoring app work together to build a powerful digital safety net to help you protect your child online and in real life.
+        - generic [ref=e963]:
+          - generic [ref=e964] [cursor=pointer]:
+            - strong [ref=e965]: Does Bark have an Android app?
+            - generic [ref=e966]: 
+          - paragraph [ref=e968]:
+            - text: Yes,
+            - link "click here to download our Android app" [ref=e969] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=cm.pt.barkparent
+            - text: . The app allows you to review alerts, add children, connect accounts, update your notification settings, and more.
+            - text: The
+            - link "Bark for Kids app" [ref=e970] [cursor=pointer]:
+              - /url: https://www.bark.us/download/bark-kids
+            - text: will need to be installed on your child's Android device to allow Bark to monitor content, manage screen time, and block websites on the device.
+        - generic [ref=e971]:
+          - generic [ref=e972] [cursor=pointer]:
+            - strong [ref=e973]: What can Bark's parental controls for Android devices do?
+            - generic [ref=e974]: 
+          - generic [ref=e975]:
+            - paragraph [ref=e976]: Bark's parental controls for Androids give you the power to monitor your child’s online activities in a groundbreaking way.
+            - paragraph [ref=e977]:
+              - text: Our content monitoring uses advanced AI to scan messages, posts, comments, replies, web searches, and so much more to find potential dangers. If something concerning is found, you’ll get a timely alert so you can check in and make sure everything is okay. Learn more about what Bark monitors on Android devices
+              - link "here" [ref=e978] [cursor=pointer]:
+                - /url: https://www.bark.us/what-bark-monitors/android-devices/
+              - text: .
+            - paragraph [ref=e979]: In addition to monitoring, Bark also lets you manage screen time, block websites & apps, and track location 24/7.
+            - paragraph [ref=e980]: These key features work together to build a powerful digital safety net to help you protect your child online and in real life.
+        - generic [ref=e981]:
+          - generic [ref=e982] [cursor=pointer]:
+            - strong [ref=e983]: Is the Bark Phone available outside the U.S.?
+            - generic [ref=e984]: 
+          - paragraph [ref=e986]:
+            - text: Right now, the Bark Phone for kids is only available for families located in the U.S.
+            - link "Tell us what country" [ref=e987] [cursor=pointer]:
+              - /url: https://barktechnologies.typeform.com/to/eLbKDGIE
+            - text: you'd like to bring the Bark Phone to next.
+        - generic [ref=e988]:
+          - generic [ref=e989] [cursor=pointer]:
+            - strong [ref=e990]: How is a Bark Phone different from a phone with the Bark app?
+            - generic [ref=e991]: 
+          - generic [ref=e992]:
+            - paragraph [ref=e993]: Because Bark’s software is built directly into the phone, it automatically monitors texts, emails, social media, and apps. Bark also can't be deleted from the Bark Phone, which helps ensure the settings you put into this cell phone for kids will stay.
+            - paragraph [ref=e994]: "The Bark Phone also offers exclusive features that the app doesn’t, including:"
+            - list [ref=e995]:
+              - listitem [ref=e996]: Contact approvals
+              - listitem [ref=e997]: App install approvals
+              - listitem [ref=e998]: Remote alarms
+              - listitem [ref=e999]: Daily screen time limits
+              - listitem [ref=e1000]: Completely tamper-proof settings
+        - generic [ref=e1001]:
+          - generic [ref=e1002] [cursor=pointer]:
+            - strong [ref=e1003]: Is the Bark app available outside the U.S.?
+            - generic [ref=e1004]: 
+          - paragraph [ref=e1006]: The Bark app is currently available in the United States (including U.S. territories), South Africa, and Australia. We’re continually working to bring Bark to more families around the world.
+        - generic [ref=e1007]:
+          - generic [ref=e1008] [cursor=pointer]:
+            - strong [ref=e1009]: What languages do you support?
+            - generic [ref=e1010]: 
+          - paragraph [ref=e1012]:
+            - text: Our algorithms are currently trained in English, Spanish, and
+            - link "Afrikaans" [ref=e1013] [cursor=pointer]:
+              - /url: https://www.bark.us/blog/bark-south-africa/
+            - text: ", and we’re looking to add more languages in the near future."
+        - generic [ref=e1014]:
+          - generic [ref=e1015] [cursor=pointer]:
+            - strong [ref=e1016]: Is my child's data secure?
+            - generic [ref=e1017]: 
+          - paragraph [ref=e1019]:
+            - text: Absolutely. At Bark,
+            - link "security is paramount" [ref=e1020] [cursor=pointer]:
+              - /url: https://www.bark.us/security/
+            - text: . Our website uses SSL encryption and all analyzed data is stored within an encrypted database. You can rest easy knowing your children's data is secure.
+        - generic [ref=e1021]:
+          - generic [ref=e1022] [cursor=pointer]:
+            - strong [ref=e1023]: What is the Bark Assistant?
+            - generic [ref=e1024]: 
+          - generic [ref=e1025]:
+            - paragraph [ref=e1026]: The Bark Assistant is a faster, simpler way to manage your child's Bark account. Instead of navigating through menus or searching for specific settings, you can type questions or requests in plain language, and the Bark Assistant handles them for you!
+            - paragraph [ref=e1027]: Whether you need insights about your child's activity or want to make quick changes to their settings, the Bark Assistant gives you one place to ask, understand, and take action.
+        - generic [ref=e1028]:
+          - generic [ref=e1029] [cursor=pointer]:
+            - strong [ref=e1030]: What can the Bark Assistant help me with?
+            - generic [ref=e1031]: 
+          - generic [ref=e1032]:
+            - paragraph [ref=e1033]: "The Bark Assistant can help you in two main ways:"
+            - paragraph [ref=e1034]:
+              - strong [ref=e1035]: "Get insights:"
+              - text: "Ask detailed questions about your child's activity, such as:"
+            - list [ref=e1036]:
+              - listitem [ref=e1037]: "\"Who are my child's top contacts this week?\""
+              - listitem [ref=e1038]: "\"What apps are getting the most screen time?\""
+              - listitem [ref=e1039]: "\"What issue should I be most focused on as a parent right now?\""
+              - listitem [ref=e1040]: "\"Show me my child's current location.\""
+              - listitem [ref=e1041]: “Who is my child texting with the most this week?”
+            - paragraph [ref=e1042]:
+              - strong [ref=e1043]: "Take action:"
+              - text: "Make changes to your child's account instantly with requests like:"
+            - list [ref=e1044]:
+              - listitem [ref=e1045]: "\"Pause phone for 30 minutes.\""
+              - listitem [ref=e1046]: "\"Block YouTube tonight.\""
+              - listitem [ref=e1047]: "\"Turn on bedtime at 9 pm.\""
+              - listitem [ref=e1048]: "\"Help me tighten content filtering for a 5th grader.\""
+              - listitem [ref=e1049]: "\"Disable the camera during school.\""
+              - listitem [ref=e1050]: "\"Disable streaming apps during bedtime.\""
+    - heading "Choose the product that’s right for you:" [level=3] [ref=e1053]
+    - generic [ref=e1057]:
+      - generic [ref=e1058]:
+        - figure [ref=e1059]
+        - generic [ref=e1062]: Ages 5-9
+        - heading "Bark Watch" [level=4] [ref=e1064]
+        - paragraph [ref=e1066]:
+          - strong [ref=e1067]: First device for active kids
+        - paragraph [ref=e1069]: Perfect for kids who spend time away from home but aren't ready for a smartphone yet.
+        - paragraph [ref=e1071]:
+          - strong [ref=e1072]: $15/mo + device
+        - generic [ref=e1074]:
+          - link "Order now" [ref=e1075] [cursor=pointer]:
+            - /url: https://www.bark.us/app/order/bark-watch/#clicked_watch_button
+            - generic [ref=e1076]: Order now
+          - link "Learn more" [ref=e1077] [cursor=pointer]:
+            - /url: https://www.bark.us/bark-watch/
+            - generic [ref=e1078]: Learn more
+      - generic [ref=e1079]:
+        - figure [ref=e1080]
+        - generic [ref=e1083]: Ages 10-14
+        - heading "Bark Phone" [level=4] [ref=e1085]
+        - paragraph [ref=e1087]:
+          - strong [ref=e1088]: Perfect first smartphone
+        - paragraph [ref=e1090]: A real smartphone with Bark's safety features built in from day one.
+        - paragraph [ref=e1092]:
+          - strong [ref=e1093]: Starts at $29/mo + device
+        - generic [ref=e1095]:
+          - link "Order now" [ref=e1096] [cursor=pointer]:
+            - /url: https://www.bark.us/app/order/bark-phone#clicked_phone_button
+            - generic [ref=e1097]: Order now
+          - link "Learn more" [ref=e1098] [cursor=pointer]:
+            - /url: https://www.bark.us/bark-phone/
+            - generic [ref=e1099]: Learn more
+      - generic [ref=e1100]:
+        - figure [ref=e1101]
+        - generic [ref=e1104]: Already have a device?
+        - heading "Bark App" [level=4] [ref=e1106]
+        - paragraph [ref=e1108]:
+          - strong [ref=e1109]: Add protection to existing devices
+        - paragraph [ref=e1111]: Monitor and manage your child's iPhone, Android, tablet, or Chromebook.
+        - paragraph [ref=e1113]:
+          - strong [ref=e1114]: Starts at $14/mo
+        - generic [ref=e1116]:
+          - link "Try for free" [ref=e1117] [cursor=pointer]:
+            - /url: https://www.bark.us/signup/
+            - generic [ref=e1118]: Try for free
+          - link "Learn more" [ref=e1119] [cursor=pointer]:
+            - /url: https://www.bark.us/bark-app/
+            - generic [ref=e1120]: Learn more
+  - contentinfo [ref=e1121]:
+    - generic [ref=e1122]:
+      - generic [ref=e1123]:
+        - link "Bark" [ref=e1125] [cursor=pointer]:
+          - /url: /?utm_source=blog&utm_medium=footer
+          - img "Bark" [ref=e1126]
+        - generic [ref=e1128]:
+          - paragraph [ref=e1130]: "Sign up for our newsletter:"
+          - generic [ref=e1133]:
+            - textbox "Sign up for our newsletter" [ref=e1134]:
+              - /placeholder: Email address
+            - button "Submit" [ref=e1135] [cursor=pointer]:
+              - generic [ref=e1136]: 
+      - generic [ref=e1137]:
+        - generic [ref=e1138]:
+          - paragraph [ref=e1139]: Products
+          - list [ref=e1140]:
+            - listitem [ref=e1141]:
+              - link "Bark Watch" [ref=e1142] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-watch/
+            - listitem [ref=e1143]:
+              - link "Bark Phone" [ref=e1144] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-phone/
+            - listitem [ref=e1145]:
+              - link "Bark App" [ref=e1146] [cursor=pointer]:
+                - /url: https://www.bark.us/bark-app/
+            - listitem [ref=e1147]:
+              - link "Bark Home" [ref=e1148] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/bark-home/
+        - generic [ref=e1149]:
+          - paragraph [ref=e1150]: About
+          - list [ref=e1151]:
+            - listitem [ref=e1152]:
+              - link "Pricing" [ref=e1153] [cursor=pointer]:
+                - /url: https://www.bark.us/pricing/
+            - listitem [ref=e1154]:
+              - link "Our Team" [ref=e1155] [cursor=pointer]:
+                - /url: https://www.bark.us/about/
+            - listitem [ref=e1156]:
+              - link "FAQs" [ref=e1157] [cursor=pointer]:
+                - /url: https://www.bark.us/faq/
+            - listitem [ref=e1158]:
+              - link "Contact Us" [ref=e1159] [cursor=pointer]:
+                - /url: https://www.bark.us/contact-us/
+            - listitem [ref=e1160]:
+              - link "Customer Reviews" [ref=e1161] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/bark-reviews-and-testimonials/
+        - generic [ref=e1162]:
+          - paragraph [ref=e1163]: Learn
+          - list [ref=e1164]:
+            - listitem [ref=e1165]:
+              - link "Blog" [ref=e1166] [cursor=pointer]:
+                - /url: https://www.bark.us/blog/
+            - listitem [ref=e1167]:
+              - link "Product Updates" [ref=e1168] [cursor=pointer]:
+                - /url: https://www.bark.us/product-updates/
+            - listitem [ref=e1169]:
+              - link "Resources" [ref=e1170] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/resources/
+            - listitem [ref=e1171]:
+              - link "Tech Guides" [ref=e1172] [cursor=pointer]:
+                - /url: https://www.bark.us/tech-guides/
+            - listitem [ref=e1173]:
+              - link "App Overviews" [ref=e1174] [cursor=pointer]:
+                - /url: https://www.bark.us/app-overviews/
+        - generic [ref=e1175]:
+          - paragraph [ref=e1176]: Partners
+          - list [ref=e1177]:
+            - listitem [ref=e1178]:
+              - link "Affiliates" [ref=e1179] [cursor=pointer]:
+                - /url: https://www.bark.us/affiliates/
+            - listitem [ref=e1180]:
+              - link "Media Kit" [ref=e1181] [cursor=pointer]:
+                - /url: https://www.bark.us/blog/newsroom/media-kit/
+            - listitem [ref=e1182]:
+              - link "Newsroom" [ref=e1183] [cursor=pointer]:
+                - /url: https://www.bark.us/blog/newsroom/
+        - generic [ref=e1184]:
+          - paragraph [ref=e1185]: Solutions
+          - list [ref=e1186]:
+            - listitem [ref=e1187]:
+              - link "General" [ref=e1188] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/solutions/
+            - listitem [ref=e1189]:
+              - link "K12" [ref=e1190] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/k-12/
+            - listitem [ref=e1191]:
+              - link "Children and Family Services" [ref=e1192] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/children-family-services/
+            - listitem [ref=e1193]:
+              - link "Disabilities and Behavioral Health" [ref=e1194] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/disabilities-behavioral-health/
+            - listitem [ref=e1195]:
+              - link "Digital Citizenship" [ref=e1196] [cursor=pointer]:
+                - /url: https://www.bark.us/learn/barks-connected-communities/
+        - generic [ref=e1197]:
+          - paragraph [ref=e1198]: Download Bark
+          - generic [ref=e1199]:
+            - link "Apple App Store" [ref=e1200] [cursor=pointer]:
+              - /url: https://apps.apple.com/us/app/bark-connect/id1477619146?ls=1
+              - img "Apple App Store" [ref=e1201]
+            - link "Google Play" [ref=e1202] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=cm.pt.barkparent
+              - img "Google Play" [ref=e1203]
+    - generic [ref=e1206]:
+      - generic [ref=e1207]:
+        - list [ref=e1209]:
+          - listitem [ref=e1210]:
+            - link "Privacy" [ref=e1211] [cursor=pointer]:
+              - /url: https://www.bark.us/privacy/?utm_source=blog&utm_medium=footer
+          - listitem [ref=e1212]:
+            - link "Terms" [ref=e1213] [cursor=pointer]:
+              - /url: https://www.bark.us/terms/?utm_source=blog&utm_medium=footer
+          - listitem [ref=e1214]:
+            - link "Privacy Rights (CA)" [ref=e1215] [cursor=pointer]:
+              - /url: https://www.bark.us/privacy/?utm_source=blog&utm_medium=footer#ca_privacy_rights
+          - listitem [ref=e1216]:
+            - link "Google Policy" [ref=e1217] [cursor=pointer]:
+              - /url: https://www.bark.us/google-policy/?utm_source=blog&utm_medium=footer
+        - paragraph [ref=e1218]: © 2026 Bark
+      - generic [ref=e1220]:
+        - paragraph [ref=e1221]: "Follow us:"
+        - link "" [ref=e1222] [cursor=pointer]:
+          - /url: https://www.facebook.com/barktechnologies
+          - generic [ref=e1223]: 
+        - link "" [ref=e1224] [cursor=pointer]:
+          - /url: https://twitter.com/barktechco
+          - generic [ref=e1225]: 
+        - link "" [ref=e1226] [cursor=pointer]:
+          - /url: https://www.instagram.com/barktechnologies/
+          - generic [ref=e1227]: 
+        - link "" [ref=e1228] [cursor=pointer]:
+          - /url: https://www.youtube.com/barktechnologies
+          - generic [ref=e1229]: 
+  - button [ref=e1230]: Bark Watch Restock Modal

@@ -10,7 +10,7 @@ export function Hero() {
       className="w-full overflow-hidden"
       style={{ backgroundColor: "#F1F2F4" }}
     >
-      <div className="max-w-[1280px] mx-auto px-5 lg:px-8 pt-4 lg:pt-6 pb-10 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-6 lg:gap-12 items-center">
+      <div className="max-w-[1280px] mx-auto px-5 lg:px-8 pt-10 lg:pt-16 pb-10 lg:pb-16 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-6 lg:gap-12 items-center">
         {/* Left column — text + CTA */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 pb-2 lg:pb-20">
           {/* Eyebrow trust pill */}
@@ -55,13 +55,13 @@ export function Hero() {
               color: "rgb(30, 30, 30)",
             }}
           >
-            The parental control that protects your kid where it matters most.
+            #1 parental security for the PC games your child plays.
           </h1>
 
           {/* Sub paragraph */}
           <p className="text-base sm:text-lg font-normal leading-relaxed text-gray-700 max-w-[560px]">
-            Other parental controls block your kid&rsquo;s apps. We don&rsquo;t.
-            We read inside the games and apps and alert caretakers the second something looks off.
+            Voice and chat monitoring across 3,000+ PC games &mdash; with
+            real-time alerts the second something dangerous appears.
           </p>
 
           {/* Primary CTA — single low-friction "Try for Free" button.
@@ -69,24 +69,34 @@ export function Hero() {
               rest of the text column. */}
           <Link
             href="/signup"
-            className="mt-2 inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full px-8 py-4 font-semibold text-base sm:text-lg transition-colors shadow-sm"
+            className="mt-2 inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] rounded-full px-8 py-4 transition-colors shadow-sm"
+            style={{
+              fontFamily:
+                '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
+              fontStyle: "normal",
+              fontWeight: 700,
+              fontSize: "18px",
+              lineHeight: "18px",
+              color: "rgb(255, 255, 255)",
+            }}
           >
             Try for Free
           </Link>
         </div>
 
-        {/* Right column — phone screenshot. Centered below the text stack
-            on mobile (matches bark.us hero layout); right-aligned on lg+ so
-            the phone's right edge sits at the container right edge. */}
-        <div className="flex justify-center lg:justify-end items-start self-start">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/mpc-app-preview.png"
-            alt="MyParentalControls app — alerts dashboard"
-            width={1857}
-            height={3096}
-            className="w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[440px] h-auto"
-          />
+        {/* Right column — transparent-PNG hero cutout, free-floating
+            against the hero's grey background. No frame, no glow. */}
+        <div className="flex justify-center lg:justify-end items-center self-center">
+          <div className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[560px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero-kid-gaming.png"
+              alt="Kid wearing headphones gaming on a desktop computer"
+              width={1280}
+              height={830}
+              className="w-full h-auto block"
+            />
+          </div>
         </div>
       </div>
     </section>

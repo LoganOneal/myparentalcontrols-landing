@@ -1,0 +1,533 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "MyParentalControls home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]:
+          - img [ref=e6]
+          - generic [ref=e7]: MyParentalControls
+          - generic [ref=e8]: MyParentalControls
+      - navigation "Primary" [ref=e9]:
+        - link "How it works" [ref=e10] [cursor=pointer]:
+          - /url: /#how-it-works
+        - link "App reviews" [ref=e11] [cursor=pointer]:
+          - /url: /app-reviews
+        - link "Pricing" [ref=e12] [cursor=pointer]:
+          - /url: /#pricing
+        - link "Blog" [ref=e13] [cursor=pointer]:
+          - /url: /blog
+        - link "Press" [ref=e14] [cursor=pointer]:
+          - /url: /press
+      - link "Sign in" [ref=e16] [cursor=pointer]:
+        - /url: /login
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Parental Controls
+      - generic [ref=e21]: From $14.99/mo
+    - link "Try for Free" [ref=e22] [cursor=pointer]:
+      - /url: /signup
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - img [ref=e29]
+          - img [ref=e30]
+        - generic [ref=e31]: 12,000+ parents already protected
+      - heading "The parental control that protects your kid where it matters most." [level=1] [ref=e32]
+      - paragraph [ref=e33]: Other parental controls block your kid’s apps. We don’t. We read inside the games and apps and alert caretakers the second something looks off.
+      - link "Try for Free" [ref=e34] [cursor=pointer]:
+        - /url: /signup
+    - img "MyParentalControls app — alerts dashboard" [ref=e36]
+  - generic [ref=e37]:
+    - heading "Watching the apps where predators, cyber bullies, and scammers target your children" [level=2] [ref=e39]
+    - generic [ref=e41]:
+      - img "Roblox" [ref=e43]
+      - img "Discord" [ref=e45]
+      - img "Minecraft" [ref=e47]
+      - img "Fortnite" [ref=e49]
+      - img "Snapchat" [ref=e51]
+      - img "TikTok" [ref=e53]
+      - img "Instagram" [ref=e55]
+      - img "YouTube" [ref=e57]
+      - img "WhatsApp" [ref=e59]
+      - img "Twitch" [ref=e61]
+      - img "Reddit" [ref=e63]
+      - img "Steam" [ref=e65]
+      - img "Roblox" [ref=e67]
+      - img "Discord" [ref=e69]
+      - img "Minecraft" [ref=e71]
+      - img "Fortnite" [ref=e73]
+      - img "Snapchat" [ref=e75]
+      - img "TikTok" [ref=e77]
+      - img "Instagram" [ref=e79]
+      - img "YouTube" [ref=e81]
+      - img "WhatsApp" [ref=e83]
+      - img "Twitch" [ref=e85]
+      - img "Reddit" [ref=e87]
+      - img "Steam" [ref=e89]
+  - generic [ref=e91]:
+    - generic [ref=e92]:
+      - heading "Get alerts for dangers — online and in real life" [level=2] [ref=e93]
+      - paragraph [ref=e95]: Our award-winning parental control app scans for dangers like predators, suicidal ideation, violence, and more. You’ll get notified if there’s something wrong.
+    - generic [ref=e98]:
+      - generic [ref=e101]:
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]: 9:41
+              - generic [ref=e125]:
+                - img [ref=e126]
+                - img [ref=e131]
+                - img [ref=e133]
+            - img [ref=e141]
+            - img [ref=e145]
+            - heading "Inside the games" [level=2] [ref=e147]:
+              - text: Inside the
+              - text: games
+            - paragraph [ref=e148]:
+              - text: 4 games connected —
+              - text: zero blind spots.
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: "4"
+              - generic [ref=e153]: Games
+            - generic [ref=e155]:
+              - generic [ref=e156]: "1"
+              - generic [ref=e157]: Flagged
+            - generic [ref=e159]:
+              - generic [ref=e160]: Live
+              - generic [ref=e162]: Real-time
+          - generic [ref=e163]:
+            - heading "Connected games" [level=3] [ref=e164]
+            - generic [ref=e165]: Today
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - img [ref=e169]
+              - generic [ref=e170]:
+                - paragraph [ref=e171]: Roblox
+                - paragraph [ref=e172]: 47 chats today
+              - generic [ref=e173]: Watching
+            - generic [ref=e175]:
+              - img [ref=e177]
+              - generic [ref=e191]:
+                - paragraph [ref=e192]: Minecraft
+                - paragraph [ref=e193]: 12 chats today
+              - generic [ref=e194]: Watching
+            - generic [ref=e196]:
+              - img [ref=e198]
+              - generic [ref=e199]:
+                - paragraph [ref=e200]: Fortnite
+                - paragraph [ref=e201]: 3 voice calls live
+              - generic [ref=e202]: Watching
+            - generic [ref=e204]:
+              - img [ref=e206]
+              - generic [ref=e207]:
+                - paragraph [ref=e208]: Discord
+                - paragraph [ref=e209]: 8 channels watched
+              - generic [ref=e210]: 1 flag
+          - paragraph [ref=e212]: We see what your child sees — in real time.
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215]: 🚨
+              - generic [ref=e216]: Alerts
+            - generic [ref=e217]:
+              - generic [ref=e218]: 📊
+              - generic [ref=e219]: Activity
+            - generic [ref=e221]:
+              - generic [ref=e222]: 👨‍👩‍👧
+              - generic [ref=e223]: Children
+            - generic [ref=e224]:
+              - generic [ref=e225]: ⚙
+              - generic [ref=e226]: Settings
+        - generic [ref=e228]:
+          - button "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time." [ref=e229] [cursor=pointer]:
+            - heading "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind" [level=3] [ref=e230]
+            - paragraph [ref=e231]: Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time.
+          - button "One dashboard. Every device your child uses. Lily's PC, the family iMac, her iPhone 14 — every device your child touches reports to a single dashboard on your phone. No gaps, no apps to switch between, no device we can't see." [ref=e232] [cursor=pointer]:
+            - heading "One dashboard. Every device your child uses." [level=3] [ref=e233]
+            - paragraph [ref=e234]: Lily's PC, the family iMac, her iPhone 14 — every device your child touches reports to a single dashboard on your phone. No gaps, no apps to switch between, no device we can't see.
+          - button "AI that only pings you when something is actually wrong Our AI reads tens of thousands of messages a week per child — and stays silent until it sees a real threat. Grooming language, sextortion, suicidal ideation. One alert that matters, not fifty you'd ignore." [ref=e235] [cursor=pointer]:
+            - heading "AI that only pings you when something is actually wrong" [level=3] [ref=e236]
+            - paragraph [ref=e237]: Our AI reads tens of thousands of messages a week per child — and stays silent until it sees a real threat. Grooming language, sextortion, suicidal ideation. One alert that matters, not fifty you'd ignore.
+          - button "Receipts. So you know exactly what happened. We log every minute played, capture every chat, transcribe voice calls, and start screen-recording the moment a flag is raised. When you sit down to talk with your kid, you don't bluff — you have the timeline." [ref=e238] [cursor=pointer]:
+            - heading "Receipts. So you know exactly what happened." [level=3] [ref=e239]
+            - paragraph [ref=e240]: We log every minute played, capture every chat, transcribe voice calls, and start screen-recording the moment a flag is raised. When you sit down to talk with your kid, you don't bluff — you have the timeline.
+          - button "Block any app, any site, on every device — in one tap. Roblox at 2 AM? Tap and gone. Discord during school hours? Pre-scheduled. The same dashboard that watches everything also locks it down — instantly, on every device." [ref=e241] [cursor=pointer]:
+            - heading "Block any app, any site, on every device — in one tap." [level=3] [ref=e242]
+            - paragraph [ref=e243]: Roblox at 2 AM? Tap and gone. Discord during school hours? Pre-scheduled. The same dashboard that watches everything also locks it down — instantly, on every device.
+      - generic [ref=e244]:
+        - img [ref=e245]
+        - generic [ref=e248]:
+          - generic [ref=e249]: Scroll to continue
+          - generic [ref=e250]: 1 / 5
+  - generic [ref=e253]:
+    - generic [ref=e254]:
+      - heading "How MyParentalControls compares" [level=2] [ref=e255]
+      - paragraph [ref=e256]: Other apps watch the surface — texts, browser activity, screen time. We read inside the games where predators, bullies, and scammers actually target kids.
+    - generic [ref=e259]:
+      - generic [ref=e262]:
+        - img "MyParentalControls" [ref=e263]
+        - generic [ref=e264]: Reads inside the games
+      - generic [ref=e266]:
+        - img "Bark" [ref=e267]
+        - generic [ref=e268]: Social + text monitoring
+      - generic [ref=e270]:
+        - img "Gabb" [ref=e271]
+        - generic [ref=e272]: Locked-down kids' devices
+      - generic [ref=e274]:
+        - img "Aura" [ref=e275]
+        - generic [ref=e276]: Identity + family safety
+      - generic [ref=e278]:
+        - img "Qustodio" [ref=e279]
+        - generic [ref=e280]: Screen time + filters
+      - generic [ref=e281]: In-game chat (where predators actually live)
+      - generic [ref=e283]: Reads Roblox in-game chat
+      - img "Yes" [ref=e286]
+      - generic "No" [ref=e290]
+      - generic "No" [ref=e293]
+      - generic [ref=e295]:
+        - generic [ref=e298]: Partial
+        - superscript: "1"
+      - generic "No" [ref=e301]
+      - generic [ref=e303]: Reads Minecraft in-game chat
+      - img "Yes" [ref=e306]
+      - generic "No" [ref=e310]
+      - generic "No" [ref=e313]
+      - generic [ref=e315]:
+        - generic [ref=e318]: Partial
+        - superscript: "2"
+      - generic "No" [ref=e321]
+      - generic [ref=e323]: Reads Fortnite text + voice
+      - img "Yes" [ref=e326]
+      - generic "No" [ref=e330]
+      - generic "No" [ref=e333]
+      - generic [ref=e335]:
+        - generic [ref=e338]: Partial
+        - superscript: "3"
+      - generic "No" [ref=e341]
+      - generic [ref=e343]: Reads game party / DM channels
+      - img "Yes" [ref=e346]
+      - generic "No" [ref=e350]
+      - generic "No" [ref=e353]
+      - generic [ref=e358]: Partial
+      - generic "No" [ref=e361]
+      - generic [ref=e362]: Social + chat apps
+      - generic [ref=e364]: Discord DMs
+      - img "Yes" [ref=e367]
+      - img "Yes" [ref=e371]
+      - generic "No" [ref=e375]
+      - generic "No" [ref=e378]
+      - generic "No" [ref=e381]
+      - generic [ref=e383]: Snapchat (vanishing messages)
+      - img "Yes" [ref=e386]
+      - generic [ref=e389]:
+        - generic [ref=e392]: Partial
+        - superscript: "4"
+      - generic "No" [ref=e395]
+      - generic [ref=e397]:
+        - generic [ref=e398]: Time only
+        - superscript: "5"
+      - generic [ref=e401]: Time only
+      - generic [ref=e403]: Instagram DMs
+      - img "Yes" [ref=e406]
+      - img "Yes" [ref=e410]
+      - generic "No" [ref=e414]
+      - generic "No" [ref=e417]
+      - generic [ref=e419]:
+        - generic [ref=e420]: iOS only
+        - superscript: "6"
+      - generic [ref=e422]: TikTok messages
+      - img "Yes" [ref=e425]
+      - img "Yes" [ref=e429]
+      - generic "No" [ref=e433]
+      - generic "No" [ref=e436]
+      - generic [ref=e441]: Partial
+      - generic [ref=e443]: WhatsApp (E2E encrypted)
+      - img "Yes" [ref=e446]
+      - img "Yes" [ref=e450]
+      - generic "No" [ref=e454]
+      - generic "No" [ref=e457]
+      - generic [ref=e459]:
+        - generic [ref=e462]: Partial
+        - superscript: "7"
+      - generic [ref=e463]: What it flags
+      - generic [ref=e465]: Grooming patterns
+      - img "Yes" [ref=e468]
+      - img "Yes" [ref=e472]
+      - generic "No" [ref=e476]
+      - generic [ref=e478]:
+        - generic [ref=e481]: Partial
+        - superscript: "8"
+      - generic [ref=e486]: Partial
+      - generic [ref=e488]: Cyberbullying
+      - img "Yes" [ref=e491]
+      - img "Yes" [ref=e495]
+      - generic "No" [ref=e499]
+      - img "Yes" [ref=e502]
+      - generic [ref=e508]: Partial
+      - generic [ref=e510]: Self-harm / suicide signals
+      - img "Yes" [ref=e513]
+      - img "Yes" [ref=e517]
+      - generic "No" [ref=e521]
+      - generic "No" [ref=e524]
+      - generic [ref=e529]: Partial
+      - generic [ref=e531]: Real-time alerts (not weekly digest)
+      - img "Yes" [ref=e534]
+      - img "Yes" [ref=e538]
+      - generic "No" [ref=e542]
+      - generic [ref=e544]:
+        - generic [ref=e547]: Partial
+        - superscript: "9"
+      - generic [ref=e552]: Partial
+      - generic [ref=e553]: Platform & friction
+      - generic [ref=e555]: Windows desktop
+      - img "Yes" [ref=e558]
+      - img "Yes" [ref=e562]
+      - generic "No" [ref=e566]
+      - img "Yes" [ref=e569]
+      - img "Yes" [ref=e573]
+      - generic [ref=e576]: macOS
+      - img "Yes" [ref=e579]
+      - img "Yes" [ref=e583]
+      - generic "No" [ref=e587]
+      - img "Yes" [ref=e590]
+      - img "Yes" [ref=e594]
+      - generic [ref=e597]: Invisible to child / tamper-resistant
+      - img "Yes" [ref=e600]
+      - generic [ref=e606]: Partial
+      - generic [ref=e609]: Device only
+      - generic [ref=e614]: Partial
+      - generic [ref=e619]: Partial
+      - generic [ref=e621]: Works without buying a new phone
+      - img "Yes" [ref=e624]
+      - img "Yes" [ref=e628]
+      - generic "No" [ref=e632]
+      - img "Yes" [ref=e635]
+      - img "Yes" [ref=e639]
+      - generic [ref=e642]: Family plan covers multiple kids
+      - img "Yes" [ref=e645]
+      - img "Yes" [ref=e649]
+      - generic [ref=e652]:
+        - generic [ref=e655]: Partial
+        - superscript: "10"
+      - img "Yes" [ref=e658]
+      - img "Yes" [ref=e662]
+    - list [ref=e664]:
+      - listitem [ref=e665]: Aura advertises 200+ PC games; Roblox not individually itemized.
+      - listitem [ref=e666]: Bundled under Aura's 200+ PC games claim; not individually confirmed.
+      - listitem [ref=e667]: Aura references in-game voice + text for PC games generally.
+      - listitem [ref=e668]: Bark scans Snapchat content but disappearing-message coverage is limited.
+      - listitem [ref=e669]: Aura reports usage time but does not read Snapchat content.
+      - listitem [ref=e670]: Qustodio's Instagram alerts are iOS-only.
+      - listitem [ref=e671]: Qustodio alerts on activity, not full message content.
+      - listitem [ref=e672]: Aura cites 'predators' generally.
+      - listitem [ref=e673]: Aura discloses its service does not monitor for all content in real time.
+      - listitem [ref=e674]: Per-device hardware purchase.
+    - paragraph [ref=e675]: Comparison sourced from each provider’s published feature pages as of 2026-05-20. Information current at time of publishing — competitors update features regularly.
+  - generic [ref=e677]:
+    - img [ref=e680]
+    - generic [ref=e681]:
+      - heading "Change parental controls and settings with just one tap" [level=2] [ref=e682]
+      - paragraph [ref=e683]: Ask about screen time, block apps, or get insights — the Bark Assistant helps you manage everything in one place.
+  - generic [ref=e684]:
+    - heading "Why parents are taking Roblox to court 📰" [level=2] [ref=e685]
+    - paragraph [ref=e686]: State attorneys general, regulators, and families are filing lawsuits against the platforms where predators target kids. Don’t wait for the next headline to be about your family.
+  - generic [ref=e687]:
+    - button "Scroll left" [ref=e688]:
+      - generic [ref=e689]: ‹
+    - button "Scroll right" [ref=e690]:
+      - generic [ref=e691]: ›
+    - generic [ref=e692]:
+      - 'link "CBS News: Oklahoma becomes latest state to sue Roblox over child safety concerns" [ref=e693] [cursor=pointer]':
+        - /url: https://www.cbsnews.com/news/oklahoma-becomes-latest-state-to-sue-roblox-over-child-safety-concerns/
+        - img "Oklahoma becomes latest state to sue Roblox over child safety concerns" [ref=e695]
+        - generic [ref=e696]:
+          - generic [ref=e697]:
+            - generic [ref=e698]: CBS News
+            - generic [ref=e699]: •
+            - generic [ref=e700]: "2024"
+          - heading "Oklahoma becomes latest state to sue Roblox over child safety concerns" [level=3] [ref=e701]
+      - 'link "Associated Press: Roblox reaches $12M settlement with Nevada to expand youth protections" [ref=e702] [cursor=pointer]':
+        - /url: https://apnews.com/article/roblox-nevada-settlement-28b3d7d7a483dc28462a7504b67c9bbc
+        - img "Roblox reaches $12M settlement with Nevada to expand youth protections" [ref=e704]
+        - generic [ref=e705]:
+          - generic [ref=e706]:
+            - generic [ref=e707]: Associated Press
+            - generic [ref=e708]: •
+            - generic [ref=e709]: "2025"
+          - heading "Roblox reaches $12M settlement with Nevada to expand youth protections" [level=3] [ref=e710]
+      - 'link "BBC News: Texas sues Roblox, alleging it put ''paedophiles and profits'' over safety" [ref=e711] [cursor=pointer]':
+        - /url: https://www.bbc.co.uk/news/articles/cy0kd4kk0kqo
+        - img "Texas sues Roblox, alleging it put 'paedophiles and profits' over safety" [ref=e713]
+        - generic [ref=e714]:
+          - generic [ref=e715]:
+            - generic [ref=e716]: BBC News
+            - generic [ref=e717]: •
+            - generic [ref=e718]: Nov 2025
+          - heading "Texas sues Roblox, alleging it put 'paedophiles and profits' over safety" [level=3] [ref=e719]
+      - 'link "NPR: Roblox bets on facial scanning to keep its youngest users safe" [ref=e720] [cursor=pointer]':
+        - /url: https://www.npr.org/2025/11/21/nx-s1-5614161/roblox-bets-on-facial-scanning-to-keep-its-youngest-users-safe
+        - img "Roblox bets on facial scanning to keep its youngest users safe" [ref=e722]
+        - generic [ref=e723]:
+          - generic [ref=e724]:
+            - generic [ref=e725]: NPR
+            - generic [ref=e726]: •
+            - generic [ref=e727]: Nov 2025
+          - heading "Roblox bets on facial scanning to keep its youngest users safe" [level=3] [ref=e728]
+      - 'link "NBC News: Nebraska becomes the latest state to sue Roblox over child safety failures" [ref=e729] [cursor=pointer]':
+        - /url: https://www.nbcnews.com/tech/tech-news/roblox-lawsuit-nebraska-attorney-general-what-to-know-rcna261733
+        - img "Nebraska becomes the latest state to sue Roblox over child safety failures" [ref=e731]
+        - generic [ref=e732]:
+          - generic [ref=e733]:
+            - generic [ref=e734]: NBC News
+            - generic [ref=e735]: •
+            - generic [ref=e736]: "2025"
+          - heading "Nebraska becomes the latest state to sue Roblox over child safety failures" [level=3] [ref=e737]
+      - 'link "CNN: Louisiana sues Roblox, alleging the gaming site fails to protect children" [ref=e738] [cursor=pointer]':
+        - /url: https://www.cnn.com/2025/08/15/us/louisiana-roblox-lawsuit-child-protection-hnk
+        - img "Louisiana sues Roblox, alleging the gaming site fails to protect children" [ref=e740]
+        - generic [ref=e741]:
+          - generic [ref=e742]:
+            - generic [ref=e743]: CNN
+            - generic [ref=e744]: •
+            - generic [ref=e745]: Aug 2025
+          - heading "Louisiana sues Roblox, alleging the gaming site fails to protect children" [level=3] [ref=e746]
+  - generic [ref=e749]:
+    - heading "Pricing & Details" [level=2] [ref=e750]
+    - list [ref=e751]:
+      - listitem [ref=e752]:
+        - img [ref=e754]
+        - generic [ref=e756]: Read every chat inside Roblox, Discord, Fortnite, and 12+ other apps
+      - listitem [ref=e757]:
+        - img [ref=e759]
+        - generic [ref=e761]: Real-time alerts to your phone the second something looks off
+      - listitem [ref=e762]:
+        - img [ref=e764]
+        - generic [ref=e766]: Catches predators, bullies, and self-harm signals automatically
+      - listitem [ref=e767]:
+        - img [ref=e769]
+        - generic [ref=e771]: Invisible to your kid — won’t block their friends or slow them down
+      - listitem [ref=e772]:
+        - img [ref=e774]
+        - generic [ref=e776]: Works across Windows and macOS, plus every app they use
+      - listitem [ref=e777]:
+        - img [ref=e779]
+        - generic [ref=e781]: Family plan covers every device in your home — up to 5 kids
+      - listitem [ref=e782]:
+        - img [ref=e784]
+        - generic [ref=e786]: 5-minute setup. Cancel anytime. No contract.
+    - generic [ref=e787]:
+      - generic [ref=e788]: Starts at
+      - generic [ref=e789]:
+        - generic [ref=e790]: $14.99
+        - generic [ref=e791]: /mo
+      - paragraph [ref=e792]: Family plan · Up to 5 kids · No setup fees
+    - link "Try for Free" [ref=e793] [cursor=pointer]:
+      - /url: /signup
+  - generic [ref=e795]:
+    - heading "Thousands of users talk about us" [level=2] [ref=e796]
+    - generic [ref=e797]:
+      - generic [ref=e798]:
+        - generic [ref=e799]:
+          - img "pree.palmer testimonial" [ref=e800]
+          - paragraph [ref=e801]: pree.palmer
+        - paragraph [ref=e802]: “im ngl I've lost 17 lbs with it doesn't need to be exact it's pretty decent”
+      - generic [ref=e803]:
+        - generic [ref=e804]:
+          - img "Ordinary Tony testimonial" [ref=e805]
+          - paragraph [ref=e806]: Ordinary Tony
+        - paragraph [ref=e807]: “IVE BEEN BULKING FOR A YEAR STRAIGHT W APP FR 👏👏👏”
+      - generic [ref=e808]:
+        - generic [ref=e809]:
+          - img "2025weightlossa... testimonial" [ref=e810]
+          - paragraph [ref=e811]: 2025weightlossa...
+        - paragraph [ref=e812]: “I love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓”
+      - generic [ref=e813]:
+        - generic [ref=e814]:
+          - img "Mathias testimonial" [ref=e815]
+          - paragraph [ref=e816]: Mathias
+        - paragraph [ref=e817]: “I started to use it yesterday and im already giving it 5⭐️”
+      - generic [ref=e818]:
+        - generic [ref=e819]:
+          - generic [ref=e820]: D
+          - paragraph [ref=e821]: Ms Nsofor
+        - paragraph [ref=e822]: “For people that want to control their calories @calai.app is the app for you 🙌🔥”
+  - generic [ref=e823]:
+    - img "Background gradient" [ref=e824]
+    - generic [ref=e825]:
+      - generic [ref=e826]:
+        - img "Laurel wreath" [ref=e827]
+        - generic [ref=e828]:
+          - generic [ref=e829]:
+            - generic [ref=e830]: ⭐
+            - generic [ref=e831]: ⭐
+            - generic [ref=e832]: ⭐
+            - generic [ref=e833]: ⭐
+            - generic [ref=e834]: ⭐
+          - heading "Over 100k 5-star ratings" [level=2] [ref=e835]
+          - generic [ref=e836]:
+            - generic [ref=e837]:
+              - img [ref=e838]
+              - generic [ref=e840]: 4.8/5
+            - generic [ref=e841]: •
+            - generic [ref=e842]:
+              - img [ref=e843]
+              - generic [ref=e845]: 4.7/5
+        - img "Laurel wreath" [ref=e846]
+      - generic [ref=e847]:
+        - link "Download on the App Store" [ref=e848] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+          - img "Download on the App Store" [ref=e849]
+        - link "Get it on Google Play" [ref=e850] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+          - img "Google Play" [ref=e851]
+  - contentinfo [ref=e852]:
+    - generic [ref=e853]:
+      - generic [ref=e854]:
+        - generic [ref=e855]:
+          - img [ref=e856]
+          - generic [ref=e857]: MyParentalControls
+          - generic [ref=e858]: MyParentalControls
+        - paragraph [ref=e859]: Download MyParentalControls
+        - generic [ref=e860]:
+          - link "Download on the App Store" [ref=e861] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
+            - img "Download on the App Store" [ref=e862]
+          - link "Get it on Google Play" [ref=e863] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.viraldevelopment.calai
+            - img "Get it on Google Play" [ref=e864]
+      - generic [ref=e865]:
+        - heading "Legal" [level=3] [ref=e866]
+        - list [ref=e867]:
+          - listitem [ref=e868]:
+            - link "Privacy Policy" [ref=e869] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e870]:
+            - link "Terms of use" [ref=e871] [cursor=pointer]:
+              - /url: /tos
+          - listitem [ref=e872]:
+            - link "Sweepstakes Rules" [ref=e873] [cursor=pointer]:
+              - /url: /sweepstakes
+          - listitem [ref=e874]:
+            - button "Manage Cookie Preferences" [ref=e875]
+      - generic [ref=e876]:
+        - heading "Company" [level=3] [ref=e877]
+        - list [ref=e878]:
+          - listitem [ref=e879]:
+            - link "Contact" [ref=e880] [cursor=pointer]:
+              - /url: mailto:support@calai.app
+    - generic [ref=e881]:
+      - paragraph [ref=e882]: © Copyright 2026, All rights reserved
+      - generic [ref=e883]:
+        - link "LinkedIn" [ref=e884] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cal-ai-app/
+          - img [ref=e885]
+        - link "Instagram" [ref=e887] [cursor=pointer]:
+          - /url: https://www.instagram.com/calai.app/
+          - img [ref=e888]
+        - link "TikTok" [ref=e892] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@getcalai
+          - img [ref=e893]
+  - button "Open Next.js Dev Tools" [ref=e900] [cursor=pointer]:
+    - img [ref=e901]

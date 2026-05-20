@@ -80,12 +80,14 @@ function BadgeIcon({ kind }: { kind: EvidenceRow["badge"] }) {
 export function EvidenceScreenMock({
   className = "",
   style,
+  bare = false,
 }: {
   className?: string;
   style?: React.CSSProperties;
+  bare?: boolean;
 }) {
   return (
-    <PhoneFrame className={className} style={style}>
+    <PhoneFrame className={className} style={style} bare={bare}>
       <HeroHeader
         title={
           <>

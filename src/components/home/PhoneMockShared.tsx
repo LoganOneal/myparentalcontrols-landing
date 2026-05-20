@@ -35,22 +35,40 @@ export const COLORS = {
 };
 
 /**
- * iPhone X bezel + screen wrapper. The library renders the bezel, notch,
- * and home indicator; we render the screen content inside a flex-col so
- * BottomNav (with `mt-auto`) pins to the bottom of the screen area.
+ * iPhone X bezel + screen wrapper (or a plain rounded card when `bare`).
  *
- * Width/height match the iPhone X default in marvelapp/devices.css
- * (375×812). Responsive scaling happens in the parent via CSS transform.
+ * - **`bare = false` (default)** — renders the marvelapp iPhone X bezel via
+ *   `react-device-frameset`. Used on desktop where there's room for the
+ *   full meta-bezel framing.
+ *
+ * - **`bare = true`** — renders just the screen content in a rounded white
+ *   card with a 9:19.5 aspect ratio (the iPhone aspect, minus the bezel).
+ *   Used on mobile where the user is already on a phone, the bezel reads
+ *   as redundant, and the DeviceFrameset's content-box padding + non-
+ *   layout-affecting CSS transforms produce a phone that visually overlaps
+ *   sibling content.
  */
 export function PhoneFrame({
   children,
   className = "",
   style,
+  bare = false,
 }: {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  bare?: boolean;
 }) {
+  if (bare) {
+    return (
+      <div
+        className={`bg-white rounded-3xl overflow-hidden shadow-md ring-1 ring-black/5 flex flex-col w-full ${className}`}
+        style={{ aspectRatio: "9 / 19.5", ...style }}
+      >
+        {children}
+      </div>
+    );
+  }
   return (
     <div className={className} style={style}>
       <DeviceFrameset device="iPhone X" width={375} height={812}>

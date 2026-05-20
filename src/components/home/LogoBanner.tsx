@@ -82,7 +82,7 @@ export function LogoBanner() {
         >
           Watching the apps where <Highlight>predators</Highlight>,{" "}
           <Highlight>cyber bullies</Highlight>, and{" "}
-          <Highlight>scammers</Highlight> target kids
+          <Highlight>scammers</Highlight> target your children
         </h2>
       </div>
 

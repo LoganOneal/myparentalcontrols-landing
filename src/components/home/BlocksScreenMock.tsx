@@ -84,12 +84,14 @@ function Toggle({ on, accent = COLORS.redDeep }: { on: boolean; accent?: string 
 export function BlocksScreenMock({
   className = "",
   style,
+  bare = false,
 }: {
   className?: string;
   style?: React.CSSProperties;
+  bare?: boolean;
 }) {
   return (
-    <PhoneFrame className={className} style={style}>
+    <PhoneFrame className={className} style={style} bare={bare}>
       <HeroHeader
         title={
           <>
