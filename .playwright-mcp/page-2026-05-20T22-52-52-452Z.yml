@@ -1,0 +1,682 @@
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikimedia Commons" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - img [ref=e13]
+        - img "Wikimedia Commons" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikimedia Commons" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - generic [ref=e27]:
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "English" [ref=e32] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e34]: English
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Donate" [ref=e39] [cursor=pointer]:
+                - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=commons.wikimedia.org&uselang=en
+            - listitem [ref=e40]:
+              - link "Create account" [ref=e41] [cursor=pointer]:
+                - /url: /w/index.php?title=Special:CreateAccount&returnto=File%3AMinecraft+Logo-en.svg
+            - listitem [ref=e42]:
+              - link "Log in" [ref=e43] [cursor=pointer]:
+                - /url: /w/index.php?title=Special:UserLogin&returnto=File%3AMinecraft+Logo-en.svg
+  - generic [ref=e45]:
+    - navigation "Contents" [ref=e49]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "Contents" [level=2] [ref=e53]
+          - button "hide" [ref=e54] [cursor=pointer]
+        - list [ref=e55]:
+          - listitem [ref=e56]:
+            - link "Beginning" [ref=e57] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e58]: Beginning
+          - listitem [ref=e59]:
+            - link "Summary" [ref=e60] [cursor=pointer]:
+              - /url: "#Summary"
+              - generic [ref=e61]: Summary
+            - list
+          - listitem [ref=e62]:
+            - link "Licensing" [ref=e63] [cursor=pointer]:
+              - /url: "#Licensing"
+              - generic [ref=e64]: Licensing
+            - list
+    - main [ref=e66]:
+      - heading "File:Minecraft Logo-en.svg" [level=1] [ref=e68]:
+        - generic [ref=e69]: File:Minecraft Logo-en.svg
+      - generic [ref=e71]:
+        - navigation "Namespaces" [ref=e73]:
+          - generic [ref=e74]:
+            - generic:
+              - list:
+                - listitem [ref=e75]:
+                  - link "File" [ref=e76] [cursor=pointer]:
+                    - /url: /wiki/File:Minecraft_Logo-en.svg
+                    - generic [ref=e77]: File
+                - listitem [ref=e78]:
+                  - link "Discussion" [ref=e79] [cursor=pointer]:
+                    - /url: /w/index.php?title=File_talk:Minecraft_Logo-en.svg&action=edit&redlink=1
+                    - generic [ref=e80]: Discussion
+        - generic [ref=e81]:
+          - navigation "Views" [ref=e82]:
+            - generic [ref=e83]:
+              - generic:
+                - list:
+                  - listitem [ref=e84]:
+                    - link "Read" [ref=e85] [cursor=pointer]:
+                      - /url: /wiki/File:Minecraft_Logo-en.svg
+                      - generic [ref=e86]: Read
+                  - listitem [ref=e87]:
+                    - link "Edit" [ref=e88] [cursor=pointer]:
+                      - /url: /w/index.php?title=File:Minecraft_Logo-en.svg&action=edit
+                      - generic [ref=e89]: Edit
+                  - listitem [ref=e90]:
+                    - link "View history" [ref=e91] [cursor=pointer]:
+                      - /url: /w/index.php?title=File:Minecraft_Logo-en.svg&action=history
+                      - generic [ref=e92]: View history
+          - navigation "Page tools" [ref=e93]:
+            - generic [ref=e94]:
+              - button "Tools" [ref=e95] [cursor=pointer]
+              - generic [ref=e97] [cursor=pointer]: Tools
+      - navigation "Appearance" [ref=e100]:
+        - generic [ref=e103]:
+          - generic [ref=e104]: Appearance
+          - button "hide" [ref=e105] [cursor=pointer]
+      - generic "File:Minecraft Logo-en.svg" [ref=e106]:
+        - generic [ref=e107]:
+          - navigation [ref=e108]:
+            - listitem [ref=e109]:
+              - link "File" [ref=e110] [cursor=pointer]:
+                - /url: "#file"
+            - listitem [ref=e111]:
+              - link "File history" [ref=e112] [cursor=pointer]:
+                - /url: "#filehistory"
+            - listitem [ref=e113]:
+              - link "File usage on Commons" [ref=e114] [cursor=pointer]:
+                - /url: "#filelinks"
+            - listitem [ref=e115]:
+              - link "File usage on other wikis" [ref=e116] [cursor=pointer]:
+                - /url: "#globalusage"
+            - listitem [ref=e117]:
+              - link "Metadata" [ref=e118] [cursor=pointer]:
+                - /url: "#metadata"
+          - generic [ref=e119]:
+            - link "File:Minecraft Logo-en.svg" [ref=e120] [cursor=pointer]:
+              - /url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Minecraft_Logo-en.svg
+              - img "File:Minecraft Logo-en.svg" [ref=e121]
+            - generic [ref=e122]:
+              - text: "Size of this PNG preview of this SVG file:"
+              - link "512 × 88 pixels" [ref=e123] [cursor=pointer]:
+                - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/960px-Minecraft_Logo-en.svg.png
+              - text: .
+              - generic [ref=e124]:
+                - text: "Other resolutions:"
+                - link "320 × 55 pixels" [ref=e125] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/330px-Minecraft_Logo-en.svg.png
+                - text: "|"
+                - link "640 × 110 pixels" [ref=e126] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/960px-Minecraft_Logo-en.svg.png
+                - text: "|"
+                - link "1,024 × 176 pixels" [ref=e127] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/1280px-Minecraft_Logo-en.svg.png
+                - text: "|"
+                - link "1,280 × 220 pixels" [ref=e128] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/1280px-Minecraft_Logo-en.svg.png
+                - text: "|"
+                - link "2,560 × 440 pixels" [ref=e129] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Minecraft_Logo-en.svg/3840px-Minecraft_Logo-en.svg.png
+                - text: .
+          - generic [ref=e130]:
+            - link "Original file" [ref=e132] [cursor=pointer]:
+              - /url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Minecraft_Logo-en.svg
+            - text: "(SVG file, nominally 512 × 88 pixels, file size: 3 KB)"
+          - generic [ref=e134]:
+            - tablist [ref=e137]:
+              - tab "File information" [selected] [ref=e138]
+              - tab "Structured data" [ref=e139]
+            - generic [ref=e141]:
+              - tabpanel [ref=e142]:
+                - generic [ref=e143]:
+                  - heading "Captions" [level=3] [ref=e144]
+                  - generic [ref=e145]:
+                    - generic [ref=e146]: English
+                    - generic [ref=e147]: Logo of the video game Minecraft and its franchise.
+                - generic [ref=e149]:
+                  - generic [ref=e150]:
+                    - heading "Summary" [level=2] [ref=e151]
+                    - generic [ref=e152]:
+                      - text: "["
+                      - link "edit" [ref=e153] [cursor=pointer]:
+                        - /url: /w/index.php?title=File:Minecraft_Logo-en.svg&action=edit&section=1
+                      - text: "]"
+                  - table [ref=e155]:
+                    - rowgroup [ref=e156]:
+                      - 'row "Description English: Logo of the video game Minecraft and its franchise." [ref=e157]':
+                        - cell "Description" [ref=e158]
+                        - 'cell "English: Logo of the video game Minecraft and its franchise." [ref=e159]':
+                          - generic [ref=e160]:
+                            - generic "English" [ref=e161]: "English:"
+                            - text: Logo of the video game Minecraft and its franchise.
+                      - row "Date 9 June 2021, 15:26 GMT" [ref=e162]:
+                        - cell "Date" [ref=e163]
+                        - cell "9 June 2021, 15:26 GMT" [ref=e164]:
+                          - time [ref=e165]: 9 June 2021, 15:26
+                          - text: GMT
+                      - row "Source https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg" [ref=e166]:
+                        - cell "Source" [ref=e167]
+                        - cell "https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg" [ref=e168]:
+                          - link "https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg" [ref=e169] [cursor=pointer]:
+                            - /url: https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg
+                      - row "Author Mojang Studios" [ref=e170]:
+                        - cell "Author" [ref=e171]
+                        - cell "Mojang Studios" [ref=e172]:
+                          - link "Mojang Studios" [ref=e173] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Mojang_Studios
+                      - row "Permission (Reusing this file) Logo is public domain due to being below the threshold of originality in Sweden." [ref=e174]:
+                        - cell "Permission (Reusing this file)" [ref=e175]:
+                          - text: Permission
+                          - generic [ref=e176]:
+                            - text: (
+                            - link "Reusing this file" [ref=e177] [cursor=pointer]:
+                              - /url: /wiki/Commons:Reusing_content_outside_Wikimedia
+                            - text: )
+                        - cell "Logo is public domain due to being below the threshold of originality in Sweden." [ref=e178]:
+                          - text: Logo is public domain due to being below the
+                          - link "threshold of originality in Sweden" [ref=e179] [cursor=pointer]:
+                            - /url: /wiki/Commons:TOO_Sweden
+                          - text: .
+                      - 'row "Other versions Derivative works of this file: Minecraft Live Logo.png: Minecraft Marketplace logo.png:" [ref=e180]':
+                        - cell "Other versions" [ref=e181]
+                        - 'cell "Derivative works of this file: Minecraft Live Logo.png: Minecraft Marketplace logo.png:" [ref=e182]':
+                          - paragraph [ref=e183]: "Derivative works of this file:"
+                          - list [ref=e184]:
+                            - listitem [ref=e185]:
+                              - link "Minecraft Live Logo.png" [ref=e186] [cursor=pointer]:
+                                - /url: /wiki/File:Minecraft_Live_Logo.png
+                              - text: ":"
+                              - link [ref=e188] [cursor=pointer]:
+                                - /url: /wiki/File:Minecraft_Live_Logo.png
+                                - img [ref=e189]
+                            - listitem [ref=e190]:
+                              - link "Minecraft Marketplace logo.png" [ref=e191] [cursor=pointer]:
+                                - /url: /wiki/File:Minecraft_Marketplace_logo.png
+                              - text: ":"
+                              - link [ref=e193] [cursor=pointer]:
+                                - /url: /wiki/File:Minecraft_Marketplace_logo.png
+                                - img [ref=e194]
+                  - generic [ref=e195]:
+                    - heading "Licensing" [level=2] [ref=e196]
+                    - generic [ref=e197]:
+                      - text: "["
+                      - link "edit" [ref=e198] [cursor=pointer]:
+                        - /url: /w/index.php?title=File:Minecraft_Logo-en.svg&action=edit&section=2
+                      - text: "]"
+                  - table [ref=e199]:
+                    - rowgroup [ref=e200]:
+                      - row "Public domain This logo image consists only of simple geometric shapes or text. It does not meet the threshold of originality needed for copyright protection, and is therefore in the public domain. Although it is free of copyright restrictions, this image may still be subject to other restrictions. See WP:PD § Fonts and typefaces or Template talk:PD-textlogo for more information." [ref=e201]:
+                        - cell "Public domain" [ref=e202]:
+                          - generic "Public domain" [ref=e204]:
+                            - img "Public domain" [ref=e205]
+                        - cell "This logo image consists only of simple geometric shapes or text. It does not meet the threshold of originality needed for copyright protection, and is therefore in the public domain. Although it is free of copyright restrictions, this image may still be subject to other restrictions. See WP:PD § Fonts and typefaces or Template talk:PD-textlogo for more information." [ref=e206]:
+                          - generic [ref=e208]:
+                            - text: This logo image consists only of simple geometric shapes or text. It
+                            - generic [ref=e209]:
+                              - text: does not meet the
+                              - link "threshold of originality" [ref=e210] [cursor=pointer]:
+                                - /url: /wiki/Commons:Threshold_of_originality
+                            - text: needed for copyright protection, and is therefore in the
+                            - link "public domain" [ref=e212] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/public_domain
+                            - text: . Although it is free of copyright restrictions, this image may still be subject to
+                            - link "other restrictions" [ref=e213] [cursor=pointer]:
+                              - /url: /wiki/Commons:Non-copyright_restrictions
+                            - text: . See
+                            - link "WP:PD § Fonts and typefaces" [ref=e214] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/Wikipedia:Public_domain#Fonts_and_typefaces
+                            - text: or
+                            - link "Template talk:PD-textlogo" [ref=e215] [cursor=pointer]:
+                              - /url: /wiki/Template_talk:PD-textlogo
+                            - text: for more information.
+                  - table [ref=e216]:
+                    - rowgroup [ref=e217]:
+                      - row "Trademarked This work includes material that may be protected as a trademark in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. See our general disclaimer. This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing." [ref=e218]:
+                        - cell "Trademarked" [ref=e219]:
+                          - link "Trademarked" [ref=e221] [cursor=pointer]:
+                            - /url: /wiki/Commons:Non-copyright_restrictions
+                            - img "Trademarked" [ref=e222]
+                        - cell "This work includes material that may be protected as a trademark in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. See our general disclaimer. This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing." [ref=e223]:
+                          - text: This work includes material that may be
+                          - generic [ref=e224]:
+                            - text: protected as a
+                            - link "trademark" [ref=e225] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/en:trademark
+                          - text: in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. See our
+                          - link "general disclaimer" [ref=e226] [cursor=pointer]:
+                            - /url: /wiki/Commons:General_disclaimer
+                          - text: .
+                          - generic [ref=e227]:
+                            - text: This tag does not indicate the copyright status of the attached work.
+                            - generic [ref=e228]:
+                              - text: A normal
+                              - link "copyright tag" [ref=e229] [cursor=pointer]:
+                                - /url: /wiki/Special:MyLanguage/Commons:Copyright_tags
+                              - text: is still required.
+                            - generic [ref=e230]:
+                              - text: See
+                              - link "Commons:Licensing" [ref=e231] [cursor=pointer]:
+                                - /url: /wiki/Special:MyLanguage/Commons:Licensing
+                              - text: .
+                - heading "File history" [level=2] [ref=e232]
+                - generic [ref=e233]:
+                  - paragraph [ref=e234]: Click on a date/time to view the file as it appeared at that time.
+                  - table [ref=e235]:
+                    - rowgroup [ref=e236]:
+                      - row "Date/Time Thumbnail Dimensions User Comment" [ref=e237]:
+                        - columnheader [ref=e238]
+                        - columnheader "Date/Time" [ref=e239]
+                        - columnheader "Thumbnail" [ref=e240]
+                        - columnheader "Dimensions" [ref=e241]
+                        - columnheader "User" [ref=e242]
+                        - columnheader "Comment" [ref=e243]
+                      - row "current 14:55, 3 April 2026 Thumbnail for version as of 14:55, 3 April 2026 512 × 88 (3 KB) Dabmasterars (talk | contribs) Uploaded a work by Mojang Studios from https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg with UploadWizard" [ref=e244]:
+                        - cell "current" [ref=e245]
+                        - cell "14:55, 3 April 2026" [ref=e246]:
+                          - link "14:55, 3 April 2026" [ref=e247] [cursor=pointer]:
+                            - /url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Minecraft_Logo-en.svg
+                        - cell "Thumbnail for version as of 14:55, 3 April 2026" [ref=e248]:
+                          - link "Thumbnail for version as of 14:55, 3 April 2026" [ref=e249] [cursor=pointer]:
+                            - /url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Minecraft_Logo-en.svg
+                            - img "Thumbnail for version as of 14:55, 3 April 2026" [ref=e250]
+                        - cell "512 × 88 (3 KB)" [ref=e251]
+                        - cell "Dabmasterars (talk | contribs)" [ref=e252]:
+                          - link "Dabmasterars" [ref=e253] [cursor=pointer]:
+                            - /url: /wiki/User:Dabmasterars
+                          - generic [ref=e255]:
+                            - text: (
+                            - link "talk" [ref=e256] [cursor=pointer]:
+                              - /url: /wiki/User_talk:Dabmasterars
+                            - text: "|"
+                            - link "contribs" [ref=e257] [cursor=pointer]:
+                              - /url: /wiki/Special:Contributions/Dabmasterars
+                            - text: )
+                        - cell "Uploaded a work by Mojang Studios from https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg with UploadWizard" [ref=e258]:
+                          - text: Uploaded a work by
+                          - link "Mojang Studios" [ref=e259] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Mojang_Studios
+                          - text: from https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg with UploadWizard
+                - paragraph [ref=e261]: You cannot overwrite this file.
+                - heading "File usage on Commons" [level=2] [ref=e262]
+                - generic [ref=e263]:
+                  - paragraph [ref=e264]: "The following 5 pages use this file:"
+                  - list [ref=e265]:
+                    - listitem [ref=e266]:
+                      - link "User:Minorax/PD textlogo/2026 April 3" [ref=e267] [cursor=pointer]:
+                        - /url: /wiki/User:Minorax/PD_textlogo/2026_April_3
+                    - listitem [ref=e268]:
+                      - link "User:Minorax/PD textlogo (SVG)/2026 April 1-3" [ref=e269] [cursor=pointer]:
+                        - /url: /wiki/User:Minorax/PD_textlogo_(SVG)/2026_April_1-3
+                    - listitem [ref=e270]:
+                      - link "Commons:Minecraft" [ref=e271] [cursor=pointer]:
+                        - /url: /wiki/Commons:Minecraft
+                    - listitem [ref=e272]:
+                      - link "File:Modo aniversario - Spanish Wikipedia birthday mode.png" [ref=e273] [cursor=pointer]:
+                        - /url: /wiki/File:Modo_aniversario_-_Spanish_Wikipedia_birthday_mode.png
+                    - listitem [ref=e274]:
+                      - link "Category:Minecraft" [ref=e275] [cursor=pointer]:
+                        - /url: /wiki/Category:Minecraft
+                - heading "File usage on other wikis" [level=2] [ref=e276]
+                - generic [ref=e277]:
+                  - paragraph [ref=e278]: "The following other wikis use this file:"
+                  - list [ref=e279]:
+                    - listitem [ref=e280]:
+                      - text: Usage on ary.wikipedia.org
+                      - list [ref=e281]:
+                        - listitem [ref=e282]:
+                          - link "ماينكرافت" [ref=e283] [cursor=pointer]:
+                            - /url: https://ary.wikipedia.org/wiki/%D9%85%D8%A7%D9%8A%D9%86%D9%83%D8%B1%D8%A7%D9%81%D8%AA
+                    - listitem [ref=e284]:
+                      - text: Usage on az.wikipedia.org
+                      - list [ref=e285]:
+                        - listitem [ref=e286]:
+                          - link "Minecraft" [ref=e287] [cursor=pointer]:
+                            - /url: https://az.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e288]:
+                      - text: Usage on ca.wikipedia.org
+                      - list [ref=e289]:
+                        - listitem [ref=e290]:
+                          - link "Minecraft" [ref=e291] [cursor=pointer]:
+                            - /url: https://ca.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e292]:
+                      - text: Usage on cs.wikipedia.org
+                      - list [ref=e293]:
+                        - listitem [ref=e294]:
+                          - link "Minecraft" [ref=e295] [cursor=pointer]:
+                            - /url: https://cs.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e296]:
+                      - text: Usage on cy.wikipedia.org
+                      - list [ref=e297]:
+                        - listitem [ref=e298]:
+                          - link "Minecraft" [ref=e299] [cursor=pointer]:
+                            - /url: https://cy.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e300]:
+                      - text: Usage on en.wikipedia.org
+                      - list [ref=e301]:
+                        - listitem [ref=e302]:
+                          - link "Minecraft (franchise)" [ref=e303] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Minecraft_(franchise)
+                        - listitem [ref=e304]:
+                          - link "Minecraft World" [ref=e305] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Minecraft_World
+                        - listitem [ref=e306]:
+                          - link "User:Glamerous23456/boxes" [ref=e307] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/User:Glamerous23456/boxes
+                    - listitem [ref=e308]:
+                      - text: Usage on es.wikipedia.org
+                      - list [ref=e309]:
+                        - listitem [ref=e310]:
+                          - link "Minecraft" [ref=e311] [cursor=pointer]:
+                            - /url: https://es.wikipedia.org/wiki/Minecraft
+                        - listitem [ref=e312]:
+                          - link "Minecraft (franquicia)" [ref=e313] [cursor=pointer]:
+                            - /url: https://es.wikipedia.org/wiki/Minecraft_(franquicia)
+                    - listitem [ref=e314]:
+                      - text: Usage on eu.wikipedia.org
+                      - list [ref=e315]:
+                        - listitem [ref=e316]:
+                          - link "Minecraft" [ref=e317] [cursor=pointer]:
+                            - /url: https://eu.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e318]:
+                      - text: Usage on fr.wikinews.org
+                      - list [ref=e319]:
+                        - listitem [ref=e320]:
+                          - link "Catégorie:Minecraft" [ref=e321] [cursor=pointer]:
+                            - /url: https://fr.wikinews.org/wiki/Cat%C3%A9gorie:Minecraft
+                    - listitem [ref=e322]:
+                      - text: Usage on ga.wikipedia.org
+                      - list [ref=e323]:
+                        - listitem [ref=e324]:
+                          - link "Minecraft" [ref=e325] [cursor=pointer]:
+                            - /url: https://ga.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e326]:
+                      - text: Usage on gl.wikipedia.org
+                      - list [ref=e327]:
+                        - listitem [ref=e328]:
+                          - link "Minecraft" [ref=e329] [cursor=pointer]:
+                            - /url: https://gl.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e330]:
+                      - text: Usage on ht.wikipedia.org
+                      - list [ref=e331]:
+                        - listitem [ref=e332]:
+                          - link "Minecraft" [ref=e333] [cursor=pointer]:
+                            - /url: https://ht.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e334]:
+                      - text: Usage on hu.wikipedia.org
+                      - list [ref=e335]:
+                        - listitem [ref=e336]:
+                          - link "Minecraft" [ref=e337] [cursor=pointer]:
+                            - /url: https://hu.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e338]:
+                      - text: Usage on hy.wikipedia.org
+                      - list [ref=e339]:
+                        - listitem [ref=e340]:
+                          - link "Minecraft" [ref=e341] [cursor=pointer]:
+                            - /url: https://hy.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e342]:
+                      - text: Usage on ia.wikipedia.org
+                      - list [ref=e343]:
+                        - listitem [ref=e344]:
+                          - link "Minecraft" [ref=e345] [cursor=pointer]:
+                            - /url: https://ia.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e346]:
+                      - text: Usage on ja.wikipedia.org
+                      - list [ref=e347]:
+                        - listitem [ref=e348]:
+                          - link "Minecraft" [ref=e349] [cursor=pointer]:
+                            - /url: https://ja.wikipedia.org/wiki/Minecraft
+                        - listitem [ref=e350]:
+                          - link "Minecraftシリーズ" [ref=e351] [cursor=pointer]:
+                            - /url: https://ja.wikipedia.org/wiki/Minecraft%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA
+                    - listitem [ref=e352]:
+                      - text: Usage on ku.wikipedia.org
+                      - list [ref=e353]:
+                        - listitem [ref=e354]:
+                          - link "Minecraft" [ref=e355] [cursor=pointer]:
+                            - /url: https://ku.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e356]:
+                      - text: Usage on lld.wikipedia.org
+                      - list [ref=e357]:
+                        - listitem [ref=e358]:
+                          - link "Minecraft" [ref=e359] [cursor=pointer]:
+                            - /url: https://lld.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e360]:
+                      - text: Usage on mr.wikipedia.org
+                      - list [ref=e361]:
+                        - listitem [ref=e362]:
+                          - link "माइनक्राफ्ट" [ref=e363] [cursor=pointer]:
+                            - /url: https://mr.wikipedia.org/wiki/%E0%A4%AE%E0%A4%BE%E0%A4%87%E0%A4%A8%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%AB%E0%A5%8D%E0%A4%9F
+                    - listitem [ref=e364]:
+                      - text: Usage on ms.wikipedia.org
+                      - list [ref=e365]:
+                        - listitem [ref=e366]:
+                          - link "Minecraft" [ref=e367] [cursor=pointer]:
+                            - /url: https://ms.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e368]:
+                      - text: Usage on nl.wikipedia.org
+                      - list [ref=e369]:
+                        - listitem [ref=e370]:
+                          - link "Minecraft" [ref=e371] [cursor=pointer]:
+                            - /url: https://nl.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e372]:
+                      - text: Usage on nn.wikipedia.org
+                      - list [ref=e373]:
+                        - listitem [ref=e374]:
+                          - link "Minecraft" [ref=e375] [cursor=pointer]:
+                            - /url: https://nn.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e376]:
+                      - text: Usage on no.wikipedia.org
+                      - list [ref=e377]:
+                        - listitem [ref=e378]:
+                          - link "Minecraft" [ref=e379] [cursor=pointer]:
+                            - /url: https://no.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e380]:
+                      - text: Usage on pt.wikipedia.org
+                      - list [ref=e381]:
+                        - listitem [ref=e382]:
+                          - link "Portal:Jogos eletrônicos" [ref=e383] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Portal:Jogos_eletr%C3%B4nicos
+                        - listitem [ref=e384]:
+                          - link "Portal:Games/Portais relacionados" [ref=e385] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Portal:Games/Portais_relacionados
+                        - listitem [ref=e386]:
+                          - link "Portal:Xbox" [ref=e387] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Portal:Xbox
+                        - listitem [ref=e388]:
+                          - link "Portal:Xbox/Portais relacionados" [ref=e389] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Portal:Xbox/Portais_relacionados
+                        - listitem [ref=e390]:
+                          - link "Minecraft (franquia)" [ref=e391] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Minecraft_(franquia)
+                        - listitem [ref=e392]:
+                          - link "Portal:Minecraft" [ref=e393] [cursor=pointer]:
+                            - /url: https://pt.wikipedia.org/wiki/Portal:Minecraft
+                    - listitem [ref=e394]:
+                      - text: Usage on ro.wikipedia.org
+                      - list [ref=e395]:
+                        - listitem [ref=e396]:
+                          - link "Minecraft" [ref=e397] [cursor=pointer]:
+                            - /url: https://ro.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e398]:
+                      - text: Usage on ru.wikipedia.org
+                      - list [ref=e399]:
+                        - listitem [ref=e400]:
+                          - link "Minecraft (франшиза)" [ref=e401] [cursor=pointer]:
+                            - /url: https://ru.wikipedia.org/wiki/Minecraft_(%D1%84%D1%80%D0%B0%D0%BD%D1%88%D0%B8%D0%B7%D0%B0)
+                    - listitem [ref=e402]:
+                      - text: Usage on sr.wikipedia.org
+                      - list [ref=e403]:
+                        - listitem [ref=e404]:
+                          - link "Minecraft" [ref=e405] [cursor=pointer]:
+                            - /url: https://sr.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e406]:
+                      - text: Usage on tg.wikipedia.org
+                      - list [ref=e407]:
+                        - listitem [ref=e408]:
+                          - link "Minecraft" [ref=e409] [cursor=pointer]:
+                            - /url: https://tg.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e410]:
+                      - text: Usage on uk.wikipedia.org
+                      - list [ref=e411]:
+                        - listitem [ref=e412]:
+                          - link "Minecraft" [ref=e413] [cursor=pointer]:
+                            - /url: https://uk.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e414]:
+                      - text: Usage on vec.wikipedia.org
+                      - list [ref=e415]:
+                        - listitem [ref=e416]:
+                          - link "Minecraft" [ref=e417] [cursor=pointer]:
+                            - /url: https://vec.wikipedia.org/wiki/Minecraft
+                    - listitem [ref=e418]:
+                      - text: Usage on www.wikidata.org
+                      - list [ref=e419]:
+                        - listitem [ref=e420]:
+                          - link "Q49740" [ref=e421] [cursor=pointer]:
+                            - /url: https://www.wikidata.org/wiki/Q49740
+                        - listitem [ref=e422]:
+                          - link "Q25445348" [ref=e423] [cursor=pointer]:
+                            - /url: https://www.wikidata.org/wiki/Q25445348
+                - heading "Metadata" [level=2] [ref=e424]
+                - generic [ref=e425]:
+                  - paragraph [ref=e426]: This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the original file. The timestamp is only as accurate as the clock in the camera, and it may be completely wrong.
+                  - table:
+                    - rowgroup
+              - tabpanel [ref=e427]:
+                - generic [ref=e429]:
+                  - generic [ref=e432]:
+                    - heading [level=3] [ref=e433]: Items portrayed in this file
+                    - heading [level=4] [ref=e434]:
+                      - link [ref=e436] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/P180
+                        - text: depicts
+                  - generic [ref=e437]:
+                    - heading [level=4] [ref=e443]:
+                      - link [ref=e445] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/Q49740
+                        - text: Minecraft
+                    - heading [level=4] [ref=e451]:
+                      - link [ref=e453] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/Q25445348
+                        - text: Minecraft
+                    - heading [level=4] [ref=e459]:
+                      - link [ref=e461] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/Q112863331
+                        - text: Minecraft
+                    - heading [level=4] [ref=e467]:
+                      - link [ref=e469] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/Q1886349
+                        - text: logo
+                - generic [ref=e471]:
+                  - heading [level=4] [ref=e475]:
+                    - link [ref=e477] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/Special:EntityPage/P7482
+                      - text: source of file
+                  - generic [ref=e480]:
+                    - heading [level=4] [ref=e484]:
+                      - link [ref=e486] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/Q74228490
+                        - text: file available on the internet
+                    - generic [ref=e491]:
+                      - link [ref=e492] [cursor=pointer]:
+                        - /url: https://www.wikidata.org/wiki/Special:EntityPage/P973
+                        - text: described at URL
+                      - generic [ref=e493]: ":"
+                      - link [ref=e495] [cursor=pointer]:
+                        - /url: https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg
+                        - text: https://github.com/Mojang/web-theme-bootstrap/blob/main/assets/svg/logos/minecraft-core-brand.svg
+        - generic [ref=e496]:
+          - generic [ref=e497]:
+            - link "Category" [ref=e498] [cursor=pointer]:
+              - /url: /wiki/Special:MyLanguage/Commons:Categories
+            - text: ":"
+            - list [ref=e499]:
+              - listitem [ref=e500]:
+                - link "Minecraft logos" [ref=e501] [cursor=pointer]:
+                  - /url: /wiki/Category:Minecraft_logos
+          - generic [ref=e502]:
+            - text: "Hidden categories:"
+            - list [ref=e503]:
+              - listitem [ref=e504]:
+                - link "Files with derivative versions" [ref=e505] [cursor=pointer]:
+                  - /url: /wiki/Category:Files_with_derivative_versions
+              - listitem [ref=e506]:
+                - link "PD textlogo" [ref=e507] [cursor=pointer]:
+                  - /url: /wiki/Category:PD_textlogo
+              - listitem [ref=e508]:
+                - link "SVG text logos" [ref=e509] [cursor=pointer]:
+                  - /url: /wiki/Category:SVG_text_logos
+              - listitem [ref=e510]:
+                - link "With trademark" [ref=e511] [cursor=pointer]:
+                  - /url: /wiki/Category:With_trademark
+    - contentinfo [ref=e513]:
+      - list [ref=e514]:
+        - listitem [ref=e515]: This page was last edited on 14 May 2026, at 18:02.
+        - listitem [ref=e516]:
+          - text: Files are available under licenses specified on their description page. All structured data from the file namespace is available under the
+          - link "Creative Commons CC0 License" [ref=e517] [cursor=pointer]:
+            - /url: https://creativecommons.org/publicdomain/zero/1.0/
+          - text: ; all unstructured text is available under the
+          - link "Creative Commons Attribution-ShareAlike License" [ref=e518] [cursor=pointer]:
+            - /url: https://creativecommons.org/licenses/by-sa/4.0/
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=e519] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and the
+          - link "Privacy Policy" [ref=e520] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: .
+      - list:
+        - listitem [ref=e521]:
+          - link "Privacy policy" [ref=e522] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e523]:
+          - link "About Wikimedia Commons" [ref=e524] [cursor=pointer]:
+            - /url: /wiki/Commons:Welcome
+        - listitem [ref=e525]:
+          - link "Disclaimers" [ref=e526] [cursor=pointer]:
+            - /url: /wiki/Commons:General_disclaimer
+        - listitem [ref=e527]:
+          - link "Code of Conduct" [ref=e528] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e529]:
+          - link "Developers" [ref=e530] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e531]:
+          - link "Statistics" [ref=e532] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/commons.wikimedia.org
+        - listitem [ref=e533]:
+          - link "Cookie statement" [ref=e534] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e535]:
+          - link "Mobile view" [ref=e536] [cursor=pointer]:
+            - /url: //commons.wikimedia.org/w/index.php?title=File:Minecraft_Logo-en.svg&mobileaction=toggle_view_mobile
+      - list [ref=e537]:
+        - listitem [ref=e538]:
+          - link "Wikimedia Foundation" [ref=e539] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e541]
+        - listitem [ref=e542]:
+          - link "Powered by MediaWiki" [ref=e543] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e545]

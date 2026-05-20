@@ -1,0 +1,8 @@
+[    1098ms] [WARNING] This page is using the deprecated ResourceLoader module "jquery.ui".
+Please use Codex instead. @ https://commons.wikimedia.org/w/load.php?lang=en&modules=startup&only=scripts&raw=1&skin=vector-2022:11
+[    2406ms] [ERROR] Error: View mediainfoview does not exist
+    at SELF._getView (https://commons.wikimedia.org/w/load.php?lang=en&modules=jquery%2Coojs-ui-core%7Cjquery.ui%7Cmw.config.values.wbSiteDetails%7Cwikibase.mediainfo.statements%7Cwikibase.view.ControllerViewFactory&skin=vector-2022&version=1gau3:795:710)
+    at SELF.getEntityView (https://commons.wikimedia.org/w/load.php?lang=en&modules=jquery%2Coojs-ui-core%7Cjquery.ui%7Cmw.config.values.wbSiteDetails%7Cwikibase.mediainfo.statements%7Cwikibase.view.ControllerViewFactory&skin=vector-2022&version=1gau3:787:171)
+    at eval (https://commons.wikimedia.org/w/load.php?lang=en&modules=wikibase.ui.entityViewInit&skin=vector-2022&version=1vv6v:5:506)
+    at mightThrow (https://commons.wikimedia.org/w/load.php?lang=en&modules=jquery%2Coojs-ui-core%7Cjquery.ui%7Cmw.config.values.wbSiteDetails%7Cwikibase.mediainfo.statements%7Cwikibase.view.ControllerViewFactory&skin=vector-2022&version=1gau3:44:983)
+    at process (https://commons.wikimedia.org/w/load.php?lang=en&modules=jquery%2Coojs-ui-core%7Cjquery.ui%7Cmw.config.values.wbSiteDetails%7Cwikibase.mediainfo.statements%7Cwikibase.view.ControllerViewFactory&skin=vector-2022&version=1gau3:45:643) @ https://commons.wikimedia.org/w/load.php?lang=en&modules=jquery%2Coojs-ui-core%7Cjquery.ui%7Cmw.config.values.wbSiteDetails%7Cwikibase.mediainfo.statements%7Cwikibase.view.ControllerViewFactory&skin=vector-2022&version=1gau3:43

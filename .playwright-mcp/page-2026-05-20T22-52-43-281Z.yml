@@ -1,0 +1,282 @@
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikimedia Commons" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - img [ref=e13]
+        - img "Wikimedia Commons" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikimedia Commons" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - generic [ref=e27]:
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "English" [ref=e32] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e34]: English
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Donate" [ref=e39] [cursor=pointer]:
+                - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=commons.wikimedia.org&uselang=en
+            - listitem [ref=e40]:
+              - link "Create account" [ref=e41] [cursor=pointer]:
+                - /url: /w/index.php?title=Special:CreateAccount&returnto=Special%3AMediaSearch&returntoquery=go%3DGo%26search%3DMinecraft%2Blogo%26type%3Dimage
+            - listitem [ref=e42]:
+              - link "Log in" [ref=e43] [cursor=pointer]:
+                - /url: /w/index.php?title=Special:UserLogin&returnto=Special%3AMediaSearch&returntoquery=go%3DGo%26search%3DMinecraft%2Blogo%26type%3Dimage
+  - generic [ref=e45]:
+    - main [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Search media" [level=1] [ref=e51]
+        - generic [ref=e52]:
+          - link "Switch to Special:Search" [ref=e54] [cursor=pointer]:
+            - /url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=Minecraft+logo
+          - link "Help" [ref=e56] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Help:MediaSearch
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - navigation "Namespaces"
+        - generic [ref=e60]:
+          - navigation "Views"
+          - navigation "Page tools" [ref=e61]:
+            - generic [ref=e62]:
+              - button "Tools" [ref=e63] [cursor=pointer]
+              - generic [ref=e65] [cursor=pointer]: Tools
+      - navigation "Appearance" [ref=e68]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: Appearance
+            - button "hide" [ref=e73] [cursor=pointer]
+          - generic [ref=e74]:
+            - generic [ref=e75]: Text
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - generic [ref=e79]:
+                  - generic [ref=e80]:
+                    - generic [ref=e81]:
+                      - radio "Small" [disabled] [ref=e82]
+                      - generic [ref=e85]: Small
+                    - generic [ref=e86]:
+                      - radio "Standard" [disabled] [ref=e87]
+                      - generic [ref=e90]: Standard
+                    - generic [ref=e91]:
+                      - radio "Large" [disabled] [ref=e92]
+                      - generic [ref=e95]: Large
+                  - paragraph [ref=e96]: This page always uses small font size
+          - generic [ref=e97]:
+            - generic [ref=e98]: Width
+            - list [ref=e100]:
+              - listitem [ref=e101]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]:
+                    - radio "Standard" [checked] [ref=e105]
+                    - generic [ref=e108]: Standard
+                  - generic [ref=e109]:
+                    - radio "Wide" [ref=e110]
+                    - generic [ref=e113]: Wide
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - text: Color
+              - generic [ref=e116]: (beta)
+            - list [ref=e118]:
+              - listitem [ref=e119]:
+                - generic [ref=e121]:
+                  - generic [ref=e122]:
+                    - radio "Automatic" [ref=e123]
+                    - generic [ref=e126]: Automatic
+                  - generic [ref=e127]:
+                    - radio "Light" [checked] [ref=e128]
+                    - generic [ref=e131]: Light
+                  - generic [ref=e132]:
+                    - radio "Dark" [ref=e133]
+                    - generic [ref=e136]: Dark
+      - generic "Search media" [ref=e137]:
+        - generic [ref=e138]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Search media
+              - textbox "Search media Search media" [ref=e144]:
+                - /placeholder: Search for images, audio, video and more
+                - text: Minecraft logo
+            - button "Search" [ref=e146]:
+              - generic [ref=e147]: Search
+          - generic [ref=e148]:
+            - tablist [ref=e151]:
+              - tab "Images" [selected] [ref=e152]
+              - tab "Audio" [ref=e153]
+              - tab "Video" [ref=e154]
+              - tab "Other Media" [ref=e155]
+              - tab "Categories and Pages" [ref=e156]
+            - tabpanel [ref=e158]:
+              - generic [ref=e160]: 195 results
+              - generic [ref=e162]:
+                - generic [ref=e163]:
+                  - link "Minecraft Logo-en.svg" [ref=e164] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Logo-en.svg
+                    - img "Minecraft Logo-en.svg"
+                  - link "Minecraft Key-art.png" [ref=e165] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Key-art.png
+                    - img "Minecraft Key-art.png"
+                  - link "Minecraft cube.svg" [ref=e166] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_cube.svg
+                    - img "Minecraft cube.svg"
+                  - link "Minecraft Marketplace logo.png" [ref=e167] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Marketplace_logo.png
+                    - img "Minecraft Marketplace logo.png"
+                  - link "Minecraft-creeper-face.svg" [ref=e168] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft-creeper-face.svg
+                    - img "Minecraft-creeper-face.svg"
+                  - link "Small Greenfield Minecraft logo with background.png" [ref=e169] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Small_Greenfield_Minecraft_logo_with_background.png
+                    - img "Small Greenfield Minecraft logo with background.png"
+                  - link "Updated Minecraft cube.svg" [ref=e170] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Updated_Minecraft_cube.svg
+                    - img "Updated Minecraft cube.svg"
+                  - link "Minecraft Wiki 2023 misspelled.png" [ref=e171] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Wiki_2023_misspelled.png
+                    - img "Minecraft Wiki 2023 misspelled.png"
+                  - link "White Pumpkin From The Void signature.png" [ref=e172] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:White_Pumpkin_From_The_Void_signature.png
+                    - img "White Pumpkin From The Void signature.png"
+                  - link "Minecraft Wiki 2023.png" [ref=e173] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Wiki_2023.png
+                    - img "Minecraft Wiki 2023.png"
+                  - link "Minecraft Live Logo.png" [ref=e174] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Live_Logo.png
+                    - img "Minecraft Live Logo.png"
+                  - link "CL Minecraft Logo.jpg" [ref=e175] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:CL_Minecraft_Logo.jpg
+                    - img "CL Minecraft Logo.jpg"
+                  - link "Minecraft missing texture block.svg" [ref=e176] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_missing_texture_block.svg
+                    - img "Minecraft missing texture block.svg"
+                  - link "Blockworks logo.png" [ref=e177] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Blockworks_logo.png
+                    - img "Blockworks logo.png"
+                  - link "Minecraft Wiki 2023 textless.png" [ref=e178] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_Wiki_2023_textless.png
+                    - img "Minecraft Wiki 2023 textless.png"
+                  - link "Logo ahi nomas.webp" [ref=e179] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Logo_ahi_nomas.webp
+                    - img "Logo ahi nomas.webp"
+                  - link "Cubed! Original Logo.png" [ref=e180] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Cubed!_Original_Logo.png
+                    - img "Cubed! Original Logo.png"
+                  - link "Logo ahi nomas cropped.webp" [ref=e181] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Logo_ahi_nomas_cropped.webp
+                    - img "Logo ahi nomas cropped.webp"
+                  - link "MINECRAFT logo.jpg" [ref=e182] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:MINECRAFT_logo.jpg
+                    - img "MINECRAFT logo.jpg"
+                  - link "Build the Earth logo gif.gif" [ref=e183] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Build_the_Earth_logo_gif.gif
+                    - img "Build the Earth logo gif.gif"
+                  - link "The Aether logo.svg" [ref=e184] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Aether_logo.svg
+                    - img "The Aether logo.svg"
+                  - link "Soft drinks at a supermarket.jpg" [ref=e185] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Soft_drinks_at_a_supermarket.jpg
+                    - img "Soft drinks at a supermarket.jpg"
+                  - link "Minecraft - Deep Dark.png" [ref=e186] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_-_Deep_Dark.png
+                    - img "Minecraft - Deep Dark.png"
+                  - link "Simple Guide to Minecraft - WikiBook logo.png" [ref=e187] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Simple_Guide_to_Minecraft_-_WikiBook_logo.png
+                    - img "Simple Guide to Minecraft - WikiBook logo.png"
+                  - link "Simple Guide to Minecraft; Survival Tutorials - WikiBook logo.png" [ref=e188] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Simple_Guide_to_Minecraft;_Survival_Tutorials_-_WikiBook_logo.png
+                    - img "Simple Guide to Minecraft; Survival Tutorials - WikiBook logo.png"
+                  - link "Arraignée Blockbench 12.jpg" [ref=e189] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_12.jpg
+                    - img "Arraignée Blockbench 12.jpg"
+                  - link "Minecraft - Taiga.jpg" [ref=e190] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_-_Taiga.jpg
+                    - img "Minecraft - Taiga.jpg"
+                  - link "Minecraft - Lush caves.jpg" [ref=e191] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_-_Lush_caves.jpg
+                    - img "Minecraft - Lush caves.jpg"
+                  - link "Minecraft - 1.18 mountains.jpg" [ref=e192] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_-_1.18_mountains.jpg
+                    - img "Minecraft - 1.18 mountains.jpg"
+                  - link "InclusiveGameLab Analogue-Game 5 CC-BY-SA 01.jpg" [ref=e193] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:InclusiveGameLab_Analogue-Game_5_CC-BY-SA_01.jpg
+                    - img "InclusiveGameLab Analogue-Game 5 CC-BY-SA 01.jpg"
+                  - link "Arraignée Blockbench 15.jpg" [ref=e194] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_15.jpg
+                    - img "Arraignée Blockbench 15.jpg"
+                  - link "Arraignée Blockbench 09.jpg" [ref=e195] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_09.jpg
+                    - img "Arraignée Blockbench 09.jpg"
+                  - link "2011 Events montage 16-grid version.jpg" [ref=e196] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:2011_Events_montage_16-grid_version.jpg
+                    - img "2011 Events montage 16-grid version.jpg"
+                  - link "Arraignée Blockbench 19.jpg" [ref=e197] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_19.jpg
+                    - img "Arraignée Blockbench 19.jpg"
+                  - link "Arraignée Blockbench 13.jpg" [ref=e198] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_13.jpg
+                    - img "Arraignée Blockbench 13.jpg"
+                  - link "Starship MC.png" [ref=e199] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Starship_MC.png
+                    - img "Starship MC.png"
+                  - link "IronException 2b2t Spawn Render July 2019.png" [ref=e200] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:IronException_2b2t_Spawn_Render_July_2019.png
+                    - img "IronException 2b2t Spawn Render July 2019.png"
+                  - link "Minecraft - Husk.jpg" [ref=e201] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Minecraft_-_Husk.jpg
+                    - img "Minecraft - Husk.jpg"
+                  - link "Diagonal obsidian bridge over water.png" [ref=e202] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Diagonal_obsidian_bridge_over_water.png
+                    - img "Diagonal obsidian bridge over water.png"
+                  - link "Arraignée Blockbench 03.jpg" [ref=e203] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Arraign%C3%A9e_Blockbench_03.jpg
+                    - img "Arraignée Blockbench 03.jpg"
+                - button "Load more" [ref=e205]
+                - button "Load more" [ref=e208] [cursor=pointer]
+    - contentinfo [ref=e210]:
+      - list
+      - list:
+        - listitem [ref=e211]:
+          - link "Privacy policy" [ref=e212] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e213]:
+          - link "About Wikimedia Commons" [ref=e214] [cursor=pointer]:
+            - /url: /wiki/Commons:Welcome
+        - listitem [ref=e215]:
+          - link "Disclaimers" [ref=e216] [cursor=pointer]:
+            - /url: /wiki/Commons:General_disclaimer
+        - listitem [ref=e217]:
+          - link "Code of Conduct" [ref=e218] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e219]:
+          - link "Developers" [ref=e220] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e221]:
+          - link "Statistics" [ref=e222] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/commons.wikimedia.org
+        - listitem [ref=e223]:
+          - link "Cookie statement" [ref=e224] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e225]:
+          - link "Mobile view" [ref=e226] [cursor=pointer]:
+            - /url: //commons.wikimedia.org/w/index.php?title=Special:MediaSearch&go=Go&search=Minecraft+logo&type=image&mobileaction=toggle_view_mobile
+      - list [ref=e227]:
+        - listitem [ref=e228]:
+          - link "Wikimedia Foundation" [ref=e229] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e231]
+        - listitem [ref=e232]:
+          - link "Powered by MediaWiki" [ref=e233] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e235]
+  - generic [ref=e236]:
+    - list
