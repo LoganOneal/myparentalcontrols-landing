@@ -11,6 +11,7 @@ import {
   BottomNav,
   PlatformBox,
   GrassBlockBox,
+  FooterPill,
 } from "@/components/home/PhoneMockShared";
 
 type BlockRow = {
@@ -65,16 +66,20 @@ function Toggle({ on, accent = COLORS.redDeep }: { on: boolean; accent?: string 
         height: 18,
         background: on ? accent : "#D1D5DB",
         padding: 2,
+        boxShadow: on
+          ? `inset 0 1px 2px rgba(0,0,0,0.15)`
+          : "inset 0 1px 2px rgba(0,0,0,0.08)",
       }}
       aria-hidden
     >
       <span
-        className="block bg-white rounded-full shadow"
+        className="block bg-white rounded-full"
         style={{
           width: 14,
           height: 14,
           transform: on ? "translateX(12px)" : "translateX(0)",
-          transition: "transform 0.15s",
+          transition: "transform 0.2s cubic-bezier(.4,1.4,.5,1)",
+          boxShadow: "0 1px 2px rgba(0,0,0,0.2), 0 0 0 0.5px rgba(0,0,0,0.05)",
         }}
       />
     </span>
@@ -116,24 +121,48 @@ export function BlocksScreenMock({
 
       <div className="px-3 -mt-5 relative z-10">
         <div
-          className="rounded-2xl shadow-md px-3 py-3 flex items-center gap-3"
+          className="relative rounded-2xl px-3 py-3 flex items-center gap-3 overflow-hidden"
           style={{
-            background: `linear-gradient(135deg, ${COLORS.red} 0%, ${COLORS.redDeep} 100%)`,
+            background: `linear-gradient(135deg, ${COLORS.red} 0%, ${COLORS.redDeep} 60%, ${COLORS.redDark} 100%)`,
+            boxShadow:
+              "0 1px 0 rgba(255,255,255,0.15) inset, 0 8px 24px rgba(37,99,235,0.30)",
           }}
         >
+          {/* Subtle inner highlight to give the card depth. */}
           <span
-            className="inline-flex items-center justify-center w-10 h-10 rounded-xl shrink-0"
-            style={{ background: "rgba(255,255,255,0.2)" }}
+            aria-hidden
+            className="absolute -top-8 -left-8 w-20 h-20 rounded-full pointer-events-none"
+            style={{ background: "rgba(255,255,255,0.18)", filter: "blur(8px)" }}
+          />
+          <span
+            className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl shrink-0"
+            style={{
+              background: "rgba(255,255,255,0.22)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.30)",
+            }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
             </svg>
           </span>
-          <div className="flex-1 min-w-0">
-            <p className="text-white font-bold leading-tight" style={{ fontSize: "12px" }}>
+          <div className="relative flex-1 min-w-0">
+            <p
+              className="text-white font-bold leading-tight flex items-center gap-1.5"
+              style={{ fontSize: "12px" }}
+            >
               School hours
+              <span
+                className="inline-flex items-center gap-0.5 text-[8px] font-bold rounded-full px-1.5 py-[1px] tabular-nums"
+                style={{ background: "rgba(255,255,255,0.22)", color: "white" }}
+              >
+                <span className="block w-1 h-1 rounded-full bg-white mock-anim-breathe" />
+                ON
+              </span>
             </p>
-            <p className="text-white/80 leading-tight mt-0.5" style={{ fontSize: "10px" }}>
+            <p
+              className="text-white/85 leading-tight mt-0.5 tabular-nums"
+              style={{ fontSize: "10px" }}
+            >
               8 AM – 3 PM weekdays · games &amp; social blocked
             </p>
           </div>
@@ -145,7 +174,10 @@ export function BlocksScreenMock({
         <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
           Quick blocks
         </h3>
-        <span className="font-semibold" style={{ color: COLORS.textMuted, fontSize: "11px" }}>
+        <span
+          className="font-semibold"
+          style={{ color: COLORS.textMuted, fontSize: "11px" }}
+        >
           Tap to toggle
         </span>
       </div>
@@ -154,14 +186,24 @@ export function BlocksScreenMock({
         {BLOCKS.map((b, i) => (
           <div
             key={b.name + i}
-            className="bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="relative bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5"
+            style={{
+              boxShadow:
+                "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
+            }}
           >
             {b.icon}
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-gray-900 leading-tight" style={{ fontSize: "11px" }}>
+              <p
+                className="font-bold text-gray-900 leading-tight"
+                style={{ fontSize: "11px" }}
+              >
                 {b.name}
               </p>
-              <p className="text-gray-500 leading-snug mt-0.5" style={{ fontSize: "9px" }}>
+              <p
+                className="text-gray-500 leading-snug mt-0.5"
+                style={{ fontSize: "9px" }}
+              >
                 {b.detail}
               </p>
             </div>
@@ -170,12 +212,7 @@ export function BlocksScreenMock({
         ))}
       </div>
 
-      <p
-        className="text-center mt-3 px-4 font-semibold leading-snug"
-        style={{ color: COLORS.textMuted, fontSize: "10px" }}
-      >
-        Changes sync to every device in seconds.
-      </p>
+      <FooterPill text="Syncs to every device · seconds" />
 
       <BottomNav activeTab="Settings" />
     </PhoneFrame>

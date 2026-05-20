@@ -78,9 +78,10 @@ function MinecraftIcon() {
 }
 
 function FortniteIcon() {
+  // Bold, geometric capital F — Fortnite's brand mark in monochrome.
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full" aria-hidden>
-      <path d="M6 2h12v4.5h-7V10h6v4.5h-6V22l-5-1V2Z" />
+      <path d="M6 3 H18 V7 H11 V10 H17 V14 H11 V21 H6 Z" />
     </svg>
   );
 }
@@ -309,7 +310,7 @@ export function Hero() {
             </FloatingBadge>
 
             <FloatingBadge
-              size="sm"
+              size="md"
               label="Fortnite"
               className="top-[34%] -left-2 sm:-left-3 z-20 animate-hero-float-d"
             >

@@ -12,12 +12,14 @@ import {
   BottomNav,
   PlatformBox,
   GrassBlockBox,
+  FooterPill,
 } from "@/components/home/PhoneMockShared";
 
 type GameRow = {
   name: string;
   detail: string;
   flag?: number;
+  live?: boolean;
   icon: React.ReactNode;
 };
 
@@ -35,6 +37,7 @@ const GAMES: GameRow[] = [
   {
     name: "Fortnite",
     detail: "3 voice calls live",
+    live: true,
     icon: <PlatformBox src="/images/platforms/fortnite.svg" bg="#2A3F8F" />,
   },
   {
@@ -44,6 +47,25 @@ const GAMES: GameRow[] = [
     icon: <PlatformBox src="/images/platforms/discord.svg" bg={COLORS.discord} />,
   },
 ];
+
+/** Inline EQ bars — animated visualizer for the "voice live" row. */
+function EqBars() {
+  return (
+    <span className="inline-flex items-end gap-[2px] h-3" aria-hidden>
+      {[0, 0.15, 0.3, 0.1].map((delay, i) => (
+        <span
+          key={i}
+          className="mock-anim-eq-bar block w-[2px] rounded-full"
+          style={{
+            height: "10px",
+            background: COLORS.low,
+            animationDelay: `${delay}s`,
+          }}
+        />
+      ))}
+    </span>
+  );
+}
 
 export function GamesScreenMock({
   className = "",
@@ -79,31 +101,52 @@ export function GamesScreenMock({
       />
 
       <div className="px-3 -mt-5 relative z-10">
-        <div className="bg-white rounded-2xl shadow-md ring-1 ring-black/5 px-3 py-3 flex items-center justify-around">
+        <div
+          className="bg-white rounded-2xl px-3 py-3 flex items-center justify-around ring-1 ring-black/5"
+          style={{
+            boxShadow:
+              "0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(15,23,42,0.08)",
+          }}
+        >
           <div className="text-center">
-            <div className="font-bold leading-none" style={{ color: COLORS.text, fontSize: "20px" }}>
+            <div
+              className="font-bold leading-none tabular-nums"
+              style={{ color: COLORS.text, fontSize: "20px" }}
+            >
               4
             </div>
-            <div className="text-gray-700 mt-1" style={{ fontSize: "10px" }}>
+            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
               Games
             </div>
           </div>
           <span className="w-px h-7 bg-gray-200" />
           <div className="text-center">
-            <div className="font-bold leading-none" style={{ color: COLORS.high, fontSize: "20px" }}>
+            <div
+              className="font-bold leading-none tabular-nums"
+              style={{ color: COLORS.high, fontSize: "20px" }}
+            >
               1
             </div>
-            <div className="text-gray-700 mt-1" style={{ fontSize: "10px" }}>
+            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
               Flagged
             </div>
           </div>
           <span className="w-px h-7 bg-gray-200" />
           <div className="text-center">
-            <div className="font-bold leading-none flex items-center justify-center gap-1" style={{ color: COLORS.low, fontSize: "20px" }}>
-              <span className="inline-block w-2 h-2 rounded-full" style={{ background: COLORS.low }} />
+            <div
+              className="font-bold leading-none flex items-center justify-center gap-1"
+              style={{ color: COLORS.low, fontSize: "20px" }}
+            >
+              <span className="relative inline-flex" aria-hidden>
+                <span className="block w-2 h-2 rounded-full" style={{ background: COLORS.low }} />
+                <span
+                  className="absolute inset-0 rounded-full animate-ping"
+                  style={{ background: COLORS.low, opacity: 0.45 }}
+                />
+              </span>
               Live
             </div>
-            <div className="text-gray-700 mt-1" style={{ fontSize: "10px" }}>
+            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
               Real-time
             </div>
           </div>
@@ -114,7 +157,10 @@ export function GamesScreenMock({
         <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
           Connected games
         </h3>
-        <span className="font-semibold" style={{ color: COLORS.textMuted, fontSize: "11px" }}>
+        <span
+          className="font-semibold tabular-nums"
+          style={{ color: COLORS.textMuted, fontSize: "11px" }}
+        >
           Today
         </span>
       </div>
@@ -123,20 +169,37 @@ export function GamesScreenMock({
         {GAMES.map((g) => (
           <div
             key={g.name}
-            className="bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            className="relative bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5 overflow-hidden"
+            style={{
+              boxShadow:
+                "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
+              borderColor: g.flag ? "rgba(255,56,56,0.35)" : undefined,
+            }}
           >
+            {/* Accent stripe on flagged row. */}
+            {g.flag ? (
+              <span
+                aria-hidden
+                className="absolute left-0 top-0 bottom-0 w-[3px]"
+                style={{ background: COLORS.high }}
+              />
+            ) : null}
             {g.icon}
             <div className="flex-1 min-w-0">
               <p className="font-bold text-gray-900 leading-tight" style={{ fontSize: "11px" }}>
                 {g.name}
               </p>
-              <p className="text-gray-500 leading-snug mt-0.5" style={{ fontSize: "9px" }}>
+              <p
+                className="text-gray-500 leading-snug mt-0.5 flex items-center gap-1.5"
+                style={{ fontSize: "9px" }}
+              >
+                {g.live && <EqBars />}
                 {g.detail}
               </p>
             </div>
             {g.flag ? (
               <span
-                className="inline-flex items-center gap-1 font-bold rounded-full px-2"
+                className="inline-flex items-center gap-1 font-bold rounded-full px-2 mock-anim-breathe"
                 style={{ background: COLORS.high, color: "white", fontSize: "9px", height: "18px" }}
               >
                 <span className="block w-1.5 h-1.5 rounded-full bg-white" />
@@ -145,9 +208,17 @@ export function GamesScreenMock({
             ) : (
               <span
                 className="inline-flex items-center gap-1 font-semibold rounded-full px-2"
-                style={{ background: "#EFF6FF", color: COLORS.redDeep, fontSize: "9px", height: "18px" }}
+                style={{
+                  background: "#EFF6FF",
+                  color: COLORS.redDeep,
+                  fontSize: "9px",
+                  height: "18px",
+                }}
               >
-                <span className="block w-1.5 h-1.5 rounded-full" style={{ background: COLORS.low }} />
+                <span
+                  className="block w-1.5 h-1.5 rounded-full mock-anim-breathe"
+                  style={{ background: COLORS.low }}
+                />
                 Watching
               </span>
             )}
@@ -155,12 +226,7 @@ export function GamesScreenMock({
         ))}
       </div>
 
-      <p
-        className="text-center mt-3 px-4 font-semibold leading-snug"
-        style={{ color: COLORS.textMuted, fontSize: "10px" }}
-      >
-        We see what your child sees — in real time.
-      </p>
+      <FooterPill text="Real-time · Always on" />
 
       <BottomNav activeTab="Activity" />
     </PhoneFrame>

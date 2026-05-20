@@ -220,10 +220,39 @@ export function AlertsForDangers() {
                 <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] w-full">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <div className="flex justify-center lg:justify-end">
-                      {renderMock(
-                        activeIndex,
-                        "transition-opacity duration-200 ease-in-out",
-                      )}
+                      {/* All 5 mocks render into the same grid cell and we
+                          cross-fade by toggling opacity per activeIndex.
+                          Avoids the hard unmount/mount that made the
+                          previous version pop. `pointer-events-none` on
+                          inactive layers prevents stray click targets. */}
+                      <div className="relative grid isolate">
+                        {/* Soft tinted glow behind the phone — anchors it
+                            in space and reads premium. -z-10 keeps it below
+                            the bezel; pointer-events-none keeps it inert. */}
+                        <div
+                          aria-hidden
+                          className="absolute -inset-10 -z-10 pointer-events-none rounded-[48%]"
+                          style={{
+                            background:
+                              "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(37,99,235,0.22), rgba(37,99,235,0.05) 55%, transparent 75%)",
+                            filter: "blur(8px)",
+                          }}
+                        />
+                        {FEATURES.map((_, i) => (
+                          <div
+                            key={i}
+                            className="col-start-1 row-start-1 transition-opacity duration-500 ease-in-out"
+                            style={{
+                              opacity: i === activeIndex ? 1 : 0,
+                              pointerEvents:
+                                i === activeIndex ? "auto" : "none",
+                            }}
+                            aria-hidden={i !== activeIndex}
+                          >
+                            {renderMock(i)}
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
                     <div className="flex flex-col gap-3 lg:gap-4">

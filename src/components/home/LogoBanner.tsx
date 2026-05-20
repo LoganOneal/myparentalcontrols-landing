@@ -28,7 +28,6 @@ const PLATFORMS: Platform[] = [
   { name: "Roblox", src: "/images/platforms/wordmarks-clean/roblox.svg" },
   { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png" },
   { name: "Minecraft", src: "/images/platforms/wordmarks-clean/minecraft.svg" },
-  { name: "Grand Theft Auto V", src: "/images/platforms/games/gta-v.png", rawColor: true },
   { name: "Call of Duty", src: "/images/platforms/games/call-of-duty.svg" },
   { name: "Valorant", src: "/images/platforms/games/valorant.svg" },
   { name: "League of Legends", src: "/images/platforms/games/league-of-legends.svg" },

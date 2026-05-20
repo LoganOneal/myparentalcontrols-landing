@@ -257,6 +257,85 @@
 }
 .animate-hero-rec-pulse { animation: hero-rec-pulse 1.3s ease-in-out infinite; }
 
+/* ------------------------------------------------------------------------
+ * AlertsForDangers mockup ambient motion
+ *
+ * Subtle, infinite CSS animations layered onto the static phone mocks so
+ * they read as live screens rather than screenshots. All scroll-perf safe
+ * (transform/opacity only, no layout properties). Each one is opt-in via
+ * `.mock-anim-*` utility classes so individual screens can pick what they
+ * need without coupling.
+ * ----------------------------------------------------------------------- */
+
+/* Slow vertical breathing for a REC badge or "Live" pill. */
+@keyframes mock-breathe {
+  0%, 100% { opacity: 1;    transform: scale(1); }
+  50%      { opacity: 0.65; transform: scale(0.96); }
+}
+.mock-anim-breathe { animation: mock-breathe 1.6s ease-in-out infinite; transform-origin: center; }
+
+/* Shimmer sweep — animates a translucent stripe across an element. Apply
+   to a child that's `position:absolute inset-0` over the row you want to
+   highlight (the recent-scan row, in particular). */
+@keyframes mock-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(220%); }
+}
+.mock-anim-shimmer {
+  animation: mock-shimmer 2.4s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(37, 99, 235, 0.10) 50%,
+    transparent 100%
+  );
+}
+
+/* Equalizer bar — same shape as hero-wave-bar but tuned tighter for the
+   inline "voice live" indicator inside the mocks. */
+@keyframes mock-eq-bar {
+  0%, 100% { transform: scaleY(0.35); }
+  50%      { transform: scaleY(1); }
+}
+.mock-anim-eq-bar {
+  animation: mock-eq-bar 0.9s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Sync spinner — slow rotation for the "Synced" device indicator. */
+@keyframes mock-spin {
+  to { transform: rotate(360deg); }
+}
+.mock-anim-spin {
+  animation: mock-spin 3.5s linear infinite;
+  transform-origin: center;
+}
+
+/* Number-tick — bump up + fade-cross when a value increments. Used on the
+   stat strip live counters. Combined with a `key` prop on the React node
+   so a fresh element mounts and the animation replays. */
+@keyframes mock-tick {
+  0%   { transform: translateY(-6px); opacity: 0; }
+  60%  { transform: translateY(0);    opacity: 1; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+.mock-anim-tick { animation: mock-tick 0.45s ease-out both; }
+
+/* Slide-in entry for the AI threat badge — overshoot bounce. */
+@keyframes mock-slide-in {
+  0%   { transform: translateX(20px) scale(0.85); opacity: 0; }
+  60%  { transform: translateX(-2px) scale(1.04); opacity: 1; }
+  100% { transform: translateX(0)    scale(1);    opacity: 1; }
+}
+.mock-anim-slide-in { animation: mock-slide-in 0.7s cubic-bezier(.4,1.4,.5,1) both; }
+
+/* Gentle blue glow that pulses behind/around the live-scan pill. */
+@keyframes mock-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0    rgba(37, 99, 235, 0.30); }
+  50%      { box-shadow: 0 0 0 6px  rgba(37, 99, 235, 0); }
+}
+.mock-anim-glow-pulse { animation: mock-glow-pulse 1.8s ease-out infinite; }
+
 /* Legal / prose styles — content rendered inside .prose-cal gets browser-default-like styling, scaled */
 .prose-cal h1 {
   font-size: 2.25rem;

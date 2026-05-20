@@ -80,148 +80,280 @@ export function PhoneFrame({
   );
 }
 
+/**
+ * iOS-style status bar — refined glyphs (4 stepped signal dots, two-arc wifi,
+ * battery with cap nub and 78% fill). Keeps the 10px scale of the rest of
+ * the phone but reads as a real device, not a mock.
+ */
 export function StatusBarRow() {
   return (
     <div
       className="flex items-center justify-between text-white px-1"
-      style={{ fontSize: "10px" }}
+      style={{ fontSize: "10px", letterSpacing: "0.02em" }}
     >
-      <span className="font-semibold">9:41</span>
-      <span className="flex items-center gap-1 opacity-90" aria-hidden>
-        <svg width="12" height="8" viewBox="0 0 12 8">
-          <rect x="0" y="5" width="2" height="3" fill="white" />
-          <rect x="3" y="3" width="2" height="5" fill="white" />
-          <rect x="6" y="1" width="2" height="7" fill="white" />
-          <rect x="9" y="0" width="2" height="8" fill="white" />
+      <span className="font-semibold tabular-nums">9:41</span>
+      <span className="flex items-center gap-[5px]" aria-hidden>
+        {/* Signal — 4 rounded bars stepping up. */}
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="white">
+          <rect x="0" y="7" width="2.4" height="3" rx="0.6" />
+          <rect x="3.4" y="5" width="2.4" height="5" rx="0.6" />
+          <rect x="6.8" y="3" width="2.4" height="7" rx="0.6" />
+          <rect x="10.2" y="1" width="2.4" height="9" rx="0.6" />
         </svg>
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="white">
-          <path d="M6 0C3.5 0 1.3 1 0 2.5L1.5 4C2.6 2.9 4.2 2.2 6 2.2c1.8 0 3.4.7 4.5 1.8L12 2.5C10.7 1 8.5 0 6 0z" />
+        {/* WiFi — three nested arcs + dot. */}
+        <svg width="13" height="10" viewBox="0 0 13 10" fill="white">
+          <path d="M6.5 0a10 10 0 0 0-6.5 2.4l1 1.1a8.5 8.5 0 0 1 11 0l1-1.1A10 10 0 0 0 6.5 0z" />
+          <path d="M6.5 3.2a6.5 6.5 0 0 0-4.2 1.5l1 1.1a5 5 0 0 1 6.4 0l1-1.1a6.5 6.5 0 0 0-4.2-1.5z" />
+          <circle cx="6.5" cy="8.4" r="1.3" />
         </svg>
-        <svg width="16" height="8" viewBox="0 0 16 8">
+        {/* Battery — body, cap nub, ~78% fill. */}
+        <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden>
           <rect
-            x="0"
-            y="0"
-            width="14"
-            height="8"
-            rx="2"
+            x="0.5"
+            y="0.5"
+            width="18"
+            height="9"
+            rx="2.2"
             fill="none"
             stroke="white"
             strokeWidth="1"
+            opacity="0.85"
           />
-          <rect x="2" y="2" width="9" height="4" fill="white" />
+          <rect x="19.5" y="3.2" width="1.6" height="3.6" rx="0.5" fill="white" opacity="0.85" />
+          <rect x="2" y="2" width="14" height="6" rx="1.3" fill="white" />
         </svg>
       </span>
     </div>
   );
 }
 
+/**
+ * Round avatar — gradient circle with optional monogram letter centered on
+ * top. The monogram (e.g. "L" for Lily) is what reads as "real user", not
+ * a placeholder. The white ring is rendered as an inline border so the
+ * monogram inherits it correctly when the parent applies shadow.
+ */
 export function Avatar({
   from,
   to,
+  initial,
   className = "",
 }: {
   from: string;
   to: string;
+  initial?: string;
   className?: string;
 }) {
   return (
     <span
-      className={`inline-block rounded-full ${className}`}
+      className={`inline-flex items-center justify-center rounded-full text-white font-bold ${className}`}
       style={{
         background: `linear-gradient(135deg, ${from}, ${to})`,
         boxShadow: "0 0 0 2px white",
+        fontSize: "11px",
+        letterSpacing: "0.02em",
+        textShadow: "0 1px 0 rgba(0,0,0,0.12)",
       }}
       aria-hidden
-    />
+    >
+      {initial}
+    </span>
   );
 }
 
+/** Inline SVG dot-pattern URL used as a low-opacity texture in HeroHeader.
+ *  Single source of truth so every mock's hero gets the same texture. */
+const DOT_PATTERN_BG =
+  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='1.2' cy='1.2' r='1.2' fill='white' fill-opacity='0.07'/></svg>\")";
+
 /**
- * Red gradient header — branded MPC hero on every mock. iconNode is the
- * large white icon shown in the rounded badge; title/subtitle are the
- * main headline + supporting line.
+ * Blue gradient header — branded MPC hero on every mock.
+ *
+ * Layered backgrounds (top → bottom):
+ *   1. Radial highlight at top-center for premium "lit from above" feel
+ *   2. Low-opacity dot pattern for texture (vs a flat gradient)
+ *   3. 3-stop linear gradient base
+ *
+ * `iconNode` is the large white icon in the rounded badge; `title`/`subtitle`
+ * are the main headline + supporting line. `avatarInitial` defaults to "L"
+ * (Lily, the canonical example child) so every mock looks like the same
+ * family in one app.
  */
 export function HeroHeader({
   title,
   subtitle,
   iconNode,
   badgeCount,
+  avatarInitial = "L",
 }: {
   title: React.ReactNode;
   subtitle: React.ReactNode;
   iconNode: React.ReactNode;
   badgeCount?: number;
+  avatarInitial?: string;
 }) {
   return (
     <div
-      className="relative px-4 pt-3 pb-10"
+      className="relative px-4 pt-3 pb-10 overflow-hidden"
       style={{
-        background: `linear-gradient(180deg, ${COLORS.red} 0%, ${COLORS.redDeep} 100%)`,
+        background: `
+          radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,255,255,0.25), transparent 70%),
+          linear-gradient(180deg, ${COLORS.red} 0%, ${COLORS.redDeep} 55%, ${COLORS.redDark} 100%)
+        `,
       }}
     >
-      <StatusBarRow />
-      <div className="flex items-center justify-between mt-3">
-        <span
-          className="inline-flex items-center justify-center w-9 h-9 rounded-full"
-          style={{
-            background: "rgba(255,255,255,0.18)",
-            boxShadow: "0 0 0 2px white",
-          }}
-          aria-hidden
-        >
-          <Avatar from="#FFD58A" to="#FF8AA1" className="w-7 h-7" />
-        </span>
-        <div className="relative">
-          <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-md">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill={COLORS.text}
-              aria-hidden
-            >
-              <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zM18 16v-5a6 6 0 0 0-5-5.91V4a1 1 0 1 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z" />
-            </svg>
-          </span>
-          {badgeCount !== undefined && badgeCount > 0 && (
-            <span
-              className="absolute -top-1 -right-1 font-bold text-white rounded-full flex items-center justify-center"
-              style={{
-                background: COLORS.redDark,
-                fontSize: "9px",
-                minWidth: 16,
-                height: 16,
-                padding: "0 4px",
-              }}
-            >
-              {badgeCount}
+      {/* Texture overlay — sits above the gradient, below all interactive
+          children. Pointer-events-none so it doesn't intercept anything. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{ backgroundImage: DOT_PATTERN_BG }}
+      />
+
+      {/* Content wrapper sits above the texture. */}
+      <div className="relative">
+        <StatusBarRow />
+        <div className="flex items-center justify-between mt-3">
+          <Avatar
+            from="#FFD58A"
+            to="#FF8AA1"
+            initial={avatarInitial}
+            className="w-9 h-9"
+          />
+          <div className="relative">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill={COLORS.text}
+                aria-hidden
+              >
+                <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zM18 16v-5a6 6 0 0 0-5-5.91V4a1 1 0 1 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z" />
+              </svg>
             </span>
-          )}
+            {badgeCount !== undefined && badgeCount > 0 && (
+              <span
+                className="absolute -top-1 -right-1 font-bold text-white rounded-full flex items-center justify-center ring-2 ring-white/80"
+                style={{
+                  background: COLORS.high,
+                  fontSize: "9px",
+                  minWidth: 16,
+                  height: 16,
+                  padding: "0 4px",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.25)",
+                }}
+              >
+                {badgeCount}
+              </span>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center mt-3">
-        <span
-          className="inline-flex items-center justify-center w-14 h-14 rounded-2xl"
+        <div className="flex justify-center mt-3">
+          <span
+            className="inline-flex items-center justify-center w-14 h-14 rounded-2xl backdrop-blur-sm"
+            style={{
+              background: "rgba(255,255,255,0.18)",
+              boxShadow:
+                "inset 0 1px 0 rgba(255,255,255,0.35), 0 0 0 1.5px rgba(255,255,255,0.85), 0 8px 20px rgba(0,0,0,0.18)",
+            }}
+          >
+            {iconNode}
+          </span>
+        </div>
+        <h2
+          className="text-center text-white font-bold leading-[1.05] mt-3 tracking-tight"
           style={{
-            background: "rgba(255,255,255,0.15)",
-            boxShadow: "0 0 0 2px rgba(255,255,255,0.85)",
+            fontSize: "21px",
+            textShadow: "0 1px 0 rgba(0,0,0,0.10)",
           }}
         >
-          {iconNode}
-        </span>
+          {title}
+        </h2>
+        <p
+          className="text-center text-white/85 mt-2"
+          style={{ fontSize: "11px", lineHeight: "1.4" }}
+        >
+          {subtitle}
+        </p>
       </div>
-      <h2
-        className="text-center text-white font-bold leading-[1.1] mt-3"
-        style={{ fontSize: "20px" }}
+    </div>
+  );
+}
+
+/** Inline glyphs for the bottom-nav tabs. Hand-tuned Lucide-style paths
+ *  so they render identically on every OS (emoji rendering is a tell). */
+function NavGlyph({ kind }: { kind: "Alerts" | "Activity" | "Children" | "Settings" }) {
+  if (kind === "Alerts") {
+    return (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+      </svg>
+    );
+  }
+  if (kind === "Activity") {
+    return (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      </svg>
+    );
+  }
+  if (kind === "Children") {
+    return (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    );
+  }
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </svg>
+  );
+}
+
+/**
+ * Compact pill anchored above the bottom nav — replaces the placeholder
+ * italic tagline that used to live at the bottom of each mock. The leading
+ * dot can be turned off (`dot=false`) for variants that don't need a
+ * live-status feel. `tone` swaps the dot color for context.
+ */
+export function FooterPill({
+  text,
+  dot = true,
+  tone = "live",
+}: {
+  text: string;
+  dot?: boolean;
+  tone?: "live" | "alert" | "neutral";
+}) {
+  const dotColor =
+    tone === "alert" ? COLORS.high : tone === "neutral" ? COLORS.textMuted : COLORS.low;
+  return (
+    <div className="mt-3 mb-2 flex justify-center px-4">
+      <span
+        className="inline-flex items-center gap-1.5 font-semibold rounded-full px-2.5 py-1"
+        style={{
+          background: "#F1F5F9",
+          color: COLORS.text,
+          fontSize: "9px",
+          letterSpacing: "0.04em",
+        }}
       >
-        {title}
-      </h2>
-      <p
-        className="text-center text-white/90 mt-2"
-        style={{ fontSize: "11px", lineHeight: "1.4" }}
-      >
-        {subtitle}
-      </p>
+        {dot && (
+          <span
+            aria-hidden
+            className="block w-1.5 h-1.5 rounded-full mock-anim-breathe"
+            style={{ background: dotColor }}
+          />
+        )}
+        {text}
+      </span>
     </div>
   );
 }
@@ -231,44 +363,42 @@ export function BottomNav({
 }: {
   activeTab?: "Alerts" | "Activity" | "Children" | "Settings";
 }) {
-  const tabs: Array<{
-    icon: string;
-    label: "Alerts" | "Activity" | "Children" | "Settings";
-  }> = [
-    { icon: "🚨", label: "Alerts" },
-    { icon: "📊", label: "Activity" },
-    { icon: "👨‍👩‍👧", label: "Children" },
-    { icon: "⚙", label: "Settings" },
+  const tabs: Array<"Alerts" | "Activity" | "Children" | "Settings"> = [
+    "Alerts",
+    "Activity",
+    "Children",
+    "Settings",
   ];
   return (
-    <>
-      <div className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-2">
-        {tabs.map((t) => {
-          const active = t.label === activeTab;
-          return (
-            <div
-              key={t.label}
-              className="flex flex-col items-center gap-0.5"
-              style={{ color: active ? COLORS.red : COLORS.textMuted }}
+    <div
+      className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-2 bg-white/95 backdrop-blur"
+      style={{ boxShadow: "0 -4px 12px rgba(15,23,42,0.04)" }}
+    >
+      {tabs.map((label) => {
+        const active = label === activeTab;
+        return (
+          <div
+            key={label}
+            className="flex flex-col items-center gap-[3px] relative"
+            style={{ color: active ? COLORS.red : COLORS.textMuted }}
+          >
+            <NavGlyph kind={label} />
+            <span
+              className="font-semibold leading-none"
+              style={{ fontSize: "9px", letterSpacing: "0.02em" }}
             >
-              <span style={{ fontSize: "14px" }}>{t.icon}</span>
+              {label}
+            </span>
+            {active && (
               <span
-                className="font-semibold leading-none"
-                style={{ fontSize: "9px" }}
-              >
-                {t.label}
-              </span>
-              {active && (
-                <span
-                  className="block w-6 h-[3px] rounded-full mt-0.5"
-                  style={{ background: COLORS.red }}
-                />
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </>
+                className="block w-6 h-[3px] rounded-full"
+                style={{ background: COLORS.red }}
+              />
+            )}
+          </div>
+        );
+      })}
+    </div>
   );
 }
 

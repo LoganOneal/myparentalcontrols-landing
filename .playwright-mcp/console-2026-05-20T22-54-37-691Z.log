@@ -6,3 +6,1312 @@
 [    2362ms] [LOG] [Fast Refresh] done in 247ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
 [    8000ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
 [    8069ms] [LOG] [Fast Refresh] done in 171ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  232709ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  233435ms] [LOG] [Fast Refresh] done in 176ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  233561ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  234034ms] [LOG] [Fast Refresh] done in 584ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  237824ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  238481ms] [LOG] [Fast Refresh] done in 191ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  554163ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  554342ms] [LOG] [Fast Refresh] done in 279ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  555097ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  555229ms] [LOG] [Fast Refresh] done in 248ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  560227ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  560950ms] [LOG] [Fast Refresh] done in 632ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  561326ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  561327ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  561336ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  561473ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  561478ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  561574ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  568576ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  568832ms] [LOG] [Fast Refresh] done in 266ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  600094ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  600301ms] [LOG] [Fast Refresh] done in 307ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  603238ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  604779ms] [LOG] [Fast Refresh] done in 1644ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  605093ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  605529ms] [LOG] [Fast Refresh] done in 544ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  606252ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  609583ms] [LOG] [Fast Refresh] done in 3345ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  610537ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  612907ms] [LOG] [Fast Refresh] done in 2474ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  613339ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  613619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  613619ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  613734ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  613776ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  613803ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  634817ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  635862ms] [LOG] [Fast Refresh] done in 1000ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636200ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636219ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636293ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  636420ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636422ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636593ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636631ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636692ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  636784ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  636827ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  658631ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  659422ms] [LOG] [Fast Refresh] done in 218ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  665760ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  666105ms] [LOG] [Fast Refresh] done in 453ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  666400ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  667630ms] [LOG] [Fast Refresh] done in 1243ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  667783ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  667827ms] [LOG] [Fast Refresh] done in 145ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  667960ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  668116ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  668149ms] [LOG] [Fast Refresh] done in 141ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  668285ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  709183ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  710136ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  710148ms] [LOG] [Fast Refresh] done in 915ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  710260ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  710282ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  710294ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  769881ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  770501ms] [LOG] [Fast Refresh] done in 467ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  770720ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  770819ms] [LOG] [Fast Refresh] done in 202ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  770869ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  771010ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  771143ms] [LOG] [Fast Refresh] done in 238ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  771236ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  779909ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  780277ms] [LOG] [Fast Refresh] done in 326ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  784493ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  784726ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  784906ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  784986ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785135ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785140ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  785243ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785347ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785402ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  785426ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785476ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785552ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785592ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785661ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785696ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785779ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785871ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  785902ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786017ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  786383ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786390ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786409ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786496ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  786667ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786762ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786820ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  786906ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  786944ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787009ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787094ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787127ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  787193ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787268ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787384ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787416ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787524ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787546ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  787645ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787720ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787801ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787876ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  787955ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788034ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788123ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788259ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  788351ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788357ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788458ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  788502ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788585ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788618ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  788681ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788792ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788825ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788921ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  788952ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  789054ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  789069ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  789209ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  789334ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  805817ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  805824ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  805837ms] [ERROR] ./src/components/home/GamesScreenMock.tsx:239:10
+the name `FooterPill` is defined multiple times
+  237 |  *  italic tagline. Exported only to siblings via re-import isn't needed
+  238 |  *  since each mock owns its own copy of the wording. */
+> 239 | function FooterPill({ text }: { text: string }) {
+      |          ^^^^^^^^^^
+  240 |   return (
+  241 |     <div className="mt-3 mb-2 flex justify-center px-4">
+  242 |       <span
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/GamesScreenMock.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Client Component Browser]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/GamesScreenMock.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Client Component SSR]
+    ./src/components/home/AlertsForDangers.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  805934ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  806732ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  806733ms] [LOG] [Fast Refresh] done in 13ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  806969ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  807903ms] [LOG] [Fast Refresh] done in 1034ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  815051ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  815075ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  816918ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  816934ms] [LOG] [Fast Refresh] done in 117ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  827109ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  827326ms] [LOG] [Fast Refresh] done in 257ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  862301ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  862870ms] [LOG] [Fast Refresh] done in 506ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  863183ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  863221ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  863276ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  863543ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  863578ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  863634ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  875675ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  875758ms] [LOG] [Fast Refresh] done in 183ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  903901ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  904613ms] [LOG] [Fast Refresh] done in 679ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  904904ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  905127ms] [LOG] [Fast Refresh] done in 330ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  905159ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff2:0
+[  905411ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  905575ms] [LOG] [Fast Refresh] done in 265ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  905824ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  905923ms] [LOG] [Fast Refresh] done in 205ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  906026ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/fonts/Moderat-Black.woff:0
+[  912461ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  912802ms] [LOG] [Fast Refresh] done in 444ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  913633ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  913931ms] [LOG] [Fast Refresh] done in 418ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  914163ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  914184ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  915163ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  915334ms] [LOG] [Fast Refresh] done in 275ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  939685ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  939881ms] [LOG] [Fast Refresh] done in 245ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  967107ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  967843ms] [LOG] [Fast Refresh] done in 843ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
