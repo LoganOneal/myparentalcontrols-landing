@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AlertsScreenMock } from "@/components/home/AlertsScreenMock";
-import { PlatformsScreenMock } from "@/components/home/PlatformsScreenMock";
-import { CategoriesScreenMock } from "@/components/home/CategoriesScreenMock";
-import { CapturedScreenMock } from "@/components/home/CapturedScreenMock";
+import { GamesScreenMock } from "@/components/home/GamesScreenMock";
+import { DevicesScreenMock } from "@/components/home/DevicesScreenMock";
+import { AIScannerScreenMock } from "@/components/home/AIScannerScreenMock";
+import { EvidenceScreenMock } from "@/components/home/EvidenceScreenMock";
+import { BlocksScreenMock } from "@/components/home/BlocksScreenMock";
 
 /**
  * "Get alerts for dangers — online and in real life"
@@ -19,34 +20,34 @@ import { CapturedScreenMock } from "@/components/home/CapturedScreenMock";
 type Feature = {
   title: string;
   description: string;
-  image: string;
 };
 
 const FEATURES: Feature[] = [
   {
-    title: "Real-time alerts the moment a predator makes contact",
-    description:
-      "MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.",
-    image: "/images/features/alerts.svg",
-  },
-  {
-    title: "Coverage across 40+ apps, games, and chat platforms",
-    description:
-      "One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.",
-    image: "/images/features/platforms.svg",
-  },
-  {
     title:
-      "Catches self-harm, sexual content, and bullying — not just predators",
+      "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind",
     description:
-      "The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.",
-    image: "/images/features/categories.svg",
+      "Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time.",
   },
   {
-    title: "Sees encrypted and disappearing messages on the device",
+    title: "One dashboard. Every device your child uses.",
     description:
-      "End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.",
-    image: "/images/features/captured.svg",
+      "Lily's PC, the family iMac, her iPhone 14 — every device your child touches reports to a single dashboard on your phone. No gaps, no apps to switch between, no device we can't see.",
+  },
+  {
+    title: "AI that only pings you when something is actually wrong",
+    description:
+      "Our AI reads tens of thousands of messages a week per child — and stays silent until it sees a real threat. Grooming language, sextortion, suicidal ideation. One alert that matters, not fifty you'd ignore.",
+  },
+  {
+    title: "Receipts. So you know exactly what happened.",
+    description:
+      "We log every minute played, capture every chat, transcribe voice calls, and start screen-recording the moment a flag is raised. When you sit down to talk with your kid, you don't bluff — you have the timeline.",
+  },
+  {
+    title: "Block any app, any site, on every device — in one tap.",
+    description:
+      "Roblox at 2 AM? Tap and gone. Discord during school hours? Pre-scheduled. The same dashboard that watches everything also locks it down — instantly, on every device.",
   },
 ];
 
@@ -122,12 +123,13 @@ export function AlertsForDangers() {
             <div className="relative mx-auto lg:mx-0 flex flex-col items-center gap-6 lg:ml-auto">
               {(() => {
                 const mockClass =
-                  "w-[305px] sm:w-[350px] transition-opacity duration-300 ease-in-out";
+                  "w-[320px] sm:w-[380px] lg:w-[440px] transition-opacity duration-300 ease-in-out";
                 const mockStyle = { opacity: imgOpacity };
-                if (activeIndex === 0) return <AlertsScreenMock className={mockClass} style={mockStyle} />;
-                if (activeIndex === 1) return <PlatformsScreenMock className={mockClass} style={mockStyle} />;
-                if (activeIndex === 2) return <CategoriesScreenMock className={mockClass} style={mockStyle} />;
-                return <CapturedScreenMock className={mockClass} style={mockStyle} />;
+                if (activeIndex === 0) return <GamesScreenMock className={mockClass} style={mockStyle} />;
+                if (activeIndex === 1) return <DevicesScreenMock className={mockClass} style={mockStyle} />;
+                if (activeIndex === 2) return <AIScannerScreenMock className={mockClass} style={mockStyle} />;
+                if (activeIndex === 3) return <EvidenceScreenMock className={mockClass} style={mockStyle} />;
+                return <BlocksScreenMock className={mockClass} style={mockStyle} />;
               })()}
               <div className="flex items-center justify-center gap-2 mt-2">
                 {FEATURES.map((f, i) => (
@@ -140,7 +142,7 @@ export function AlertsForDangers() {
                       resetInterval();
                     }}
                     className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                      i === activeIndex ? "bg-[#14B8A6]" : "bg-gray-300"
+                      i === activeIndex ? "bg-[#2563EB]" : "bg-gray-300"
                     }`}
                   />
                 ))}
@@ -160,7 +162,7 @@ export function AlertsForDangers() {
                     }}
                     className={`text-left cursor-pointer p-6 rounded-2xl border transition-all duration-300 ${
                       active
-                        ? "border-[#14B8A6] bg-[#F0FDFA] lg:scale-[1.02]"
+                        ? "border-[#2563EB] bg-[#EFF6FF] lg:scale-[1.02]"
                         : "border-gray-200 bg-white hover:border-gray-300"
                     }`}
                   >

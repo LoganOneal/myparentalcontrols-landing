@@ -6,14 +6,22 @@
 
 import * as React from "react";
 
+/**
+ * `red/redDeep/redDark` are vestigially named — they hold the brand/theme
+ * color used in the hero header gradient, active tab indicator, and badge
+ * counter. The site theme is Cobalt Blue, so these values are blue.
+ *
+ * `high/medium/low` stay semantic — high severity is universally red, medium
+ * amber, low green. Don't conflate the two groups.
+ */
 export const COLORS = {
-  red: "#FF3838",
-  redDeep: "#E62929",
-  redDark: "#C81515",
+  red: "#2563EB",
+  redDeep: "#1D4ED8",
+  redDark: "#1E40AF",
   high: "#FF3838",
   medium: "#F59E0B",
   low: "#22C55E",
-  pinkBg: "#FFEDED",
+  pinkBg: "#EFF6FF",
   discord: "#5865F2",
   roblox: "#E2231A",
   snapchat: "#FFFC00",
@@ -23,6 +31,13 @@ export const COLORS = {
   textMuted: "#6B7280",
 };
 
+/**
+ * Fixed-aspect-ratio iPhone frame. `aspect-[9/19.5]` matches an iPhone 14
+ * logical display (390×844 ~= 9:19.5). Combined with flex-col + mt-auto
+ * on the BottomNav, every mock renders at exactly the same width × height
+ * regardless of how much body content it has — short mocks get extra space
+ * before the bottom nav, dense mocks fit snugly.
+ */
 export function PhoneFrame({
   children,
   className = "",
@@ -34,7 +49,7 @@ export function PhoneFrame({
 }) {
   return (
     <div
-      className={`bg-white rounded-[36px] overflow-hidden shadow-2xl ring-1 ring-black/5 ${className}`}
+      className={`bg-white rounded-[36px] overflow-hidden shadow-2xl ring-1 ring-black/5 flex flex-col aspect-[9/19.5] ${className}`}
       style={style}
     >
       {children}
@@ -204,7 +219,7 @@ export function BottomNav({
   ];
   return (
     <>
-      <div className="mt-4 border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-3">
+      <div className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-3">
         {tabs.map((t) => {
           const active = t.label === activeTab;
           return (
@@ -263,6 +278,50 @@ export function PlatformBox({
           filter: "brightness(0) invert(1)",
         }}
       />
+    </span>
+  );
+}
+
+/** Colored chip with an inline laptop SVG. Same sizing convention as PlatformBox. */
+export function LaptopBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: string }) {
+  const dim = `${size * 4}px`;
+  const iconDim = `${size * 1.8}px`;
+  return (
+    <span
+      className="inline-flex items-center justify-center rounded-lg shrink-0"
+      style={{ backgroundColor: bg, width: dim, height: dim }}
+    >
+      <svg
+        width={iconDim}
+        height={iconDim}
+        viewBox="0 0 24 24"
+        fill="white"
+        aria-hidden
+      >
+        <path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v10H4V5zm-2 11h20v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1z" />
+      </svg>
+    </span>
+  );
+}
+
+/** Colored chip with an inline iPhone-style SVG. */
+export function PhoneBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: string }) {
+  const dim = `${size * 4}px`;
+  const iconDim = `${size * 1.8}px`;
+  return (
+    <span
+      className="inline-flex items-center justify-center rounded-lg shrink-0"
+      style={{ backgroundColor: bg, width: dim, height: dim }}
+    >
+      <svg
+        width={iconDim}
+        height={iconDim}
+        viewBox="0 0 24 24"
+        fill="white"
+        aria-hidden
+      >
+        <path d="M7 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7zm0 2h3v1h4V4h3v15H7V4zm5 16a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      </svg>
     </span>
   );
 }

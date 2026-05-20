@@ -1,13 +1,11 @@
 /**
- * Infinite-marquee logo banner — wide-form wordmark logos.
+ * Infinite-marquee logo banner — wide-form wordmark logos rendered at a
+ * uniform pixel height. Every source SVG was pre-processed by
+ * `scripts/normalize-wordmark-svgs.mjs` so its viewBox is tightly cropped
+ * to actual content bounds — that means rendering them all at the same
+ * height gives consistent visual scale without any per-logo tweaks.
  *
- * Most platforms use a 2:1 "ar21" wordmark sourced from vectorlogo.zone,
- * which gives uniform aspect ratios across the row. Roblox and Fortnite
- * aren't published in that format, so we use their cleanest public wordmark
- * file and let `object-fit: contain` in a 2:1 slot equalize the visual size.
- *
- * Each logo lives in a fixed-size slot with the same max-height so the
- * marquee rhythm and the per-logo visual weight stay consistent.
+ * Fortnite uses its native PNG (already a tightly-cropped wordmark).
  */
 
 import * as React from "react";
@@ -15,51 +13,38 @@ import * as React from "react";
 type Platform = {
   name: string;
   src: string;
-  /** Optional per-logo vertical-fill multiplier (0–1) when the source SVG
-   *  has unusually much (or little) internal padding. 1 = fills slot. */
-  fill?: number;
 };
 
 const PLATFORMS: Platform[] = [
-  { name: "Roblox", src: "/images/platforms/wordmarks/roblox.svg", fill: 0.75 },
-  { name: "Discord", src: "/images/platforms/wordmarks-v2/discord.svg", fill: 0.85 },
-  { name: "Minecraft", src: "/images/platforms/wordmarks-v2/minecraft.svg", fill: 0.85 },
-  { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png", fill: 0.75 },
-  { name: "Snapchat", src: "/images/platforms/wordmarks-v2/snapchat.svg", fill: 0.95 },
-  { name: "TikTok", src: "/images/platforms/wordmarks-v2/tiktok.svg", fill: 0.95 },
-  { name: "Instagram", src: "/images/platforms/wordmarks-v2/instagram.svg", fill: 0.95 },
-  { name: "YouTube", src: "/images/platforms/wordmarks-v2/youtube.svg", fill: 0.9 },
-  { name: "WhatsApp", src: "/images/platforms/wordmarks-v2/whatsapp.svg", fill: 0.85 },
-  { name: "Twitch", src: "/images/platforms/wordmarks-v2/twitch.svg", fill: 0.95 },
-  { name: "Reddit", src: "/images/platforms/wordmarks-v2/reddit.svg", fill: 0.95 },
-  { name: "Steam", src: "/images/platforms/wordmarks-v2/steam.svg", fill: 0.95 },
+  { name: "Roblox", src: "/images/platforms/wordmarks-clean/roblox.svg" },
+  { name: "Discord", src: "/images/platforms/wordmarks-clean/discord.svg" },
+  { name: "Minecraft", src: "/images/platforms/wordmarks-clean/minecraft.svg" },
+  { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png" },
+  { name: "Snapchat", src: "/images/platforms/wordmarks-clean/snapchat.svg" },
+  { name: "TikTok", src: "/images/platforms/wordmarks-clean/tiktok.svg" },
+  { name: "Instagram", src: "/images/platforms/wordmarks-clean/instagram.svg" },
+  { name: "YouTube", src: "/images/platforms/wordmarks-clean/youtube.svg" },
+  { name: "WhatsApp", src: "/images/platforms/wordmarks-clean/whatsapp.svg" },
+  { name: "Twitch", src: "/images/platforms/wordmarks-clean/twitch.svg" },
+  { name: "Reddit", src: "/images/platforms/wordmarks-clean/reddit.svg" },
+  { name: "Steam", src: "/images/platforms/wordmarks-clean/steam.svg" },
 ];
 
-function Slot({
-  name,
-  src,
-  fill = 1,
-}: Platform) {
-  // Fixed-aspect 2:1 box. Width drives the layout; height is derived from
-  // padding-bottom: 50% trick so the slot stays a perfect 2:1 even when
-  // children shrink.
+function Logo({ name, src }: Platform) {
+  // Apply grayscale + opacity as a CSS filter on the original image
+  // instead of masking the silhouette to a flat color. This preserves
+  // internal shading (Minecraft 3D blocks, YouTube's play-button contrast
+  // vs. text, Steam's gear, etc.) so each logo stays recognizable while
+  // the row still reads as a desaturated press strip.
   return (
-    <div className="shrink-0 w-[170px] sm:w-[200px] lg:w-[230px] flex items-center justify-center px-2">
-      <div
-        className="relative w-full"
-        style={{ aspectRatio: "2 / 1" }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={src}
-          alt={name}
-          className="absolute inset-0 m-auto object-contain"
-          style={{
-            maxHeight: `${fill * 100}%`,
-            maxWidth: "100%",
-          }}
-        />
-      </div>
+    <div className="flex items-center shrink-0 h-9 sm:h-10 lg:h-11">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={name}
+        className="h-full w-auto block"
+        style={{ filter: "grayscale(1) opacity(0.7)" }}
+      />
     </div>
   );
 }
@@ -69,7 +54,7 @@ function Highlight({ children }: { children: React.ReactNode }) {
   return (
     <span
       className="font-extrabold whitespace-nowrap"
-      style={{ color: "#FF3838" }}
+      style={{ color: "#2563EB" }}
     >
       {children}
     </span>
@@ -81,17 +66,18 @@ export function LogoBanner() {
   const track = [...PLATFORMS, ...PLATFORMS];
 
   return (
-    <section className="bg-white border-y border-gray-200 pt-5 lg:pt-6 pb-12 lg:pb-16 overflow-hidden">
+    <section className="bg-white border-t border-gray-200 pt-5 lg:pt-6 pb-12 lg:pb-16 overflow-hidden">
       <div className="max-w-[1100px] mx-auto px-5 lg:px-8 mb-10 sm:mb-12 text-center">
         <h2
-          className="leading-tight sm:leading-none sm:whitespace-nowrap"
           style={{
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
             fontStyle: "normal",
             fontWeight: 600,
-            fontSize: "clamp(16px, 2.2vw, 28px)",
+            fontSize: "14px",
+            lineHeight: "17px",
             color: "rgb(153, 153, 153)",
+            textTransform: "uppercase",
           }}
         >
           Watching the apps where <Highlight>predators</Highlight>,{" "}
@@ -101,14 +87,9 @@ export function LogoBanner() {
       </div>
 
       <div className="relative marquee-fade-edges">
-        <div className="flex w-max items-center animate-marquee">
+        <div className="flex w-max items-center gap-10 sm:gap-14 lg:gap-16 animate-marquee">
           {track.map((p, i) => (
-            <Slot
-              key={`${p.name}-${i}`}
-              name={p.name}
-              src={p.src}
-              fill={p.fill}
-            />
+            <Logo key={`${p.name}-${i}`} name={p.name} src={p.src} />
           ))}
         </div>
       </div>
