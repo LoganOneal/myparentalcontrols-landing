@@ -194,7 +194,7 @@ export function HeroHeader({
 }) {
   return (
     <div
-      className="relative px-4 pt-3 pb-10 overflow-hidden"
+      className="relative px-4 pt-3 pb-14 overflow-hidden"
       style={{
         background: `
           radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,255,255,0.25), transparent 70%),
@@ -271,8 +271,8 @@ export function HeroHeader({
           {title}
         </h2>
         <p
-          className="text-center text-white/85 mt-2"
-          style={{ fontSize: "11px", lineHeight: "1.4" }}
+          className="text-center text-white/85 mt-2.5"
+          style={{ fontSize: "11px", lineHeight: "1.5" }}
         >
           {subtitle}
         </p>

@@ -145,38 +145,10 @@ export function Hero() {
       style={{ backgroundColor: "#F1F2F4" }}
     >
       <div className="max-w-[1280px] mx-auto px-5 lg:px-8 pt-10 lg:pt-16 pb-10 lg:pb-16 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-6 lg:gap-12 items-center">
-        {/* Left column — text + CTA */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 pb-2 lg:pb-20">
-          {/* Eyebrow trust pill */}
-          <div className="flex items-center h-[42.5px] border border-[#c6c6c68f] rounded-full p-1.5 pr-3 text-xs gap-2 w-fit bg-white/80">
-            <div className="flex -space-x-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/used-by-1.png"
-                alt=""
-                aria-hidden
-                className="w-[30px] h-[30px] rounded-full border-2 border-white"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/used-by-2.png"
-                alt=""
-                aria-hidden
-                className="w-[30px] h-[30px] rounded-full border-2 border-white"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/used-by-3.png"
-                alt=""
-                aria-hidden
-                className="w-[30px] h-[30px] rounded-full border-2 border-white"
-              />
-            </div>
-            <div className="font-medium sm:text-sm text-xs">
-              12,000+ parents already protected
-            </div>
-          </div>
-
+        {/* Left column — text + CTA. No bottom padding: the grid's
+            items-center then vertically centers this column against the
+            right-column imagery (which is the taller of the two). */}
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6">
           {/* H1 — threat-first. Desktop spec from design: Moderat-Black,
               56px / 67px line-height, rendered bold. Mobile/tablet scale
               down proportionally. */}

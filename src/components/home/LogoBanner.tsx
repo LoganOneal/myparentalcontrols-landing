@@ -17,6 +17,9 @@ type Platform = {
   // white-on-dark (e.g. the official GTA V PNG has a baked-in black
   // background; inverting it produces a solid white block).
   rawColor?: boolean;
+  // Render ~20% taller than the row default — useful for marks that read
+  // visually small relative to peers at the standard height.
+  boost?: boolean;
 };
 
 // High-risk video games for children based on commonly flagged concerns:
@@ -29,7 +32,7 @@ const PLATFORMS: Platform[] = [
   { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png" },
   { name: "Minecraft", src: "/images/platforms/wordmarks-clean/minecraft.svg" },
   { name: "Call of Duty", src: "/images/platforms/games/call-of-duty.svg" },
-  { name: "Valorant", src: "/images/platforms/games/valorant.svg" },
+  { name: "Valorant", src: "/images/platforms/games/valorant.svg", boost: true },
   { name: "League of Legends", src: "/images/platforms/games/league-of-legends.svg" },
   { name: "VRChat", src: "/images/platforms/games/vrchat.svg" },
   { name: "Counter-Strike", src: "/images/platforms/games/counter-strike.svg" },
@@ -39,7 +42,7 @@ const PLATFORMS: Platform[] = [
   { name: "Steam", src: "/images/platforms/wordmarks-clean/steam.svg" },
 ];
 
-function Logo({ name, src, rawColor }: Platform) {
+function Logo({ name, src, rawColor, boost }: Platform) {
   // On the dark #121212 banner we flatten each logo to a single light tone
   // so they read uniformly as a desaturated press strip. brightness(0)
   // collapses all color to black, invert(1) flips it to white, and the
@@ -50,12 +53,13 @@ function Logo({ name, src, rawColor }: Platform) {
   // screen` knock the black out against the dark banner — only the white
   // letterforms remain visible. We also let those assets render at double
   // height since stacked square logos read poorly at row height.
+  const heightClass = rawColor
+    ? "h-16 sm:h-20 lg:h-24"
+    : boost
+      ? "h-11 sm:h-12 lg:h-14"
+      : "h-9 sm:h-10 lg:h-11";
   return (
-    <div
-      className={`flex items-center shrink-0 ${
-        rawColor ? "h-16 sm:h-20 lg:h-24" : "h-9 sm:h-10 lg:h-11"
-      }`}
-    >
+    <div className={`flex items-center shrink-0 ${heightClass}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
@@ -88,17 +92,17 @@ export function LogoBanner() {
   const track = [...PLATFORMS, ...PLATFORMS];
 
   return (
-    <section className="border-t border-white/10 pt-5 lg:pt-6 pb-12 lg:pb-16 overflow-hidden" style={{ backgroundColor: "#121212" }}>
-      <div className="max-w-[1100px] mx-auto px-5 lg:px-8 mb-10 sm:mb-12 text-center">
+    <section className="border-t border-white/10 pt-5 lg:pt-6 pb-6 lg:pb-8 overflow-hidden" style={{ backgroundColor: "#121212" }}>
+      <div className="max-w-[1100px] mx-auto px-5 lg:px-8 mb-8 sm:mb-10 text-center">
         <h2
           style={{
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
             fontStyle: "normal",
             fontWeight: 600,
-            fontSize: "14px",
-            lineHeight: "17px",
-            color: "rgb(170, 170, 170)",
+            fontSize: "16px",
+            lineHeight: "20px",
+            color: "rgb(255, 255, 255)",
             textTransform: "uppercase",
           }}
         >

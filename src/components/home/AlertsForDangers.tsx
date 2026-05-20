@@ -33,6 +33,11 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
+    title: "Receipts. So you know exactly what happened.",
+    description:
+      "We log every minute played, capture every chat, transcribe voice calls, and start screen-recording the moment a flag is raised. When you sit down to talk with your kid, you don't bluff — you have the timeline.",
+  },
+  {
     title:
       "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind",
     description:
@@ -49,11 +54,6 @@ const FEATURES: Feature[] = [
       "Our AI reads tens of thousands of messages a week per child — and stays silent until it sees a real threat. Grooming language, sextortion, suicidal ideation. One alert that matters, not fifty you'd ignore.",
   },
   {
-    title: "Receipts. So you know exactly what happened.",
-    description:
-      "We log every minute played, capture every chat, transcribe voice calls, and start screen-recording the moment a flag is raised. When you sit down to talk with your kid, you don't bluff — you have the timeline.",
-  },
-  {
     title: "Block any app, any site, on every device — in one tap.",
     description:
       "Roblox at 2 AM? Tap and gone. Discord during school hours? Pre-scheduled. The same dashboard that watches everything also locks it down — instantly, on every device.",
@@ -66,13 +66,13 @@ const FEATURES: Feature[] = [
  *  and the lib's content-box padding breaks layout). */
 function renderMock(idx: number, className = "", bare = false) {
   if (idx === 0)
-    return <GamesScreenMock className={className} bare={bare} />;
-  if (idx === 1)
-    return <DevicesScreenMock className={className} bare={bare} />;
-  if (idx === 2)
-    return <AIScannerScreenMock className={className} bare={bare} />;
-  if (idx === 3)
     return <EvidenceScreenMock className={className} bare={bare} />;
+  if (idx === 1)
+    return <GamesScreenMock className={className} bare={bare} />;
+  if (idx === 2)
+    return <DevicesScreenMock className={className} bare={bare} />;
+  if (idx === 3)
+    return <AIScannerScreenMock className={className} bare={bare} />;
   return <BlocksScreenMock className={className} bare={bare} />;
 }
 

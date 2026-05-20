@@ -1,7 +1,13 @@
 /**
- * Feature 4 mockup — "Receipts. So you know exactly what happened." A stats
- * strip + today's evidence timeline (screen recordings, voice transcripts,
- * captured-before-vanish snippets).
+ * Feature 4 mockup — "Receipts. So you know exactly what happened."
+ *
+ * The centerpiece is a real Minecraft gameplay clip framed as a captured
+ * screen-recording, with an animated audio waveform and a chat transcript
+ * showing the kind of grooming exchange the product flags. Underneath sits
+ * a short timeline of supporting evidence (Discord voice, Snapchat saved).
+ *
+ * The video is a CC-BY clip from Wikimedia Commons (see
+ * public/videos/CREDITS.md for attribution).
  */
 
 import * as React from "react";
@@ -18,18 +24,11 @@ type EvidenceRow = {
   time: string;
   source: string;
   detail: string;
-  badge: "record" | "voice" | "capture";
+  badge: "voice" | "capture";
   icon: React.ReactNode;
 };
 
 const EVIDENCE: EvidenceRow[] = [
-  {
-    time: "10:14 AM",
-    source: "Roblox",
-    detail: "Stranger asked Lily for Discord",
-    badge: "record",
-    icon: <PlatformBox src="/images/platforms/roblox.svg" bg={COLORS.roblox} size={7} />,
-  },
   {
     time: "11:02 AM",
     source: "Discord voice",
@@ -47,22 +46,6 @@ const EVIDENCE: EvidenceRow[] = [
 ];
 
 function BadgeIcon({ kind }: { kind: EvidenceRow["badge"] }) {
-  if (kind === "record") {
-    return (
-      <span
-        className="inline-flex items-center gap-1 font-bold rounded-full px-2"
-        style={{
-          background: "#FEE2E2",
-          color: "#B91C1C",
-          fontSize: "9px",
-          height: "18px",
-        }}
-      >
-        <span className="block w-1.5 h-1.5 rounded-full bg-red-600 mock-anim-breathe" />
-        REC
-      </span>
-    );
-  }
   if (kind === "voice") {
     return (
       <span
@@ -99,6 +82,242 @@ function BadgeIcon({ kind }: { kind: EvidenceRow["badge"] }) {
   );
 }
 
+/** Animated waveform — 18 vertical bars at staggered animation delays so
+ *  the wave reads as travelling left→right. Reuses the global
+ *  `.animate-hero-wave-bar` keyframe from globals.css. */
+function Waveform() {
+  // Deterministic pseudo-random heights so the wave looks organic but the
+  // SSR + client renders match.
+  const heights = [
+    6, 9, 4, 11, 7, 12, 5, 8, 10, 6, 4, 11, 8, 5, 9, 7, 10, 4,
+  ];
+  return (
+    <div
+      className="flex items-center justify-center gap-[2px] h-4 px-1"
+      aria-hidden
+    >
+      {heights.map((h, i) => (
+        <span
+          key={i}
+          className="animate-hero-wave-bar block w-[2px] rounded-full"
+          style={{
+            height: `${h}px`,
+            background: COLORS.redDeep,
+            animationDelay: `${i * 0.06}s`,
+            opacity: 0.85,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Featured screen-recording card — the centerpiece of the Evidence screen.
+ *
+ * Top: looping Minecraft gameplay video, overlaid with REC pill +
+ * duration + faint play-affordance glyph. Auto-plays muted on every
+ * device the browser allows (mobile included thanks to `playsInline`).
+ *
+ * Middle: animated audio waveform + chat transcript shown like closed
+ * captions on the captured clip. The exchange is short on purpose — three
+ * lines that mirror the grooming pattern the product is designed to
+ * surface (age fishing → off-platform pivot).
+ *
+ * Bottom: tiny source/duration line, monospace timestamp.
+ */
+function RecordingCard() {
+  return (
+    <div
+      className="relative bg-white rounded-2xl border border-gray-100 overflow-hidden"
+      style={{
+        boxShadow:
+          "0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(15,23,42,0.10)",
+      }}
+    >
+      {/* Looping clip. `bg-black` is the fallback while the video loads
+          so we never flash a white rectangle. */}
+      <div className="relative bg-black" style={{ aspectRatio: "16 / 9" }}>
+        <video
+          src="/videos/minecraft-gameplay.webm"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-label="Captured Minecraft gameplay clip"
+        />
+        {/* Top + bottom gradient overlays so the overlay chips stay
+            readable regardless of the underlying frame. */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-1/3 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, transparent 100%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,0.55) 0%, transparent 100%)",
+          }}
+        />
+
+        {/* Top-left REC chip — pulsing red dot + monospace timestamp. */}
+        <div className="absolute top-1.5 left-1.5 flex items-center gap-1">
+          <span
+            className="inline-flex items-center gap-1 font-bold rounded-full px-1.5"
+            style={{
+              background: "rgba(220,38,38,0.95)",
+              color: "white",
+              fontSize: "8px",
+              height: "14px",
+              letterSpacing: "0.06em",
+            }}
+          >
+            <span className="block w-1 h-1 rounded-full bg-white mock-anim-breathe" />
+            REC
+          </span>
+          <span
+            className="font-mono font-bold tabular-nums rounded-full px-1.5"
+            style={{
+              background: "rgba(0,0,0,0.55)",
+              color: "white",
+              fontSize: "8px",
+              height: "14px",
+              lineHeight: "14px",
+            }}
+          >
+            10:14 AM
+          </span>
+        </div>
+
+        {/* Top-right duration counter. */}
+        <span
+          className="absolute top-1.5 right-1.5 font-mono font-bold tabular-nums rounded-full px-1.5"
+          style={{
+            background: "rgba(0,0,0,0.55)",
+            color: "white",
+            fontSize: "8px",
+            height: "14px",
+            lineHeight: "14px",
+          }}
+        >
+          0:47
+        </span>
+
+        {/* Bottom-left source chip. */}
+        <span
+          className="absolute bottom-1.5 left-1.5 inline-flex items-center gap-1 font-semibold rounded-full px-1.5"
+          style={{
+            background: "rgba(255,255,255,0.92)",
+            color: COLORS.text,
+            fontSize: "8px",
+            height: "14px",
+          }}
+        >
+          <span
+            className="block w-2 h-2 rounded-[3px]"
+            style={{ background: "#5BA63B" }}
+            aria-hidden
+          />
+          Minecraft
+        </span>
+
+        {/* Center play-affordance — subtle, suggests "tap to replay". */}
+        <span
+          aria-hidden
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center rounded-full"
+          style={{
+            width: 32,
+            height: 32,
+            background: "rgba(255,255,255,0.15)",
+            backdropFilter: "blur(4px)",
+            border: "1.5px solid rgba(255,255,255,0.85)",
+          }}
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="white" aria-hidden>
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </div>
+
+      {/* Waveform + transcript section — visually attached to the clip,
+          like closed captions / audio review. */}
+      <div className="px-2.5 py-2">
+        <Waveform />
+
+        <div className="mt-1.5 space-y-[3px]">
+          <TranscriptLine
+            sender="Stranger_77"
+            senderColor={COLORS.high}
+            text="how old r u?"
+          />
+          <TranscriptLine sender="Lily" senderColor={COLORS.redDeep} text="11" />
+          <TranscriptLine
+            sender="Stranger_77"
+            senderColor={COLORS.high}
+            text="cool, dm me on discord 👀"
+            flagged
+          />
+        </div>
+
+        <div
+          className="mt-2 flex items-center justify-between font-semibold tabular-nums"
+          style={{ color: COLORS.textMuted, fontSize: "8.5px" }}
+        >
+          <span>Minecraft · Hypixel server-chat</span>
+          <span>47s clip · auto-saved</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Single line in the transcript — sender label + message. `flagged`
+ *  shows a small ⚠ glyph at the end to mirror what the dashboard would
+ *  highlight as the actionable line. */
+function TranscriptLine({
+  sender,
+  senderColor,
+  text,
+  flagged,
+}: {
+  sender: string;
+  senderColor: string;
+  text: string;
+  flagged?: boolean;
+}) {
+  return (
+    <p className="leading-snug flex items-start gap-1.5" style={{ fontSize: "10px" }}>
+      <span className="font-bold shrink-0" style={{ color: senderColor }}>
+        {sender}:
+      </span>
+      <span className="flex-1 text-gray-800">{text}</span>
+      {flagged && (
+        <span
+          className="inline-flex items-center justify-center rounded-full shrink-0"
+          style={{
+            background: COLORS.high,
+            color: "white",
+            width: 12,
+            height: 12,
+            fontSize: "8px",
+            lineHeight: 1,
+          }}
+          title="Flagged by AI"
+        >
+          !
+        </span>
+      )}
+    </p>
+  );
+}
+
 export function EvidenceScreenMock({
   className = "",
   style,
@@ -120,9 +339,9 @@ export function EvidenceScreenMock({
         }
         subtitle={
           <>
-            Every chat. Every call.
+            Screen-recorded. Transcribed.
             <br />
-            Every flag.
+            Timestamped.
           </>
         }
         iconNode={
@@ -200,6 +419,10 @@ export function EvidenceScreenMock({
         </span>
       </div>
 
+      <div className="px-4 mt-2">
+        <RecordingCard />
+      </div>
+
       <div className="px-4 mt-2 space-y-2">
         {EVIDENCE.map((e, i) => (
           <div
@@ -210,17 +433,11 @@ export function EvidenceScreenMock({
                 "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
             }}
           >
-            {/* Timeline rail tick — a small left-stripe colored by badge type. */}
             <span
               aria-hidden
               className="absolute left-0 top-2 bottom-2 w-[2px] rounded-r-full"
               style={{
-                background:
-                  e.badge === "record"
-                    ? "#DC2626"
-                    : e.badge === "voice"
-                    ? COLORS.redDeep
-                    : "#7E22CE",
+                background: e.badge === "voice" ? COLORS.redDeep : "#7E22CE",
               }}
             />
             {e.icon}
@@ -249,7 +466,7 @@ export function EvidenceScreenMock({
         ))}
       </div>
 
-      <FooterPill text="Timeline · Replay ready" />
+      <FooterPill text="Always recording · Replay any moment" />
 
       <BottomNav activeTab="Activity" />
     </PhoneFrame>
