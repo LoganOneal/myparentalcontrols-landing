@@ -36,24 +36,37 @@ export function GooglePlayBadge(props: React.HTMLAttributes<HTMLImageElement>) {
   );
 }
 
-export function CalAILogo({
-  width = 114,
+export function MyParentalControlsLogo({
   height = 32,
   className,
 }: {
-  width?: number;
   height?: number;
   className?: string;
 }) {
+  const iconSize = height;
+  const fontSize = Math.round(height * 0.62);
   return (
-    /* eslint-disable-next-line @next/next/no-img-element */
-    <img
-      src="/images/calai_logo.svg"
-      alt="Cal AI Logo"
-      width={width}
-      height={height}
-      className={className}
-    />
+    <span
+      className={`inline-flex items-center gap-2 ${className ?? ""}`}
+      style={{ height }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/mpc-logo-icon.svg"
+        alt=""
+        aria-hidden
+        width={iconSize}
+        height={iconSize}
+        className="shrink-0"
+      />
+      <span
+        className="font-bold tracking-tight whitespace-nowrap"
+        style={{ color: "var(--calai-dark)", fontSize, lineHeight: 1 }}
+      >
+        MyParentalControls
+      </span>
+      <span className="sr-only">MyParentalControls</span>
+    </span>
   );
 }
 

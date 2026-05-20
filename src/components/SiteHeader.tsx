@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalAILogo, AppStoreBadge } from "@/components/icons";
+import { MyParentalControlsLogo, AppStoreBadge } from "@/components/icons";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -16,7 +16,7 @@ export function SiteHeader() {
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4">
         <div className="text-lg flex w-full lg:w-auto items-center justify-between gap-2">
           <Link href="/" className="flex items-center">
-            <CalAILogo width={114} height={32} />
+            <MyParentalControlsLogo height={32} />
           </Link>
           <div className="hidden lg:flex items-center gap-6 ml-10">
             {NAV_LINKS.map((l) => (

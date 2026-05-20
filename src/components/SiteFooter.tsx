@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  CalAILogo,
+  MyParentalControlsLogo,
   AppStoreBadge,
   LinkedInIcon,
   InstagramIcon,
@@ -12,8 +12,8 @@ export function SiteFooter() {
     <footer className="pt-7 mt-8">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <CalAILogo width={120} height={34} />
-          <p className="mt-4 text-base font-normal">Download Cal AI</p>
+          <MyParentalControlsLogo height={34} />
+          <p className="mt-4 text-base font-normal">Download MyParentalControls</p>
           <div className="flex items-center gap-3 mt-3">
             <Link
               href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041"
