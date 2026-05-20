@@ -84,19 +84,19 @@ export function Hero() {
           </Link>
         </div>
 
-        {/* Right column — transparent-PNG hero cutout, free-floating
-            against the hero's grey background. No frame, no glow. */}
-        <div className="flex justify-center lg:justify-end items-center self-center">
-          <div className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[560px]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero-kid-gaming.png"
-              alt="Kid wearing headphones gaming on a desktop computer"
-              width={1280}
-              height={830}
-              className="w-full h-auto block"
-            />
-          </div>
+        {/* Right column — single hero figure, bottom-flush with the
+            grey hero background. The negative bottom margin cancels
+            the section's inner pb so the figure's feet sit exactly on
+            the section's bottom edge. */}
+        <div className="flex justify-center lg:justify-end items-end self-end -mb-10 lg:-mb-16">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/hero-figure.png"
+            alt="Family using MyParentalControls together"
+            width={1080}
+            height={983}
+            className="w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[640px] h-auto block"
+          />
         </div>
       </div>
     </section>

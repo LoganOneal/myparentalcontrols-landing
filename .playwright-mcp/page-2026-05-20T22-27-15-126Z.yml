@@ -1,0 +1,347 @@
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikimedia Commons" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - img "Wikimedia Commons" [ref=e14]
+    - generic [ref=e15]:
+      - search [ref=e16]:
+        - link "Search" [ref=e17] [cursor=pointer]:
+          - /url: /wiki/Special:MediaSearch
+          - generic [ref=e19]: Search
+      - navigation "Personal tools" [ref=e20]:
+        - generic [ref=e21]:
+          - generic:
+            - generic:
+              - list
+          - navigation "Appearance" [ref=e22]:
+            - generic "Change the appearance of the page's font size, width, and color" [ref=e23]:
+              - button "Appearance" [ref=e24] [cursor=pointer]
+              - generic [ref=e27]: Appearance
+          - generic:
+            - generic:
+              - list
+        - generic "More options" [ref=e28]:
+          - button "Personal tools" [ref=e29] [cursor=pointer]
+          - generic [ref=e32]: Personal tools
+  - generic [ref=e34]:
+    - main [ref=e36]:
+      - generic [ref=e37]:
+        - navigation "Contents" [ref=e38]:
+          - generic "Table of Contents" [ref=e39]:
+            - button "Toggle the table of contents" [ref=e40] [cursor=pointer]
+            - generic [ref=e43]: Toggle the table of contents
+        - heading "File:Grand Theft Auto V logo.png" [level=1] [ref=e44]:
+          - generic [ref=e45]: File:Grand Theft Auto V logo.png
+      - generic [ref=e47]:
+        - navigation "Namespaces" [ref=e49]:
+          - generic [ref=e50]:
+            - generic:
+              - list:
+                - listitem [ref=e51]:
+                  - link "File" [ref=e52] [cursor=pointer]:
+                    - /url: /wiki/File:Grand_Theft_Auto_V_logo.png
+                    - generic [ref=e53]: File
+                - listitem [ref=e54]:
+                  - link "Discussion" [ref=e55] [cursor=pointer]:
+                    - /url: /w/index.php?title=File_talk:Grand_Theft_Auto_V_logo.png&action=edit&redlink=1
+                    - generic [ref=e56]: Discussion
+        - generic [ref=e57]:
+          - navigation "Views"
+          - navigation "Page tools" [ref=e58]:
+            - generic [ref=e59]:
+              - button "Tools" [ref=e60] [cursor=pointer]
+              - generic [ref=e62] [cursor=pointer]: Tools
+      - generic "File:Grand Theft Auto V logo.png" [ref=e63]:
+        - generic [ref=e64]:
+          - navigation [ref=e65]:
+            - listitem [ref=e66]:
+              - link "File" [ref=e67] [cursor=pointer]:
+                - /url: "#file"
+            - listitem [ref=e68]:
+              - link "File history" [ref=e69] [cursor=pointer]:
+                - /url: "#filehistory"
+            - listitem [ref=e70]:
+              - link "File usage on Commons" [ref=e71] [cursor=pointer]:
+                - /url: "#filelinks"
+            - listitem [ref=e72]:
+              - link "File usage on other wikis" [ref=e73] [cursor=pointer]:
+                - /url: "#globalusage"
+            - listitem [ref=e74]:
+              - link "Metadata" [ref=e75] [cursor=pointer]:
+                - /url: "#metadata"
+          - generic [ref=e76]:
+            - button "Download all sizes" [ref=e77] [cursor=pointer]:
+              - img [ref=e79]
+              - generic [ref=e80]:
+                - text: Download
+                - generic [ref=e81]: all sizes
+            - button "Use this file on the web" [ref=e82] [cursor=pointer]:
+              - img [ref=e84]
+              - generic [ref=e85]:
+                - text: Use this file
+                - generic [ref=e86]: on the web
+            - button "Use this file on a wiki" [ref=e87] [cursor=pointer]:
+              - img [ref=e89]
+              - generic [ref=e90]:
+                - text: Use this file
+                - generic [ref=e91]: on a wiki
+            - link "Email a link to this file" [ref=e92] [cursor=pointer]:
+              - /url: mailto:?subject=10000Logo%20of%20Grand%20Theft%20Auto%20V&body=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AGrand_Theft_Auto_V_logo.png%0A%0AK2025%2C%20CC0%2C%20via%20Wikimedia%20Commons
+              - img [ref=e94]
+              - generic [ref=e95]:
+                - text: Email a link
+                - generic [ref=e96]: to this file
+            - link "Information about reusing" [ref=e97] [cursor=pointer]:
+              - /url: /wiki/Special:MyLanguage/Commons:Reusing_content_outside_Wikimedia
+              - img [ref=e99]
+              - generic [ref=e100]:
+                - text: Information
+                - generic [ref=e101]: about reusing
+            - generic "Remove these icons" [ref=e103] [cursor=pointer]:
+              - img [ref=e104]
+          - generic [ref=e105]:
+            - link "File:Grand Theft Auto V logo.png" [ref=e106] [cursor=pointer]:
+              - /url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Grand_Theft_Auto_V_logo.png
+              - img "File:Grand Theft Auto V logo.png" [ref=e107]
+            - generic [ref=e108]:
+              - text: "Size of this preview:"
+              - link "450 × 450 pixels" [ref=e109] [cursor=pointer]:
+                - /url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Grand_Theft_Auto_V_logo.png
+              - text: .
+              - generic [ref=e110]:
+                - text: "Other resolution:"
+                - link "240 × 240 pixels" [ref=e111] [cursor=pointer]:
+                  - /url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Grand_Theft_Auto_V_logo.png/250px-Grand_Theft_Auto_V_logo.png
+                - text: .
+          - generic [ref=e112]:
+            - link "Original file" [ref=e114] [cursor=pointer]:
+              - /url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Grand_Theft_Auto_V_logo.png
+            - generic [ref=e115]: "(450 × 450 pixels, file size: 76 KB, MIME type: image/png)"
+            - button "Open in Media Viewer" [ref=e116]: Open in Media Viewer
+          - generic [ref=e119]:
+            - tablist [ref=e122]:
+              - tab "File information" [selected] [ref=e123]:
+                - generic [ref=e124]: File information
+              - tab "Structured data" [ref=e125] [cursor=pointer]:
+                - generic [ref=e126]: Structured data
+            - tabpanel [ref=e129]:
+              - generic [ref=e130]:
+                - heading "Captions" [level=3] [ref=e131]
+                - generic [ref=e132]:
+                  - generic [ref=e133]: English
+                  - generic [ref=e134]: 10000Logo of Grand Theft Auto V
+              - generic [ref=e136]:
+                - generic [ref=e137]:
+                  - heading "Summary" [level=2] [ref=e138]
+                  - generic [ref=e139]:
+                    - text: "["
+                    - link "edit" [ref=e140] [cursor=pointer]:
+                      - /url: /w/index.php?title=File:Grand_Theft_Auto_V_logo.png&action=edit&section=1
+                    - text: "]"
+                - table [ref=e142]:
+                  - rowgroup [ref=e143]:
+                    - 'row "Description English: Logo of Grand Theft Auto V" [ref=e144]':
+                      - cell "Description" [ref=e145]
+                      - 'cell "English: Logo of Grand Theft Auto V" [ref=e146]':
+                        - generic [ref=e147]:
+                          - generic "English" [ref=e148]: "English:"
+                          - text: Logo of Grand Theft Auto V
+                    - row "Date 26 April 2026" [ref=e149]:
+                      - cell "Date" [ref=e150]
+                      - cell "26 April 2026" [ref=e151]:
+                        - time [ref=e152]: 26 April 2026
+                    - row "Source Own work" [ref=e153]:
+                      - cell "Source" [ref=e154]
+                      - cell "Own work" [ref=e155]
+                    - row "Author K2025" [ref=e156]:
+                      - cell "Author" [ref=e157]
+                      - cell "K2025" [ref=e158]:
+                        - link "K2025" [ref=e159] [cursor=pointer]:
+                          - /url: /w/index.php?title=User:K2025&action=edit&redlink=1
+                - generic [ref=e160]:
+                  - heading "Licensing" [level=2] [ref=e161]
+                  - generic [ref=e162]:
+                    - text: "["
+                    - link "edit" [ref=e163] [cursor=pointer]:
+                      - /url: /w/index.php?title=File:Grand_Theft_Auto_V_logo.png&action=edit&section=2
+                    - text: "]"
+                - generic [ref=e164]:
+                  - generic [ref=e165]: "I, the copyright holder of this work, hereby publish it under the following license:"
+                  - table [ref=e166]:
+                    - rowgroup [ref=e167]:
+                      - row "Creative Commons CC-Zero This file is made available under the Creative Commons CC0 1.0 Universal Public Domain Dedication." [ref=e168]:
+                        - cell "Creative Commons CC-Zero" [ref=e169]:
+                          - generic "Creative Commons" [ref=e171]:
+                            - img "Creative Commons" [ref=e172]
+                          - generic "CC-Zero" [ref=e174]:
+                            - img "CC-Zero" [ref=e175]
+                        - cell "This file is made available under the Creative Commons CC0 1.0 Universal Public Domain Dedication." [ref=e176]:
+                          - text: This file is made available under the
+                          - link "Creative Commons" [ref=e177] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/en:Creative_Commons
+                          - link "CC0 1.0 Universal Public Domain Dedication" [ref=e178] [cursor=pointer]:
+                            - /url: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+                          - text: .
+                      - row "The person who associated a work with this deed has dedicated the work to the public domain by waiving all of their rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission." [ref=e179]:
+                        - cell "The person who associated a work with this deed has dedicated the work to the public domain by waiving all of their rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission." [ref=e180]:
+                          - text: The person who associated a work with this deed has dedicated the work to the
+                          - link "public domain" [ref=e181] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/en:public_domain
+                          - text: by waiving all of their rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+                          - paragraph
+              - heading "File history" [level=2] [ref=e182]
+              - generic [ref=e183]:
+                - paragraph [ref=e184]: Click on a date/time to view the file as it appeared at that time.
+                - table [ref=e185]:
+                  - rowgroup [ref=e186]:
+                    - row "Date/Time Thumbnail Dimensions User Comment" [ref=e187]:
+                      - columnheader [ref=e188]
+                      - columnheader "Date/Time" [ref=e189]
+                      - columnheader "Thumbnail" [ref=e190]
+                      - columnheader "Dimensions" [ref=e191]
+                      - columnheader "User" [ref=e192]
+                      - columnheader "Comment" [ref=e193]
+                    - row "current 20:05, 26 April 2026 Thumbnail for version as of 20:05, 26 April 2026 450 × 450 (76 KB) K2025 (talk | contribs) Uploaded own work with UploadWizard" [ref=e194]:
+                      - cell "current" [ref=e195]
+                      - cell "20:05, 26 April 2026" [ref=e196]:
+                        - link "20:05, 26 April 2026" [ref=e197] [cursor=pointer]:
+                          - /url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Grand_Theft_Auto_V_logo.png
+                      - cell "Thumbnail for version as of 20:05, 26 April 2026" [ref=e198]:
+                        - link "Thumbnail for version as of 20:05, 26 April 2026" [ref=e199] [cursor=pointer]:
+                          - /url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Grand_Theft_Auto_V_logo.png
+                          - img "Thumbnail for version as of 20:05, 26 April 2026" [ref=e200]
+                      - cell "450 × 450 (76 KB)" [ref=e201]
+                      - cell "K2025 (talk | contribs)" [ref=e202]:
+                        - link "K2025" [ref=e203] [cursor=pointer]:
+                          - /url: /w/index.php?title=User:K2025&action=edit&redlink=1
+                        - generic [ref=e205]:
+                          - text: (
+                          - link "talk" [ref=e206] [cursor=pointer]:
+                            - /url: /wiki/User_talk:K2025
+                          - text: "|"
+                          - link "contribs" [ref=e207] [cursor=pointer]:
+                            - /url: /wiki/Special:Contributions/K2025
+                          - text: )
+                      - cell "Uploaded own work with UploadWizard" [ref=e208]
+              - paragraph [ref=e210]: You cannot overwrite this file.
+              - heading "File usage on Commons" [level=2] [ref=e211]
+              - generic [ref=e212]:
+                - paragraph [ref=e213]: "The following page uses this file:"
+                - list [ref=e214]:
+                  - listitem [ref=e215]:
+                    - link "User:Minorax/PD textlogo/2026 April 26" [ref=e216] [cursor=pointer]:
+                      - /url: /wiki/User:Minorax/PD_textlogo/2026_April_26
+              - heading "File usage on other wikis" [level=2] [ref=e217]
+              - generic [ref=e218]:
+                - paragraph [ref=e219]: "The following other wikis use this file:"
+                - list [ref=e220]:
+                  - listitem [ref=e221]:
+                    - text: Usage on es.wikipedia.org
+                    - list [ref=e222]:
+                      - listitem [ref=e223]:
+                        - link "Grand Theft Auto V" [ref=e224] [cursor=pointer]:
+                          - /url: https://es.wikipedia.org/wiki/Grand_Theft_Auto_V
+                  - listitem [ref=e225]:
+                    - text: Usage on pl.wikipedia.org
+                    - list [ref=e226]:
+                      - listitem [ref=e227]:
+                        - link "Grand Theft Auto V" [ref=e228] [cursor=pointer]:
+                          - /url: https://pl.wikipedia.org/wiki/Grand_Theft_Auto_V
+                  - listitem [ref=e229]:
+                    - text: Usage on scn.wikipedia.org
+                    - list [ref=e230]:
+                      - listitem [ref=e231]:
+                        - link "Grand Theft Auto V" [ref=e232] [cursor=pointer]:
+                          - /url: https://scn.wikipedia.org/wiki/Grand_Theft_Auto_V
+              - heading "Metadata" [level=2] [ref=e233]
+              - generic [ref=e234]:
+                - paragraph [ref=e235]: This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the original file. The timestamp is only as accurate as the clock in the camera, and it may be completely wrong.
+                - table [ref=e236]:
+                  - rowgroup [ref=e237]:
+                    - row "Show extended details" [ref=e238]:
+                      - cell "Show extended details" [ref=e239]:
+                        - button "Show extended details" [ref=e240] [cursor=pointer]
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - link "Category" [ref=e243] [cursor=pointer]:
+              - /url: /wiki/Special:MyLanguage/Commons:Categories
+            - text: ":"
+            - list [ref=e244]:
+              - listitem [ref=e245]:
+                - link "Grand Theft Auto logos" [ref=e246] [cursor=pointer]:
+                  - /url: /wiki/Category:Grand_Theft_Auto_logos
+          - generic [ref=e247]:
+            - text: "Hidden categories:"
+            - list [ref=e248]:
+              - listitem [ref=e249]:
+                - link "CC-Zero" [ref=e250] [cursor=pointer]:
+                  - /url: /wiki/Category:CC-Zero
+              - listitem [ref=e251]:
+                - link "Creative Commons CC0 1.0 Universal Public Domain Dedication missing SDC copyright license" [ref=e252] [cursor=pointer]:
+                  - /url: /wiki/Category:Creative_Commons_CC0_1.0_Universal_Public_Domain_Dedication_missing_SDC_copyright_license
+              - listitem [ref=e253]:
+                - link "Self-published work" [ref=e254] [cursor=pointer]:
+                  - /url: /wiki/Category:Self-published_work
+              - listitem [ref=e255]:
+                - link "Self-published work missing SDC copyright license" [ref=e256] [cursor=pointer]:
+                  - /url: /wiki/Category:Self-published_work_missing_SDC_copyright_license
+    - contentinfo [ref=e258]:
+      - list [ref=e259]:
+        - listitem [ref=e260]: This page was last edited on 2 May 2026, at 22:28.
+        - listitem [ref=e261]:
+          - text: Files are available under licenses specified on their description page. All structured data from the file namespace is available under the
+          - link "Creative Commons CC0 License" [ref=e262] [cursor=pointer]:
+            - /url: https://creativecommons.org/publicdomain/zero/1.0/
+          - text: ; all unstructured text is available under the
+          - link "Creative Commons Attribution-ShareAlike License" [ref=e263] [cursor=pointer]:
+            - /url: https://creativecommons.org/licenses/by-sa/4.0/
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=e264] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and the
+          - link "Privacy Policy" [ref=e265] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: .
+      - list:
+        - listitem [ref=e266]:
+          - link "Privacy policy" [ref=e267] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e268]:
+          - link "About Wikimedia Commons" [ref=e269] [cursor=pointer]:
+            - /url: /wiki/Commons:Welcome
+        - listitem [ref=e270]:
+          - link "Disclaimers" [ref=e271] [cursor=pointer]:
+            - /url: /wiki/Commons:General_disclaimer
+        - listitem [ref=e272]:
+          - link "Code of Conduct" [ref=e273] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e274]:
+          - link "Developers" [ref=e275] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e276]:
+          - link "Statistics" [ref=e277] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/commons.wikimedia.org
+        - listitem [ref=e278]:
+          - link "Cookie statement" [ref=e279] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e280]:
+          - link "Mobile view" [ref=e281] [cursor=pointer]:
+            - /url: //commons.wikimedia.org/w/index.php?title=File:Grand_Theft_Auto_V_logo.png&mobileaction=toggle_view_mobile
+      - list [ref=e282]:
+        - listitem [ref=e283]:
+          - link "Wikimedia Foundation" [ref=e284] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e286]
+        - listitem [ref=e287]:
+          - link "Powered by MediaWiki" [ref=e288] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e290]
+  - generic [ref=e291]:
+    - list

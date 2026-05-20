@@ -1,0 +1,231 @@
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikimedia Commons" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - img "Wikimedia Commons" [ref=e14]
+    - generic [ref=e15]:
+      - search [ref=e16]:
+        - link "Search" [ref=e17] [cursor=pointer]:
+          - /url: /wiki/Special:MediaSearch
+          - generic [ref=e19]: Search
+      - navigation "Personal tools" [ref=e20]:
+        - generic [ref=e21]:
+          - generic:
+            - generic:
+              - list
+          - navigation "Appearance" [ref=e22]:
+            - generic "Change the appearance of the page's font size, width, and color" [ref=e23]:
+              - button "Appearance" [ref=e24] [cursor=pointer]
+              - generic [ref=e27]: Appearance
+          - generic:
+            - generic:
+              - list
+        - generic "More options" [ref=e28]:
+          - button "Personal tools" [ref=e29] [cursor=pointer]
+          - generic [ref=e32]: Personal tools
+  - generic [ref=e34]:
+    - main [ref=e36]:
+      - generic [ref=e37]:
+        - heading "Search media" [level=1] [ref=e38]
+        - generic [ref=e39]:
+          - link "Switch to Special:Search" [ref=e41] [cursor=pointer]:
+            - /url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=Among+Us
+          - link "Help" [ref=e43] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Help:MediaSearch
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - navigation "Namespaces"
+        - generic [ref=e47]:
+          - navigation "Views"
+          - navigation "Page tools" [ref=e48]:
+            - generic [ref=e49]:
+              - button "Tools" [ref=e50] [cursor=pointer]
+              - generic [ref=e52] [cursor=pointer]: Tools
+      - generic "Search media" [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: Search media
+              - textbox "Search media Search media" [ref=e60]:
+                - /placeholder: Search for images, audio, video and more
+                - text: Among Us
+            - button "Search" [ref=e62]:
+              - generic [ref=e63]: Search
+          - generic [ref=e64]:
+            - tablist [ref=e67]:
+              - tab "Images" [selected] [ref=e68]
+              - tab "Audio" [ref=e69]
+              - tab "Video" [ref=e70]
+              - tab "Other Media" [ref=e71]
+              - tab "Categories and Pages" [ref=e72]
+            - tabpanel [ref=e74]:
+              - generic [ref=e76]: 4,978,782 results
+              - generic [ref=e78]:
+                - generic [ref=e79]:
+                  - link "Among Us Impostor text.svg" [ref=e80] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_Impostor_text.svg
+                    - img "Among Us Impostor text.svg"
+                  - link "Among Us Crewmate text.svg" [ref=e81] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_Crewmate_text.svg
+                    - img "Among Us Crewmate text.svg"
+                  - link "Among Us Logo.svg" [ref=e82] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_Logo.svg
+                    - img "Among Us Logo.svg"
+                  - link "Among Us skins cosmetics.jpg" [ref=e83] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_skins_cosmetics.jpg
+                    - img "Among Us skins cosmetics.jpg"
+                  - link "Pyrkon 2022 - Among Us cosplay.jpg" [ref=e84] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Pyrkon_2022_-_Among_Us_cosplay.jpg
+                    - img "Pyrkon 2022 - Among Us cosplay.jpg"
+                  - link "Among Us hats cosmetics.jpg" [ref=e85] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_hats_cosmetics.jpg
+                    - img "Among Us hats cosmetics.jpg"
+                  - link "Banana cat character in Among Us.jpg" [ref=e86] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Banana_cat_character_in_Among_Us.jpg
+                    - img "Banana cat character in Among Us.jpg"
+                  - link "Equality March 2022 in Kraków - Among Us.jpg" [ref=e87] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Equality_March_2022_in_Krak%C3%B3w_-_Among_Us.jpg
+                    - img "Equality March 2022 in Kraków - Among Us.jpg"
+                  - link "AmongUsWireDiagram.png" [ref=e88] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:AmongUsWireDiagram.png
+                    - img "AmongUsWireDiagram.png"
+                  - link "Albert Bierstadt - Among the Sierra Nevada, California - Google Art Project.jpg" [ref=e89] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg
+                    - img "Albert Bierstadt - Among the Sierra Nevada, California - Google Art Project.jpg"
+                  - link "Banana cat character in Among Us.svg" [ref=e90] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Banana_cat_character_in_Among_Us.svg
+                    - img "Banana cat character in Among Us.svg"
+                  - link "Bayes theorem assassin.svg" [ref=e91] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Bayes_theorem_assassin.svg
+                    - img "Bayes theorem assassin.svg"
+                  - link "Russian Zapatista support.jpg" [ref=e92] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Russian_Zapatista_support.jpg
+                    - img "Russian Zapatista support.jpg"
+                  - link "Albrecht Dürer - Jesus among the Doctors - Google Art Project.jpg" [ref=e93] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg
+                    - img "Albrecht Dürer - Jesus among the Doctors - Google Art Project.jpg"
+                  - link "The Wolf Among Us Logo.png" [ref=e94] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_Logo.png
+                    - img "The Wolf Among Us Logo.png"
+                  - link "Concentración política del Partido Colorado (3) - Elecciones Uruguay 2024.jpg" [ref=e95] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Concentraci%C3%B3n_pol%C3%ADtica_del_Partido_Colorado_(3)_-_Elecciones_Uruguay_2024.jpg
+                    - img "Concentración política del Partido Colorado (3) - Elecciones Uruguay 2024.jpg"
+                  - link "Among Us (52555030337).jpg" [ref=e96] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_(52555030337).jpg
+                    - img "Among Us (52555030337).jpg"
+                  - link "Angels Among Us 214704.jpg" [ref=e97] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Angels_Among_Us_214704.jpg
+                    - img "Angels Among Us 214704.jpg"
+                  - link "SuperTuxKart Mobile in Gnu.jpg" [ref=e98] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:SuperTuxKart_Mobile_in_Gnu.jpg
+                    - img "SuperTuxKart Mobile in Gnu.jpg"
+                  - link "Pyrkon 2022 - Among Us cosplay (cropped).jpg" [ref=e99] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Pyrkon_2022_-_Among_Us_cosplay_(cropped).jpg
+                    - img "Pyrkon 2022 - Among Us cosplay (cropped).jpg"
+                  - link "An Angel Among Us - geograph.org.uk - 6215131.jpg" [ref=e100] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:An_Angel_Among_Us_-_geograph.org.uk_-_6215131.jpg
+                    - img "An Angel Among Us - geograph.org.uk - 6215131.jpg"
+                  - link "Among Us cosplay at Insomnia Gaming Festival i70 - April 2023.jpg" [ref=e101] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Among_Us_cosplay_at_Insomnia_Gaming_Festival_i70_-_April_2023.jpg
+                    - img "Among Us cosplay at Insomnia Gaming Festival i70 - April 2023.jpg"
+                  - link "Capetown - Two Oceans Aquarium - Wikimania 2018 welcome reception IMG 9464.JPG" [ref=e102] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Capetown_-_Two_Oceans_Aquarium_-_Wikimania_2018_welcome_reception_IMG_9464.JPG
+                    - img "Capetown - Two Oceans Aquarium - Wikimania 2018 welcome reception IMG 9464.JPG"
+                  - link "The Wolf Among Us (2013) logo official (SGDB 9241).png" [ref=e103] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_official_(SGDB_9241).png
+                    - img "The Wolf Among Us (2013) logo official (SGDB 9241).png"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 02.jpg" [ref=e104] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_02.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 02.jpg"
+                  - link "Cosplay of Among Us at GalaxyCon Richmond 2023.jpg" [ref=e105] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Cosplay_of_Among_Us_at_GalaxyCon_Richmond_2023.jpg
+                    - img "Cosplay of Among Us at GalaxyCon Richmond 2023.jpg"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 04.jpg" [ref=e106] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_04.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 04.jpg"
+                  - link "The Wolf Among Us (2013) logo official (SGDB 700).png" [ref=e107] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_official_(SGDB_700).png
+                    - img "The Wolf Among Us (2013) logo official (SGDB 700).png"
+                  - link "The Wolf Among Us (2013) logo official (SGDB 57792).png" [ref=e108] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_official_(SGDB_57792).png
+                    - img "The Wolf Among Us (2013) logo official (SGDB 57792).png"
+                  - link "The Wolf Among Us (2013) logo official (SGDB 583).png" [ref=e109] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_official_(SGDB_583).png
+                    - img "The Wolf Among Us (2013) logo official (SGDB 583).png"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 06.jpg" [ref=e110] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_06.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 06.jpg"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 05.jpg" [ref=e111] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_05.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 05.jpg"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 03.jpg" [ref=e112] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_03.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 03.jpg"
+                  - link "The Wolf Among Us (2013) logo official (SGDB 9726).png" [ref=e113] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_official_(SGDB_9726).png
+                    - img "The Wolf Among Us (2013) logo official (SGDB 9726).png"
+                  - link "Sterrebos Among Us rubbish bin, Winschoten (2021) 01.jpg" [ref=e114] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Sterrebos_Among_Us_rubbish_bin,_Winschoten_(2021)_01.jpg
+                    - img "Sterrebos Among Us rubbish bin, Winschoten (2021) 01.jpg"
+                  - link "Le streameur DFG en cosplay Among Us, lors du ZEVENT 2025.jpg" [ref=e115] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Le_streameur_DFG_en_cosplay_Among_Us,_lors_du_ZEVENT_2025.jpg
+                    - img "Le streameur DFG en cosplay Among Us, lors du ZEVENT 2025.jpg"
+                  - link "The Wolf Among Us (2013) logo white (SGDB 5243).png" [ref=e116] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:The_Wolf_Among_Us_(2013)_logo_white_(SGDB_5243).png
+                    - img "The Wolf Among Us (2013) logo white (SGDB 5243).png"
+                  - link "AmongUs CrewsonaSeven.png" [ref=e117] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:AmongUs_CrewsonaSeven.png
+                    - img "AmongUs CrewsonaSeven.png"
+                  - link "Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Bunker der US Army -- 2020 -- 8388.jpg" [ref=e118] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_Bunker_der_US_Army_--_2020_--_8388.jpg
+                    - img "Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Bunker der US Army -- 2020 -- 8388.jpg"
+                  - link "Shipwrecked Among Cannibals (1920) - 6.jpg" [ref=e119] [cursor=pointer]:
+                    - /url: https://commons.wikimedia.org/wiki/File:Shipwrecked_Among_Cannibals_(1920)_-_6.jpg
+                    - img "Shipwrecked Among Cannibals (1920) - 6.jpg"
+                - button "Load more" [ref=e121]
+                - button "Load more" [ref=e124] [cursor=pointer]
+    - contentinfo [ref=e126]:
+      - list
+      - list:
+        - listitem [ref=e127]:
+          - link "Privacy policy" [ref=e128] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e129]:
+          - link "About Wikimedia Commons" [ref=e130] [cursor=pointer]:
+            - /url: /wiki/Commons:Welcome
+        - listitem [ref=e131]:
+          - link "Disclaimers" [ref=e132] [cursor=pointer]:
+            - /url: /wiki/Commons:General_disclaimer
+        - listitem [ref=e133]:
+          - link "Code of Conduct" [ref=e134] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e135]:
+          - link "Developers" [ref=e136] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e137]:
+          - link "Statistics" [ref=e138] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/commons.wikimedia.org
+        - listitem [ref=e139]:
+          - link "Cookie statement" [ref=e140] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e141]:
+          - link "Mobile view" [ref=e142] [cursor=pointer]:
+            - /url: //commons.wikimedia.org/w/index.php?title=Special:MediaSearch&go=Go&search=Among+Us&type=image&mobileaction=toggle_view_mobile
+      - list [ref=e143]:
+        - listitem [ref=e144]:
+          - link "Wikimedia Foundation" [ref=e145] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e147]
+        - listitem [ref=e148]:
+          - link "Powered by MediaWiki" [ref=e149] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e151]
+  - generic [ref=e152]:
+    - list
