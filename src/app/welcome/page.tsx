@@ -94,7 +94,7 @@ export default async function WelcomePage({
             </div>
             <p className="mt-5 text-[15px] text-gray-600 leading-snug">
               Watch your inbox{result.email ? ` at ${result.email}` : ""} —
-              you'll receive setup instructions from our team within a few
+              you&apos;ll receive setup instructions from our team within a few
               minutes.
             </p>
           </>
@@ -102,15 +102,15 @@ export default async function WelcomePage({
 
         {result.state === "pending" && (
           <p className="mt-5 text-[15px] text-gray-600 leading-snug">
-            We're finalizing your premium queue position now. You'll receive a
+            We&apos;re finalizing your premium queue position now. You&apos;ll receive a
             confirmation email with the details in just a moment.
           </p>
         )}
 
         {result.state === "unknown" && (
           <p className="mt-5 text-[15px] text-gray-600 leading-snug">
-            We couldn't load your payment details, but if you completed
-            checkout you'll receive an email confirmation shortly.
+            We couldn&apos;t load your payment details, but if you completed
+            checkout you&apos;ll receive an email confirmation shortly.
           </p>
         )}
 

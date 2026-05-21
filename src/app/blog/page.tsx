@@ -152,21 +152,21 @@ function FeaturedPostCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group relative isolate flex min-h-[420px] overflow-hidden rounded-lg bg-[#101010] p-6 text-white shadow-[0_24px_70px_-42px_rgba(0,0,0,0.7)] sm:p-8"
+      className="group relative flex min-h-[420px] overflow-hidden rounded-lg bg-[#101010] p-6 text-white shadow-[0_24px_70px_-42px_rgba(0,0,0,0.7)] sm:p-8"
     >
       <Image
         src="/images/hero-kid-gaming.webp"
         alt=""
         fill
         sizes="(max-width: 1024px) 100vw, 50vw"
-        className="absolute inset-0 -z-20 object-cover opacity-60 transition duration-500 group-hover:scale-105"
+        className="absolute inset-0 z-0 object-cover opacity-60 transition duration-500 group-hover:scale-105"
         priority
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(16,16,16,0.15),rgba(16,16,16,0.92))]"
+        className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(16,16,16,0.15),rgba(16,16,16,0.92))]"
       />
-      <div className="flex w-full flex-col justify-between">
+      <div className="relative z-20 flex w-full flex-col justify-between">
         <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white/12 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-white ring-1 ring-white/20">
           <Sparkles className="h-3.5 w-3.5" aria-hidden />
           Featured

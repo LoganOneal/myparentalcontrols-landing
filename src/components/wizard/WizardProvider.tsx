@@ -20,19 +20,27 @@ export function useWizard(): WizardContextValue {
   return ctx;
 }
 
-function WizardProviderInner({ children }: { children: React.ReactNode }) {
+function WizardSearchParamSync({
+  openWizard,
+}: {
+  openWizard: (step?: WizardStep) => void;
+}) {
   const searchParams = useSearchParams();
-  const [open, setOpen] = useState(false);
-  const [initialStep, setInitialStep] = useState<WizardStep>(1);
 
   useEffect(() => {
-    if (searchParams.get("wizard") === "open") {
-      const stepParam = Number(searchParams.get("step") ?? 1);
-      const step = (stepParam >= 1 && stepParam <= 5 ? stepParam : 1) as WizardStep;
-      setInitialStep(step);
-      setOpen(true);
-    }
-  }, [searchParams]);
+    if (searchParams.get("wizard") !== "open") return;
+
+    const stepParam = Number(searchParams.get("step") ?? 1);
+    const step = (stepParam >= 1 && stepParam <= 5 ? stepParam : 1) as WizardStep;
+    openWizard(step);
+  }, [openWizard, searchParams]);
+
+  return null;
+}
+
+export function WizardProvider({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const [initialStep, setInitialStep] = useState<WizardStep>(1);
 
   const openWizard = useCallback((step: WizardStep = 1) => {
     setInitialStep(step);
@@ -43,6 +51,9 @@ function WizardProviderInner({ children }: { children: React.ReactNode }) {
 
   return (
     <WizardContext.Provider value={{ open, initialStep, openWizard, closeWizard }}>
+      <Suspense fallback={null}>
+        <WizardSearchParamSync openWizard={openWizard} />
+      </Suspense>
       {children}
       <WaitlistWizard
         open={open}
@@ -50,13 +61,5 @@ function WizardProviderInner({ children }: { children: React.ReactNode }) {
         onClose={closeWizard}
       />
     </WizardContext.Provider>
-  );
-}
-
-export function WizardProvider({ children }: { children: React.ReactNode }) {
-  return (
-    <Suspense fallback={children}>
-      <WizardProviderInner>{children}</WizardProviderInner>
-    </Suspense>
   );
 }

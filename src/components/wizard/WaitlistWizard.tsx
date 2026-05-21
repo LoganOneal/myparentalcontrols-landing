@@ -3,7 +3,6 @@
 import { Dialog } from "@base-ui/react/dialog";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, X, Check, Plus } from "lucide-react";
-import { loadStripe } from "@stripe/stripe-js";
 import type { WizardFormData, WizardStep } from "@/types/wizard";
 
 const GAMES = [
@@ -31,15 +30,6 @@ const CONCERNS = [
 ];
 
 const TOTAL_STEPS = 5;
-
-let stripePromise: ReturnType<typeof loadStripe> | null = null;
-function getStripeClient() {
-  if (!stripePromise) {
-    const key = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-    stripePromise = key ? loadStripe(key) : Promise.resolve(null);
-  }
-  return stripePromise;
-}
 
 type Props = {
   open: boolean;
@@ -123,12 +113,7 @@ export function WaitlistWizard({ open, initialStep, onClose }: Props) {
         window.location.href = data.url;
         return;
       }
-      const stripe = await getStripeClient();
-      if (!stripe) throw new Error("Stripe not configured");
-      const { error: stripeErr } = await stripe.redirectToCheckout({
-        sessionId: data.sessionId,
-      });
-      if (stripeErr) throw stripeErr;
+      throw new Error("Checkout URL missing");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Couldn't open checkout.");
       setSubmitting(false);
@@ -725,7 +710,7 @@ function StepWaitlist({
           </span>
         </div>
         <p className="text-[15px] text-gray-700 leading-snug">
-          Pay <strong>$1</strong> and we'll move you to{" "}
+          Pay <strong>$1</strong> and we&apos;ll move you to{" "}
           <strong>around #8</strong> in the premium queue. Onboarding email
           arrives in minutes.
         </p>
@@ -747,7 +732,7 @@ function StepWaitlist({
           onClick={onWait}
           className="w-full text-[14px] font-semibold text-gray-500 hover:text-gray-800 transition-colors py-2"
         >
-          I'll wait my turn
+          I&apos;ll wait my turn
         </button>
       </div>
     </div>

@@ -26,11 +26,17 @@ function authHeader(): Record<string, string> {
 export async function createWaitlistRecord(fields: {
   email: string;
 }): Promise<WaitlistRecord> {
+  // Airtable's REST API doesn't expose the autonumber field type, so we
+  // assign Position ourselves at create time: (total existing rows) + 1.
+  // Not atomic across simultaneous writes — acceptable for an early-stage
+  // waitlist where collisions just mean two records share a position.
+  const position = (await countAllRecords()) + 1;
+
   const res = await fetch(tableUrl(), {
     method: "POST",
     headers: authHeader(),
     body: JSON.stringify({
-      fields: { Email: fields.email },
+      fields: { Email: fields.email, Position: position },
       typecast: true,
     }),
   });
@@ -38,6 +44,34 @@ export async function createWaitlistRecord(fields: {
     throw new Error(`Airtable create failed: ${res.status} ${await res.text()}`);
   }
   return (await res.json()) as WaitlistRecord;
+}
+
+async function countAllRecords(): Promise<number> {
+  let offset: string | undefined;
+  let total = 0;
+  do {
+    const url = new URL(tableUrl());
+    url.searchParams.set("pageSize", "100");
+    url.searchParams.set("fields[]", "Email");
+    if (offset) url.searchParams.set("offset", offset);
+    const res = await fetch(url.toString(), {
+      method: "GET",
+      headers: authHeader(),
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error(
+        `Airtable total count failed: ${res.status} ${await res.text()}`,
+      );
+    }
+    const data = (await res.json()) as {
+      records: WaitlistRecord[];
+      offset?: string;
+    };
+    total += data.records.length;
+    offset = data.offset;
+  } while (offset);
+  return total;
 }
 
 export async function patchWaitlistRecord(
