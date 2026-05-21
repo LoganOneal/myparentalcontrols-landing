@@ -232,7 +232,7 @@ export function CompetitorComparison() {
         <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="min-w-[760px] sm:min-w-0">
             <div
-              className="grid rounded-3xl overflow-hidden bg-white ring-1 ring-black/10 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.18)]"
+              className="grid rounded-3xl overflow-hidden bg-white border border-gray-300 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_48px_-24px_rgba(15,23,42,0.18)]"
               style={{
                 gridTemplateColumns: `minmax(220px, 1.4fr) repeat(${COLUMNS.length}, minmax(110px, 1fr))`,
               }}
