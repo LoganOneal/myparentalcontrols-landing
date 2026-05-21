@@ -2,112 +2,218 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { MyParentalControlsLogo, HamburgerIcon, CloseIcon } from "@/components/icons";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { MyParentalControlsLogo } from "@/components/icons";
 
 /**
- * Navbar design inspired by bark.us — 68px tall, white background, plain
- * text nav, light bottom border, max-width 1280px container, static (not
- * sticky). Mobile collapses everything except the logo + a hamburger.
+ * Navbar design adapted from bark.us: a quiet 68px white bar, centered
+ * 1280px container, system-font links, subtle chevrons, and a simple
+ * logo/menu mobile treatment. Links stay pointed at this site's pages.
  */
 
-const NAV_LINKS = [
-  { href: "/#how-it-works", label: "How it works" },
-  { href: "/app-reviews", label: "App reviews" },
+type NavLink = {
+  href: string;
+  label: string;
+  description?: string;
+};
+
+type NavGroup = {
+  label: string;
+  links: NavLink[];
+};
+
+const NAV_GROUPS: NavGroup[] = [
+  {
+    label: "Products",
+    links: [
+      {
+        href: "/",
+        label: "Overview",
+        description: "Real-time alerts for the PC games kids actually play.",
+      },
+      {
+        href: "/platforms",
+        label: "Platforms covered",
+        description: "Browse the games, chat apps, and social platforms we cover.",
+      },
+      {
+        href: "/app-reviews",
+        label: "App reviews",
+        description: "Parent-first safety notes for popular apps and games.",
+      },
+    ],
+  },
+  {
+    label: "Parental Controls",
+    links: [
+      {
+        href: "/#pricing",
+        label: "Monitoring plan",
+        description: "Voice and chat alerts with clear pricing.",
+      },
+      {
+        href: "/manage-subscription",
+        label: "Manage subscription",
+        description: "Update billing, access, and account settings.",
+      },
+      {
+        href: "/privacy",
+        label: "Privacy",
+        description: "How MyParentalControls handles family data.",
+      },
+    ],
+  },
+];
+
+const NAV_LINKS: NavLink[] = [
   { href: "/#pricing", label: "Pricing" },
+  { href: "/app-reviews", label: "Reviews" },
+  { href: "/platforms", label: "Resources" },
   { href: "/blog", label: "Blog" },
   { href: "/press", label: "Press" },
 ];
+
+const navLinkClass =
+  "inline-flex h-full items-center text-[16px] leading-6 text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)] focus-visible:outline-none focus-visible:text-[var(--bark-blue)]";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200 w-full relative z-50">
-      <div className="max-w-[1280px] mx-auto h-[68px] px-5 lg:px-8 flex items-center">
+    <header className="relative z-50 w-full border-b border-[var(--bark-border)] bg-white font-[var(--bark-sans)]">
+      <div className="mx-auto flex h-[68px] max-w-[1280px] items-center px-5 lg:px-8">
         <Link
           href="/"
-          className="flex items-center shrink-0"
+          className="flex shrink-0 items-center"
           aria-label="MyParentalControls home"
           onClick={() => setMobileOpen(false)}
         >
-          <MyParentalControlsLogo height={26} />
+          <MyParentalControlsLogo height={24} />
         </Link>
 
-        {/* Desktop nav */}
         <nav
           aria-label="Primary"
-          className="hidden lg:flex items-center gap-8 ml-10 text-[18px] leading-[27px] font-normal"
-          style={{ color: "rgb(30, 30, 30)" }}
+          className="ml-9 hidden h-full items-center gap-7 xl:flex"
         >
-          {NAV_LINKS.map((l) => (
+          {NAV_GROUPS.map((group) => (
+            <div key={group.label} className="group relative flex h-full items-center">
+              <button
+                type="button"
+                className={`${navLinkClass} gap-1.5`}
+                aria-haspopup="true"
+              >
+                <span>{group.label}</span>
+                <ChevronDown
+                  aria-hidden
+                  className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                  strokeWidth={2.2}
+                />
+              </button>
+              <div className="pointer-events-none absolute left-[-18px] top-full w-[310px] pt-3 opacity-0 transition duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                <div className="rounded-[10px] border border-[var(--bark-border)] bg-white p-2 shadow-[0_18px_45px_-24px_rgba(0,0,0,0.35)]">
+                  {group.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block rounded-md px-3 py-2.5 transition-colors hover:bg-[#F4F5F7] focus-visible:bg-[#F4F5F7] focus-visible:outline-none"
+                    >
+                      <span className="block text-[15px] font-bold leading-5 text-[var(--bark-text)]">
+                        {link.label}
+                      </span>
+                      {link.description ? (
+                        <span className="mt-0.5 block text-[13px] leading-[18px] text-[var(--bark-muted)]">
+                          {link.description}
+                        </span>
+                      ) : null}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {NAV_LINKS.map((link) => (
             <Link
-              key={l.href}
-              href={l.href}
-              className="hover:opacity-70 transition-opacity"
+              key={`${link.href}-${link.label}`}
+              href={link.href}
+              className={navLinkClass}
             >
-              {l.label}
+              {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop Sign-in link on the right — primary CTA lives in the
-            sub-header bar below, matching the bark.us pattern. */}
-        <div className="hidden lg:flex items-center gap-5 ml-auto">
+        <div className="ml-auto hidden items-center gap-5 xl:flex">
           <Link
             href="/login"
-            className="text-[18px] leading-[27px] hover:opacity-70 transition-opacity"
-            style={{ color: "rgb(30, 30, 30)" }}
+            className="text-[16px] leading-6 text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)]"
           >
-            Sign in
+            Log in
           </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
           type="button"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="lg:hidden ml-auto w-10 h-10 flex items-center justify-center"
-          style={{ color: "rgb(30, 30, 30)" }}
+          className="ml-auto flex h-11 w-11 items-center justify-center text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)] xl:hidden"
         >
           {mobileOpen ? (
-            <CloseIcon className="w-6 h-6" />
+            <X aria-hidden className="h-7 w-7" strokeWidth={2.2} />
           ) : (
-            <HamburgerIcon className="w-6 h-6" />
+            <Menu aria-hidden className="h-8 w-8" strokeWidth={2.2} />
           )}
         </button>
       </div>
 
-      {/* Mobile menu drawer */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="border-t border-[var(--bark-border)] bg-white xl:hidden">
           <nav
             aria-label="Mobile primary"
-            className="max-w-[1280px] mx-auto px-5 py-4 flex flex-col gap-1 text-[18px]"
-            style={{ color: "rgb(30, 30, 30)" }}
+            className="mx-auto flex max-w-[1280px] flex-col px-5 py-4 text-[var(--bark-text)]"
           >
-            {NAV_LINKS.map((l) => (
+            {NAV_GROUPS.map((group) => (
+              <div key={group.label} className="border-b border-[var(--bark-border)] py-3">
+                <div className="mb-2 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--bark-muted)]">
+                  {group.label}
+                </div>
+                <div className="grid gap-1">
+                  {group.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-md py-2 text-[18px] font-bold leading-6 transition-colors hover:text-[var(--bark-blue)]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {NAV_LINKS.map((link) => (
               <Link
-                key={l.href}
-                href={l.href}
+                key={`${link.href}-${link.label}`}
+                href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 border-b border-gray-100 last:border-0"
+                className="border-b border-[var(--bark-border)] py-3 text-[18px] font-bold leading-6 transition-colors hover:text-[var(--bark-blue)]"
               >
-                {l.label}
+                {link.label}
               </Link>
             ))}
             <Link
               href="/login"
               onClick={() => setMobileOpen(false)}
-              className="py-3 border-b border-gray-100"
+              className="border-b border-[var(--bark-border)] py-3 text-[18px] font-bold leading-6 transition-colors hover:text-[var(--bark-blue)]"
             >
-              Sign in
+              Log in
             </Link>
             <Link
               href="/signup"
               onClick={() => setMobileOpen(false)}
-              className="mt-3 bg-[#2563EB] text-white rounded-full px-5 py-3 font-semibold text-center hover:bg-[#1D4ED8] transition-colors"
+              className="mt-5 inline-flex h-11 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
             >
               Try for Free
             </Link>

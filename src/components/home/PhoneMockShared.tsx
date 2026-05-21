@@ -1,13 +1,10 @@
 /**
  * Shared building blocks for the AlertsForDangers feature mockups. Every
- * mock screen renders inside an iPhone X bezel (via react-device-frameset,
- * which wraps marvelapp/devices.css) so the mockups read as screens of one
- * real app on a real device.
+ * mock screen renders inside an iPhone X-style bezel so the mockups read as
+ * screens of one real app on one real device.
  */
 
 import * as React from "react";
-import { DeviceFrameset } from "react-device-frameset";
-import "react-device-frameset/styles/marvel-devices.min.css";
 
 /**
  * `red/redDeep/redDark` are vestigially named — they hold the brand/theme
@@ -37,16 +34,13 @@ export const COLORS = {
 /**
  * iPhone X bezel + screen wrapper (or a plain rounded card when `bare`).
  *
- * - **`bare = false` (default)** — renders the marvelapp iPhone X bezel via
- *   `react-device-frameset`. Used on desktop where there's room for the
- *   full meta-bezel framing.
+ * - **`bare = false` (default)** — renders a local iPhone X-style bezel.
+ *   Used on desktop where there's room for the full meta-bezel framing.
  *
  * - **`bare = true`** — renders just the screen content in a rounded white
  *   card with a 9:19.5 aspect ratio (the iPhone aspect, minus the bezel).
- *   Used on mobile where the user is already on a phone, the bezel reads
- *   as redundant, and the DeviceFrameset's content-box padding + non-
- *   layout-affecting CSS transforms produce a phone that visually overlaps
- *   sibling content.
+ *   Used on mobile where the user is already on a phone and the bezel reads
+ *   as redundant.
  */
 export function PhoneFrame({
   children,
@@ -70,12 +64,28 @@ export function PhoneFrame({
     );
   }
   return (
-    <div className={className} style={style}>
-      <DeviceFrameset device="iPhone X" width={375} height={812}>
-        <div className="flex flex-col h-full w-full bg-white overflow-hidden">
+    <div
+      className={`relative w-[405px] max-w-full rounded-[58px] bg-[#111318] p-[15px] shadow-[0_28px_80px_rgba(15,23,42,0.22),inset_0_0_0_1px_rgba(255,255,255,0.12)] ${className}`}
+      style={style}
+      aria-label="Phone app preview"
+    >
+      <div
+        aria-hidden
+        className="absolute left-[-3px] top-[120px] h-16 w-[3px] rounded-l-full bg-[#111318]"
+      />
+      <div
+        aria-hidden
+        className="absolute right-[-3px] top-[160px] h-24 w-[3px] rounded-r-full bg-[#111318]"
+      />
+      <div className="relative aspect-[375/812] overflow-hidden rounded-[44px] bg-white ring-1 ring-white/10">
+        <div
+          aria-hidden
+          className="absolute left-1/2 top-0 z-20 h-7 w-36 -translate-x-1/2 rounded-b-[22px] bg-[#111318]"
+        />
+        <div className="flex h-full w-full flex-col overflow-hidden bg-white">
           {children}
         </div>
-      </DeviceFrameset>
+      </div>
     </div>
   );
 }

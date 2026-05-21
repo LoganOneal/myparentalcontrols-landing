@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TryForFreeButton } from "@/components/wizard/TryForFreeButton";
 
 /**
  * Pricing & Details — visual layout cloned from bark.us/bark-app/. Dark
@@ -102,12 +102,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <Link
-          href="/signup"
-          className="mt-8 lg:mt-10 inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full px-8 py-4 font-semibold text-base sm:text-lg transition-colors"
-        >
-          Try for Free
-        </Link>
+        <TryForFreeButton variant="pricing" />
       </div>
     </section>
   );

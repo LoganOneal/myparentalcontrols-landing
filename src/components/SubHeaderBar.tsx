@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TryForFreeButton } from "@/components/wizard/TryForFreeButton";
 
 /**
  * Sub-header bar that sits directly below the main SiteHeader. Pattern
@@ -7,35 +7,29 @@ import Link from "next/link";
  */
 export function SubHeaderBar() {
   return (
-    <div className="bg-white border-b border-gray-200 w-full sticky top-0 z-40">
-      <div className="max-w-[1280px] mx-auto h-[68px] px-5 lg:px-8 flex items-center justify-between gap-4">
-        <div className="flex flex-col leading-tight">
-          <span
-            className="text-[16px] font-bold"
-            style={{ color: "rgb(30, 30, 30)" }}
-          >
+    <div className="sticky top-0 z-40 w-full border-b border-[var(--bark-border)] bg-white font-[var(--bark-sans)]">
+      <div className="mx-auto flex h-[70px] max-w-[1280px] items-center justify-between gap-4 px-5 lg:px-8">
+        <div className="flex flex-col justify-center leading-none">
+          <span className="text-[16px] font-bold text-[var(--bark-text)]">
             Parental Controls
           </span>
-          <span className="text-[14px] text-gray-600">
+          <span className="mt-1 text-[14px] leading-5 text-[var(--bark-muted)]">
             From $14.99/mo
           </span>
         </div>
-        <Link
-          href="/signup"
-          className="bg-[#2563EB] rounded-full px-5 py-2.5 whitespace-nowrap hover:bg-[#1D4ED8] transition-colors"
-          style={{
-            fontFamily:
-              '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
-            fontStyle: "normal",
-            fontWeight: 700,
-            fontSize: "14px",
-            lineHeight: "14px",
-            color: "rgb(255, 255, 255)",
-          }}
-        >
-          Try for Free
-        </Link>
+        <div className="flex min-w-fit items-center gap-4 sm:gap-6">
+          <span className="hidden text-[14px] leading-5 text-[var(--bark-muted)] sm:inline">
+            Starts at <span className="text-[var(--bark-text)]">$14.99/mo</span>
+          </span>
+          <SubHeaderTryButton />
+        </div>
       </div>
     </div>
+  );
+}
+
+function SubHeaderTryButton() {
+  return (
+    <TryForFreeButton variant="subheader" label="Try for free" />
   );
 }

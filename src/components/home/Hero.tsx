@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+import { TryForFreeButton } from "@/components/wizard/TryForFreeButton";
 
 /* ------------------------------------------------------------------
  * Hero decorations
@@ -173,21 +173,7 @@ export function Hero() {
           {/* Primary CTA — single low-friction "Try for Free" button.
               Centered on mobile, left-aligned on desktop along with the
               rest of the text column. */}
-          <Link
-            href="/signup"
-            className="mt-2 inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] rounded-full px-8 py-4 transition-colors shadow-sm"
-            style={{
-              fontFamily:
-                '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif',
-              fontStyle: "normal",
-              fontWeight: 700,
-              fontSize: "18px",
-              lineHeight: "18px",
-              color: "rgb(255, 255, 255)",
-            }}
-          >
-            Try for Free
-          </Link>
+          <TryForFreeButton variant="hero" />
         </div>
 
         {/* Right column — hero figure, bottom-flush with the grey hero

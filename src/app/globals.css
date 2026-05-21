@@ -101,6 +101,13 @@
   --calai-icon-bg: #F8F8FD;
   --calai-text-muted: #262626;
   --calai-card-shadow: 0px 1px 20px 1px rgba(228, 229, 233, 0.50);
+  --bark-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --bark-heading: "Moderat-Black", var(--font-archivo-black), sans-serif;
+  --bark-text: #1E1E1E;
+  --bark-muted: #444444;
+  --bark-border: #D9D9D9;
+  --bark-blue: #1942D8;
+  --bark-blue-hover: #1236B8;
 
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -151,7 +158,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--bark-sans);
     /* `overflow-x: clip` clips horizontal overflow WITHOUT creating a new
        scroll container, so `position: sticky` descendants still stick to
        the viewport. `overflow-x: hidden` would compute as `hidden auto`

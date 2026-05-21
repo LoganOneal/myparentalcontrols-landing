@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
 import "./globals.css";
+import { WizardProvider } from "@/components/wizard/WizardProvider";
 
 // Free open-license fallback for Moderat-Black. The hero applies a font stack
 // of "Moderat-Black, sans-serif" — Archivo Black renders if the licensed
@@ -38,7 +39,9 @@ export default function RootLayout({
       {/* overflow-x-clip prevents horizontal overflow without turning the
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}
-      <body className="overflow-x-clip">{children}</body>
+      <body className="overflow-x-clip">
+        <WizardProvider>{children}</WizardProvider>
+      </body>
     </html>
   );
 }
