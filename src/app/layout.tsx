@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
 import "./globals.css";
-import { WizardProvider } from "@/components/wizard/WizardProvider";
 
 // Free open-license fallback for Moderat-Black. The hero applies a font stack
 // of "Moderat-Black, sans-serif" — Archivo Black renders if the licensed
@@ -14,16 +13,17 @@ const archivoBlack = Archivo_Black({
 });
 
 export const metadata: Metadata = {
-  title: "Cal AI | Download Today",
+  metadataBase: new URL("https://myparentalcontrols.com"),
+  title: "MyParentalControls | Parental Security for PC Games",
   description:
-    "Meet Cal AI, the AI-powered app for easy calorie tracking. Snap a photo, scan a barcode, or describe your meal and get instant calorie and nutrient info.",
+    "MyParentalControls monitors voice and chat across the PC games kids actually play, with real-time alerts when something dangerous appears.",
   icons: {
     icon: "/seo/logo.png",
   },
   openGraph: {
-    title: "Cal AI | Download Today",
+    title: "MyParentalControls | Parental Security for PC Games",
     description:
-      "Track your calories with just a picture. The AI-powered calorie tracker.",
+      "Voice and chat monitoring across 3,000+ PC games with real-time alerts for parents.",
     images: [{ url: "/seo/opengraph.jpg" }],
     type: "website",
   },
@@ -39,9 +39,7 @@ export default function RootLayout({
       {/* overflow-x-clip prevents horizontal overflow without turning the
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}
-      <body className="overflow-x-clip">
-        <WizardProvider>{children}</WizardProvider>
-      </body>
+      <body className="overflow-x-clip">{children}</body>
     </html>
   );
 }

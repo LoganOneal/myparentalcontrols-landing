@@ -1,16 +1,16 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Cal AI | Privacy Policy",
-  description: "Download Today",
+  title: "MyParentalControls | Privacy Policy",
+  description: "MyParentalControls privacy policy.",
 };
 
 const HTML = `<h1>Privacy Policy</h1> <p>Last Updated: November 28, 2025</p> <p>
-This Privacy Policy describes how Cal AI, Inc. collects, uses, processes, shares, and protects
-        Your information when You use the Cal AI mobile application, website, and related services
+This Privacy Policy describes how MyParentalControls collects, uses, processes, shares, and protects
+        Your information when You use the MyParentalControls application, website, and related services
         (collectively, the “Service”). By using the Service, You agree to the collection and use of
         information in accordance with this Privacy Policy.
-</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>Capitalized terms have the meanings assigned to them in this Policy.</p> <h3>1.2 Definitions</h3> <ul> <li><strong>Account</strong> means the unique profile created for You to access the Service.</li> <li><strong>Application</strong> means the mobile application titled “Cal AI – Calorie Tracker.”</li> <li> <strong>Company, We, Us, or Our</strong> means Cal AI, Inc., a Delaware corporation, with mailing address
+</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>Capitalized terms have the meanings assigned to them in this Policy.</p> <h3>1.2 Definitions</h3> <ul> <li><strong>Account</strong> means the unique profile created for You to access the Service.</li> <li><strong>Application</strong> means the application titled “MyParentalControls.”</li> <li> <strong>Company, We, Us, or Our</strong> means MyParentalControls, with mailing address
           160 W. Camino Real #594, Boca Raton, FL 33432, United States.
 </li> <li><strong>Device</strong> means any device used to access the Service.</li> <li> <strong>Personal Data</strong> means information that identifies or can reasonably be linked to an individual.
           Personal Data includes identifiable health information.
@@ -21,7 +21,7 @@ This Privacy Policy describes how Cal AI, Inc. collects, uses, processes, shares
           information, activity logs, and analytics data.
 </li> <li> <strong>User Content</strong> means photos, images, text, food entries, metadata, or other inputs You upload or
           submit through the Service.
-</li> <li><strong>Website</strong> means calai.app.</li> <li> <strong>You</strong> means the individual using the Service or the organization on whose behalf the Service is
+</li> <li><strong>Website</strong> means myparentalcontrols.com.</li> <li> <strong>You</strong> means the individual using the Service or the organization on whose behalf the Service is
           used.
 </li> </ul> <h2>2. Types of Data We Collect</h2> <p>
 We collect the categories of data described below. Certain categories may qualify as health
@@ -53,7 +53,7 @@ Your information may be transferred to and processed on servers outside Your jur
         implement safeguards as required by law, including standard contractual clauses for international
         transfers.
 </p> <h2>9. Your Privacy Rights</h2> <p>Depending on Your jurisdiction, You may have rights to:</p> <ul> <li>Access Your Personal Data</li> <li>Correct inaccurate data</li> <li>Delete Personal Data</li> <li>Export Your data</li> <li>Withdraw consent</li> <li>Object to processing</li> <li>Request restriction of processing</li> </ul> <p>
-You may exercise rights through in-app settings or by contacting Us at support@calai.app.
+You may exercise rights through in-app settings or by contacting Us at support@myparentalcontrols.com.
 </p> <h2>10. Deleting Your Personal Data</h2> <p>You may request deletion of:</p> <ul> <li>Account</li> <li>Progress photos</li> <li>Food logs</li> <li>Profile data</li> </ul> <p>Some data may persist where legally required.</p> <h2>11. Security</h2> <p>
 We use administrative, technical, and physical safeguards to protect Your data. However, no
         online system is entirely secure.
@@ -66,7 +66,7 @@ The Service may contain links to third-party websites or services. Their privacy
 </p> <h2>14. Changes to This Privacy Policy</h2> <p>
 We may update this Policy from time to time. Updates become effective when posted. We may
         notify You by email or through the Application for material changes.
-</p> <h2>15. Contact Us</h2> <p>If You have questions or requests related to this Privacy Policy, You may contact Us:</p> <ul> <li>Email: support@calai.app</li> </ul>`;
+</p> <h2>15. Contact Us</h2> <p>If You have questions or requests related to this Privacy Policy, You may contact Us:</p> <ul> <li>Email: support@myparentalcontrols.com</li> </ul>`;
 
 export default function Page() {
   return (

@@ -161,7 +161,7 @@ export function Hero() {
               color: "rgb(30, 30, 30)",
             }}
           >
-            #1 parental security for the PC games your child plays.
+            #1 parental security system for the PC games your child plays.
           </h1>
 
           {/* Sub paragraph */}

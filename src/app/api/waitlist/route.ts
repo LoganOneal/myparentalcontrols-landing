@@ -4,8 +4,11 @@ import {
   createWaitlistRecord,
   findWaitlistByEmail,
 } from "@/lib/airtable";
+import {
+  claimNextWaitlistPosition,
+  upsertWaitlistEmail,
+} from "@/lib/supabase";
 import { sendWelcomeEmail } from "@/lib/resend";
-import { formatWaitlistPosition } from "@/lib/positions";
 
 export const runtime = "nodejs";
 
@@ -22,12 +25,28 @@ export async function POST(req: Request) {
 
   try {
     const existing = await findWaitlistByEmail(email);
-    const record = existing ?? (await createWaitlistRecord({ email }));
-    const autonumber = record.fields.Position ?? 1;
-    const position = formatWaitlistPosition(autonumber);
+
+    let record;
+    let position: number;
+    if (existing) {
+      record = existing;
+      position = existing.fields.Position ?? 0;
+    } else {
+      // Claim the atomic counter from Supabase BEFORE writing to either DB
+      // so both rows end up with the same display number.
+      position = await claimNextWaitlistPosition();
+      record = await createWaitlistRecord({ email, position });
+    }
+
+    // Mirror to Supabase. Don't block the request on a Supabase outage —
+    // Airtable is already the source of truth for the wizard's recordId.
+    upsertWaitlistEmail({
+      email,
+      position,
+      airtableRecordId: record.id,
+    }).catch((e) => console.error("supabase upsert failed", e));
 
     if (!existing) {
-      // Fire and forget — don't block UX on email delivery.
       sendWelcomeEmail({ to: email, waitlistPosition: position }).catch(
         (e) => console.error("welcome email failed", e),
       );

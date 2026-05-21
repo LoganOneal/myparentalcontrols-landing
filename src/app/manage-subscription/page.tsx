@@ -3,9 +3,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ManageSubForm } from "./form";
 
 export const metadata = {
-  title: "Cal AI | Download Today",
+  title: "MyParentalControls | Manage Subscription",
   description:
-    "Manage your Cal AI subscription by entering the email address you subscribed with.",
+    "Manage your MyParentalControls subscription by entering the email address you subscribed with.",
 };
 
 export default function ManageSubscriptionPage() {

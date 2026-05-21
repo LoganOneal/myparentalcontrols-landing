@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { patchWaitlistRecord } from "@/lib/airtable";
+import { patchWaitlistByAirtableId, type WaitlistPatch } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
@@ -23,15 +24,30 @@ export async function PATCH(
     return new NextResponse("Invalid body", { status: 400 });
   }
 
-  const fields: Record<string, unknown> = {};
-  if (body.kidsCount !== undefined) fields["Kids Count"] = body.kidsCount;
-  if (body.kidsAges !== undefined)
-    fields["Kids Ages"] = JSON.stringify(body.kidsAges);
-  if (body.games !== undefined) fields["Games"] = body.games;
-  if (body.concerns !== undefined) fields["Concerns"] = body.concerns.join(", ");
+  const airtableFields: Record<string, unknown> = {};
+  const supabaseFields: WaitlistPatch = {};
+  if (body.kidsCount !== undefined) {
+    airtableFields["Kids Count"] = body.kidsCount;
+    supabaseFields.kids_count = body.kidsCount;
+  }
+  if (body.kidsAges !== undefined) {
+    airtableFields["Kids Ages"] = JSON.stringify(body.kidsAges);
+    supabaseFields.kids_ages = body.kidsAges;
+  }
+  if (body.games !== undefined) {
+    airtableFields["Games"] = body.games;
+    supabaseFields.games = body.games;
+  }
+  if (body.concerns !== undefined) {
+    airtableFields["Concerns"] = body.concerns.join(", ");
+    supabaseFields.concerns = body.concerns;
+  }
 
   try {
-    await patchWaitlistRecord(id, fields);
+    await patchWaitlistRecord(id, airtableFields);
+    patchWaitlistByAirtableId(id, supabaseFields).catch((e) =>
+      console.error("supabase patch failed", e),
+    );
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("waitlist PATCH failed", err);

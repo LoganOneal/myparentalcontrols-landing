@@ -39,9 +39,11 @@ export function GooglePlayBadge(props: React.HTMLAttributes<HTMLImageElement>) {
 export function MyParentalControlsLogo({
   height = 32,
   className,
+  color = "var(--mpc-dark)",
 }: {
   height?: number;
   className?: string;
+  color?: string;
 }) {
   const iconSize = height;
   const fontSize = Math.round(height * 0.62);
@@ -61,7 +63,7 @@ export function MyParentalControlsLogo({
       />
       <span
         className="font-bold tracking-tight whitespace-nowrap"
-        style={{ color: "var(--calai-dark)", fontSize, lineHeight: 1 }}
+        style={{ color, fontSize, lineHeight: 1 }}
       >
         MyParentalControls
       </span>

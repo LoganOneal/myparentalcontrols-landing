@@ -20,6 +20,10 @@ type NewsItem = {
   excerpt?: string;
 };
 
+type PressMentionsProps = {
+  hideHeader?: boolean;
+};
+
 const ITEMS: NewsItem[] = [
   {
     source: "BBC News",
@@ -107,7 +111,7 @@ function FeaturedCard({ item }: { item: NewsItem }) {
       aria-label={`${item.source}: ${item.headline}`}
       target={item.href.startsWith("http") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="group block rounded-3xl overflow-hidden bg-white border border-gray-200/80 hover:border-gray-300 transition-colors"
+      className="group block overflow-hidden rounded-lg border border-black/5 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_38px_rgba(0,0,0,0.08)]"
     >
       <div className="aspect-[16/9] bg-gray-50 relative border-b border-gray-200/80 overflow-hidden">
         {item.screenshot ? (
@@ -131,7 +135,7 @@ function FeaturedCard({ item }: { item: NewsItem }) {
             {item.date}
           </span>
         </div>
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight group-hover:text-black transition-colors">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight transition-colors group-hover:text-[#1D4ED8]">
           {item.headline}
         </h3>
         {item.excerpt ? (
@@ -154,7 +158,7 @@ function ListRow({ item }: { item: NewsItem }) {
       className="group block py-8 first:pt-0 border-b border-gray-200/80 last:border-b-0"
     >
       <div className="grid grid-cols-1 sm:grid-cols-[260px_1fr] gap-6 sm:gap-8">
-        <div className="aspect-[16/10] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-gray-50 border border-gray-200/80 relative">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-gray-200/80 bg-gray-50 sm:aspect-[4/3]">
           {item.screenshot ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
@@ -176,7 +180,7 @@ function ListRow({ item }: { item: NewsItem }) {
               {item.date}
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug group-hover:text-black transition-colors">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug transition-colors group-hover:text-[#1D4ED8]">
             {item.headline}
           </h3>
           {item.excerpt ? (
@@ -190,34 +194,33 @@ function ListRow({ item }: { item: NewsItem }) {
   );
 }
 
-export function PressMentions() {
+export function PressMentions({ hideHeader = false }: PressMentionsProps = {}) {
   const [featured, ...rest] = ITEMS;
 
   return (
-    <section className="mt-16 sm:mt-20">
-      <div className="text-center max-w-3xl mx-auto">
-        <h2
-          className="text-3xl sm:text-[42px] leading-tight"
-          style={{
-            fontFamily: "Moderat-Black, sans-serif",
-            fontWeight: 700,
-          }}
-        >
-          In the news 📰
-        </h2>
-        <p className="mt-4 text-base sm:text-lg text-gray-700">
-          State attorneys general, regulators, and families are filing lawsuits
-          against the platforms where predators target your children. Here&rsquo;s
-          what reporters are covering.
-        </p>
-      </div>
+    <section className={hideHeader ? "mt-8 sm:mt-10" : "mt-16 sm:mt-20"}>
+      {hideHeader ? null : (
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#2563EB]">
+            In the news
+          </p>
+          <h2 className="mt-2 text-[32px] font-bold leading-tight text-black sm:text-[42px]">
+            Reporting on the platforms parents are worried about.
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-gray-700">
+            State attorneys general, regulators, and families are filing
+            lawsuits against the platforms where predators target your children.
+            Here&rsquo;s what reporters are covering.
+          </p>
+        </div>
+      )}
 
-      <div className="mt-10 sm:mt-14">
+      <div className={hideHeader ? "mt-0" : "mt-10 sm:mt-14"}>
         <FeaturedCard item={featured} />
       </div>
 
       <div className="mt-12 sm:mt-16">
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-[0.16em] mb-6">
+        <h3 className="mb-6 text-sm font-bold uppercase tracking-[0.16em] text-[#2563EB]">
           More coverage
         </h3>
         <div className="flex flex-col">

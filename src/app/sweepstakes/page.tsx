@@ -1,11 +1,11 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Cal AI | Sweepstakes Official Rules",
-  description: "Download Today",
+  title: "MyParentalControls | Sweepstakes Official Rules",
+  description: "MyParentalControls sweepstakes official rules.",
 };
 
-const HTML = `<h1>CAL AI SURVEY SWEEPSTAKES</h1> <h2>OFFICIAL RULES</h2> <p>
+const HTML = `<h1>MYPARENTALCONTROLS SURVEY SWEEPSTAKES</h1> <h2>OFFICIAL RULES</h2> <p>
 Please read these Official Rules carefully. By participating in the survey and these Sweepstakes, 
         you agree to these Official Rules.
 </p> <h2>1. ELIGIBILITY</h2> <p>
@@ -13,7 +13,7 @@ No purchase or payment of any kind is necessary to enter or win. A purchase will
         chances of winning. Void where prohibited. The Sweepstakes is open to legal residents of the 50 
         United States and the District of Columbia, 18 years of age or older. Employees, officers and 
         directors (and their immediate families (e.g. spouse, children, parents, siblings) and those living 
-        in their same households (whether or not related)) of Cal AI, Inc. ("Sponsor"), are not eligible to 
+        in their same households (whether or not related)) of MyParentalControls ("Sponsor"), are not eligible to 
         enter. Eligible participants of the Sweepstakes are referred to as "Participant(s)" or "you". By 
         participating, you agree to these Official Rules and to the decisions of the Sponsor whose decisions 
         are final and binding in all respects.
@@ -24,7 +24,7 @@ These sweepstakes (the "Sweepstakes") begin on May 8, 2026 at 12:01am Eastern Ti
         device for the Sweepstakes.
 </p> <h2>3. HOW TO ENTER</h2> <p>
 Participants shall receive one automatic entry after they successfully complete and submit a survey. 
-        Or, to enter without submitting a survey, you may email <a href="mailto:support@calai.app">support@calai.app</a>
+        Or, to enter without submitting a survey, you may email <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>
 with your full contact name and email address to participate in the Sweepstakes. Limit one (1) entry 
         of any kind per person. You may enter by submitting a survey as provided above or by email but not 
         both ways. Sponsor reserves the right to verify all entries. Sponsor reserves, in its sole discretion, 
@@ -138,21 +138,21 @@ In the event of any litigation or arbitration arising from or related to these O
         in such litigation or arbitration.
 </p> <h2>10. WINNER'S LIST</h2> <p>
 For a winners' list, no later than 60 days after the close of the Entry Period, email
-<a href="mailto:support@calai.app">support@calai.app</a>. Limit one (1) request per email address.
+<a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>. Limit one (1) request per email address.
 </p> <h2>11. PRIVACY POLICY</h2> <p>
-Please see Sponsor's privacy policy located at <a href="/privacy">https://www.calai.app/privacy</a> for 
+Please see Sponsor's privacy policy located at <a href="/privacy">https://www.myparentalcontrols.com/privacy</a> for 
         details of Sponsor's policy regarding the use of personal information collected in connection with 
         these Sweepstakes. By entering these Sweepstakes, Participants agree that any personal information 
         submitted by Participants may be used or shared by Sponsor as stated in the privacy policy, including 
         to effectuate the Sweepstakes administration.
 </p> <h2>12. TERMS AND CONDITIONS</h2> <p>
-The Terms and Conditions located at <a href="/tos">https://www.calai.app/tos</a> are incorporated by 
+The Terms and Conditions located at <a href="/tos">https://www.myparentalcontrols.com/tos</a> are incorporated by 
         reference herein and made a part of these Official Rules.
 </p> <h2>13. SPONSOR</h2> <p>
-Cal AI, Inc. with a principal place of business located at 100 Congress Ave., Suite 400, Austin,
+MyParentalControls with a principal place of business located at 100 Congress Ave., Suite 400, Austin,
         TX 78701.
 </p> <p class="mt-8">
-© 2026 Cal AI, Inc. All other trademarks, service marks, logos, product or service names are the 
+© 2026 MyParentalControls. All other trademarks, service marks, logos, product or service names are the 
         property of their respective owners. All Rights Reserved.
 </p>`;
 

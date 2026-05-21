@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
-  AppStoreBadge,
   LinkedInIcon,
   InstagramIcon,
+  MyParentalControlsLogo,
   TikTokIcon,
 } from "@/components/icons";
 
@@ -83,20 +82,7 @@ function ArrowRightIcon({ className = "" }: { className?: string }) {
 function FooterLogo() {
   return (
     <Link href="/" className="inline-flex items-center gap-2" aria-label="MyParentalControls home">
-      <Image
-        src="/images/mpc-logo-icon.svg"
-        alt=""
-        aria-hidden
-        width={36}
-        height={36}
-        className="shrink-0"
-      />
-      <span
-        className="font-bold tracking-tight whitespace-nowrap text-white text-[22px] leading-none"
-        style={{ fontFamily: FOOTER_FONT_STACK }}
-      >
-        MyParentalControls
-      </span>
+      <MyParentalControlsLogo height={36} color="white" />
     </Link>
   );
 }
@@ -180,32 +166,18 @@ export function SiteFooter() {
               className="text-[20px] font-normal m-0"
               style={{ color: NAV_TITLE_COLOR }}
             >
-              Download MyParentalControls
+              Get MyParentalControls
             </p>
             <div className="mt-[18px] flex flex-col gap-3 items-start">
               <Link
-                href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041"
-                aria-label="Download on the App Store"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/get-started"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-[#1942D8] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[#1236B8]"
               >
-                <AppStoreBadge />
+                Try for Free
               </Link>
-              <Link
-                href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai"
-                aria-label="Get it on Google Play"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/googleplay.png"
-                  alt="Get it on Google Play"
-                  width={135}
-                  height={41}
-                  className="h-[41px] w-auto"
-                />
-              </Link>
+              <p className="m-0 max-w-[190px] text-sm leading-5 text-white/70">
+                Join the early-access waitlist for family monitoring.
+              </p>
             </div>
           </div>
         </div>
@@ -245,7 +217,7 @@ export function SiteFooter() {
               Follow us:
             </span>
             <Link
-              href="https://www.linkedin.com/company/cal-ai-app/"
+              href="https://www.linkedin.com/company/myparentalcontrols/"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -254,7 +226,7 @@ export function SiteFooter() {
               <LinkedInIcon className="w-[18px] h-[18px]" />
             </Link>
             <Link
-              href="https://www.instagram.com/calai.app/"
+              href="https://www.instagram.com/myparentalcontrols/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -263,7 +235,7 @@ export function SiteFooter() {
               <InstagramIcon className="w-[18px] h-[18px]" />
             </Link>
             <Link
-              href="https://www.tiktok.com/@getcalai"
+              href="https://www.tiktok.com/@myparentalcontrols"
               aria-label="TikTok"
               target="_blank"
               rel="noopener noreferrer"

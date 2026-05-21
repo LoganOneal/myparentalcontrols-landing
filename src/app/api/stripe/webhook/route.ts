@@ -6,6 +6,7 @@ import {
   getWaitlistRecord,
   patchWaitlistRecord,
 } from "@/lib/airtable";
+import { patchWaitlistByAirtableId } from "@/lib/supabase";
 import { sendPremiumQueueEmail } from "@/lib/resend";
 import { formatPremiumPosition } from "@/lib/positions";
 
@@ -53,6 +54,12 @@ export async function POST(req: Request) {
       "Stripe Session ID": session.id,
       "Premium Position": premiumPosition,
     });
+
+    patchWaitlistByAirtableId(recordId, {
+      paid_skip: true,
+      stripe_session_id: session.id,
+      premium_position: premiumPosition,
+    }).catch((e) => console.error("supabase webhook patch failed", e));
 
     const email = record.fields.Email;
     if (email) {

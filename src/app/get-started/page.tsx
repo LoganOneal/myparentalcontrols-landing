@@ -1,8 +1,17 @@
 "use client";
 
-import { Dialog } from "@base-ui/react/dialog";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, X, Check, Plus } from "lucide-react";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, Check, Plus, X } from "lucide-react";
+import { MyParentalControlsLogo } from "@/components/icons";
 import type { WizardFormData, WizardStep } from "@/types/wizard";
 
 const GAMES = [
@@ -30,32 +39,85 @@ const CONCERNS = [
 ];
 
 const TOTAL_STEPS = 5;
+const STORAGE_KEY = "mpc:wizard:state:v1";
 
-type Props = {
-  open: boolean;
-  initialStep: WizardStep;
-  onClose: () => void;
+type StoredState = {
+  recordId: string;
+  position: number;
+  form: WizardFormData;
 };
 
-export function WaitlistWizard({ open, initialStep, onClose }: Props) {
-  const [step, setStep] = useState<WizardStep>(initialStep);
+function loadStored(): StoredState | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.sessionStorage.getItem(STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as StoredState) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveStored(s: StoredState) {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+  } catch {
+    /* ignore */
+  }
+}
+
+function clearStored() {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.removeItem(STORAGE_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+export default function GetStartedPage() {
+  return (
+    <Suspense fallback={<WizardShell><div /></WizardShell>}>
+      <WizardClient />
+    </Suspense>
+  );
+}
+
+function WizardClient() {
+  const searchParams = useSearchParams();
+  const [step, setStep] = useState<WizardStep>(1);
   const [form, setForm] = useState<WizardFormData>({ email: "" });
   const [recordId, setRecordId] = useState<string | null>(null);
   const [waitlistPosition, setWaitlistPosition] = useState<number | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Restore session on mount (covers Stripe cancel redirect to ?step=5)
   useEffect(() => {
-    if (open) {
-      setStep(initialStep);
-      setError(null);
+    const stored = loadStored();
+    if (stored) {
+      setRecordId(stored.recordId);
+      setWaitlistPosition(stored.position);
+      setForm(stored.form);
     }
-  }, [open, initialStep]);
+    const stepParam = Number(searchParams.get("step") ?? 1);
+    const requestedStep = (stepParam >= 1 && stepParam <= 5
+      ? stepParam
+      : 1) as WizardStep;
+    // Only jump deep into the wizard if we have the corresponding record state
+    if (requestedStep > 1 && !stored?.recordId) {
+      setStep(1);
+    } else {
+      setStep(requestedStep);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const next = () => setStep((s) => Math.min(TOTAL_STEPS, s + 1) as WizardStep);
+  const next = () =>
+    setStep((s) => Math.min(TOTAL_STEPS, s + 1) as WizardStep);
   const back = () => setStep((s) => Math.max(1, s - 1) as WizardStep);
 
-  const handleEmailSubmit = async (email: string) => {
+  const handleEmailSubmit = useCallback(async (email: string) => {
     setSubmitting(true);
     setError(null);
     try {
@@ -65,37 +127,60 @@ export function WaitlistWizard({ open, initialStep, onClose }: Props) {
         body: JSON.stringify({ email }),
       });
       if (!res.ok) throw new Error(await res.text());
-      const data = (await res.json()) as { recordId: string; position: number };
+      const data = (await res.json()) as {
+        recordId: string;
+        position: number;
+      };
       setRecordId(data.recordId);
       setWaitlistPosition(data.position);
-      setForm((f) => ({ ...f, email }));
-      next();
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Something went wrong.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const patch = async (fields: Partial<WizardFormData>) => {
-    if (!recordId) return next();
-    setSubmitting(true);
-    setError(null);
-    try {
-      const res = await fetch(`/api/waitlist/${recordId}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fields),
+      const nextForm = { ...form, email };
+      setForm(nextForm);
+      saveStored({
+        recordId: data.recordId,
+        position: data.position,
+        form: nextForm,
       });
-      if (!res.ok) throw new Error(await res.text());
-      setForm((f) => ({ ...f, ...fields }));
-      next();
+      setStep(2);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");
     } finally {
       setSubmitting(false);
     }
-  };
+  }, [form]);
+
+  const patch = useCallback(
+    async (fields: Partial<WizardFormData>) => {
+      if (!recordId) {
+        next();
+        return;
+      }
+      setSubmitting(true);
+      setError(null);
+      try {
+        const res = await fetch(`/api/waitlist/${recordId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(fields),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        const nextForm = { ...form, ...fields };
+        setForm(nextForm);
+        if (waitlistPosition !== null) {
+          saveStored({
+            recordId,
+            position: waitlistPosition,
+            form: nextForm,
+          });
+        }
+        next();
+      } catch (e) {
+        setError(e instanceof Error ? e.message : "Something went wrong.");
+      } finally {
+        setSubmitting(false);
+      }
+    },
+    [form, recordId, waitlistPosition],
+  );
 
   const handleSkipLine = async () => {
     if (!recordId) return;
@@ -108,8 +193,13 @@ export function WaitlistWizard({ open, initialStep, onClose }: Props) {
         body: JSON.stringify({ recordId }),
       });
       if (!res.ok) throw new Error(await res.text());
-      const data = (await res.json()) as { sessionId: string; url: string | null };
+      const data = (await res.json()) as {
+        sessionId: string;
+        url: string | null;
+      };
       if (data.url) {
+        // Clear session right before redirect — /welcome is the terminal page.
+        // We keep stored state in case Stripe redirects back on cancel.
         window.location.href = data.url;
         return;
       }
@@ -120,105 +210,113 @@ export function WaitlistWizard({ open, initialStep, onClose }: Props) {
     }
   };
 
+  const canGoBack = step > 1 && step < 5;
+
   return (
-    <Dialog.Root open={open} onOpenChange={(o) => !o && onClose()}>
-      <Dialog.Portal>
-        <Dialog.Backdrop className="fixed inset-0 z-50 bg-black/40 data-[starting-style]:opacity-0 data-[ending-style]:opacity-0 transition-opacity duration-200" />
-        <Dialog.Popup
-          className="
-            fixed inset-x-0 bottom-0 z-50 flex flex-col
-            bg-white shadow-2xl outline-none
-            rounded-t-2xl max-h-[92vh]
-            data-[starting-style]:translate-y-full data-[ending-style]:translate-y-full
-            sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2
-            sm:rounded-2xl sm:max-w-[440px] sm:w-[440px] sm:max-h-[680px]
-            sm:data-[starting-style]:translate-y-[calc(-50%+8px)] sm:data-[starting-style]:opacity-0
-            sm:data-[ending-style]:translate-y-[calc(-50%+8px)] sm:data-[ending-style]:opacity-0
-            transition-[transform,opacity] duration-300 ease-out
-          "
-        >
-          {/* Mobile drag handle */}
-          <div className="sm:hidden pt-2 pb-1 flex justify-center" aria-hidden>
-            <div className="w-9 h-1 rounded-full bg-gray-300" />
-          </div>
+    <WizardShell
+      step={step}
+      onBack={canGoBack ? back : undefined}
+    >
+      {step === 1 && (
+        <StepEmail
+          defaultValue={form.email}
+          submitting={submitting}
+          error={error}
+          onSubmit={handleEmailSubmit}
+        />
+      )}
+      {step === 2 && (
+        <StepKids
+          defaultCount={form.kidsCount ?? 1}
+          defaultAges={form.kidsAges ?? []}
+          submitting={submitting}
+          error={error}
+          onSubmit={(kidsCount, kidsAges) =>
+            patch({ kidsCount, kidsAges })
+          }
+        />
+      )}
+      {step === 3 && (
+        <StepGames
+          defaultValue={form.games ?? []}
+          submitting={submitting}
+          error={error}
+          onSubmit={(games) => patch({ games })}
+        />
+      )}
+      {step === 4 && (
+        <StepConcerns
+          defaultValue={form.concerns ?? []}
+          submitting={submitting}
+          error={error}
+          onSubmit={(concerns) => patch({ concerns })}
+        />
+      )}
+      {step === 5 && (
+        <StepWaitlist
+          position={waitlistPosition}
+          submitting={submitting}
+          error={error}
+          onSkip={handleSkipLine}
+        />
+      )}
+    </WizardShell>
+  );
+}
 
-          {/* Header: back + progress + close */}
-          <div className="flex items-center justify-between px-4 pt-2 pb-3 sm:px-6 sm:pt-5">
-            <button
-              type="button"
-              onClick={step > 1 && step < 5 ? back : onClose}
-              className="w-9 h-9 -ml-2 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
-              aria-label={step > 1 && step < 5 ? "Back" : "Close"}
-            >
-              {step > 1 && step < 5 ? (
+/* --------------------------------- Shell --------------------------------- */
+
+function WizardShell({
+  children,
+  step,
+  onBack,
+}: {
+  children: React.ReactNode;
+  step?: WizardStep;
+  onBack?: () => void;
+}) {
+  return (
+    <div className="min-h-[100dvh] flex flex-col bg-[#F1F2F4]">
+      {/* Top bar — brand left, progress center. Intentionally no close X. */}
+      <header className="sticky top-0 z-10 bg-[#F1F2F4]/85 backdrop-blur-md">
+        <div className="max-w-[640px] mx-auto h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2 min-w-[44px]">
+            {onBack ? (
+              <button
+                type="button"
+                onClick={onBack}
+                aria-label="Back"
+                className="-ml-2 w-10 h-10 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200/60 transition-colors"
+              >
                 <ArrowLeft className="w-5 h-5" />
-              ) : (
-                <X className="w-5 h-5" />
-              )}
-            </button>
-            <ProgressDots current={step} total={TOTAL_STEPS} />
-            <Dialog.Close
-              className="w-9 h-9 -mr-2 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
-              aria-label="Close"
-            >
-              <X className="w-5 h-5" />
-            </Dialog.Close>
+              </button>
+            ) : (
+              <MyParentalControlsLogo height={22} color="#111827" />
+            )}
           </div>
+          <div className="flex-1 flex justify-center">
+            {step ? <ProgressDots current={step} total={TOTAL_STEPS} /> : null}
+          </div>
+          <div className="min-w-[44px]" aria-hidden />
+        </div>
+      </header>
 
-          {/* Body */}
-          <div className="flex-1 overflow-y-auto px-5 sm:px-6 pb-6">
-            {step === 1 && (
-              <StepEmail
-                defaultValue={form.email}
-                submitting={submitting}
-                error={error}
-                onSubmit={handleEmailSubmit}
-              />
-            )}
-            {step === 2 && (
-              <StepKids
-                defaultCount={form.kidsCount ?? 1}
-                defaultAges={form.kidsAges ?? []}
-                submitting={submitting}
-                error={error}
-                onSubmit={(kidsCount, kidsAges) => patch({ kidsCount, kidsAges })}
-              />
-            )}
-            {step === 3 && (
-              <StepGames
-                defaultValue={form.games ?? []}
-                submitting={submitting}
-                error={error}
-                onSubmit={(games) => patch({ games })}
-              />
-            )}
-            {step === 4 && (
-              <StepConcerns
-                defaultValue={form.concerns ?? []}
-                submitting={submitting}
-                error={error}
-                onSubmit={(concerns) => patch({ concerns })}
-              />
-            )}
-            {step === 5 && (
-              <StepWaitlist
-                position={waitlistPosition}
-                submitting={submitting}
-                error={error}
-                onSkip={handleSkipLine}
-                onWait={onClose}
-              />
-            )}
-          </div>
-        </Dialog.Popup>
-      </Dialog.Portal>
-    </Dialog.Root>
+      {/* Card */}
+      <main className="flex-1 flex items-stretch sm:items-center justify-center px-4 sm:px-6 py-4 sm:py-10">
+        <div className="w-full max-w-[480px] flex flex-col bg-white rounded-2xl shadow-[0_2px_28px_rgba(15,23,42,0.06)] border border-gray-100 px-5 sm:px-8 py-6 sm:py-9 min-h-[440px]">
+          {children}
+        </div>
+      </main>
+    </div>
   );
 }
 
 function ProgressDots({ current, total }: { current: number; total: number }) {
   return (
-    <div className="flex items-center gap-1.5" aria-label={`Step ${current} of ${total}`}>
+    <div
+      className="flex items-center gap-1.5"
+      aria-label={`Step ${current} of ${total}`}
+    >
       {Array.from({ length: total }).map((_, i) => (
         <div
           key={i}
@@ -227,7 +325,7 @@ function ProgressDots({ current, total }: { current: number; total: number }) {
               ? "w-6 bg-[#2563EB]"
               : i + 1 < current
               ? "w-1.5 bg-[#2563EB]"
-              : "w-1.5 bg-gray-200"
+              : "w-1.5 bg-gray-300"
           }`}
         />
       ))}
@@ -235,16 +333,26 @@ function ProgressDots({ current, total }: { current: number; total: number }) {
   );
 }
 
-function StepHeader({ title, subtitle }: { title: string; subtitle?: string }) {
+function StepHeader({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}) {
   return (
     <div className="mb-6">
-      <h2
+      <h1
         className="text-[26px] sm:text-[28px] leading-[1.15] tracking-tight text-gray-900"
         style={{ fontFamily: "Moderat-Black, sans-serif", fontWeight: 700 }}
       >
         {title}
-      </h2>
-      {subtitle && <p className="mt-2 text-[15px] leading-snug text-gray-600">{subtitle}</p>}
+      </h1>
+      {subtitle && (
+        <p className="mt-2 text-[15px] leading-snug text-gray-600">
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }
@@ -311,7 +419,7 @@ function StepEmail({
         e.preventDefault();
         if (valid && !submitting) onSubmit(value.trim());
       }}
-      className="flex flex-col h-full"
+      className="flex flex-col flex-1"
     >
       <StepHeader
         title="Get on the waitlist."
@@ -341,7 +449,8 @@ function StepEmail({
           {submitting ? "Saving…" : "Continue"}
         </PrimaryButton>
         <p className="mt-3 text-center text-[12px] text-gray-500">
-          By continuing you agree to receive product emails from MyParentalControls.
+          By continuing you agree to receive product emails from
+          MyParentalControls.
         </p>
       </div>
     </form>
@@ -386,7 +495,7 @@ function StepKids({
   );
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-1">
       <StepHeader
         title="How many kids?"
         subtitle="So we can tailor what we monitor across each device."
@@ -395,13 +504,19 @@ function StepKids({
       <div className="flex items-center justify-between rounded-2xl bg-gray-50 p-3 mb-6">
         <span className="px-2 text-[15px] text-gray-700">Kids</span>
         <div className="flex items-center gap-2">
-          <StepperButton onClick={() => setCountSafe(Math.max(1, count - 1))} ariaLabel="Decrement kids">
+          <StepperButton
+            onClick={() => setCountSafe(Math.max(1, count - 1))}
+            ariaLabel="Decrement kids"
+          >
             −
           </StepperButton>
           <span className="w-8 text-center text-[18px] font-bold tabular-nums text-gray-900">
             {count}
           </span>
-          <StepperButton onClick={() => setCountSafe(Math.min(6, count + 1))} ariaLabel="Increment kids">
+          <StepperButton
+            onClick={() => setCountSafe(Math.min(6, count + 1))}
+            ariaLabel="Increment kids"
+          >
             +
           </StepperButton>
         </div>
@@ -421,15 +536,17 @@ function StepKids({
                     key={a}
                     type="button"
                     onClick={() => {
-                      const next = [...ages];
-                      next[i] = a;
-                      setAges(next);
+                      const nextAges = [...ages];
+                      nextAges[i] = a;
+                      setAges(nextAges);
                     }}
                     className={`
                       h-9 min-w-9 px-2 rounded-full text-[14px] font-semibold transition-colors
-                      ${selected
-                        ? "bg-[#2563EB] text-white"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"}
+                      ${
+                        selected
+                          ? "bg-[#2563EB] text-white"
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      }
                     `}
                   >
                     {a}
@@ -497,7 +614,7 @@ function StepGames({
   const valid = selected.length > 0;
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-1">
       <StepHeader
         title="Which games do they play?"
         subtitle="Pick any that apply. We monitor 3,000+ games — these are the most common."
@@ -513,9 +630,11 @@ function StepGames({
               className={`
                 inline-flex items-center gap-1.5 h-11 px-4 rounded-full
                 text-[14px] font-semibold transition-colors
-                ${on
-                  ? "bg-[#2563EB] text-white"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200"}
+                ${
+                  on
+                    ? "bg-[#2563EB] text-white"
+                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                }
               `}
             >
               {on && <Check className="w-3.5 h-3.5" />}
@@ -568,7 +687,7 @@ function StepConcerns({
   const valid = selected.length > 0;
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-1">
       <StepHeader
         title="What worries you most?"
         subtitle="Pick all that apply. We'll tune your alerts around these."
@@ -583,9 +702,11 @@ function StepConcerns({
               onClick={() => toggle(c)}
               className={`
                 w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border transition-colors text-left
-                ${on
-                  ? "border-[#2563EB] bg-[#EFF4FF]"
-                  : "border-gray-200 bg-white hover:border-gray-300"}
+                ${
+                  on
+                    ? "border-[#2563EB] bg-[#EFF4FF]"
+                    : "border-gray-200 bg-white hover:border-gray-300"
+                }
               `}
             >
               <span className="text-[15px] font-medium text-gray-900">{c}</span>
@@ -627,7 +748,9 @@ function StepConcerns({
               type="text"
               value={custom}
               onChange={(e) => setCustom(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), addCustom())}
+              onKeyDown={(e) =>
+                e.key === "Enter" && (e.preventDefault(), addCustom())
+              }
               placeholder="Type your concern…"
               className="flex-1 h-12 px-4 rounded-xl border border-gray-200 text-[15px] focus:outline-none focus:border-[#2563EB]"
             />
@@ -671,19 +794,17 @@ function StepWaitlist({
   submitting,
   error,
   onSkip,
-  onWait,
 }: {
   position: number | null;
   submitting: boolean;
   error: string | null;
   onSkip: () => void;
-  onWait: () => void;
 }) {
   return (
-    <div className="flex flex-col h-full text-center">
+    <div className="flex flex-col flex-1">
       <StepHeader title="You're in." />
 
-      <div className="rounded-2xl bg-[#EFF4FF] border border-[#DBEAFE] p-6 mb-5">
+      <div className="rounded-2xl bg-[#EFF4FF] border border-[#DBEAFE] p-6 mb-5 text-center">
         <div className="text-[12px] font-bold tracking-wider uppercase text-[#2563EB]">
           Your waitlist spot
         </div>
@@ -700,7 +821,7 @@ function StepWaitlist({
         </div>
       </div>
 
-      <div className="rounded-2xl border border-gray-200 p-5 text-left">
+      <div className="rounded-2xl border border-gray-200 p-5">
         <div className="flex items-center gap-2 mb-1">
           <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#2563EB] text-white text-[11px] font-bold">
             ★
@@ -726,14 +847,14 @@ function StepWaitlist({
 
       <ErrorText>{error}</ErrorText>
 
-      <div className="mt-auto pt-6">
-        <button
-          type="button"
-          onClick={onWait}
-          className="w-full text-[14px] font-semibold text-gray-500 hover:text-gray-800 transition-colors py-2"
+      <div className="mt-auto pt-6 text-center">
+        <Link
+          href="/"
+          onClick={() => clearStored()}
+          className="text-[13px] text-gray-400 hover:text-gray-600 transition-colors"
         >
           I&apos;ll wait my turn
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -12,7 +12,11 @@ const PAGES = [
 ];
 
 for (const { slug, title } of PAGES) {
-  const content = await readFile(join(ROOT, `docs/research/legal-${slug}-content.html`), 'utf8');
+  const content = (await readFile(join(ROOT, `docs/research/legal-${slug}-content.html`), 'utf8'))
+    .replace(/Cal\s+AI/g, 'MyParentalControls')
+    .replace(/CAL\s+AI/g, 'MYPARENTALCONTROLS')
+    .replace(/calai\.app/g, 'myparentalcontrols.com')
+    .replace(/support@myparentalcontrols\.com/g, 'support@myparentalcontrols.com');
   const escaped = content
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
@@ -20,8 +24,8 @@ for (const { slug, title } of PAGES) {
   const tsx = `import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Cal AI | ${title}",
-  description: "Download Today",
+  title: "MyParentalControls | ${title}",
+  description: "MyParentalControls legal information.",
 };
 
 const HTML = \`${escaped}\`;

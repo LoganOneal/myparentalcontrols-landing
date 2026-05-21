@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { MyParentalControlsLogo } from "@/components/icons";
 import { PlatformLogo } from "@/components/PlatformLogo";
 import {
   PLATFORMS,
@@ -233,15 +234,8 @@ export default async function PlatformDetailPage({
             </section>
 
             <section className="p-6 sm:p-8 rounded-2xl border border-[#1E66E8]/20 bg-[#F6F8FF]">
-              <div className="flex items-start gap-3">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/mpc-logo-icon.svg"
-                  alt=""
-                  aria-hidden
-                  width={36}
-                  height={36}
-                />
+              <div className="flex flex-col gap-3">
+                <MyParentalControlsLogo height={28} />
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold text-black">
                     How MyParentalControls covers {platform.name}

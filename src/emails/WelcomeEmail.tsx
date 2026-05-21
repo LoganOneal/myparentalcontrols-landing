@@ -25,7 +25,7 @@ export function renderWelcomeEmail(args: {
                   Want to jump the line? Pay $1 and we'll move you to the front of the premium queue (around #8).
                 </p>
                 <p style="margin:0 0 28px 0;">
-                  <a href="${SITE_URL}/?wizard=open&step=5" style="display:inline-block;background:#2563EB;color:#FFFFFF;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:9999px;font-size:15px;">Skip the line — $1</a>
+                  <a href="${SITE_URL}/get-started?step=5" style="display:inline-block;background:#2563EB;color:#FFFFFF;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:9999px;font-size:15px;">Skip the line — $1</a>
                 </p>
                 <p style="margin:0;font-size:13px;line-height:1.55;color:#71717A;">
                   We'll email you the moment your invite is ready. Reply to this email if you have questions.

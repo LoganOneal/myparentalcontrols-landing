@@ -23,7 +23,13 @@ export const metadata = {
     "Parent-first guides, safety explainers, and app reviews from MyParentalControls.",
 };
 
-type Post = { slug: string; title: string; date: string };
+type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  description?: string;
+  excerpt?: string;
+};
 type Topic = { icon: LucideIcon; label: string; description: string };
 
 const posts = postsData as Post[];
@@ -284,7 +290,7 @@ export default function BlogIndexPage() {
                   href="#latest"
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 font-bold text-white transition hover:bg-[#1D4ED8]"
                 >
-                  Browse articles
+                  Read comparison
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </a>
                 <Link
@@ -357,27 +363,35 @@ export default function BlogIndexPage() {
                 </h2>
               </div>
               <p className="max-w-[420px] text-base leading-relaxed text-black/60">
-                A cleaner library for fast scanning: featured reads up top,
-                then everything else in a dense, parent-friendly index.
+                Start with our current comparison guide for parents choosing
+                between broad monitoring and gaming-specific safety alerts.
               </p>
             </div>
 
             {featuredPost ? (
-              <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-[1.4fr_1fr]">
+              <div
+                className={`mt-8 grid grid-cols-1 gap-4 ${
+                  editorPicks.length > 0 ? "lg:grid-cols-[1.4fr_1fr]" : ""
+                }`}
+              >
                 <FeaturedPostCard post={featuredPost} />
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                  {editorPicks.map((post) => (
-                    <CompactPostCard key={post.slug} post={post} />
-                  ))}
-                </div>
+                {editorPicks.length > 0 ? (
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                    {editorPicks.map((post) => (
+                      <CompactPostCard key={post.slug} post={post} />
+                    ))}
+                  </div>
+                ) : null}
               </div>
             ) : null}
 
-            <ul className="mt-10 grid grid-cols-1 gap-3 lg:grid-cols-2">
-              {latestPosts.map((post) => (
-                <ListPostCard key={post.slug} post={post} />
-              ))}
-            </ul>
+            {latestPosts.length > 0 ? (
+              <ul className="mt-10 grid grid-cols-1 gap-3 lg:grid-cols-2">
+                {latestPosts.map((post) => (
+                  <ListPostCard key={post.slug} post={post} />
+                ))}
+              </ul>
+            ) : null}
           </div>
         </section>
 

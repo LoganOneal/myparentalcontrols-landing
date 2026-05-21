@@ -3,7 +3,7 @@
 export function PressForm() {
   return (
     <form
-      className="bg-white rounded-3xl shadow-xl mt-12 p-6 sm:p-10 max-w-2xl mx-auto flex flex-col gap-5"
+      className="flex flex-col gap-5 rounded-lg border border-black/5 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-8"
       onSubmit={(e) => e.preventDefault()}
     >
       <div>
@@ -18,7 +18,7 @@ export function PressForm() {
           type="email"
           required
           placeholder="your.email@example.com"
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10"
+          className="w-full rounded-lg border border-gray-200 px-4 py-3 text-base placeholder-gray-400 focus:border-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/15"
         />
       </div>
       <div>
@@ -33,7 +33,7 @@ export function PressForm() {
           type="text"
           required
           placeholder="Media inquiry subject"
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10"
+          className="w-full rounded-lg border border-gray-200 px-4 py-3 text-base placeholder-gray-400 focus:border-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/15"
         />
       </div>
       <div>
@@ -47,13 +47,13 @@ export function PressForm() {
           id="message"
           rows={5}
           required
-          placeholder="Please provide details about your media inquiry, including deadline, outlet information, and specific questions you'd like answered..."
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10 resize-vertical"
+          placeholder="Please provide details about your media inquiry, including deadline, outlet information, and specific questions you would like answered..."
+          className="w-full resize-y rounded-lg border border-gray-200 px-4 py-3 text-base placeholder-gray-400 focus:border-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/15"
         />
       </div>
       <button
         type="submit"
-        className="w-full bg-black text-white rounded-xl py-4 font-bold hover:bg-gray-900 transition-colors"
+        className="inline-flex h-12 w-full items-center justify-center rounded-full bg-[#2563EB] px-6 font-bold text-white transition hover:bg-[#1D4ED8]"
       >
         Send Press Inquiry
       </button>

@@ -35,7 +35,7 @@ export async function createSkipLineCheckoutSession(args: {
     ],
     metadata: { recordId: args.recordId },
     success_url: `${siteUrl}/welcome?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${siteUrl}/?wizard=open&step=5`,
+    cancel_url: `${siteUrl}/get-started?step=5`,
     allow_promotion_codes: false,
     payment_method_types: ["card", "link"],
   });

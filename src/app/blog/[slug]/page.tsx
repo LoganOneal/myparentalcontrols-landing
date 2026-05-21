@@ -13,7 +13,13 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import postsData from "@/data/blog-posts.json";
 
-type Post = { slug: string; title: string; date: string };
+type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  description?: string;
+  excerpt?: string;
+};
 
 const posts = postsData as Post[];
 
@@ -69,7 +75,7 @@ export async function generateMetadata({
   const title = decode(post.title);
   return {
     title: `${title} | MyParentalControls`,
-    description: title,
+    description: post.description ?? title,
   };
 }
 
@@ -83,7 +89,6 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const title = decode(post.title);
-  const related = posts.filter((item) => item.slug !== slug).slice(0, 4);
 
   return (
     <>
@@ -157,25 +162,121 @@ export default async function BlogPostPage({
           <article className="rounded-lg bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-8">
             <div className="prose-cal max-w-none">
               <p className="text-lg leading-relaxed text-black/75">
-                This resource is part of the MyParentalControls blog refresh.
-                The article frame is ready for long-form copy, with a calmer
-                layout that matches the landing page and keeps parents focused
-                on the next useful step.
+                If you are comparing MyParentalControls and Bark, the short
+                version is simple: Bark is a broad parental-control app for
+                phones, social media, web filtering, screen time, and location.
+                MyParentalControls is built for families whose biggest concern
+                is what happens inside PC games: game chat, voice, alerts, and
+                evidence parents can use for a real conversation.
               </p>
 
-              <h2>What parents can take from this</h2>
+              <h2>Quick verdict</h2>
+              <p>
+                Choose Bark if you want a general-purpose monitoring layer for
+                mobile devices, social apps, web access, location, and screen
+                time. Choose MyParentalControls if your child spends serious
+                time on a gaming PC and you need visibility into Roblox,
+                Discord, Fortnite, Minecraft, and other game environments where
+                voice and chat risk can happen fast.
+              </p>
+
+              <div className="my-8 overflow-hidden rounded-lg border border-black/10">
+                <div className="grid grid-cols-3 bg-[#121212] text-sm font-bold text-white">
+                  <div className="p-3">Feature</div>
+                  <div className="p-3">MyParentalControls</div>
+                  <div className="p-3">Bark</div>
+                </div>
+                {[
+                  {
+                    feature: "Primary focus",
+                    mpc: "PC games, gaming chat, voice risk, device activity, and high-signal safety alerts.",
+                    bark: "Broad phone, social media, email, YouTube, screen time, web filtering, and location controls.",
+                  },
+                  {
+                    feature: "Best fit",
+                    mpc: "Parents worried about what happens during live gameplay and in-game conversations.",
+                    bark: "Parents who want wide coverage across phones, tablets, social apps, and web activity.",
+                  },
+                  {
+                    feature: "Gaming angle",
+                    mpc: "Built around PC gaming visibility and the places generic parental controls miss.",
+                    bark: "Useful for broader digital safety, but its public feature language is not centered on PC in-game voice monitoring.",
+                  },
+                  {
+                    feature: "Alert workflow",
+                    mpc: "Real-time gaming alerts with context parents can act on quickly.",
+                    bark: "Alerts parents when monitored content or activity triggers a concern.",
+                  },
+                ].map((row) => (
+                  <div
+                    key={row.feature}
+                    className="grid grid-cols-1 border-t border-black/10 text-sm sm:grid-cols-3"
+                  >
+                    <div className="bg-black/[0.03] p-3 font-bold text-black">
+                      {row.feature}
+                    </div>
+                    <div className="p-3 text-black/75">{row.mpc}</div>
+                    <div className="p-3 text-black/75">{row.bark}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h2>Where Bark is strong</h2>
+              <p>
+                Bark is a well-known parental-control product with a broad
+                safety footprint. Bark says its app can monitor texts, email,
+                YouTube, and 30+ apps and platforms, and Bark also offers screen
+                time, web filtering, app and site blocking, and location-related
+                features. Bark Home extends filtering and screen-time controls
+                to internet-connected devices in the home.
+              </p>
+              <p>
+                That makes Bark a sensible comparison if your main question is
+                whether a single tool can help across mobile devices, social
+                media, web access, and general online activity.
+              </p>
+
+              <h2>Where MyParentalControls is different</h2>
+              <p>
+                MyParentalControls starts from a different parent problem:
+                games are where kids hang out, and game environments are where
+                many parental-control tools lose visibility. Web filters can
+                block a site. Screen-time apps can limit a device. But parents
+                often need to know what happened inside the game, who said what,
+                whether voice chat turned risky, and whether a pattern is
+                forming.
+              </p>
+              <p>
+                That is the gap MyParentalControls is designed to close. The
+                product is built for the PC games children actually play, with
+                real-time alerts and a parent dashboard focused on gaming risk
+                instead of another generic app list.
+              </p>
+
+              <h2>Choose MyParentalControls if</h2>
               <ul>
-                <li>Read the signal first, then decide whether to restrict, block, or talk.</li>
-                <li>Look for repeat behavior across games, chats, and devices.</li>
-                <li>Keep the conversation specific: what happened, when it happened, and what changes now.</li>
+                <li>Your child plays PC games with open chat or voice chat.</li>
+                <li>You worry about Roblox, Discord, Fortnite, Minecraft, Steam, or similar gaming communities.</li>
+                <li>You want alerts that are specific to gaming behavior, not just general web or social activity.</li>
+                <li>You need enough context to talk with your child about what actually happened.</li>
               </ul>
 
-              <h2>How MyParentalControls helps</h2>
+              <h2>Choose Bark if</h2>
+              <ul>
+                <li>You want broad monitoring across phones, tablets, email, YouTube, and social apps.</li>
+                <li>Your main concern is web filtering, screen-time schedules, or location check-ins.</li>
+                <li>Your child spends more time on mobile social apps than on PC games.</li>
+                <li>You prefer a general family-safety app over a gaming-first tool.</li>
+              </ul>
+
+              <h2>The bottom line</h2>
               <p>
-                MyParentalControls watches the places generic parental controls
-                miss: in-game text, voice chat, device activity, and app usage.
-                When something risky appears, parents get a clearer alert feed
-                instead of another dashboard to decode.
+                Bark and MyParentalControls solve different versions of the
+                same parent worry. Bark is broad. MyParentalControls is
+                specialized. If the risk you care about most happens on a phone
+                or across social accounts, Bark deserves a look. If the risk
+                you care about most happens while your child is playing PC
+                games, MyParentalControls is the sharper fit.
               </p>
             </div>
           </article>
@@ -183,28 +284,28 @@ export default async function BlogPostPage({
           <aside className="lg:sticky lg:top-6 lg:self-start">
             <div className="rounded-lg bg-[#121212] p-5 text-white">
               <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#60A5FA]">
-                Related reads
+                Best fit
               </p>
-              <div className="mt-4 grid gap-3">
-                {related.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/blog/${item.slug}`}
-                    className="group rounded-lg bg-white/8 p-4 transition hover:bg-white/12"
-                  >
-                    <p className="text-sm font-bold leading-snug text-white">
-                      {decode(item.title)}
-                    </p>
-                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[#60A5FA]">
-                      Read next
-                      <ArrowRight
-                        className="h-4 w-4 transition group-hover:translate-x-1"
-                        aria-hidden
-                      />
-                    </span>
-                  </Link>
-                ))}
+              <h2 className="mt-3 text-2xl font-bold leading-tight">
+                Pick the tool around the risk.
+              </h2>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-white/72">
+                <p>
+                  Bark is strongest as broad family-safety coverage for mobile,
+                  social, web, and location.
+                </p>
+                <p>
+                  MyParentalControls is strongest when PC gaming chat and voice
+                  activity are the concern.
+                </p>
               </div>
+              <Link
+                href="/get-started"
+                className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-5 text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
+              >
+                Start free trial
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
             </div>
           </aside>
         </section>

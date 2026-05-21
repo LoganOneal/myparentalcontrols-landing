@@ -1,6 +1,4 @@
-"use client";
-
-import { useWizard } from "./WizardProvider";
+import Link from "next/link";
 
 type Variant = "hero" | "subheader" | "pricing";
 
@@ -23,7 +21,6 @@ const HERO_STYLE: React.CSSProperties = {
   color: "rgb(255, 255, 255)",
 };
 
-
 export function TryForFreeButton({
   variant,
   label = "Try for Free",
@@ -31,16 +28,15 @@ export function TryForFreeButton({
   variant: Variant;
   label?: string;
 }) {
-  const { openWizard } = useWizard();
   const style = variant === "hero" ? HERO_STYLE : undefined;
   return (
-    <button
-      type="button"
-      onClick={() => openWizard()}
+    <Link
+      href="/get-started"
+      prefetch
       className={VARIANTS[variant]}
       style={style}
     >
       {label}
-    </button>
+    </Link>
   );
 }
