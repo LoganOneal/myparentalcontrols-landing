@@ -211,11 +211,11 @@ export function SiteHeader() {
               Log in
             </Link>
             <Link
-              href="/signup"
+              href="/get-started"
               onClick={() => setMobileOpen(false)}
               className="mt-5 inline-flex h-11 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
             >
-              Try for Free
+              Get Started
             </Link>
           </nav>
         </div>

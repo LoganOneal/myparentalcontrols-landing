@@ -48,7 +48,7 @@ export function HeroWaitlist() {
         type="submit"
         className="shrink-0 bg-black text-white rounded-full px-5 py-2.5 font-semibold whitespace-nowrap hover:bg-gray-900 transition-colors"
       >
-        Protect my child now
+        Get Started
       </button>
     </form>
   );

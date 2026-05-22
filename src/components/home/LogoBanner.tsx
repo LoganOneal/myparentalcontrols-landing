@@ -106,9 +106,9 @@ export function LogoBanner() {
             textTransform: "uppercase",
           }}
         >
-          Watching the games where <Highlight>predators</Highlight>,{" "}
-          <Highlight>cyber bullies</Highlight>, and{" "}
-          <Highlight>scammers</Highlight> target your children
+          Protect your child from <Highlight>predators</Highlight>,{" "}
+          <Highlight>cyberbullies</Highlight>, and{" "}
+          <Highlight>scammers</Highlight>
         </h2>
       </div>
 

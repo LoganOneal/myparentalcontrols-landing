@@ -173,7 +173,7 @@ export function SiteFooter() {
                 href="/get-started"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-[#1942D8] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[#1236B8]"
               >
-                Try for Free
+                Get Started
               </Link>
               <p className="m-0 max-w-[190px] text-sm leading-5 text-white/70">
                 Join the early-access waitlist for family monitoring.

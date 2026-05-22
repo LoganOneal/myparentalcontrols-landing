@@ -405,7 +405,7 @@ function PreviewCard({ p }: { p: Palette["preview"] }) {
           className="px-4 py-2.5 rounded-full text-sm font-semibold"
           style={{ background: p.primary, color: p.primaryFg }}
         >
-          Protect my child now
+          Get Started
         </button>
         <a
           href="#"

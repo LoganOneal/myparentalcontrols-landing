@@ -30,6 +30,6 @@ export function SubHeaderBar() {
 
 function SubHeaderTryButton() {
   return (
-    <TryForFreeButton variant="subheader" label="Try for free" />
+    <TryForFreeButton variant="subheader" label="Get Started" />
   );
 }

@@ -23,7 +23,7 @@ const HERO_STYLE: React.CSSProperties = {
 
 export function TryForFreeButton({
   variant,
-  label = "Try for Free",
+  label = "Get Started",
 }: {
   variant: Variant;
   label?: string;
