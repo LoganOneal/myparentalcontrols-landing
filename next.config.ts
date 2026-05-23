@@ -1,8 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: "standalone",
+  async redirects() {
+    return [
+      {
+        source: "/app-reviews",
+        destination: "/game-safety",
+        permanent: true,
+      },
+      {
+        source: "/platforms",
+        destination: "/game-safety",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

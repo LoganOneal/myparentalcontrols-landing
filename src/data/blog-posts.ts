@@ -15,7 +15,7 @@ export type BlogPost = {
   date: string;
   description: string;
   excerpt: string;
-  category: "Guide" | "Safety" | "Comparison" | "Platform";
+  category: "Guide" | "Safety" | "Comparison" | "Platform" | "Threat";
   takeaways: string[];
   sections: BlogSection[];
   relatedLinks: RelatedLink[];
@@ -38,7 +38,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: "Koda Safety overview", href: "/koda-safety" },
-      { label: "Platforms Koda covers", href: "/platforms" },
+      { label: "Game Safety guides", href: "/game-safety" },
       { label: "Safety and privacy", href: "/safety-privacy" },
     ],
     sections: [
@@ -458,7 +458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Koda Safety vs Bark", href: "/blog/koda-safety-vs-bark" },
       { label: "Koda Safety overview", href: "/koda-safety" },
-      { label: "Platforms covered", href: "/platforms" },
+      { label: "Game Safety guides", href: "/game-safety" },
     ],
     sections: [
       {
@@ -488,6 +488,189 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "The bottom line",
         paragraphs: [
           "Bark and Koda solve different versions of the same parent worry. Bark is broad. Koda is specialized. If the risk you care about most happens while your child is playing PC games, Koda is the sharper fit.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "predators-on-roblox",
+    title: "Predators on Roblox: What Parents Need to Know in 2026",
+    date: "5/23/2026",
+    category: "Threat",
+    description:
+      "Learn how online predators target children on Roblox through chat, voice, private servers, and friend requests — and what parents can do to protect their kids.",
+    excerpt:
+      "Roblox predators use the platform's social features to find, groom, and exploit children. Here is what every parent needs to understand about how it happens and how to stop it.",
+    takeaways: [
+      "Predators target kids in popular Roblox games, then move them to private channels or Discord.",
+      "Grooming on Roblox often starts with gift offers, compliments, and requests to 'play privately.'",
+      "Koda Safety alerts parents when grooming language patterns appear in Roblox conversations.",
+    ],
+    relatedLinks: [
+      { label: "Roblox platform safety guide", href: "/platforms/roblox" },
+      { label: "Koda Safety for Roblox", href: "/blog/koda-safety-for-roblox" },
+      { label: "Online predator warning signs", href: "/blog/discord-grooming" },
+    ],
+    sections: [
+      {
+        heading: "How predators find children on Roblox",
+        paragraphs: [
+          "Roblox has over 70 million daily active users, most of them under 16. Predators exploit this massive young audience by joining popular games, hanging out in public lobbies, and using in-game chat to identify vulnerable children.",
+          "The platform's social features — friend requests, private messaging, voice chat, and private servers — give predators multiple ways to isolate a child from public moderation once initial contact is made.",
+        ],
+      },
+      {
+        heading: "Common grooming tactics on Roblox",
+        paragraphs: [
+          "Grooming on Roblox follows predictable patterns that parents should learn to recognize. Predators are patient — they build trust before making dangerous requests.",
+        ],
+        bullets: [
+          "Offering free Robux, game items, or 'exclusive' access to build trust.",
+          "Flattering a child's skills or avatar to create emotional connection.",
+          "Asking personal questions (age, school, location) disguised as friendly conversation.",
+          "Suggesting they 'play together privately' on a private server or Discord.",
+          "Gradually introducing sexual topics or requests once trust is established.",
+          "Using guilt, secrecy, or threats to prevent the child from telling parents.",
+        ],
+      },
+      {
+        heading: "Where Roblox grooming happens",
+        paragraphs: [
+          "Most grooming does not happen in the main game lobbies where moderation is strongest. Predators move children to spaces with less oversight.",
+        ],
+        bullets: [
+          "Private servers with no other players present.",
+          "Roblox direct messages (especially when chat restrictions are off).",
+          "Voice chat in games that support Roblox spatial voice.",
+          "Discord servers linked from Roblox game descriptions.",
+          "Third-party apps suggested by the predator (Snapchat, Instagram, WhatsApp).",
+        ],
+      },
+      {
+        heading: "Warning signs your child may be targeted",
+        paragraphs: [
+          "Watch for behavioral changes around Roblox play. These signs do not guarantee grooming is occurring, but they warrant a calm conversation.",
+        ],
+        bullets: [
+          "Suddenly secretive about who they play with or what they talk about.",
+          "New 'older friend' they mention frequently but you have never met.",
+          "Receiving gifts (Robux, items) from someone you do not know.",
+          "Switching screens or minimizing chat when a parent walks by.",
+          "Emotional changes — anxiety, withdrawal, or sudden anger when asked about gaming.",
+          "Staying up late to play when they think parents are asleep.",
+        ],
+      },
+      {
+        heading: "What parents can do right now",
+        paragraphs: [
+          "Protecting your child on Roblox requires a combination of platform settings, open conversations, and monitoring tools. No single approach is enough.",
+        ],
+        bullets: [
+          "Enable Roblox account restrictions and set the account to under-13 mode.",
+          "Disable or restrict chat and limit friend requests to known contacts.",
+          "Review your child's friends list regularly — ask who each person is.",
+          "Talk openly about grooming tactics without shaming or scaring your child.",
+          "Use Koda Safety to monitor Roblox conversations and receive alerts when grooming language appears.",
+          "Check if your child uses Discord alongside Roblox — this is the most common pipeline.",
+        ],
+      },
+      {
+        heading: "How Koda Safety protects against Roblox predators",
+        paragraphs: [
+          "Koda Safety monitors Roblox voice and text chat in real time, using AI specifically trained to detect grooming patterns, isolation tactics, sexual content, and dangerous escalation. When a risky conversation is detected, parents receive an immediate alert with the transcript and context needed to respond.",
+          "Unlike Roblox's built-in reporting system (which is reactive), Koda alerts parents before grooming progresses — often catching the early signs that a child would not recognize as dangerous.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "discord-grooming",
+    title: "Discord Grooming: How It Happens and How to Stop It",
+    date: "5/23/2026",
+    category: "Threat",
+    description:
+      "Learn how online predators use Discord to groom children through gaming servers, DMs, and voice channels — and how parents can detect and prevent it.",
+    excerpt:
+      "Discord is where many gaming friendships continue after the game ends. It is also where predators move children for private, unmonitored conversations.",
+    takeaways: [
+      "Discord grooming often starts in gaming servers and moves to DMs or private voice channels.",
+      "Predators exploit Discord's lack of parental controls and minimal age verification.",
+      "Koda Safety monitors Discord conversations and alerts parents to grooming language patterns.",
+    ],
+    relatedLinks: [
+      { label: "Discord platform safety guide", href: "/platforms/discord" },
+      { label: "Koda Safety for Discord", href: "/blog/koda-safety-for-discord" },
+      { label: "Predators on Roblox", href: "/blog/predators-on-roblox" },
+    ],
+    sections: [
+      {
+        heading: "Why Discord is a grooming risk for children",
+        paragraphs: [
+          "Discord is the dominant chat platform for gamers. Kids use it to coordinate game sessions, join fan communities, share content, and socialize. That social infrastructure is valuable — but it also creates opportunity for predators.",
+          "Discord has minimal age verification (a self-reported birthdate), limited built-in parental controls, and a culture of pseudonymous interaction. Predators can pose as teenagers, join the same gaming servers as children, and initiate private contact with very little friction.",
+        ],
+      },
+      {
+        heading: "How grooming progresses on Discord",
+        paragraphs: [
+          "Discord grooming follows a predictable escalation pattern. Understanding these stages helps parents recognize warning signs before harm occurs.",
+        ],
+        bullets: [
+          "Stage 1 — Contact: Predator joins a gaming server the child uses and participates in group conversations.",
+          "Stage 2 — Trust building: Offers help in games, shares memes, compliments the child, appears friendly and relatable.",
+          "Stage 3 — Isolation: Sends a friend request and moves conversation to DMs, away from server moderation.",
+          "Stage 4 — Desensitization: Introduces sexual jokes, shares mature content, normalizes boundary-crossing.",
+          "Stage 5 — Exploitation: Requests photos, sexual content, personal information, or a meeting.",
+          "Stage 6 — Control: Uses guilt, blackmail, or threats to maintain secrecy and continued compliance.",
+        ],
+      },
+      {
+        heading: "Where on Discord grooming happens",
+        paragraphs: [
+          "Different parts of Discord carry different risk levels. Public servers with active moderation are safer than private spaces.",
+        ],
+        bullets: [
+          "Direct messages (DMs) — the highest-risk area with zero third-party oversight.",
+          "Private voice channels — conversations leave no text record for moderation to review.",
+          "Small private servers — invite-only spaces with no reporting infrastructure.",
+          "Gaming server DMs — predators meet kids in public servers then move to private messages.",
+          "Group DMs — create the illusion of a friend group while isolating the child.",
+        ],
+      },
+      {
+        heading: "Warning signs of Discord grooming",
+        paragraphs: [
+          "These behavioral patterns may indicate your child is being groomed through Discord. Each sign alone may be harmless, but multiple signs together warrant attention.",
+        ],
+        bullets: [
+          "New online 'best friend' they met in a server but have never met in person.",
+          "Receiving game gifts, Discord Nitro, or other digital items from someone unknown to you.",
+          "Hiding their screen when a parent approaches.",
+          "Staying in voice channels late at night, especially in private calls.",
+          "Becoming defensive or emotional when asked about their Discord conversations.",
+          "New accounts on other platforms (Snapchat, Instagram) they did not have before.",
+          "Sudden knowledge of sexual topics inappropriate for their age.",
+        ],
+      },
+      {
+        heading: "How to protect your child on Discord",
+        paragraphs: [
+          "Discord does not offer robust parental controls, so parents need to combine platform settings with monitoring and open conversation.",
+        ],
+        bullets: [
+          "Enable Discord's 'Keep me safe' explicit content filter in Privacy & Safety settings.",
+          "Restrict DMs from server members (Settings > Privacy > disable 'Allow direct messages from server members').",
+          "Review their server list and friend list periodically — ask about anyone you do not recognize.",
+          "Discuss how grooming works using age-appropriate language. Kids who understand the tactics are harder to manipulate.",
+          "Use Koda Safety to monitor Discord conversations for grooming patterns, threats, and sexual content.",
+          "Consider Discord Family Center for basic activity visibility (though it has significant limitations).",
+        ],
+      },
+      {
+        heading: "How Koda Safety detects Discord grooming",
+        paragraphs: [
+          "Koda Safety monitors Discord text and voice conversations using AI trained on real grooming patterns. When language indicating isolation tactics, age-inappropriate sexual content, personal information requests, or escalation toward exploitation is detected, parents receive an immediate alert with full context.",
+          "This is especially valuable for voice channels, where Discord's own moderation has zero visibility. Koda transcribes and analyzes voice conversations in real time, catching verbal grooming that would otherwise go completely undetected.",
         ],
       },
     ],

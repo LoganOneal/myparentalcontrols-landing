@@ -37,14 +37,9 @@ const NAV_GROUPS: NavGroup[] = [
         description: "Real-time alerts for the PC games kids actually play.",
       },
       {
-        href: "/platforms",
-        label: "Platforms covered",
-        description: "Browse the games, chat apps, and social platforms we cover.",
-      },
-      {
-        href: "/app-reviews",
-        label: "App reviews",
-        description: "Parent-first safety notes for popular apps and games.",
+        href: "/game-safety",
+        label: "Game Safety",
+        description: "Safety guides for PC games your child plays.",
       },
     ],
   },
@@ -76,10 +71,9 @@ const NAV_GROUPS: NavGroup[] = [
 ];
 
 const NAV_LINKS: NavLink[] = [
-  { href: "/koda-safety", label: "Koda Safety" },
-  { href: "/#pricing", label: "Pricing" },
-  { href: "/app-reviews", label: "Reviews" },
-  { href: "/platforms", label: "Resources" },
+  { href: "/game-safety", label: "Game Safety" },
+  { href: "/tutorials", label: "Tutorials" },
+  { href: "/compare/bark", label: "Comparisons" },
   { href: "/blog", label: "Blog" },
   { href: "/press", label: "Press" },
 ];

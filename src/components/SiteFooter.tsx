@@ -23,8 +23,7 @@ const NAV_COLUMNS: NavColumn[] = [
       { label: "Koda Safety", href: "/koda-safety" },
       { label: "Features", href: "/#features" },
       { label: "Pricing", href: "/#pricing" },
-      { label: "Platforms", href: "/platforms" },
-      { label: "App Reviews", href: "/app-reviews" },
+      { label: "Game Safety", href: "/game-safety" },
     ],
   },
   {
@@ -40,9 +39,10 @@ const NAV_COLUMNS: NavColumn[] = [
     title: "Resources",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "Tutorials", href: "/tutorials" },
       { label: "Koda Safety Guide", href: "/blog/what-is-koda-safety" },
       { label: "Safety & Privacy", href: "/safety-privacy" },
-      { label: "App Reviews", href: "/app-reviews" },
+      { label: "Game Safety", href: "/game-safety" },
       { label: "Manage Subscription", href: "/manage-subscription" },
     ],
   },

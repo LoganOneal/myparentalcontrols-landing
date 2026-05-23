@@ -285,7 +285,7 @@ export default function BlogIndexPage() {
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </Link>
                 <Link
-                  href="/app-reviews"
+                  href="/game-safety"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-6 font-bold text-black transition hover:bg-black/[0.04]"
                 >
                   App reviews
@@ -401,7 +401,7 @@ export default function BlogIndexPage() {
               </p>
             </div>
             <Link
-              href="/app-reviews"
+              href="/game-safety"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 font-bold text-white transition hover:bg-[#1D4ED8]"
             >
               View app reviews

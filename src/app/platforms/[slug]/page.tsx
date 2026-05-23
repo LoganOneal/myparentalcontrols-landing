@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
+import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { KodaLogo } from "@/components/icons";
@@ -11,6 +13,7 @@ import {
   type Platform,
   type RiskLevel,
 } from "@/data/platforms";
+import { BLOG_POSTS } from "@/data/blog-posts";
 
 type Params = { slug: string };
 
@@ -93,14 +96,31 @@ export default async function PlatformDetailPage({
   const platform = getPlatform(slug);
   if (!platform) notFound();
 
+  const faqJsonLd =
+    platform.faqs && platform.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: platform.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <>
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <SiteHeader />
       <main className="max-w-screen-xl mx-auto px-4 py-10 sm:py-16">
         {/* Breadcrumb */}
         <nav className="text-sm text-black/60 mb-6">
-          <Link href="/platforms" className="hover:underline">
-            Platforms
+          <Link href="/game-safety" className="hover:underline">
+            Game Safety
           </Link>
           <span className="mx-2">/</span>
           <span className="text-black/80">{platform.name}</span>
@@ -231,6 +251,23 @@ export default async function PlatformDetailPage({
               <p className="mt-4 text-base sm:text-lg text-black/80 leading-relaxed">
                 {platform.parentalControls}
               </p>
+              {platform.parentalControlsSteps && platform.parentalControlsSteps.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-lg font-bold text-black">
+                    Step-by-step setup guide
+                  </h3>
+                  <ol className="mt-3 space-y-2 list-decimal list-inside">
+                    {platform.parentalControlsSteps.map((step, i) => (
+                      <li
+                        key={i}
+                        className="text-base text-black/80 leading-relaxed"
+                      >
+                        {step}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </section>
 
             <section className="p-6 sm:p-8 rounded-2xl border border-[#1E66E8]/20 bg-[#F6F8FF]">
@@ -285,6 +322,58 @@ export default async function PlatformDetailPage({
             </div>
           </aside>
         </div>
+
+        {/* FAQ Section */}
+        {platform.faqs && platform.faqs.length > 0 && (
+          <section className="mt-16">
+            <SectionTitle>Frequently asked questions</SectionTitle>
+            <div className="mt-6 space-y-4">
+              {platform.faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl border border-black/5 bg-white"
+                >
+                  <summary className="cursor-pointer px-5 py-4 text-base font-semibold text-black list-none flex items-center justify-between">
+                    {faq.question}
+                    <ArrowRight className="w-4 h-4 text-black/40 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-black/70 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related guides */}
+        {platform.relatedBlogSlugs && platform.relatedBlogSlugs.length > 0 && (
+          <section className="mt-16">
+            <SectionTitle>Related safety guides</SectionTitle>
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {platform.relatedBlogSlugs
+                .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+                .filter(Boolean)
+                .map((post) => (
+                  <Link
+                    key={post!.slug}
+                    href={`/blog/${post!.slug}`}
+                    className="flex items-center gap-3 p-4 rounded-2xl border border-black/5 bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs font-semibold uppercase tracking-widest text-black/50">
+                        {post!.category}
+                      </div>
+                      <div className="font-semibold text-sm text-black truncate">
+                        {post!.title}
+                      </div>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-black/30 shrink-0" />
+                  </Link>
+                ))}
+            </div>
+          </section>
+        )}
 
         <RelatedPlatforms current={platform} />
       </main>

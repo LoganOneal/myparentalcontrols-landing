@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/data/blog-posts";
+import { COMPARISONS } from "@/data/comparisons";
 import { PLATFORMS } from "@/data/platforms";
+import { TUTORIALS } from "@/data/tutorials";
 import { SITE_URL } from "@/lib/site";
 
 function absoluteUrl(path: string) {
@@ -28,14 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { url: absoluteUrl("/blog"), changeFrequency: "weekly", priority: 0.9 },
     {
-      url: absoluteUrl("/platforms"),
+      url: absoluteUrl("/game-safety"),
       changeFrequency: "weekly",
-      priority: 0.88,
+      priority: 0.92,
     },
     {
-      url: absoluteUrl("/app-reviews"),
+      url: absoluteUrl("/tutorials"),
       changeFrequency: "weekly",
-      priority: 0.82,
+      priority: 0.88,
     },
     { url: absoluteUrl("/press"), changeFrequency: "monthly", priority: 0.68 },
     {
@@ -68,5 +70,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : 0.72,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...platformRoutes];
+  const comparisonRoutes: MetadataRoute.Sitemap = COMPARISONS.map(
+    (comparison) => ({
+      url: absoluteUrl(`/compare/${comparison.slug}`),
+      changeFrequency: "monthly" as const,
+      priority: 0.88,
+    })
+  );
+
+  const tutorialRoutes: MetadataRoute.Sitemap = TUTORIALS.map((tutorial) => ({
+    url: absoluteUrl(`/tutorials/${tutorial.slug}`),
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...blogRoutes,
+    ...platformRoutes,
+    ...comparisonRoutes,
+    ...tutorialRoutes,
+  ];
 }
