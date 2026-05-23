@@ -3,6 +3,8 @@ import { Archivo_Black } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MetaPixel } from "@/components/MetaPixel";
+import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogPageView } from "@/components/PostHogPageView";
 import "./globals.css";
 
 // Free open-license fallback for Moderat-Black. The hero applies a font stack
@@ -43,7 +45,10 @@ export default function RootLayout({
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}
       <body className="overflow-x-clip">
-        {children}
+        <PostHogProvider>
+          <PostHogPageView />
+          {children}
+        </PostHogProvider>
         <MetaPixel />
         <Analytics />
       </body>
