@@ -5,6 +5,7 @@ import { Hero } from "@/components/home/Hero";
 import { LogoBanner } from "@/components/home/LogoBanner";
 import { ParentProof } from "@/components/home/ParentProof";
 import { DidYouKnow } from "@/components/home/DidYouKnow";
+import { ParentTestimonial } from "@/components/home/ParentTestimonial";
 import { AlertsForDangers } from "@/components/home/AlertsForDangers";
 import { ResearchBacked } from "@/components/home/ResearchBacked";
 import { CompetitorComparison } from "@/components/home/CompetitorComparison";
@@ -21,6 +22,7 @@ export default function Home() {
       <AlertsForDangers />
       <ResearchBacked />
       <DidYouKnow />
+      <ParentTestimonial />
       <CompetitorComparison />
       <Pricing />
       <SiteFooter />
