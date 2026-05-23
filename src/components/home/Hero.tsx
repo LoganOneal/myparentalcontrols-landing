@@ -167,7 +167,7 @@ export function Hero() {
           {/* Sub paragraph */}
           <p className="text-base sm:text-lg font-normal leading-relaxed text-gray-700 max-w-[560px]">
             Koda monitors voice and chat for bullying, grooming, threats, and
-            harmful language. Get alerted in real time.
+            harmful language. Parents get alerted in real time.
           </p>
 
           {/* Primary CTA — single low-friction "Get Started" button.
