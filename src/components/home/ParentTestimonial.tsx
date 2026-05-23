@@ -5,28 +5,28 @@ import { useEffect, useRef, useState, type TouchEvent } from "react";
 const TESTIMONIALS = [
   {
     quote:
-      "Koda gave me the exact clip, transcript, and timestamp. I could talk to my child calmly because I knew what happened.",
+      "Koda helped us discover our son had been regularly talking with an adult in his 30s. I'm so grateful we installed it.",
     name: "Elizabeth K.",
     detail: "Mom of a 12-year-old gamer",
     avatar: 0,
   },
   {
     quote:
-      "The alert showed the chat, the voice clip, and the time it happened. We knew what to ask instead of guessing.",
+      "Koda helps me protect my son without cutting him off from the friends he plays with after school.",
     name: "Megan W.",
     detail: "Mom of a 10-year-old Roblox player",
     avatar: 1,
   },
   {
     quote:
-      "I did not need another screen-time chart. I needed the moment that mattered. Koda showed me exactly where to step in.",
+      "Koda gave me the exact clip, transcript, and timestamp. I could talk to my child calmly because I knew exactly what happened.",
     name: "Lauren B.",
     detail: "Mom of a 13-year-old gamer",
     avatar: 2,
   },
   {
     quote:
-      "The summary was calm and specific. It gave us enough context to have a real conversation that same night.",
+      "Must-have if you want to protect your kid online. I was shocked to discover the awful things strangers were saying to my son.",
     name: "Claire H.",
     detail: "Mom of an 11-year-old Minecraft fan",
     avatar: 3,
@@ -210,7 +210,7 @@ export function ParentTestimonial() {
   }
 
   return (
-    <section className="px-[15px] pt-[15px]">
+    <section className="isolate px-[15px] pt-[15px]">
       <div className="rounded-lg bg-white">
         <div className="mx-auto max-w-[1120px] px-5 py-10 sm:px-8 sm:py-14 lg:py-18">
           <div

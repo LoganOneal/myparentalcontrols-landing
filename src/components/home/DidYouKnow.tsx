@@ -28,6 +28,9 @@ export function DidYouKnow() {
               . That means risk can develop long before a weekly screen-time
               report or blocked-site alert ever helps.
             </p>
+            <p className="mt-4 text-sm text-slate-400">
+              Source: The Guardian
+            </p>
           </div>
         </div>
       </div>
