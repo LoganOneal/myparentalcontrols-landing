@@ -11,16 +11,13 @@ export function SubHeaderBar() {
       <div className="mx-auto flex h-[70px] max-w-[1280px] items-center justify-between gap-4 px-5 lg:px-8">
         <div className="flex flex-col justify-center leading-none">
           <span className="text-[16px] font-bold text-[var(--bark-text)]">
-            Parental Controls
+            Parental Security
           </span>
           <span className="mt-1 text-[14px] leading-5 text-[var(--bark-muted)]">
-            From $14.99/mo
+            Voice + Chat safety for kids
           </span>
         </div>
         <div className="flex min-w-fit items-center gap-4 sm:gap-6">
-          <span className="hidden text-[14px] leading-5 text-[var(--bark-muted)] sm:inline">
-            Starts at <span className="text-[var(--bark-text)]">$14.99/mo</span>
-          </span>
           <SubHeaderTryButton />
         </div>
       </div>
