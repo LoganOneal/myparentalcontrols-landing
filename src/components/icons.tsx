@@ -2,6 +2,8 @@ import * as React from "react";
 
 type SVGProps = React.SVGProps<SVGSVGElement>;
 
+const KODA_LOGO_SRC = "/seo/logo.png";
+
 export function AppStoreBadge({
   width = 135,
   height = 41,
@@ -38,100 +40,64 @@ export function GooglePlayBadge(props: React.HTMLAttributes<HTMLImageElement>) {
 
 export function KodaLogo({
   height = 32,
+  markSize = height,
   className,
-  color = "var(--bark-blue)",
+  color = "var(--koda-bear-blue)",
+  textFirst = false,
 }: {
   height?: number;
+  markSize?: number;
   className?: string;
   color?: string;
+  textFirst?: boolean;
 }) {
-  const width = Math.round(height * 3.75);
+  const fontSize = Math.round(height * 0.8);
+  const logoHeight = Math.max(height, markSize);
+  const mark = (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={KODA_LOGO_SRC}
+      alt=""
+      aria-hidden
+      width={markSize}
+      height={markSize}
+      className="block shrink-0 object-contain"
+      style={{ width: markSize, height: markSize }}
+    />
+  );
+  const wordmark = (
+    <span
+      aria-hidden
+      className="font-black leading-none"
+      style={{
+        color,
+        fontFamily: "Arial Rounded MT Bold, Arial, Helvetica, sans-serif",
+        fontSize,
+      }}
+    >
+      koda
+    </span>
+  );
 
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 560 150"
+    <span
       role="img"
       aria-label="Koda"
-      className={className}
-      style={{ color }}
-      xmlns="http://www.w3.org/2000/svg"
+      className={`inline-flex items-center gap-[0.22em] align-middle leading-none ${className ?? ""}`}
+      style={{ color, height: logoHeight }}
     >
-      <defs>
-        <linearGradient id="kodaLogoBlue" x1="18" y1="16" x2="145" y2="139">
-          <stop stopColor="#0079FF" />
-          <stop offset="1" stopColor="#0B4FD8" />
-        </linearGradient>
-        <linearGradient id="kodaLogoBlueDark" x1="55" y1="13" x2="127" y2="107">
-          <stop stopColor="#0A6DFF" />
-          <stop offset="1" stopColor="#0947C7" />
-        </linearGradient>
-      </defs>
-
-      <g aria-hidden="true">
-        <path
-          d="M32 137c-17-20-18-61 7-86 7-7 18-14 31-17 10-3 21-3 31 0 13 3 25 10 32 17 25 25 24 66 7 86H32Z"
-          fill="url(#kodaLogoBlue)"
-        />
-        <ellipse cx="53" cy="96" rx="39" ry="46" fill="url(#kodaLogoBlue)" />
-        <ellipse cx="118" cy="96" rx="39" ry="46" fill="url(#kodaLogoBlue)" />
-        <circle cx="86" cy="42" r="42" fill="url(#kodaLogoBlueDark)" />
-        <circle cx="53" cy="17" r="13" fill="#0B5FE8" />
-        <circle cx="119" cy="17" r="13" fill="#0B5FE8" />
-        <ellipse cx="86" cy="56" rx="23" ry="25" fill="white" />
-        <circle cx="67" cy="38" r="5.5" fill="white" />
-        <circle cx="105" cy="38" r="5.5" fill="white" />
-        <circle cx="67" cy="38" r="2.3" fill="#0B56D9" />
-        <circle cx="105" cy="38" r="2.3" fill="#0B56D9" />
-        <ellipse cx="86" cy="51" rx="12" ry="8" fill="#0B56D9" />
-        <path
-          d="M86 59v18M75 72c4 6 18 6 22 0"
-          stroke="#0B56D9"
-          strokeWidth="5"
-          strokeLinecap="round"
-        />
-        <path
-          d="M36 87c16 26 53 29 75 12M136 87c-16 26-53 29-75 12"
-          stroke="white"
-          strokeWidth="5"
-          strokeLinecap="round"
-          opacity="0.95"
-        />
-
-        <circle cx="86" cy="101" r="34" fill="white" />
-        <ellipse cx="67" cy="131" rx="12" ry="14" fill="white" />
-        <ellipse cx="105" cy="131" rx="12" ry="14" fill="white" />
-        <circle cx="66" cy="75" r="10" fill="white" />
-        <circle cx="106" cy="75" r="10" fill="white" />
-        <circle cx="86" cy="82" r="23" fill="white" />
-        <circle cx="75" cy="90" r="3" fill="#0B56D9" />
-        <circle cx="97" cy="90" r="3" fill="#0B56D9" />
-        <ellipse cx="86" cy="98" rx="8" ry="4" fill="#0B56D9" />
-        <path
-          d="M76 104c4 7 16 7 20 0"
-          stroke="#0B56D9"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-        <circle cx="74" cy="128" r="4" fill="#0B56D9" />
-        <circle cx="82" cy="134" r="4" fill="#0B56D9" />
-        <circle cx="98" cy="128" r="4" fill="#0B56D9" />
-        <circle cx="90" cy="134" r="4" fill="#0B56D9" />
-      </g>
-
-      <text
-        x="190"
-        y="112"
-        fill="currentColor"
-        fontFamily="Arial Rounded MT Bold, Arial, Helvetica, sans-serif"
-        fontWeight="900"
-        fontSize="108"
-        letterSpacing="-5"
-      >
-        Koda
-      </text>
-    </svg>
+      {textFirst ? (
+        <>
+          {wordmark}
+          {mark}
+        </>
+      ) : (
+        <>
+          {mark}
+          {wordmark}
+        </>
+      )}
+    </span>
   );
 }
 

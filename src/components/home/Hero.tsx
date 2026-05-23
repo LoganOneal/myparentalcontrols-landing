@@ -161,13 +161,13 @@ export function Hero() {
               color: "rgb(30, 30, 30)",
             }}
           >
-            #1 parental security system for PC games.
+            #1 parental control system for PC games.
           </h1>
 
           {/* Sub paragraph */}
           <p className="text-base sm:text-lg font-normal leading-relaxed text-gray-700 max-w-[560px]">
-            Koda monitors voice and chat for bullying, grooming, threats, and
-            harmful language. Parents get alerted in real time.
+            Koda Safety monitors voice and chat for bullying, grooming,
+            threats, and harmful language. Parents get alerted in real time.
           </p>
 
           {/* Primary CTA — single low-friction "Get Started" button.

@@ -23,6 +23,10 @@ function authHeader(): Record<string, string> {
   };
 }
 
+function formulaString(value: string): string {
+  return `"${value.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+}
+
 export async function createWaitlistRecord(fields: {
   email: string;
   position: number;
@@ -73,7 +77,9 @@ export async function getWaitlistRecord(id: string): Promise<WaitlistRecord> {
 export async function findWaitlistByEmail(
   email: string,
 ): Promise<WaitlistRecord | null> {
-  const formula = encodeURIComponent(`LOWER({Email}) = "${email.toLowerCase()}"`);
+  const formula = encodeURIComponent(
+    `LOWER({Email}) = ${formulaString(email.toLowerCase())}`,
+  );
   const url = `${tableUrl()}?filterByFormula=${formula}&maxRecords=1`;
   const res = await fetch(url, {
     method: "GET",

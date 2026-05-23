@@ -15,24 +15,17 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import postsData from "@/data/blog-posts.json";
+import { BLOG_POSTS, type BlogPost } from "@/data/blog-posts";
 
 export const metadata = {
-  title: "Blog | Koda",
+  title: "Koda Safety Blog | Parent Guides for Gaming and Online Risk",
   description:
-    "Parent-first guides, safety explainers, and app reviews from Koda.",
+    "Parent-first Koda Safety guides for PC games, Roblox, Discord, Fortnite, Minecraft, voice chat, and online child safety.",
 };
 
-type Post = {
-  slug: string;
-  title: string;
-  date: string;
-  description?: string;
-  excerpt?: string;
-};
 type Topic = { icon: LucideIcon; label: string; description: string };
 
-const posts = postsData as Post[];
+const posts = BLOG_POSTS;
 const featuredPost = posts[0];
 const editorPicks = posts.slice(1, 5);
 const latestPosts = posts.slice(5);
@@ -92,31 +85,29 @@ function toDateTime(value: string) {
   return date.toISOString().slice(0, 10);
 }
 
-function getPostLabel(title: string) {
-  const normalized = title.toLowerCase();
-  if (normalized.includes(" vs ") || normalized.includes("comparison")) {
-    return "Comparison";
-  }
-  if (normalized.includes("best") || normalized.includes("apps")) {
-    return "Roundup";
-  }
-  if (
-    normalized.startsWith("how") ||
-    normalized.startsWith("why") ||
-    normalized.startsWith("can") ||
-    normalized.startsWith("do")
-  ) {
-    return "Guide";
-  }
-  return "Insight";
-}
-
-function getReadingTime(title: string) {
-  const words = decode(title).split(/\s+/).filter(Boolean).length;
+function getReadingTime(post: BlogPost) {
+  const words = [
+    post.title,
+    post.excerpt,
+    ...post.sections.flatMap((section) => [
+      section.heading,
+      ...section.paragraphs,
+      ...(section.bullets ?? []),
+    ]),
+  ]
+    .join(" ")
+    .split(/\s+/)
+    .filter(Boolean).length;
   return Math.max(3, Math.min(7, Math.round(words / 3) + 2));
 }
 
-function PostMeta({ post, inverse = false }: { post: Post; inverse?: boolean }) {
+function PostMeta({
+  post,
+  inverse = false,
+}: {
+  post: BlogPost;
+  inverse?: boolean;
+}) {
   return (
     <div
       className={`flex flex-wrap items-center gap-x-4 gap-y-2 text-sm ${
@@ -129,7 +120,7 @@ function PostMeta({ post, inverse = false }: { post: Post; inverse?: boolean }) 
       </span>
       <span className="inline-flex items-center gap-1.5">
         <Clock3 className="h-4 w-4" aria-hidden />
-        {getReadingTime(post.title)} min read
+        {getReadingTime(post)} min read
       </span>
     </div>
   );
@@ -152,7 +143,7 @@ function TopicBadge({ topic }: { topic: Topic }) {
   );
 }
 
-function FeaturedPostCard({ post }: { post: Post }) {
+function FeaturedPostCard({ post }: { post: BlogPost }) {
   const title = decode(post.title);
 
   return (
@@ -180,7 +171,7 @@ function FeaturedPostCard({ post }: { post: Post }) {
 
         <div>
           <div className="mb-4 inline-flex items-center rounded-full bg-[#2563EB] px-3 py-1 text-sm font-bold text-white">
-            {getPostLabel(title)}
+            {post.category}
           </div>
           <h2 className="max-w-[680px] text-[30px] font-bold leading-[1.1] tracking-tight sm:text-[42px]">
             {title}
@@ -201,7 +192,7 @@ function FeaturedPostCard({ post }: { post: Post }) {
   );
 }
 
-function CompactPostCard({ post }: { post: Post }) {
+function CompactPostCard({ post }: { post: BlogPost }) {
   const title = decode(post.title);
 
   return (
@@ -211,7 +202,7 @@ function CompactPostCard({ post }: { post: Post }) {
     >
       <div>
         <div className="inline-flex items-center rounded-full bg-[#2563EB]/10 px-2.5 py-1 text-xs font-bold text-[#2563EB]">
-          {getPostLabel(title)}
+          {post.category}
         </div>
         <h3 className="mt-4 text-xl font-bold leading-tight text-black transition group-hover:text-[#1D4ED8]">
           {title}
@@ -228,7 +219,7 @@ function CompactPostCard({ post }: { post: Post }) {
   );
 }
 
-function ListPostCard({ post }: { post: Post }) {
+function ListPostCard({ post }: { post: BlogPost }) {
   const title = decode(post.title);
 
   return (
@@ -240,7 +231,7 @@ function ListPostCard({ post }: { post: Post }) {
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-black/[0.04] px-2.5 py-1 text-xs font-bold text-black/60">
-              {getPostLabel(title)}
+              {post.category}
             </span>
             <time
               dateTime={toDateTime(post.date)}
@@ -254,7 +245,7 @@ function ListPostCard({ post }: { post: Post }) {
           </h3>
         </div>
         <div className="flex items-center justify-between gap-3 self-end text-sm font-bold text-[#2563EB] sm:self-center">
-          <span>{getReadingTime(post.title)} min</span>
+          <span>{getReadingTime(post)} min</span>
           <ArrowRight
             className="h-5 w-5 transition group-hover:translate-x-1"
             aria-hidden
@@ -281,18 +272,18 @@ export default function BlogIndexPage() {
                 Safer gaming starts with knowing what to look for.
               </h1>
               <p className="mt-5 max-w-[620px] text-base leading-relaxed text-black/70 sm:text-lg">
-                Practical guides for the apps, games, DMs, and voice chats where
-                kids spend their time. Clear signals, plain language, and next
-                steps parents can actually use.
+                Practical Koda Safety guides for the apps, games, DMs, and
+                voice chats where kids spend their time. Clear signals, plain
+                language, and next steps parents can actually use.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <a
-                  href="#latest"
+                <Link
+                  href="/blog/what-is-koda-safety"
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 font-bold text-white transition hover:bg-[#1D4ED8]"
                 >
-                  Read comparison
+                  Read Koda Safety
                   <ArrowRight className="h-5 w-5" aria-hidden />
-                </a>
+                </Link>
                 <Link
                   href="/app-reviews"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-6 font-bold text-black transition hover:bg-black/[0.04]"

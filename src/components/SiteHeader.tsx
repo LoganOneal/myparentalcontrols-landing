@@ -27,6 +27,11 @@ const NAV_GROUPS: NavGroup[] = [
     label: "Products",
     links: [
       {
+        href: "/koda-safety",
+        label: "Koda Safety",
+        description: "Parental security for PC games, voice chat, and online risk.",
+      },
+      {
         href: "/",
         label: "Overview",
         description: "Real-time alerts for the PC games kids actually play.",
@@ -61,11 +66,17 @@ const NAV_GROUPS: NavGroup[] = [
         label: "Privacy",
         description: "How Koda handles family data.",
       },
+      {
+        href: "/safety-privacy",
+        label: "Safety & privacy",
+        description: "Plain-language details on alerts, data, and responsible use.",
+      },
     ],
   },
 ];
 
 const NAV_LINKS: NavLink[] = [
+  { href: "/koda-safety", label: "Koda Safety" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/app-reviews", label: "Reviews" },
   { href: "/platforms", label: "Resources" },
@@ -88,7 +99,7 @@ export function SiteHeader() {
           aria-label="Koda home"
           onClick={() => setMobileOpen(false)}
         >
-          <KodaLogo height={34} />
+          <KodaLogo height={34} markSize={44} color="#1E1E1E" textFirst />
         </Link>
 
         <nav

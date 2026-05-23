@@ -106,8 +106,10 @@
   --bark-text: #1E1E1E;
   --bark-muted: #444444;
   --bark-border: #D9D9D9;
-  --bark-blue: #1942D8;
-  --bark-blue-hover: #1236B8;
+  --koda-bear-blue: #2B66DA;
+  --koda-bear-blue-hover: #2458C4;
+  --bark-blue: var(--koda-bear-blue);
+  --bark-blue-hover: var(--koda-bear-blue-hover);
 
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);

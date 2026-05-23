@@ -12,7 +12,7 @@ import { sendWelcomeEmail } from "@/lib/resend";
 
 export const runtime = "nodejs";
 
-const BodySchema = z.object({ email: z.string().email() });
+const BodySchema = z.object({ email: z.string().trim().email() });
 
 export async function POST(req: Request) {
   let parsed;
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   } catch {
     return new NextResponse("Invalid email", { status: 400 });
   }
-  const { email } = parsed;
+  const email = parsed.email.toLowerCase();
 
   try {
     const existing = await findWaitlistByEmail(email);
@@ -38,13 +38,11 @@ export async function POST(req: Request) {
       record = await createWaitlistRecord({ email, position });
     }
 
-    // Mirror to Supabase. Don't block the request on a Supabase outage —
-    // Airtable is already the source of truth for the wizard's recordId.
-    upsertWaitlistEmail({
+    await upsertWaitlistEmail({
       email,
       position,
       airtableRecordId: record.id,
-    }).catch((e) => console.error("supabase upsert failed", e));
+    });
 
     if (!existing) {
       sendWelcomeEmail({ to: email, waitlistPosition: position }).catch(

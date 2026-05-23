@@ -5,6 +5,7 @@ import {
   KodaLogo,
   TikTokIcon,
 } from "@/components/icons";
+import { FooterNewsletterForm } from "@/components/FooterNewsletterForm";
 
 const FOOTER_FONT_STACK =
   '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif';
@@ -19,6 +20,7 @@ const NAV_COLUMNS: NavColumn[] = [
   {
     title: "Product",
     links: [
+      { label: "Koda Safety", href: "/koda-safety" },
       { label: "Features", href: "/#features" },
       { label: "Pricing", href: "/#pricing" },
       { label: "Platforms", href: "/platforms" },
@@ -38,6 +40,8 @@ const NAV_COLUMNS: NavColumn[] = [
     title: "Resources",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "Koda Safety Guide", href: "/blog/what-is-koda-safety" },
+      { label: "Safety & Privacy", href: "/safety-privacy" },
       { label: "App Reviews", href: "/app-reviews" },
       { label: "Manage Subscription", href: "/manage-subscription" },
     ],
@@ -55,29 +59,10 @@ const NAV_COLUMNS: NavColumn[] = [
 const QUICK_LINKS: NavLink[] = [
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/tos" },
+  { label: "Safety & Privacy", href: "/safety-privacy" },
   { label: "Privacy Rights (CA)", href: "/privacy#ca_privacy_rights" },
   { label: "Sweepstakes", href: "/sweepstakes" },
 ];
-
-function ArrowRightIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      width={20}
-      height={20}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <line x1={5} y1={12} x2={19} y2={12} />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>
-  );
-}
 
 function FooterLogo() {
   return (
@@ -102,38 +87,7 @@ export function SiteFooter() {
           <div className="shrink-0">
             <FooterLogo />
           </div>
-          <form
-            action="mailto:support@myparentalcontrols.com"
-            method="post"
-            encType="text/plain"
-            className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 lg:flex-1 lg:justify-end"
-          >
-            <p className="text-white text-base m-0">Sign up for our newsletter:</p>
-            <div
-              className="relative flex items-center w-full sm:max-w-[420px]"
-              style={{
-                border: "1px solid rgb(225, 228, 232)",
-                borderRadius: 25,
-                height: 48,
-              }}
-            >
-              <input
-                type="email"
-                name="email"
-                placeholder="Email address"
-                aria-label="Sign up for our newsletter"
-                className="flex-1 h-full bg-transparent outline-none pl-4 pr-12 text-base placeholder:text-[rgb(153,153,153)] text-white rounded-full"
-              />
-              <button
-                type="submit"
-                aria-label="Submit"
-                title="Submit"
-                className="absolute right-3 inline-flex items-center justify-center text-white hover:opacity-70 transition-opacity"
-              >
-                <ArrowRightIcon />
-              </button>
-            </div>
-          </form>
+          <FooterNewsletterForm />
         </div>
 
         {/* Nav columns + Download */}
@@ -171,7 +125,7 @@ export function SiteFooter() {
             <div className="mt-[18px] flex flex-col gap-3 items-start">
               <Link
                 href="/get-started"
-                className="inline-flex h-11 items-center justify-center rounded-full bg-[#1942D8] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[#1236B8]"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
               >
                 Get Started
               </Link>

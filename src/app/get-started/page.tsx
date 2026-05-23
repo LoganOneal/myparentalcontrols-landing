@@ -12,6 +12,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Check, Plus, X } from "lucide-react";
 import { KodaLogo } from "@/components/icons";
+import { joinWaitlist } from "@/lib/waitlist-client";
 import type { WizardFormData, WizardStep } from "@/types/wizard";
 
 const GAMES = [
@@ -94,22 +95,29 @@ function WizardClient() {
 
   // Restore session on mount (covers Stripe cancel redirect to ?step=5)
   useEffect(() => {
-    const stored = loadStored();
-    if (stored) {
-      setRecordId(stored.recordId);
-      setWaitlistPosition(stored.position);
-      setForm(stored.form);
-    }
-    const stepParam = Number(searchParams.get("step") ?? 1);
-    const requestedStep = (stepParam >= 1 && stepParam <= 5
-      ? stepParam
-      : 1) as WizardStep;
-    // Only jump deep into the wizard if we have the corresponding record state
-    if (requestedStep > 1 && !stored?.recordId) {
-      setStep(1);
-    } else {
-      setStep(requestedStep);
-    }
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      const stored = loadStored();
+      if (stored) {
+        setRecordId(stored.recordId);
+        setWaitlistPosition(stored.position);
+        setForm(stored.form);
+      }
+      const stepParam = Number(searchParams.get("step") ?? 1);
+      const requestedStep = (stepParam >= 1 && stepParam <= 5
+        ? stepParam
+        : 1) as WizardStep;
+      // Only jump deep into the wizard if we have the corresponding record state
+      if (requestedStep > 1 && !stored?.recordId) {
+        setStep(1);
+      } else {
+        setStep(requestedStep);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -121,16 +129,7 @@ function WizardClient() {
     setSubmitting(true);
     setError(null);
     try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      const data = (await res.json()) as {
-        recordId: string;
-        position: number;
-      };
+      const data = await joinWaitlist(email);
       setRecordId(data.recordId);
       setWaitlistPosition(data.position);
       const nextForm = { ...form, email };

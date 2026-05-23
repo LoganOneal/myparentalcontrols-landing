@@ -1,85 +1,119 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Koda | Terms of Service",
-  description: "Koda terms of service.",
+  title: "Koda Safety Terms of Service | Koda",
+  description:
+    "Terms for using Koda Safety, the Koda website, parental-control software, parent alerts, and related family safety services.",
 };
 
-const HTML = `<h1>Terms and Conditions</h1> <p>Last Updated: November 28, 2025</p> <p>Please read these Terms and Conditions carefully before accessing or using the Koda Service.</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>
-Capitalized terms have the meanings provided in this Section or otherwise defined in these Terms. 
-        The definitions apply regardless of whether terms appear in singular or plural.
-</p> <h3>1.2 Definitions</h3> <ul> <li> <strong>Affiliate</strong> means any entity that controls, is controlled by, or is under common 
-          control with the Company, where “control” means direct or indirect ownership of at least 
-          fifty percent (50%) of the equity interests or voting securities.
-</li> <li> <strong>Application</strong> means the application titled “Koda,” 
-          including all related features, tools, content, and updates.
-</li> <li> <strong>Company</strong>, <strong>We</strong>, <strong>Us</strong>, or <strong>Our</strong>
-means Koda, with a mailing address at 
-          160 W. Camino Real #594, Boca Raton, FL 33432, United States.
-</li> <li><strong>Device</strong> means any device capable of accessing the Service.</li> <li> <strong>Service</strong> means, collectively, the Application, the Website, associated software, 
-          content, AI-powered tools, and any services offered by the Company.
-</li> <li> <strong>User Content</strong> means any images, photographs, text, metadata, or other content 
-          uploaded, submitted, or transmitted by You through the Service.
-</li> <li> <strong>Website</strong> means <a href="https://myparentalcontrols.com" target="_blank" rel="noopener noreferrer">myparentalcontrols.com</a>
-and any associated subdomains.
-</li> <li> <strong>You</strong> means the individual using the Service or the legal entity on whose behalf the individual uses the Service.
-</li> </ul> <h2>2. Agreement to Terms</h2> <p>
-Your access to and use of the Service is conditioned upon Your acceptance of these Terms and the 
-        Koda Privacy Policy. By accessing or using the Service, You acknowledge that You have read, 
-        understood, and agreed to be bound by these Terms. If You do not agree, You must discontinue use 
-        of the Service.
-</p> <h2>3. Eligibility; Age Requirements</h2> <p>You represent and warrant that You are at least 13 years old.</p> <p>
-If You are between 13 and 17 years old, You may only use the Service with the consent and supervision 
-        of a parent or legal guardian, who agrees to be fully responsible for all activities conducted using 
-        the Service.
-</p> <h2>4. Health, Nutrition, and Safety Disclaimers</h2> <p>
-Koda does not provide medical advice, nutritional counseling, or professional health services. 
-        All calorie estimates, nutritional insights, and food identifications are automated approximations 
-        and may be incomplete or inaccurate.
-</p> <ul> <li>Calorie and nutrition estimates are approximations only.</li> <li>The Service is not intended to diagnose, treat, cure, or prevent any disease.</li> <li>You should consult licensed professionals for dietary or medical guidance.</li> <li>The Company is not liable for inaccuracies in calorie counts or food identification.</li> </ul> <h2>5. User Content; License Grant</h2> <p>
-By submitting User Content, You represent that You own or have rights to it. You grant the Company 
-        a worldwide, irrevocable, royalty-free, transferable, sublicensable license to use, reproduce, 
-        analyze, process, modify, publish, and create derivative works from the User Content to operate 
-        and improve the Service, including training AI models.
-</p> <p>
-You agree not to upload unlawful, harmful, offensive, or infringing content.
-</p> <h2>6. Prohibited Uses</h2> <ul> <li>Uploading violent, explicit, or unlawful content</li> <li>Reverse engineering or competitive analysis</li> <li>Circumventing protections or unauthorized access</li> <li>Uploading images of individuals without lawful consent</li> <li>Interfering with the Service’s operation</li> </ul> <h2>7. Subscription, Billing, and In-App Purchases</h2> <p>
-Purchases and subscriptions are processed through third-party platforms such as the Apple App Store 
-        and Google Play Store. Their terms govern payment processing, renewals, and refunds.
-</p> <p>
-Subscriptions automatically renew unless cancelled at least 24 hours before the current period ends.
-</p> <h2>8. Third-Party Services</h2> <p>
-The Service may include links or integrations with third-party content or services. The Company does 
-        not control and is not responsible for such services.
-</p> <h2>9. Intellectual Property</h2> <p>
-All rights in the Service (excluding User Content) are owned exclusively by the Company or its licensors. 
-        You may not copy, modify, distribute, sell, or reverse engineer any part of the Service.
-</p> <h2>10. Termination</h2> <p>
-The Company may suspend or terminate Your access at any time if You violate these Terms. Upon termination, 
-        all rights granted to You immediately cease.
-</p> <h2>11. "AS IS" and "AS AVAILABLE" Disclaimer</h2> <p>
-The Service is provided without warranties of any kind, express or implied. The Company disclaims all 
-        warranties including merchantability, fitness for a particular purpose, accuracy, and non-infringement.
-</p> <h2>12. Limitation of Liability</h2> <p>
-To the maximum extent allowed by law, the Company’s total liability shall not exceed the greater of:
-</p> <ul> <li>The amount You paid in the preceding 12 months, or</li> <li>One hundred dollars (USD $100).</li> </ul> <p>
-The Company is not liable for indirect, incidental, or consequential damages, including loss of profits 
-        or data.
-</p> <h2>13. DMCA Notice</h2> <p>
-Copyright infringement notices may be submitted to the Company’s designated agent as described on the Website.
-</p> <h2>14. Governing Law</h2> <p>
-These Terms are governed by the laws of the State of Delaware. You agree to jurisdiction in Delaware courts, 
-        except where arbitration applies.
-</p> <h2>15. Arbitration and Class Action Waiver</h2> <p>
-Disputes must be resolved through binding individual arbitration administered by the American Arbitration 
-        Association. Class actions and representative actions are not permitted.
-</p> <h2>16. Severability and Waiver</h2> <p>
-If any provision is invalid, the remaining provisions remain in effect. Failure to enforce a right does not 
-        constitute a waiver.
-</p> <h2>17. Changes to These Terms</h2> <p>
-The Company may update these Terms at any time. Material changes will be announced through reasonable notice. 
-        Continued use after updates constitutes acceptance.
-</p> <h2>18. Contact Information</h2> <p>If You have questions about these Terms, You may contact Us at:</p> <ul> <li>Email: <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a></li> </ul>`;
+const HTML = `<h1>Terms and Conditions</h1>
+<p>Last Updated: May 23, 2026</p>
+<p>Please read these Terms and Conditions carefully before accessing or using the Koda Service.</p>
+
+<h2>1. Definitions</h2>
+<ul>
+  <li><strong>Application</strong> means the Koda or Koda Safety software, dashboard, tools, and updates.</li>
+  <li><strong>Company, We, Us, or Our</strong> means Koda, with mailing address 160 W. Camino Real #594, Boca Raton, FL 33432, United States.</li>
+  <li><strong>Parent</strong> or <strong>Guardian</strong> means a person with legal authority to use the Service for family safety and child monitoring.</li>
+  <li><strong>Service</strong> means the Application, website, waitlist, parent dashboard, alerts, subscriptions, and related services offered by Koda.</li>
+  <li><strong>User Content</strong> means information, settings, text, images, audio, metadata, device activity, or other content submitted, captured, or processed through the Service.</li>
+  <li><strong>Website</strong> means <a href="https://myparentalcontrols.com" target="_blank" rel="noopener noreferrer">myparentalcontrols.com</a> and associated subdomains.</li>
+  <li><strong>You</strong> means the person or entity accessing or using the Service.</li>
+</ul>
+
+<h2>2. Agreement to Terms</h2>
+<p>
+By accessing or using the Service, You agree to these Terms and the Koda Privacy Policy. If You do not agree, You must stop using the Service.
+</p>
+
+<h2>3. Eligibility and Authority</h2>
+<p>
+You must be at least 18 years old or the age of majority in Your jurisdiction to create a parent account or purchase a subscription. You represent that You have the legal authority and required consents to install, configure, or use Koda Safety on any monitored device or child profile.
+</p>
+
+<h2>4. Parent and Child Safety Use</h2>
+<p>
+Koda Safety is designed to help parents and guardians identify online risks such as grooming, bullying, threats, self-harm signals, sexual content, and harmful language. You are responsible for using the Service lawfully, transparently, and in a manner appropriate for Your family.
+</p>
+<ul>
+  <li>You must not use the Service to monitor anyone where You lack legal authority.</li>
+  <li>You are responsible for explaining monitoring to children where required by law or appropriate for Your family.</li>
+  <li>You are responsible for responding to alerts and making family safety decisions.</li>
+  <li>The Service is not an emergency service and does not replace contacting emergency responders, law enforcement, medical professionals, or child-safety authorities when needed.</li>
+</ul>
+
+<h2>5. No Guarantee of Detection</h2>
+<p>
+The Service uses automated tools and safety models to identify potential risks. Koda may miss risks, classify content incorrectly, generate false positives, or be limited by platform, device, network, or configuration changes. You should not rely on Koda as the only safety measure for a child.
+</p>
+
+<h2>6. Account Security</h2>
+<p>
+You are responsible for maintaining the confidentiality of Your account credentials and for all activity under Your account. Notify Us promptly if You believe Your account has been compromised.
+</p>
+
+<h2>7. User Content and License</h2>
+<p>
+You retain ownership of User Content. You grant Koda a limited, worldwide, non-exclusive license to host, process, analyze, transmit, display, and store User Content as needed to provide, secure, support, and improve the Service.
+</p>
+
+<h2>8. Prohibited Uses</h2>
+<ul>
+  <li>Using the Service for unlawful surveillance, stalking, harassment, or abuse</li>
+  <li>Monitoring devices or accounts without legal authority or required consent</li>
+  <li>Reverse engineering, scraping, attacking, or interfering with the Service</li>
+  <li>Submitting unlawful, harmful, infringing, or deceptive content</li>
+  <li>Bypassing security, payment, access, or monitoring controls</li>
+  <li>Using the Service to build or train a competing product without written permission</li>
+</ul>
+
+<h2>9. Subscriptions and Billing</h2>
+<p>
+Paid plans, renewals, trials, refunds, and cancellations may be processed through third-party payment processors or app-store platforms. Their terms may also apply. Unless stated otherwise, subscriptions renew automatically until cancelled.
+</p>
+
+<h2>10. Third-Party Services</h2>
+<p>
+The Service may interoperate with third-party platforms, games, applications, payment processors, analytics tools, or communication providers. Koda does not control those services and is not responsible for their content, availability, rules, or privacy practices.
+</p>
+
+<h2>11. Intellectual Property</h2>
+<p>
+Koda owns the Service, including software, designs, logos, trademarks, text, content, models, and other intellectual property, except for User Content and third-party materials. You may not copy, modify, distribute, sell, or create derivative works from the Service except as allowed by these Terms.
+</p>
+
+<h2>12. Termination</h2>
+<p>
+We may suspend or terminate access to the Service if You violate these Terms, create risk, fail to pay, or use the Service unlawfully. You may stop using the Service at any time.
+</p>
+
+<h2>13. Disclaimer</h2>
+<p>
+The Service is provided "as is" and "as available" without warranties of any kind, express or implied. Koda disclaims warranties of merchantability, fitness for a particular purpose, accuracy, availability, and non-infringement to the maximum extent permitted by law.
+</p>
+
+<h2>14. Limitation of Liability</h2>
+<p>
+To the maximum extent permitted by law, Koda will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, goodwill, or safety outcomes. Koda's total liability for any claim will not exceed the greater of the amount You paid to Koda in the 12 months before the claim or USD $100.
+</p>
+
+<h2>15. Indemnity</h2>
+<p>
+You agree to defend, indemnify, and hold Koda harmless from claims, damages, liabilities, costs, and expenses arising from Your use of the Service, violation of these Terms, violation of law, or misuse of monitoring features.
+</p>
+
+<h2>16. Governing Law and Disputes</h2>
+<p>
+These Terms are governed by the laws of the State of Delaware, without regard to conflict-of-law rules. Disputes will be resolved in the state or federal courts located in Delaware unless another dispute process is required by applicable law.
+</p>
+
+<h2>17. Changes to These Terms</h2>
+<p>
+We may update these Terms from time to time. Updates are effective when posted unless otherwise stated. Continued use of the Service after changes means You accept the updated Terms.
+</p>
+
+<h2>18. Contact Information</h2>
+<p>If You have questions about these Terms, contact Us at <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>.</p>`;
 
 export default function Page() {
   return (

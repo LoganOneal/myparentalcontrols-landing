@@ -1,41 +1,4 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="112" fill="white"/>
-  <defs>
-    <linearGradient id="kodaLogoIconBlue" x1="96" y1="74" x2="416" y2="442" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0079FF"/>
-      <stop offset="1" stop-color="#0B4FD8"/>
-    </linearGradient>
-    <linearGradient id="kodaLogoIconDark" x1="158" y1="50" x2="374" y2="331" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0A6DFF"/>
-      <stop offset="1" stop-color="#0947C7"/>
-    </linearGradient>
-  </defs>
-  <path d="M101 456c-54-64-58-195 22-276 22-22 58-44 98-54 31-8 69-8 101 0 40 10 76 32 98 54 80 81 76 212 22 276H101Z" fill="url(#kodaLogoIconBlue)"/>
-  <ellipse cx="165" cy="326" rx="124" ry="146" fill="url(#kodaLogoIconBlue)"/>
-  <ellipse cx="347" cy="326" rx="124" ry="146" fill="url(#kodaLogoIconBlue)"/>
-  <circle cx="256" cy="160" r="132" fill="url(#kodaLogoIconDark)"/>
-  <circle cx="153" cy="80" r="42" fill="#0B5FE8"/>
-  <circle cx="359" cy="80" r="42" fill="#0B5FE8"/>
-  <ellipse cx="256" cy="202" rx="72" ry="78" fill="white"/>
-  <circle cx="198" cy="147" r="18" fill="white"/>
-  <circle cx="314" cy="147" r="18" fill="white"/>
-  <circle cx="198" cy="147" r="7" fill="#0B56D9"/>
-  <circle cx="314" cy="147" r="7" fill="#0B56D9"/>
-  <ellipse cx="256" cy="186" rx="37" ry="25" fill="#0B56D9"/>
-  <path d="M256 211v57M221 252c13 20 57 20 70 0" stroke="#0B56D9" stroke-width="17" stroke-linecap="round"/>
-  <path d="M104 303c49 80 165 90 234 37M408 303c-49 80-165 90-234 37" stroke="white" stroke-width="17" stroke-linecap="round"/>
-  <circle cx="256" cy="330" r="108" fill="white"/>
-  <ellipse cx="196" cy="426" rx="39" ry="45" fill="white"/>
-  <ellipse cx="316" cy="426" rx="39" ry="45" fill="white"/>
-  <circle cx="196" cy="250" r="33" fill="white"/>
-  <circle cx="316" cy="250" r="33" fill="white"/>
-  <circle cx="256" cy="275" r="72" fill="white"/>
-  <circle cx="222" cy="299" r="9" fill="#0B56D9"/>
-  <circle cx="290" cy="299" r="9" fill="#0B56D9"/>
-  <ellipse cx="256" cy="324" rx="24" ry="13" fill="#0B56D9"/>
-  <path d="M225 342c13 22 49 22 62 0" stroke="#0B56D9" stroke-width="11" stroke-linecap="round"/>
-  <circle cx="218" cy="415" r="12" fill="#0B56D9"/>
-  <circle cx="242" cy="434" r="12" fill="#0B56D9"/>
-  <circle cx="294" cy="415" r="12" fill="#0B56D9"/>
-  <circle cx="270" cy="434" r="12" fill="#0B56D9"/>
+  <rect width="512" height="512" fill="white"/>
+  <image href="/seo/logo.png" x="0" y="0" width="512" height="512" preserveAspectRatio="xMidYMid meet"/>
 </svg>
