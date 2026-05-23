@@ -1,16 +1,16 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "MyParentalControls | Privacy Policy",
-  description: "MyParentalControls privacy policy.",
+  title: "Koda | Privacy Policy",
+  description: "Koda privacy policy.",
 };
 
 const HTML = `<h1>Privacy Policy</h1> <p>Last Updated: November 28, 2025</p> <p>
-This Privacy Policy describes how MyParentalControls collects, uses, processes, shares, and protects
-        Your information when You use the MyParentalControls application, website, and related services
+This Privacy Policy describes how Koda collects, uses, processes, shares, and protects
+        Your information when You use the Koda application, website, and related services
         (collectively, the “Service”). By using the Service, You agree to the collection and use of
         information in accordance with this Privacy Policy.
-</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>Capitalized terms have the meanings assigned to them in this Policy.</p> <h3>1.2 Definitions</h3> <ul> <li><strong>Account</strong> means the unique profile created for You to access the Service.</li> <li><strong>Application</strong> means the application titled “MyParentalControls.”</li> <li> <strong>Company, We, Us, or Our</strong> means MyParentalControls, with mailing address
+</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>Capitalized terms have the meanings assigned to them in this Policy.</p> <h3>1.2 Definitions</h3> <ul> <li><strong>Account</strong> means the unique profile created for You to access the Service.</li> <li><strong>Application</strong> means the application titled “Koda.”</li> <li> <strong>Company, We, Us, or Our</strong> means Koda, with mailing address
           160 W. Camino Real #594, Boca Raton, FL 33432, United States.
 </li> <li><strong>Device</strong> means any device used to access the Service.</li> <li> <strong>Personal Data</strong> means information that identifies or can reasonably be linked to an individual.
           Personal Data includes identifiable health information.

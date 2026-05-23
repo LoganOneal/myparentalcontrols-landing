@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   LinkedInIcon,
   InstagramIcon,
-  MyParentalControlsLogo,
+  KodaLogo,
   TikTokIcon,
 } from "@/components/icons";
 
@@ -81,8 +81,8 @@ function ArrowRightIcon({ className = "" }: { className?: string }) {
 
 function FooterLogo() {
   return (
-    <Link href="/" className="inline-flex items-center gap-2" aria-label="MyParentalControls home">
-      <MyParentalControlsLogo height={36} color="white" />
+    <Link href="/" className="inline-flex items-center gap-2" aria-label="Koda home">
+      <KodaLogo height={42} />
     </Link>
   );
 }
@@ -166,7 +166,7 @@ export function SiteFooter() {
               className="text-[20px] font-normal m-0"
               style={{ color: NAV_TITLE_COLOR }}
             >
-              Get MyParentalControls
+              Get Koda
             </p>
             <div className="mt-[18px] flex flex-col gap-3 items-start">
               <Link
@@ -205,7 +205,7 @@ export function SiteFooter() {
               className="text-[12px] m-0"
               style={{ color: NAV_TITLE_COLOR }}
             >
-              © 2026 MyParentalControls
+              © 2026 Koda
             </p>
           </div>
 

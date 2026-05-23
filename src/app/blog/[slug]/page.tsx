@@ -71,10 +71,10 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const post = posts.find((item) => item.slug === slug);
-  if (!post) return { title: "Blog | MyParentalControls" };
+  if (!post) return { title: "Blog | Koda" };
   const title = decode(post.title);
   return {
-    title: `${title} | MyParentalControls`,
+    title: `${title} | Koda`,
     description: post.description ?? title,
   };
 }
@@ -145,7 +145,7 @@ export default async function BlogPostPage({
                   </span>
                   <div>
                     <p className="text-sm font-bold text-black">
-                      MyParentalControls guide
+                      Koda guide
                     </p>
                     <p className="mt-0.5 text-sm leading-snug text-black/60">
                       Built for quick scanning before a deeper family
@@ -162,10 +162,10 @@ export default async function BlogPostPage({
           <article className="rounded-lg bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-8">
             <div className="prose-cal max-w-none">
               <p className="text-lg leading-relaxed text-black/75">
-                If you are comparing MyParentalControls and Bark, the short
+                If you are comparing Koda and Bark, the short
                 version is simple: Bark is a broad parental-control app for
                 phones, social media, web filtering, screen time, and location.
-                MyParentalControls is built for families whose biggest concern
+                Koda is built for families whose biggest concern
                 is what happens inside PC games: game chat, voice, alerts, and
                 evidence parents can use for a real conversation.
               </p>
@@ -174,7 +174,7 @@ export default async function BlogPostPage({
               <p>
                 Choose Bark if you want a general-purpose monitoring layer for
                 mobile devices, social apps, web access, location, and screen
-                time. Choose MyParentalControls if your child spends serious
+                time. Choose Koda if your child spends serious
                 time on a gaming PC and you need visibility into Roblox,
                 Discord, Fortnite, Minecraft, and other game environments where
                 voice and chat risk can happen fast.
@@ -183,7 +183,7 @@ export default async function BlogPostPage({
               <div className="my-8 overflow-hidden rounded-lg border border-black/10">
                 <div className="grid grid-cols-3 bg-[#121212] text-sm font-bold text-white">
                   <div className="p-3">Feature</div>
-                  <div className="p-3">MyParentalControls</div>
+                  <div className="p-3">Koda</div>
                   <div className="p-3">Bark</div>
                 </div>
                 {[
@@ -236,9 +236,9 @@ export default async function BlogPostPage({
                 media, web access, and general online activity.
               </p>
 
-              <h2>Where MyParentalControls is different</h2>
+              <h2>Where Koda is different</h2>
               <p>
-                MyParentalControls starts from a different parent problem:
+                Koda starts from a different parent problem:
                 games are where kids hang out, and game environments are where
                 many parental-control tools lose visibility. Web filters can
                 block a site. Screen-time apps can limit a device. But parents
@@ -247,13 +247,13 @@ export default async function BlogPostPage({
                 forming.
               </p>
               <p>
-                That is the gap MyParentalControls is designed to close. The
+                That is the gap Koda is designed to close. The
                 product is built for the PC games children actually play, with
                 real-time alerts and a parent dashboard focused on gaming risk
                 instead of another generic app list.
               </p>
 
-              <h2>Choose MyParentalControls if</h2>
+              <h2>Choose Koda if</h2>
               <ul>
                 <li>Your child plays PC games with open chat or voice chat.</li>
                 <li>You worry about Roblox, Discord, Fortnite, Minecraft, Steam, or similar gaming communities.</li>
@@ -271,12 +271,12 @@ export default async function BlogPostPage({
 
               <h2>The bottom line</h2>
               <p>
-                Bark and MyParentalControls solve different versions of the
-                same parent worry. Bark is broad. MyParentalControls is
+                Bark and Koda solve different versions of the
+                same parent worry. Bark is broad. Koda is
                 specialized. If the risk you care about most happens on a phone
                 or across social accounts, Bark deserves a look. If the risk
                 you care about most happens while your child is playing PC
-                games, MyParentalControls is the sharper fit.
+                games, Koda is the sharper fit.
               </p>
             </div>
           </article>
@@ -295,7 +295,7 @@ export default async function BlogPostPage({
                   social, web, and location.
                 </p>
                 <p>
-                  MyParentalControls is strongest when PC gaming chat and voice
+                  Koda is strongest when PC gaming chat and voice
                   activity are the concern.
                 </p>
               </div>

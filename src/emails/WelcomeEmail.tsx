@@ -3,7 +3,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myparentalcontrols
 export function renderWelcomeEmail(args: {
   waitlistPosition: number;
 }): { subject: string; html: string } {
-  const subject = `You're #${args.waitlistPosition} on the MyParentalControls waitlist`;
+  const subject = `You're #${args.waitlistPosition} on the Koda waitlist`;
   const html = `<!doctype html>
 <html>
   <body style="margin:0;padding:0;background:#F1F2F4;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI',Roboto,Arial,sans-serif;color:#1E1E1E;">
@@ -15,7 +15,7 @@ export function renderWelcomeEmail(args: {
               <td>
                 <h1 style="margin:0 0 16px 0;font-size:28px;line-height:1.2;font-weight:800;color:#1E1E1E;">You're on the waitlist.</h1>
                 <p style="margin:0 0 24px 0;font-size:16px;line-height:1.55;color:#3F3F46;">
-                  Thanks for signing up for MyParentalControls. We monitor voice and chat across 3,000+ PC games and alert you the second something dangerous appears.
+                  Thanks for signing up for Koda. We monitor voice and chat across 3,000+ PC games and alert you the second something dangerous appears.
                 </p>
                 <div style="background:#EFF4FF;border:1px solid #DBEAFE;border-radius:14px;padding:20px;text-align:center;margin:0 0 28px 0;">
                   <div style="font-size:13px;color:#2563EB;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;">Your waitlist position</div>
@@ -33,7 +33,7 @@ export function renderWelcomeEmail(args: {
               </td>
             </tr>
           </table>
-          <p style="margin:24px 0 0 0;font-size:12px;color:#9CA3AF;">MyParentalControls · ${SITE_URL.replace(/^https?:\/\//, "")}</p>
+          <p style="margin:24px 0 0 0;font-size:12px;color:#9CA3AF;">Koda · ${SITE_URL.replace(/^https?:\/\//, "")}</p>
         </td>
       </tr>
     </table>

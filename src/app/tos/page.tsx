@@ -1,20 +1,20 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "MyParentalControls | Terms of Service",
-  description: "MyParentalControls terms of service.",
+  title: "Koda | Terms of Service",
+  description: "Koda terms of service.",
 };
 
-const HTML = `<h1>Terms and Conditions</h1> <p>Last Updated: November 28, 2025</p> <p>Please read these Terms and Conditions carefully before accessing or using the MyParentalControls Service.</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>
+const HTML = `<h1>Terms and Conditions</h1> <p>Last Updated: November 28, 2025</p> <p>Please read these Terms and Conditions carefully before accessing or using the Koda Service.</p> <h2>1. Interpretation and Definitions</h2> <h3>1.1 Interpretation</h3> <p>
 Capitalized terms have the meanings provided in this Section or otherwise defined in these Terms. 
         The definitions apply regardless of whether terms appear in singular or plural.
 </p> <h3>1.2 Definitions</h3> <ul> <li> <strong>Affiliate</strong> means any entity that controls, is controlled by, or is under common 
           control with the Company, where “control” means direct or indirect ownership of at least 
           fifty percent (50%) of the equity interests or voting securities.
-</li> <li> <strong>Application</strong> means the application titled “MyParentalControls,” 
+</li> <li> <strong>Application</strong> means the application titled “Koda,” 
           including all related features, tools, content, and updates.
 </li> <li> <strong>Company</strong>, <strong>We</strong>, <strong>Us</strong>, or <strong>Our</strong>
-means MyParentalControls, with a mailing address at 
+means Koda, with a mailing address at 
           160 W. Camino Real #594, Boca Raton, FL 33432, United States.
 </li> <li><strong>Device</strong> means any device capable of accessing the Service.</li> <li> <strong>Service</strong> means, collectively, the Application, the Website, associated software, 
           content, AI-powered tools, and any services offered by the Company.
@@ -25,7 +25,7 @@ and any associated subdomains.
 </li> <li> <strong>You</strong> means the individual using the Service or the legal entity on whose behalf the individual uses the Service.
 </li> </ul> <h2>2. Agreement to Terms</h2> <p>
 Your access to and use of the Service is conditioned upon Your acceptance of these Terms and the 
-        MyParentalControls Privacy Policy. By accessing or using the Service, You acknowledge that You have read, 
+        Koda Privacy Policy. By accessing or using the Service, You acknowledge that You have read, 
         understood, and agreed to be bound by these Terms. If You do not agree, You must discontinue use 
         of the Service.
 </p> <h2>3. Eligibility; Age Requirements</h2> <p>You represent and warrant that You are at least 13 years old.</p> <p>
@@ -33,7 +33,7 @@ If You are between 13 and 17 years old, You may only use the Service with the co
         of a parent or legal guardian, who agrees to be fully responsible for all activities conducted using 
         the Service.
 </p> <h2>4. Health, Nutrition, and Safety Disclaimers</h2> <p>
-MyParentalControls does not provide medical advice, nutritional counseling, or professional health services. 
+Koda does not provide medical advice, nutritional counseling, or professional health services. 
         All calorie estimates, nutritional insights, and food identifications are automated approximations 
         and may be incomplete or inaccurate.
 </p> <ul> <li>Calorie and nutrition estimates are approximations only.</li> <li>The Service is not intended to diagnose, treat, cure, or prevent any disease.</li> <li>You should consult licensed professionals for dietary or medical guidance.</li> <li>The Company is not liable for inaccuracies in calorie counts or food identification.</li> </ul> <h2>5. User Content; License Grant</h2> <p>

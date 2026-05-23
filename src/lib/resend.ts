@@ -14,7 +14,7 @@ function getResend(): Resend {
 
 function fromAddress(): string {
   return (
-    process.env.RESEND_FROM_EMAIL ?? "MyParentalControls <hello@myparentalcontrols.com>"
+    process.env.RESEND_FROM_EMAIL ?? "Koda <hello@myparentalcontrols.com>"
   );
 }
 

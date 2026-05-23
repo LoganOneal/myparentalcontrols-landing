@@ -41,7 +41,7 @@ const FEATURES: Feature[] = [
     title:
       "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind",
     description:
-      "Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time.",
+      "Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. Koda runs inside the game itself, reading every party invite, voice call, and DM in real time.",
   },
   {
     title: "One dashboard. Every device your child uses.",

@@ -1,5 +1,5 @@
 /**
- * Platform catalog — every app/game/site MyParentalControls monitors,
+ * Platform catalog — every app/game/site Koda monitors,
  * with the risk profile and parent-facing guidance for each.
  *
  * Data shape is intentionally flat so the detail page template can render
@@ -130,7 +130,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Among Us has no built-in parental controls beyond a global chat censor (which is easily defeated). The only real protection is restricting play to private lobbies with known friends.",
     mpcCoverage:
-      "MyParentalControls watches Among Us chat in real time and alerts you when a stranger steers your child toward another platform, sends sexual content, or uses grooming-style language.",
+      "Koda watches Among Us chat in real time and alerts you when a stranger steers your child toward another platform, sends sexual content, or uses grooming-style language.",
     recommendation:
       "Middle school and up, and only in private lobbies with known friends. Assume any public lobby will route to Discord.",
   },
@@ -177,7 +177,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "BeReal has minimal in-app controls. You can disable Discovery and turn off location per post, but there is no parent dashboard.",
     mpcCoverage:
-      "MyParentalControls flags inappropriate Discovery comments, location exposure, and stranger DMs reaching your child's BeReal account.",
+      "Koda flags inappropriate Discovery comments, location exposure, and stranger DMs reaching your child's BeReal account.",
     recommendation:
       "High school and up, with location off and Discovery disabled.",
   },
@@ -220,7 +220,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "BitLife has no parental controls. Use device-level age restrictions (iOS Screen Time, Google Family Link) to block 17+ apps.",
     mpcCoverage:
-      "MyParentalControls flags BitLife installs and alerts you when your child opens the app, since the game itself has no chat to monitor.",
+      "Koda flags BitLife installs and alerts you when your child opens the app, since the game itself has no chat to monitor.",
     recommendation:
       "Not recommended for anyone under 17. Block at the device level.",
   },
@@ -263,7 +263,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "No standalone parental controls. Set Snap Map to \"Ghost Mode\" in the Snapchat app to prevent location sharing.",
     mpcCoverage:
-      "MyParentalControls inspects Bitmoji stickers sent or received in monitored chats, so suggestive sticker conversations don't slip past you.",
+      "Koda inspects Bitmoji stickers sent or received in monitored chats, so suggestive sticker conversations don't slip past you.",
     recommendation:
       "OK at any age, but only with Snap Map set to Ghost Mode.",
   },
@@ -306,7 +306,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "CapCut has no dedicated parental controls. The social feed cannot be disabled — only the algorithm filters are user-tunable.",
     mpcCoverage:
-      "MyParentalControls flags inappropriate template content viewed in CapCut and monitors any messaging between accounts.",
+      "Koda flags inappropriate template content viewed in CapCut and monitors any messaging between accounts.",
     recommendation:
       "Middle school and up, used for editing only — not as a discovery feed.",
   },
@@ -354,7 +354,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Character.AI rolled out a Parental Insights dashboard in 2024 that emails a weekly activity summary to a linked parent address. There is no real-time block or filter.",
     mpcCoverage:
-      "MyParentalControls flags Character.AI sessions in real time, surfacing conversations that touch on self-harm, sex, or grooming-style attachment — not just a weekly summary email.",
+      "Koda flags Character.AI sessions in real time, surfacing conversations that touch on self-harm, sex, or grooming-style attachment — not just a weekly summary email.",
     recommendation:
       "Not recommended under 16, and only with active parent monitoring above that.",
   },
@@ -402,7 +402,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "OpenAI added parental controls in 2025 linking a parent account to a teen's for usage caps, content restrictions, and memory off. Not enabled by default.",
     mpcCoverage:
-      "MyParentalControls captures ChatGPT prompts and responses on your child's PC so you see what they're really asking — and flags self-harm, sexual, or homework-cheating conversations.",
+      "Koda captures ChatGPT prompts and responses on your child's PC so you see what they're really asking — and flags self-harm, sexual, or homework-cheating conversations.",
     recommendation:
       "Middle school and up, with linked parent controls and an honest conversation about academic use.",
   },
@@ -446,7 +446,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Anthropic has no formal teen-account/parent-link product as of this writing. Block at the network or device level if you don't want it used.",
     mpcCoverage:
-      "MyParentalControls captures Claude conversations on your child's PC and flags self-harm, sexual content, or academic-cheating patterns.",
+      "Koda captures Claude conversations on your child's PC and flags self-harm, sexual content, or academic-cheating patterns.",
     recommendation:
       "Middle school and up. Safer than most chatbots for kids but still benefits from monitoring.",
   },
@@ -487,7 +487,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Discord's Family Center (2023) shows parents a high-level view: who their teen messages and who they friended, but not content. \"Teen by Default\" settings tightened DM filters in 2026.",
     mpcCoverage:
-      "MyParentalControls watches Discord DMs, server chats, and screen-shared content in real time on your child's PC. You get alerts the moment grooming language, sexual content, or doxxing attempts appear — not a weekly summary.",
+      "Koda watches Discord DMs, server chats, and screen-shared content in real time on your child's PC. You get alerts the moment grooming language, sexual content, or doxxing attempts appear — not a weekly summary.",
     recommendation:
       "High school and up. Even then, monitor DMs and disable server-member DMs by default.",
   },
@@ -530,7 +530,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Create a dedicated Kids Profile, set a PIN on adult profiles, and set Content Ratings per profile (Settings → Profile → Content Rating).",
     mpcCoverage:
-      "MyParentalControls flags when your child switches to an adult Disney+ profile or watches content above their rating.",
+      "Koda flags when your child switches to an adult Disney+ profile or watches content above their rating.",
     recommendation:
       "Great for any age on Kids Profile with PIN-locked adult profiles.",
   },
@@ -573,7 +573,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Episode has a content filter for \"Mature\" stories but it's user-toggleable with no parent lock.",
     mpcCoverage:
-      "MyParentalControls flags Episode installs and mature-story sessions on your child's device.",
+      "Koda flags Episode installs and mature-story sessions on your child's device.",
     recommendation:
       "High school and up, with the mature filter on. Not recommended for under 14.",
   },
@@ -616,7 +616,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Facebook supplies basic privacy presets and a Family Center for linked teen accounts.",
     mpcCoverage:
-      "MyParentalControls monitors Facebook web sessions, Messenger threads, and Marketplace chats from your child's PC.",
+      "Koda monitors Facebook web sessions, Messenger threads, and Marketplace chats from your child's PC.",
     recommendation:
       "High school and up. Most teens prefer Instagram/Snap; only sign up if there's a specific reason.",
   },
@@ -658,7 +658,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Set Messenger to friends-only via Facebook privacy controls. Meta's Family Center provides linked-teen reporting.",
     mpcCoverage:
-      "MyParentalControls reads Messenger conversations on your child's PC — end-to-end encryption doesn't prevent monitoring on the endpoint device.",
+      "Koda reads Messenger conversations on your child's PC — end-to-end encryption doesn't prevent monitoring on the endpoint device.",
     recommendation:
       "High school and up with friends-only message settings.",
   },
@@ -701,7 +701,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Fizz has no parental controls. Block at the device level.",
     mpcCoverage:
-      "MyParentalControls flags Fizz usage and alerts when your child views or posts content involving self-harm, bullying, or sexual targeting.",
+      "Koda flags Fizz usage and alerts when your child views or posts content involving self-harm, bullying, or sexual targeting.",
     recommendation:
       "Not recommended at any age. The anonymity model is fundamentally hostile to safe use.",
   },
@@ -749,7 +749,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Epic Cabined Accounts (under-13) restrict chat to friends, lock spending, and require parent-email approval. Older teens can switch to full accounts via parent consent.",
     mpcCoverage:
-      "MyParentalControls monitors Fortnite text chat and squad voice chat on your child's PC — alerts you the second a stranger pushes the conversation toward Discord, sexual content, or grooming.",
+      "Koda monitors Fortnite text chat and squad voice chat on your child's PC — alerts you the second a stranger pushes the conversation toward Discord, sexual content, or grooming.",
     recommendation:
       "Middle school and up with Cabined Account, voice chat off, and friends-only matchmaking.",
   },
@@ -787,7 +787,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Each host app (iMessage, Discord, etc.) has its own GIF content rating. There's no global Giphy parental control.",
     mpcCoverage:
-      "MyParentalControls scans GIFs sent in monitored chats and flags ones with sexual or violent imagery.",
+      "Koda scans GIFs sent in monitored chats and flags ones with sexual or violent imagery.",
     recommendation:
       "Any age in apps with strict GIF filters; otherwise middle school+.",
   },
@@ -829,7 +829,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "GroupMe has minimal controls. You can mute, leave, or report — but not pre-filter content.",
     mpcCoverage:
-      "MyParentalControls monitors GroupMe group chats and side DMs on your child's device.",
+      "Koda monitors GroupMe group chats and side DMs on your child's device.",
     recommendation:
       "Middle school and up for school-organized groups. Avoid social groups.",
   },
@@ -867,7 +867,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Create a Kids profile (under 12) and lock adult profiles with a PIN. Set Live TV maturity ratings.",
     mpcCoverage:
-      "MyParentalControls flags when your child switches to an adult Hulu profile.",
+      "Koda flags when your child switches to an adult Hulu profile.",
     recommendation:
       "Any age on Kids profile; high school and up for the main catalog.",
   },
@@ -915,7 +915,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Instagram Teen Accounts (2024) default under-18s to private, restricted DMs, hidden words filters, and bedtime mode. Parents can link via Family Center.",
     mpcCoverage:
-      "MyParentalControls monitors Instagram DMs, Stories, and Reel viewing on your child's PC — including disappearing messages that vanish from the platform.",
+      "Koda monitors Instagram DMs, Stories, and Reel viewing on your child's PC — including disappearing messages that vanish from the platform.",
     recommendation:
       "High school and up, with Teen Account on and parent linking active.",
   },
@@ -958,7 +958,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Kik has minimal in-app controls. Treat the whole app as block-list material.",
     mpcCoverage:
-      "MyParentalControls flags Kik installs and conversations on your child's device.",
+      "Koda flags Kik installs and conversations on your child's device.",
     recommendation:
       "Not recommended at any age. Block on the device.",
   },
@@ -1000,7 +1000,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "No parental controls. Limit signup permissions at the OS level.",
     mpcCoverage:
-      "MyParentalControls flags Lapse photo activity and any private friend requests.",
+      "Koda flags Lapse photo activity and any private friend requests.",
     recommendation:
       "High school and up, with contact-sync denied at install time.",
   },
@@ -1042,7 +1042,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Lemon8 inherits TikTok's family-pairing where supported. Limit DMs to friends only.",
     mpcCoverage:
-      "MyParentalControls monitors Lemon8 DMs and flags suggestive content viewed on your child's device.",
+      "Koda monitors Lemon8 DMs and flags suggestive content viewed on your child's device.",
     recommendation:
       "High school and up. Same caution as TikTok.",
   },
@@ -1080,7 +1080,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Limited. Disable location features and prune friend lists manually.",
     mpcCoverage:
-      "MyParentalControls flags LiveIn activity and any suggestive content surfaced through the widget.",
+      "Koda flags LiveIn activity and any suggestive content surfaced through the widget.",
     recommendation:
       "High school and up, with location off.",
   },
@@ -1118,7 +1118,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "No parental controls beyond manual friend pruning.",
     mpcCoverage:
-      "MyParentalControls scans Locket photos received on your child's device and flags suggestive content.",
+      "Koda scans Locket photos received on your child's device and flags suggestive content.",
     recommendation:
       "Middle school and up with a tight, parent-reviewed friends list.",
   },
@@ -1156,7 +1156,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Parent Dashboard inside the Facebook app — approve contacts, see chat history, set sleep mode, remove account.",
     mpcCoverage:
-      "MyParentalControls watches Messenger Kids chats on your child's PC for any bullying, sexual, or self-harm content even within approved contacts.",
+      "Koda watches Messenger Kids chats on your child's PC for any bullying, sexual, or self-harm content even within approved contacts.",
     recommendation:
       "OK for elementary kids with active parent oversight; better options exist (group iMessage, family WhatsApp).",
   },
@@ -1203,7 +1203,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Microsoft Family Safety controls Minecraft chat, multiplayer, and Realms membership at the Xbox-account level. Java needs server-by-server admin checks.",
     mpcCoverage:
-      "MyParentalControls watches Minecraft server chat, Realms messaging, and any Discord-invite links pushed during play. Alerts the second a stranger starts grooming or routing your child off-platform.",
+      "Koda watches Minecraft server chat, Realms messaging, and any Discord-invite links pushed during play. Alerts the second a stranger starts grooming or routing your child off-platform.",
     recommendation:
       "Elementary and up for single-player or whitelist servers. Public servers — middle school and up with monitoring.",
   },
@@ -1241,7 +1241,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "No meaningful controls. Block at the device level.",
     mpcCoverage:
-      "MyParentalControls flags Monkey installs and any session activity immediately.",
+      "Koda flags Monkey installs and any session activity immediately.",
     recommendation:
       "Not recommended at any age. Block on the device.",
   },
@@ -1279,7 +1279,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Create a Kids Profile (under 12) and PIN-lock adult profiles. Set maturity rating per profile. Disable Autoplay on kid profiles.",
     mpcCoverage:
-      "MyParentalControls flags when your child switches Netflix profiles or watches above-rating content.",
+      "Koda flags when your child switches Netflix profiles or watches above-rating content.",
     recommendation:
       "Any age on Kids Profile with PIN-locked adult profiles.",
   },
@@ -1317,7 +1317,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "None — block at the DNS/router level.",
     mpcCoverage:
-      "MyParentalControls flags any Omegle-style site visited on your child's PC and warns you immediately.",
+      "Koda flags any Omegle-style site visited on your child's PC and warns you immediately.",
     recommendation:
       "Not recommended at any age. Block at the DNS/router level.",
   },
@@ -1357,7 +1357,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Pinterest's Teen Account (under-16) defaults profile to private, disables DMs from non-followers, and tightens content filters.",
     mpcCoverage:
-      "MyParentalControls flags eating-disorder, self-harm, and sexualized aesthetic content surfaced on Pinterest.",
+      "Koda flags eating-disorder, self-harm, and sexualized aesthetic content surfaced on Pinterest.",
     recommendation:
       "Middle school and up with Teen Account on.",
   },
@@ -1401,7 +1401,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Niantic Kids requires a parent-managed sub-account for under-13s, restricting trading and chat.",
     mpcCoverage:
-      "MyParentalControls flags Pokémon GO usage during school hours, after-curfew sessions, and friend-trading prompts.",
+      "Koda flags Pokémon GO usage during school hours, after-curfew sessions, and friend-trading prompts.",
     recommendation:
       "Elementary and up with adult accompaniment for under-12s.",
   },
@@ -1439,7 +1439,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "None applicable — the app exists to defeat parental controls.",
     mpcCoverage:
-      "MyParentalControls flags installation of vault apps and disguised-icon apps on your child's device.",
+      "Koda flags installation of vault apps and disguised-icon apps on your child's device.",
     recommendation:
       "Not appropriate on any minor's device. If you find one, have a conversation that day.",
   },
@@ -1486,7 +1486,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Reddit's content settings disable NSFW (default for new accounts). Set DMs to friends-only.",
     mpcCoverage:
-      "MyParentalControls monitors Reddit DMs and subreddit visits, alerting on NSFW, self-harm, and grooming-style interactions.",
+      "Koda monitors Reddit DMs and subreddit visits, alerting on NSFW, self-harm, and grooming-style interactions.",
     recommendation:
       "High school and up with NSFW gate on and DMs locked to friends.",
   },
@@ -1530,7 +1530,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "None meaningful. Block at the device level.",
     mpcCoverage:
-      "MyParentalControls flags Replika installs and conversation content immediately.",
+      "Koda flags Replika installs and conversation content immediately.",
     recommendation:
       "Not recommended under 18.",
   },
@@ -1571,7 +1571,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Roblox Account Restrictions lock chat, age-gate experiences, require a parent PIN for settings, and let parents see screen time. Voice chat requires age verification.",
     mpcCoverage:
-      "MyParentalControls watches Roblox chat in real time, flags sexual content, grooming language, and phishing scams, and alerts you when your child visits experiences flagged as condo games.",
+      "Koda watches Roblox chat in real time, flags sexual content, grooming language, and phishing scams, and alerts you when your child visits experiences flagged as condo games.",
     recommendation:
       "Elementary kids on Account Restriction mode with chat off; middle school+ with chat enabled and active monitoring.",
   },
@@ -1613,7 +1613,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Saturn provides limited privacy toggles. Hide schedule from non-friends and disable DMs from non-friends.",
     mpcCoverage:
-      "MyParentalControls flags Saturn DMs and any schedule-sharing that exceeds your child's friends list.",
+      "Koda flags Saturn DMs and any schedule-sharing that exceeds your child's friends list.",
     recommendation:
       "High school and up, with schedule visibility set to friends only.",
   },
@@ -1656,7 +1656,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Signal has no parent-control features. The product cannot include them without breaking the encryption model.",
     mpcCoverage:
-      "MyParentalControls reads Signal conversations on your child's PC — end-to-end encryption doesn't prevent endpoint monitoring on the device itself.",
+      "Koda reads Signal conversations on your child's PC — end-to-end encryption doesn't prevent endpoint monitoring on the device itself.",
     recommendation:
       "High school and up, with the parent conversation that this is the platform with the most privacy.",
   },
@@ -1697,7 +1697,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Snapchat Family Center lets a linked parent see who their teen messages (not content) and reports for safety. Ghost Mode disables Snap Map. New \"Restrictions\" toggle for under-16s.",
     mpcCoverage:
-      "MyParentalControls reads Snapchat chats, Stories, and My AI conversations on your child's PC — including content that vanishes from the platform itself.",
+      "Koda reads Snapchat chats, Stories, and My AI conversations on your child's PC — including content that vanishes from the platform itself.",
     recommendation:
       "High school and up, with Family Center on, Ghost Mode locked, and Quick Add off.",
   },
@@ -1740,7 +1740,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "OpenAI's parental linking applies if Sora is bundled with ChatGPT. Likeness controls are per-account.",
     mpcCoverage:
-      "MyParentalControls flags Sora usage and any classmate-likeness or sexual prompts.",
+      "Koda flags Sora usage and any classmate-likeness or sexual prompts.",
     recommendation:
       "High school and up with linked OpenAI parental controls.",
   },
@@ -1783,7 +1783,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Spotify Premium Family includes Explicit Content filter per-account. Spotify Kids is a separate app for under-12s with curated content.",
     mpcCoverage:
-      "MyParentalControls flags explicit-podcast and explicit-music listening sessions on your child's device.",
+      "Koda flags explicit-podcast and explicit-music listening sessions on your child's device.",
     recommendation:
       "Elementary kids on Spotify Kids. Older kids on regular Spotify with explicit filter on.",
   },
@@ -1827,7 +1827,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Steam Family View lets parents PIN-lock the library, store, friends, and chat. Steam Family Sharing has separate restrictions.",
     mpcCoverage:
-      "MyParentalControls monitors Steam chat, friend DMs, and Community page visits — including detection of NSFW community content.",
+      "Koda monitors Steam chat, friend DMs, and Community page visits — including detection of NSFW community content.",
     recommendation:
       "Middle school+ with Family View locked down; high school+ for unrestricted Steam.",
   },
@@ -1870,7 +1870,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Telegram has limited controls. Restrict who can DM, who can add you to groups.",
     mpcCoverage:
-      "MyParentalControls reads Telegram chats and Channel subscriptions on your child's device.",
+      "Koda reads Telegram chats and Channel subscriptions on your child's device.",
     recommendation:
       "High school and up — and frankly, most families should pass.",
   },
@@ -1908,7 +1908,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Threads inherits Instagram Teen Account restrictions.",
     mpcCoverage:
-      "MyParentalControls monitors Threads posts and DMs on your child's device.",
+      "Koda monitors Threads posts and DMs on your child's device.",
     recommendation:
       "High school and up with linked Instagram Teen Account.",
   },
@@ -1949,7 +1949,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "TikTok Family Pairing links a parent's account to a teen's for time limits, restricted content, DM filters, and screen-time reports. Under-16 accounts default to private with DMs off.",
     mpcCoverage:
-      "MyParentalControls watches TikTok DMs, Live viewing, and surfaced video categories on your child's device — flagging eating-disorder, self-harm, and sexual content trends.",
+      "Koda watches TikTok DMs, Live viewing, and surfaced video categories on your child's device — flagging eating-disorder, self-harm, and sexual content trends.",
     recommendation:
       "High school and up with Family Pairing and Restricted Mode on.",
   },
@@ -1991,7 +1991,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Tumblr's Safe Mode hides flagged content. Disable Anonymous Asks per-blog.",
     mpcCoverage:
-      "MyParentalControls flags Tumblr asks and content with self-harm, ED, or sexual themes.",
+      "Koda flags Tumblr asks and content with self-harm, ED, or sexual themes.",
     recommendation:
       "High school and up with Safe Mode and Anonymous Asks off.",
   },
@@ -2034,7 +2034,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Twitch has limited parental controls. Disable whispers from non-friends, hide mature content via account preferences.",
     mpcCoverage:
-      "MyParentalControls monitors Twitch stream chat and whispers on your child's device, flagging predator-style DMs and sexual category browsing.",
+      "Koda monitors Twitch stream chat and whispers on your child's device, flagging predator-style DMs and sexual category browsing.",
     recommendation:
       "High school and up with whispers locked to friends.",
   },
@@ -2081,7 +2081,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "X has minimal parental controls. \"Hide sensitive content\" toggle is account-level and unverified.",
     mpcCoverage:
-      "MyParentalControls monitors X DMs, posts viewed, and Grok interactions on your child's device.",
+      "Koda monitors X DMs, posts viewed, and Grok interactions on your child's device.",
     recommendation:
       "Not recommended under 17. The platform's moderation posture makes it inappropriate for younger users.",
   },
@@ -2119,7 +2119,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "VSCO has minimal controls. Set the account to private and turn DMs to friends-only.",
     mpcCoverage:
-      "MyParentalControls monitors VSCO DMs and Discover-feed exposure on your child's device.",
+      "Koda monitors VSCO DMs and Discover-feed exposure on your child's device.",
     recommendation:
       "Middle school and up with private account and DMs to friends only.",
   },
@@ -2161,7 +2161,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Disable Mature content in settings. Set DMs to followers only.",
     mpcCoverage:
-      "MyParentalControls flags Wattpad mature-content access and DMs on your child's device.",
+      "Koda flags Wattpad mature-content access and DMs on your child's device.",
     recommendation:
       "High school and up with Mature content disabled.",
   },
@@ -2204,7 +2204,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "WhatsApp lets you restrict group adds to contacts only and limit \"Last Seen\" / read receipts. No formal parent dashboard.",
     mpcCoverage:
-      "MyParentalControls reads WhatsApp chats and group messages on your child's PC even when they're end-to-end encrypted (endpoint monitoring).",
+      "Koda reads WhatsApp chats and group messages on your child's PC even when they're end-to-end encrypted (endpoint monitoring).",
     recommendation:
       "Middle school and up with group-add restrictions tightened.",
   },
@@ -2252,7 +2252,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "YouTube has Supervised Accounts (linked to a parent's Google), Restricted Mode (light filter), and Family Link controls. Comments and Shorts can be limited.",
     mpcCoverage:
-      "MyParentalControls monitors YouTube viewing, Shorts categories, comments your child reads, and Live chat exposure.",
+      "Koda monitors YouTube viewing, Shorts categories, comments your child reads, and Live chat exposure.",
     recommendation:
       "Elementary on YouTube Kids; middle school+ on Supervised Account with Restricted Mode.",
   },
@@ -2290,7 +2290,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Strong: turn off search, pick age tier, set timer, review watch history.",
     mpcCoverage:
-      "MyParentalControls flags YouTube Kids activity above your child's age tier and surfaces any in-app sketchy content.",
+      "Koda flags YouTube Kids activity above your child's age tier and surfaces any in-app sketchy content.",
     recommendation:
       "Preschool and elementary with search off and timer on.",
   },
@@ -2333,7 +2333,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Yubo added age-estimation and ID-verification for some accounts. There's no parent dashboard.",
     mpcCoverage:
-      "MyParentalControls flags Yubo activity, swiping sessions, and live-room joins on your child's device.",
+      "Koda flags Yubo activity, swiping sessions, and live-room joins on your child's device.",
     recommendation:
       "Not recommended for minors.",
   },
@@ -2372,7 +2372,7 @@ export const PLATFORMS: Platform[] = [
     parentalControls:
       "Built-in: parent email required, no DMs, time controls, moderated comments.",
     mpcCoverage:
-      "MyParentalControls flags Zigazoo screen-time patterns and any unusual content posted by your child.",
+      "Koda flags Zigazoo screen-time patterns and any unusual content posted by your child.",
     recommendation:
       "Elementary kids with time limits.",
   },

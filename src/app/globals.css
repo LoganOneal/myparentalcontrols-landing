@@ -70,7 +70,7 @@
 }
 
 :root {
-  /* MyParentalControls palette */
+  /* Koda palette */
   --background: #ffffff;
   --foreground: #000000;
   --card: #ffffff;
@@ -96,7 +96,7 @@
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
 
-  /* MyParentalControls brand colors */
+  /* Koda brand colors */
   --mpc-dark: #1E1A24;
   --mpc-icon-bg: #F8F8FD;
   --mpc-text-muted: #262626;

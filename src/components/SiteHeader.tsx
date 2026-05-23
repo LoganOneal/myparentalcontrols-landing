@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { MyParentalControlsLogo } from "@/components/icons";
+import { KodaLogo } from "@/components/icons";
 
 /**
  * Navbar design adapted from bark.us: a quiet 68px white bar, centered
@@ -59,7 +59,7 @@ const NAV_GROUPS: NavGroup[] = [
       {
         href: "/privacy",
         label: "Privacy",
-        description: "How MyParentalControls handles family data.",
+        description: "How Koda handles family data.",
       },
     ],
   },
@@ -85,10 +85,10 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex shrink-0 items-center"
-          aria-label="MyParentalControls home"
+          aria-label="Koda home"
           onClick={() => setMobileOpen(false)}
         >
-          <MyParentalControlsLogo height={24} />
+          <KodaLogo height={34} />
         </Link>
 
         <nav

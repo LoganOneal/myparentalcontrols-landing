@@ -30,7 +30,7 @@ export function renderPremiumQueueEmail(args: {
               </td>
             </tr>
           </table>
-          <p style="margin:24px 0 0 0;font-size:12px;color:#9CA3AF;">MyParentalControls · ${SITE_URL.replace(/^https?:\/\//, "")}</p>
+          <p style="margin:24px 0 0 0;font-size:12px;color:#9CA3AF;">Koda · ${SITE_URL.replace(/^https?:\/\//, "")}</p>
         </td>
       </tr>
     </table>

@@ -14,14 +14,14 @@ const archivoBlack = Archivo_Black({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://myparentalcontrols.com"),
-  title: "MyParentalControls | Parental Security for PC Games",
+  title: "Koda | Parental Security for PC Games",
   description:
-    "MyParentalControls monitors voice and chat across the PC games kids actually play, with real-time alerts when something dangerous appears.",
+    "Koda monitors voice and chat across the PC games kids actually play, with real-time alerts when something dangerous appears.",
   icons: {
-    icon: "/seo/logo.png",
+    icon: "/seo/logo.svg",
   },
   openGraph: {
-    title: "MyParentalControls | Parental Security for PC Games",
+    title: "Koda | Parental Security for PC Games",
     description:
       "Voice and chat monitoring across 3,000+ PC games with real-time alerts for parents.",
     images: [{ url: "/seo/opengraph.jpg" }],

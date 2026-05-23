@@ -28,7 +28,7 @@ export async function createSkipLineCheckoutSession(args: {
           currency: "usd",
           product_data: {
             name: "Skip the line",
-            description: "Jump to the front of the MyParentalControls waitlist.",
+            description: "Jump to the front of the Koda waitlist.",
           },
           unit_amount: 100,
         },

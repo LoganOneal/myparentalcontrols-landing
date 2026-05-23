@@ -3,8 +3,7 @@ import { TryForFreeButton } from "@/components/wizard/TryForFreeButton";
 /**
  * Pricing & Details — visual layout cloned from bark.us/bark-app/. Dark
  * card on a light background, centered heading, checkmark feature list,
- * large price stack, primary blue CTA pill. Copy is MyParentalControls'
- * own.
+ * large price stack, primary blue CTA pill. Copy is Koda's own.
  */
 
 const FEATURES = [

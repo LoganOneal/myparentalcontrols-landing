@@ -3,8 +3,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { AppleLogoIcon, GoogleLogoIcon } from "@/components/icons";
 
 export const metadata = {
-  title: "Login | MyParentalControls",
-  description: "Sign in to your MyParentalControls account.",
+  title: "Login | Koda",
+  description: "Sign in to your Koda account.",
 };
 
 export default function LoginPage() {
@@ -16,7 +16,7 @@ export default function LoginPage() {
           Welcome back
         </h1>
         <p className="mt-3 text-base text-gray-600 text-center">
-          Sign in to your MyParentalControls account
+          Sign in to your Koda account
         </p>
 
         <div className="bg-white rounded-3xl shadow-xl mt-10 p-6 sm:p-8 w-full max-w-md flex flex-col gap-3">

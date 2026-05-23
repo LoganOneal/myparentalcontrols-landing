@@ -3,9 +3,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ManageSubForm } from "./form";
 
 export const metadata = {
-  title: "MyParentalControls | Manage Subscription",
+  title: "Koda | Manage Subscription",
   description:
-    "Manage your MyParentalControls subscription by entering the email address you subscribed with.",
+    "Manage your Koda subscription by entering the email address you subscribed with.",
 };
 
 export default function ManageSubscriptionPage() {

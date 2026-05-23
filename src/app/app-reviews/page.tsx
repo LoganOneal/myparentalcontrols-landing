@@ -5,7 +5,7 @@ import { PlatformLogo } from "@/components/PlatformLogo";
 import { PLATFORMS, getPlatform } from "@/data/platforms";
 
 export const metadata = {
-  title: "App Reviews for Parents | MyParentalControls",
+  title: "App Reviews for Parents | Koda",
   description:
     "Honest, parent-first reviews of the games, chat apps, and social platforms your kids actually use. Risks, age ratings, parental controls, and our bottom line on every app.",
 };
@@ -113,7 +113,7 @@ export default function AppReviewsPage() {
           <p className="mt-2 text-black/70 max-w-2xl">
             If you only have time to read a handful, start here. These are the
             platforms generating the most parent questions, the most safety
-            headlines, and the most MPC alerts.
+            headlines, and the most Koda alerts.
           </p>
           <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {FEATURED_SLUGS.map((slug) => (
@@ -184,7 +184,7 @@ export default function AppReviewsPage() {
                 body: "What the platform itself offers, how strong it is, and how to turn it on.",
               },
               {
-                title: "How MyParentalControls covers it",
+                title: "How Koda covers it",
                 body: "What we monitor, what alerts you'll get, and what we can't see (yet).",
               },
               {

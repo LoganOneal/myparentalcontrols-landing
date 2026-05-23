@@ -18,9 +18,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import postsData from "@/data/blog-posts.json";
 
 export const metadata = {
-  title: "Blog | MyParentalControls",
+  title: "Blog | Koda",
   description:
-    "Parent-first guides, safety explainers, and app reviews from MyParentalControls.",
+    "Parent-first guides, safety explainers, and app reviews from Koda.",
 };
 
 type Post = {
@@ -406,7 +406,7 @@ export default function BlogIndexPage() {
               </h2>
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-black/65">
                 Our app reviews cover real risks, built-in parental controls,
-                and what MyParentalControls can monitor in each environment.
+                and what Koda can monitor in each environment.
               </p>
             </div>
             <Link

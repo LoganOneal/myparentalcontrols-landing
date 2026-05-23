@@ -234,7 +234,7 @@ export function Hero() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/hero-figure.png"
-              alt="Child gaming on a PC, monitored by MyParentalControls"
+              alt="Child gaming on a PC, monitored by Koda"
               width={1080}
               height={983}
               className="relative z-10 w-full h-auto block"

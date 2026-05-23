@@ -11,7 +11,7 @@ import {
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Check, Plus, X } from "lucide-react";
-import { MyParentalControlsLogo } from "@/components/icons";
+import { KodaLogo } from "@/components/icons";
 import type { WizardFormData, WizardStep } from "@/types/wizard";
 
 const GAMES = [
@@ -291,7 +291,7 @@ function WizardShell({
                 <ArrowLeft className="w-5 h-5" />
               </button>
             ) : (
-              <MyParentalControlsLogo height={22} color="#111827" />
+              <KodaLogo height={30} />
             )}
           </div>
           <div className="flex-1 flex justify-center">
@@ -450,7 +450,7 @@ function StepEmail({
         </PrimaryButton>
         <p className="mt-3 text-center text-[12px] text-gray-500">
           By continuing you agree to receive product emails from
-          MyParentalControls.
+          Koda.
         </p>
       </div>
     </form>

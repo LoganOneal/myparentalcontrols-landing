@@ -5,9 +5,9 @@ import { PlatformLogo } from "@/components/PlatformLogo";
 import { getPlatformsByCategory, PLATFORMS } from "@/data/platforms";
 
 export const metadata = {
-  title: "Platforms We Cover | MyParentalControls",
+  title: "Platforms We Cover | Koda",
   description:
-    "Every app, game, and chat platform MyParentalControls monitors in real time — Discord, Roblox, Minecraft, Fortnite, Snapchat, TikTok, and 50+ more.",
+    "Every app, game, and chat platform Koda monitors in real time — Discord, Roblox, Minecraft, Fortnite, Snapchat, TikTok, and 50+ more.",
 };
 
 const CATEGORY_ORDER: (keyof ReturnType<typeof getPlatformsByCategory>)[] = [
@@ -36,7 +36,7 @@ export default function PlatformsPage() {
             Every app your kid uses. One alert feed.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-black/70">
-            MyParentalControls monitors conversations and activity across the
+            Koda monitors conversations and activity across the
             games, chat apps, and social platforms kids actually use — and
             alerts your phone the moment something looks risky.
           </p>

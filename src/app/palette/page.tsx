@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Color palette options · MyParentalControls",
+  title: "Color palette options · Koda",
   description:
-    "Five trust-evoking color schemes for the MyParentalControls product. Compare and choose.",
+    "Five trust-evoking color schemes for the Koda product. Compare and choose.",
 };
 
 type Palette = {
@@ -320,7 +320,7 @@ function PreviewCard({ p }: { p: Palette["preview"] }) {
             className="text-sm font-semibold"
             style={{ color: p.textPrimary }}
           >
-            MyParentalControls
+            Koda
           </div>
           <div className="text-xs" style={{ color: p.textMuted }}>
             3 new alerts this morning
@@ -451,7 +451,7 @@ export default function PalettePage() {
             >
               #2563EB
             </span>
-            . Each row shows the same MyParentalControls alert card re-skinned
+            . Each row shows the same Koda alert card re-skinned
             in a different palette — judge the chrome, not the layout.
           </p>
         </header>

@@ -1,8 +1,8 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "MyParentalControls | Sweepstakes Official Rules",
-  description: "MyParentalControls sweepstakes official rules.",
+  title: "Koda | Sweepstakes Official Rules",
+  description: "Koda sweepstakes official rules.",
 };
 
 const HTML = `<h1>MYPARENTALCONTROLS SURVEY SWEEPSTAKES</h1> <h2>OFFICIAL RULES</h2> <p>
@@ -13,7 +13,7 @@ No purchase or payment of any kind is necessary to enter or win. A purchase will
         chances of winning. Void where prohibited. The Sweepstakes is open to legal residents of the 50 
         United States and the District of Columbia, 18 years of age or older. Employees, officers and 
         directors (and their immediate families (e.g. spouse, children, parents, siblings) and those living 
-        in their same households (whether or not related)) of MyParentalControls ("Sponsor"), are not eligible to 
+        in their same households (whether or not related)) of Koda ("Sponsor"), are not eligible to 
         enter. Eligible participants of the Sweepstakes are referred to as "Participant(s)" or "you". By 
         participating, you agree to these Official Rules and to the decisions of the Sponsor whose decisions 
         are final and binding in all respects.
@@ -149,10 +149,10 @@ Please see Sponsor's privacy policy located at <a href="/privacy">https://www.my
 The Terms and Conditions located at <a href="/tos">https://www.myparentalcontrols.com/tos</a> are incorporated by 
         reference herein and made a part of these Official Rules.
 </p> <h2>13. SPONSOR</h2> <p>
-MyParentalControls with a principal place of business located at 100 Congress Ave., Suite 400, Austin,
+Koda with a principal place of business located at 100 Congress Ave., Suite 400, Austin,
         TX 78701.
 </p> <p class="mt-8">
-© 2026 MyParentalControls. All other trademarks, service marks, logos, product or service names are the 
+© 2026 Koda. All other trademarks, service marks, logos, product or service names are the 
         property of their respective owners. All Rights Reserved.
 </p>`;
 

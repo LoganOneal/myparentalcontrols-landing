@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { MyParentalControlsLogo } from "@/components/icons";
+import { KodaLogo } from "@/components/icons";
 import { PlatformLogo } from "@/components/PlatformLogo";
 import {
   PLATFORMS,
@@ -25,10 +25,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const platform = getPlatform(slug);
-  if (!platform) return { title: "Platform | MyParentalControls" };
+  if (!platform) return { title: "Platform | Koda" };
   return {
-    title: `${platform.name} Parental Controls & Risks | MyParentalControls`,
-    description: `${platform.name}: ${platform.blurb} Read the risks every parent should know and how MyParentalControls protects your child.`,
+    title: `${platform.name} Parental Controls & Risks | Koda`,
+    description: `${platform.name}: ${platform.blurb} Read the risks every parent should know and how Koda protects your child.`,
   };
 }
 
@@ -235,10 +235,10 @@ export default async function PlatformDetailPage({
 
             <section className="p-6 sm:p-8 rounded-2xl border border-[#1E66E8]/20 bg-[#F6F8FF]">
               <div className="flex flex-col gap-3">
-                <MyParentalControlsLogo height={28} />
+                <KodaLogo height={34} />
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold text-black">
-                    How MyParentalControls covers {platform.name}
+                    How Koda covers {platform.name}
                   </h2>
                   <p className="mt-2 text-black/80 leading-relaxed">
                     {platform.mpcCoverage}
@@ -274,7 +274,7 @@ export default async function PlatformDetailPage({
                   `What parents need to know`,
                   `Serious risks`,
                   `Parental controls`,
-                  `How MyParentalControls covers it`,
+                  `How Koda covers it`,
                   `Bottom line`,
                 ].map((label) => (
                   <li key={label}>

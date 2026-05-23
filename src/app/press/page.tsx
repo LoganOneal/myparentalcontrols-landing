@@ -15,7 +15,7 @@ import { PressMentions } from "@/components/press/PressMentions";
 import { PressForm } from "./form";
 
 export const metadata = {
-  title: "Press | MyParentalControls",
+  title: "Press | Koda",
   description:
     "Press coverage, lawsuits, and reporting on the platforms where predators, cyber bullies, and scammers target children — plus how to reach our press team.",
 };

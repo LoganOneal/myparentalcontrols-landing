@@ -7,13 +7,14 @@
  *   - "partial"  → amber dot + "Partial" label, with optional footnote
  *   - string     → literal label (e.g. "iOS only") shown in amber
  *
- * Sources (per cell with `note`): bark.us, gabb.com, aura.com, qustodio.com
+ * Sources (per cell with `note`): bark.us, aura.com, qustodio.com,
+ * support.apple.com, apple.com/child-safety
  * feature pages — current as of the date in COMPARISON_AS_OF.
  *
  * If any value is wrong, update here. The component reads this file.
  */
 
-export const COMPARISON_AS_OF = "2026-05-20";
+export const COMPARISON_AS_OF = "2026-05-23";
 
 export type Cell =
   | { value: "yes" }
@@ -22,7 +23,7 @@ export type Cell =
   | { value: "custom"; label: string; note?: string };
 
 export type Column = {
-  key: "mpc" | "bark" | "gabb" | "aura" | "qustodio";
+  key: "mpc" | "bark" | "qustodio" | "aura" | "apple";
   name: string;
   /** Explicit path to the wordmark file inside /public. If omitted, the
    *  header renders a styled text wordmark in `fallbackColor`. */
@@ -36,7 +37,7 @@ export type Column = {
 export const COLUMNS: Column[] = [
   {
     key: "mpc",
-    name: "MyParentalControls",
+    name: "Koda",
     fallbackColor: "#2563EB",
     tagline: "Reads inside the games",
   },
@@ -48,11 +49,11 @@ export const COLUMNS: Column[] = [
     tagline: "Social + text monitoring",
   },
   {
-    key: "gabb",
-    name: "Gabb",
-    logo: "/images/competitors/gabb.png",
-    fallbackColor: "#E5384C",
-    tagline: "Locked-down kids' devices",
+    key: "qustodio",
+    name: "Qustodio",
+    logo: "/images/competitors/qustodio.png",
+    fallbackColor: "#F37021",
+    tagline: "Screen time + filters",
   },
   {
     key: "aura",
@@ -62,11 +63,10 @@ export const COLUMNS: Column[] = [
     tagline: "Identity + family safety",
   },
   {
-    key: "qustodio",
-    name: "Qustodio",
-    logo: "/images/competitors/qustodio.png",
-    fallbackColor: "#F37021",
-    tagline: "Screen time + filters",
+    key: "apple",
+    name: "Apple Screen Time",
+    fallbackColor: "#111827",
+    tagline: "Built-in Apple controls",
   },
 ];
 
@@ -91,6 +91,12 @@ const custom = (label: string, note?: string): Cell => ({
   label,
   note,
 });
+const APPLE_TIME_ONLY_NOTE =
+  "Apple Screen Time can set app limits and show activity, but it does not read the content of third-party chats.";
+const APPLE_MEDIA_ONLY_NOTE =
+  "Apple Communication Safety focuses on sensitive photos and videos; Apple says parents are not proactively notified and message contents are not shared.";
+const APPLE_PLATFORM_NOTE =
+  "Screen Time parental controls are built into iPhone, iPad, and Mac and require Apple family/device setup.";
 
 export const GROUPS: Group[] = [
   {
@@ -101,9 +107,9 @@ export const GROUPS: Group[] = [
         cells: {
           mpc: YES,
           bark: NO,
-          gabb: NO,
           aura: partial(),
           qustodio: NO,
+          apple: NO,
         },
       },
       {
@@ -111,9 +117,9 @@ export const GROUPS: Group[] = [
         cells: {
           mpc: YES,
           bark: NO,
-          gabb: NO,
           aura: partial(),
           qustodio: NO,
+          apple: NO,
         },
       },
       {
@@ -121,14 +127,20 @@ export const GROUPS: Group[] = [
         cells: {
           mpc: YES,
           bark: NO,
-          gabb: NO,
           aura: partial(),
           qustodio: NO,
+          apple: NO,
         },
       },
       {
         feature: "Reads game party / DM channels",
-        cells: { mpc: YES, bark: NO, gabb: NO, aura: partial(), qustodio: NO },
+        cells: {
+          mpc: YES,
+          bark: NO,
+          qustodio: NO,
+          aura: partial(),
+          apple: NO,
+        },
       },
     ],
   },
@@ -137,16 +149,16 @@ export const GROUPS: Group[] = [
     rows: [
       {
         feature: "Discord DMs",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: NO, qustodio: NO },
+        cells: { mpc: YES, bark: YES, qustodio: NO, aura: NO, apple: NO },
       },
       {
         feature: "Snapchat (vanishing messages)",
         cells: {
           mpc: YES,
           bark: partial(),
-          gabb: NO,
-          aura: custom("Time only"),
           qustodio: custom("Time only"),
+          aura: custom("Time only"),
+          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
         },
       },
       {
@@ -154,23 +166,29 @@ export const GROUPS: Group[] = [
         cells: {
           mpc: YES,
           bark: YES,
-          gabb: NO,
-          aura: NO,
           qustodio: custom("iOS only"),
+          aura: NO,
+          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
         },
       },
       {
         feature: "TikTok messages",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: NO, qustodio: partial() },
+        cells: {
+          mpc: YES,
+          bark: YES,
+          qustodio: partial(),
+          aura: NO,
+          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
+        },
       },
       {
         feature: "WhatsApp (E2E encrypted)",
         cells: {
           mpc: YES,
           bark: YES,
-          gabb: NO,
-          aura: NO,
           qustodio: partial(),
+          aura: NO,
+          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
         },
       },
     ],
@@ -180,24 +198,42 @@ export const GROUPS: Group[] = [
     rows: [
       {
         feature: "Grooming patterns",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: partial(), qustodio: partial() },
+        cells: {
+          mpc: YES,
+          bark: YES,
+          qustodio: partial(),
+          aura: partial(),
+          apple: custom("Media only", APPLE_MEDIA_ONLY_NOTE),
+        },
       },
       {
         feature: "Cyberbullying",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: YES, qustodio: partial() },
+        cells: {
+          mpc: YES,
+          bark: YES,
+          qustodio: partial(),
+          aura: YES,
+          apple: NO,
+        },
       },
       {
         feature: "Self-harm / suicide signals",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: NO, qustodio: partial() },
+        cells: {
+          mpc: YES,
+          bark: YES,
+          qustodio: partial(),
+          aura: NO,
+          apple: NO,
+        },
       },
       {
         feature: "Real-time alerts (not weekly digest)",
         cells: {
           mpc: YES,
           bark: YES,
-          gabb: NO,
-          aura: partial(),
           qustodio: partial(),
+          aura: partial(),
+          apple: NO,
         },
       },
     ],
@@ -207,23 +243,35 @@ export const GROUPS: Group[] = [
     rows: [
       {
         feature: "Windows desktop",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: YES, qustodio: YES },
+        cells: { mpc: YES, bark: YES, qustodio: YES, aura: YES, apple: NO },
       },
       {
         feature: "macOS",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: YES, qustodio: YES },
+        cells: { mpc: YES, bark: YES, qustodio: YES, aura: YES, apple: YES },
       },
       {
         feature: "Invisible to child / tamper-resistant",
-        cells: { mpc: YES, bark: partial(), gabb: custom("Device only"), aura: partial(), qustodio: partial() },
+        cells: {
+          mpc: YES,
+          bark: partial(),
+          qustodio: partial(),
+          aura: partial(),
+          apple: partial(APPLE_PLATFORM_NOTE),
+        },
       },
       {
         feature: "Works without buying a new phone",
-        cells: { mpc: YES, bark: YES, gabb: NO, aura: YES, qustodio: YES },
+        cells: {
+          mpc: YES,
+          bark: YES,
+          qustodio: YES,
+          aura: YES,
+          apple: custom("Apple only", APPLE_PLATFORM_NOTE),
+        },
       },
       {
         feature: "Family plan covers multiple kids",
-        cells: { mpc: YES, bark: YES, gabb: partial(), aura: YES, qustodio: YES },
+        cells: { mpc: YES, bark: YES, qustodio: YES, aura: YES, apple: YES },
       },
     ],
   },
