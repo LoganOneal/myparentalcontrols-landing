@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 // Free open-license fallback for Moderat-Black. The hero applies a font stack
@@ -39,7 +41,13 @@ export default function RootLayout({
       {/* overflow-x-clip prevents horizontal overflow without turning the
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}
-      <body className="overflow-x-clip">{children}</body>
+      <body className="overflow-x-clip">
+        {children}
+        <Analytics />
+      </body>
+      <GoogleAnalytics
+        measurementId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+      />
     </html>
   );
 }
