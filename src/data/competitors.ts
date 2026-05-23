@@ -1,36 +1,16 @@
-/**
- * Competitor comparison data for CompetitorComparison.tsx.
- *
- * Values per cell:
- *   - "yes"      → green check
- *   - "no"       → gray dash
- *   - "partial"  → amber dot + "Partial" label, with optional footnote
- *   - string     → literal label (e.g. "iOS only") shown in amber
- *
- * Sources (per cell with `note`): bark.us, aura.com, qustodio.com,
- * support.apple.com, apple.com/child-safety
- * feature pages — current as of the date in COMPARISON_AS_OF.
- *
- * If any value is wrong, update here. The component reads this file.
- */
-
 export const COMPARISON_AS_OF = "2026-05-23";
 
 export type Cell =
   | { value: "yes" }
   | { value: "no" }
-  | { value: "partial"; note?: string }
-  | { value: "custom"; label: string; note?: string };
+  | { value: "partial" }
+  | { value: "custom"; label: string };
 
 export type Column = {
   key: "mpc" | "bark" | "qustodio" | "aura" | "apple";
   name: string;
-  /** Explicit path to the wordmark file inside /public. If omitted, the
-   *  header renders a styled text wordmark in `fallbackColor`. */
   logo?: string;
-  /** Brand color used for the text wordmark fallback. */
   fallbackColor: string;
-  /** Optional one-line tagline shown under the header. */
   tagline?: string;
 };
 
@@ -72,9 +52,7 @@ export const COLUMNS: Column[] = [
 
 export type Row = {
   feature: string;
-  /** Subtle helper text under the row label. */
   hint?: string;
-  /** Keyed by Column.key. */
   cells: Record<Column["key"], Cell>;
 };
 
@@ -85,111 +63,29 @@ export type Group = {
 
 const YES: Cell = { value: "yes" };
 const NO: Cell = { value: "no" };
-const partial = (note?: string): Cell => ({ value: "partial", note });
-const custom = (label: string, note?: string): Cell => ({
-  value: "custom",
-  label,
-  note,
-});
-const APPLE_TIME_ONLY_NOTE =
-  "Apple Screen Time can set app limits and show activity, but it does not read the content of third-party chats.";
-const APPLE_MEDIA_ONLY_NOTE =
-  "Apple Communication Safety focuses on sensitive photos and videos; Apple says parents are not proactively notified and message contents are not shared.";
-const APPLE_PLATFORM_NOTE =
-  "Screen Time parental controls are built into iPhone, iPad, and Mac and require Apple family/device setup.";
+const PARTIAL: Cell = { value: "partial" };
+const custom = (label: string): Cell => ({ value: "custom", label });
 
 export const GROUPS: Group[] = [
   {
-    title: "In-game chat (where predators actually live)",
+    title: "PC game voice + chat monitoring",
     rows: [
       {
-        feature: "Reads Roblox in-game chat",
-        cells: {
-          mpc: YES,
-          bark: NO,
-          aura: partial(),
-          qustodio: NO,
-          apple: NO,
-        },
+        feature: "Reads Roblox in-game voice + chat",
+        cells: { mpc: YES, bark: NO, qustodio: NO, aura: NO, apple: NO },
       },
       {
         feature: "Reads Minecraft in-game chat",
-        cells: {
-          mpc: YES,
-          bark: NO,
-          aura: partial(),
-          qustodio: NO,
-          apple: NO,
-        },
+        cells: { mpc: YES, bark: NO, qustodio: NO, aura: NO, apple: NO },
       },
       {
-        feature: "Reads Fortnite text + voice",
-        cells: {
-          mpc: YES,
-          bark: NO,
-          aura: partial(),
-          qustodio: NO,
-          apple: NO,
-        },
+        feature: "Reads Fortnite voice + party chat",
+        cells: { mpc: YES, bark: NO, qustodio: NO, aura: NO, apple: NO },
       },
       {
-        feature: "Reads game party / DM channels",
-        cells: {
-          mpc: YES,
-          bark: NO,
-          qustodio: NO,
-          aura: partial(),
-          apple: NO,
-        },
-      },
-    ],
-  },
-  {
-    title: "Social + chat apps",
-    rows: [
-      {
-        feature: "Discord DMs",
-        cells: { mpc: YES, bark: YES, qustodio: NO, aura: NO, apple: NO },
-      },
-      {
-        feature: "Snapchat (vanishing messages)",
-        cells: {
-          mpc: YES,
-          bark: partial(),
-          qustodio: custom("Time only"),
-          aura: custom("Time only"),
-          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
-        },
-      },
-      {
-        feature: "Instagram DMs",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: custom("iOS only"),
-          aura: NO,
-          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
-        },
-      },
-      {
-        feature: "TikTok messages",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: partial(),
-          aura: NO,
-          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
-        },
-      },
-      {
-        feature: "WhatsApp (E2E encrypted)",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: partial(),
-          aura: NO,
-          apple: custom("Time only", APPLE_TIME_ONLY_NOTE),
-        },
+        feature: "Covers all PC games (not just named titles)",
+        hint: "Works even when new games launch",
+        cells: { mpc: YES, bark: NO, qustodio: NO, aura: NO, apple: NO },
       },
     ],
   },
@@ -197,43 +93,33 @@ export const GROUPS: Group[] = [
     title: "What it flags",
     rows: [
       {
-        feature: "Grooming patterns",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: partial(),
-          aura: partial(),
-          apple: custom("Media only", APPLE_MEDIA_ONLY_NOTE),
-        },
+        feature: "Grooming risk detection",
+        hint: "Age-gap pressure, isolation tactics, gift offers",
+        cells: { mpc: YES, bark: PARTIAL, qustodio: NO, aura: PARTIAL, apple: NO },
       },
       {
-        feature: "Cyberbullying",
+        feature: "Bullying + threat alerts",
+        cells: { mpc: YES, bark: YES, qustodio: PARTIAL, aura: YES, apple: NO },
+      },
+      {
+        feature: "Clip, transcript, and timestamp",
+        hint: "Evidence you can act on — not just a vague alert",
+        cells: { mpc: YES, bark: NO, qustodio: NO, aura: NO, apple: NO },
+      },
+      {
+        feature: "Real-time parent alerts",
+        hint: "Notified when it happens, not days later",
+        cells: { mpc: YES, bark: PARTIAL, qustodio: PARTIAL, aura: PARTIAL, apple: NO },
+      },
+      {
+        feature: "Lets kids keep playing safely",
+        hint: "Monitors without pausing or blocking the game",
         cells: {
           mpc: YES,
           bark: YES,
-          qustodio: partial(),
+          qustodio: PARTIAL,
           aura: YES,
-          apple: NO,
-        },
-      },
-      {
-        feature: "Self-harm / suicide signals",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: partial(),
-          aura: NO,
-          apple: NO,
-        },
-      },
-      {
-        feature: "Real-time alerts (not weekly digest)",
-        cells: {
-          mpc: YES,
-          bark: YES,
-          qustodio: partial(),
-          aura: partial(),
-          apple: NO,
+          apple: custom("Block only"),
         },
       },
     ],
@@ -251,22 +137,16 @@ export const GROUPS: Group[] = [
       },
       {
         feature: "Invisible to child / tamper-resistant",
-        cells: {
-          mpc: YES,
-          bark: partial(),
-          qustodio: partial(),
-          aura: partial(),
-          apple: partial(APPLE_PLATFORM_NOTE),
-        },
+        cells: { mpc: YES, bark: PARTIAL, qustodio: PARTIAL, aura: PARTIAL, apple: PARTIAL },
       },
       {
-        feature: "Works without buying a new phone",
+        feature: "Works without buying a new device",
         cells: {
           mpc: YES,
           bark: YES,
           qustodio: YES,
           aura: YES,
-          apple: custom("Apple only", APPLE_PLATFORM_NOTE),
+          apple: custom("Apple only"),
         },
       },
       {

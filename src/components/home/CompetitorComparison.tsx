@@ -32,20 +32,6 @@ function competitorShortName(column: Column) {
   return column.name;
 }
 
-function useFootnoteCollector() {
-  const footnotes: string[] = [];
-
-  function footnoteFor(note: string | undefined): number | null {
-    if (!note) return null;
-    const existing = footnotes.indexOf(note);
-    if (existing !== -1) return existing + 1;
-    footnotes.push(note);
-    return footnotes.length;
-  }
-
-  return { footnotes, footnoteFor };
-}
-
 function CheckIcon({
   highlighted,
   compact,
@@ -130,21 +116,10 @@ function CellStatus({
   if (cell.value === "yes") {
     return <CheckIcon compact={compact} highlighted={highlighted} />;
   }
-
   if (cell.value === "no") {
     return <NoIcon compact={compact} />;
   }
-
-  if (cell.value === "partial" || cell.value === "custom") {
-    return <LimitedIcon compact={compact} />;
-  }
-
   return <LimitedIcon compact={compact} />;
-}
-
-function noteForCell(cell: Cell) {
-  if (cell.value !== "partial" && cell.value !== "custom") return undefined;
-  return cell.note;
 }
 
 function ColumnHeader({
@@ -212,8 +187,6 @@ function ColumnHeader({
 }
 
 function DesktopComparison() {
-  const { footnotes, footnoteFor } = useFootnoteCollector();
-
   return (
     <div className="mt-10 hidden lg:block">
       <div className="overflow-x-auto">
@@ -279,7 +252,6 @@ function DesktopComparison() {
                   {COLUMNS.map((column) => {
                     const cell = row.cells[column.key];
                     const highlighted = column.key === KODA_KEY;
-                    const footnote = footnoteFor(noteForCell(cell));
 
                     return (
                       <div
@@ -296,14 +268,7 @@ function DesktopComparison() {
                             : ""
                         }`}
                       >
-                        <div className="flex items-center gap-1">
-                          <CellStatus cell={cell} highlighted={highlighted} />
-                          {footnote ? (
-                            <sup className="ml-0.5 text-[10px] font-semibold text-gray-500">
-                              {footnote}
-                            </sup>
-                          ) : null}
-                        </div>
+                        <CellStatus cell={cell} highlighted={highlighted} />
                       </div>
                     );
                   })}
@@ -314,7 +279,6 @@ function DesktopComparison() {
         </div>
       </div>
 
-      <Footnotes notes={footnotes} />
       <SourceNote />
     </div>
   );
@@ -327,7 +291,6 @@ function MobileComparison({
   selectedKey: CompetitorKey;
   onSelectedKeyChange: (key: CompetitorKey) => void;
 }) {
-  const { footnotes, footnoteFor } = useFootnoteCollector();
   const kodaColumn = getColumn(KODA_KEY);
   const selectedColumn = getColumn(selectedKey);
   const competitorColumns = COMPETITOR_KEYS.map(getColumn);
@@ -376,14 +339,14 @@ function MobileComparison({
 
         <div className="px-4 pb-5">
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-            <div className="grid grid-cols-[minmax(0,1fr)_64px_92px] border-b border-gray-200 bg-gray-50">
+            <div className="grid grid-cols-[minmax(0,1fr)_72px_72px] border-b border-gray-200 bg-gray-50">
               <div className="px-3 py-3 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
                 Feature
               </div>
-              <div className="flex items-center justify-center bg-[#EFF6FF] px-2 py-3 text-xs font-extrabold text-[var(--bark-blue)]">
+              <div className="flex items-center justify-center bg-[#EFF6FF] px-1 py-3 text-xs font-extrabold text-[var(--bark-blue)]">
                 {kodaColumn.name}
               </div>
-              <div className="flex items-center justify-center px-2 py-3 text-center text-xs font-extrabold leading-tight text-gray-700">
+              <div className="flex items-center justify-center px-1 py-3 text-center text-xs font-extrabold leading-tight text-gray-700">
                 {competitorShortName(selectedColumn)}
               </div>
             </div>
@@ -403,15 +366,11 @@ function MobileComparison({
                 {group.rows.map((row) => {
                   const kodaCell = row.cells[KODA_KEY];
                   const competitorCell = row.cells[selectedKey];
-                  const kodaFootnote = footnoteFor(noteForCell(kodaCell));
-                  const competitorFootnote = footnoteFor(
-                    noteForCell(competitorCell),
-                  );
 
                   return (
                     <div
                       key={row.feature}
-                      className="grid min-h-[76px] grid-cols-[minmax(0,1fr)_64px_92px] border-b border-gray-200/80 last:border-b-0"
+                      className="grid min-h-[76px] grid-cols-[minmax(0,1fr)_72px_72px] border-b border-gray-200/80 last:border-b-0"
                     >
                       <div className="px-3 py-4">
                         <p className="text-sm font-bold leading-snug text-gray-950">
@@ -425,25 +384,11 @@ function MobileComparison({
                       </div>
 
                       <div className="flex items-center justify-center border-l border-[var(--bark-blue)]/10 bg-[#EFF6FF]/80 px-1">
-                        <div className="flex items-center gap-1">
-                          <CellStatus compact cell={kodaCell} highlighted />
-                          {kodaFootnote ? (
-                            <sup className="text-[9px] font-semibold text-gray-500">
-                              {kodaFootnote}
-                            </sup>
-                          ) : null}
-                        </div>
+                        <CellStatus compact cell={kodaCell} highlighted />
                       </div>
 
                       <div className="flex items-center justify-center border-l border-gray-200 px-1.5">
-                        <div className="flex items-center gap-1">
-                          <CellStatus compact cell={competitorCell} />
-                          {competitorFootnote ? (
-                            <sup className="text-[9px] font-semibold text-gray-500">
-                              {competitorFootnote}
-                            </sup>
-                          ) : null}
-                        </div>
+                        <CellStatus compact cell={competitorCell} />
                       </div>
                     </div>
                   );
@@ -454,21 +399,8 @@ function MobileComparison({
         </div>
       </div>
 
-      <Footnotes notes={footnotes} />
       <SourceNote />
     </div>
-  );
-}
-
-function Footnotes({ notes }: { notes: string[] }) {
-  if (notes.length === 0) return null;
-
-  return (
-    <ol className="mx-auto mt-6 max-w-3xl list-decimal space-y-1 pl-5 text-xs text-gray-500">
-      {notes.map((note) => (
-        <li key={note}>{note}</li>
-      ))}
-    </ol>
   );
 }
 
