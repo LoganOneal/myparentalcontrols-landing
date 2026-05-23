@@ -419,7 +419,7 @@ export function CompetitorComparison() {
     React.useState<CompetitorKey>("bark");
 
   return (
-    <section className="px-[15px] pt-[15px] pb-20">
+    <section className="px-[15px] pt-[15px] pb-[15px]">
       <div className="rounded-lg bg-white">
         <div className="mx-auto max-w-[1280px] px-5 py-12 sm:px-8 sm:py-16 lg:px-[60px] lg:py-20">
           <header className="mx-auto max-w-3xl text-center">
