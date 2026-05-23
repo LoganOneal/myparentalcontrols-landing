@@ -8,11 +8,8 @@ import * as React from "react";
 import {
   COLORS,
   PhoneFrame,
-  HeroHeader,
-  BottomNav,
   PlatformBox,
   GrassBlockBox,
-  FooterPill,
 } from "@/components/home/PhoneMockShared";
 
 type ScanRow = {
@@ -62,74 +59,6 @@ export function AIScannerScreenMock({
 }) {
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <HeroHeader
-        title={
-          <>
-            AI is
-            <br />
-            on watch
-          </>
-        }
-        subtitle={
-          <>
-            We stay quiet
-            <br />
-            until it matters.
-          </>
-        }
-        iconNode={
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden>
-            <path d="M12 2 14 8l6 2-6 2-2 6-2-6-6-2 6-2 2-6zm6 12 1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3zM5 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" />
-          </svg>
-        }
-      />
-
-      <div className="px-3 mt-3 relative z-10">
-        <div
-          className="bg-white rounded-2xl px-3 py-3 flex items-center justify-around ring-1 ring-black/5"
-          style={{
-            boxShadow:
-              "0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(15,23,42,0.08)",
-          }}
-        >
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.text, fontSize: "20px" }}
-            >
-              47K
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Msgs scanned
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.high, fontSize: "20px" }}
-            >
-              1
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Real threat
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.low, fontSize: "20px" }}
-            >
-              0
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              False alarms
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="px-4 mt-4 flex items-center justify-between">
         <h3
           className="font-bold text-gray-900 inline-flex items-center gap-1.5 rounded-full pl-1 pr-2.5 py-0.5 mock-anim-glow-pulse"
@@ -231,9 +160,6 @@ export function AIScannerScreenMock({
         })}
       </div>
 
-      <FooterPill text="One alert that matters" tone="alert" />
-
-      <BottomNav activeTab="Activity" />
     </PhoneFrame>
   );
 }

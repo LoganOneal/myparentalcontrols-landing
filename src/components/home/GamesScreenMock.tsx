@@ -8,11 +8,8 @@ import * as React from "react";
 import {
   COLORS,
   PhoneFrame,
-  HeroHeader,
-  BottomNav,
   PlatformBox,
   GrassBlockBox,
-  FooterPill,
 } from "@/components/home/PhoneMockShared";
 
 type GameRow = {
@@ -78,81 +75,6 @@ export function GamesScreenMock({
 }) {
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <HeroHeader
-        title={
-          <>
-            Inside the
-            <br />
-            games
-          </>
-        }
-        subtitle={
-          <>
-            4 games connected —
-            <br />
-            zero blind spots.
-          </>
-        }
-        iconNode={
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden>
-            <path d="M7 6a5 5 0 0 0-5 5v2a5 5 0 0 0 5 5 3 3 0 0 0 3-3h4a3 3 0 0 0 3 3 5 5 0 0 0 5-5v-2a5 5 0 0 0-5-5H7zm-1 4h2v2h2v2H8v2H6v-2H4v-2h2v-2zm10 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z" />
-          </svg>
-        }
-      />
-
-      <div className="px-3 mt-3 relative z-10">
-        <div
-          className="bg-white rounded-2xl px-3 py-3 flex items-center justify-around ring-1 ring-black/5"
-          style={{
-            boxShadow:
-              "0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(15,23,42,0.08)",
-          }}
-        >
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.text, fontSize: "20px" }}
-            >
-              4
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Games
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.high, fontSize: "20px" }}
-            >
-              1
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Flagged
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none flex items-center justify-center gap-1"
-              style={{ color: COLORS.low, fontSize: "20px" }}
-            >
-              <span className="relative inline-flex" aria-hidden>
-                <span className="block w-2 h-2 rounded-full" style={{ background: COLORS.low }} />
-                <span
-                  className="absolute inset-0 rounded-full animate-ping"
-                  style={{ background: COLORS.low, opacity: 0.45 }}
-                />
-              </span>
-              Live
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Real-time
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="px-4 mt-4 flex items-center justify-between">
         <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
           Connected games
@@ -226,9 +148,6 @@ export function GamesScreenMock({
         ))}
       </div>
 
-      <FooterPill text="Real-time · Always on" />
-
-      <BottomNav activeTab="Activity" />
     </PhoneFrame>
   );
 }

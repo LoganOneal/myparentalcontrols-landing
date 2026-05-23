@@ -56,8 +56,8 @@ export function PhoneFrame({
   if (bare) {
     return (
       <div
-        className={`bg-white rounded-3xl overflow-hidden shadow-md ring-1 ring-black/5 flex flex-col w-full ${className}`}
-        style={{ aspectRatio: "9 / 19.5", ...style }}
+        className={`bg-white rounded-3xl overflow-hidden shadow-md ring-1 ring-black/5 flex flex-col w-full pb-4 ${className}`}
+        style={style}
       >
         {children}
       </div>

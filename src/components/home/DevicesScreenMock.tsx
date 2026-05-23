@@ -7,11 +7,8 @@ import * as React from "react";
 import {
   COLORS,
   PhoneFrame,
-  HeroHeader,
-  BottomNav,
   LaptopBox,
   PhoneBox,
-  FooterPill,
 } from "@/components/home/PhoneMockShared";
 
 type Device = {
@@ -81,74 +78,6 @@ export function DevicesScreenMock({
 }) {
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <HeroHeader
-        title={
-          <>
-            Connected
-            <br />
-            devices
-          </>
-        }
-        subtitle={
-          <>
-            One dashboard. Every device
-            <br />
-            your child touches.
-          </>
-        }
-        iconNode={
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden>
-            <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2H4V6zm0 4h16v6a2 2 0 0 1-2 2h-5v2h3v2H8v-2h3v-2H6a2 2 0 0 1-2-2v-6zm5 3a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-          </svg>
-        }
-      />
-
-      <div className="px-3 mt-3 relative z-10">
-        <div
-          className="bg-white rounded-2xl px-3 py-3 flex items-center justify-around ring-1 ring-black/5"
-          style={{
-            boxShadow:
-              "0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(15,23,42,0.08)",
-          }}
-        >
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.text, fontSize: "20px" }}
-            >
-              3
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Devices
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.redDeep, fontSize: "20px" }}
-            >
-              12.4K
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Events / wk
-            </div>
-          </div>
-          <span className="w-px h-7 bg-gray-200" />
-          <div className="text-center">
-            <div
-              className="font-bold leading-none tabular-nums"
-              style={{ color: COLORS.low, fontSize: "20px" }}
-            >
-              0
-            </div>
-            <div className="text-gray-500 mt-1 font-medium" style={{ fontSize: "10px" }}>
-              Gaps
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="px-4 mt-4 flex items-center justify-between">
         <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
           Devices
@@ -216,9 +145,6 @@ export function DevicesScreenMock({
         ))}
       </div>
 
-      <FooterPill text="0 gaps · 0 blind spots" />
-
-      <BottomNav activeTab="Children" />
     </PhoneFrame>
   );
 }
