@@ -13,13 +13,6 @@ import * as React from "react";
 type Platform = {
   name: string;
   src: string;
-  // Skip the brightness/invert filter for assets that already read as
-  // white-on-dark (e.g. the official GTA V PNG has a baked-in black
-  // background; inverting it produces a solid white block).
-  rawColor?: boolean;
-  // Render ~20% taller than the row default — useful for marks that read
-  // visually small relative to peers at the standard height.
-  boost?: boolean;
 };
 
 // High-risk video games for children based on commonly flagged concerns:
@@ -32,7 +25,7 @@ const PLATFORMS: Platform[] = [
   { name: "Fortnite", src: "/images/platforms/wordmarks/fortnite.png" },
   { name: "Minecraft", src: "/images/platforms/wordmarks-clean/minecraft.svg" },
   { name: "Call of Duty", src: "/images/platforms/games/call-of-duty.svg" },
-  { name: "Valorant", src: "/images/platforms/games/valorant.svg", boost: true },
+  { name: "Valorant", src: "/images/platforms/games/valorant.svg" },
   { name: "League of Legends", src: "/images/platforms/games/league-of-legends.svg" },
   { name: "VRChat", src: "/images/platforms/games/vrchat.svg" },
   { name: "Counter-Strike", src: "/images/platforms/games/counter-strike.svg" },
@@ -42,34 +35,18 @@ const PLATFORMS: Platform[] = [
   { name: "Steam", src: "/images/platforms/wordmarks-clean/steam.svg" },
 ];
 
-function Logo({ name, src, rawColor, boost }: Platform) {
+function Logo({ name, src }: Platform) {
   // On the dark #121212 banner we flatten each logo to a single light tone
-  // so they read uniformly as a desaturated press strip. brightness(0)
-  // collapses all color to black, invert(1) flips it to white, and the
-  // opacity softens it just enough to avoid harsh contrast.
-  //
-  // For PNGs that already ship with a black background baked in (e.g. the
-  // official GTA V wordmark), we skip the inversion and let `mix-blend-mode:
-  // screen` knock the black out against the dark banner — only the white
-  // letterforms remain visible. We also let those assets render at double
-  // height since stacked square logos read poorly at row height.
-  const heightClass = rawColor
-    ? "h-16 sm:h-20 lg:h-24"
-    : boost
-      ? "h-11 sm:h-12 lg:h-14"
-      : "h-9 sm:h-10 lg:h-11";
+  // where possible. Fixed slots keep very wide wordmarks and compact emblem
+  // logos visually balanced without distorting the source art.
   return (
-    <div className={`flex items-center shrink-0 ${heightClass}`}>
+    <div className="flex h-12 w-[148px] shrink-0 items-center justify-center sm:h-14 sm:w-[168px] lg:h-16 lg:w-[190px]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={name}
-        className="h-full w-auto block"
-        style={
-          rawColor
-            ? { mixBlendMode: "screen", opacity: 0.9 }
-            : { filter: "brightness(0) invert(1) opacity(0.75)" }
-        }
+        className="block h-full w-full object-contain"
+        style={{ filter: "brightness(0) invert(1) opacity(0.78)" }}
       />
     </div>
   );

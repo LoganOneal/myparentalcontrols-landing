@@ -8,7 +8,7 @@ import { EvidenceScreenMock } from "@/components/home/EvidenceScreenMock";
 import { BlocksScreenMock } from "@/components/home/BlocksScreenMock";
 
 /**
- * "We see what every other parental control misses."
+ * "Koda sees what every other parental control misses."
  *
  * Two distinct experiences gated by viewport size:
  *
@@ -194,7 +194,7 @@ export function AlertsForDangers() {
               lineHeight: 1.2,
             }}
           >
-            We see what every other parental control misses.
+            Koda sees what every other parental control misses.
           </h2>
 
           <div className="mt-7 text-center">
@@ -202,9 +202,9 @@ export function AlertsForDangers() {
               className="mx-auto max-w-[800px] px-5 text-base sm:text-lg"
               style={{ color: "rgb(68, 68, 68)", lineHeight: 1.5 }}
             >
-              Network filters and screen-time apps can&rsquo;t read in-game
-              chats, hear voice calls, or see DMs &mdash; the places grooming
-              actually starts. We can, on every device your child touches.
+              The real danger isn&rsquo;t the game. It&rsquo;s the conversation
+              happening inside it. Koda helps parents spot risks in chats,
+              DMs, and voice calls before they turn into abuse.
             </p>
           </div>
         </div>
