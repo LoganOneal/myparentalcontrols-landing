@@ -31,6 +31,8 @@ export const COLORS = {
   textMuted: "#6B7280",
 };
 
+export const BARE_PHONE_HEIGHT = 316;
+
 /**
  * iPhone X bezel + screen wrapper (or a plain rounded card when `bare`).
  *
@@ -56,10 +58,19 @@ export function PhoneFrame({
   if (bare) {
     return (
       <div
-        className={`bg-white rounded-3xl overflow-hidden shadow-md ring-1 ring-black/5 flex flex-col w-full pb-4 ${className}`}
-        style={style}
+        className={`relative h-[316px] w-full overflow-hidden rounded-[32px] bg-[#F5F5F7] shadow-[0_16px_42px_rgba(15,23,42,0.14)] ring-1 ring-black/5 ${className}`}
+        style={{
+          ...style,
+          height: style?.height ?? BARE_PHONE_HEIGHT,
+        }}
       >
-        {children}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-5 top-0 h-px bg-white/80"
+        />
+        <div className="flex h-full w-full flex-col overflow-hidden pb-2">
+          {children}
+        </div>
       </div>
     );
   }
@@ -77,12 +88,12 @@ export function PhoneFrame({
         aria-hidden
         className="absolute right-[-3px] top-[160px] h-24 w-[3px] rounded-r-full bg-[#111318]"
       />
-      <div className="relative aspect-[375/812] overflow-hidden rounded-[44px] bg-white ring-1 ring-white/10">
+      <div className="relative aspect-[375/812] overflow-hidden rounded-[44px] bg-[#F5F5F7] ring-1 ring-white/10">
         <div
           aria-hidden
           className="absolute left-1/2 top-0 z-20 h-7 w-36 -translate-x-1/2 rounded-b-[22px] bg-[#111318]"
         />
-        <div className="flex h-full w-full flex-col overflow-hidden bg-white">
+        <div className="flex h-full w-full flex-col overflow-hidden bg-[#F5F5F7]">
           {children}
         </div>
       </div>
@@ -291,47 +302,10 @@ export function HeroHeader({
   );
 }
 
-/** Inline glyphs for the bottom-nav tabs. Hand-tuned Lucide-style paths
- *  so they render identically on every OS (emoji rendering is a tell). */
-function NavGlyph({ kind }: { kind: "Alerts" | "Activity" | "Children" | "Settings" }) {
-  if (kind === "Alerts") {
-    return (
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-      </svg>
-    );
-  }
-  if (kind === "Activity") {
-    return (
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-      </svg>
-    );
-  }
-  if (kind === "Children") {
-    return (
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    );
-  }
-  return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <circle cx="12" cy="12" r="3" />
-      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-    </svg>
-  );
-}
-
 /**
- * Compact pill anchored above the bottom nav — replaces the placeholder
- * italic tagline that used to live at the bottom of each mock. The leading
- * dot can be turned off (`dot=false`) for variants that don't need a
- * live-status feel. `tone` swaps the dot color for context.
+ * Compact pill used for footer-style status moments. The leading dot can be
+ * turned off (`dot=false`) for variants that don't need a live-status feel.
+ * `tone` swaps the dot color for context.
  */
 export function FooterPill({
   text,
@@ -368,54 +342,10 @@ export function FooterPill({
   );
 }
 
-export function BottomNav({
-  activeTab = "Alerts",
-}: {
-  activeTab?: "Alerts" | "Activity" | "Children" | "Settings";
-}) {
-  const tabs: Array<"Alerts" | "Activity" | "Children" | "Settings"> = [
-    "Alerts",
-    "Activity",
-    "Children",
-    "Settings",
-  ];
-  return (
-    <div
-      className="mt-auto border-t border-gray-100 grid grid-cols-4 px-3 pt-2 pb-2 bg-white/95 backdrop-blur"
-      style={{ boxShadow: "0 -4px 12px rgba(15,23,42,0.04)" }}
-    >
-      {tabs.map((label) => {
-        const active = label === activeTab;
-        return (
-          <div
-            key={label}
-            className="flex flex-col items-center gap-[3px] relative"
-            style={{ color: active ? COLORS.red : COLORS.textMuted }}
-          >
-            <NavGlyph kind={label} />
-            <span
-              className="font-semibold leading-none"
-              style={{ fontSize: "9px", letterSpacing: "0.02em" }}
-            >
-              {label}
-            </span>
-            {active && (
-              <span
-                className="block w-6 h-[3px] rounded-full"
-                style={{ background: COLORS.red }}
-              />
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
 export function PlatformBox({
   src,
   bg,
-  size = 9,
+  size = 8,
 }: {
   src: string;
   bg: string;
@@ -443,7 +373,7 @@ export function PlatformBox({
 }
 
 /** Colored chip with an inline laptop SVG. Same sizing convention as PlatformBox. */
-export function LaptopBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: string }) {
+export function LaptopBox({ size = 8, bg = "#0F172A" }: { size?: number; bg?: string }) {
   const dim = `${size * 4}px`;
   const iconDim = `${size * 1.8}px`;
   return (
@@ -465,7 +395,7 @@ export function LaptopBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: st
 }
 
 /** Colored chip with an inline iPhone-style SVG. */
-export function PhoneBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: string }) {
+export function PhoneBox({ size = 8, bg = "#0F172A" }: { size?: number; bg?: string }) {
   const dim = `${size * 4}px`;
   const iconDim = `${size * 1.8}px`;
   return (
@@ -486,7 +416,7 @@ export function PhoneBox({ size = 9, bg = "#0F172A" }: { size?: number; bg?: str
   );
 }
 
-export function GrassBlockBox({ size = 9 }: { size?: number }) {
+export function GrassBlockBox({ size = 8 }: { size?: number }) {
   const dim = `${size * 4}px`;
   return (
     <span

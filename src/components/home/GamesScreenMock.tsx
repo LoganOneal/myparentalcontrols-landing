@@ -43,6 +43,18 @@ const GAMES: GameRow[] = [
     flag: 1,
     icon: <PlatformBox src="/images/platforms/discord.svg" bg={COLORS.discord} />,
   },
+  {
+    name: "League of Legends",
+    detail: "2 party chats",
+    icon: (
+      <span
+        className="inline-flex shrink-0 items-center justify-center rounded-lg font-black text-white ring-1 ring-black/5"
+        style={{ width: 32, height: 32, background: "#0A1428", fontSize: "14px" }}
+      >
+        L
+      </span>
+    ),
+  },
 ];
 
 /** Inline EQ bars — animated visualizer for the "voice live" row. */
@@ -73,28 +85,39 @@ export function GamesScreenMock({
   style?: React.CSSProperties;
   bare?: boolean;
 }) {
+  const compact = bare;
+
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <div className="px-4 mt-4 flex items-center justify-between">
-        <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
+      <div
+        className={`flex items-center justify-between ${
+          compact ? "px-3 pt-3" : "px-4 pt-10"
+        }`}
+      >
+        <h3
+          className="font-bold leading-tight text-gray-950"
+          style={{ fontSize: compact ? "12px" : "15px" }}
+        >
           Connected games
         </h3>
         <span
-          className="font-semibold tabular-nums"
-          style={{ color: COLORS.textMuted, fontSize: "11px" }}
+          className="rounded-full bg-white px-2 py-1 font-semibold tabular-nums ring-1 ring-black/[0.06]"
+          style={{ color: COLORS.textMuted, fontSize: compact ? "9px" : "11px" }}
         >
           Today
         </span>
       </div>
 
-      <div className="px-4 mt-2 space-y-2">
+      <div className={compact ? "px-3 mt-2 space-y-1.5" : "px-4 mt-3 space-y-2"}>
         {GAMES.map((g) => (
           <div
             key={g.name}
-            className="relative bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5 overflow-hidden"
+            className={`relative flex items-center gap-2.5 overflow-hidden rounded-[16px] border border-black/[0.06] bg-white px-2.5 ${
+              compact ? "min-h-[42px] py-1.5" : "min-h-[52px] py-2"
+            }`}
             style={{
               boxShadow:
-                "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
+                "0 1px 0 rgba(255,255,255,0.90), 0 3px 10px rgba(15,23,42,0.04)",
               borderColor: g.flag ? "rgba(255,56,56,0.35)" : undefined,
             }}
           >
@@ -108,12 +131,15 @@ export function GamesScreenMock({
             ) : null}
             {g.icon}
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-gray-900 leading-tight" style={{ fontSize: "11px" }}>
+              <p
+                className="font-bold leading-tight text-gray-950"
+                style={{ fontSize: compact ? "10.5px" : "11px" }}
+              >
                 {g.name}
               </p>
               <p
                 className="text-gray-500 leading-snug mt-0.5 flex items-center gap-1.5"
-                style={{ fontSize: "9px" }}
+                style={{ fontSize: compact ? "8.5px" : "9px" }}
               >
                 {g.live && <EqBars />}
                 {g.detail}
@@ -147,7 +173,6 @@ export function GamesScreenMock({
           </div>
         ))}
       </div>
-
     </PhoneFrame>
   );
 }

@@ -25,26 +25,41 @@ const SCANS: ScanRow[] = [
     platform: "Roblox",
     msgs: "4,200 msgs",
     status: "clear",
-    icon: <PlatformBox src="/images/platforms/roblox.svg" bg={COLORS.roblox} size={7} />,
+    icon: <PlatformBox src="/images/platforms/roblox.svg" bg={COLORS.roblox} />,
   },
   {
     platform: "Discord",
     msgs: "1,800 msgs",
     status: "clear",
-    icon: <PlatformBox src="/images/platforms/discord.svg" bg={COLORS.discord} size={7} />,
+    icon: <PlatformBox src="/images/platforms/discord.svg" bg={COLORS.discord} />,
   },
   {
     platform: "Snapchat",
     msgs: '"send me one" · escalated',
     status: "flag",
     flagText: "Threat",
-    icon: <PlatformBox src="/images/platforms/snapchat.svg" bg={COLORS.snapchat} size={7} />,
+    icon: <PlatformBox src="/images/platforms/snapchat.svg" bg={COLORS.snapchat} />,
   },
   {
     platform: "Minecraft",
     msgs: "600 msgs",
     status: "clear",
-    icon: <GrassBlockBox size={7} />,
+    icon: <GrassBlockBox />,
+  },
+  {
+    platform: "iMessage",
+    msgs: "312 msgs",
+    status: "clear",
+    icon: (
+      <span
+        className="inline-flex shrink-0 items-center justify-center rounded-lg ring-1 ring-black/5"
+        style={{ width: 32, height: 32, background: "#34C759" }}
+      >
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="white" aria-hidden>
+          <path d="M12 3C6.5 3 2 6.7 2 11.2c0 2.6 1.5 4.9 3.9 6.4L5.2 21l3.6-1.7c1 .2 2.1.3 3.2.3 5.5 0 10-3.7 10-8.2S17.5 3 12 3z" />
+        </svg>
+      </span>
+    ),
   },
 ];
 
@@ -57,12 +72,18 @@ export function AIScannerScreenMock({
   style?: React.CSSProperties;
   bare?: boolean;
 }) {
+  const compact = bare;
+
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <div className="px-4 mt-4 flex items-center justify-between">
+      <div
+        className={`flex items-center justify-between ${
+          compact ? "px-3 pt-3" : "px-4 pt-10"
+        }`}
+      >
         <h3
-          className="font-bold text-gray-900 inline-flex items-center gap-1.5 rounded-full pl-1 pr-2.5 py-0.5 mock-anim-glow-pulse"
-          style={{ fontSize: "11px", background: "rgba(37,99,235,0.08)" }}
+          className="inline-flex items-center gap-1.5 rounded-full bg-white pl-1 pr-2.5 py-1 font-bold text-gray-950 ring-1 ring-black/[0.06]"
+          style={{ fontSize: compact ? "10px" : "11px" }}
         >
           <span className="relative inline-flex items-center justify-center w-4 h-4 rounded-full" style={{ background: COLORS.redDeep }} aria-hidden>
             <span className="block w-1.5 h-1.5 rounded-full bg-white mock-anim-breathe" />
@@ -70,24 +91,26 @@ export function AIScannerScreenMock({
           Live scan
         </h3>
         <span
-          className="font-semibold tabular-nums"
-          style={{ color: COLORS.textMuted, fontSize: "11px" }}
+          className="rounded-full bg-white px-2 py-1 font-semibold tabular-nums ring-1 ring-black/[0.06]"
+          style={{ color: COLORS.textMuted, fontSize: compact ? "9px" : "11px" }}
         >
           Last 60s
         </span>
       </div>
 
-      <div className="px-4 mt-2 space-y-2">
+      <div className={compact ? "px-3 mt-2 space-y-1.5" : "px-4 mt-3 space-y-2"}>
         {SCANS.map((s, i) => {
           const isFlag = s.status === "flag";
           return (
             <div
               key={s.platform + i}
-              className="relative bg-white rounded-xl border border-gray-100 px-2.5 py-2 flex items-center gap-2.5 overflow-hidden"
+              className={`relative flex items-center gap-2.5 overflow-hidden rounded-[16px] border border-black/[0.06] bg-white px-2.5 ${
+                compact ? "min-h-[42px] py-1.5" : "min-h-[52px] py-2"
+              }`}
               style={{
                 boxShadow: isFlag
-                  ? "0 1px 0 rgba(0,0,0,0.02), 0 4px 14px rgba(255,56,56,0.18)"
-                  : "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
+                  ? "0 1px 0 rgba(255,255,255,0.90), 0 8px 18px rgba(255,56,56,0.14)"
+                  : "0 1px 0 rgba(255,255,255,0.90), 0 3px 10px rgba(15,23,42,0.04)",
                 borderColor: isFlag ? "rgba(255,56,56,0.55)" : undefined,
                 borderWidth: isFlag ? 1.5 : 1,
               }}
@@ -113,15 +136,15 @@ export function AIScannerScreenMock({
               {s.icon}
               <div className="flex-1 min-w-0">
                 <p
-                  className="font-bold text-gray-900 leading-tight"
-                  style={{ fontSize: "11px" }}
+                  className="font-bold leading-tight text-gray-950"
+                  style={{ fontSize: compact ? "10.5px" : "11px" }}
                 >
                   {s.platform}
                 </p>
                 <p
                   className="leading-snug mt-0.5 tabular-nums"
                   style={{
-                    fontSize: "9px",
+                    fontSize: compact ? "8.5px" : "9px",
                     color: isFlag ? COLORS.high : COLORS.textMuted,
                   }}
                 >
@@ -159,7 +182,6 @@ export function AIScannerScreenMock({
           );
         })}
       </div>
-
     </PhoneFrame>
   );
 }

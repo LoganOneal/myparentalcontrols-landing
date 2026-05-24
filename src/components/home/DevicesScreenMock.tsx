@@ -43,6 +43,20 @@ const DEVICES: Device[] = [
     events: "4,460 events",
     icon: <PhoneBox bg="#0F172A" />,
   },
+  {
+    name: "School iPad",
+    os: "iPadOS 17",
+    syncedAgo: "3m ago",
+    events: "920 events",
+    icon: <PhoneBox bg="#334155" />,
+  },
+  {
+    name: "Gaming laptop",
+    os: "Windows 11",
+    syncedAgo: "8m ago",
+    events: "1,260 events",
+    icon: <LaptopBox bg="#312E81" />,
+  },
 ];
 
 /** Spinning arrow ring — drops next to "Just now" on the device that's
@@ -76,15 +90,24 @@ export function DevicesScreenMock({
   style?: React.CSSProperties;
   bare?: boolean;
 }) {
+  const compact = bare;
+
   return (
     <PhoneFrame className={className} style={style} bare={bare}>
-      <div className="px-4 mt-4 flex items-center justify-between">
-        <h3 className="font-bold text-gray-900" style={{ fontSize: "13px" }}>
+      <div
+        className={`flex items-center justify-between ${
+          compact ? "px-3 pt-3" : "px-4 pt-10"
+        }`}
+      >
+        <h3
+          className="font-bold leading-tight text-gray-950"
+          style={{ fontSize: compact ? "12px" : "15px" }}
+        >
           Devices
         </h3>
         <span
-          className="inline-flex items-center gap-1 font-semibold"
-          style={{ color: COLORS.low, fontSize: "11px" }}
+          className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-1 font-semibold ring-1 ring-black/[0.06]"
+          style={{ color: COLORS.low, fontSize: compact ? "9px" : "11px" }}
         >
           <span
             aria-hidden
@@ -95,24 +118,29 @@ export function DevicesScreenMock({
         </span>
       </div>
 
-      <div className="px-4 mt-2 space-y-2">
+      <div className={compact ? "px-3 mt-2 space-y-1.5" : "px-4 mt-3 space-y-2"}>
         {DEVICES.map((d) => (
           <div
             key={d.name}
-            className="relative bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-2.5"
+            className={`relative flex items-center gap-2.5 rounded-[16px] border border-black/[0.06] bg-white px-2.5 ${
+              compact ? "min-h-[42px] py-1.5" : "min-h-[52px] py-2"
+            }`}
             style={{
               boxShadow:
-                "0 1px 0 rgba(0,0,0,0.02), 0 2px 6px rgba(15,23,42,0.04)",
+                "0 1px 0 rgba(255,255,255,0.90), 0 3px 10px rgba(15,23,42,0.04)",
             }}
           >
             {d.icon}
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-gray-900 leading-tight" style={{ fontSize: "11px" }}>
+              <p
+                className="font-bold leading-tight text-gray-950"
+                style={{ fontSize: compact ? "10.5px" : "11px" }}
+              >
                 {d.name}
               </p>
               <p
                 className="text-gray-500 leading-snug mt-0.5 tabular-nums"
-                style={{ fontSize: "9px" }}
+                style={{ fontSize: compact ? "8.5px" : "9px" }}
               >
                 {d.os} · {d.events}
               </p>
@@ -144,7 +172,6 @@ export function DevicesScreenMock({
           </div>
         ))}
       </div>
-
     </PhoneFrame>
   );
 }

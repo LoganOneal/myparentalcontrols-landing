@@ -255,7 +255,7 @@ export function AlertsForDangers() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-3 lg:gap-4">
+                    <div className="flex flex-col gap-2.5 lg:gap-3">
                       {FEATURES.map((f, i) => {
                         const active = i === activeIndex;
                         return (
@@ -263,24 +263,47 @@ export function AlertsForDangers() {
                             key={f.title}
                             type="button"
                             onClick={() => handleSelect(i)}
-                            className={`w-full text-left cursor-pointer p-5 lg:p-6 rounded-2xl border transition-all duration-300 ${
+                            className={`group relative w-full cursor-pointer rounded-lg border px-4 py-4 text-left transition-all duration-300 lg:px-5 ${
                               active
-                                ? "border-[#2563EB] bg-[#EFF6FF] lg:scale-[1.02]"
-                                : "border-gray-200 bg-white hover:border-gray-300"
+                                ? "border-[#2563EB]/35 bg-white shadow-[0_16px_38px_rgba(15,23,42,0.08)]"
+                                : "border-black/[0.08] bg-white/70 hover:border-black/[0.16] hover:bg-white"
                             }`}
                           >
-                            <h3 className="text-base lg:text-lg font-bold mb-1.5 text-[rgb(30,30,30)]">
-                              {f.title}
-                            </h3>
-                            <p
-                              className="text-sm"
+                            <div
+                              className="absolute inset-y-3 left-0 w-[3px] rounded-r-full transition-opacity"
                               style={{
-                                color: "rgb(68, 68, 68)",
-                                lineHeight: 1.45,
+                                background: "#2563EB",
+                                opacity: active ? 1 : 0,
                               }}
-                            >
-                              {f.description}
-                            </p>
+                              aria-hidden
+                            />
+                            <div className="flex items-start gap-3">
+                              <span
+                                className={`mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-bold tabular-nums transition-colors ${
+                                  active
+                                    ? "border-[#2563EB]/20 bg-[#EFF6FF] text-[#1D4ED8]"
+                                    : "border-black/[0.08] bg-[#F8FAFC] text-gray-500"
+                                }`}
+                                style={{ fontSize: "11px" }}
+                                aria-hidden
+                              >
+                                {i + 1}
+                              </span>
+                              <div className="min-w-0">
+                                <h3 className="mb-1.5 text-base font-bold text-[rgb(30,30,30)] lg:text-[17px]">
+                                  {f.title}
+                                </h3>
+                                <p
+                                  className="text-sm"
+                                  style={{
+                                    color: "rgb(68, 68, 68)",
+                                    lineHeight: 1.45,
+                                  }}
+                                >
+                                  {f.description}
+                                </p>
+                              </div>
+                            </div>
                           </button>
                         );
                       })}
@@ -382,7 +405,7 @@ export function AlertsForDangers() {
                     renders inside a plain rounded card with iPhone aspect
                     ratio — solves the bezel-layout overlap bug while
                     keeping each panel's phone-shaped silhouette. */}
-                <div className="w-[280px] max-w-full">
+                <div className="h-[316px] w-[280px] max-w-full">
                   {renderMock(i, "", true)}
                 </div>
 
