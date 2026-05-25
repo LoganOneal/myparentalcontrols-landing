@@ -27,44 +27,19 @@ const NAV_GROUPS: NavGroup[] = [
     label: "Products",
     links: [
       {
-        href: "/koda-safety",
-        label: "Koda Safety",
-        description: "Parental security for PC games, voice chat, and online risk.",
-      },
-      {
         href: "/",
-        label: "Overview",
-        description: "Real-time alerts for the PC games kids actually play.",
+        label: "Parental Controls",
+        description: "Parental controls for PC games, voice chat, and online risk.",
       },
       {
-        href: "/game-safety",
-        label: "Game Safety",
-        description: "Safety guides for PC games your child plays.",
+        href: "/how-it-works",
+        label: "How Koda Works",
+        description: "How setup, monitoring, and parent alerts work.",
       },
-    ],
-  },
-  {
-    label: "Parental Controls",
-    links: [
       {
-        href: "/#pricing",
-        label: "Monitoring plan",
+        href: "/pricing",
+        label: "Pricing",
         description: "Voice and chat alerts with clear pricing.",
-      },
-      {
-        href: "/manage-subscription",
-        label: "Manage subscription",
-        description: "Update billing, access, and account settings.",
-      },
-      {
-        href: "/privacy",
-        label: "Privacy",
-        description: "How Koda handles family data.",
-      },
-      {
-        href: "/safety-privacy",
-        label: "Safety & privacy",
-        description: "Plain-language details on alerts, data, and responsible use.",
       },
     ],
   },
@@ -93,7 +68,7 @@ export function SiteHeader() {
           aria-label="Koda home"
           onClick={() => setMobileOpen(false)}
         >
-          <KodaLogo height={34} markSize={44} color="#1E1E1E" textFirst />
+          <KodaLogo height={34} markSize={44} textFirst />
         </Link>
 
         <nav
@@ -154,6 +129,12 @@ export function SiteHeader() {
             className="text-[16px] leading-6 text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)]"
           >
             Log in
+          </Link>
+          <Link
+            href="/get-started"
+            className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
+          >
+            Get Started
           </Link>
         </div>
 

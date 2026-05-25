@@ -1,22 +1,15 @@
-"use client";
+import type { Metadata } from "next";
+import { GetStartedClient } from "./GetStartedClient";
 
-import { useRouter } from "next/navigation";
-import { Funnel } from "@/components/funnel/Funnel";
-import { funnelConfig } from "@/data/funnel-config";
-import type { FunnelAnswers } from "@/types/funnel";
+export const metadata: Metadata = {
+  title: "Get Started | Koda",
+  description:
+    "Start Koda's parent setup flow and build a safety plan for PC games, voice chat, online risk, and parental controls.",
+  alternates: {
+    canonical: "/get-started",
+  },
+};
 
 export default function GetStartedPage() {
-  const router = useRouter();
-
-  const handleComplete = (answers: FunnelAnswers, email: string) => {
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem(
-        "koda:funnel:result",
-        JSON.stringify({ answers, email, completedAt: new Date().toISOString() })
-      );
-    }
-    router.push("/welcome");
-  };
-
-  return <Funnel config={funnelConfig} onComplete={handleComplete} />;
+  return <GetStartedClient />;
 }

@@ -11,7 +11,7 @@ export function SubHeaderBar() {
       <div className="mx-auto flex h-[70px] max-w-[1280px] items-center justify-between gap-4 px-5 lg:px-8">
         <div className="flex flex-col justify-center leading-none">
           <span className="text-[16px] font-bold text-[var(--bark-text)]">
-            Parental Security
+            Parental Controls
           </span>
           <span className="mt-1 text-[14px] leading-5 text-[var(--bark-muted)]">
             Voice + Chat safety for kids

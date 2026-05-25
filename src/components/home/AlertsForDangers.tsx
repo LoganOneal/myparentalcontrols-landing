@@ -1,30 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GamesScreenMock } from "@/components/home/GamesScreenMock";
 import { DevicesScreenMock } from "@/components/home/DevicesScreenMock";
 import { AIScannerScreenMock } from "@/components/home/AIScannerScreenMock";
 import { EvidenceScreenMock } from "@/components/home/EvidenceScreenMock";
 import { BlocksScreenMock } from "@/components/home/BlocksScreenMock";
-
-/**
- * "Koda sees what every other parental control misses."
- *
- * Two distinct experiences gated by viewport size:
- *
- *   • Desktop (lg+): vertical scroll-lock. Section runway is FEATURES.length
- *     × 100vh tall, with a sticky inner viewport pinning the phone + cards.
- *     Page scroll progress drives `activeIndex` 1:1. Bottom-of-viewport
- *     animated mouse + step counter + progress bar tells users to keep
- *     scrolling.
- *
- *   • Mobile (< lg): horizontal scroll-snap carousel. Each panel pairs the
- *     phone mockup (scaled to 280px wide so it fits any modern phone) with
- *     its matching feature title + description. Swiping left/right
- *     advances; an IntersectionObserver on the panels updates activeIndex
- *     based on whichever panel is centered. Tap a dot to smooth-scroll to
- *     that panel.
- */
 
 type Feature = {
   title: string;
@@ -39,7 +20,7 @@ const FEATURES: Feature[] = [
   },
   {
     title:
-      "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind",
+      "Inside the games where other parental controls go blind",
     description:
       "Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. Koda runs inside the game itself, reading every party invite, voice call, and DM in real time.",
   },
@@ -60,10 +41,6 @@ const FEATURES: Feature[] = [
   },
 ];
 
-/** Renders the right mock for a given index. Extracted so desktop + mobile
- *  branches don't duplicate the switch. `bare=true` renders without the
- *  iPhone X bezel (used on mobile where the bezel adds redundant chrome
- *  and the lib's content-box padding breaks layout). */
 function renderMock(idx: number, className = "", bare = false) {
   if (idx === 0)
     return <EvidenceScreenMock className={className} bare={bare} />;
@@ -76,371 +53,200 @@ function renderMock(idx: number, className = "", bare = false) {
   return <BlocksScreenMock className={className} bare={bare} />;
 }
 
-export function AlertsForDangers() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  /** Continuous scroll progress through the runway (0–1). Drives the
-   *  desktop progress bar so the user gets continuous feedback as they
-   *  scroll, not just discrete card flips. */
-  const [scrollProgress, setScrollProgress] = useState(0);
-  /** Live-tracked `(min-width: 1024px)` via useSyncExternalStore — keeps the
-   *  desktop/mobile branch reactive (scroll-driven on lg+, swipe-driven
-   *  below) and lets us conditionally render the desktop bottom cue
-   *  without tripping the react-hooks set-state-in-effect rule. */
-  const isDesktop = useSyncExternalStore(
-    (cb) => {
-      const mq = window.matchMedia("(min-width: 1024px)");
-      mq.addEventListener("change", cb);
-      return () => mq.removeEventListener("change", cb);
-    },
-    () => window.matchMedia("(min-width: 1024px)").matches,
-    () => false,
+function ArrowLeft() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+      <path
+        d="M12.5 15L7.5 10L12.5 5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
-  const runwayRef = useRef<HTMLDivElement>(null);
-  const mobileScrollRef = useRef<HTMLDivElement>(null);
-  const mobilePanelRefs = useRef<(HTMLDivElement | null)[]>([]);
+}
 
-  /** Map current window scroll position to the feature index by computing
-   *  progress through the runway. Called on every scroll event (passive). */
-  function syncIndexToScroll() {
-    if (!runwayRef.current) return;
-    const rect = runwayRef.current.getBoundingClientRect();
-    const runwayHeight = rect.height;
-    const viewportHeight = window.innerHeight;
-    const scrolledIntoRunway = -rect.top;
-    const scrollableDistance = runwayHeight - viewportHeight;
-    if (scrollableDistance <= 0) return;
-    const progress = Math.max(
-      0,
-      Math.min(1, scrolledIntoRunway / scrollableDistance),
-    );
-    setScrollProgress(progress);
-    const idx = Math.min(
-      FEATURES.length - 1,
-      Math.floor(progress * FEATURES.length),
-    );
-    setActiveIndex(idx);
-  }
+function ArrowRight() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+      <path
+        d="M7.5 5L12.5 10L7.5 15"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function AlertsForDangers() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
-    if (isDesktop) {
-      window.addEventListener("scroll", syncIndexToScroll, { passive: true });
-      syncIndexToScroll();
-      return () => window.removeEventListener("scroll", syncIndexToScroll);
-    }
-
-    // Mobile: observe panels within the horizontal scroll container. The
-    // panel with the largest intersection ratio (i.e. the one currently
-    // snapped into view) wins.
-    if (!mobileScrollRef.current) return;
+    const container = scrollRef.current;
+    if (!container) return;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
         if (visible[0]) {
-          const idx = Number(
-            visible[0].target.getAttribute("data-feature-idx"),
-          );
-          if (!Number.isNaN(idx)) setActiveIndex(idx);
+          const idx = Number(visible[0].target.getAttribute("data-feature-idx"));
+          if (!Number.isNaN(idx)) setActiveIdx(idx);
         }
       },
-      {
-        root: mobileScrollRef.current,
-        threshold: [0.5, 0.75, 1],
-      },
+      { root: container, threshold: [0.5, 0.75, 1] },
     );
-    mobilePanelRefs.current.forEach((el) => el && observer.observe(el));
+    cardRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
-  }, [isDesktop]);
+  }, []);
 
-  /** Pin a feature and bring it into view in whichever layout is active. */
-  function handleSelect(idx: number) {
-    setActiveIndex(idx);
-    if (isDesktop && runwayRef.current) {
-      const rect = runwayRef.current.getBoundingClientRect();
-      const runwayHeight = rect.height;
-      const viewportHeight = window.innerHeight;
-      const scrollableDistance = runwayHeight - viewportHeight;
-      if (scrollableDistance > 0) {
-        const targetProgress = (idx + 0.5) / FEATURES.length;
-        const target =
-          rect.top + window.scrollY + targetProgress * scrollableDistance;
-        window.scrollTo({ top: target, behavior: "smooth" });
-      }
-      return;
-    }
-    // Mobile: smooth-scroll the matching panel to the horizontal center
-    // of the carousel.
-    mobilePanelRefs.current[idx]?.scrollIntoView({
+  function scrollToCard(idx: number) {
+    cardRefs.current[idx]?.scrollIntoView({
       behavior: "smooth",
-      inline: "center",
+      inline: "start",
       block: "nearest",
     });
   }
 
+  function goPrev() {
+    const next = Math.max(0, activeIdx - 1);
+    scrollToCard(next);
+  }
+
+  function goNext() {
+    const next = Math.min(FEATURES.length - 1, activeIdx + 1);
+    scrollToCard(next);
+  }
+
   return (
     <section className="px-[15px] mt-[15px]">
-      {/* No overflow-hidden — it would create a new scroll container and
-          break position:sticky on the inner desktop element. */}
       <div className="bg-white rounded-lg">
-        {/* Section header — always rendered, sits above both layouts. */}
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] pt-10 pb-6 lg:pb-0">
+        {/* Section header */}
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] pt-12 sm:pt-16 pb-2">
           <h2
-            className="text-center text-[30px] sm:text-4xl lg:text-[46px]"
+            className="text-center text-[28px] sm:text-[36px] lg:text-[44px] max-w-[900px] mx-auto"
             style={{
               fontFamily: "Moderat-Black, sans-serif",
               fontWeight: 700,
               color: "rgb(30, 30, 30)",
-              lineHeight: 1.2,
+              lineHeight: 1.15,
             }}
           >
             Koda sees what every other parental control misses.
           </h2>
 
-          <div className="mt-7 text-center">
-            <p
-              className="mx-auto max-w-[800px] px-5 text-base sm:text-lg"
-              style={{ color: "rgb(68, 68, 68)", lineHeight: 1.5 }}
+          <p
+            className="mx-auto max-w-[720px] mt-5 text-center text-[15px] sm:text-[17px]"
+            style={{ color: "rgb(68, 68, 68)", lineHeight: 1.6 }}
+          >
+            The real danger isn&rsquo;t the game. It&rsquo;s the conversation
+            happening inside it. Koda helps parents spot risks in chats,
+            DMs, and voice calls before they turn into abuse.
+          </p>
+
+          {/* Paired navigation arrows */}
+          <div className="flex justify-center items-center gap-3 mt-8">
+            <button
+              type="button"
+              onClick={goPrev}
+              aria-label="Previous feature"
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-[var(--koda-bear-blue)] hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm transition-all cursor-pointer"
             >
-              The real danger isn&rsquo;t the game. It&rsquo;s the conversation
-              happening inside it. Koda helps parents spot risks in chats,
-              DMs, and voice calls before they turn into abuse.
-            </p>
+              <ArrowLeft />
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              aria-label="Next feature"
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-[var(--koda-bear-blue)] hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm transition-all cursor-pointer"
+            >
+              <ArrowRight />
+            </button>
           </div>
         </div>
 
-        {/* DESKTOP — scroll-locked runway with sticky phone + cards. */}
-        <div className="hidden lg:block">
-          <div ref={runwayRef} className="lg:h-[500vh]">
-            {/* Sticky inner — pins to viewport top on lg+. Flex column so the
-                main content takes all available space and the scroll cue
-                docks to the bottom of the viewport. */}
-            <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col pt-4 pb-2">
-              <div className="flex-1 flex items-center min-h-0">
-                <div className="mx-auto max-w-[1280px] px-4 sm:px-[60px] w-full">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <div className="flex justify-center lg:justify-end">
-                      {/* All 5 mocks render into the same grid cell and we
-                          cross-fade by toggling opacity per activeIndex.
-                          Avoids the hard unmount/mount that made the
-                          previous version pop. `pointer-events-none` on
-                          inactive layers prevents stray click targets. */}
-                      <div className="relative grid isolate">
-                        {/* Soft tinted glow behind the phone — anchors it
-                            in space and reads premium. -z-10 keeps it below
-                            the bezel; pointer-events-none keeps it inert. */}
-                        <div
-                          aria-hidden
-                          className="absolute -inset-10 -z-10 pointer-events-none rounded-[48%]"
-                          style={{
-                            background:
-                              "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(37,99,235,0.22), rgba(37,99,235,0.05) 55%, transparent 75%)",
-                            filter: "blur(8px)",
-                          }}
-                        />
-                        {FEATURES.map((_, i) => (
-                          <div
-                            key={i}
-                            className="col-start-1 row-start-1 transition-opacity duration-500 ease-in-out"
-                            style={{
-                              opacity: i === activeIndex ? 1 : 0,
-                              pointerEvents:
-                                i === activeIndex ? "auto" : "none",
-                            }}
-                            aria-hidden={i !== activeIndex}
-                          >
-                            {renderMock(i)}
-                          </div>
-                        ))}
+        {/* Horizontal scroll carousel — left-aligned with content, overflows right to show peek */}
+        <div className="pb-12 pt-8 overflow-hidden">
+          <div className="mx-auto max-w-[1280px]">
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth gap-5 lg:gap-7 pl-4 sm:pl-8 lg:pl-[60px] pr-4 sm:pr-8 lg:pr-0"
+            >
+              {FEATURES.map((f, i) => (
+                <div
+                  key={f.title}
+                  ref={(el) => {
+                    cardRefs.current[i] = el;
+                  }}
+                  data-feature-idx={i}
+                  className="snap-start shrink-0 w-[78vw] sm:w-[55vw] lg:w-[420px]"
+                >
+                  <div
+                    className="rounded-2xl overflow-hidden h-full flex flex-col"
+                    style={{
+                      background: "#ffffff",
+                      boxShadow: "0 2px 24px 0 rgba(0,0,0,0.06)",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                    }}
+                  >
+                    {/* Phone mockup area */}
+                    <div
+                      className="flex items-center justify-center px-6 sm:px-8 py-8 sm:py-10"
+                      style={{
+                        background:
+                          "linear-gradient(145deg, #f4f7ff 0%, #edf2fe 60%, #f7f9ff 100%)",
+                        minHeight: "340px",
+                      }}
+                    >
+                      <div className="w-full max-w-[280px]">
+                        {renderMock(i, "", false)}
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2.5 lg:gap-3">
-                      {FEATURES.map((f, i) => {
-                        const active = i === activeIndex;
-                        return (
-                          <button
-                            key={f.title}
-                            type="button"
-                            onClick={() => handleSelect(i)}
-                            className={`group relative w-full cursor-pointer rounded-lg border px-4 py-4 text-left transition-all duration-300 lg:px-5 ${
-                              active
-                                ? "border-[#2563EB]/35 bg-white shadow-[0_16px_38px_rgba(15,23,42,0.08)]"
-                                : "border-black/[0.08] bg-white/70 hover:border-black/[0.16] hover:bg-white"
-                            }`}
-                          >
-                            <div
-                              className="absolute inset-y-3 left-0 w-[3px] rounded-r-full transition-opacity"
-                              style={{
-                                background: "#2563EB",
-                                opacity: active ? 1 : 0,
-                              }}
-                              aria-hidden
-                            />
-                            <div className="flex items-start gap-3">
-                              <span
-                                className={`mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-bold tabular-nums transition-colors ${
-                                  active
-                                    ? "border-[#2563EB]/20 bg-[#EFF6FF] text-[#1D4ED8]"
-                                    : "border-black/[0.08] bg-[#F8FAFC] text-gray-500"
-                                }`}
-                                style={{ fontSize: "11px" }}
-                                aria-hidden
-                              >
-                                {i + 1}
-                              </span>
-                              <div className="min-w-0">
-                                <h3 className="mb-1.5 text-base font-bold text-[rgb(30,30,30)] lg:text-[17px]">
-                                  {f.title}
-                                </h3>
-                                <p
-                                  className="text-sm"
-                                  style={{
-                                    color: "rgb(68, 68, 68)",
-                                    lineHeight: 1.45,
-                                  }}
-                                >
-                                  {f.description}
-                                </p>
-                              </div>
-                            </div>
-                          </button>
-                        );
-                      })}
+                    {/* Text content */}
+                    <div className="px-6 sm:px-7 py-6 sm:py-7 flex-1 flex flex-col">
+                      <h3
+                        className="text-[17px] sm:text-[19px] lg:text-[20px] font-bold mb-3"
+                        style={{
+                          fontFamily: "Moderat-Black, sans-serif",
+                          color: "rgb(30, 30, 30)",
+                          lineHeight: 1.25,
+                        }}
+                      >
+                        {f.title}
+                      </h3>
+                      <p
+                        className="text-[13px] sm:text-[14px] lg:text-[15px] flex-1"
+                        style={{ color: "rgb(80, 80, 80)", lineHeight: 1.6 }}
+                      >
+                        {f.description}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Bottom scroll affordance — desktop only. */}
-              <div
-                aria-hidden
-                className="flex flex-col items-center gap-2.5 pt-2 transition-opacity duration-300"
-                style={{ opacity: scrollProgress >= 0.93 ? 0 : 1 }}
-              >
-                <svg
-                  width="24"
-                  height="38"
-                  viewBox="0 0 24 38"
-                  fill="none"
-                  aria-hidden
-                >
-                  <rect
-                    x="2"
-                    y="2"
-                    width="20"
-                    height="34"
-                    rx="10"
-                    stroke="#2563EB"
-                    strokeWidth="2"
-                  />
-                  <circle cx="12" cy="10" r="2.5" fill="#2563EB">
-                    <animate
-                      attributeName="cy"
-                      values="10;24"
-                      keyTimes="0;1"
-                      dur="1.5s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="1;1;0"
-                      keyTimes="0;0.6;1"
-                      dur="1.5s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                </svg>
-
-                <div className="flex items-center gap-2.5">
-                  <span
-                    className="text-[11px] font-bold uppercase tracking-[1.8px]"
-                    style={{ color: "rgb(30, 30, 30)" }}
-                  >
-                    Scroll to continue
-                  </span>
-                  <span
-                    className="text-[11px] font-bold tabular-nums px-2 py-0.5 rounded-full"
-                    style={{ background: "#EFF6FF", color: "#1D4ED8" }}
-                  >
-                    {activeIndex + 1} / {FEATURES.length}
-                  </span>
-                </div>
-
-                <div
-                  className="w-[280px] h-1 rounded-full overflow-hidden"
-                  style={{ background: "#E5E7EB" }}
-                >
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${Math.round(scrollProgress * 100)}%`,
-                      background: "#2563EB",
-                      transition: "width 80ms linear",
-                    }}
-                  />
-                </div>
-              </div>
+              ))}
+              {/* Right spacer so last card doesn't hit edge */}
+              <div className="shrink-0 w-4 sm:w-8 lg:w-[60px]" aria-hidden />
             </div>
           </div>
-        </div>
 
-        {/* MOBILE — horizontal scroll-snap carousel. Each panel pairs the
-            scaled phone with its matching feature title + description. */}
-        <div className="lg:hidden">
-          <div
-            ref={mobileScrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth"
-          >
-            {FEATURES.map((f, i) => (
-              <div
-                key={f.title}
-                ref={(el) => {
-                  mobilePanelRefs.current[i] = el;
-                }}
-                data-feature-idx={i}
-                className="w-full shrink-0 snap-center flex flex-col items-center gap-5 pt-2 pb-6 px-4"
-              >
-                {/* Bare phone (no iPhone X bezel on mobile). The mock
-                    renders inside a plain rounded card with iPhone aspect
-                    ratio — solves the bezel-layout overlap bug while
-                    keeping each panel's phone-shaped silhouette. */}
-                <div className="h-[316px] w-[280px] max-w-full">
-                  {renderMock(i, "", true)}
-                </div>
-
-                {/* Feature text — title + description, centered. No card
-                    border on mobile since the panel IS the card. */}
-                <div className="text-center max-w-[420px] px-2">
-                  <h3
-                    className="text-lg font-bold mb-2 text-[rgb(30,30,30)]"
-                    style={{ lineHeight: 1.3 }}
-                  >
-                    {f.title}
-                  </h3>
-                  <p
-                    className="text-sm"
-                    style={{ color: "rgb(68, 68, 68)", lineHeight: 1.5 }}
-                  >
-                    {f.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination dots — tap to smooth-scroll to that panel. */}
-          <div className="flex justify-center gap-2 pb-10">
-            {FEATURES.map((f, i) => (
+          {/* Pagination dots */}
+          <div className="flex justify-center items-center gap-2 pt-8">
+            {FEATURES.map((_, i) => (
               <button
-                key={f.title}
+                key={i}
                 type="button"
-                aria-label={`Show feature: ${f.title}`}
-                onClick={() => handleSelect(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  i === activeIndex
-                    ? "bg-[#2563EB]"
-                    : "bg-gray-300 hover:bg-gray-400"
+                aria-label={`Show feature ${i + 1}`}
+                onClick={() => scrollToCard(i)}
+                className={`rounded-full transition-all duration-300 cursor-pointer ${
+                  i === activeIdx
+                    ? "w-7 h-2.5 bg-[var(--koda-bear-blue)]"
+                    : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
                 }`}
               />
             ))}

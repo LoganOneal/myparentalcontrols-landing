@@ -21,7 +21,7 @@ export const organizationJsonLd = {
   name: SITE_NAME,
   alternateName: SITE_ALTERNATE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/seo/logo.png`,
+  logo: `${SITE_URL}/seo/logo.svg`,
   sameAs: KODA_SOCIAL_LINKS,
   description: SITE_DESCRIPTION,
   email: "support@kodasafety.com",
@@ -35,15 +35,28 @@ export const organizationJsonLd = {
   },
 };
 
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  alternateName: [SITE_ALTERNATE_NAME, "kodasafety.com"],
+  url: SITE_URL,
+  publisher: {
+    "@id": `${SITE_URL}/#organization`,
+  },
+  inLanguage: "en-US",
+};
+
 export const kodaSafetySoftwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "@id": `${SITE_URL}/koda-safety#software`,
+  "@id": `${SITE_URL}/#software`,
   name: "Koda Safety",
-  alternateName: "Koda parental security",
+  alternateName: "Koda parental controls",
   applicationCategory: "ParentalControlApplication",
   operatingSystem: "Windows, macOS",
-  url: `${SITE_URL}/koda-safety`,
+  url: SITE_URL,
   image: `${SITE_URL}/seo/opengraph.jpg`,
   brand: {
     "@id": `${SITE_URL}/#organization`,
@@ -54,7 +67,7 @@ export const kodaSafetySoftwareJsonLd = {
   description: KODA_PRODUCT_DESCRIPTION,
   offers: {
     "@type": "Offer",
-    url: `${SITE_URL}/#pricing`,
+    url: `${SITE_URL}/pricing`,
     priceCurrency: "USD",
     availability: "https://schema.org/PreOrder",
   },

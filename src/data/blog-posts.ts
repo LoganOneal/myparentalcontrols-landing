@@ -295,7 +295,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       "The goal is useful context, not vague warnings or constant screen policing.",
     ],
     relatedLinks: [
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Game Safety guides", href: "/game-safety" },
       { label: "Safety and privacy", href: "/safety-privacy" },
     ],
@@ -349,7 +349,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     relatedLinks: [
       { label: "Safety and privacy", href: "/safety-privacy" },
       { label: "Privacy policy", href: "/privacy" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
     ],
     sections: [
       {
@@ -399,7 +399,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       "Parents should pair alerts with platform controls and family rules.",
     ],
     relatedLinks: [
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Roblox safety guide", href: "/blog/koda-safety-for-roblox" },
       { label: "Discord safety guide", href: "/blog/koda-safety-for-discord" },
     ],
@@ -453,9 +453,9 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       "Many families compare both because the products solve overlapping but different problems.",
     ],
     relatedLinks: [
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Original Bark comparison", href: "/blog/koda-vs-bark" },
-      { label: "Pricing", href: "/#pricing" },
+      { label: "Pricing", href: "/pricing" },
     ],
     sections: [
       {
@@ -507,7 +507,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     ],
     relatedLinks: [
       { label: "Roblox platform page", href: "/platforms/roblox" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "PC gaming safety", href: "/blog/koda-safety-for-pc-games" },
     ],
     sections: [
@@ -559,7 +559,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     ],
     relatedLinks: [
       { label: "Discord platform page", href: "/platforms/discord" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Safety and privacy", href: "/safety-privacy" },
     ],
     sections: [
@@ -611,7 +611,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     ],
     relatedLinks: [
       { label: "Fortnite platform page", href: "/platforms/fortnite" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "PC gaming safety", href: "/blog/koda-safety-for-pc-games" },
     ],
     sections: [
@@ -663,7 +663,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     ],
     relatedLinks: [
       { label: "Minecraft platform page", href: "/platforms/minecraft" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Discord safety guide", href: "/blog/koda-safety-for-discord" },
     ],
     sections: [
@@ -715,7 +715,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     ],
     relatedLinks: [
       { label: "Koda Safety vs Bark", href: "/blog/koda-safety-vs-bark" },
-      { label: "Koda Safety overview", href: "/koda-safety" },
+      { label: "Koda Safety home", href: "/" },
       { label: "Game Safety guides", href: "/game-safety" },
     ],
     sections: [

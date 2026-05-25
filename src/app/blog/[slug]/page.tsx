@@ -476,7 +476,7 @@ export default async function BlogPostPage({
                 ))}
               </ul>
               <Link
-                href="/koda-safety"
+                href="/"
                 className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-5 text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
               >
                 Koda Safety

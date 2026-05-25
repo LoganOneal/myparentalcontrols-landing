@@ -221,9 +221,6 @@
           - listitem [ref=e321]:
             - link "Terms of use" [ref=e322] [cursor=pointer]:
               - /url: /tos
-          - listitem [ref=e323]:
-            - link "Sweepstakes Rules" [ref=e324] [cursor=pointer]:
-              - /url: /sweepstakes
           - listitem [ref=e325]:
             - button "Manage Cookie Preferences" [ref=e326] [cursor=pointer]
       - generic [ref=e327]:

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
-const PUBLIC_DISALLOW = ["/api/", "/login", "/manage-subscription", "/welcome"];
+const PUBLIC_DISALLOW = ["/api/", "/manage-subscription", "/welcome"];
 
 const AI_AND_SEARCH_BOTS = [
   "OAI-SearchBot",

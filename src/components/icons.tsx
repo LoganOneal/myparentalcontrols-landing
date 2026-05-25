@@ -2,7 +2,7 @@ import * as React from "react";
 
 type SVGProps = React.SVGProps<SVGSVGElement>;
 
-const KODA_LOGO_SRC = "/seo/logo.png";
+const KODA_LOGO_SRC = "/seo/logo.svg";
 
 export function AppStoreBadge({
   width = 135,

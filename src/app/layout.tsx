@@ -13,6 +13,7 @@ import {
   SITE_NAME,
   SITE_URL,
   organizationJsonLd,
+  websiteJsonLd,
 } from "@/lib/site";
 import "./globals.css";
 
@@ -28,7 +29,7 @@ const archivoBlack = Archivo_Black({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Koda Safety | Parental Security for PC Games",
+  title: "Koda Safety | Parental Controls for PC Games",
   description: KODA_PRODUCT_DESCRIPTION,
   keywords: [
     "Koda Safety",
@@ -37,21 +38,18 @@ export const metadata: Metadata = {
     "game chat monitoring",
     "voice chat monitoring for parents",
   ],
-  alternates: {
-    canonical: "/",
-  },
   icons: {
-    icon: "/seo/logo.png",
+    icon: "/seo/logo.svg",
   },
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   openGraph: {
-    title: "Koda Safety | Parental Security for PC Games",
+    title: "Koda Safety | Parental Controls for PC Games",
     description: SITE_DESCRIPTION,
     images: [
       {
         url: "/seo/opengraph.jpg",
-        alt: `${SITE_ALTERNATE_NAME} parental security for PC games`,
+        alt: `${SITE_ALTERNATE_NAME} parental controls for PC games`,
       },
     ],
     siteName: SITE_NAME,
@@ -60,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koda Safety | Parental Security for PC Games",
+    title: "Koda Safety | Parental Controls for PC Games",
     description: SITE_DESCRIPTION,
     images: ["/seo/opengraph.jpg"],
   },
@@ -79,7 +77,7 @@ export default function RootLayout({
       <body className="overflow-x-clip">
         <PostHogProvider>
           <PostHogPageView />
-          <JsonLd data={organizationJsonLd} />
+          <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
           {children}
         </PostHogProvider>
         <MetaPixel />

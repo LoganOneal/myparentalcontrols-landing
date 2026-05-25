@@ -98,10 +98,10 @@ export default async function ComparisonPage({
               Try Koda Free
             </Link>
             <Link
-              href="/koda-safety"
+              href="/how-it-works"
               className="inline-flex items-center justify-center px-6 h-12 rounded-full border border-black/10 text-black font-semibold hover:bg-black/5 transition"
             >
-              Learn More
+              How Koda Works
             </Link>
           </div>
         </header>

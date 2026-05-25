@@ -5,6 +5,9 @@ import { AppleLogoIcon, GoogleLogoIcon } from "@/components/icons";
 export const metadata = {
   title: "Login | Koda",
   description: "Sign in to your Koda account.",
+  alternates: {
+    canonical: "/login",
+  },
 };
 
 export default function LoginPage() {

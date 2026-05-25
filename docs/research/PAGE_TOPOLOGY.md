@@ -63,7 +63,7 @@
 - Card: "Continue with Google" (white button with G icon) + "Continue with Apple" (black button with Apple icon)
 - Footer
 
-### 7. `/privacy`, `/tos`, `/sweepstakes` — Legal documents
+### 7. `/privacy`, `/tos` — Legal documents
 - Header
 - H1 (page title)
 - Prose content (long-form text, list, headings)

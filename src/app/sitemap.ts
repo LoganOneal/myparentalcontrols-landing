@@ -19,9 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), changeFrequency: "weekly", priority: 1 },
     {
-      url: absoluteUrl("/koda-safety"),
-      changeFrequency: "weekly",
-      priority: 0.98,
+      url: absoluteUrl("/how-it-works"),
+      changeFrequency: "monthly",
+      priority: 0.94,
+    },
+    {
+      url: absoluteUrl("/pricing"),
+      changeFrequency: "monthly",
+      priority: 0.93,
+    },
+    {
+      url: absoluteUrl("/get-started"),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: absoluteUrl("/safety-privacy"),
@@ -40,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.88,
     },
     { url: absoluteUrl("/press"), changeFrequency: "monthly", priority: 0.68 },
+    { url: absoluteUrl("/login"), changeFrequency: "yearly", priority: 0.45 },
     {
       url: absoluteUrl("/privacy"),
       changeFrequency: "yearly",

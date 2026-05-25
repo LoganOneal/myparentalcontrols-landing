@@ -20,9 +20,9 @@ const NAV_COLUMNS: NavColumn[] = [
   {
     title: "Product",
     links: [
-      { label: "Koda Safety", href: "/koda-safety" },
-      { label: "Features", href: "/#features" },
-      { label: "Pricing", href: "/#pricing" },
+      { label: "Parental Controls", href: "/" },
+      { label: "How Koda Works", href: "/how-it-works" },
+      { label: "Pricing", href: "/pricing" },
       { label: "Game Safety", href: "/game-safety" },
     ],
   },
@@ -57,6 +57,8 @@ const NAV_COLUMNS: NavColumn[] = [
 ];
 
 const QUICK_LINKS: NavLink[] = [
+  { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/tos" },
   { label: "Safety & Privacy", href: "/safety-privacy" },

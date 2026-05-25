@@ -8,7 +8,6 @@ const ROOT = join(__dirname, '..');
 const PAGES = [
   { slug: 'privacy', title: 'Privacy Policy' },
   { slug: 'tos', title: 'Terms of Service' },
-  { slug: 'sweepstakes', title: 'Sweepstakes Official Rules' },
 ];
 
 for (const { slug, title } of PAGES) {
