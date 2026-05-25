@@ -13,10 +13,10 @@ const PAGES = [
 
 for (const { slug, title } of PAGES) {
   const content = (await readFile(join(ROOT, `docs/research/legal-${slug}-content.html`), 'utf8'))
-    .replace(/Cal\s+AI/g, 'MyParentalControls')
-    .replace(/CAL\s+AI/g, 'MYPARENTALCONTROLS')
-    .replace(/calai\.app/g, 'myparentalcontrols.com')
-    .replace(/support@myparentalcontrols\.com/g, 'support@myparentalcontrols.com');
+    .replace(/Cal\s+AI/g, 'Koda Safety')
+    .replace(/CAL\s+AI/g, 'KODA SAFETY')
+    .replace(/calai\.app/g, 'kodasafety.com')
+    .replace(/support@kodasafety\.com/g, 'support@kodasafety.com');
   const escaped = content
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
@@ -24,8 +24,8 @@ for (const { slug, title } of PAGES) {
   const tsx = `import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "MyParentalControls | ${title}",
-  description: "MyParentalControls legal information.",
+  title: "Koda Safety | ${title}",
+  description: "Koda Safety legal information.",
 };
 
 const HTML = \`${escaped}\`;

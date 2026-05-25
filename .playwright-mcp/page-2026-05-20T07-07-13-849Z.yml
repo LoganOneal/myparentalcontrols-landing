@@ -4,7 +4,7 @@
       - generic [ref=e4]:
         - generic [ref=e5]: Design exploration
         - heading "Five color schemes for trust" [level=1] [ref=e6]
-        - paragraph [ref=e7]: Each option below shows the same MyParentalControls alert card re-skinned in a different palette. The point isn’t to pick colors in the abstract — it’s to see which set of colors actually feels right when a parent is reading “your child may be at risk online.”
+        - paragraph [ref=e7]: Each option below shows the same Koda Safety alert card re-skinned in a different palette. The point isn’t to pick colors in the abstract — it’s to see which set of colors actually feels right when a parent is reading “your child may be at risk online.”
       - generic [ref=e8]:
         - generic [ref=e9]:
           - generic [ref=e10]:
@@ -40,7 +40,7 @@
             - generic [ref=e48]:
               - generic [ref=e49]: M
               - generic [ref=e50]:
-                - generic [ref=e51]: MyParentalControls
+                - generic [ref=e51]: Koda Safety
                 - generic [ref=e52]: 3 new alerts this morning
               - generic [ref=e54]: LIVE
             - generic [ref=e55]:
@@ -91,7 +91,7 @@
             - generic [ref=e109]:
               - generic [ref=e110]: M
               - generic [ref=e111]:
-                - generic [ref=e112]: MyParentalControls
+                - generic [ref=e112]: Koda Safety
                 - generic [ref=e113]: 3 new alerts this morning
               - generic [ref=e115]: LIVE
             - generic [ref=e116]:
@@ -142,7 +142,7 @@
             - generic [ref=e170]:
               - generic [ref=e171]: M
               - generic [ref=e172]:
-                - generic [ref=e173]: MyParentalControls
+                - generic [ref=e173]: Koda Safety
                 - generic [ref=e174]: 3 new alerts this morning
               - generic [ref=e176]: LIVE
             - generic [ref=e177]:
@@ -193,7 +193,7 @@
             - generic [ref=e231]:
               - generic [ref=e232]: M
               - generic [ref=e233]:
-                - generic [ref=e234]: MyParentalControls
+                - generic [ref=e234]: Koda Safety
                 - generic [ref=e235]: 3 new alerts this morning
               - generic [ref=e237]: LIVE
             - generic [ref=e238]:
@@ -244,7 +244,7 @@
             - generic [ref=e292]:
               - generic [ref=e293]: M
               - generic [ref=e294]:
-                - generic [ref=e295]: MyParentalControls
+                - generic [ref=e295]: Koda Safety
                 - generic [ref=e296]: 3 new alerts this morning
               - generic [ref=e298]: LIVE
             - generic [ref=e299]:

@@ -76,7 +76,7 @@ async function resolveFileUrl(title) {
   api.searchParams.set("origin", "*");
 
   const res = await fetch(api, {
-    headers: { "User-Agent": "mpc-landing-bot/1.0 (contact: support@myparentalcontrols.com)" },
+    headers: { "User-Agent": "koda-safety-landing-bot/1.0 (contact: support@kodasafety.com)" },
   });
   if (!res.ok) return null;
   const data = await res.json();
@@ -100,7 +100,7 @@ async function searchCommons(query) {
   api.searchParams.set("origin", "*");
 
   const res = await fetch(api, {
-    headers: { "User-Agent": "mpc-landing-bot/1.0 (contact: support@myparentalcontrols.com)" },
+    headers: { "User-Agent": "koda-safety-landing-bot/1.0 (contact: support@kodasafety.com)" },
   });
   if (!res.ok) return [];
   const data = await res.json();
@@ -110,7 +110,7 @@ async function searchCommons(query) {
 }
 
 const UA =
-  "Mozilla/5.0 (compatible; mpc-landing-logo-fetcher/1.0; +https://myparentalcontrols.com)";
+  "Mozilla/5.0 (compatible; koda-safety-landing-logo-fetcher/1.0; +https://kodasafety.com)";
 
 async function downloadGame(game) {
   for (const candidate of game.candidates) {
@@ -159,7 +159,7 @@ async function downloadGame(game) {
       const ext = resolved.mime === "image/svg+xml" ? "svg" : "png";
       const out = join(OUT_DIR, `${game.slug}.${ext}`);
       const bin = await fetch(resolved.url, {
-        headers: { "User-Agent": "mpc-landing/1.0" },
+        headers: { "User-Agent": "koda-safety-landing/1.0" },
       });
       const buf = Buffer.from(await bin.arrayBuffer());
       await writeFile(out, buf);

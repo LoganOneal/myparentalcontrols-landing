@@ -1,3 +1,5 @@
+import type { EditorialContributorId } from "./editorial";
+
 export type BlogSection = {
   heading: string;
   paragraphs: string[];
@@ -9,7 +11,34 @@ export type RelatedLink = {
   href: string;
 };
 
-export type BlogPost = {
+export type BlogSource = {
+  id: string;
+  title: string;
+  publisher: string;
+  url: string;
+  accessed: string;
+  note: string;
+};
+
+export type BlogFaq = {
+  question: string;
+  answer: string;
+};
+
+export type BlogTrustFields = {
+  authorId: EditorialContributorId;
+  reviewerId: EditorialContributorId;
+  dateModified: string;
+  lastReviewed: string;
+  quickAnswer: string;
+  researchMethod: string;
+  sources: BlogSource[];
+  faqs: BlogFaq[];
+  about: string[];
+  mentions: string[];
+};
+
+export type BaseBlogPost = {
   slug: string;
   title: string;
   date: string;
@@ -21,7 +50,236 @@ export type BlogPost = {
   relatedLinks: RelatedLink[];
 };
 
-export const BLOG_POSTS: BlogPost[] = [
+export type BlogPost = BaseBlogPost & BlogTrustFields;
+
+const SOURCE_LIBRARY = {
+  openaiSearch:
+    {
+      id: "openai-search",
+      title: "ChatGPT Search publisher guidance",
+      publisher: "OpenAI Help Center",
+      url: "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      accessed: "5/24/2026",
+      note: "Used for ChatGPT search availability, citations, and OAI-SearchBot crawl guidance.",
+    },
+  openaiBots:
+    {
+      id: "openai-bots",
+      title: "Overview of OpenAI crawlers",
+      publisher: "OpenAI Developers",
+      url: "https://developers.openai.com/api/docs/bots",
+      accessed: "5/24/2026",
+      note: "Used for OAI-SearchBot, GPTBot, and ChatGPT-User crawler distinctions.",
+    },
+  anthropicSearch:
+    {
+      id: "anthropic-search",
+      title: "Enabling and using web search",
+      publisher: "Claude Help Center",
+      url: "https://support.claude.com/en/articles/10684626-enabling-and-using-web-search",
+      accessed: "5/24/2026",
+      note: "Used for Claude web search citation behavior and web fetch notes.",
+    },
+  anthropicBots:
+    {
+      id: "anthropic-bots",
+      title: "Anthropic crawler and robots.txt guidance",
+      publisher: "Claude Help Center",
+      url: "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      accessed: "5/24/2026",
+      note: "Used for ClaudeBot, Claude-SearchBot, and Claude-User crawler distinctions.",
+    },
+  googleHelpful:
+    {
+      id: "google-helpful-content",
+      title: "Creating helpful, reliable, people-first content",
+      publisher: "Google Search Central",
+      url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      accessed: "5/24/2026",
+      note: "Used for people-first content, E-E-A-T, and the Who/How/Why framework.",
+    },
+  googleArticleSchema:
+    {
+      id: "google-article-schema",
+      title: "Article structured data",
+      publisher: "Google Search Central",
+      url: "https://developers.google.com/search/docs/appearance/structured-data/article",
+      accessed: "5/24/2026",
+      note: "Used for Article/BlogPosting author, image, and date structured-data recommendations.",
+    },
+  googleStructuredData:
+    {
+      id: "google-structured-data",
+      title: "Structured data general guidelines",
+      publisher: "Google Search Central",
+      url: "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      accessed: "5/24/2026",
+      note: "Used to keep JSON-LD aligned with visible page content.",
+    },
+  bingResults:
+    {
+      id: "bing-results",
+      title: "How Bing delivers search results",
+      publisher: "Microsoft Support",
+      url: "https://support.microsoft.com/en-us/bing/how-bing-delivers-search-results",
+      accessed: "5/24/2026",
+      note: "Used for relevance, quality, credibility, freshness, and authority signals in Bing-backed search.",
+    },
+  geoPaper:
+    {
+      id: "geo-paper",
+      title: "GEO: Generative Engine Optimization",
+      publisher: "Princeton University / ACM SIGKDD 2024",
+      url: "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+      accessed: "5/24/2026",
+      note: "Used for citation-ready content strategy and generative-engine visibility research.",
+    },
+  robloxParents:
+    {
+      id: "roblox-parents",
+      title: "Roblox parents and safety resources",
+      publisher: "Roblox",
+      url: "https://corp.roblox.com/parents/",
+      accessed: "5/24/2026",
+      note: "Used for Roblox family safety, social features, and parent setup context.",
+    },
+  robloxSafety:
+    {
+      id: "roblox-safety",
+      title: "Roblox safety and civility",
+      publisher: "Roblox",
+      url: "https://corp.roblox.com/safety-civility/",
+      accessed: "5/24/2026",
+      note: "Used for Roblox moderation, safety systems, and platform safety positioning.",
+    },
+  discordFamily:
+    {
+      id: "discord-family-center",
+      title: "Family Center for parents and guardians",
+      publisher: "Discord Support",
+      url: "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
+      accessed: "5/24/2026",
+      note: "Used for Discord Family Center capabilities and limitations.",
+    },
+  discordSafety:
+    {
+      id: "discord-safety-center",
+      title: "Discord Safety Center",
+      publisher: "Discord",
+      url: "https://discord.com/safety",
+      accessed: "5/24/2026",
+      note: "Used for Discord safety policies, privacy controls, and teen safety framing.",
+    },
+  epicControls:
+    {
+      id: "epic-parental-controls",
+      title: "Epic Games parental controls",
+      publisher: "Epic Games Safety Center",
+      url: "https://safety.epicgames.com/en-US/parental-controls",
+      accessed: "5/24/2026",
+      note: "Used for Fortnite/Epic parental control setup and cabined-account context.",
+    },
+  epicSafety:
+    {
+      id: "epic-safety-center",
+      title: "Epic Games Safety Center",
+      publisher: "Epic Games",
+      url: "https://safety.epicgames.com/en-US/",
+      accessed: "5/24/2026",
+      note: "Used for Fortnite safety, voice/text settings, and family safety context.",
+    },
+  minecraftControls:
+    {
+      id: "minecraft-parental-controls",
+      title: "Minecraft parental controls",
+      publisher: "Minecraft",
+      url: "https://www.minecraft.net/en-us/article/parental-controls",
+      accessed: "5/24/2026",
+      note: "Used for Minecraft account, multiplayer, and family-safety setup context.",
+    },
+  xboxFamily:
+    {
+      id: "xbox-family-safety",
+      title: "Xbox family safety and privacy settings",
+      publisher: "Xbox Support",
+      url: "https://support.xbox.com/en-US/help/family-online-safety/online-safety/manage-app-privacy-settings-xbox-one",
+      accessed: "5/24/2026",
+      note: "Used for Microsoft/Xbox privacy settings that affect Minecraft and PC gaming.",
+    },
+  ncmec:
+    {
+      id: "ncmec-netsmartz",
+      title: "NetSmartz online safety education",
+      publisher: "National Center for Missing & Exploited Children",
+      url: "https://www.missingkids.org/netsmartz/home",
+      accessed: "5/24/2026",
+      note: "Used for parent education around online enticement and safety conversations.",
+    },
+  fbi:
+    {
+      id: "fbi-online-safety",
+      title: "Online safety guidance",
+      publisher: "Federal Bureau of Investigation",
+      url: "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/online-safety",
+      accessed: "5/24/2026",
+      note: "Used for online exploitation warning signs and family safety guidance.",
+    },
+  ftc:
+    {
+      id: "ftc-child-online-safety",
+      title: "How to protect your child online",
+      publisher: "Federal Trade Commission",
+      url: "https://consumer.ftc.gov/articles/how-protect-your-child-online",
+      accessed: "5/24/2026",
+      note: "Used for practical parent guidance around privacy, conversations, and online safety.",
+    },
+  thorn:
+    {
+      id: "thorn-research",
+      title: "Research on online child safety",
+      publisher: "Thorn",
+      url: "https://www.thorn.org/research/",
+      accessed: "5/24/2026",
+      note: "Used for broader research context around online grooming and child exploitation risks.",
+    },
+  barkFeatures:
+    {
+      id: "bark-features",
+      title: "Bark parental control features",
+      publisher: "Bark",
+      url: "https://www.bark.us/features/",
+      accessed: "5/24/2026",
+      note: "Used for comparison context around broad family monitoring capabilities.",
+    },
+  barkHome:
+    {
+      id: "bark-home",
+      title: "Bark parental controls",
+      publisher: "Bark",
+      url: "https://www.bark.us/",
+      accessed: "5/24/2026",
+      note: "Used for Bark positioning and feature comparison context.",
+    },
+} satisfies Record<string, BlogSource>;
+
+type SourceKey = keyof typeof SOURCE_LIBRARY;
+
+const CHILD_SAFETY_SOURCE_KEYS = [
+  "ncmec",
+  "fbi",
+  "ftc",
+  "thorn",
+] satisfies SourceKey[];
+
+const PLATFORM_SOURCE_KEYS = {
+  roblox: ["robloxParents", "robloxSafety"] satisfies SourceKey[],
+  discord: ["discordFamily", "discordSafety"] satisfies SourceKey[],
+  fortnite: ["epicControls", "epicSafety"] satisfies SourceKey[],
+  minecraft: ["minecraftControls", "xboxFamily"] satisfies SourceKey[],
+  bark: ["barkFeatures", "barkHome"] satisfies SourceKey[],
+};
+
+const RAW_BLOG_POSTS: BaseBlogPost[] = [
   {
     slug: "what-is-koda-safety",
     title: "What Is Koda Safety?",
@@ -196,7 +454,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: "Koda Safety overview", href: "/koda-safety" },
-      { label: "Original Bark comparison", href: "/blog/myparentalcontrols-vs-bark" },
+      { label: "Original Bark comparison", href: "/blog/koda-vs-bark" },
       { label: "Pricing", href: "/#pricing" },
     ],
     sections: [
@@ -442,7 +700,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
-    slug: "myparentalcontrols-vs-bark",
+    slug: "koda-vs-bark",
     title: "Koda vs Bark: Which Parental Control Is Better for PC Gaming?",
     date: "5/21/2026",
     category: "Comparison",
@@ -676,6 +934,425 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 ];
+
+type BlogTrustPreset = {
+  quickAnswer: string;
+  researchMethod: string;
+  sourceKeys: SourceKey[];
+  faqs: BlogFaq[];
+  about: string[];
+  mentions: string[];
+};
+
+const DEFAULT_RESEARCH_METHOD =
+  "This guide was prepared by reviewing official platform help centers, public child-safety guidance, Koda product positioning, and the visible limitations of built-in parental controls. It is written for parents and reviewed for clarity, sourcing, and balanced safety language.";
+
+const DEFAULT_AUTHOR_ID = "koda-editorial-staff" satisfies EditorialContributorId;
+const DEFAULT_REVIEWER_ID =
+  "koda-trust-safety-review" satisfies EditorialContributorId;
+const TRUST_REFRESH_DATE = "5/24/2026";
+
+const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
+  "what-is-koda-safety": {
+    quickAnswer:
+      "Koda Safety is a gaming-first parental safety layer for families who need context around PC game chat, voice conversations, DMs, and risky online interactions that generic screen-time tools often miss.",
+    researchMethod:
+      "This overview was checked against Koda product pages, platform safety resources, and current AI/search citation guidance so parents and answer engines can quickly identify what Koda does, what it does not replace, and where it fits in a family safety plan.",
+    sourceKeys: [
+      "googleHelpful",
+      "googleArticleSchema",
+      "bingResults",
+      "geoPaper",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+    ],
+    faqs: [
+      {
+        question: "What does Koda Safety monitor?",
+        answer:
+          "Koda Safety focuses on PC gaming and online conversation risk, including voice chat, game DMs, Discord-adjacent conversations, grooming language, bullying, threats, sexual content, and self-harm signals.",
+      },
+      {
+        question: "Does Koda replace built-in parental controls?",
+        answer:
+          "No. Built-in controls are still useful for app access, age limits, and screen time. Koda is meant to add context around what is said in gaming and chat environments.",
+      },
+      {
+        question: "Is Koda meant to secretly spy on kids?",
+        answer:
+          "No. The recommended setup is transparent: parents should tell kids what is monitored, why it is used, and how alerts will be handled.",
+      },
+    ],
+    about: ["Koda Safety", "Parental control software", "PC gaming safety"],
+    mentions: ["game chat monitoring", "voice chat monitoring", "parent alerts"],
+  },
+  "is-koda-safe-for-families": {
+    quickAnswer:
+      "Koda Safety can be used safely when parents install it with legal authority, explain the monitoring to their child, keep privacy expectations clear, and use alerts for serious safety conversations instead of constant punishment.",
+    researchMethod:
+      "This article was reviewed against Koda privacy/legal pages, child-safety guidance, and people-first content standards to keep the advice practical, transparent, and cautious around family trust.",
+    sourceKeys: [
+      "googleHelpful",
+      "googleStructuredData",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "Should parents tell kids they are using Koda?",
+        answer:
+          "Yes. Koda is strongest when parents explain what is monitored, why it matters, and what will happen if an alert appears.",
+      },
+      {
+        question: "Can Koda guarantee a child is safe online?",
+        answer:
+          "No tool can guarantee safety. Koda should be paired with conversations, age-appropriate rules, platform settings, and quick parent response when something serious appears.",
+      },
+      {
+        question: "What should parents do after a serious alert?",
+        answer:
+          "Stay calm, preserve context, ask open questions, and escalate to school staff, platform reporting, law enforcement, or emergency services when there is immediate danger.",
+      },
+    ],
+    about: ["Family online safety", "Child privacy", "Parental monitoring"],
+    mentions: ["transparent monitoring", "privacy", "safety alerts"],
+  },
+  "koda-safety-for-pc-games": {
+    quickAnswer:
+      "Koda Safety is built for PC gaming because the riskiest moments often happen in live voice, text chat, servers, and DMs rather than in a browser or app usage report.",
+    researchMethod:
+      "This guide compares gaming-specific risk patterns with official platform and child-safety guidance, then explains where Koda adds context beyond device limits and web filters.",
+    sourceKeys: [
+      "googleHelpful",
+      "bingResults",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "discordSafety",
+      "epicSafety",
+      "minecraftControls",
+    ],
+    faqs: [
+      {
+        question: "Why are PC games harder for parents to monitor?",
+        answer:
+          "PC games combine live voice, strangers, DMs, servers, and links to outside platforms. A parent may see the game name but miss the actual conversation.",
+      },
+      {
+        question: "What should parents set up first on a gaming PC?",
+        answer:
+          "Start with operating-system family settings, game platform privacy settings, age restrictions, known-friend rules, and then add monitoring for chat and voice risk.",
+      },
+      {
+        question: "Does Koda block every risky game?",
+        answer:
+          "Koda is focused on surfacing high-risk conversation context. Parents should still use platform controls and family rules for app access and age limits.",
+      },
+    ],
+    about: ["PC gaming safety", "Game chat", "Voice chat monitoring"],
+    mentions: ["Discord", "Roblox", "Fortnite", "Minecraft", "Steam"],
+  },
+  "koda-safety-vs-bark": {
+    quickAnswer:
+      "Koda Safety is the sharper fit for PC gaming chat and voice-risk context, while Bark is broader for families that want general monitoring across phones, web, social apps, screen time, and location.",
+    researchMethod:
+      "This comparison uses public Bark feature pages, Koda positioning, and parent search intent around gaming-specific monitoring. It avoids claiming one product is universally best because the right answer depends on where a child's risk occurs.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.bark,
+      "googleHelpful",
+      "googleArticleSchema",
+      "bingResults",
+      "geoPaper",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+    ],
+    faqs: [
+      {
+        question: "Is Koda better than Bark for gaming?",
+        answer:
+          "Koda is better aligned with gaming-specific concerns like PC game chat, voice risk, Discord overlap, and in-game conversations. Bark is broader for phone, web, location, and general social monitoring.",
+      },
+      {
+        question: "Can families use Koda and Bark together?",
+        answer:
+          "Some families may choose a broad monitoring tool and a gaming-focused layer together, but parents should avoid duplicative monitoring that creates confusion or alert fatigue.",
+      },
+      {
+        question: "What is Bark strongest at?",
+        answer:
+          "Bark is strongest as a mature, broad parental-control product for general device and online activity coverage, especially outside PC gaming.",
+      },
+    ],
+    about: ["Koda Safety", "Bark", "Parental control comparison"],
+    mentions: ["Bark alternatives", "PC gaming parental controls", "game chat"],
+  },
+  "koda-safety-for-roblox": {
+    quickAnswer:
+      "Koda Safety helps Roblox families by adding conversation-risk visibility around chat, voice, friend requests, servers, and off-platform movement while parents still use Roblox's native safety controls.",
+    researchMethod:
+      "This guide was checked against Roblox parent resources, Roblox safety pages, and child-safety guidance about grooming and online enticement.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.roblox,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "Can parents see Roblox messages?",
+        answer:
+          "Parents can review some account and communication settings through Roblox, but visibility depends on the child's settings, age, device, and whether conversations move to voice or outside apps.",
+      },
+      {
+        question: "Does Roblox have parental controls?",
+        answer:
+          "Yes. Roblox provides parent controls and safety settings. Parents should still review friend requests, chat permissions, voice access, and whether the child also uses Discord.",
+      },
+      {
+        question: "What Roblox risks should parents watch for?",
+        answer:
+          "Watch for strangers offering gifts, requests to move to Discord or private servers, sexualized roleplay, bullying, account scams, and secrecy around new online friends.",
+      },
+    ],
+    about: ["Roblox parental controls", "Roblox safety", "Roblox chat"],
+    mentions: ["Roblox voice chat", "Roblox messages", "Robux scams"],
+  },
+  "koda-safety-for-discord": {
+    quickAnswer:
+      "Koda Safety adds risk alerts around Discord servers, DMs, and voice conversations; Discord Family Center can help with activity visibility, but it does not give parents full message-level context.",
+    researchMethod:
+      "This guide was reviewed against Discord Family Center documentation, Discord safety resources, and child-safety guidance about private messaging and grooming risk.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.discord,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "Can parents see Discord messages?",
+        answer:
+          "Discord Family Center gives parents activity visibility, but it is not the same as full message monitoring. Parents should combine privacy settings, conversations, and monitoring where appropriate.",
+      },
+      {
+        question: "What Discord settings should parents check first?",
+        answer:
+          "Review direct-message permissions, friend request rules, server membership, explicit media filters, Family Center, and whether private voice channels are allowed.",
+      },
+      {
+        question: "Why do game risks move to Discord?",
+        answer:
+          "Discord is where many game friends continue conversations after the match, making it easy for a public game contact to become a private DM or voice call.",
+      },
+    ],
+    about: ["Discord parental controls", "Discord Family Center", "Discord DMs"],
+    mentions: ["Discord voice chat", "gaming servers", "private DMs"],
+  },
+  "koda-safety-for-fortnite": {
+    quickAnswer:
+      "Koda Safety helps Fortnite parents focus on live party chat, voice risk, stranger contact, and toxic escalation while Epic parental controls handle account-level permissions.",
+    researchMethod:
+      "This guide was checked against Epic Games Safety Center resources, Fortnite parental control guidance, and general child-safety sources about stranger contact and online harassment.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.fortnite,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "Does Fortnite have parental controls?",
+        answer:
+          "Yes. Epic provides parental controls for account permissions and communication settings. Parents should still review voice chat, party settings, and friend lists.",
+      },
+      {
+        question: "Why is Fortnite voice chat a parent concern?",
+        answer:
+          "Fortnite voice chat can include school friends, friends of friends, older players, and random teammates. Risk can happen live before a parent sees a written record.",
+      },
+      {
+        question: "Should parents turn off Fortnite voice chat?",
+        answer:
+          "For younger kids, limiting voice chat to known friends or turning it off can be appropriate. Older kids may need clear rules and monitoring around party chat behavior.",
+      },
+    ],
+    about: ["Fortnite parental controls", "Fortnite voice chat", "Epic Games safety"],
+    mentions: ["party chat", "Fortnite safety", "stranger contact"],
+  },
+  "koda-safety-for-minecraft": {
+    quickAnswer:
+      "Koda Safety is useful for Minecraft families when multiplayer servers, public chat, Discord communities, mods, and links bring stranger contact into an otherwise creative game.",
+    researchMethod:
+      "This guide was checked against Minecraft parental-control resources, Xbox family settings, and child-safety guidance about chat, links, and online communities.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.minecraft,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "Is Minecraft safe for kids?",
+        answer:
+          "Minecraft can be very safe in private worlds with known friends. Risk rises on public servers, server-linked Discords, unmanaged multiplayer, and mod downloads.",
+      },
+      {
+        question: "Can parents control Minecraft multiplayer?",
+        answer:
+          "Parents can use Microsoft/Xbox family settings and Minecraft controls to manage multiplayer and communication permissions, depending on edition and account setup.",
+      },
+      {
+        question: "What Minecraft risks should parents monitor?",
+        answer:
+          "Watch public server chat, invitations to Discord, unknown links, mod downloads, bullying, griefing, and pressure to join private communities.",
+      },
+    ],
+    about: ["Minecraft parental controls", "Minecraft multiplayer", "Xbox family safety"],
+    mentions: ["Minecraft servers", "mods", "Discord communities"],
+  },
+  "koda-vs-bark": {
+    quickAnswer:
+      "For PC gaming risk, Koda is more focused than Bark because it centers on game chat, voice conversations, and gaming-specific alerts; Bark is broader for general parental-control coverage.",
+    researchMethod:
+      "This comparison was reviewed against public Bark feature pages, Koda product positioning, and child-safety guidance so parents can compare use cases rather than just feature counts.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.bark,
+      "googleHelpful",
+      "googleStructuredData",
+      "bingResults",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+    ],
+    faqs: [
+      {
+        question: "Is Koda a Bark alternative?",
+        answer:
+          "Koda is a Bark alternative for families whose main concern is PC gaming chat, voice risk, Discord, Roblox, Fortnite, and Minecraft. Bark remains broader for general family monitoring.",
+      },
+      {
+        question: "Which app is better for PC gaming parental controls?",
+        answer:
+          "Koda is built around PC gaming conversations and alert context, making it the better fit when the parent problem is what is happening inside games.",
+      },
+      {
+        question: "Which app is better for phones?",
+        answer:
+          "Bark is likely the better-known broad option for phone, web, social, screen-time, and location coverage.",
+      },
+    ],
+    about: ["Bark alternative", "Koda Safety", "PC gaming parental controls"],
+    mentions: ["Bark competitors", "game chat monitoring", "voice chat"],
+  },
+  "predators-on-roblox": {
+    quickAnswer:
+      "Predators on Roblox usually try to build trust in public games, then move children into private servers, DMs, voice chat, Discord, or other apps where adults have less visibility.",
+    researchMethod:
+      "This threat guide was reviewed against Roblox safety resources, NCMEC education, FBI online-safety guidance, FTC parent guidance, and broader child-safety research.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.roblox,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "How do predators contact kids on Roblox?",
+        answer:
+          "They may start in popular games or public chat, offer gifts or attention, ask personal questions, and then try to move the child to private chat, voice, or another app.",
+      },
+      {
+        question: "What are Roblox grooming warning signs?",
+        answer:
+          "Warning signs include secretive play, unknown older friends, gifts from strangers, private server invitations, switching screens, and anxiety when asked about Roblox conversations.",
+      },
+      {
+        question: "What should parents do if they suspect grooming?",
+        answer:
+          "Stay calm, preserve messages or screenshots, report the account to Roblox, contact law enforcement or NCMEC for serious exploitation concerns, and support the child without blame.",
+      },
+    ],
+    about: ["Roblox grooming", "Online predators", "Child safety"],
+    mentions: ["Roblox private servers", "Discord grooming", "Robux scams"],
+  },
+  "discord-grooming": {
+    quickAnswer:
+      "Discord grooming often begins in gaming servers and escalates through DMs, private voice channels, gifts, secrecy, and attempts to move a child into more isolated conversations.",
+    researchMethod:
+      "This threat guide was reviewed against Discord safety resources, Family Center documentation, NCMEC education, FBI guidance, FTC parent guidance, and broader child-safety research.",
+    sourceKeys: [
+      ...PLATFORM_SOURCE_KEYS.discord,
+      ...CHILD_SAFETY_SOURCE_KEYS,
+      "googleHelpful",
+      "bingResults",
+    ],
+    faqs: [
+      {
+        question: "How does Discord grooming start?",
+        answer:
+          "It often starts in a gaming server, where an adult poses as a peer, builds trust, sends a friend request, and moves the child into DMs or private voice channels.",
+      },
+      {
+        question: "Are Discord DMs risky for kids?",
+        answer:
+          "Discord DMs can be high risk because they are private, fast-moving, and easy to separate from server moderation or parent visibility.",
+      },
+      {
+        question: "What should parents do about Discord grooming?",
+        answer:
+          "Tighten privacy settings, review servers and friends, preserve evidence, report dangerous users, use monitoring where legally appropriate, and involve authorities for exploitation or immediate danger.",
+      },
+    ],
+    about: ["Discord grooming", "Discord parental controls", "Online child safety"],
+    mentions: ["Discord DMs", "Discord voice chat", "gaming servers"],
+  },
+};
+
+function getTrustPreset(post: BaseBlogPost): BlogTrustPreset {
+  const preset = TRUST_PRESETS[post.slug];
+  if (preset) return preset;
+
+  return {
+    quickAnswer: post.excerpt,
+    researchMethod: DEFAULT_RESEARCH_METHOD,
+    sourceKeys: [
+      "googleHelpful",
+      "googleArticleSchema",
+      "googleStructuredData",
+      "bingResults",
+      "geoPaper",
+      ...CHILD_SAFETY_SOURCE_KEYS,
+    ],
+    faqs: [],
+    about: [post.category, post.title],
+    mentions: post.takeaways,
+  };
+}
+
+function uniqueSources(sourceKeys: SourceKey[]): BlogSource[] {
+  const seen = new Set<string>();
+  return sourceKeys
+    .map((key) => SOURCE_LIBRARY[key])
+    .filter((source) => {
+      if (seen.has(source.id)) return false;
+      seen.add(source.id);
+      return true;
+    });
+}
+
+function enrichPost(post: BaseBlogPost): BlogPost {
+  const preset = getTrustPreset(post);
+
+  return {
+    ...post,
+    authorId: DEFAULT_AUTHOR_ID,
+    reviewerId: DEFAULT_REVIEWER_ID,
+    dateModified: TRUST_REFRESH_DATE,
+    lastReviewed: TRUST_REFRESH_DATE,
+    quickAnswer: preset.quickAnswer,
+    researchMethod: preset.researchMethod || DEFAULT_RESEARCH_METHOD,
+    sources: uniqueSources(preset.sourceKeys).slice(0, 8),
+    faqs: preset.faqs,
+    about: preset.about,
+    mentions: preset.mentions,
+  };
+}
+
+export const BLOG_POSTS: BlogPost[] = RAW_BLOG_POSTS.map(enrichPost);
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);

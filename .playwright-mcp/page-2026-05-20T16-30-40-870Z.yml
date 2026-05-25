@@ -1,12 +1,12 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e3]:
-      - link "MyParentalControls home" [ref=e4] [cursor=pointer]:
+      - link "Koda Safety home" [ref=e4] [cursor=pointer]:
         - /url: /
         - generic [ref=e5]:
           - img [ref=e6]
-          - generic [ref=e7]: MyParentalControls
-          - generic [ref=e8]: MyParentalControls
+          - generic [ref=e7]: Koda Safety
+          - generic [ref=e8]: Koda Safety
       - navigation "Primary" [ref=e9]:
         - link "How it works" [ref=e10] [cursor=pointer]:
           - /url: /#how-it-works
@@ -40,7 +40,7 @@
         - textbox "Email address" [ref=e36]:
           - /placeholder: you@example.com
         - button "Protect my child now" [ref=e37]
-    - img "MyParentalControls app — alerts dashboard" [ref=e39]
+    - img "Koda Safety app — alerts dashboard" [ref=e39]
   - generic [ref=e40]:
     - heading "Watching the apps where predators, cyber bullies, and scammers target kids" [level=2] [ref=e42]
     - generic [ref=e44]:
@@ -176,18 +176,18 @@
           - 'button "Show feature: Catches self-harm, sexual content, and bullying — not just predators" [ref=e249]'
           - 'button "Show feature: Sees encrypted and disappearing messages on the device" [ref=e250]'
       - generic [ref=e251]:
-        - button "Real-time alerts the moment a predator makes contact MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest." [ref=e252] [cursor=pointer]:
+        - button "Real-time alerts the moment a predator makes contact Koda Safety watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest." [ref=e252] [cursor=pointer]:
           - heading "Real-time alerts the moment a predator makes contact" [level=3] [ref=e253]
-          - paragraph [ref=e254]: MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.
+          - paragraph [ref=e254]: Koda Safety watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.
         - button "Coverage across 40+ apps, games, and chat platforms One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each." [ref=e255] [cursor=pointer]:
           - heading "Coverage across 40+ apps, games, and chat platforms" [level=3] [ref=e256]
           - paragraph [ref=e257]: One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.
         - button "Catches self-harm, sexual content, and bullying — not just predators The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis." [ref=e258] [cursor=pointer]:
           - heading "Catches self-harm, sexual content, and bullying — not just predators" [level=3] [ref=e259]
           - paragraph [ref=e260]: The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.
-        - button "Sees encrypted and disappearing messages on the device End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot." [ref=e261] [cursor=pointer]:
+        - button "Sees encrypted and disappearing messages on the device End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. Koda Safety reads them on the endpoint, so encryption isn't a blind spot." [ref=e261] [cursor=pointer]:
           - heading "Sees encrypted and disappearing messages on the device" [level=3] [ref=e262]
-          - paragraph [ref=e263]: End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.
+          - paragraph [ref=e263]: End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. Koda Safety reads them on the endpoint, so encryption isn't a blind spot.
   - generic [ref=e265]:
     - img [ref=e268]
     - generic [ref=e269]:
@@ -350,9 +350,9 @@
       - generic [ref=e442]:
         - generic [ref=e443]:
           - img [ref=e444]
-          - generic [ref=e445]: MyParentalControls
-          - generic [ref=e446]: MyParentalControls
-        - paragraph [ref=e447]: Download MyParentalControls
+          - generic [ref=e445]: Koda Safety
+          - generic [ref=e446]: Koda Safety
+        - paragraph [ref=e447]: Download Koda Safety
         - generic [ref=e448]:
           - link "Download on the App Store" [ref=e449] [cursor=pointer]:
             - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041

@@ -1,4 +1,4 @@
-export const SITE_URL = "https://myparentalcontrols.com";
+export const SITE_URL = "https://kodasafety.com";
 export const SITE_NAME = "Koda";
 export const SITE_ALTERNATE_NAME = "Koda Safety";
 
@@ -9,9 +9,9 @@ export const KODA_PRODUCT_DESCRIPTION =
   "Koda Safety monitors voice and chat across PC games and online platforms so parents can see risks like grooming, bullying, threats, and harmful language in real time.";
 
 export const KODA_SOCIAL_LINKS = [
-  "https://www.linkedin.com/company/myparentalcontrols/",
-  "https://www.instagram.com/myparentalcontrols/",
-  "https://www.tiktok.com/@myparentalcontrols",
+  "https://www.linkedin.com/company/kodasafety/",
+  "https://www.instagram.com/kodasafety/",
+  "https://www.tiktok.com/@kodasafety",
 ];
 
 export const organizationJsonLd = {
@@ -24,7 +24,7 @@ export const organizationJsonLd = {
   logo: `${SITE_URL}/seo/logo.png`,
   sameAs: KODA_SOCIAL_LINKS,
   description: SITE_DESCRIPTION,
-  email: "support@myparentalcontrols.com",
+  email: "support@kodasafety.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "160 W. Camino Real #594",

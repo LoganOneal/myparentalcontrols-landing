@@ -17,8 +17,8 @@ Created: May 23, 2026
 
 ## Launch Checklist
 
-- Submit `https://myparentalcontrols.com/sitemap.xml` in Google Search Console.
-- Inspect and request indexing for `https://myparentalcontrols.com/koda-safety`.
+- Submit `https://kodasafety.com/sitemap.xml` in Google Search Console.
+- Inspect and request indexing for `https://kodasafety.com/koda-safety`.
 - Inspect and request indexing for the four platform cluster pages:
   - `/blog/koda-safety-for-roblox`
   - `/blog/koda-safety-for-discord`

@@ -1,12 +1,12 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e3]:
-      - link "MyParentalControls home" [ref=e4] [cursor=pointer]:
+      - link "Koda Safety home" [ref=e4] [cursor=pointer]:
         - /url: /
         - generic [ref=e5]:
           - img [ref=e6]
-          - generic [ref=e7]: MyParentalControls
-          - generic [ref=e8]: MyParentalControls
+          - generic [ref=e7]: Koda Safety
+          - generic [ref=e8]: Koda Safety
       - navigation "Primary" [ref=e9]:
         - link "How it works" [ref=e10] [cursor=pointer]:
           - /url: /#how-it-works
@@ -39,7 +39,7 @@
       - link "Try for Free" [ref=e34] [cursor=pointer]:
         - /url: /signup
     - generic [ref=e36]:
-      - img "Child gaming on a PC, monitored by MyParentalControls" [ref=e40]
+      - img "Child gaming on a PC, monitored by Koda Safety" [ref=e40]
       - img "Discord" [ref=e41]:
         - img [ref=e43]
       - img "Roblox" [ref=e45]:
@@ -155,9 +155,9 @@
               - generic [ref=e279]: ⚙
               - generic [ref=e280]: Settings
         - generic [ref=e282]:
-          - button "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time." [ref=e283] [cursor=pointer]:
+          - button "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. Koda Safety runs inside the game itself, reading every party invite, voice call, and DM in real time." [ref=e283] [cursor=pointer]:
             - heading "Inside Roblox, Minecraft, and Fortnite — where every other parental control goes blind" [level=3] [ref=e284]
-            - paragraph [ref=e285]: Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. MyParentalControls runs inside the game itself, reading every party invite, voice call, and DM in real time.
+            - paragraph [ref=e285]: Most grooming starts inside the games kids actually play. Network filters and screen-time apps can't see those chats. Koda Safety runs inside the game itself, reading every party invite, voice call, and DM in real time.
           - button "One dashboard. Every device your child uses. Lily's PC, the family iMac, her iPhone 14 — every device your child touches reports to a single dashboard on your phone. No gaps, no apps to switch between, no device we can't see." [ref=e286] [cursor=pointer]:
             - heading "One dashboard. Every device your child uses." [level=3] [ref=e287]
             - paragraph [ref=e288]: Lily's PC, the family iMac, her iPhone 14 — every device your child touches reports to a single dashboard on your phone. No gaps, no apps to switch between, no device we can't see.
@@ -177,11 +177,11 @@
           - generic [ref=e304]: 1 / 5
   - generic [ref=e307]:
     - generic [ref=e308]:
-      - heading "How MyParentalControls compares" [level=2] [ref=e309]
+      - heading "How Koda Safety compares" [level=2] [ref=e309]
       - paragraph [ref=e310]: Other apps watch the surface — texts, browser activity, screen time. We read inside the games where predators, bullies, and scammers actually target kids.
     - generic [ref=e313]:
       - generic [ref=e316]:
-        - generic [ref=e317]: MyParentalControls
+        - generic [ref=e317]: Koda Safety
         - generic [ref=e318]: Reads inside the games
       - generic [ref=e320]:
         - img "Bark" [ref=e321]
@@ -311,7 +311,7 @@
     - generic [ref=e719]:
       - article [ref=e720]:
         - generic [ref=e721]:
-          - generic [ref=e723]: MyParentalControls
+          - generic [ref=e723]: Koda Safety
           - generic [ref=e724]:
             - img [ref=e725]
             - paragraph [ref=e727]: Reads inside Roblox, Minecraft, and Fortnite chat.
@@ -322,7 +322,7 @@
             - paragraph [ref=e734]: Bark stops at social apps and texts — in-game chats slip through.
       - article [ref=e735]:
         - generic [ref=e736]:
-          - generic [ref=e738]: MyParentalControls
+          - generic [ref=e738]: Koda Safety
           - generic [ref=e739]:
             - img [ref=e740]
             - paragraph [ref=e742]: Every chat watched in real time, right on the device.
@@ -333,7 +333,7 @@
             - paragraph [ref=e749]: "Aura's own disclaimer: its service doesn't monitor all content in real time."
       - article [ref=e750]:
         - generic [ref=e751]:
-          - generic [ref=e753]: MyParentalControls
+          - generic [ref=e753]: Koda Safety
           - generic [ref=e754]:
             - img [ref=e755]
             - paragraph [ref=e757]: Works on the PC your kid already uses.
@@ -377,10 +377,10 @@
   - contentinfo [ref=e811]:
     - generic [ref=e812]:
       - generic [ref=e813]:
-        - link "MyParentalControls home" [ref=e815] [cursor=pointer]:
+        - link "Koda Safety home" [ref=e815] [cursor=pointer]:
           - /url: /
           - img [ref=e816]
-          - generic [ref=e817]: MyParentalControls
+          - generic [ref=e817]: Koda Safety
         - generic [ref=e818]:
           - paragraph [ref=e819]: "Sign up for our newsletter:"
           - generic [ref=e820]:
@@ -415,7 +415,7 @@
                 - /url: /blog
             - listitem [ref=e844]:
               - link "Contact" [ref=e845] [cursor=pointer]:
-                - /url: mailto:support@myparentalcontrols.com
+                - /url: mailto:support@kodasafety.com
             - listitem [ref=e846]:
               - link "Login" [ref=e847] [cursor=pointer]:
                 - /url: /login
@@ -444,7 +444,7 @@
               - link "Sweepstakes Rules" [ref=e865] [cursor=pointer]:
                 - /url: /sweepstakes
         - generic [ref=e866]:
-          - paragraph [ref=e867]: Download MyParentalControls
+          - paragraph [ref=e867]: Download Koda Safety
           - generic [ref=e868]:
             - link "Download on the App Store" [ref=e869] [cursor=pointer]:
               - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041
@@ -467,7 +467,7 @@
           - listitem [ref=e884]:
             - link "Sweepstakes" [ref=e885] [cursor=pointer]:
               - /url: /sweepstakes
-        - paragraph [ref=e886]: © 2026 MyParentalControls
+        - paragraph [ref=e886]: © 2026 Koda Safety
       - generic [ref=e887]:
         - generic [ref=e888]: "Follow us:"
         - link "LinkedIn" [ref=e889] [cursor=pointer]:

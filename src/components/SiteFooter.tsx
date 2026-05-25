@@ -31,7 +31,7 @@ const NAV_COLUMNS: NavColumn[] = [
     links: [
       { label: "Press", href: "/press" },
       { label: "Blog", href: "/blog" },
-      { label: "Contact", href: "mailto:support@myparentalcontrols.com" },
+      { label: "Contact", href: "mailto:support@kodasafety.com" },
       { label: "Login", href: "/login" },
     ],
   },
@@ -171,7 +171,7 @@ export function SiteFooter() {
               Follow us:
             </span>
             <Link
-              href="https://www.linkedin.com/company/myparentalcontrols/"
+              href="https://www.linkedin.com/company/kodasafety/"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -180,7 +180,7 @@ export function SiteFooter() {
               <LinkedInIcon className="w-[18px] h-[18px]" />
             </Link>
             <Link
-              href="https://www.instagram.com/myparentalcontrols/"
+              href="https://www.instagram.com/kodasafety/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -189,7 +189,7 @@ export function SiteFooter() {
               <InstagramIcon className="w-[18px] h-[18px]" />
             </Link>
             <Link
-              href="https://www.tiktok.com/@myparentalcontrols"
+              href="https://www.tiktok.com/@kodasafety"
               aria-label="TikTok"
               target="_blank"
               rel="noopener noreferrer"

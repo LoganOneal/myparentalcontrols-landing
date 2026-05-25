@@ -1,12 +1,12 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e3]:
-      - link "MyParentalControls home" [ref=e4] [cursor=pointer]:
+      - link "Koda Safety home" [ref=e4] [cursor=pointer]:
         - /url: /
         - generic [ref=e5]:
           - img [ref=e6]
-          - generic [ref=e7]: MyParentalControls
-          - generic [ref=e8]: MyParentalControls
+          - generic [ref=e7]: Koda Safety
+          - generic [ref=e8]: Koda Safety
       - navigation "Primary" [ref=e9]:
         - link "How it works" [ref=e10] [cursor=pointer]:
           - /url: /#how-it-works
@@ -36,7 +36,7 @@
         - generic [ref=e31]: 12,000+ parents already protected
       - heading "Stop online predators before they reach your child." [level=1] [ref=e32]
       - paragraph [ref=e33]:
-        - text: MyParentalControls runs quietly on your child’s PC and alerts your phone the moment someone targets them in
+        - text: Koda Safety runs quietly on your child’s PC and alerts your phone the moment someone targets them in
         - generic [ref=e34]:
           - img [ref=e36]
           - generic [ref=e37]: Roblox
@@ -60,7 +60,7 @@
         - link "See how it works →" [ref=e68] [cursor=pointer]:
           - /url: "#how-it-works"
         - paragraph [ref=e69]: 5-min setup · We’re at capacity — join 12,000+ parents on the waitlist.
-    - img "MyParentalControls app — alerts dashboard" [ref=e71]
+    - img "Koda Safety app — alerts dashboard" [ref=e71]
   - generic [ref=e73]:
     - paragraph [ref=e74]: Monitors every app your kid uses — the high-risk ones too
     - generic [ref=e75]:
@@ -103,7 +103,7 @@
   - generic [ref=e114]:
     - heading "Get alerts for dangers — online and in real life" [level=2] [ref=e115]
     - paragraph [ref=e117]: Our award-winning parental control app scans for dangers like predators, suicidal ideation, violence, and more. You’ll get notified if there’s something wrong.
-    - img "MyParentalControls alerts screen — real-time danger detection" [ref=e120]
+    - img "Koda Safety alerts screen — real-time danger detection" [ref=e120]
   - generic [ref=e121]:
     - heading "Why parents are taking Roblox to court 📰" [level=2] [ref=e122]
     - paragraph [ref=e123]: State attorneys general, regulators, and families are filing lawsuits against the platforms where predators target kids. Don’t wait for the next headline to be about your family.
@@ -168,7 +168,7 @@
             - generic [ref=e182]: Aug 2025
           - heading "Louisiana sues Roblox, alleging the gaming site fails to protect children" [level=3] [ref=e183]
   - generic [ref=e185]:
-    - heading "What does MyParentalControls include?" [level=2] [ref=e186]
+    - heading "What does Koda Safety include?" [level=2] [ref=e186]
     - generic [ref=e187]:
       - generic [ref=e188]:
         - img "Real-time alerts the moment a predator makes contact preview" [ref=e189]
@@ -180,7 +180,7 @@
       - generic [ref=e195]:
         - generic [ref=e196] [cursor=pointer]:
           - heading "Real-time alerts the moment a predator makes contact" [level=3] [ref=e197]
-          - paragraph [ref=e198]: MyParentalControls watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.
+          - paragraph [ref=e198]: Koda Safety watches Roblox, Discord, Minecraft, Fortnite, and 40+ other chats running on your child's PC. The instant grooming language, a Discord invite from a stranger, or a request to “go private” appears, you get a push notification on your phone — not a weekly digest.
         - generic [ref=e199] [cursor=pointer]:
           - heading "Coverage across 40+ apps, games, and chat platforms" [level=3] [ref=e200]
           - paragraph [ref=e201]: One install monitors every app your kid actually uses — TikTok, Snapchat, Instagram, Character.AI, ChatGPT, BeReal, Discord, and dozens more. See the full list of monitored platforms and what we watch for on each.
@@ -189,7 +189,7 @@
           - paragraph [ref=e204]: The same AI that flags grooming also flags suicide and self-harm conversations, sexting, sextortion, and pile-on bullying. You see what your child is going through before it becomes a crisis.
         - generic [ref=e205] [cursor=pointer]:
           - heading "Sees encrypted and disappearing messages on the device" [level=3] [ref=e206]
-          - paragraph [ref=e207]: End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. MyParentalControls reads them on the endpoint, so encryption isn't a blind spot.
+          - paragraph [ref=e207]: End-to-end encrypted Messenger, vanishing Snaps, and disappearing Instagram DMs all bypass platform-level parental dashboards. Koda Safety reads them on the endpoint, so encryption isn't a blind spot.
   - heading "Why choose Cal AI?" [level=2] [ref=e208]
   - generic [ref=e209]:
     - paragraph [ref=e210]: Cal AI is the most advanced calorie tracker.
@@ -268,9 +268,9 @@
       - generic [ref=e299]:
         - generic [ref=e300]:
           - img [ref=e301]
-          - generic [ref=e302]: MyParentalControls
-          - generic [ref=e303]: MyParentalControls
-        - paragraph [ref=e304]: Download MyParentalControls
+          - generic [ref=e302]: Koda Safety
+          - generic [ref=e303]: Koda Safety
+        - paragraph [ref=e304]: Download Koda Safety
         - generic [ref=e305]:
           - link "Download on the App Store" [ref=e306] [cursor=pointer]:
             - /url: https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041

@@ -83,7 +83,7 @@ Koda is designed for parents and legal guardians to support child safety. You ar
 
 <h2>6. Retention and Deletion</h2>
 <p>
-We retain Personal Data and Monitoring Data for as long as needed to provide the Service, maintain accounts, comply with law, resolve disputes, enforce agreements, and improve safety features. You may request deletion by contacting support@myparentalcontrols.com. Some information may remain in backups or records where required by law or legitimate business needs.
+We retain Personal Data and Monitoring Data for as long as needed to provide the Service, maintain accounts, comply with law, resolve disputes, enforce agreements, and improve safety features. You may request deletion by contacting support@kodasafety.com. Some information may remain in backups or records where required by law or legitimate business needs.
 </p>
 
 <h2>7. Security</h2>
@@ -97,7 +97,7 @@ The Service is intended for use by parents and legal guardians. Parents and guar
 </p>
 
 <h2>9. Your Privacy Rights</h2>
-<p>Depending on Your jurisdiction, You may have rights to access, correct, delete, export, restrict, or object to certain processing of Personal Data. You may exercise these rights by contacting support@myparentalcontrols.com.</p>
+<p>Depending on Your jurisdiction, You may have rights to access, correct, delete, export, restrict, or object to certain processing of Personal Data. You may exercise these rights by contacting support@kodasafety.com.</p>
 
 <h2 id="ca_privacy_rights">10. California Privacy Rights</h2>
 <p>
@@ -115,7 +115,7 @@ We may update this Privacy Policy from time to time. Updates are effective when 
 </p>
 
 <h2>13. Contact Us</h2>
-<p>If You have questions or requests, contact Us at <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>.</p>`;
+<p>If You have questions or requests, contact Us at <a href="mailto:support@kodasafety.com">support@kodasafety.com</a>.</p>`;
 
 export default function Page() {
   return (

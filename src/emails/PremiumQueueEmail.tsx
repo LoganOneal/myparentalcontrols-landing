@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myparentalcontrols.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kodasafety.com";
 
 export function renderPremiumQueueEmail(args: {
   premiumPosition: number;

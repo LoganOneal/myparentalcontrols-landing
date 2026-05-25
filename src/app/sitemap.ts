@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: absoluteUrl(`/blog/${post.slug}`),
-    lastModified: parseDate(post.date),
+    lastModified: parseDate(post.dateModified),
     changeFrequency: "monthly",
     priority: post.slug.includes("koda-safety") ? 0.86 : 0.78,
   }));

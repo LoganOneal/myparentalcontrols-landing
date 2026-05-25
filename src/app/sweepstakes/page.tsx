@@ -5,7 +5,7 @@ export const metadata = {
   description: "Koda sweepstakes official rules.",
 };
 
-const HTML = `<h1>MYPARENTALCONTROLS SURVEY SWEEPSTAKES</h1> <h2>OFFICIAL RULES</h2> <p>
+const HTML = `<h1>KODA SAFETY SURVEY SWEEPSTAKES</h1> <h2>OFFICIAL RULES</h2> <p>
 Please read these Official Rules carefully. By participating in the survey and these Sweepstakes, 
         you agree to these Official Rules.
 </p> <h2>1. ELIGIBILITY</h2> <p>
@@ -24,7 +24,7 @@ These sweepstakes (the "Sweepstakes") begin on May 8, 2026 at 12:01am Eastern Ti
         device for the Sweepstakes.
 </p> <h2>3. HOW TO ENTER</h2> <p>
 Participants shall receive one automatic entry after they successfully complete and submit a survey. 
-        Or, to enter without submitting a survey, you may email <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>
+        Or, to enter without submitting a survey, you may email <a href="mailto:support@kodasafety.com">support@kodasafety.com</a>
 with your full contact name and email address to participate in the Sweepstakes. Limit one (1) entry 
         of any kind per person. You may enter by submitting a survey as provided above or by email but not 
         both ways. Sponsor reserves the right to verify all entries. Sponsor reserves, in its sole discretion, 
@@ -138,15 +138,15 @@ In the event of any litigation or arbitration arising from or related to these O
         in such litigation or arbitration.
 </p> <h2>10. WINNER'S LIST</h2> <p>
 For a winners' list, no later than 60 days after the close of the Entry Period, email
-<a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>. Limit one (1) request per email address.
+<a href="mailto:support@kodasafety.com">support@kodasafety.com</a>. Limit one (1) request per email address.
 </p> <h2>11. PRIVACY POLICY</h2> <p>
-Please see Sponsor's privacy policy located at <a href="/privacy">https://www.myparentalcontrols.com/privacy</a> for 
+Please see Sponsor's privacy policy located at <a href="/privacy">https://kodasafety.com/privacy</a> for 
         details of Sponsor's policy regarding the use of personal information collected in connection with 
         these Sweepstakes. By entering these Sweepstakes, Participants agree that any personal information 
         submitted by Participants may be used or shared by Sponsor as stated in the privacy policy, including 
         to effectuate the Sweepstakes administration.
 </p> <h2>12. TERMS AND CONDITIONS</h2> <p>
-The Terms and Conditions located at <a href="/tos">https://www.myparentalcontrols.com/tos</a> are incorporated by 
+The Terms and Conditions located at <a href="/tos">https://kodasafety.com/tos</a> are incorporated by 
         reference herein and made a part of these Official Rules.
 </p> <h2>13. SPONSOR</h2> <p>
 Koda with a principal place of business located at 100 Congress Ave., Suite 400, Austin,

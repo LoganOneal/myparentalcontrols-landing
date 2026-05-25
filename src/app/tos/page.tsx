@@ -17,7 +17,7 @@ const HTML = `<h1>Terms and Conditions</h1>
   <li><strong>Parent</strong> or <strong>Guardian</strong> means a person with legal authority to use the Service for family safety and child monitoring.</li>
   <li><strong>Service</strong> means the Application, website, waitlist, parent dashboard, alerts, subscriptions, and related services offered by Koda.</li>
   <li><strong>User Content</strong> means information, settings, text, images, audio, metadata, device activity, or other content submitted, captured, or processed through the Service.</li>
-  <li><strong>Website</strong> means <a href="https://myparentalcontrols.com" target="_blank" rel="noopener noreferrer">myparentalcontrols.com</a> and associated subdomains.</li>
+  <li><strong>Website</strong> means <a href="https://kodasafety.com" target="_blank" rel="noopener noreferrer">kodasafety.com</a> and associated subdomains.</li>
   <li><strong>You</strong> means the person or entity accessing or using the Service.</li>
 </ul>
 
@@ -113,7 +113,7 @@ We may update these Terms from time to time. Updates are effective when posted u
 </p>
 
 <h2>18. Contact Information</h2>
-<p>If You have questions about these Terms, contact Us at <a href="mailto:support@myparentalcontrols.com">support@myparentalcontrols.com</a>.</p>`;
+<p>If You have questions about these Terms, contact Us at <a href="mailto:support@kodasafety.com">support@kodasafety.com</a>.</p>`;
 
 export default function Page() {
   return (
