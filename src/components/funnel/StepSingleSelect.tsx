@@ -43,12 +43,6 @@ export function StepSingleSelect({
         )}
       </div>
 
-      {tip && (
-        <p className="mb-5 text-[13px] text-gray-400">
-          Tip: {tip}
-        </p>
-      )}
-
       <div className="space-y-2">
         {options.map((opt) => {
           const isSelected = selected === opt.id;
@@ -89,6 +83,12 @@ export function StepSingleSelect({
           );
         })}
       </div>
+
+      {tip && (
+        <p className="mt-4 text-[13px] text-gray-400">
+          Tip: {tip}
+        </p>
+      )}
 
       {footer === "reviews" && <FunnelReviews />}
     </div>

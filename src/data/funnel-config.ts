@@ -19,6 +19,11 @@ export const funnelConfig: FunnelConfig = {
       ],
     },
     {
+      id: "value-prop",
+      type: "value-prop",
+      title: "Give your child freedom online, without being left in the dark.",
+    },
+    {
       id: "online-spaces",
       type: "multi-select",
       title: "Where does your child spend time online?",

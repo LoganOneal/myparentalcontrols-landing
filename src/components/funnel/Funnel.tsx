@@ -9,6 +9,7 @@ import { StepMultiSelect } from "./StepMultiSelect";
 import { StepLoadingInterstitial } from "./StepLoadingInterstitial";
 import { StepEmailCapture } from "./StepEmailCapture";
 import { StepSummary } from "./StepSummary";
+import { StepValueProp } from "./StepValueProp";
 import { ArrowLeft } from "lucide-react";
 
 function shouldShowStep(step: FunnelStep, answers: FunnelAnswers): boolean {
@@ -44,12 +45,13 @@ export function Funnel({
 
   const visibleSteps = getVisibleSteps(config, answers);
   const currentStep = visibleSteps[currentIndex];
+  const NON_QUESTION_TYPES = ["loading-interstitial", "value-prop", "summary"];
   const totalQuestionSteps = visibleSteps.filter(
-    (s) => s.type !== "loading-interstitial" && s.type !== "summary"
+    (s) => !NON_QUESTION_TYPES.includes(s.type)
   ).length;
   const currentQuestionIndex = visibleSteps
     .slice(0, currentIndex)
-    .filter((s) => s.type !== "loading-interstitial" && s.type !== "summary")
+    .filter((s) => !NON_QUESTION_TYPES.includes(s.type))
     .length;
 
   const goNext = useCallback(
@@ -106,8 +108,8 @@ export function Funnel({
 
   if (!currentStep) return null;
 
-  const showBackButton = currentIndex > 0 && currentStep.type !== "loading-interstitial" && currentStep.type !== "summary";
-  const showProgress = currentStep.type !== "loading-interstitial";
+  const showBackButton = currentIndex > 0 && !["loading-interstitial", "value-prop", "summary"].includes(currentStep.type);
+  const showProgress = !["loading-interstitial", "value-prop"].includes(currentStep.type);
 
   return (
     <div className="min-h-[100dvh] flex flex-col bg-[#FAFBFC]">
@@ -165,6 +167,13 @@ export function Funnel({
               min={currentStep.min}
               brandColor={config.brandColor}
               onNext={(selected) => goNext(currentStep.id, selected)}
+            />
+          )}
+          {currentStep.type === "value-prop" && (
+            <StepValueProp
+              key={currentStep.id}
+              brandColor={config.brandColor}
+              onNext={handleInterstitialComplete}
             />
           )}
           {currentStep.type === "loading-interstitial" && (

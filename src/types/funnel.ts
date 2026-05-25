@@ -4,6 +4,7 @@ export type FunnelStepType =
   | "age-select"
   | "email-capture"
   | "loading-interstitial"
+  | "value-prop"
   | "summary";
 
 export type FunnelOption = {
