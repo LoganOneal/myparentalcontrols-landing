@@ -132,7 +132,18 @@ function getRiskLevel(answers: FunnelAnswers): {
   score += Math.min(concerns.length, 3);
 
   const spaces = answers["online-spaces"] ?? [];
-  const riskyPlatforms = ["discord", "snapchat", "tiktok", "instagram"];
+  const riskyPlatforms = [
+    "discord",
+    "roblox",
+    "minecraft",
+    "fortnite",
+    "steam",
+    "league-of-legends",
+    "valorant",
+    "counter-strike",
+    "call-of-duty",
+    "vrchat",
+  ];
   score += spaces.filter((s) => riskyPlatforms.includes(s)).length * 2;
 
   if (score >= 12) return { label: "High", percentage: 85, color: "#dc2626" };

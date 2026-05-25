@@ -1,7 +1,58 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
+import { CircleQuestionMark, Gamepad2 } from "lucide-react";
 import type { FunnelOption } from "@/types/funnel";
+
+function OptionIcon({
+  option,
+  isSelected,
+  brandColor,
+}: {
+  option: FunnelOption;
+  isSelected: boolean;
+  brandColor: string;
+}) {
+  if (!option.icon && !option.fallbackIcon) return null;
+
+  const FallbackIcon =
+    option.fallbackIcon === "question" ? CircleQuestionMark : Gamepad2;
+  const hasCustomBackground = Boolean(option.iconBackground);
+
+  return (
+    <span
+      className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-colors duration-150"
+      style={{
+        borderColor: hasCustomBackground
+          ? "transparent"
+          : isSelected
+            ? `${brandColor}30`
+            : "#e5e7eb",
+        backgroundColor:
+          option.iconBackground ?? (isSelected ? "white" : "#f9fafb"),
+      }}
+    >
+      {option.icon ? (
+        <Image
+          src={option.icon}
+          alt=""
+          aria-hidden="true"
+          width={26}
+          height={26}
+          className="max-h-7 w-auto max-w-8 object-contain"
+        />
+      ) : (
+        <FallbackIcon
+          aria-hidden="true"
+          className="h-5 w-5"
+          strokeWidth={2}
+          style={{ color: isSelected ? brandColor : "#6b7280" }}
+        />
+      )}
+    </span>
+  );
+}
 
 export function StepMultiSelect({
   title,
@@ -59,14 +110,21 @@ export function StepMultiSelect({
               key={opt.id}
               type="button"
               onClick={() => toggle(opt.id)}
-              className="w-full flex items-center justify-between gap-4 px-4 py-3.5 rounded-xl border-2 transition-all duration-150 text-left"
+              className="w-full flex min-h-14 items-center justify-between gap-4 rounded-xl border-2 px-3.5 py-2.5 text-left transition-all duration-150"
               style={{
                 borderColor: isSelected ? brandColor : "#e5e7eb",
                 backgroundColor: isSelected ? `${brandColor}08` : "white",
               }}
             >
-              <span className="text-[15px] font-medium text-gray-900">
-                {opt.label}
+              <span className="flex min-w-0 items-center gap-3">
+                <OptionIcon
+                  option={opt}
+                  isSelected={isSelected}
+                  brandColor={brandColor}
+                />
+                <span className="min-w-0 text-[15px] font-medium leading-snug text-gray-900">
+                  {opt.label}
+                </span>
               </span>
               <div
                 className="w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all duration-150"
