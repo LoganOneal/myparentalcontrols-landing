@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  type PointerEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 
 type FeatureCard = {
@@ -48,20 +54,37 @@ const CARDS: FeatureCard[] = [
   },
 ];
 
-const VISIBLE_CARDS = 3;
-const CARD_GAP = 24;
+const DESKTOP_VISIBLE_CARDS = 3;
+const DESKTOP_CARD_GAP = 24;
+const MOBILE_CARD_GAP = 16;
+const MOBILE_CARD_WIDTH_RATIO = 0.66;
+const MOBILE_CARD_MAX_WIDTH = 255;
 
 export function DigitalWellbeing() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const dragStartXRef = useRef(0);
   const [page, setPage] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
-  const totalPages = Math.ceil(CARDS.length / VISIBLE_CARDS);
+  const [cardGap, setCardGap] = useState(DESKTOP_CARD_GAP);
+  const [cardsPerPage, setCardsPerPage] = useState(DESKTOP_VISIBLE_CARDS);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const totalPages = Math.ceil(CARDS.length / cardsPerPage);
 
   const updateCardWidth = useCallback(() => {
     if (!trackRef.current) return;
     const containerWidth = trackRef.current.parentElement?.clientWidth ?? 0;
-    const w = (containerWidth - CARD_GAP * (VISIBLE_CARDS - 1)) / VISIBLE_CARDS;
-    setCardWidth(w);
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const nextGap = isMobile ? MOBILE_CARD_GAP : DESKTOP_CARD_GAP;
+    const nextCardsPerPage = isMobile ? 1 : DESKTOP_VISIBLE_CARDS;
+    const nextCardWidth = isMobile
+      ? Math.min(MOBILE_CARD_MAX_WIDTH, containerWidth * MOBILE_CARD_WIDTH_RATIO)
+      : (containerWidth - nextGap * (DESKTOP_VISIBLE_CARDS - 1)) /
+        DESKTOP_VISIBLE_CARDS;
+
+    setCardGap(nextGap);
+    setCardsPerPage(nextCardsPerPage);
+    setCardWidth(nextCardWidth);
   }, []);
 
   useEffect(() => {
@@ -70,10 +93,44 @@ export function DigitalWellbeing() {
     return () => window.removeEventListener("resize", updateCardWidth);
   }, [updateCardWidth]);
 
-  const translateX = page * (cardWidth + CARD_GAP) * VISIBLE_CARDS;
+  const activePage = Math.min(page, totalPages - 1);
+  const translateX = activePage * (cardWidth + cardGap) * cardsPerPage;
 
-  const canGoPrev = page > 0;
-  const canGoNext = page < totalPages - 1;
+  const canGoPrev = activePage > 0;
+  const canGoNext = activePage < totalPages - 1;
+
+  function handleDragStart(event: PointerEvent<HTMLDivElement>) {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    dragStartXRef.current = event.clientX;
+    setDragOffset(0);
+    setIsDragging(true);
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function handleDragMove(event: PointerEvent<HTMLDivElement>) {
+    if (!isDragging) return;
+    const nextOffset = event.clientX - dragStartXRef.current;
+    setDragOffset(nextOffset);
+  }
+
+  function handleDragEnd(event: PointerEvent<HTMLDivElement>) {
+    if (!isDragging) return;
+
+    const threshold = Math.min(140, Math.max(64, cardWidth * 0.2));
+
+    if (dragOffset < -threshold && canGoNext) {
+      setPage(activePage + 1);
+    } else if (dragOffset > threshold && canGoPrev) {
+      setPage(activePage - 1);
+    }
+
+    setDragOffset(0);
+    setIsDragging(false);
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  }
 
   return (
     <section className="bg-white px-5 py-10 md:px-20 md:py-16">
@@ -97,7 +154,7 @@ export function DigitalWellbeing() {
           {/* Nav arrows */}
           <div className="hidden md:flex items-center gap-2">
             <button
-              onClick={() => canGoPrev && setPage(page - 1)}
+              onClick={() => canGoPrev && setPage(activePage - 1)}
               disabled={!canGoPrev}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoPrev ? 1 : 0.4 }}
@@ -114,7 +171,7 @@ export function DigitalWellbeing() {
               </svg>
             </button>
             <button
-              onClick={() => canGoNext && setPage(page + 1)}
+              onClick={() => canGoNext && setPage(activePage + 1)}
               disabled={!canGoNext}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoNext ? 1 : 0.4 }}
@@ -134,20 +191,29 @@ export function DigitalWellbeing() {
         </div>
 
         {/* Carousel */}
-        <div className="overflow-visible relative">
+        <div className="relative -mr-5 w-[calc(100%+20px)] overflow-hidden md:mr-0 md:w-full md:overflow-visible">
           <div
             ref={trackRef}
-            className="flex transition-transform duration-500 ease-in-out"
+            onPointerDown={handleDragStart}
+            onPointerMove={handleDragMove}
+            onPointerUp={handleDragEnd}
+            onPointerCancel={handleDragEnd}
+            onPointerLeave={handleDragEnd}
+            className={`flex touch-pan-y select-none ${
+              isDragging
+                ? "cursor-grabbing"
+                : "cursor-grab transition-transform duration-500 ease-in-out"
+            }`}
             style={{
-              transform: `translateX(-${translateX}px)`,
-              gap: `${CARD_GAP}px`,
+              transform: `translateX(${dragOffset - translateX}px)`,
+              gap: `${cardGap}px`,
             }}
           >
             {CARDS.map((card) => (
               <div
                 key={card.title}
-                className="flex-shrink-0 flex flex-col"
-                style={{ width: cardWidth > 0 ? `${cardWidth}px` : `calc(33.3333% - 16px)` }}
+                className="flex-shrink-0 flex flex-col w-[66vw] max-w-[255px] md:w-[calc(33.3333%-16px)] md:max-w-none"
+                style={{ width: cardWidth > 0 ? `${cardWidth}px` : undefined }}
               >
                 {/* Image */}
                 <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "4/5" }}>
@@ -155,8 +221,9 @@ export function DigitalWellbeing() {
                     src={card.image}
                     alt={card.alt}
                     fill
+                    draggable={false}
                     className="object-cover"
-                    sizes="(max-width: 768px) 80vw, 33vw"
+                    sizes="(max-width: 767px) 66vw, 33vw"
                   />
                 </div>
 
@@ -184,12 +251,12 @@ export function DigitalWellbeing() {
               key={i}
               onClick={() => setPage(i)}
               className={`rounded-full transition-all duration-300 cursor-pointer ${
-                i === page
+                i === activePage
                   ? "w-7 h-2.5 bg-[var(--koda-bear-blue)]"
                   : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to page ${i + 1}`}
-              aria-current={i === page ? "true" : undefined}
+              aria-current={i === activePage ? "true" : undefined}
             />
           ))}
         </div>
