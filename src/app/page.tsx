@@ -8,7 +8,6 @@ import { LogoBanner } from "@/components/home/LogoBanner";
 import { ParentProof } from "@/components/home/ParentProof";
 import { DidYouKnow } from "@/components/home/DidYouKnow";
 import { ParentTestimonial } from "@/components/home/ParentTestimonial";
-import { AlertsForDangers } from "@/components/home/AlertsForDangers";
 import { DigitalWellbeing } from "@/components/home/DigitalWellbeing";
 import { ResearchBacked } from "@/components/home/ResearchBacked";
 import { CompetitorComparison } from "@/components/home/CompetitorComparison";
@@ -65,7 +64,6 @@ export default function Home() {
       <Hero />
       <LogoBanner />
       <ParentProof />
-      <AlertsForDangers />
       <DigitalWellbeing />
       <ResearchBacked />
       <DidYouKnow />

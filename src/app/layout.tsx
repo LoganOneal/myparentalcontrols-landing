@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo_Black } from "next/font/google";
+import { Archivo_Black, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
@@ -27,6 +27,13 @@ const archivoBlack = Archivo_Black({
   weight: ["400"],
 });
 
+const kodaTitle = Manrope({
+  variable: "--font-koda-title",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["800"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Koda Safety | Parental Controls for PC Games",
@@ -39,7 +46,7 @@ export const metadata: Metadata = {
     "voice chat monitoring for parents",
   ],
   icons: {
-    icon: "/seo/logo.svg",
+    icon: "/icon.svg",
   },
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
@@ -70,7 +77,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${archivoBlack.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${archivoBlack.variable} ${kodaTitle.variable} antialiased`}
+    >
       {/* overflow-x-clip prevents horizontal overflow without turning the
           body into a scroll container — keeps position:sticky working in
           descendants. overflow-x-hidden would break scroll-lock sections. */}

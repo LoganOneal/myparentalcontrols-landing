@@ -68,11 +68,14 @@ export function KodaLogo({
   const wordmark = (
     <span
       aria-hidden
-      className="font-black leading-none"
+      className="inline-flex items-center font-extrabold leading-none"
       style={{
         color,
-        fontFamily: "Arial Rounded MT Bold, Arial, Helvetica, sans-serif",
+        fontFamily:
+          'var(--font-koda-title, "Manrope"), ui-sans-serif, system-ui, sans-serif',
         fontSize,
+        fontWeight: 800,
+        height: logoHeight,
       }}
     >
       koda

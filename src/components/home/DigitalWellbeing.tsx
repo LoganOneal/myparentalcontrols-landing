@@ -3,41 +3,48 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-type InsightCard = {
+type FeatureCard = {
   title: string;
   description: string;
   image: string;
   alt: string;
 };
 
-const CARDS: InsightCard[] = [
+const CARDS: FeatureCard[] = [
   {
-    title: "Identify trends and patterns",
+    title: "A daily safety snapshot at a glance.",
     description:
-      "View trends in your kid’s online routines, including shifts from their baseline of social interactions, daytime activity, or sleep habits, to help you spot meaningful changes in their wellbeing.",
-    image: "/images/insights/trends-patterns.webp",
-    alt: "Image of the online data removal feature in app",
+      "Start with Lily's risk status, wellbeing score, recent trends, and monitored activity in one calm view.",
+    image: "/images/app-ui-screenshots/insights-overview.png",
+    alt: "Koda Insights screen showing Lily's safety score, trends, and recent activity",
   },
   {
-    title: "Daytime and nighttime activity",
+    title: "Live monitoring where kids actually talk.",
     description:
-      "Gain a clear and personalized view of your kid’s online usage patterns throughout the day and overnight, making it easier to understand behaviors that impact healthy habits or might interfere with their sleep.",
-    image: "/images/insights/daytime-nighttime.webp",
-    alt: "Man with headphones on relaxing in a chair and browsing his laptop",
+      "See Roblox, Minecraft, Discord, Fortnite, and voice chats as they happen, including the places most filters miss.",
+    image: "/images/app-ui-screenshots/activity-live-monitoring.png",
+    alt: "Koda Activity screen showing live monitoring across games and chat apps",
   },
   {
-    title: "Social interactions",
+    title: "Alerts ranked by what needs attention.",
     description:
-      "Get insight into your kid’s social behavior patterns, including their engagement style and the volume and tone of their online interactions. Uncover their unique social persona based on their social patterns.",
-    image: "/images/insights/social-interactions.webp",
-    alt: "Image of a phone with a notification from Aura verifying a call",
+      "Critical contact risks, inappropriate language, resolved reviews, and auto-blocking all stay organized by urgency.",
+    image: "/images/app-ui-screenshots/alerts-suspicious-contact.png",
+    alt: "Koda Alerts screen showing suspicious contact, inappropriate language, and resolved alerts",
   },
   {
-    title: "Personalized insights",
+    title: "Evidence review with the full context.",
     description:
-      "Access science-backed recommendations, tips, and conversation starters based on your kid’s daytime and nighttime activity and their unique social persona.",
-    image: "/images/insights/personalized-insights.webp",
-    alt: "Person walking behind a fluted glass window",
+      "Open the screen recording, chat excerpts, platform, timestamp, and AI pattern summary before you decide what to do next.",
+    image: "/images/app-ui-screenshots/evidence-review.png",
+    alt: "Koda Evidence Review screen showing recorded Minecraft gameplay and flagged chat messages",
+  },
+  {
+    title: "Gaming time patterns, not just totals.",
+    description:
+      "Late-night sessions, bedtime misses, and top games make it clear when play is becoming a pattern.",
+    image: "/images/app-ui-screenshots/gaming-time.png",
+    alt: "Koda Gaming Time screen showing late-night sessions and top games",
   },
 ];
 
@@ -69,25 +76,21 @@ export function DigitalWellbeing() {
   const canGoNext = page < totalPages - 1;
 
   return (
-    <section className="px-5 md:px-20 py-16 md:py-32 bg-[#f0eae2]">
+    <section className="bg-white px-5 py-10 md:px-20 md:py-16">
       <div className="mx-auto max-w-[1192px]">
         {/* Top row: heading + arrows */}
-        <div className="flex items-end justify-between mb-16">
+        <div className="mb-10 flex items-end justify-between md:mb-12">
           <div className="flex flex-col gap-4 max-w-[576px]">
             <h2
-              className="text-[28px] md:text-[44px] font-medium leading-[1.15] tracking-[-0.02em] text-[#161616]"
-              style={{ fontFamily: '"Basel grotesk", sans-serif' }}
+              className="text-[28px] md:text-[44px] leading-[1.15] tracking-[-0.02em] text-[rgb(30,30,30)]"
+              style={{ fontFamily: "Moderat-Black, var(--font-archivo-black), sans-serif", fontWeight: 700 }}
             >
-              Get deeper insights into your child&rsquo;s digital wellbeing
+              Koda sees what every other parental control misses.
             </h2>
-            <p
-              className="text-[16px] md:text-[18px] leading-[1.3] text-[rgb(77,77,77)]"
-              style={{ fontFamily: '"Basel grotesk", sans-serif' }}
-            >
-              Kids are navigating a digital world with real risks. Aura Parents
-              helps you understand if your kids are happy, healthy, and safe
-              online and enables you to help them build healthier digital habits
-              and online balance.
+            <p className="text-[15px] md:text-[17px] leading-[1.6] text-[rgb(68,68,68)]">
+              The real danger isn&rsquo;t the game. It&rsquo;s the conversation
+              happening inside it. Koda helps parents spot risks in chats, DMs,
+              and voice calls before they turn into abuse.
             </p>
           </div>
 
@@ -96,55 +99,34 @@ export function DigitalWellbeing() {
             <button
               onClick={() => canGoPrev && setPage(page - 1)}
               disabled={!canGoPrev}
-              className="w-10 h-10 flex items-center justify-center rounded-full transition-opacity"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoPrev ? 1 : 0.4 }}
               aria-label="Previous"
             >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  opacity="0.2"
-                  cx="20"
-                  cy="20"
-                  r="20"
-                  fill="#161616"
-                />
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <path
-                  d="M18.9088 15.1562C19.1692 14.8959 19.5913 14.8959 19.8516 15.1562C20.112 15.4165 20.112 15.8387 19.8516 16.099L16.2753 19.6754L25.3802 19.6754C25.7484 19.6754 26.0469 19.9738 26.0469 20.342C26.0469 20.7102 25.7484 21.0087 25.3802 21.0087L16.276 21.0087L19.8516 24.5843C20.112 24.8446 20.112 25.2668 19.8516 25.5271C19.5913 25.7874 19.1692 25.7874 18.9088 25.5271L14.1948 20.8131C13.9344 20.5527 13.9344 20.1306 14.1948 19.8702L18.9088 15.1562Z"
-                  fill="#161616"
+                  d="M12.5 15L7.5 10L12.5 5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
             <button
               onClick={() => canGoNext && setPage(page + 1)}
               disabled={!canGoNext}
-              className="w-10 h-10 flex items-center justify-center rounded-full transition-opacity"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoNext ? 1 : 0.4 }}
               aria-label="Next"
             >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  opacity="0.2"
-                  cx="20"
-                  cy="20"
-                  r="20"
-                  transform="matrix(-1 0 0 1 40 0)"
-                  fill="#161616"
-                />
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <path
-                  d="M21.0912 15.1562C20.8308 14.8959 20.4087 14.8959 20.1484 15.1562C19.888 15.4165 19.888 15.8387 20.1484 16.099L23.7247 19.6754L14.6198 19.6754C14.2516 19.6754 13.9531 19.9738 13.9531 20.342C13.9531 20.7102 14.2516 21.0087 14.6198 21.0087L23.724 21.0087L20.1484 24.5843C19.888 24.8446 19.888 25.2668 20.1484 25.5271C20.4087 25.7874 20.8308 25.7874 21.0912 25.5271L25.8052 20.8131C26.0656 20.5527 26.0656 20.1306 25.8052 19.8702L21.0912 15.1562Z"
-                  fill="#161616"
+                  d="M7.5 5L12.5 10L7.5 15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -168,7 +150,7 @@ export function DigitalWellbeing() {
                 style={{ width: cardWidth > 0 ? `${cardWidth}px` : `calc(33.3333% - 16px)` }}
               >
                 {/* Image */}
-                <div className="relative w-full overflow-hidden rounded-3xl" style={{ aspectRatio: "270/371" }}>
+                <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "4/5" }}>
                   <Image
                     src={card.image}
                     alt={card.alt}
@@ -181,15 +163,12 @@ export function DigitalWellbeing() {
                 {/* Content */}
                 <div className="flex flex-col gap-2 px-2 mt-4">
                   <h3
-                    className="text-[20px] md:text-[24px] leading-[1.33] text-[rgb(22,22,22)]"
-                    style={{ fontFamily: '"Basel grotesk book", "Basel grotesk", sans-serif' }}
+                    className="text-[17px] md:text-[20px] leading-[1.25] text-[rgb(30,30,30)] font-bold"
+                    style={{ fontFamily: "Moderat-Black, var(--font-archivo-black), sans-serif" }}
                   >
                     {card.title}
                   </h3>
-                  <p
-                    className="text-[16px] md:text-[18px] leading-[1.3] text-[rgb(77,77,77)]"
-                    style={{ fontFamily: '"Basel grotesk", sans-serif' }}
-                  >
+                  <p className="text-[14px] md:text-[15px] leading-[1.6] text-[rgb(80,80,80)]">
                     {card.description}
                   </p>
                 </div>
@@ -199,15 +178,16 @@ export function DigitalWellbeing() {
         </div>
 
         {/* Pagination dots */}
-        <div className="flex justify-center items-center gap-2 mt-16">
+        <div className="mt-10 flex justify-center items-center gap-2 md:mt-12">
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
               onClick={() => setPage(i)}
-              className="w-2 h-2 rounded-full transition-colors"
-              style={{
-                backgroundColor: i === page ? "rgb(22, 22, 22)" : "rgba(22, 22, 22, 0.25)",
-              }}
+              className={`rounded-full transition-all duration-300 cursor-pointer ${
+                i === page
+                  ? "w-7 h-2.5 bg-[var(--koda-bear-blue)]"
+                  : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
+              }`}
               aria-label={`Go to page ${i + 1}`}
               aria-current={i === page ? "true" : undefined}
             />

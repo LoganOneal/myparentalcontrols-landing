@@ -54,26 +54,26 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const navLinkClass =
-  "inline-flex h-full items-center text-[16px] leading-6 text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)] focus-visible:outline-none focus-visible:text-[var(--bark-blue)]";
+  "inline-flex h-full items-center font-[var(--font-koda-title)] text-[15px] font-semibold leading-6 text-[rgba(18,18,18,0.78)] transition-colors hover:text-[#121212] focus-visible:outline-none focus-visible:text-[#121212]";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="relative z-50 w-full border-b border-[var(--bark-border)] bg-white font-[var(--bark-sans)]">
-      <div className="mx-auto flex h-[68px] max-w-[1280px] items-center px-5 lg:px-8">
+      <div className="relative mx-auto flex h-[68px] max-w-[1280px] items-center px-5 lg:px-8">
         <Link
           href="/"
           className="flex shrink-0 items-center"
           aria-label="Koda home"
           onClick={() => setMobileOpen(false)}
         >
-          <KodaLogo height={34} markSize={44} textFirst />
+          <KodaLogo height={34} markSize={44} color="#121212" />
         </Link>
 
         <nav
           aria-label="Primary"
-          className="ml-9 hidden h-full items-center gap-7 xl:flex"
+          className="absolute left-1/2 top-0 hidden h-full -translate-x-1/2 items-center gap-7 xl:flex"
         >
           {NAV_GROUPS.map((group) => (
             <div key={group.label} className="group relative flex h-full items-center">
@@ -122,21 +122,6 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-
-        <div className="ml-auto hidden items-center gap-5 xl:flex">
-          <Link
-            href="/login"
-            className="text-[16px] leading-6 text-[var(--bark-text)] transition-colors hover:text-[var(--bark-blue)]"
-          >
-            Log in
-          </Link>
-          <Link
-            href="/get-started"
-            className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
-          >
-            Get Started
-          </Link>
-        </div>
 
         <button
           type="button"
@@ -189,20 +174,6 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/login"
-              onClick={() => setMobileOpen(false)}
-              className="border-b border-[var(--bark-border)] py-3 text-[18px] font-bold leading-6 transition-colors hover:text-[var(--bark-blue)]"
-            >
-              Log in
-            </Link>
-            <Link
-              href="/get-started"
-              onClick={() => setMobileOpen(false)}
-              className="mt-5 inline-flex h-11 items-center justify-center rounded-full bg-[var(--bark-blue)] px-5 text-[16px] font-bold leading-none text-white transition-colors hover:bg-[var(--bark-blue-hover)]"
-            >
-              Get Started
-            </Link>
           </nav>
         </div>
       )}
