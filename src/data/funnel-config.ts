@@ -227,7 +227,7 @@ export const funnelConfig: FunnelConfig = {
     {
       id: "summary",
       type: "summary",
-      title: "Your Koda Safety Plan",
+      title: "Your Koda Parental Controls Plan",
       subtitle: "Here's what we've prepared based on your answers.",
     },
   ],

@@ -1,9 +1,9 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Koda Safety Terms of Service | Koda",
+  title: "Koda Gaming Parental Controls Terms of Service | Koda",
   description:
-    "Terms for using Koda Safety, the Koda website, parental-control software, parent alerts, and related family safety services.",
+    "Terms for using Koda Gaming Parental Controls, the Koda website, parental-control software, parent alerts, and related family safety services.",
 };
 
 const HTML = `<h1>Terms and Conditions</h1>
@@ -12,7 +12,7 @@ const HTML = `<h1>Terms and Conditions</h1>
 
 <h2>1. Definitions</h2>
 <ul>
-  <li><strong>Application</strong> means the Koda or Koda Safety software, dashboard, tools, and updates.</li>
+  <li><strong>Application</strong> means the Koda or Koda Gaming Parental Controls software, dashboard, tools, and updates.</li>
   <li><strong>Company, We, Us, or Our</strong> means Koda, with mailing address 160 W. Camino Real #594, Boca Raton, FL 33432, United States.</li>
   <li><strong>Parent</strong> or <strong>Guardian</strong> means a person with legal authority to use the Service for family safety and child monitoring.</li>
   <li><strong>Service</strong> means the Application, website, waitlist, parent dashboard, alerts, subscriptions, and related services offered by Koda.</li>
@@ -28,12 +28,12 @@ By accessing or using the Service, You agree to these Terms and the Koda Privacy
 
 <h2>3. Eligibility and Authority</h2>
 <p>
-You must be at least 18 years old or the age of majority in Your jurisdiction to create a parent account or purchase a subscription. You represent that You have the legal authority and required consents to install, configure, or use Koda Safety on any monitored device or child profile.
+You must be at least 18 years old or the age of majority in Your jurisdiction to create a parent account or purchase a subscription. You represent that You have the legal authority and required consents to install, configure, or use Koda Gaming Parental Controls on any monitored device or child profile.
 </p>
 
 <h2>4. Parent and Child Safety Use</h2>
 <p>
-Koda Safety is designed to help parents and guardians identify online risks such as grooming, bullying, threats, self-harm signals, sexual content, and harmful language. You are responsible for using the Service lawfully, transparently, and in a manner appropriate for Your family.
+Koda Gaming Parental Controls is designed to help parents and guardians identify online risks such as grooming, bullying, threats, self-harm signals, sexual content, and harmful language. You are responsible for using the Service lawfully, transparently, and in a manner appropriate for Your family.
 </p>
 <ul>
   <li>You must not use the Service to monitor anyone where You lack legal authority.</li>

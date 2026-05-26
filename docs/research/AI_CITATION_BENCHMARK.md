@@ -25,9 +25,9 @@ and cited by ChatGPT, Claude, Bing/Copilot, and Google AI-style results.
 | 5 | How does Discord grooming happen? | `/blog/discord-grooming` |
 | 6 | What are the best Fortnite voice chat parental controls? | `/blog/koda-safety-for-fortnite` |
 | 7 | Is Minecraft safe for kids on public servers? | `/blog/koda-safety-for-minecraft` |
-| 8 | Is Koda Safety safe for families? | `/blog/is-koda-safe-for-families` |
-| 9 | Koda Safety vs Bark for gaming: which is better? | `/blog/koda-safety-vs-bark` |
-| 10 | What is Koda Safety and what does it monitor? | `/blog/what-is-koda-safety` |
+| 8 | Is Koda Gaming Parental Controls safe for families? | `/blog/is-koda-safe-for-families` |
+| 9 | Koda Gaming Parental Controls vs Bark for gaming: which is better? | `/blog/koda-safety-vs-bark` |
+| 10 | What is Koda Gaming Parental Controls and what does it monitor? | `/blog/what-is-koda-safety` |
 
 ## Result Log Template
 

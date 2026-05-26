@@ -177,7 +177,7 @@ export const PLATFORMS: Platform[] = [
       { question: "Is Discord safe for kids?", answer: "Discord is rated 17+ on the App Store for a reason. It allows direct messaging with strangers, has minimal age verification, and hosts widespread NSFW content behind a single checkbox. With proper settings — DMs restricted to friends only, explicit content filter enabled, and active parental monitoring — Discord can be used more safely by teens." },
       { question: "What are Discord parental controls?", answer: "Discord's built-in options are limited. Family Center gives parents a high-level view of who their teen messages and which servers they join — but not message content. Parents should manually disable 'Allow direct messages from server members' and enable the explicit content filter under Privacy & Safety." },
       { question: "How do predators groom children on Discord?", answer: "Predators join gaming servers that children use, build trust in public channels, then send friend requests and move the conversation to DMs or private voice calls. Voice channels are especially dangerous because they leave no text record for moderation." },
-      { question: "How does Koda Safety monitor Discord?", answer: "Koda Safety monitors all Discord activity on your child's PC in real time — DMs, server text channels, and voice channels. It transcribes voice conversations and uses AI to detect grooming patterns, sexual content, threats, and attempts to move your child off-platform." },
+      { question: "How does Koda Gaming Parental Controls monitor Discord?", answer: "Koda Gaming Parental Controls monitors all Discord activity on your child's PC in real time — DMs, server text channels, and voice channels. It transcribes voice conversations and uses AI to detect grooming patterns, sexual content, threats, and attempts to move your child off-platform." },
     ],
     parentalControlsSteps: [
       "Open Discord Settings > Privacy & Safety.",
@@ -186,7 +186,7 @@ export const PLATFORMS: Platform[] = [
       "Set 'Who can add you as a friend' to 'Friends of Friends' only.",
       "Enable 'Explicit Image & Video Filter'.",
       "Set up Discord Family Center by linking your account to your child's.",
-      "Install Koda Safety for content-level monitoring of DMs, servers, and voice channels.",
+      "Install Koda Gaming Parental Controls for content-level monitoring of DMs, servers, and voice channels.",
     ],
     relatedBlogSlugs: ["koda-safety-for-discord", "discord-grooming"],
   },
@@ -242,7 +242,7 @@ export const PLATFORMS: Platform[] = [
       { question: "What are Fortnite parental controls?", answer: "Epic Games offers Cabined Accounts for under-13 players: chat restricted to friends, spending locked, and parent email required for changes. For older teens, parents can disable voice chat, restrict friend requests, hide online status, and set spending limits via Epic account settings." },
       { question: "How do I turn off Fortnite voice chat?", answer: "In Fortnite, go to Settings > Audio > Voice Chat and set it to Off, or restrict it to Party/Friends only. For Cabined Accounts (under 13), voice chat with non-friends is disabled by default." },
       { question: "Can predators contact my child through Fortnite?", answer: "Yes. Default squad voice chat puts your child on an open voice call with random players. Predators use this to build rapport during matches, then invite children to Discord for private conversations." },
-      { question: "How does Koda Safety monitor Fortnite?", answer: "Koda monitors both Fortnite text chat and voice chat on your child's PC. It transcribes voice conversations in real time and uses AI to detect grooming language, bullying, threats, and attempts to move your child to other platforms." },
+      { question: "How does Koda Gaming Parental Controls monitor Fortnite?", answer: "Koda monitors both Fortnite text chat and voice chat on your child's PC. It transcribes voice conversations in real time and uses AI to detect grooming language, bullying, threats, and attempts to move your child to other platforms." },
     ],
     parentalControlsSteps: [
       "Log in to your child's Epic Games account at epicgames.com.",
@@ -252,7 +252,7 @@ export const PLATFORMS: Platform[] = [
       "Disable 'Auto-join Voice Chat'.",
       "Set 'Allow Friend Requests' to 'Off' or review requests together.",
       "Enable spending limits or require parent approval for V-Bucks purchases.",
-      "Install Koda Safety on the gaming PC for voice and text monitoring.",
+      "Install Koda Gaming Parental Controls on the gaming PC for voice and text monitoring.",
     ],
     relatedBlogSlugs: ["koda-safety-for-fortnite"],
   },
@@ -303,10 +303,10 @@ export const PLATFORMS: Platform[] = [
     recommendation:
       "Elementary and up for single-player or whitelist servers. Public servers — middle school and up with monitoring.",
     faqs: [
-      { question: "Is Minecraft safe for kids?", answer: "Minecraft in single-player or private worlds with known friends is one of the safest gaming options. The risk increases significantly with public multiplayer servers, where kids chat with strangers, encounter inappropriate mods, and get invited to Discord servers. With Microsoft Family Safety settings and Koda Safety monitoring, multiplayer Minecraft can be managed safely." },
+      { question: "Is Minecraft safe for kids?", answer: "Minecraft in single-player or private worlds with known friends is one of the safest gaming options. The risk increases significantly with public multiplayer servers, where kids chat with strangers, encounter inappropriate mods, and get invited to Discord servers. With Microsoft Family Safety settings and Koda Gaming Parental Controls monitoring, multiplayer Minecraft can be managed safely." },
       { question: "What are Minecraft parental controls?", answer: "Minecraft parental controls are managed through Microsoft Family Safety at the Xbox account level. Parents can restrict multiplayer to friends only, disable chat, control Realms membership, and set play time limits. Java Edition has fewer built-in controls — parents need to manage server access manually." },
       { question: "Are there predators on Minecraft?", answer: "Yes. Public Minecraft servers with thousands of concurrent players are known targets for predators. The pattern: a friendly older player helps a child in-game, builds trust, then invites them to a private Discord server where there is no moderation." },
-      { question: "How does Koda Safety monitor Minecraft?", answer: "Koda monitors Minecraft server chat and Realms messaging in real time on your child's PC. It flags grooming language, bullying, sexual content, and attempts to move your child to Discord or other off-platform channels." },
+      { question: "How does Koda Gaming Parental Controls monitor Minecraft?", answer: "Koda monitors Minecraft server chat and Realms messaging in real time on your child's PC. It flags grooming language, bullying, sexual content, and attempts to move your child to Discord or other off-platform channels." },
     ],
     parentalControlsSteps: [
       "Sign in to Microsoft Family Safety at family.microsoft.com.",
@@ -315,7 +315,7 @@ export const PLATFORMS: Platform[] = [
       "Disable 'Communication with other players' or restrict to Friends only.",
       "For Bedrock Edition: check in-game Settings > Profile > Privacy settings.",
       "For Java Edition: prefer whitelisted servers and review the server list together.",
-      "Install Koda Safety on the gaming PC for real-time chat monitoring.",
+      "Install Koda Gaming Parental Controls on the gaming PC for real-time chat monitoring.",
     ],
     relatedBlogSlugs: ["koda-safety-for-minecraft"],
   },
@@ -360,11 +360,11 @@ export const PLATFORMS: Platform[] = [
     recommendation:
       "Elementary kids on Account Restriction mode with chat off; middle school+ with chat enabled and active monitoring.",
     faqs: [
-      { question: "Is Roblox safe for kids?", answer: "Roblox can be safe with proper settings, but it carries real risks. The platform has over 70 million daily users, mostly children, and features user-generated games with text and voice chat. Without Account Restrictions enabled, children can chat with strangers, encounter sexually-themed 'condo' games, and receive friend requests from anyone. With strict parental controls, monitored chat, and tools like Koda Safety, Roblox can be used more safely." },
+      { question: "Is Roblox safe for kids?", answer: "Roblox can be safe with proper settings, but it carries real risks. The platform has over 70 million daily users, mostly children, and features user-generated games with text and voice chat. Without Account Restrictions enabled, children can chat with strangers, encounter sexually-themed 'condo' games, and receive friend requests from anyone. With strict parental controls, monitored chat, and tools like Koda Gaming Parental Controls, Roblox can be used more safely." },
       { question: "What are Roblox parental controls?", answer: "Roblox offers Account Restrictions (locks chat, restricts experiences to curated list), a parent PIN (prevents settings changes), screen time limits, experience age ratings, and optional voice chat (requires age verification). Parents can also control who can message their child and who can follow/friend them." },
       { question: "How do predators use Roblox to target children?", answer: "Predators join popular Roblox games, identify children through chat behavior, build trust with compliments and virtual gifts (Robux), then move the conversation to private servers or Discord where there is no moderation. The grooming process can take days or weeks before dangerous requests are made." },
       { question: "What are Roblox condo games?", answer: "Condo games are user-created Roblox experiences with sexual content — explicit avatars, simulated sexual acts, and adult themes. They violate Roblox's rules but re-appear constantly under new names. They are often shared via Discord links or word of mouth." },
-      { question: "How does Koda Safety monitor Roblox?", answer: "Koda Safety monitors Roblox text chat and voice conversations in real time. It uses AI trained on gaming-specific threats to detect grooming language, sexual content, bullying, phishing attempts, and attempts to move your child off-platform. Parents receive an immediate alert with the full conversation context." },
+      { question: "How does Koda Gaming Parental Controls monitor Roblox?", answer: "Koda Gaming Parental Controls monitors Roblox text chat and voice conversations in real time. It uses AI trained on gaming-specific threats to detect grooming language, sexual content, bullying, phishing attempts, and attempts to move your child off-platform. Parents receive an immediate alert with the full conversation context." },
     ],
     parentalControlsSteps: [
       "Log in to your child's Roblox account and go to Settings > Security.",
@@ -373,7 +373,7 @@ export const PLATFORMS: Platform[] = [
       "Go to Settings > Privacy and restrict 'Who can message me' to Friends or No one.",
       "Set 'Who can invite me to private servers' to No one or Friends.",
       "Review experience age ratings under Settings > Parental Controls.",
-      "Install Koda Safety on the gaming device for conversation-level monitoring.",
+      "Install Koda Gaming Parental Controls on the gaming device for conversation-level monitoring.",
     ],
     relatedBlogSlugs: ["koda-safety-for-roblox", "predators-on-roblox"],
   },

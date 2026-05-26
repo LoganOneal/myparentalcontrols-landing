@@ -1,21 +1,21 @@
 import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Koda Safety Privacy Policy | Koda",
+  title: "Koda Gaming Parental Controls Privacy Policy | Koda",
   description:
-    "How Koda Safety collects, uses, protects, and deletes family data for parental controls, PC gaming safety, and parent alerts.",
+    "How Koda Gaming Parental Controls collects, uses, protects, and deletes family data for parental controls, PC gaming safety, and parent alerts.",
 };
 
 const HTML = `<h1>Privacy Policy</h1>
 <p>Last Updated: May 23, 2026</p>
 <p>
-This Privacy Policy explains how Koda collects, uses, shares, stores, and protects information when You use the Koda website, Koda Safety application, parent dashboard, waitlist, and related services (collectively, the "Service").
+This Privacy Policy explains how Koda collects, uses, shares, stores, and protects information when You use the Koda website, Koda Gaming Parental Controls application, parent dashboard, waitlist, and related services (collectively, the "Service").
 </p>
 
 <h2>1. Definitions</h2>
 <ul>
   <li><strong>Account</strong> means the parent or family account used to access the Service.</li>
-  <li><strong>Application</strong> means the Koda or Koda Safety software and related tools.</li>
+  <li><strong>Application</strong> means the Koda or Koda Gaming Parental Controls software and related tools.</li>
   <li><strong>Company, We, Us, or Our</strong> means Koda, with mailing address 160 W. Camino Real #594, Boca Raton, FL 33432, United States.</li>
   <li><strong>Child Profile</strong> means a profile a parent or guardian creates to manage monitoring, alerts, and family safety settings.</li>
   <li><strong>Monitoring Data</strong> means activity, content, metadata, transcripts, screenshots, clips, alerts, platform information, device information, and other safety signals collected or processed to provide parental-control and online-safety features.</li>
@@ -36,7 +36,7 @@ This Privacy Policy explains how Koda collects, uses, shares, stores, and protec
 </ul>
 
 <h3>2.2 Child Profile and Monitoring Data</h3>
-<p>To provide Koda Safety features, We may process information related to a child profile or monitored device.</p>
+<p>To provide Koda Gaming Parental Controls features, We may process information related to a child profile or monitored device.</p>
 <ul>
   <li>Child profile name or nickname</li>
   <li>Age range, device, and platform settings You provide</li>
@@ -57,7 +57,7 @@ This Privacy Policy explains how Koda collects, uses, shares, stores, and protec
 <h2>3. How We Use Information</h2>
 <p>We use information to:</p>
 <ul>
-  <li>Provide parent alerts, dashboards, setup flows, and Koda Safety monitoring features</li>
+  <li>Provide parent alerts, dashboards, setup flows, and Koda Gaming Parental Controls monitoring features</li>
   <li>Detect, classify, and surface online safety risks</li>
   <li>Operate, secure, troubleshoot, and improve the Service</li>
   <li>Process subscriptions, payments, and account requests</li>

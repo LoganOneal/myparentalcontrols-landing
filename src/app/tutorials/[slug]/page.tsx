@@ -138,7 +138,7 @@ export default async function TutorialDetailPage({
         {/* Koda tip */}
         <section className="mt-6 p-6 sm:p-8 rounded-2xl border border-[#2563EB]/20 bg-[#F6F8FF]">
           <h2 className="text-lg font-bold text-black">
-            How Koda Safety helps beyond settings
+            How Koda Gaming Parental Controls helps beyond settings
           </h2>
           <p className="mt-2 text-base text-black/70 leading-relaxed">
             {tutorial.kodaTip}

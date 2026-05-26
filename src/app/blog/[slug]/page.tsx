@@ -479,7 +479,7 @@ export default async function BlogPostPage({
                 href="/"
                 className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-5 text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
               >
-                Koda Safety
+                Koda Parental Controls
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </div>

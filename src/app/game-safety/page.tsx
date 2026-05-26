@@ -204,7 +204,7 @@ export default function GameSafetyPage() {
             Monitor what happens inside these games
           </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
-            Koda Safety monitors voice and text chat inside PC games so you can
+            Koda Gaming Parental Controls monitors voice and text chat inside PC games so you can
             see risks like grooming, bullying, and threats in real time.
           </p>
           <Link

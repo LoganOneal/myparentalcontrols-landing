@@ -1,12 +1,12 @@
 export const SITE_URL = "https://kodasafety.com";
 export const SITE_NAME = "Koda";
-export const SITE_ALTERNATE_NAME = "Koda Safety";
+export const SITE_ALTERNATE_NAME = "Koda Gaming Parental Controls";
 
 export const SITE_DESCRIPTION =
-  "Koda Safety is a parental control system for PC games, voice chat, and online child safety alerts.";
+  "Koda Gaming Parental Controls is a parental control system for PC games, voice chat, and online child safety alerts.";
 
 export const KODA_PRODUCT_DESCRIPTION =
-  "Koda Safety monitors voice and chat across PC games and online platforms so parents can see risks like grooming, bullying, threats, and harmful language in real time.";
+  "Koda Gaming Parental Controls monitors voice and chat across PC games and online platforms so parents can see risks like grooming, bullying, threats, and harmful language in real time.";
 
 export const KODA_SOCIAL_LINKS = [
   "https://www.linkedin.com/company/kodasafety/",
@@ -52,7 +52,7 @@ export const kodaSafetySoftwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": `${SITE_URL}/#software`,
-  name: "Koda Safety",
+  name: "Koda Gaming Parental Controls",
   alternateName: "Koda parental controls",
   applicationCategory: "ParentalControlApplication",
   operatingSystem: "Windows, macOS",

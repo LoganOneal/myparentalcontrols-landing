@@ -1,4 +1,4 @@
--- Waitlist schema for Koda Safety. Mirrors the Airtable Waitlist table.
+-- Waitlist schema for Koda Gaming Parental Controls. Mirrors the Airtable Waitlist table.
 -- Idempotent: safe to re-run.
 
 create table if not exists public.waitlist (

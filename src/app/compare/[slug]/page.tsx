@@ -251,7 +251,7 @@ export default async function ComparisonPage({
             Ready to protect your child while they game?
           </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
-            Koda Safety monitors voice and chat inside PC games so you can see
+            Koda Gaming Parental Controls monitors voice and chat inside PC games so you can see
             risks like grooming, bullying, and threats in real time.
           </p>
           <Link

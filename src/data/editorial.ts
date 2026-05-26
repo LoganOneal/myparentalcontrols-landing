@@ -26,7 +26,7 @@ export const EDITORIAL_CONTRIBUTORS: Record<
     role: "Family safety research and editorial",
     credentials:
       "Research team focused on parental controls, PC gaming safety, platform policies, and parent-facing safety workflows.",
-    bio: "The Koda editorial staff reviews platform help centers, safety policies, child-safety guidance, and parent-facing setup flows before publishing Koda Safety guides.",
+    bio: "The Koda editorial staff reviews platform help centers, safety policies, child-safety guidance, and parent-facing setup flows before publishing Koda Gaming Parental Controls guides.",
     url: "/blog",
     sameAs: [
       "https://www.linkedin.com/company/kodasafety/",

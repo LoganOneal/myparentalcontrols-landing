@@ -1,18 +1,18 @@
-# Koda Safety SEO Tracking
+# Koda Gaming Parental Controls SEO Tracking
 
 Created: May 23, 2026
 
 ## Target Query Set
 
-- Koda Safety
+- Koda Gaming Parental Controls
 - Koda parental controls
 - Koda app safety
 - Koda PC gaming safety
-- Koda Safety Roblox
-- Koda Safety Discord
-- Koda Safety Fortnite
-- Koda Safety Minecraft
-- Koda Safety vs Bark
+- Koda Gaming Parental Controls Roblox
+- Koda Gaming Parental Controls Discord
+- Koda Gaming Parental Controls Fortnite
+- Koda Gaming Parental Controls Minecraft
+- Koda Gaming Parental Controls vs Bark
 - Koda vs Bark
 
 ## Launch Checklist
@@ -29,6 +29,6 @@ Created: May 23, 2026
 ## Weekly Review
 
 - Track impressions and average position for the target query set.
-- Watch whether Google shows `Koda Safety` as a brand/entity result or mixes it with unrelated Koda products.
+- Watch whether Google shows `Koda Gaming Parental Controls` as a brand/entity result or mixes it with unrelated Koda products.
 - Add internal links from new platform or comparison content back to `/koda-safety`.
 - Refresh title and description copy if exact-match impressions grow but click-through stays low.

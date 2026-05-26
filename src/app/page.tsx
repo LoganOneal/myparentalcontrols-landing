@@ -22,10 +22,10 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Koda Safety | Parental Controls for PC Games",
+  title: "Koda Gaming Parental Controls | PC Game Safety Alerts",
   description: KODA_PRODUCT_DESCRIPTION,
   keywords: [
-    "Koda Safety",
+    "Koda Gaming Parental Controls",
     "Koda parental controls",
     "PC gaming parental controls",
     "game chat monitoring",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Koda Safety | Parental Controls for PC Games",
+    title: "Koda Gaming Parental Controls | PC Game Safety Alerts",
     description: SITE_DESCRIPTION,
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koda Safety | Parental Controls for PC Games",
+    title: "Koda Gaming Parental Controls | PC Game Safety Alerts",
     description: SITE_DESCRIPTION,
     images: ["/seo/opengraph.jpg"],
   },

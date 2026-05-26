@@ -18,9 +18,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { BLOG_POSTS, type BlogPost } from "@/data/blog-posts";
 
 export const metadata = {
-  title: "Koda Safety Blog | Parent Guides for Gaming and Online Risk",
+  title: "Koda Gaming Parental Controls Blog | Parent Guides for Gaming and Online Risk",
   description:
-    "Parent-first Koda Safety guides for PC games, Roblox, Discord, Fortnite, Minecraft, voice chat, and online child safety.",
+    "Parent-first Koda Gaming Parental Controls guides for PC games, Roblox, Discord, Fortnite, Minecraft, voice chat, and online child safety.",
 };
 
 type Topic = { icon: LucideIcon; label: string; description: string };
@@ -272,7 +272,7 @@ export default function BlogIndexPage() {
                 Safer gaming starts with knowing what to look for.
               </h1>
               <p className="mt-5 max-w-[620px] text-base leading-relaxed text-black/70 sm:text-lg">
-                Practical Koda Safety guides for the apps, games, DMs, and
+                Practical Koda Parental Controls guides for the apps, games, DMs, and
                 voice chats where kids spend their time. Clear signals, plain
                 language, and next steps parents can actually use.
               </p>
@@ -281,7 +281,7 @@ export default function BlogIndexPage() {
                   href="/blog/what-is-koda-safety"
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2563EB] px-6 font-bold text-white transition hover:bg-[#1D4ED8]"
                 >
-                  Read Koda Safety
+                  Read Koda Parental Controls
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </Link>
                 <Link

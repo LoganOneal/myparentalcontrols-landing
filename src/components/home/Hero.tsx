@@ -166,7 +166,7 @@ export function Hero() {
 
           {/* Sub paragraph */}
           <p className="text-base sm:text-lg font-normal leading-relaxed text-gray-700 max-w-[560px]">
-            Koda Safety monitors voice and chat for bullying, grooming,
+            Koda Gaming Parental Controls monitors voice and chat for bullying, grooming,
             threats, and harmful language. Parents get alerted in real time.
           </p>
 

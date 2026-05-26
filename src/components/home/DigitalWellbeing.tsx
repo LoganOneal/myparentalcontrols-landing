@@ -8,6 +8,7 @@ import {
   useState,
 } from "react";
 import Image from "next/image";
+import { Maximize2, X } from "lucide-react";
 
 type FeatureCard = {
   title: string;
@@ -54,67 +55,76 @@ const CARDS: FeatureCard[] = [
   },
 ];
 
-const DESKTOP_VISIBLE_CARDS = 3;
-const DESKTOP_CARD_GAP = 24;
-const MOBILE_CARD_GAP = 16;
-const MOBILE_CARD_WIDTH_RATIO = 0.66;
-const MOBILE_CARD_MAX_WIDTH = 255;
-
 export function DigitalWellbeing() {
   const trackRef = useRef<HTMLDivElement>(null);
   const dragStartXRef = useRef(0);
   const dragStartScrollLeftRef = useRef(0);
   const [page, setPage] = useState(0);
-  const [cardWidth, setCardWidth] = useState(0);
-  const [cardGap, setCardGap] = useState(DESKTOP_CARD_GAP);
-  const [cardsPerPage, setCardsPerPage] = useState(DESKTOP_VISIBLE_CARDS);
   const [isMouseDragging, setIsMouseDragging] = useState(false);
-  const totalPages = Math.ceil(CARDS.length / cardsPerPage);
-
-  const updateCardWidth = useCallback(() => {
-    if (!trackRef.current) return;
-    const containerWidth = trackRef.current.parentElement?.clientWidth ?? 0;
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    const nextGap = isMobile ? MOBILE_CARD_GAP : DESKTOP_CARD_GAP;
-    const nextCardsPerPage = isMobile ? 1 : DESKTOP_VISIBLE_CARDS;
-    const nextCardWidth = isMobile
-      ? Math.min(MOBILE_CARD_MAX_WIDTH, containerWidth * MOBILE_CARD_WIDTH_RATIO)
-      : (containerWidth - nextGap * (DESKTOP_VISIBLE_CARDS - 1)) /
-        DESKTOP_VISIBLE_CARDS;
-
-    setCardGap(nextGap);
-    setCardsPerPage(nextCardsPerPage);
-    setCardWidth(nextCardWidth);
-  }, []);
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+  const totalPages = CARDS.length;
+  const selectedCard =
+    selectedCardIndex === null ? null : CARDS[selectedCardIndex];
 
   const scrollToPage = useCallback(
     (nextPage: number) => {
       if (!trackRef.current) return;
       const clampedPage = Math.max(0, Math.min(totalPages - 1, nextPage));
-      const left = clampedPage * (cardWidth + cardGap) * cardsPerPage;
-      trackRef.current.scrollTo({ left, behavior: "smooth" });
+      const target = trackRef.current.children[clampedPage] as HTMLElement | undefined;
+      trackRef.current.scrollTo({
+        left: target?.offsetLeft ?? 0,
+        behavior: "smooth",
+      });
       setPage(clampedPage);
     },
-    [cardGap, cardWidth, cardsPerPage, totalPages],
+    [totalPages],
   );
 
   const updateActivePage = useCallback(() => {
-    if (!trackRef.current || cardWidth <= 0) return;
-    const pageWidth = (cardWidth + cardGap) * cardsPerPage;
-    const nextPage = Math.round(trackRef.current.scrollLeft / pageWidth);
-    setPage(Math.max(0, Math.min(totalPages - 1, nextPage)));
-  }, [cardGap, cardWidth, cardsPerPage, totalPages]);
+    if (!trackRef.current) return;
+
+    const scrollLeft = trackRef.current.scrollLeft;
+    const children = Array.from(trackRef.current.children) as HTMLElement[];
+    const nearestIndex = children.reduce((nearest, child, index) => {
+      const nearestDistance = Math.abs(children[nearest].offsetLeft - scrollLeft);
+      const childDistance = Math.abs(child.offsetLeft - scrollLeft);
+      return childDistance < nearestDistance ? index : nearest;
+    }, 0);
+
+    setPage((currentPage) =>
+      currentPage === nearestIndex ? currentPage : nearestIndex,
+    );
+  }, []);
 
   useEffect(() => {
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-    return () => window.removeEventListener("resize", updateCardWidth);
-  }, [updateCardWidth]);
+    if (!selectedCard) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setSelectedCardIndex(null);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedCard]);
 
   const activePage = Math.min(page, totalPages - 1);
 
   const canGoPrev = activePage > 0;
   const canGoNext = activePage < totalPages - 1;
+
+  function openCard(index: number) {
+    if (!window.matchMedia("(max-width: 767px)").matches) return;
+    setSelectedCardIndex(index);
+  }
 
   function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
     if (event.pointerType !== "mouse" || event.button !== 0 || !trackRef.current) {
@@ -215,45 +225,93 @@ export function DigitalWellbeing() {
             onPointerUp={handlePointerEnd}
             onPointerCancel={handlePointerEnd}
             onPointerLeave={handlePointerEnd}
-            className={`no-scrollbar flex snap-x snap-mandatory overflow-x-auto scroll-smooth select-none ${
+            className={`no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth select-none md:gap-6 ${
               isMouseDragging ? "cursor-grabbing" : "cursor-grab"
             }`}
-            style={{ gap: `${cardGap}px` }}
           >
-            {CARDS.map((card) => (
+            {CARDS.map((card, index) => (
               <div
                 key={card.title}
-                className="snap-start flex-shrink-0 flex flex-col w-[66vw] max-w-[255px] md:w-[calc(33.3333%-16px)] md:max-w-none"
-                style={{ width: cardWidth > 0 ? `${cardWidth}px` : undefined }}
+                className="snap-start flex-shrink-0 flex flex-col w-[66vw] max-w-[255px] md:w-[calc((100%_-_48px)_/_3)] md:max-w-none"
               >
-                {/* Image */}
-                <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "4/5" }}>
-                  <Image
-                    src={card.image}
-                    alt={card.alt}
-                    fill
-                    draggable={false}
-                    className="object-cover"
-                    sizes="(max-width: 767px) 66vw, 33vw"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="flex flex-col gap-2 px-2 mt-4">
-                  <h3
-                    className="text-[17px] md:text-[20px] leading-[1.25] text-[rgb(30,30,30)] font-bold"
-                    style={{ fontFamily: "Moderat-Black, var(--font-archivo-black), sans-serif" }}
+                <button
+                  type="button"
+                  onClick={() => openCard(index)}
+                  className="group text-left cursor-zoom-in md:pointer-events-none md:cursor-grab"
+                  aria-label={`View ${card.title} UI screenshot larger`}
+                  tabIndex={-1}
+                >
+                  {/* Image */}
+                  <div
+                    className="relative w-full overflow-hidden rounded-2xl"
+                    style={{ aspectRatio: "4/5" }}
                   >
-                    {card.title}
-                  </h3>
-                  <p className="text-[14px] md:text-[15px] leading-[1.6] text-[rgb(80,80,80)]">
-                    {card.description}
-                  </p>
-                </div>
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      draggable={false}
+                      className="object-cover transition-transform duration-300 group-active:scale-[0.99]"
+                      sizes="(max-width: 767px) 66vw, 33vw"
+                    />
+                    <span className="absolute bottom-3 left-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/65 text-white backdrop-blur-sm md:hidden">
+                      <Maximize2 size={15} aria-hidden />
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex flex-col gap-2 px-2 mt-4">
+                    <h3
+                      className="text-[17px] md:text-[20px] leading-[1.25] text-[rgb(30,30,30)] font-bold"
+                      style={{ fontFamily: "Moderat-Black, var(--font-archivo-black), sans-serif" }}
+                    >
+                      {card.title}
+                    </h3>
+                    <p className="text-[14px] md:text-[15px] leading-[1.6] text-[rgb(80,80,80)]">
+                      {card.description}
+                    </p>
+                  </div>
+                </button>
               </div>
             ))}
           </div>
         </div>
+
+        {selectedCard && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/78 px-4 py-5 backdrop-blur-sm md:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${selectedCard.title} enlarged UI screenshot`}
+            onClick={() => setSelectedCardIndex(null)}
+          >
+            <div
+              className="relative flex h-full max-h-[820px] w-full max-w-[430px] flex-col"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setSelectedCardIndex(null)}
+                className="absolute right-0 top-0 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl font-semibold text-black shadow-lg"
+                aria-label="Close enlarged screenshot"
+              >
+                <X size={20} aria-hidden />
+              </button>
+              <div className="relative mt-12 min-h-0 flex-1 overflow-hidden rounded-[28px] bg-white shadow-2xl">
+                <Image
+                  src={selectedCard.image}
+                  alt={selectedCard.alt}
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                />
+              </div>
+              <p className="mt-4 px-2 text-center text-sm font-semibold leading-snug text-white">
+                {selectedCard.title}
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Pagination dots */}
         <div className="mt-10 flex justify-center items-center gap-2 md:mt-12">

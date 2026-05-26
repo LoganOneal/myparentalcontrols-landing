@@ -58,7 +58,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Fortnite voice chat puts your child on an open mic with random players of all ages. This is where predators make first contact and where bullying happens live. Disabling or restricting voice chat to friends is the single most impactful safety change parents can make.",
     kodaTip:
-      "Even with voice chat set to Friends Only, Koda Safety monitors what is said in those conversations. You will receive alerts if a 'friend' starts grooming, bullying, or pressuring your child — because not every friend is safe.",
+      "Even with voice chat set to Friends Only, Koda Gaming Parental Controls monitors what is said in those conversations. You will receive alerts if a 'friend' starts grooming, bullying, or pressuring your child — because not every friend is safe.",
   },
   {
     slug: "turn-off-roblox-chat",
@@ -103,7 +103,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Roblox chat is the primary way predators contact children on the platform. Grooming starts in chat — with compliments, gift offers, and requests to 'play privately.' Restricting chat is the most effective way to reduce predator contact risk.",
     kodaTip:
-      "If you allow limited chat (Friends only), Koda Safety monitors those conversations in real time and alerts you when grooming language, sexual content, or off-platform invitation attempts appear — even from accepted friends.",
+      "If you allow limited chat (Friends only), Koda Gaming Parental Controls monitors those conversations in real time and alerts you when grooming language, sexual content, or off-platform invitation attempts appear — even from accepted friends.",
   },
   {
     slug: "turn-off-roblox-voice-chat",
@@ -139,7 +139,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Roblox voice chat (spatial voice) lets players talk freely with anyone in the same game world. Unlike text chat, voice leaves no record and cannot be moderated by Roblox. This makes it a high-risk channel for predator contact and bullying.",
     kodaTip:
-      "Koda Safety monitors Roblox voice conversations even when they are enabled. If you choose to allow voice chat for older teens, Koda transcribes and analyzes conversations in real time, alerting you to grooming, threats, or dangerous content.",
+      "Koda Gaming Parental Controls monitors Roblox voice conversations even when they are enabled. If you choose to allow voice chat for older teens, Koda transcribes and analyzes conversations in real time, alerting you to grooming, threats, or dangerous content.",
   },
   {
     slug: "turn-off-discord-dms",
@@ -181,7 +181,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Discord DMs are the highest-risk area on the platform. Grooming almost always moves to DMs after initial contact in a server. By disabling DMs from server members, you eliminate the primary path predators use to isolate children for private conversations.",
     kodaTip:
-      "Even with DMs restricted to friends, Koda Safety monitors all Discord conversations on your child's PC — including DMs from accepted friends, server messages, and voice channels. You receive alerts the moment dangerous content appears.",
+      "Even with DMs restricted to friends, Koda Gaming Parental Controls monitors all Discord conversations on your child's PC — including DMs from accepted friends, server messages, and voice channels. You receive alerts the moment dangerous content appears.",
   },
   {
     slug: "turn-off-minecraft-chat",
@@ -222,7 +222,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Minecraft public server chat is unmoderated stranger chat at scale. Top servers have tens of thousands of concurrent users. Predators target younger players in chat, build trust, then invite them to Discord. Restricting or monitoring chat is essential for safe multiplayer.",
     kodaTip:
-      "Koda Safety monitors Minecraft server chat and Realms messaging in real time. If you allow chat for social play, Koda alerts you when grooming language, bullying, Discord invite links, or dangerous requests appear in your child's conversations.",
+      "Koda Gaming Parental Controls monitors Minecraft server chat and Realms messaging in real time. If you allow chat for social play, Koda alerts you when grooming language, bullying, Discord invite links, or dangerous requests appear in your child's conversations.",
   },
   {
     slug: "restrict-games-on-windows",
@@ -273,7 +273,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Windows has no built-in age gate for launching games. Without Family Safety, your child can install and play any game from Steam, Epic, or the web — including M-rated titles with graphic violence and voice chat with strangers. Restricting at the OS level is the only way to enforce age-appropriate gaming on PC.",
     kodaTip:
-      "Microsoft Family Safety controls which games can run, but it does not monitor what happens inside those games. Koda Safety fills this gap — monitoring voice and text chat within allowed games and alerting you when conversations become dangerous.",
+      "Microsoft Family Safety controls which games can run, but it does not monitor what happens inside those games. Koda Gaming Parental Controls fills this gap — monitoring voice and text chat within allowed games and alerting you when conversations become dangerous.",
   },
   {
     slug: "monitor-kids-gaming-activity",
@@ -291,7 +291,7 @@ export const TUTORIALS: Tutorial[] = [
           "Tell your child you are setting up safety monitoring. Explain that you will not read every message — only be alerted when something genuinely dangerous appears. Frame it as a seatbelt, not a spy camera.",
       },
       {
-        instruction: "Install Koda Safety on the gaming PC.",
+        instruction: "Install Koda Gaming Parental Controls on the gaming PC.",
         detail:
           "Koda runs silently and monitors voice and text chat across all PC games. It only alerts you when AI detects genuine risk signals — grooming, threats, bullying, sexual content — not normal kid conversations.",
       },
@@ -319,7 +319,7 @@ export const TUTORIALS: Tutorial[] = [
     whyItMatters:
       "Kids who feel spied on hide their activity. Kids who feel protected talk to their parents. The goal is not to read every message — it is to catch the dangerous moments (grooming, sextortion, serious bullying) that your child may not recognize or report on their own.",
     kodaTip:
-      "Koda Safety is designed for this philosophy. It does not dump a feed of every conversation. It uses AI to surface only high-risk moments with full context, so parents can respond calmly and effectively without needing to monitor a dashboard constantly.",
+      "Koda Gaming Parental Controls is designed for this philosophy. It does not dump a feed of every conversation. It uses AI to surface only high-risk moments with full context, so parents can respond calmly and effectively without needing to monitor a dashboard constantly.",
   },
 ];
 

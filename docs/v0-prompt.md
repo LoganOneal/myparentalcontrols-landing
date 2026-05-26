@@ -1,4 +1,4 @@
-# Koda Safety — iOS App Design Prompt
+# Koda Gaming Parental Controls — iOS App Design Prompt
 
 Paste this entire prompt into v0 or Lovable to generate the app from scratch.
 
@@ -6,7 +6,7 @@ Paste this entire prompt into v0 or Lovable to generate the app from scratch.
 
 ## Prompt
 
-Build a polished iOS app called **Koda Safety** — a parental control app that monitors children's gaming activity (in-game chats, voice calls, screen recordings) and alerts parents only when a real threat is detected (grooming, sextortion, bullying).
+Build a polished iOS app called **Koda Gaming Parental Controls** — a parental control app that monitors children's gaming activity (in-game chats, voice calls, screen recordings) and alerts parents only when a real threat is detected (grooming, sextortion, bullying).
 
 This should look like a **top-50 App Store app** — think Apple Fitness+ activity rings, Headspace's warmth, or Linear's clarity. NOT a plain utility app, NOT iOS Settings with grouped lists. This is a premium consumer product with branded color, data visualization, visual hierarchy, and generous spacing.
 

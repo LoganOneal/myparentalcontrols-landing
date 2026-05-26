@@ -40,7 +40,7 @@ const NAV_COLUMNS: NavColumn[] = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Tutorials", href: "/tutorials" },
-      { label: "Koda Safety Guide", href: "/blog/what-is-koda-safety" },
+      { label: "Koda Parental Controls Guide", href: "/blog/what-is-koda-safety" },
       { label: "Safety & Privacy", href: "/safety-privacy" },
       { label: "Game Safety", href: "/game-safety" },
       { label: "Manage Subscription", href: "/manage-subscription" },
@@ -69,7 +69,7 @@ const QUICK_LINKS: NavLink[] = [
 function FooterLogo() {
   return (
     <Link href="/" className="inline-flex items-center gap-2" aria-label="Koda home">
-      <KodaLogo height={42} />
+      <KodaLogo height={42} markSrc="/seo/logo-no-bg.svg" />
     </Link>
   );
 }

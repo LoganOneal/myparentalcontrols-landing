@@ -41,12 +41,14 @@ export function GooglePlayBadge(props: React.HTMLAttributes<HTMLImageElement>) {
 export function KodaLogo({
   height = 32,
   markSize = height,
+  markSrc = KODA_LOGO_SRC,
   className,
   color = "var(--koda-bear-blue)",
   textFirst = false,
 }: {
   height?: number;
   markSize?: number;
+  markSrc?: string;
   className?: string;
   color?: string;
   textFirst?: boolean;
@@ -56,7 +58,7 @@ export function KodaLogo({
   const mark = (
     /* eslint-disable-next-line @next/next/no-img-element */
     <img
-      src={KODA_LOGO_SRC}
+      src={markSrc}
       alt=""
       aria-hidden
       width={markSize}

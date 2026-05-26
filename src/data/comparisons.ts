@@ -34,7 +34,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Bark",
     title: "Koda vs Bark: Best Parental Controls for Gaming [2026]",
     description:
-      "Compare Koda Safety and Bark for gaming parental controls. See which app is better for Roblox, Discord, Fortnite, Minecraft voice chat, and PC game monitoring.",
+      "Compare Koda Gaming Parental Controls and Bark for gaming parental controls. See which app is better for Roblox, Discord, Fortnite, Minecraft voice chat, and PC game monitoring.",
     verdict:
       "Koda is the better fit for families whose primary concern is PC gaming, voice chat, and in-game conversations. Bark is stronger for broad phone and social media monitoring across many platforms.",
     competitorStrengths: [
@@ -205,7 +205,7 @@ export const COMPARISONS: Comparison[] = [
       {
         question: "What is the best Bark alternative for gaming?",
         answer:
-          "Koda Safety is the leading Bark alternative for families focused on gaming risks. While Bark monitors phones and social media, Koda monitors the voice and text conversations that happen inside PC games where most gaming risks occur.",
+          "Koda Gaming Parental Controls is the leading Bark alternative for families focused on gaming risks. While Bark monitors phones and social media, Koda monitors the voice and text conversations that happen inside PC games where most gaming risks occur.",
       },
     ],
   },
@@ -214,7 +214,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Qustodio",
     title: "Koda vs Qustodio: Gaming Parental Controls Compared [2026]",
     description:
-      "Compare Koda Safety and Qustodio for parental controls. See which is better for gaming safety, voice chat monitoring, and protecting kids in Roblox, Discord, and Fortnite.",
+      "Compare Koda Gaming Parental Controls and Qustodio for parental controls. See which is better for gaming safety, voice chat monitoring, and protecting kids in Roblox, Discord, and Fortnite.",
     verdict:
       "Koda is the better choice for families focused on gaming safety and voice chat. Qustodio is stronger for device-wide content filtering, screen time management, and cross-platform device controls.",
     competitorStrengths: [
@@ -341,7 +341,7 @@ export const COMPARISONS: Comparison[] = [
       {
         question: "What is the best Qustodio alternative for gaming families?",
         answer:
-          "Koda Safety is the best alternative if your main concern is what happens inside PC games. For device-wide controls, Qustodio remains strong — but it has a blind spot in gaming conversations that Koda fills.",
+          "Koda Gaming Parental Controls is the best alternative if your main concern is what happens inside PC games. For device-wide controls, Qustodio remains strong — but it has a blind spot in gaming conversations that Koda fills.",
       },
     ],
   },
@@ -350,7 +350,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Aura",
     title: "Koda vs Aura: Parental Controls for Gaming Safety [2026]",
     description:
-      "Compare Koda Safety and Aura parental controls for families. See which is better for gaming safety, voice chat monitoring, and online child protection.",
+      "Compare Koda Gaming Parental Controls and Aura parental controls for families. See which is better for gaming safety, voice chat monitoring, and online child protection.",
     verdict:
       "Koda is purpose-built for gaming safety and voice chat. Aura is a broader digital safety suite combining identity protection with basic parental controls. Choose based on whether gaming risk or identity/device risk is your main concern.",
     competitorStrengths: [
@@ -470,7 +470,7 @@ export const COMPARISONS: Comparison[] = [
       {
         question: "What is the best Aura alternative for families with gamers?",
         answer:
-          "Koda Safety is the best alternative for gaming families. Keep Aura for identity protection if you need it, and add Koda for visibility into what happens inside your child's gaming conversations.",
+          "Koda Gaming Parental Controls is the best alternative for gaming families. Keep Aura for identity protection if you need it, and add Koda for visibility into what happens inside your child's gaming conversations.",
       },
     ],
   },
@@ -479,7 +479,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Net Nanny",
     title: "Koda vs Net Nanny: Best Parental Controls for Gaming [2026]",
     description:
-      "Compare Koda Safety and Net Nanny for parental controls. See which protects kids better in gaming, voice chat, Roblox, Discord, and online multiplayer environments.",
+      "Compare Koda Gaming Parental Controls and Net Nanny for parental controls. See which protects kids better in gaming, voice chat, Roblox, Discord, and online multiplayer environments.",
     verdict:
       "Koda is the right choice for gaming-specific risks. Net Nanny is the right choice for web filtering and content blocking. They solve different problems and can work together.",
     competitorStrengths: [
@@ -594,7 +594,7 @@ export const COMPARISONS: Comparison[] = [
       {
         question: "What is the best Net Nanny alternative for gaming families?",
         answer:
-          "Koda Safety fills the gap that Net Nanny cannot cover — what happens inside PC game conversations. Many families use both: Net Nanny for web filtering and Koda for gaming conversation safety.",
+          "Koda Gaming Parental Controls fills the gap that Net Nanny cannot cover — what happens inside PC game conversations. Many families use both: Net Nanny for web filtering and Koda for gaming conversation safety.",
       },
     ],
   },
@@ -603,7 +603,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Life360",
     title: "Koda vs Life360: Parental Controls for Gaming [2026]",
     description:
-      "Compare Koda Safety and Life360 for family safety. See which is better for gaming risks, voice chat monitoring, and protecting kids online.",
+      "Compare Koda Gaming Parental Controls and Life360 for family safety. See which is better for gaming risks, voice chat monitoring, and protecting kids online.",
     verdict:
       "These products solve entirely different problems. Life360 is a location and driving safety app. Koda is a gaming conversation safety app. If gaming is your concern, Koda is the answer.",
     competitorStrengths: [
@@ -699,7 +699,7 @@ export const COMPARISONS: Comparison[] = [
         question:
           "What should I use for gaming safety if I already have Life360?",
         answer:
-          "Add Koda Safety for gaming conversation monitoring. Life360 tells you where your child is physically. Koda tells you what is happening in their online gaming conversations.",
+          "Add Koda Gaming Parental Controls for gaming conversation monitoring. Life360 tells you where your child is physically. Koda tells you what is happening in their online gaming conversations.",
       },
     ],
   },
@@ -708,7 +708,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Canopy",
     title: "Koda vs Canopy: Best Parental Controls for Gamers [2026]",
     description:
-      "Compare Koda Safety and Canopy parental controls. See which is better for gaming, voice chat monitoring, and protecting kids from online predators.",
+      "Compare Koda Gaming Parental Controls and Canopy parental controls. See which is better for gaming, voice chat monitoring, and protecting kids from online predators.",
     verdict:
       "Koda is stronger for gaming conversation safety. Canopy is stronger for visual content filtering and sexting prevention on phones. The right choice depends on where your child's risk is highest.",
     competitorStrengths: [
@@ -827,7 +827,7 @@ export const COMPARISONS: Comparison[] = [
     competitorName: "Google Family Link",
     title: "Koda vs Google Family Link: Gaming Parental Controls [2026]",
     description:
-      "Compare Koda Safety and Google Family Link. See which is better for gaming safety, voice chat monitoring, and protecting kids from online predators in PC games.",
+      "Compare Koda Gaming Parental Controls and Google Family Link. See which is better for gaming safety, voice chat monitoring, and protecting kids from online predators in PC games.",
     verdict:
       "Google Family Link is a free, basic device management tool for Android. Koda is a specialized gaming safety tool that monitors conversations. They solve completely different problems and work well together.",
     competitorStrengths: [
@@ -938,7 +938,7 @@ export const COMPARISONS: Comparison[] = [
         question:
           "What should I add to Family Link for gaming protection?",
         answer:
-          "Add Koda Safety to cover the gaming conversation layer. Family Link handles your child's phone. Koda handles what happens inside their PC gaming sessions.",
+          "Add Koda Gaming Parental Controls to cover the gaming conversation layer. Family Link handles your child's phone. Koda handles what happens inside their PC gaming sessions.",
       },
     ],
   },

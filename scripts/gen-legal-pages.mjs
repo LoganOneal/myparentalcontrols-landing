@@ -12,8 +12,8 @@ const PAGES = [
 
 for (const { slug, title } of PAGES) {
   const content = (await readFile(join(ROOT, `docs/research/legal-${slug}-content.html`), 'utf8'))
-    .replace(/Cal\s+AI/g, 'Koda Safety')
-    .replace(/CAL\s+AI/g, 'KODA SAFETY')
+    .replace(/Cal\s+AI/g, 'Koda Gaming Parental Controls')
+    .replace(/CAL\s+AI/g, 'KODA PARENTAL CONTROLS')
     .replace(/calai\.app/g, 'kodasafety.com')
     .replace(/support@kodasafety\.com/g, 'support@kodasafety.com');
   const escaped = content
@@ -23,8 +23,8 @@ for (const { slug, title } of PAGES) {
   const tsx = `import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata = {
-  title: "Koda Safety | ${title}",
-  description: "Koda Safety legal information.",
+  title: "Koda Gaming Parental Controls | ${title}",
+  description: "Koda Gaming Parental Controls legal information.",
 };
 
 const HTML = \`${escaped}\`;

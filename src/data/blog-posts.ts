@@ -282,35 +282,35 @@ const PLATFORM_SOURCE_KEYS = {
 const RAW_BLOG_POSTS: BaseBlogPost[] = [
   {
     slug: "what-is-koda-safety",
-    title: "What Is Koda Safety?",
+    title: "What Is Koda Gaming Parental Controls?",
     date: "5/23/2026",
     category: "Guide",
     description:
-      "Learn what Koda Safety is, how it helps parents monitor PC gaming risks, and where it fits alongside traditional parental controls.",
+      "Learn what Koda Gaming Parental Controls is, how it helps parents monitor PC gaming risks, and where it fits alongside traditional parental controls.",
     excerpt:
-      "Koda Safety is the gaming-first layer for parents who need clearer visibility into voice chat, game DMs, and risky online conversations.",
+      "Koda Gaming Parental Controls is the gaming-first layer for parents who need clearer visibility into voice chat, game DMs, and risky online conversations.",
     takeaways: [
-      "Koda Safety is built around PC games, game chat, voice risk, and parent alerts.",
+      "Koda Gaming Parental Controls is built around PC games, game chat, voice risk, and parent alerts.",
       "It complements device limits and web filters instead of replacing every family rule.",
       "The goal is useful context, not vague warnings or constant screen policing.",
     ],
     relatedLinks: [
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Game Safety guides", href: "/game-safety" },
       { label: "Safety and privacy", href: "/safety-privacy" },
     ],
     sections: [
       {
-        heading: "Koda Safety in plain English",
+        heading: "Koda Gaming Parental Controls in plain English",
         paragraphs: [
-          "Koda Safety is a parental control system for families whose kids spend real time in PC games and online chat. It is designed to help parents understand what is happening inside games, voice calls, DMs, and platform conversations where generic screen-time tools usually lose context.",
+          "Koda Gaming Parental Controls is a parental control system for families whose kids spend real time in PC games and online chat. It is designed to help parents understand what is happening inside games, voice calls, DMs, and platform conversations where generic screen-time tools usually lose context.",
           "Instead of only telling a parent that a child used a device for two hours, Koda focuses on the moments that matter: grooming language, bullying, threats, self-harm signals, sexual content, and other risky conversations.",
         ],
       },
       {
         heading: "Why families search for it",
         paragraphs: [
-          "Parents often discover that native parental controls can block apps or set limits, but they do not explain what was said in a Discord call, a Roblox chat, a Fortnite party, or a Minecraft server. Koda Safety is built for that visibility gap.",
+          "Parents often discover that native parental controls can block apps or set limits, but they do not explain what was said in a Discord call, a Roblox chat, a Fortnite party, or a Minecraft server. Koda Gaming Parental Controls is built for that visibility gap.",
         ],
         bullets: [
           "Real-time alerts when risky language appears.",
@@ -321,13 +321,13 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       {
         heading: "What makes Koda different",
         paragraphs: [
-          "Koda Safety is not trying to be another broad, generic dashboard. The product starts with gaming behavior because that is where a lot of kids socialize now. If a child spends more time in Roblox, Minecraft, Fortnite, Discord, or Steam than in a browser, parents need tools built around those habits.",
+          "Koda Gaming Parental Controls is not trying to be another broad, generic dashboard. The product starts with gaming behavior because that is where a lot of kids socialize now. If a child spends more time in Roblox, Minecraft, Fortnite, Discord, or Steam than in a browser, parents need tools built around those habits.",
         ],
       },
       {
         heading: "Where to start",
         paragraphs: [
-          "Start with the Koda Safety overview, then review the platforms your child actually uses. A practical setup begins with the places where your child talks to strangers, joins servers, plays with friends, and receives messages.",
+          "Start with the Koda Gaming Parental Controls overview, then review the platforms your child actually uses. A practical setup begins with the places where your child talks to strangers, joins servers, plays with friends, and receives messages.",
         ],
       },
     ],
@@ -338,9 +338,9 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     date: "5/23/2026",
     category: "Safety",
     description:
-      "A parent-focused look at Koda Safety, family privacy, child data, alerts, and how parents should use monitoring responsibly.",
+      "A parent-focused look at Koda Gaming Parental Controls, family privacy, child data, alerts, and how parents should use monitoring responsibly.",
     excerpt:
-      "Koda Safety is designed to help parents spot serious online risks while keeping the family conversation at the center.",
+      "Koda Gaming Parental Controls is designed to help parents spot serious online risks while keeping the family conversation at the center.",
     takeaways: [
       "Koda should be used as a safety tool, not a substitute for parent-child trust.",
       "Parents should tell kids what is being monitored and why.",
@@ -349,13 +349,13 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     relatedLinks: [
       { label: "Safety and privacy", href: "/safety-privacy" },
       { label: "Privacy policy", href: "/privacy" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
     ],
     sections: [
       {
         heading: "The short answer",
         paragraphs: [
-          "Koda Safety is built for family safety use cases: helping parents identify risky conversations, bullying, grooming signals, threats, and harmful language in online spaces where kids already spend time.",
+          "Koda Gaming Parental Controls is built for family safety use cases: helping parents identify risky conversations, bullying, grooming signals, threats, and harmful language in online spaces where kids already spend time.",
           "A healthy rollout still matters. Parents should explain what Koda monitors, why it is being used, and how alerts will be handled. Monitoring works best when it supports calm conversations instead of surprise punishment.",
         ],
       },
@@ -379,27 +379,27 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       {
         heading: "A responsible setup",
         paragraphs: [
-          "Set expectations before installation. Tell your child which devices and apps are covered, what kinds of alerts matter, and what will happen when an alert appears. That transparency makes Koda Safety feel more like a seatbelt and less like a trap.",
+          "Set expectations before installation. Tell your child which devices and apps are covered, what kinds of alerts matter, and what will happen when an alert appears. That transparency makes Koda Gaming Parental Controls feel more like a seatbelt and less like a trap.",
         ],
       },
     ],
   },
   {
     slug: "koda-safety-for-pc-games",
-    title: "Koda Safety for PC Games",
+    title: "Koda Gaming Parental Controls for PC Games",
     date: "5/23/2026",
     category: "Guide",
     description:
-      "How Koda Safety helps parents monitor PC gaming voice chat, game text chat, DMs, and risky multiplayer conversations.",
+      "How Koda Gaming Parental Controls helps parents monitor PC gaming voice chat, game text chat, DMs, and risky multiplayer conversations.",
     excerpt:
       "PC gaming safety is different from phone safety because the most important conversations happen inside live games and voice channels.",
     takeaways: [
       "PC games create fast-moving risk because chat, voice, and strangers mix in real time.",
-      "Koda Safety focuses on the conversation layer of gaming.",
+      "Koda Gaming Parental Controls focuses on the conversation layer of gaming.",
       "Parents should pair alerts with platform controls and family rules.",
     ],
     relatedLinks: [
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Roblox safety guide", href: "/blog/koda-safety-for-roblox" },
       { label: "Discord safety guide", href: "/blog/koda-safety-for-discord" },
     ],
@@ -408,7 +408,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
         heading: "Why PC gaming needs its own safety layer",
         paragraphs: [
           "PC games are not just games anymore. They are hangout spaces with voice chat, party invites, server communities, direct messages, usernames, mods, and links to other platforms. That makes PC gaming safety a different problem than simple screen time.",
-          "A child can be in a harmless match one minute and a risky private chat the next. Koda Safety is built to watch for those moments and alert parents when something actually needs attention.",
+          "A child can be in a harmless match one minute and a risky private chat the next. Koda Gaming Parental Controls is built to watch for those moments and alert parents when something actually needs attention.",
         ],
       },
       {
@@ -427,7 +427,7 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       {
         heading: "How to use it with built-in controls",
         paragraphs: [
-          "Built-in game and device controls are still useful. Use them to set age limits, restrict strangers, and manage playtime. Use Koda Safety for the part those tools rarely cover well: what was actually said and whether the conversation needs a parent.",
+          "Built-in game and device controls are still useful. Use them to set age limits, restrict strangers, and manage playtime. Use Koda Gaming Parental Controls for the part those tools rarely cover well: what was actually said and whether the conversation needs a parent.",
         ],
       },
       {
@@ -440,20 +440,20 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
   },
   {
     slug: "koda-safety-vs-bark",
-    title: "Koda Safety vs Bark: Which Is Better for Gaming?",
+    title: "Koda Gaming Parental Controls vs Bark: Which Is Better for Gaming?",
     date: "5/23/2026",
     category: "Comparison",
     description:
-      "Compare Koda Safety and Bark for parents worried about PC games, Discord, Roblox, Fortnite, Minecraft, and gaming voice chat.",
+      "Compare Koda Gaming Parental Controls and Bark for parents worried about PC games, Discord, Roblox, Fortnite, Minecraft, and gaming voice chat.",
     excerpt:
-      "Bark is broad family monitoring. Koda Safety is specialized for PC games, gaming chat, and voice risk.",
+      "Bark is broad family monitoring. Koda Gaming Parental Controls is specialized for PC games, gaming chat, and voice risk.",
     takeaways: [
-      "Choose Koda Safety when the main concern is PC gaming chat and voice risk.",
+      "Choose Koda Gaming Parental Controls when the main concern is PC gaming chat and voice risk.",
       "Choose Bark when the main concern is broad phone, web, and social monitoring.",
       "Many families compare both because the products solve overlapping but different problems.",
     ],
     relatedLinks: [
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Original Bark comparison", href: "/blog/koda-vs-bark" },
       { label: "Pricing", href: "/pricing" },
     ],
@@ -461,14 +461,14 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       {
         heading: "Quick verdict",
         paragraphs: [
-          "Koda Safety is the better fit if your child spends serious time in PC games and your main worry is what happens in live chat, voice channels, Discord servers, Roblox, Fortnite, Minecraft, or similar gaming spaces.",
+          "Koda Gaming Parental Controls is the better fit if your child spends serious time in PC games and your main worry is what happens in live chat, voice channels, Discord servers, Roblox, Fortnite, Minecraft, or similar gaming spaces.",
           "Bark is the better fit if you want broad coverage across phones, email, social media, screen time, web filtering, and location. The right choice depends on where the risk actually shows up for your child.",
         ],
       },
       {
-        heading: "Where Koda Safety is strongest",
+        heading: "Where Koda Gaming Parental Controls is strongest",
         paragraphs: [
-          "Koda Safety is built around gaming-specific signals. It is strongest when parents need visibility into conversations, not just app usage.",
+          "Koda Gaming Parental Controls is built around gaming-specific signals. It is strongest when parents need visibility into conversations, not just app usage.",
         ],
         bullets: [
           "PC gaming voice and text chat.",
@@ -486,28 +486,28 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       {
         heading: "A practical way to choose",
         paragraphs: [
-          "Look at the last three concerning moments you have had as a parent. If they happened in phone apps, browsing, or location issues, Bark may match the problem. If they happened during PC gaming, voice chat, game DMs, or Discord, Koda Safety is probably the sharper fit.",
+          "Look at the last three concerning moments you have had as a parent. If they happened in phone apps, browsing, or location issues, Bark may match the problem. If they happened during PC gaming, voice chat, game DMs, or Discord, Koda Gaming Parental Controls is probably the sharper fit.",
         ],
       },
     ],
   },
   {
     slug: "koda-safety-for-roblox",
-    title: "Koda Safety for Roblox",
+    title: "Koda Gaming Parental Controls for Roblox",
     date: "5/23/2026",
     category: "Platform",
     description:
-      "How Koda Safety helps parents think about Roblox chat, voice, DMs, servers, and stranger contact risks.",
+      "How Koda Gaming Parental Controls helps parents think about Roblox chat, voice, DMs, servers, and stranger contact risks.",
     excerpt:
       "Roblox safety is about more than whether a game looks kid-friendly. The risk often lives in chat, voice, servers, and friend requests.",
     takeaways: [
       "Roblox combines user-generated games, chat, avatars, and social pressure.",
       "Parents should use Roblox native controls and monitor communication patterns.",
-      "Koda Safety gives parents another layer of context around risky conversations.",
+      "Koda Gaming Parental Controls gives parents another layer of context around risky conversations.",
     ],
     relatedLinks: [
       { label: "Roblox platform page", href: "/platforms/roblox" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "PC gaming safety", href: "/blog/koda-safety-for-pc-games" },
     ],
     sections: [
@@ -530,36 +530,36 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
         ],
       },
       {
-        heading: "How Koda Safety helps",
+        heading: "How Koda Gaming Parental Controls helps",
         paragraphs: [
-          "Koda Safety is designed to alert parents when Roblox-related conversations become risky. That can include grooming language, bullying, threats, sexual content, or a stranger trying to move the conversation somewhere harder for parents to see.",
+          "Koda Gaming Parental Controls is designed to alert parents when Roblox-related conversations become risky. That can include grooming language, bullying, threats, sexual content, or a stranger trying to move the conversation somewhere harder for parents to see.",
         ],
       },
       {
         heading: "Recommended setup",
         paragraphs: [
-          "Use Roblox account restrictions and privacy settings first. Then use Koda Safety for added visibility into the communication layer, especially if your child plays on PC, uses voice chat, or has friends they only know online.",
+          "Use Roblox account restrictions and privacy settings first. Then use Koda Gaming Parental Controls for added visibility into the communication layer, especially if your child plays on PC, uses voice chat, or has friends they only know online.",
         ],
       },
     ],
   },
   {
     slug: "koda-safety-for-discord",
-    title: "Koda Safety for Discord",
+    title: "Koda Gaming Parental Controls for Discord",
     date: "5/23/2026",
     category: "Platform",
     description:
-      "How Koda Safety helps parents understand Discord servers, DMs, voice channels, friend requests, and gaming chat risks.",
+      "How Koda Gaming Parental Controls helps parents understand Discord servers, DMs, voice channels, friend requests, and gaming chat risks.",
     excerpt:
       "Discord is where a lot of gaming conversations continue after the match ends, which makes it one of the most important platforms for parents to understand.",
     takeaways: [
       "Discord risk often lives in servers, DMs, and voice channels.",
       "A game friend can become a private DM very quickly.",
-      "Koda Safety helps parents spot high-risk conversation patterns.",
+      "Koda Gaming Parental Controls helps parents spot high-risk conversation patterns.",
     ],
     relatedLinks: [
       { label: "Discord platform page", href: "/platforms/discord" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Safety and privacy", href: "/safety-privacy" },
     ],
     sections: [
@@ -582,36 +582,36 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
         ],
       },
       {
-        heading: "How Koda Safety helps",
+        heading: "How Koda Gaming Parental Controls helps",
         paragraphs: [
-          "Koda Safety helps parents see when Discord conversations include high-risk signals like grooming, threats, bullying, sexual content, or repeated attempts to isolate a child from friends and parents.",
+          "Koda Gaming Parental Controls helps parents see when Discord conversations include high-risk signals like grooming, threats, bullying, sexual content, or repeated attempts to isolate a child from friends and parents.",
         ],
       },
       {
         heading: "Recommended setup",
         paragraphs: [
-          "Start by tightening Discord privacy settings, limiting friend requests, and reviewing servers together. Then use Koda Safety as the alert layer for the conversations that still happen inside the places your child is allowed to use.",
+          "Start by tightening Discord privacy settings, limiting friend requests, and reviewing servers together. Then use Koda Gaming Parental Controls as the alert layer for the conversations that still happen inside the places your child is allowed to use.",
         ],
       },
     ],
   },
   {
     slug: "koda-safety-for-fortnite",
-    title: "Koda Safety for Fortnite",
+    title: "Koda Gaming Parental Controls for Fortnite",
     date: "5/23/2026",
     category: "Platform",
     description:
-      "How Koda Safety helps parents think about Fortnite voice chat, party chat, strangers, bullying, and live game conversations.",
+      "How Koda Gaming Parental Controls helps parents think about Fortnite voice chat, party chat, strangers, bullying, and live game conversations.",
     excerpt:
       "Fortnite safety centers on voice and party chat because the riskiest moments can happen during live play.",
     takeaways: [
       "Fortnite voice chat can expose kids to strangers and older players.",
       "Party chat creates live pressure that parents rarely hear.",
-      "Koda Safety helps surface risky language and escalation.",
+      "Koda Gaming Parental Controls helps surface risky language and escalation.",
     ],
     relatedLinks: [
       { label: "Fortnite platform page", href: "/platforms/fortnite" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "PC gaming safety", href: "/blog/koda-safety-for-pc-games" },
     ],
     sections: [
@@ -634,36 +634,36 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
         ],
       },
       {
-        heading: "How Koda Safety helps",
+        heading: "How Koda Gaming Parental Controls helps",
         paragraphs: [
-          "Koda Safety is built to help parents understand when Fortnite conversations become risky. It can surface language patterns that deserve a parent response while still letting kids enjoy the game with healthy boundaries.",
+          "Koda Gaming Parental Controls is built to help parents understand when Fortnite conversations become risky. It can surface language patterns that deserve a parent response while still letting kids enjoy the game with healthy boundaries.",
         ],
       },
       {
         heading: "Recommended setup",
         paragraphs: [
-          "Use Epic parental controls, limit voice chat to friends when appropriate, and review party settings with your child. Add Koda Safety for alert context when live game conversations move in a dangerous direction.",
+          "Use Epic parental controls, limit voice chat to friends when appropriate, and review party settings with your child. Add Koda Gaming Parental Controls for alert context when live game conversations move in a dangerous direction.",
         ],
       },
     ],
   },
   {
     slug: "koda-safety-for-minecraft",
-    title: "Koda Safety for Minecraft",
+    title: "Koda Gaming Parental Controls for Minecraft",
     date: "5/23/2026",
     category: "Platform",
     description:
-      "How Koda Safety helps parents understand Minecraft servers, multiplayer chat, Discord overlap, and stranger contact risks.",
+      "How Koda Gaming Parental Controls helps parents understand Minecraft servers, multiplayer chat, Discord overlap, and stranger contact risks.",
     excerpt:
       "Minecraft can be calm and creative, but multiplayer servers and adjacent Discord communities create risks parents should not ignore.",
     takeaways: [
       "Minecraft risk usually comes from multiplayer servers and outside communities.",
       "Server chat can introduce strangers, links, and invitations.",
-      "Koda Safety helps parents spot risky Minecraft-related conversations.",
+      "Koda Gaming Parental Controls helps parents spot risky Minecraft-related conversations.",
     ],
     relatedLinks: [
       { label: "Minecraft platform page", href: "/platforms/minecraft" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Discord safety guide", href: "/blog/koda-safety-for-discord" },
     ],
     sections: [
@@ -686,15 +686,15 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
         ],
       },
       {
-        heading: "How Koda Safety helps",
+        heading: "How Koda Gaming Parental Controls helps",
         paragraphs: [
-          "Koda Safety helps parents see risky conversation patterns around Minecraft play, especially when chat moves across servers, Discord, and other gaming communities.",
+          "Koda Gaming Parental Controls helps parents see risky conversation patterns around Minecraft play, especially when chat moves across servers, Discord, and other gaming communities.",
         ],
       },
       {
         heading: "Recommended setup",
         paragraphs: [
-          "Prefer private worlds with known friends, review server rules, and keep Discord connected to the safety conversation. Use Koda Safety as an added layer for alerts when chat or voice risk appears.",
+          "Prefer private worlds with known friends, review server rules, and keep Discord connected to the safety conversation. Use Koda Gaming Parental Controls as an added layer for alerts when chat or voice risk appears.",
         ],
       },
     ],
@@ -714,8 +714,8 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
       "The best choice depends on where your child's online risk actually happens.",
     ],
     relatedLinks: [
-      { label: "Koda Safety vs Bark", href: "/blog/koda-safety-vs-bark" },
-      { label: "Koda Safety home", href: "/" },
+      { label: "Koda Parental Controls vs Bark", href: "/blog/koda-safety-vs-bark" },
+      { label: "Koda Parental Controls home", href: "/" },
       { label: "Game Safety guides", href: "/game-safety" },
     ],
     sections: [
@@ -762,11 +762,11 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     takeaways: [
       "Predators target kids in popular Roblox games, then move them to private channels or Discord.",
       "Grooming on Roblox often starts with gift offers, compliments, and requests to 'play privately.'",
-      "Koda Safety alerts parents when grooming language patterns appear in Roblox conversations.",
+      "Koda Gaming Parental Controls alerts parents when grooming language patterns appear in Roblox conversations.",
     ],
     relatedLinks: [
       { label: "Roblox platform safety guide", href: "/platforms/roblox" },
-      { label: "Koda Safety for Roblox", href: "/blog/koda-safety-for-roblox" },
+      { label: "Koda Parental Controls for Roblox", href: "/blog/koda-safety-for-roblox" },
       { label: "Online predator warning signs", href: "/blog/discord-grooming" },
     ],
     sections: [
@@ -828,14 +828,14 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
           "Disable or restrict chat and limit friend requests to known contacts.",
           "Review your child's friends list regularly — ask who each person is.",
           "Talk openly about grooming tactics without shaming or scaring your child.",
-          "Use Koda Safety to monitor Roblox conversations and receive alerts when grooming language appears.",
+          "Use Koda Gaming Parental Controls to monitor Roblox conversations and receive alerts when grooming language appears.",
           "Check if your child uses Discord alongside Roblox — this is the most common pipeline.",
         ],
       },
       {
-        heading: "How Koda Safety protects against Roblox predators",
+        heading: "How Koda Gaming Parental Controls protects against Roblox predators",
         paragraphs: [
-          "Koda Safety monitors Roblox voice and text chat in real time, using AI specifically trained to detect grooming patterns, isolation tactics, sexual content, and dangerous escalation. When a risky conversation is detected, parents receive an immediate alert with the transcript and context needed to respond.",
+          "Koda Gaming Parental Controls monitors Roblox voice and text chat in real time, using AI specifically trained to detect grooming patterns, isolation tactics, sexual content, and dangerous escalation. When a risky conversation is detected, parents receive an immediate alert with the transcript and context needed to respond.",
           "Unlike Roblox's built-in reporting system (which is reactive), Koda alerts parents before grooming progresses — often catching the early signs that a child would not recognize as dangerous.",
         ],
       },
@@ -853,11 +853,11 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
     takeaways: [
       "Discord grooming often starts in gaming servers and moves to DMs or private voice channels.",
       "Predators exploit Discord's lack of parental controls and minimal age verification.",
-      "Koda Safety monitors Discord conversations and alerts parents to grooming language patterns.",
+      "Koda Gaming Parental Controls monitors Discord conversations and alerts parents to grooming language patterns.",
     ],
     relatedLinks: [
       { label: "Discord platform safety guide", href: "/platforms/discord" },
-      { label: "Koda Safety for Discord", href: "/blog/koda-safety-for-discord" },
+      { label: "Koda Parental Controls for Discord", href: "/blog/koda-safety-for-discord" },
       { label: "Predators on Roblox", href: "/blog/predators-on-roblox" },
     ],
     sections: [
@@ -920,14 +920,14 @@ const RAW_BLOG_POSTS: BaseBlogPost[] = [
           "Restrict DMs from server members (Settings > Privacy > disable 'Allow direct messages from server members').",
           "Review their server list and friend list periodically — ask about anyone you do not recognize.",
           "Discuss how grooming works using age-appropriate language. Kids who understand the tactics are harder to manipulate.",
-          "Use Koda Safety to monitor Discord conversations for grooming patterns, threats, and sexual content.",
+          "Use Koda Gaming Parental Controls to monitor Discord conversations for grooming patterns, threats, and sexual content.",
           "Consider Discord Family Center for basic activity visibility (though it has significant limitations).",
         ],
       },
       {
-        heading: "How Koda Safety detects Discord grooming",
+        heading: "How Koda Gaming Parental Controls detects Discord grooming",
         paragraphs: [
-          "Koda Safety monitors Discord text and voice conversations using AI trained on real grooming patterns. When language indicating isolation tactics, age-inappropriate sexual content, personal information requests, or escalation toward exploitation is detected, parents receive an immediate alert with full context.",
+          "Koda Gaming Parental Controls monitors Discord text and voice conversations using AI trained on real grooming patterns. When language indicating isolation tactics, age-inappropriate sexual content, personal information requests, or escalation toward exploitation is detected, parents receive an immediate alert with full context.",
           "This is especially valuable for voice channels, where Discord's own moderation has zero visibility. Koda transcribes and analyzes voice conversations in real time, catching verbal grooming that would otherwise go completely undetected.",
         ],
       },
@@ -955,7 +955,7 @@ const TRUST_REFRESH_DATE = "5/24/2026";
 const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   "what-is-koda-safety": {
     quickAnswer:
-      "Koda Safety is a gaming-first parental safety layer for families who need context around PC game chat, voice conversations, DMs, and risky online interactions that generic screen-time tools often miss.",
+      "Koda Gaming Parental Controls is a gaming-first parental safety layer for families who need context around PC game chat, voice conversations, DMs, and risky online interactions that generic screen-time tools often miss.",
     researchMethod:
       "This overview was checked against Koda product pages, platform safety resources, and current AI/search citation guidance so parents and answer engines can quickly identify what Koda does, what it does not replace, and where it fits in a family safety plan.",
     sourceKeys: [
@@ -967,9 +967,9 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
     ],
     faqs: [
       {
-        question: "What does Koda Safety monitor?",
+        question: "What does Koda Gaming Parental Controls monitor?",
         answer:
-          "Koda Safety focuses on PC gaming and online conversation risk, including voice chat, game DMs, Discord-adjacent conversations, grooming language, bullying, threats, sexual content, and self-harm signals.",
+          "Koda Gaming Parental Controls focuses on PC gaming and online conversation risk, including voice chat, game DMs, Discord-adjacent conversations, grooming language, bullying, threats, sexual content, and self-harm signals.",
       },
       {
         question: "Does Koda replace built-in parental controls?",
@@ -982,12 +982,12 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
           "No. The recommended setup is transparent: parents should tell kids what is monitored, why it is used, and how alerts will be handled.",
       },
     ],
-    about: ["Koda Safety", "Parental control software", "PC gaming safety"],
+    about: ["Koda Gaming Parental Controls", "Parental control software", "PC gaming safety"],
     mentions: ["game chat monitoring", "voice chat monitoring", "parent alerts"],
   },
   "is-koda-safe-for-families": {
     quickAnswer:
-      "Koda Safety can be used safely when parents install it with legal authority, explain the monitoring to their child, keep privacy expectations clear, and use alerts for serious safety conversations instead of constant punishment.",
+      "Koda Gaming Parental Controls can be used safely when parents install it with legal authority, explain the monitoring to their child, keep privacy expectations clear, and use alerts for serious safety conversations instead of constant punishment.",
     researchMethod:
       "This article was reviewed against Koda privacy/legal pages, child-safety guidance, and people-first content standards to keep the advice practical, transparent, and cautious around family trust.",
     sourceKeys: [
@@ -1018,7 +1018,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   },
   "koda-safety-for-pc-games": {
     quickAnswer:
-      "Koda Safety is built for PC gaming because the riskiest moments often happen in live voice, text chat, servers, and DMs rather than in a browser or app usage report.",
+      "Koda Gaming Parental Controls is built for PC gaming because the riskiest moments often happen in live voice, text chat, servers, and DMs rather than in a browser or app usage report.",
     researchMethod:
       "This guide compares gaming-specific risk patterns with official platform and child-safety guidance, then explains where Koda adds context beyond device limits and web filters.",
     sourceKeys: [
@@ -1051,7 +1051,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   },
   "koda-safety-vs-bark": {
     quickAnswer:
-      "Koda Safety is the sharper fit for PC gaming chat and voice-risk context, while Bark is broader for families that want general monitoring across phones, web, social apps, screen time, and location.",
+      "Koda Gaming Parental Controls is the sharper fit for PC gaming chat and voice-risk context, while Bark is broader for families that want general monitoring across phones, web, social apps, screen time, and location.",
     researchMethod:
       "This comparison uses public Bark feature pages, Koda positioning, and parent search intent around gaming-specific monitoring. It avoids claiming one product is universally best because the right answer depends on where a child's risk occurs.",
     sourceKeys: [
@@ -1079,12 +1079,12 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
           "Bark is strongest as a mature, broad parental-control product for general device and online activity coverage, especially outside PC gaming.",
       },
     ],
-    about: ["Koda Safety", "Bark", "Parental control comparison"],
+    about: ["Koda Gaming Parental Controls", "Bark", "Parental control comparison"],
     mentions: ["Bark alternatives", "PC gaming parental controls", "game chat"],
   },
   "koda-safety-for-roblox": {
     quickAnswer:
-      "Koda Safety helps Roblox families by adding conversation-risk visibility around chat, voice, friend requests, servers, and off-platform movement while parents still use Roblox's native safety controls.",
+      "Koda Gaming Parental Controls helps Roblox families by adding conversation-risk visibility around chat, voice, friend requests, servers, and off-platform movement while parents still use Roblox's native safety controls.",
     researchMethod:
       "This guide was checked against Roblox parent resources, Roblox safety pages, and child-safety guidance about grooming and online enticement.",
     sourceKeys: [
@@ -1115,7 +1115,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   },
   "koda-safety-for-discord": {
     quickAnswer:
-      "Koda Safety adds risk alerts around Discord servers, DMs, and voice conversations; Discord Family Center can help with activity visibility, but it does not give parents full message-level context.",
+      "Koda Gaming Parental Controls adds risk alerts around Discord servers, DMs, and voice conversations; Discord Family Center can help with activity visibility, but it does not give parents full message-level context.",
     researchMethod:
       "This guide was reviewed against Discord Family Center documentation, Discord safety resources, and child-safety guidance about private messaging and grooming risk.",
     sourceKeys: [
@@ -1146,7 +1146,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   },
   "koda-safety-for-fortnite": {
     quickAnswer:
-      "Koda Safety helps Fortnite parents focus on live party chat, voice risk, stranger contact, and toxic escalation while Epic parental controls handle account-level permissions.",
+      "Koda Gaming Parental Controls helps Fortnite parents focus on live party chat, voice risk, stranger contact, and toxic escalation while Epic parental controls handle account-level permissions.",
     researchMethod:
       "This guide was checked against Epic Games Safety Center resources, Fortnite parental control guidance, and general child-safety sources about stranger contact and online harassment.",
     sourceKeys: [
@@ -1177,7 +1177,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
   },
   "koda-safety-for-minecraft": {
     quickAnswer:
-      "Koda Safety is useful for Minecraft families when multiplayer servers, public chat, Discord communities, mods, and links bring stranger contact into an otherwise creative game.",
+      "Koda Gaming Parental Controls is useful for Minecraft families when multiplayer servers, public chat, Discord communities, mods, and links bring stranger contact into an otherwise creative game.",
     researchMethod:
       "This guide was checked against Minecraft parental-control resources, Xbox family settings, and child-safety guidance about chat, links, and online communities.",
     sourceKeys: [
@@ -1235,7 +1235,7 @@ const TRUST_PRESETS: Record<string, BlogTrustPreset> = {
           "Bark is likely the better-known broad option for phone, web, social, screen-time, and location coverage.",
       },
     ],
-    about: ["Bark alternative", "Koda Safety", "PC gaming parental controls"],
+    about: ["Bark alternative", "Koda Gaming Parental Controls", "PC gaming parental controls"],
     mentions: ["Bark competitors", "game chat monitoring", "voice chat"],
   },
   "predators-on-roblox": {

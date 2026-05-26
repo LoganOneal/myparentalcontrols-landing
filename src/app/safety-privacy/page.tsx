@@ -14,16 +14,16 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Koda Safety & Privacy | Family Data and Monitoring",
+  title: "Koda Gaming Parental Controls & Privacy | Family Data and Monitoring",
   description:
-    "How Koda Safety handles family monitoring, parent alerts, child data, privacy, retention, and deletion requests.",
+    "How Koda Gaming Parental Controls handles family monitoring, parent alerts, child data, privacy, retention, and deletion requests.",
   alternates: {
     canonical: "/safety-privacy",
   },
   openGraph: {
-    title: "Koda Safety & Privacy",
+    title: "Koda Gaming Parental Controls & Privacy",
     description:
-      "Clear parent guidance on Koda Safety monitoring, family data, privacy, and responsible use.",
+      "Clear parent guidance on Koda Gaming Parental Controls monitoring, family data, privacy, and responsible use.",
     url: `${SITE_URL}/safety-privacy`,
     images: [{ url: "/seo/opengraph.jpg" }],
   },
@@ -33,7 +33,7 @@ const PRINCIPLES = [
   {
     icon: BellRing,
     title: "High-signal alerts",
-    body: "Koda Safety is designed around serious risk signals, not endless low-value notifications.",
+    body: "Koda Gaming Parental Controls is designed around serious risk signals, not endless low-value notifications.",
   },
   {
     icon: MessageSquareWarning,
@@ -51,10 +51,10 @@ const safetyPrivacyJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${SITE_URL}/safety-privacy#webpage`,
-  name: "Koda Safety & Privacy",
+  name: "Koda Gaming Parental Controls & Privacy",
   url: `${SITE_URL}/safety-privacy`,
   description:
-    "How Koda Safety handles family monitoring, child data, parent alerts, privacy, retention, and deletion requests.",
+    "How Koda Gaming Parental Controls handles family monitoring, child data, parent alerts, privacy, retention, and deletion requests.",
   isPartOf: {
     "@id": `${SITE_URL}/#organization`,
   },
@@ -74,10 +74,10 @@ export default function SafetyPrivacyPage() {
                 Safety & privacy
               </div>
               <h1 className="mt-5 text-[38px] font-bold leading-[1.04] tracking-tight text-[#1E1E1E] sm:text-[52px] lg:text-[64px]">
-                How Koda Safety protects family data.
+                How Koda Gaming Parental Controls protects family data.
               </h1>
               <p className="mt-5 max-w-[680px] text-base leading-relaxed text-black/70 sm:text-lg">
-                Koda Safety is built to help parents spot serious online risks
+                Koda Gaming Parental Controls is built to help parents spot serious online risks
                 while keeping family trust, privacy, and responsible use at the
                 center of the product.
               </p>
@@ -125,7 +125,7 @@ export default function SafetyPrivacyPage() {
                   What Koda monitors
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-black/70">
-                  Koda Safety focuses on PC game conversations, online chats,
+                  Koda Gaming Parental Controls focuses on PC game conversations, online chats,
                   voice risk, and platform activity that may point to grooming,
                   bullying, threats, sexual content, self-harm, or harmful
                   language.
@@ -147,7 +147,7 @@ export default function SafetyPrivacyPage() {
                   How to talk to kids about it
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-black/70">
-                  Tell your child that Koda Safety is being used, which devices
+                  Tell your child that Koda Gaming Parental Controls is being used, which devices
                   and platforms are covered, and what kinds of alerts matter.
                   Clear expectations help monitoring feel like protection
                   instead of a surprise.
@@ -178,7 +178,7 @@ export default function SafetyPrivacyPage() {
               </h2>
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/70">
                 This page is a plain-language overview. The privacy policy and
-                terms contain the full legal terms for Koda Safety.
+                terms contain the full legal terms for Koda Gaming Parental Controls.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
