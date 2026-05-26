@@ -63,12 +63,12 @@ const MOBILE_CARD_MAX_WIDTH = 255;
 export function DigitalWellbeing() {
   const trackRef = useRef<HTMLDivElement>(null);
   const dragStartXRef = useRef(0);
+  const dragStartScrollLeftRef = useRef(0);
   const [page, setPage] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
   const [cardGap, setCardGap] = useState(DESKTOP_CARD_GAP);
   const [cardsPerPage, setCardsPerPage] = useState(DESKTOP_VISIBLE_CARDS);
-  const [dragOffset, setDragOffset] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
+  const [isMouseDragging, setIsMouseDragging] = useState(false);
   const totalPages = Math.ceil(CARDS.length / cardsPerPage);
 
   const updateCardWidth = useCallback(() => {
@@ -87,6 +87,24 @@ export function DigitalWellbeing() {
     setCardWidth(nextCardWidth);
   }, []);
 
+  const scrollToPage = useCallback(
+    (nextPage: number) => {
+      if (!trackRef.current) return;
+      const clampedPage = Math.max(0, Math.min(totalPages - 1, nextPage));
+      const left = clampedPage * (cardWidth + cardGap) * cardsPerPage;
+      trackRef.current.scrollTo({ left, behavior: "smooth" });
+      setPage(clampedPage);
+    },
+    [cardGap, cardWidth, cardsPerPage, totalPages],
+  );
+
+  const updateActivePage = useCallback(() => {
+    if (!trackRef.current || cardWidth <= 0) return;
+    const pageWidth = (cardWidth + cardGap) * cardsPerPage;
+    const nextPage = Math.round(trackRef.current.scrollLeft / pageWidth);
+    setPage(Math.max(0, Math.min(totalPages - 1, nextPage)));
+  }, [cardGap, cardWidth, cardsPerPage, totalPages]);
+
   useEffect(() => {
     updateCardWidth();
     window.addEventListener("resize", updateCardWidth);
@@ -94,38 +112,35 @@ export function DigitalWellbeing() {
   }, [updateCardWidth]);
 
   const activePage = Math.min(page, totalPages - 1);
-  const translateX = activePage * (cardWidth + cardGap) * cardsPerPage;
 
   const canGoPrev = activePage > 0;
   const canGoNext = activePage < totalPages - 1;
 
-  function handleDragStart(event: PointerEvent<HTMLDivElement>) {
-    if (event.pointerType === "mouse" && event.button !== 0) return;
+  function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== "mouse" || event.button !== 0 || !trackRef.current) {
+      return;
+    }
+
     dragStartXRef.current = event.clientX;
-    setDragOffset(0);
-    setIsDragging(true);
+    dragStartScrollLeftRef.current = trackRef.current.scrollLeft;
+    setIsMouseDragging(true);
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
-  function handleDragMove(event: PointerEvent<HTMLDivElement>) {
-    if (!isDragging) return;
-    const nextOffset = event.clientX - dragStartXRef.current;
-    setDragOffset(nextOffset);
-  }
-
-  function handleDragEnd(event: PointerEvent<HTMLDivElement>) {
-    if (!isDragging) return;
-
-    const threshold = Math.min(140, Math.max(64, cardWidth * 0.2));
-
-    if (dragOffset < -threshold && canGoNext) {
-      setPage(activePage + 1);
-    } else if (dragOffset > threshold && canGoPrev) {
-      setPage(activePage - 1);
+  function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
+    if (!isMouseDragging || event.pointerType !== "mouse" || !trackRef.current) {
+      return;
     }
 
-    setDragOffset(0);
-    setIsDragging(false);
+    event.preventDefault();
+    const deltaX = event.clientX - dragStartXRef.current;
+    trackRef.current.scrollLeft = dragStartScrollLeftRef.current - deltaX;
+  }
+
+  function handlePointerEnd(event: PointerEvent<HTMLDivElement>) {
+    if (!isMouseDragging || event.pointerType !== "mouse") return;
+
+    setIsMouseDragging(false);
 
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
@@ -154,7 +169,7 @@ export function DigitalWellbeing() {
           {/* Nav arrows */}
           <div className="hidden md:flex items-center gap-2">
             <button
-              onClick={() => canGoPrev && setPage(activePage - 1)}
+              onClick={() => scrollToPage(activePage - 1)}
               disabled={!canGoPrev}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoPrev ? 1 : 0.4 }}
@@ -171,7 +186,7 @@ export function DigitalWellbeing() {
               </svg>
             </button>
             <button
-              onClick={() => canGoNext && setPage(activePage + 1)}
+              onClick={() => scrollToPage(activePage + 1)}
               disabled={!canGoNext}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 transition-all hover:border-[var(--koda-bear-blue)]/40 hover:shadow-sm cursor-pointer"
               style={{ opacity: canGoNext ? 1 : 0.4 }}
@@ -194,25 +209,21 @@ export function DigitalWellbeing() {
         <div className="relative -mr-5 w-[calc(100%+20px)] overflow-hidden md:mr-0 md:w-full md:overflow-visible">
           <div
             ref={trackRef}
-            onPointerDown={handleDragStart}
-            onPointerMove={handleDragMove}
-            onPointerUp={handleDragEnd}
-            onPointerCancel={handleDragEnd}
-            onPointerLeave={handleDragEnd}
-            className={`flex touch-pan-y select-none ${
-              isDragging
-                ? "cursor-grabbing"
-                : "cursor-grab transition-transform duration-500 ease-in-out"
+            onScroll={updateActivePage}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerEnd}
+            onPointerCancel={handlePointerEnd}
+            onPointerLeave={handlePointerEnd}
+            className={`no-scrollbar flex snap-x snap-mandatory overflow-x-auto scroll-smooth select-none ${
+              isMouseDragging ? "cursor-grabbing" : "cursor-grab"
             }`}
-            style={{
-              transform: `translateX(${dragOffset - translateX}px)`,
-              gap: `${cardGap}px`,
-            }}
+            style={{ gap: `${cardGap}px` }}
           >
             {CARDS.map((card) => (
               <div
                 key={card.title}
-                className="flex-shrink-0 flex flex-col w-[66vw] max-w-[255px] md:w-[calc(33.3333%-16px)] md:max-w-none"
+                className="snap-start flex-shrink-0 flex flex-col w-[66vw] max-w-[255px] md:w-[calc(33.3333%-16px)] md:max-w-none"
                 style={{ width: cardWidth > 0 ? `${cardWidth}px` : undefined }}
               >
                 {/* Image */}
@@ -249,7 +260,7 @@ export function DigitalWellbeing() {
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
-              onClick={() => setPage(i)}
+              onClick={() => scrollToPage(i)}
               className={`rounded-full transition-all duration-300 cursor-pointer ${
                 i === activePage
                   ? "w-7 h-2.5 bg-[var(--koda-bear-blue)]"
