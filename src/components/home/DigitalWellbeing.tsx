@@ -18,6 +18,20 @@ type FeatureCard = {
 
 const CARDS: FeatureCard[] = [
   {
+    title: "Evidence review with the full context.",
+    description:
+      "Open the screen recording, chat excerpts, platform, timestamp, and AI pattern summary before you decide what to do next.",
+    image: "/images/app-ui-screenshots/evidence-review.png",
+    alt: "Koda Evidence Review screen showing recorded Minecraft gameplay and flagged chat messages",
+  },
+  {
+    title: "Gaming time patterns, not just totals.",
+    description:
+      "Late-night sessions, bedtime misses, and top games make it clear when play is becoming a pattern.",
+    image: "/images/app-ui-screenshots/gaming-time.png",
+    alt: "Koda Gaming Time screen showing late-night sessions and top games",
+  },
+  {
     title: "A daily safety snapshot at a glance.",
     description:
       "Start with Lily's risk status, wellbeing score, recent trends, and monitored activity in one calm view.",
@@ -37,20 +51,6 @@ const CARDS: FeatureCard[] = [
       "Critical contact risks, inappropriate language, resolved reviews, and auto-blocking all stay organized by urgency.",
     image: "/images/app-ui-screenshots/alerts-suspicious-contact.png",
     alt: "Koda Alerts screen showing suspicious contact, inappropriate language, and resolved alerts",
-  },
-  {
-    title: "Evidence review with the full context.",
-    description:
-      "Open the screen recording, chat excerpts, platform, timestamp, and AI pattern summary before you decide what to do next.",
-    image: "/images/app-ui-screenshots/evidence-review.png",
-    alt: "Koda Evidence Review screen showing recorded Minecraft gameplay and flagged chat messages",
-  },
-  {
-    title: "Gaming time patterns, not just totals.",
-    description:
-      "Late-night sessions, bedtime misses, and top games make it clear when play is becoming a pattern.",
-    image: "/images/app-ui-screenshots/gaming-time.png",
-    alt: "Koda Gaming Time screen showing late-night sessions and top games",
   },
 ];
 
