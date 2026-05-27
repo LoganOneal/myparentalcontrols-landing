@@ -51,7 +51,6 @@ const NAV_COLUMNS: NavColumn[] = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Use", href: "/tos" },
-      { label: "Sweepstakes Rules", href: "/sweepstakes" },
     ],
   },
 ];
@@ -63,7 +62,6 @@ const QUICK_LINKS: NavLink[] = [
   { label: "Terms", href: "/tos" },
   { label: "Safety & Privacy", href: "/safety-privacy" },
   { label: "Privacy Rights (CA)", href: "/privacy#ca_privacy_rights" },
-  { label: "Sweepstakes", href: "/sweepstakes" },
 ];
 
 function FooterLogo() {
