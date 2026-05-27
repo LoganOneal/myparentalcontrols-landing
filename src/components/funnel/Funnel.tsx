@@ -10,6 +10,7 @@ import { StepLoadingInterstitial } from "./StepLoadingInterstitial";
 import { StepEmailCapture } from "./StepEmailCapture";
 import { StepSummary } from "./StepSummary";
 import { StepValueProp } from "./StepValueProp";
+import { StepCoverageExplainer } from "./StepCoverageExplainer";
 import { ArrowLeft } from "lucide-react";
 
 function shouldShowStep(step: FunnelStep, answers: FunnelAnswers): boolean {
@@ -45,7 +46,7 @@ export function Funnel({
 
   const visibleSteps = getVisibleSteps(config, answers);
   const currentStep = visibleSteps[currentIndex];
-  const NON_QUESTION_TYPES = ["loading-interstitial", "value-prop", "summary"];
+  const NON_QUESTION_TYPES = ["loading-interstitial", "value-prop", "coverage-explainer", "summary"];
   const totalQuestionSteps = visibleSteps.filter(
     (s) => !NON_QUESTION_TYPES.includes(s.type)
   ).length;
@@ -109,7 +110,9 @@ export function Funnel({
   if (!currentStep) return null;
 
   const showBackButton = currentIndex > 0 && !["loading-interstitial", "value-prop", "summary"].includes(currentStep.type);
-  const showProgress = !["loading-interstitial", "value-prop"].includes(currentStep.type);
+  const showProgress = !["loading-interstitial", "value-prop", "coverage-explainer"].includes(currentStep.type);
+  const gameOptions =
+    config.steps.find((step) => step.id === "online-spaces")?.options ?? [];
 
   return (
     <div className="min-h-[100dvh] flex flex-col bg-[#FAFBFC]">
@@ -172,6 +175,15 @@ export function Funnel({
           {currentStep.type === "value-prop" && (
             <StepValueProp
               key={currentStep.id}
+              brandColor={config.brandColor}
+              onNext={handleInterstitialComplete}
+            />
+          )}
+          {currentStep.type === "coverage-explainer" && (
+            <StepCoverageExplainer
+              key={currentStep.id}
+              answers={answers}
+              gameOptions={gameOptions}
               brandColor={config.brandColor}
               onNext={handleInterstitialComplete}
             />

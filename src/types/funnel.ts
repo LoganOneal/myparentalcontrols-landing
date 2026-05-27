@@ -5,6 +5,7 @@ export type FunnelStepType =
   | "email-capture"
   | "loading-interstitial"
   | "value-prop"
+  | "coverage-explainer"
   | "summary";
 
 export type FunnelOption = {

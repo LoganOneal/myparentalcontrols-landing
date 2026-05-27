@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BellRing } from "lucide-react";
 import { StarIcon } from "@/components/icons";
 
 const PARENTS = [
@@ -50,7 +51,7 @@ export function StepValueProp({
               Research-backed
             </div>
             <div className="text-[12px] text-gray-500 leading-snug mt-0.5">
-              Modern online safety
+              For modern online safety
             </div>
           </div>
           <LaurelRight />
@@ -67,9 +68,19 @@ export function StepValueProp({
         <p>
           Koda monitors the conversations other parental controls miss: gaming chat, voice chat, direct messages, and group chats.
         </p>
-        <p>
-          Instead of generic screen-time or traffic restrictions, you actually get alerted when something dangerous happens.
-        </p>
+        <div className="mx-auto flex max-w-[300px] items-center gap-3 rounded-2xl border border-blue-100 bg-blue-50/80 px-4 py-3 text-left shadow-[0_10px_24px_-18px_rgba(37,99,235,0.55)]">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[var(--koda-bear-blue)] shadow-[0_8px_18px_-12px_rgba(37,99,235,0.8)]">
+            <BellRing className="h-5 w-5" aria-hidden />
+          </div>
+          <div>
+            <div className="text-[10px] font-black uppercase tracking-[0.14em] text-[var(--koda-bear-blue)]">
+              Parent alert
+            </div>
+            <p className="text-[15px] font-semibold leading-snug text-gray-900">
+              You get alerted when something dangerous happens.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Social proof */}
@@ -86,7 +97,7 @@ export function StepValueProp({
           ))}
         </div>
         <p className="text-[14px] text-gray-700 text-center leading-snug">
-          Join <span className="font-extrabold">more than 23,000 parents</span> protecting their kids from in-game risks.
+          Koda protects <span className="font-extrabold">over 23,000 children</span> who game online. It will work for your child as well!
         </p>
         <div className="flex items-center gap-1.5">
           <div className="flex items-center gap-0.5">

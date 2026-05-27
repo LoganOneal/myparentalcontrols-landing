@@ -66,6 +66,11 @@ export const funnelConfig: FunnelConfig = {
       ],
     },
     {
+      id: "coverage-explainer",
+      type: "coverage-explainer",
+      title: "How Koda monitors the games and communication you selected",
+    },
+    {
       id: "concerns",
       type: "multi-select",
       title: "What are you most worried about?",
