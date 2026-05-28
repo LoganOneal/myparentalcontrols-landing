@@ -239,8 +239,8 @@ export const funnelConfig: FunnelConfig = {
     {
       id: "summary",
       type: "summary",
-      title: "Your Koda Parental Controls Plan",
-      subtitle: "Here's what we've prepared based on your answers.",
+      title: "Here's what changes with Koda.",
+      subtitle: "Instead of finding out after the fact, you'll get alerted when a conversation or gameplay moment starts to turn risky.",
     },
   ],
 };

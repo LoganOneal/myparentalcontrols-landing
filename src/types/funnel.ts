@@ -41,6 +41,14 @@ export type FunnelStep = {
 
 export type FunnelAnswers = Record<string, string[]>;
 
+export type FunnelCompletion = {
+  answers: FunnelAnswers;
+  email: string;
+  recordId: string;
+  position: number;
+  completedAt: string;
+};
+
 export type FunnelConfig = {
   steps: FunnelStep[];
   brandColor: string;

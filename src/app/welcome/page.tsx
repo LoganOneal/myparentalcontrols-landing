@@ -1,23 +1,62 @@
 import Link from "next/link";
 import { getStripe } from "@/lib/stripe";
 import { getWaitlistRecord } from "@/lib/airtable";
+import { activatePremiumPlan, getRecordIdFromPaymentIntent } from "@/lib/premium";
 
 export const dynamic = "force-dynamic";
 
-type SearchParams = Promise<{ session_id?: string }>;
+type SearchParams = Promise<{
+  session_id?: string;
+  payment_intent?: string;
+  record_id?: string;
+}>;
 
-async function loadPremiumPosition(sessionId: string | undefined): Promise<
+async function loadPremiumPosition(params: {
+  sessionId?: string;
+  paymentIntentId?: string;
+  recordId?: string;
+}): Promise<
   | { state: "paid"; position: number; email: string | null }
   | { state: "pending" }
   | { state: "unknown" }
 > {
-  if (!sessionId) return { state: "unknown" };
+  if (!params.sessionId && !params.paymentIntentId && !params.recordId) {
+    return { state: "unknown" };
+  }
+
   try {
     const stripe = getStripe();
-    const session = await stripe.checkout.sessions.retrieve(sessionId);
-    if (session.payment_status !== "paid") return { state: "pending" };
 
-    const recordId = session.metadata?.recordId;
+    if (params.paymentIntentId) {
+      const paymentIntent = await stripe.paymentIntents.retrieve(
+        params.paymentIntentId,
+      );
+      if (paymentIntent.status !== "succeeded") return { state: "pending" };
+
+      const recordId =
+        getRecordIdFromPaymentIntent(paymentIntent) ?? params.recordId;
+      if (!recordId) return { state: "unknown" };
+
+      return activatePremiumPlan({
+        recordId,
+        stripePaymentId: paymentIntent.id,
+      });
+    }
+
+    if (params.sessionId) {
+      const session = await stripe.checkout.sessions.retrieve(params.sessionId);
+      if (session.payment_status !== "paid") return { state: "pending" };
+
+      const recordId = session.metadata?.recordId;
+      if (!recordId) return { state: "unknown" };
+
+      return activatePremiumPlan({
+        recordId,
+        stripePaymentId: session.id,
+      });
+    }
+
+    const recordId = params.recordId;
     if (!recordId) return { state: "unknown" };
 
     const record = await getWaitlistRecord(recordId);
@@ -42,8 +81,12 @@ export default async function WelcomePage({
 }: {
   searchParams: SearchParams;
 }) {
-  const { session_id } = await searchParams;
-  const result = await loadPremiumPosition(session_id);
+  const { session_id, payment_intent, record_id } = await searchParams;
+  const result = await loadPremiumPosition({
+    sessionId: session_id,
+    paymentIntentId: payment_intent,
+    recordId: record_id,
+  });
 
   return (
     <main className="min-h-screen bg-[#F1F2F4] flex items-center justify-center px-5 py-16">
@@ -70,7 +113,7 @@ export default async function WelcomePage({
           style={{ fontFamily: "Moderat-Black, sans-serif", fontWeight: 700 }}
         >
           {result.state === "paid"
-            ? "You skipped the line."
+            ? "Your Koda plan is active."
             : "Payment received."}
         </h1>
 
@@ -94,8 +137,7 @@ export default async function WelcomePage({
             </div>
             <p className="mt-5 text-[15px] text-gray-600 leading-snug">
               Watch your inbox{result.email ? ` at ${result.email}` : ""} —
-              you&apos;ll receive setup instructions from our team within a few
-              minutes.
+              you&apos;ll receive setup instructions from our team shortly.
             </p>
           </>
         )}

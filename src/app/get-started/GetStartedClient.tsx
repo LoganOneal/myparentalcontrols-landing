@@ -3,19 +3,19 @@
 import { useRouter } from "next/navigation";
 import { Funnel } from "@/components/funnel/Funnel";
 import { funnelConfig } from "@/data/funnel-config";
-import type { FunnelAnswers } from "@/types/funnel";
+import type { FunnelCompletion } from "@/types/funnel";
 
 export function GetStartedClient() {
   const router = useRouter();
 
-  const handleComplete = (answers: FunnelAnswers, email: string) => {
+  const handleComplete = (completion: FunnelCompletion) => {
     if (typeof window !== "undefined") {
       sessionStorage.setItem(
         "koda:funnel:result",
-        JSON.stringify({ answers, email, completedAt: new Date().toISOString() })
+        JSON.stringify(completion)
       );
     }
-    router.push("/welcome");
+    router.push("/offer");
   };
 
   return <Funnel config={funnelConfig} onComplete={handleComplete} />;

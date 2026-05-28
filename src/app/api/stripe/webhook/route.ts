@@ -1,14 +1,7 @@
 import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { getStripe } from "@/lib/stripe";
-import {
-  countPaidRecords,
-  getWaitlistRecord,
-  patchWaitlistRecord,
-} from "@/lib/airtable";
-import { patchWaitlistByAirtableId } from "@/lib/supabase";
-import { sendPremiumQueueEmail } from "@/lib/resend";
-import { formatPremiumPosition } from "@/lib/positions";
+import { activatePremiumPlan, getRecordIdFromPaymentIntent } from "@/lib/premium";
 
 export const runtime = "nodejs";
 
@@ -28,47 +21,33 @@ export async function POST(req: Request) {
     return new NextResponse("Invalid signature", { status: 400 });
   }
 
-  if (event.type !== "checkout.session.completed") {
+  if (
+    event.type !== "checkout.session.completed" &&
+    event.type !== "payment_intent.succeeded"
+  ) {
     return NextResponse.json({ received: true });
   }
 
-  const session = event.data.object as Stripe.Checkout.Session;
-  const recordId = session.metadata?.recordId;
+  const payment =
+    event.type === "checkout.session.completed"
+      ? (event.data.object as Stripe.Checkout.Session)
+      : (event.data.object as Stripe.PaymentIntent);
+  const recordId =
+    event.type === "checkout.session.completed"
+      ? (payment as Stripe.Checkout.Session).metadata?.recordId
+      : getRecordIdFromPaymentIntent(payment as Stripe.PaymentIntent);
   if (!recordId) {
     console.warn("Webhook event missing recordId metadata");
     return NextResponse.json({ received: true });
   }
 
   try {
-    const record = await getWaitlistRecord(recordId);
-    if (record.fields["Paid Skip"]) {
-      // Already processed (Stripe webhook can deliver more than once).
-      return NextResponse.json({ received: true, alreadyPaid: true });
-    }
-
-    const paidCount = await countPaidRecords();
-    const premiumPosition = formatPremiumPosition(paidCount + 1);
-
-    await patchWaitlistRecord(recordId, {
-      "Paid Skip": true,
-      "Stripe Session ID": session.id,
-      "Premium Position": premiumPosition,
+    const result = await activatePremiumPlan({
+      recordId,
+      stripePaymentId: payment.id,
     });
 
-    patchWaitlistByAirtableId(recordId, {
-      paid_skip: true,
-      stripe_session_id: session.id,
-      premium_position: premiumPosition,
-    }).catch((e) => console.error("supabase webhook patch failed", e));
-
-    const email = record.fields.Email;
-    if (email) {
-      await sendPremiumQueueEmail({ to: email, premiumPosition }).catch(
-        (e) => console.error("premium email failed", e),
-      );
-    }
-
-    return NextResponse.json({ received: true });
+    return NextResponse.json({ received: true, position: result.position });
   } catch (err) {
     console.error("Stripe webhook handler failed", err);
     return new NextResponse("Webhook handler error", { status: 500 });

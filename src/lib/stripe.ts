@@ -1,4 +1,5 @@
 import Stripe from "stripe";
+import { getKodaPlan, type KodaPlanId } from "@/lib/plans";
 
 let cached: Stripe | null = null;
 
@@ -43,4 +44,44 @@ export async function createSkipLineCheckoutSession(args: {
   });
 
   return { sessionId: session.id, url: session.url };
+}
+
+export async function createKodaPlanPaymentIntent(args: {
+  recordId: string;
+  email: string;
+  planId: KodaPlanId;
+}): Promise<{
+  clientSecret: string;
+  paymentIntentId: string;
+  amountCents: number;
+  priceLabel: string;
+  planName: string;
+}> {
+  const stripe = getStripe();
+  const plan = getKodaPlan(args.planId);
+
+  const intent = await stripe.paymentIntents.create({
+    amount: plan.amountCents,
+    currency: "usd",
+    receipt_email: args.email,
+    description: `Koda ${plan.checkoutLabel}`,
+    automatic_payment_methods: { enabled: true },
+    metadata: {
+      recordId: args.recordId,
+      planId: plan.id,
+      planName: plan.name,
+    },
+  });
+
+  if (!intent.client_secret) {
+    throw new Error("Stripe PaymentIntent missing client_secret");
+  }
+
+  return {
+    clientSecret: intent.client_secret,
+    paymentIntentId: intent.id,
+    amountCents: plan.amountCents,
+    priceLabel: plan.priceLabel,
+    planName: plan.name,
+  };
 }

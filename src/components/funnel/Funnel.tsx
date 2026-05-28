@@ -1,7 +1,13 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import type { FunnelAnswers, FunnelConfig, FunnelStep } from "@/types/funnel";
+import type {
+  FunnelAnswers,
+  FunnelCompletion,
+  FunnelConfig,
+  FunnelStep,
+} from "@/types/funnel";
+import type { CreateWaitlistResponse } from "@/types/wizard";
 import { KodaLogo } from "@/components/icons";
 import { FunnelProgress } from "./FunnelProgress";
 import { StepSingleSelect } from "./StepSingleSelect";
@@ -36,11 +42,13 @@ export function Funnel({
   onComplete,
 }: {
   config: FunnelConfig;
-  onComplete: (answers: FunnelAnswers, email: string) => void;
+  onComplete: (completion: FunnelCompletion) => void;
 }) {
   const [answers, setAnswers] = useState<FunnelAnswers>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [email, setEmail] = useState("");
+  const [waitlistRecord, setWaitlistRecord] =
+    useState<CreateWaitlistResponse | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -89,7 +97,8 @@ export function Funnel({
     setError(null);
     try {
       const { joinWaitlist } = await import("@/lib/waitlist-client");
-      await joinWaitlist(emailValue);
+      const result = await joinWaitlist(emailValue);
+      setWaitlistRecord(result);
       if (!currentStep) return;
       const nextVisible = getVisibleSteps(config, answers);
       const currentIdx = nextVisible.findIndex((s) => s.id === currentStep.id);
@@ -104,7 +113,17 @@ export function Funnel({
   };
 
   const handleGetStarted = () => {
-    onComplete(answers, email);
+    if (!waitlistRecord) {
+      setError("Please enter your email before continuing.");
+      return;
+    }
+    onComplete({
+      answers,
+      email,
+      recordId: waitlistRecord.recordId,
+      position: waitlistRecord.position,
+      completedAt: new Date().toISOString(),
+    });
   };
 
   if (!currentStep) return null;
