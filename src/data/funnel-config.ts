@@ -233,8 +233,8 @@ export const funnelConfig: FunnelConfig = {
     {
       id: "email",
       type: "email-capture",
-      title: "Where should we send your safety recommendation?",
-      subtitle: "We'll send your personalized plan and let you know when Koda is ready.",
+      title: "Enter your email to get your personalized Koda safety plan",
+      subtitle: "We'll send the recommendations Koda prepared from your answers.",
     },
     {
       id: "summary",

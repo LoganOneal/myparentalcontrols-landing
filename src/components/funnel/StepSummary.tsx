@@ -97,10 +97,10 @@ export function StepSummary({
           className="w-full h-14 rounded-full text-[17px] font-bold text-white transition-all duration-200 disabled:opacity-40"
           style={{ backgroundColor: brandColor }}
         >
-          {submitting ? "Setting up..." : "Join the Waitlist — It's Free"}
+          {submitting ? "Setting up..." : "Continue to Koda"}
         </button>
         <p className="mt-3 text-center text-[12px] text-gray-400">
-          You&apos;ll be first to know when Koda launches.
+          Your plan is ready when you are.
         </p>
       </div>
     </div>
