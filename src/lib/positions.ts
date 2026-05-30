@@ -7,3 +7,9 @@ const PREMIUM_BASE = Number(process.env.PREMIUM_BASE_OFFSET ?? 7);
 export function formatPremiumPosition(paidCount: number): number {
   return PREMIUM_BASE + paidCount;
 }
+
+const WAITLIST_QUEUE_BASE = 37892;
+
+export function formatWaitlistQueuePosition(paidCount: number): number {
+  return WAITLIST_QUEUE_BASE + paidCount;
+}
