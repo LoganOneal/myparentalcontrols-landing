@@ -71,6 +71,7 @@ export function Funnel({
       const currentIdx = nextVisible.findIndex((s) => s.id === stepId);
       if (currentIdx < nextVisible.length - 1) {
         setCurrentIndex(currentIdx + 1);
+        window.scrollTo(0, 0);
       }
     },
     [answers, config]
@@ -79,6 +80,7 @@ export function Funnel({
   const goBack = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -88,6 +90,7 @@ export function Funnel({
     const currentIdx = nextVisible.findIndex((s) => s.id === currentStep.id);
     if (currentIdx < nextVisible.length - 1) {
       setCurrentIndex(currentIdx + 1);
+      window.scrollTo(0, 0);
     }
   }, [answers, config, currentStep]);
 
@@ -104,6 +107,7 @@ export function Funnel({
       const currentIdx = nextVisible.findIndex((s) => s.id === currentStep.id);
       if (currentIdx < nextVisible.length - 1) {
         setCurrentIndex(currentIdx + 1);
+        window.scrollTo(0, 0);
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");

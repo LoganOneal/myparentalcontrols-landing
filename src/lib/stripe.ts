@@ -65,7 +65,7 @@ export async function createKodaPlanPaymentIntent(args: {
     currency: "usd",
     receipt_email: args.email,
     description: `Koda ${plan.checkoutLabel}`,
-    payment_method_types: ["card"],
+    automatic_payment_methods: { enabled: true },
     metadata: {
       recordId: args.recordId,
       planId: plan.id,
