@@ -6,6 +6,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import type {
   Stripe,
   StripeElements,
+  StripeExpressCheckoutElement,
   StripePaymentElement,
 } from "@stripe/stripe-js";
 import { ArrowLeft, LockKeyhole, ShieldCheck } from "lucide-react";
@@ -64,7 +65,12 @@ export function CheckoutClient() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const mountedElement = useRef<StripePaymentElement | null>(null);
+  const [walletsChecked, setWalletsChecked] = useState(false);
+  const [walletsAvailable, setWalletsAvailable] = useState(false);
+  const mountedPaymentElement = useRef<StripePaymentElement | null>(null);
+  const mountedExpressCheckoutElement =
+    useRef<StripeExpressCheckoutElement | null>(null);
+  const expressCheckoutElementContainer = useRef<HTMLDivElement | null>(null);
   const paymentElementContainer = useRef<HTMLDivElement | null>(null);
   const requestedKey = useRef<string | null>(null);
 
@@ -108,6 +114,10 @@ export function CheckoutClient() {
     setLoading(true);
     setError(null);
     setIntent(null);
+    setStripe(null);
+    setElements(null);
+    setWalletsChecked(false);
+    setWalletsAvailable(false);
 
     async function preparePayment() {
       try {
@@ -138,21 +148,164 @@ export function CheckoutClient() {
             },
           },
         });
+        const expressCheckoutElement = stripeElements.create(
+          "expressCheckout",
+          {
+            buttonHeight: 52,
+            buttonTheme: {
+              applePay: "black",
+              googlePay: "black",
+            },
+            buttonType: {
+              applePay: "check-out",
+              googlePay: "checkout",
+            },
+            layout: {
+              maxColumns: 1,
+              maxRows: 2,
+              overflow: "never",
+            },
+            lineItems: [
+              {
+                name: plan.checkoutLabel,
+                amount: paymentIntent.amountCents,
+              },
+            ],
+            paymentMethods: {
+              applePay: "auto",
+              googlePay: "auto",
+              link: "never",
+              paypal: "never",
+              amazonPay: "never",
+              klarna: "never",
+            },
+          },
+        );
         const paymentElement = stripeElements.create("payment", {
           layout: "tabs",
+          wallets: {
+            applePay: "never",
+            googlePay: "never",
+            link: "never",
+          },
         });
 
         if (cancelled) {
+          expressCheckoutElement.destroy();
           paymentElement.destroy();
           return;
         }
 
-        mountedElement.current?.destroy();
-        if (!paymentElementContainer.current) {
+        expressCheckoutElement.on("ready", (event) => {
+          if (cancelled) return;
+          setWalletsChecked(true);
+          setWalletsAvailable(
+            Boolean(
+              event.availablePaymentMethods?.applePay ||
+                event.availablePaymentMethods?.googlePay,
+            ),
+          );
+        });
+        expressCheckoutElement.on("availablepaymentmethodschange", (event) => {
+          if (cancelled) return;
+          setWalletsChecked(true);
+          setWalletsAvailable(
+            Boolean(
+              event.paymentMethods?.applePay?.available ||
+                event.paymentMethods?.googlePay?.available,
+            ),
+          );
+        });
+        expressCheckoutElement.on("loaderror", () => {
+          if (cancelled) return;
+          setWalletsChecked(true);
+          setWalletsAvailable(false);
+        });
+        expressCheckoutElement.on("click", (event) => {
+          event.resolve({
+            lineItems: [
+              {
+                name: plan.checkoutLabel,
+                amount: paymentIntent.amountCents,
+              },
+            ],
+          });
+        });
+        expressCheckoutElement.on("cancel", () => {
+          if (!cancelled) setSubmitting(false);
+        });
+        expressCheckoutElement.on("confirm", async (event) => {
+          if (cancelled) return;
+          setSubmitting(true);
+          setError(null);
+
+          try {
+            const submit = await stripeElements.submit();
+            if (submit.error) {
+              const message =
+                submit.error.message ?? "Please check your payment details.";
+              event.paymentFailed({
+                reason: "invalid_payment_data",
+                message,
+              });
+              setError(message);
+              setSubmitting(false);
+              return;
+            }
+
+            const result = await stripeInstance.confirmPayment({
+              elements: stripeElements,
+              confirmParams: {
+                return_url: `${window.location.origin}/welcome?record_id=${completion!.recordId}&plan=${plan.id}`,
+              },
+              redirect: "if_required",
+            });
+
+            if (result.error) {
+              const message =
+                result.error.message ?? "Payment could not be completed.";
+              event.paymentFailed({
+                reason: "fail",
+                message,
+              });
+              setError(message);
+              setSubmitting(false);
+              return;
+            }
+
+            const paymentIntentId =
+              result.paymentIntent?.id ?? paymentIntent.paymentIntentId;
+            router.push(
+              `/welcome?payment_intent=${paymentIntentId}&record_id=${completion!.recordId}&plan=${plan.id}`,
+            );
+          } catch (e) {
+            const message =
+              e instanceof Error
+                ? e.message
+                : "Payment could not be completed.";
+            event.paymentFailed({
+              reason: "fail",
+              message,
+            });
+            setError(message);
+            setSubmitting(false);
+          }
+        });
+
+        mountedPaymentElement.current?.destroy();
+        mountedExpressCheckoutElement.current?.destroy();
+        if (
+          !paymentElementContainer.current ||
+          !expressCheckoutElementContainer.current
+        ) {
+          expressCheckoutElement.destroy();
+          paymentElement.destroy();
           throw new Error("Payment form could not mount.");
         }
+        expressCheckoutElement.mount(expressCheckoutElementContainer.current);
         paymentElement.mount(paymentElementContainer.current);
-        mountedElement.current = paymentElement;
+        mountedExpressCheckoutElement.current = expressCheckoutElement;
+        mountedPaymentElement.current = paymentElement;
         setStripe(stripeInstance);
         setElements(stripeElements);
         setIntent(paymentIntent);
@@ -169,8 +322,15 @@ export function CheckoutClient() {
 
     return () => {
       cancelled = true;
+      if (requestedKey.current === key) {
+        requestedKey.current = null;
+      }
+      mountedExpressCheckoutElement.current?.destroy();
+      mountedExpressCheckoutElement.current = null;
+      mountedPaymentElement.current?.destroy();
+      mountedPaymentElement.current = null;
     };
-  }, [completion, planId]);
+  }, [completion, plan, planId, router]);
 
   const handleSubmit = async () => {
     if (!stripe || !elements || !completion || !intent) return;
@@ -278,10 +438,43 @@ export function CheckoutClient() {
           </div>
 
           <div
-            id="payment-element"
-            ref={paymentElementContainer}
-            className="min-h-[226px] rounded-2xl border border-gray-100 bg-white p-1"
-          />
+            className={
+              walletsChecked && !walletsAvailable ? "hidden" : "mb-5"
+            }
+          >
+            {walletsAvailable && (
+              <div className="mb-3 text-[13px] font-black uppercase tracking-[0.14em] text-[#2563EB]">
+                Fast checkout
+              </div>
+            )}
+            <div
+              id="express-checkout-element"
+              ref={expressCheckoutElementContainer}
+              className="min-h-[52px]"
+            />
+            {walletsAvailable && (
+              <div className="mt-5 flex items-center gap-3">
+                <div className="h-px flex-1 bg-gray-200" />
+                <div className="text-[12px] font-black uppercase tracking-[0.14em] text-gray-400">
+                  or pay with card
+                </div>
+                <div className="h-px flex-1 bg-gray-200" />
+              </div>
+            )}
+          </div>
+
+          <div className={walletsAvailable ? "opacity-90" : undefined}>
+            {walletsAvailable && (
+              <div className="mb-3 text-[13px] font-black uppercase tracking-[0.14em] text-gray-400">
+                Card fallback
+              </div>
+            )}
+            <div
+              id="payment-element"
+              ref={paymentElementContainer}
+              className="min-h-[226px] rounded-2xl border border-gray-100 bg-white p-1"
+            />
+          </div>
 
           {loading && (
             <div className="mt-4 rounded-2xl bg-gray-50 px-4 py-3 text-center text-[14px] font-bold text-gray-500">
@@ -304,7 +497,11 @@ export function CheckoutClient() {
             className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-[#2563EB] text-[18px] font-black text-white shadow-[0_18px_42px_-28px_rgba(37,99,235,0.85)] transition-opacity disabled:opacity-50"
           >
             <LockKeyhole className="h-5 w-5" aria-hidden />
-            {submitting ? "Processing..." : `Pay ${plan.priceLabel}`}
+            {submitting
+              ? "Processing..."
+              : walletsAvailable
+                ? `Pay with card ${plan.priceLabel}`
+                : `Pay ${plan.priceLabel}`}
           </button>
           <div className="mt-4 flex items-center justify-center gap-2 text-[13px] font-bold text-gray-500">
             <ShieldCheck className="h-4 w-4 text-emerald-600" aria-hidden />

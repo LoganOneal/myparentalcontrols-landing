@@ -1,28 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   BellRing,
   Check,
   CheckCircle2,
   ChevronRight,
-  CreditCard,
   Gamepad2,
-  LockKeyhole,
   MessageCircle,
   Mic,
-  Play,
   ShieldAlert,
   ShieldCheck,
-  Sparkles,
   Tag,
   Users,
   Video,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { KodaLogo } from "@/components/icons";
+import { KodaLogo, StarIcon } from "@/components/icons";
 import {
   DEFAULT_KODA_PLAN_ID,
   KODA_PLANS,
@@ -70,6 +66,58 @@ const REVIEWS = [
   },
 ];
 
+const REVIEW_IMAGES = [
+  {
+    src: "/images/parents/parent5.jpg",
+    alt: "Parent and child gaming together",
+  },
+  {
+    src: "/images/parents/parent6.jpg",
+    alt: "Parent watching a child play games online",
+  },
+];
+
+const COUPON_CODE_SOURCES = [
+  {
+    stepId: "online-spaces",
+    codes: {
+      roblox: "ROBLOX",
+      minecraft: "MINECRAFT",
+      fortnite: "FORTNITE",
+      discord: "DISCORD",
+      steam: "STEAM",
+      "league-of-legends": "LEAGUE",
+      valorant: "VALORANT",
+      "counter-strike": "CS2",
+      "call-of-duty": "COD",
+      vrchat: "VRCHAT",
+      "other-pc-games": "PC",
+    },
+  },
+  {
+    stepId: "communication",
+    codes: {
+      "voice-chat": "VOICE",
+      "direct-messages": "DM",
+      "group-chats": "GROUP",
+      "text-chat": "TEXT",
+      "video-screen": "SCREEN",
+    },
+  },
+  {
+    stepId: "concerns",
+    codes: {
+      strangers: "STRANGER",
+      "sexual-messages": "EXPLICIT",
+      bullying: "BULLYING",
+      "harmful-language": "THREAT",
+      "hidden-conversations": "SEE_MORE",
+      "screen-time": "TIME",
+      visibility: "SEE_MORE",
+    },
+  },
+] as const;
+
 function parseCompletion(value: string | null): FunnelCompletion | null {
   if (!value) return null;
   try {
@@ -93,9 +141,31 @@ function formatTime(seconds: number) {
   return `${minutes}:${remaining}`;
 }
 
-function getOfferCode(email: string) {
-  const prefix = email.split("@")[0]?.replace(/[^a-z0-9]+/gi, "_").slice(0, 12);
-  return `${prefix || "koda"}_safe50`.toLowerCase();
+function getCouponDateCode(completedAt: string) {
+  const date = new Date(completedAt);
+  const safeDate = Number.isNaN(date.getTime()) ? new Date() : date;
+  const month = (safeDate.getMonth() + 1).toString().padStart(2, "0");
+  const year = safeDate.getFullYear().toString().slice(-2);
+  return `${month}${year}`;
+}
+
+function getCouponBase(answers: FunnelCompletion["answers"]) {
+  for (const source of COUPON_CODE_SOURCES) {
+    const selectedIds = answers[source.stepId] ?? [];
+    const match = selectedIds.find((id) => id in source.codes);
+
+    if (match) {
+      return source.codes[match as keyof typeof source.codes];
+    }
+  }
+
+  return "FAMILY";
+}
+
+function getOfferCode(completion: FunnelCompletion) {
+  return `${getCouponBase(completion.answers)}_SAFE_${getCouponDateCode(
+    completion.completedAt,
+  )}`;
 }
 
 function splitPrice(price: string) {
@@ -106,14 +176,14 @@ function splitPrice(price: string) {
 
 function Stars() {
   return (
-    <div className="flex gap-1" aria-label="5 star review">
+    <div className="flex items-center gap-1" aria-label="5 star review">
       {Array.from({ length: 5 }).map((_, index) => (
-        <span
+        <StarIcon
           key={index}
-          className="flex h-7 w-7 items-center justify-center bg-emerald-400 text-white"
-        >
-          <span className="text-[19px] leading-none">★</span>
-        </span>
+          className="h-7 w-7 text-[#FBBF24]"
+          fill="currentColor"
+          aria-hidden
+        />
       ))}
     </div>
   );
@@ -207,6 +277,80 @@ function PlanCard({
   );
 }
 
+function FinalPlanOptions({
+  selectedPlan,
+  onSelect,
+}: {
+  selectedPlan: KodaPlan;
+  onSelect: (planId: KodaPlanId) => void;
+}) {
+  return (
+    <section className="mt-10 rounded-[26px] border border-slate-200 bg-white p-4 shadow-[0_22px_54px_-44px_rgba(15,23,42,0.75)]">
+      <div className="text-center">
+        <div className="text-[12px] font-black uppercase tracking-[0.14em] text-[#2563EB]">
+          Choose your plan
+        </div>
+        <h2 className="mt-1 text-[24px] font-black leading-tight text-gray-950">
+          Confirm your Koda price
+        </h2>
+      </div>
+
+      <div className="mt-4 space-y-2">
+        {KODA_PLANS.map((plan) => {
+          const selected = selectedPlan.id === plan.id;
+
+          return (
+            <button
+              key={plan.id}
+              type="button"
+              onClick={() => onSelect(plan.id)}
+              aria-pressed={selected}
+              className={`grid w-full grid-cols-[1fr_auto] items-center gap-3 rounded-[18px] border-2 px-4 py-3 text-left transition-all ${
+                selected
+                  ? "border-[#2563EB] bg-blue-50 shadow-[0_16px_34px_-28px_rgba(37,99,235,0.9)]"
+                  : "border-slate-200 bg-white hover:border-blue-200"
+              }`}
+            >
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-[16px] font-black leading-tight text-gray-950">
+                    {plan.name}
+                  </span>
+                  {plan.badge && (
+                    <span className="rounded-full bg-[#2563EB] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.06em] text-white">
+                      {plan.badge}
+                    </span>
+                  )}
+                </div>
+                <div className="mt-1 text-[12px] font-bold leading-snug text-slate-500">
+                  {plan.billingLabel}
+                </div>
+              </div>
+
+              <div className="text-right">
+                <div className="flex items-baseline justify-end gap-1.5">
+                  {plan.originalLabel && (
+                    <span className="text-[13px] font-semibold text-slate-400 line-through decoration-red-500">
+                      {plan.originalLabel}
+                    </span>
+                  )}
+                  <span className="text-[20px] font-black text-[#2563EB]">
+                    {plan.priceLabel}
+                  </span>
+                </div>
+                <div className="mt-1 flex items-center justify-end gap-1.5 text-[11px] font-black text-slate-500">
+                  {selected && <Check className="h-3.5 w-3.5 text-[#2563EB]" />}
+                  {plan.perMonthLabel}
+                </div>
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 function DiscountTicket({
   seconds,
   code,
@@ -226,9 +370,9 @@ function DiscountTicket({
       </div>
       <div className="my-4 border-t-4 border-dashed border-white" />
       <div className="grid grid-cols-[1fr_auto] gap-3">
-        <div className="flex min-w-0 items-center justify-center gap-2 rounded-2xl bg-white px-3 py-3 text-[14px] font-black text-gray-950">
-          <Check className="h-5 w-5 shrink-0 text-lime-600" aria-hidden />
-          <span className="truncate">{code}</span>
+        <div className="flex min-w-0 items-center justify-center gap-1.5 rounded-2xl bg-white px-3 py-3 text-center text-[12px] font-black leading-tight text-gray-950 sm:text-[14px]">
+          <Check className="h-4 w-4 shrink-0 text-lime-600" aria-hidden />
+          <span className="min-w-0 whitespace-nowrap font-mono">{code}</span>
         </div>
         <div className="rounded-2xl bg-lime-100 px-4 py-2 text-center">
           <div className="font-mono text-[30px] font-black leading-none text-lime-700">
@@ -399,6 +543,28 @@ function ReviewCard({ review }: { review: (typeof REVIEWS)[number] }) {
 }
 
 function ReviewsSection() {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const mediaScrollerRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToImage = (index: number) => {
+    const scroller = mediaScrollerRef.current;
+    if (!scroller) return;
+    setActiveImageIndex(index);
+    scroller.scrollTo({
+      left: index * scroller.clientWidth,
+      behavior: "smooth",
+    });
+  };
+
+  const handleMediaScroll = () => {
+    const scroller = mediaScrollerRef.current;
+    if (!scroller) return;
+    const nextIndex = Math.round(scroller.scrollLeft / scroller.clientWidth);
+    setActiveImageIndex(
+      Math.min(Math.max(nextIndex, 0), REVIEW_IMAGES.length - 1),
+    );
+  };
+
   return (
     <section className="mt-10">
       <h2 className="text-center text-[31px] font-black leading-tight tracking-tight text-slate-800">
@@ -407,23 +573,46 @@ function ReviewsSection() {
       </h2>
 
       <div className="relative mx-auto mt-6 h-[330px] w-[330px] overflow-hidden rounded-full shadow-[0_22px_54px_-40px_rgba(15,23,42,0.9)]">
-        <Image
-          src="/images/parents/parent5.jpg"
-          alt="Parent sharing a Koda review"
-          fill
-          priority
-          sizes="330px"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-          <div className="flex h-18 w-18 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur-sm">
-            <Play className="ml-1 h-9 w-9 fill-white" aria-hidden />
-          </div>
+        <div
+          id="review-image-carousel"
+          ref={mediaScrollerRef}
+          onScroll={handleMediaScroll}
+          className="no-scrollbar flex h-full w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
+        >
+          {REVIEW_IMAGES.map((image, index) => (
+            <div
+              key={image.src}
+              className="relative h-full w-full shrink-0 snap-center"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                priority={index === 0}
+                sizes="330px"
+                className="object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
-      <div className="mt-5 flex justify-center gap-4" aria-hidden>
-        <span className="h-3 w-3 rounded-full bg-slate-800" />
-        <span className="h-3 w-3 rounded-full bg-slate-300" />
+      <div className="mt-5 flex justify-center gap-4">
+        {REVIEW_IMAGES.map((image, index) => (
+          <button
+            key={image.src}
+            type="button"
+            onClick={() => scrollToImage(index)}
+            aria-label={`Show review image ${index + 1}`}
+            aria-current={activeImageIndex === index ? "true" : undefined}
+            className="flex h-8 w-8 items-center justify-center rounded-full"
+          >
+            <span
+              className={`h-3 w-3 rounded-full transition-colors ${
+                activeImageIndex === index ? "bg-slate-800" : "bg-slate-300"
+              }`}
+            />
+          </button>
+        ))}
       </div>
 
       <div className="mt-8 space-y-5">
@@ -503,7 +692,7 @@ export function OfferClient() {
     );
   }
 
-  const offerCode = getOfferCode(completion.email);
+  const offerCode = getOfferCode(completion);
 
   return (
     <main className="min-h-[100dvh] bg-white px-4 pb-10">
@@ -548,49 +737,13 @@ export function OfferClient() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-center text-[30px] font-black leading-tight text-gray-950">
-            Select payment method
-          </h2>
-          <div className="mt-5 grid grid-cols-3 gap-3">
-            {["Card", "Link", "Wallet"].map((method, index) => (
-              <button
-                key={method}
-                type="button"
-                className={`flex h-24 flex-col items-center justify-center rounded-[18px] border-2 text-[14px] font-black ${
-                  index === 0
-                    ? "border-[#2563EB] bg-blue-50 text-[#2563EB]"
-                    : "border-slate-200 bg-white text-slate-700"
-                }`}
-              >
-                {index === 0 ? (
-                  <CreditCard className="mb-2 h-7 w-7" aria-hidden />
-                ) : index === 1 ? (
-                  <Sparkles className="mb-2 h-7 w-7" aria-hidden />
-                ) : (
-                  <LockKeyhole className="mb-2 h-7 w-7" aria-hidden />
-                )}
-                {method}
-              </button>
-            ))}
-          </div>
-
           <button
             type="button"
             onClick={handleContinue}
-            className="mt-6 flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
+            className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
           >
-            Continue with secure checkout
+            Continue to secure checkout
             <ChevronRight className="h-6 w-6" aria-hidden />
-          </button>
-          <div className="mt-5 text-center text-[18px] font-medium text-[#22184F]">
-            or
-          </div>
-          <button
-            type="button"
-            onClick={handleContinue}
-            className="mt-4 w-full border-b border-slate-200 pb-4 text-center text-[21px] font-black text-gray-950"
-          >
-            Continue with another payment method
           </button>
         </section>
 
@@ -611,7 +764,12 @@ export function OfferClient() {
         <ExpertSection />
         <ReviewsSection />
 
-        <div className="mt-10 pb-2">
+        <FinalPlanOptions
+          selectedPlan={selectedPlan}
+          onSelect={setSelectedPlanId}
+        />
+
+        <div className="mt-4 pb-2">
           <button
             type="button"
             onClick={handleContinue}
