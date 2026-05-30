@@ -28,6 +28,9 @@ const ANALYSIS_ROWS = [
   },
 ];
 
+const ANALYSIS_PROGRESS_MAX =
+  100 - Math.min(...ANALYSIS_ROWS.map((row) => row.offset));
+
 function clamp(value: number) {
   return Math.min(Math.max(value, 0), 100);
 }
@@ -39,7 +42,7 @@ function getRowProgress(progress: number, offset: number) {
 export function StepLoadingInterstitial({
   title,
   messages = [],
-  duration = 4000,
+  duration = 5800,
   brandColor,
   onComplete,
 }: {
@@ -51,6 +54,7 @@ export function StepLoadingInterstitial({
 }) {
   const [messageIndex, setMessageIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+  const overallProgress = Math.round((progress / ANALYSIS_PROGRESS_MAX) * 100);
 
   useEffect(() => {
     const messageInterval = duration / Math.max(messages.length, 1);
@@ -61,24 +65,33 @@ export function StepLoadingInterstitial({
       });
     }, messageInterval);
 
-    const progressStep = duration / 50;
+    const progressStep = duration / (ANALYSIS_PROGRESS_MAX / 2);
     const progressTick = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) return 100;
+        if (prev >= ANALYSIS_PROGRESS_MAX) return ANALYSIS_PROGRESS_MAX;
         return prev + 2;
       });
     }, progressStep);
 
-    const timeout = setTimeout(() => {
-      onComplete();
-    }, duration);
-
     return () => {
       clearInterval(tick);
       clearInterval(progressTick);
-      clearTimeout(timeout);
     };
-  }, [duration, messages.length, onComplete]);
+  }, [duration, messages.length]);
+
+  useEffect(() => {
+    const allRowsComplete = ANALYSIS_ROWS.every(
+      (row) => getRowProgress(progress, row.offset) >= 100,
+    );
+
+    if (!allRowsComplete) return;
+
+    const completionPause = window.setTimeout(() => {
+      onComplete();
+    }, 650);
+
+    return () => window.clearTimeout(completionPause);
+  }, [onComplete, progress]);
 
   return (
     <div className="flex flex-1 flex-col animate-in fade-in slide-in-from-bottom-3 duration-500">
@@ -89,7 +102,10 @@ export function StepLoadingInterstitial({
         >
           <div
             className="h-full rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${progress}%`, backgroundColor: brandColor }}
+            style={{
+              width: `${clamp(overallProgress)}%`,
+              backgroundColor: brandColor,
+            }}
           />
         </div>
         <h1 className="text-[28px] font-bold leading-[1.15] tracking-tight text-gray-900 sm:text-[32px]">

@@ -228,7 +228,7 @@ export const funnelConfig: FunnelConfig = {
         "Matching to relevant protections...",
         "Personalizing your recommendation...",
       ],
-      interstitialDuration: 4000,
+      interstitialDuration: 5800,
     },
     {
       id: "email",

@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import {
   BellRing,
   Check,
-  CheckCircle2,
   ChevronRight,
   Gamepad2,
   MessageCircle,
@@ -291,7 +290,7 @@ function FinalPlanOptions({
           Choose your plan
         </div>
         <h2 className="mt-1 text-[24px] font-black leading-tight text-gray-950">
-          Confirm your Koda price
+          Choose my Koda plan
         </h2>
       </div>
 
@@ -773,10 +772,10 @@ export function OfferClient() {
           <button
             type="button"
             onClick={handleContinue}
-            className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-[#2563EB] text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(37,99,235,0.95)]"
+            className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
           >
-            <CheckCircle2 className="h-6 w-6" aria-hidden />
-            Get my Koda plan
+            Continue to secure checkout
+            <ChevronRight className="h-6 w-6" aria-hidden />
           </button>
         </div>
       </div>
