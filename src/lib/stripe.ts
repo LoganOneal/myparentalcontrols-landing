@@ -16,6 +16,7 @@ export async function createSkipLineCheckoutSession(args: {
   email: string;
 }): Promise<{ sessionId: string; url: string | null }> {
   const stripe = getStripe();
+  const plan = getKodaPlan("monthly");
   const siteUrl = (
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ).replace(/\/$/, "");
@@ -28,15 +29,15 @@ export async function createSkipLineCheckoutSession(args: {
         price_data: {
           currency: "usd",
           product_data: {
-            name: "Skip the line",
-            description: "Jump to the front of the Koda waitlist.",
+            name: `Koda ${plan.name}`,
+            description: plan.checkoutLabel,
           },
-          unit_amount: 100,
+          unit_amount: plan.amountCents,
         },
         quantity: 1,
       },
     ],
-    metadata: { recordId: args.recordId },
+    metadata: { recordId: args.recordId, planId: plan.id },
     success_url: `${siteUrl}/welcome?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/get-started?step=5`,
     allow_promotion_codes: false,
@@ -65,7 +66,7 @@ export async function createKodaPlanPaymentIntent(args: {
     currency: "usd",
     receipt_email: args.email,
     description: `Koda ${plan.checkoutLabel}`,
-    automatic_payment_methods: { enabled: true },
+    payment_method_types: ["card", "link"],
     metadata: {
       recordId: args.recordId,
       planId: plan.id,

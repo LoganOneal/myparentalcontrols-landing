@@ -461,7 +461,7 @@ function SignalsSection() {
       <h2 className="text-[31px] font-black leading-tight tracking-tight text-[#22184F]">
         Based on child-safety research
       </h2>
-      <div className="relative mx-auto mt-6 h-[300px] max-w-[430px]">
+      <div className="relative mx-auto mt-6 h-[340px] max-w-[360px]">
         <div className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-[10px] border-white bg-[#22184F] text-white shadow-xl">
           <div className="text-[34px] font-black leading-none">5</div>
           <div className="text-[13px] font-black uppercase tracking-[0.08em]">
@@ -471,10 +471,10 @@ function SignalsSection() {
         {SIGNALS.map((signal, index) => {
           const positions = [
             "left-1/2 top-0 -translate-x-1/2",
-            "right-2 top-[72px]",
-            "right-9 bottom-0",
-            "left-9 bottom-0",
-            "left-2 top-[72px]",
+            "right-0 top-[22%]",
+            "right-[10%] bottom-0",
+            "left-[10%] bottom-0",
+            "left-0 top-[22%]",
           ];
           return (
             <div
@@ -490,7 +490,7 @@ function SignalsSection() {
           );
         })}
       </div>
-      <div className="grid grid-cols-3 gap-3 text-[11px] font-black text-slate-600">
+      <div className="mt-4 grid grid-cols-3 gap-3 text-[11px] font-black text-slate-600">
         <div className="rounded-full border border-slate-200 bg-white px-2 py-2">
           Research-backed
         </div>

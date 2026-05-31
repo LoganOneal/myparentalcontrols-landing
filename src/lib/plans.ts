@@ -9,6 +9,7 @@ export type KodaPlan = {
   originalLabel?: string;
   amountCents: number;
   billingLabel: string;
+  protectionLabel: string;
   perMonthLabel: string;
   perDayLabel: string;
   originalPerDayLabel?: string;
@@ -21,10 +22,11 @@ export const KODA_PLANS: KodaPlan[] = [
     id: "monthly",
     name: "1-Month Plan",
     description: "Flexible protection for one child profile.",
-    priceLabel: "$1.00",
+    priceLabel: "$12.49",
     originalLabel: "$24.99",
-    amountCents: 100,
+    amountCents: 1249,
     billingLabel: "Billed monthly",
+    protectionLabel: "1 month",
     perMonthLabel: "$12.49/mo",
     perDayLabel: "$0.42",
     originalPerDayLabel: "$0.83",
@@ -39,6 +41,7 @@ export const KODA_PLANS: KodaPlan[] = [
     originalLabel: "$59.97",
     amountCents: 2997,
     billingLabel: "Billed every 3 months",
+    protectionLabel: "3 months",
     perMonthLabel: "$9.99/mo",
     perDayLabel: "$0.33",
     originalPerDayLabel: "$0.67",
@@ -54,6 +57,7 @@ export const KODA_PLANS: KodaPlan[] = [
     originalLabel: "$149.88",
     amountCents: 7494,
     billingLabel: "Billed yearly",
+    protectionLabel: "1 year",
     perMonthLabel: "$6.25/mo",
     perDayLabel: "$0.21",
     originalPerDayLabel: "$0.41",
