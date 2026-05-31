@@ -66,11 +66,6 @@ export const funnelConfig: FunnelConfig = {
       ],
     },
     {
-      id: "coverage-explainer",
-      type: "coverage-explainer",
-      title: "How Koda monitors the games and communication you selected",
-    },
-    {
       id: "concerns",
       type: "multi-select",
       title: "What are you most worried about?",
@@ -86,6 +81,11 @@ export const funnelConfig: FunnelConfig = {
         { id: "visibility", label: "I just want more visibility", fallbackIcon: "eye", iconBackground: "#ecfdf5", iconColor: "#059669" },
         { id: "not-sure", label: "I'm not sure yet", fallbackIcon: "help-circle", iconBackground: "#f9fafb", iconColor: "#6b7280" },
       ],
+    },
+    {
+      id: "product-showcase",
+      type: "product-showcase",
+      title: "Here's how Koda helps",
     },
     {
       id: "tools-used",

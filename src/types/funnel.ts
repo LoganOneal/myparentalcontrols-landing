@@ -6,6 +6,7 @@ export type FunnelStepType =
   | "loading-interstitial"
   | "value-prop"
   | "coverage-explainer"
+  | "product-showcase"
   | "summary";
 
 export type FunnelOption = {
