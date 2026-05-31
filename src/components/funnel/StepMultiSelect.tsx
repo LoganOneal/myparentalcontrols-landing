@@ -2,7 +2,18 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { CircleQuestionMark, Gamepad2 } from "lucide-react";
+import {
+  CircleQuestionMark,
+  Gamepad2,
+  Mic,
+  MessageSquare,
+  Mail,
+  Users,
+  Video,
+  User,
+  HelpCircle,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import type { FunnelOption } from "@/types/funnel";
 
 function OptionIcon({
@@ -16,8 +27,18 @@ function OptionIcon({
 }) {
   if (!option.icon && !option.fallbackIcon) return null;
 
-  const FallbackIcon =
-    option.fallbackIcon === "question" ? CircleQuestionMark : Gamepad2;
+  const iconMap: Record<string, LucideIcon> = {
+    question: CircleQuestionMark,
+    gamepad: Gamepad2,
+    mic: Mic,
+    "message-square": MessageSquare,
+    mail: Mail,
+    users: Users,
+    video: Video,
+    user: User,
+    "help-circle": HelpCircle,
+  };
+  const FallbackIcon = iconMap[option.fallbackIcon ?? ""] ?? Gamepad2;
   const hasCustomBackground = Boolean(option.iconBackground);
 
   return (

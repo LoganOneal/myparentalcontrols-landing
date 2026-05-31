@@ -162,7 +162,7 @@ export function CheckoutClient() {
             },
             layout: {
               maxColumns: 1,
-              maxRows: 2,
+              maxRows: 3,
               overflow: "never",
             },
             lineItems: [
@@ -178,6 +178,9 @@ export function CheckoutClient() {
               paypal: "never",
               amazonPay: "never",
               klarna: "never",
+              cashApp: "never",
+              affirm: "never",
+              crypto: "never",
             },
           },
         );

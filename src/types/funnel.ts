@@ -14,7 +14,7 @@ export type FunnelOption = {
   description?: string;
   icon?: string;
   iconBackground?: string;
-  fallbackIcon?: "gamepad" | "question";
+  fallbackIcon?: "gamepad" | "question" | "mic" | "message-square" | "mail" | "users" | "video" | "user" | "help-circle";
   emoji?: string;
 };
 

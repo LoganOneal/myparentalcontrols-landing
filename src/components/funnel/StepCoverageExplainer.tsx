@@ -219,8 +219,17 @@ function getSubheadline({
 }
 
 function GameSourceNode({ option }: { option: FunnelOption }) {
-  const FallbackIcon =
-    option.fallbackIcon === "question" ? CircleQuestionMark : Gamepad2;
+  const iconMap: Record<string, LucideIcon> = {
+    question: CircleQuestionMark,
+    gamepad: Gamepad2,
+    mic: Mic,
+    "message-square": Keyboard,
+    mail: Mail,
+    users: Users,
+    video: Video,
+    "help-circle": CircleQuestionMark,
+  };
+  const FallbackIcon = iconMap[option.fallbackIcon ?? ""] ?? Gamepad2;
 
   return (
     <SourceNodeFrame label={option.label}>

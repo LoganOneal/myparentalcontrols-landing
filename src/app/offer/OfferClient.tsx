@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { loadStripe } from "@stripe/stripe-js";
+import type { Stripe as StripeType, StripeElements } from "@stripe/stripe-js";
 import {
   BellRing,
   Check,
@@ -25,6 +27,9 @@ import {
   type KodaPlanId,
 } from "@/lib/plans";
 import type { FunnelCompletion } from "@/types/funnel";
+
+const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+const stripePromise = publishableKey ? loadStripe(publishableKey) : null;
 
 const OFFER_SECONDS = 9 * 60 + 52;
 
@@ -623,6 +628,7 @@ function ReviewsSection() {
   );
 }
 
+
 export function OfferClient() {
   const router = useRouter();
   const [completion, setCompletion] = useState<
@@ -631,6 +637,12 @@ export function OfferClient() {
   const [selectedPlanId, setSelectedPlanId] =
     useState<KodaPlanId>(DEFAULT_KODA_PLAN_ID);
   const [seconds, setSeconds] = useState(OFFER_SECONDS);
+  const [walletsAvailable, setWalletsAvailable] = useState(false);
+  const [walletsChecked, setWalletsChecked] = useState(false);
+  const stripeRef = useRef<StripeType | null>(null);
+  const elementsRef = useRef<StripeElements | null>(null);
+  const expressContainerRef = useRef<HTMLDivElement | null>(null);
+  const expressInitialized = useRef(false);
 
   useEffect(() => {
     window.queueMicrotask(() => {
@@ -650,6 +662,102 @@ export function OfferClient() {
     }, 1000);
     return () => window.clearInterval(tick);
   }, []);
+
+  useEffect(() => {
+    if (!stripePromise || !completion || expressInitialized.current) return;
+    expressInitialized.current = true;
+
+    let cancelled = false;
+
+    async function init() {
+      const stripe = await stripePromise;
+      if (cancelled || !stripe) return;
+      stripeRef.current = stripe;
+
+      const res = await fetch("/api/payment-intent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          recordId: completion!.recordId,
+          planId: selectedPlanId,
+        }),
+      });
+      if (!res.ok || cancelled) return;
+      const { clientSecret, paymentIntentId, amountCents } = await res.json();
+
+      const plan = KODA_PLANS.find((p) => p.id === selectedPlanId)!;
+      const elements = stripe.elements({
+        clientSecret,
+        appearance: {
+          theme: "stripe",
+          variables: { colorPrimary: "#000000", borderRadius: "50px" },
+        },
+      });
+      elementsRef.current = elements;
+
+      const expressCheckout = elements.create("expressCheckout", {
+        buttonHeight: 64,
+        buttonTheme: { applePay: "black", googlePay: "black" },
+        buttonType: { applePay: "plain", googlePay: "plain" },
+        layout: { maxColumns: 1, maxRows: 2, overflow: "never" },
+        lineItems: [{ name: plan.checkoutLabel, amount: amountCents }],
+        paymentMethods: {
+          applePay: "auto",
+          googlePay: "auto",
+          link: "never",
+          paypal: "never",
+          amazonPay: "never",
+          klarna: "never",
+          cashApp: "never",
+          affirm: "never",
+          crypto: "never",
+        },
+      });
+
+      expressCheckout.on("ready", (event: { availablePaymentMethods?: Record<string, boolean> }) => {
+        if (cancelled) return;
+        setWalletsChecked(true);
+        setWalletsAvailable(
+          Boolean(event.availablePaymentMethods?.applePay || event.availablePaymentMethods?.googlePay),
+        );
+      });
+
+      expressCheckout.on("click", (event: { resolve: (opts: { lineItems: Array<{ name: string; amount: number }> }) => void }) => {
+        event.resolve({
+          lineItems: [{ name: plan.checkoutLabel, amount: amountCents }],
+        });
+      });
+
+      expressCheckout.on("confirm", async () => {
+        const result = await stripe.confirmPayment({
+          elements,
+          confirmParams: {
+            return_url: `${window.location.origin}/welcome?payment_intent=${paymentIntentId}&record_id=${completion!.recordId}&plan=${selectedPlanId}`,
+          },
+          redirect: "if_required",
+        });
+
+        if (result.error) return;
+
+        router.push(
+          `/welcome?payment_intent=${paymentIntentId}&record_id=${completion!.recordId}&plan=${selectedPlanId}`,
+        );
+      });
+
+      if (cancelled || !expressContainerRef.current) return;
+      expressCheckout.mount(expressContainerRef.current);
+    }
+
+    init().catch(() => {
+      if (!cancelled) {
+        setWalletsChecked(true);
+        setWalletsAvailable(false);
+      }
+    });
+
+    return () => { cancelled = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [completion]);
 
   const selectedPlan = useMemo(
     () => KODA_PLANS.find((plan) => plan.id === selectedPlanId)!,
@@ -736,14 +844,35 @@ export function OfferClient() {
         </section>
 
         <section className="mt-8">
-          <button
-            type="button"
-            onClick={handleContinue}
-            className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
-          >
-            Continue to secure checkout
-            <ChevronRight className="h-6 w-6" aria-hidden />
-          </button>
+          <div
+            ref={expressContainerRef}
+            className={walletsChecked && !walletsAvailable ? "hidden" : "min-h-[64px]"}
+          />
+          {walletsAvailable && (
+            <div className="my-4 flex items-center gap-3">
+              <div className="h-px flex-1 bg-gray-200" />
+              <span className="text-[14px] font-medium text-gray-400">or</span>
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
+          )}
+          {walletsAvailable ? (
+            <button
+              type="button"
+              onClick={handleContinue}
+              className="flex h-14 w-full items-center justify-center gap-2 text-[17px] font-bold text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Continue with another payment method
+            </button>
+          ) : (walletsChecked || !completion) && (
+            <button
+              type="button"
+              onClick={handleContinue}
+              className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
+            >
+              Continue to secure checkout
+              <ChevronRight className="h-6 w-6" aria-hidden />
+            </button>
+          )}
         </section>
 
         <section className="mt-8 text-center">
@@ -769,14 +898,38 @@ export function OfferClient() {
         />
 
         <div className="mt-4 pb-2">
-          <button
-            type="button"
-            onClick={handleContinue}
-            className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
-          >
-            Continue to secure checkout
-            <ChevronRight className="h-6 w-6" aria-hidden />
-          </button>
+          {walletsAvailable ? (
+            <>
+              <button
+                type="button"
+                onClick={() => expressContainerRef.current?.querySelector("button")?.click()}
+                className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
+              >
+                Pay now
+              </button>
+              <div className="my-4 flex items-center gap-3">
+                <div className="h-px flex-1 bg-gray-200" />
+                <span className="text-[14px] font-medium text-gray-400">or</span>
+                <div className="h-px flex-1 bg-gray-200" />
+              </div>
+              <button
+                type="button"
+                onClick={handleContinue}
+                className="flex h-14 w-full items-center justify-center gap-2 text-[17px] font-bold text-gray-900 hover:text-gray-600 transition-colors"
+              >
+                Continue with another payment method
+              </button>
+            </>
+          ) : (
+            <button
+              type="button"
+              onClick={handleContinue}
+              className="flex h-16 w-full items-center justify-center gap-3 rounded-full bg-black text-[19px] font-black text-white shadow-[0_18px_42px_-28px_rgba(0,0,0,0.85)]"
+            >
+              Continue to secure checkout
+              <ChevronRight className="h-6 w-6" aria-hidden />
+            </button>
+          )}
         </div>
       </div>
     </main>
