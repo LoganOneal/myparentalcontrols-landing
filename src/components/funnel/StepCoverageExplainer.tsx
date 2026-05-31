@@ -518,7 +518,7 @@ export function StepCoverageExplainer({
           {supportsAllPcGames && (
             <div className="flex items-start gap-2">
               <Gamepad2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--koda-bear-blue)]" aria-hidden />
-              <span>Koda supports all PC games, including the ones that are not listed here.</span>
+              <span>Koda supports any app or game on PC and Mac.</span>
             </div>
           )}
           {mostlyAlone && (

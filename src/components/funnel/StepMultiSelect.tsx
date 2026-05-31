@@ -12,6 +12,13 @@ import {
   Video,
   User,
   HelpCircle,
+  UserX,
+  ShieldAlert,
+  Angry,
+  MessageCircleWarning,
+  EyeOff,
+  Clock,
+  Eye,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { FunnelOption } from "@/types/funnel";
@@ -37,13 +44,20 @@ function OptionIcon({
     video: Video,
     user: User,
     "help-circle": HelpCircle,
+    "user-x": UserX,
+    "shield-x": ShieldAlert,
+    angry: Angry,
+    "message-circle-warning": MessageCircleWarning,
+    "eye-off": EyeOff,
+    clock: Clock,
+    eye: Eye,
   };
   const FallbackIcon = iconMap[option.fallbackIcon ?? ""] ?? Gamepad2;
   const hasCustomBackground = Boolean(option.iconBackground);
 
   return (
     <span
-      className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-colors duration-150"
+      className="flex h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg sm:rounded-xl border bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-colors duration-150"
       style={{
         borderColor: hasCustomBackground
           ? "transparent"
@@ -61,14 +75,14 @@ function OptionIcon({
           aria-hidden="true"
           width={26}
           height={26}
-          className="max-h-7 w-auto max-w-8 object-contain"
+          className="max-h-5 sm:max-h-7 w-auto max-w-6 sm:max-w-8 object-contain"
         />
       ) : (
         <FallbackIcon
           aria-hidden="true"
-          className="h-5 w-5"
+          className="h-4 w-4 sm:h-5 sm:w-5"
           strokeWidth={2}
-          style={{ color: isSelected ? brandColor : "#6b7280" }}
+          style={{ color: option.iconColor ?? (isSelected ? brandColor : "#6b7280") }}
         />
       )}
     </span>
@@ -111,19 +125,19 @@ export function StepMultiSelect({
   const isValid = selected.size >= min;
 
   return (
-    <div className="flex flex-col flex-1 animate-in fade-in slide-in-from-right-4 duration-300">
-      <div className="mb-7">
+    <div className="flex flex-col flex-1 animate-in fade-in slide-in-from-right-4 duration-300 pb-24 sm:pb-0">
+      <div className="mb-5 sm:mb-7">
         <h1 className="text-[26px] sm:text-[30px] leading-[1.2] tracking-tight text-gray-900 font-bold">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
+          <p className="mt-1.5 sm:mt-2 text-[15px] leading-relaxed text-gray-500">
             {subtitle}
           </p>
         )}
       </div>
 
-      <div className="space-y-2 mb-8">
+      <div className="space-y-1.5 sm:space-y-2 mb-8">
         {options.map((opt) => {
           const isSelected = selected.has(opt.id);
           return (
@@ -131,19 +145,19 @@ export function StepMultiSelect({
               key={opt.id}
               type="button"
               onClick={() => toggle(opt.id)}
-              className="w-full flex min-h-14 items-center justify-between gap-4 rounded-xl border-2 px-3.5 py-2.5 text-left transition-all duration-150"
+              className="w-full flex min-h-11 sm:min-h-14 items-center justify-between gap-3 sm:gap-4 rounded-xl border-2 px-3 sm:px-3.5 py-2 sm:py-2.5 text-left transition-all duration-150"
               style={{
                 borderColor: isSelected ? brandColor : "#e5e7eb",
                 backgroundColor: isSelected ? `${brandColor}08` : "white",
               }}
             >
-              <span className="flex min-w-0 items-center gap-3">
+              <span className="flex min-w-0 items-center gap-2.5 sm:gap-3">
                 <OptionIcon
                   option={opt}
                   isSelected={isSelected}
                   brandColor={brandColor}
                 />
-                <span className="min-w-0 text-[15px] font-medium leading-snug text-gray-900">
+                <span className="min-w-0 text-[14px] sm:text-[15px] font-medium leading-snug text-gray-900">
                   {opt.label}
                 </span>
               </span>
@@ -171,18 +185,18 @@ export function StepMultiSelect({
         })}
       </div>
 
-      <div className="mt-auto">
+      <div className="fixed bottom-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-sm border-t border-gray-100 px-4 py-3 sm:relative sm:mt-auto sm:bg-transparent sm:backdrop-blur-none sm:border-0 sm:px-0 sm:py-0">
         <button
           type="button"
           onClick={() => onNext([...selected])}
           disabled={!isValid}
-          className="w-full h-14 rounded-full text-[17px] font-bold text-white transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-full max-w-[520px] mx-auto block h-14 rounded-full text-[17px] font-bold text-white transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
           style={{ backgroundColor: brandColor }}
         >
           Continue
         </button>
         {min > 0 && selected.size === 0 && (
-          <p className="mt-2 text-center text-[13px] text-gray-400">
+          <p className="mt-1.5 text-center text-[13px] text-gray-400">
             Select at least one option to continue
           </p>
         )}

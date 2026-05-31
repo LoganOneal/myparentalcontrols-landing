@@ -132,7 +132,7 @@ function getMonitorContext(steps: FunnelStep[], answers: FunnelAnswers): Monitor
       "Koda can monitor gameplay itself, not just chats, so you still get visibility when your child mostly plays solo.";
   } else if (selectedOtherPcGames) {
     monitorBody =
-      "Koda supports all PC games plus the communication channels you selected.";
+      "Koda supports any app or game on PC and Mac, plus the communication channels you selected.";
   } else if (mostlyAlone) {
     monitorBody =
       "Koda can watch the gameplay context around the communication channels you selected.";

@@ -14,7 +14,8 @@ export type FunnelOption = {
   description?: string;
   icon?: string;
   iconBackground?: string;
-  fallbackIcon?: "gamepad" | "question" | "mic" | "message-square" | "mail" | "users" | "video" | "user" | "help-circle";
+  iconColor?: string;
+  fallbackIcon?: "gamepad" | "question" | "mic" | "message-square" | "mail" | "users" | "video" | "user" | "help-circle" | "user-x" | "shield-x" | "angry" | "message-circle-warning" | "eye-off" | "clock" | "eye";
   emoji?: string;
 };
 
