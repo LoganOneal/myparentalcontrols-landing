@@ -131,13 +131,13 @@ export function StepEmailCapture({
           <p className="text-[16px] font-extrabold leading-snug tracking-tight text-gray-900">
             &ldquo;Koda gave us the context to step in calmly, without taking games away.&rdquo;
           </p>
-          <div className="mt-3 flex items-center gap-2 text-[12px] font-bold text-gray-500">
+          <div className="mt-3 flex items-center gap-2 text-[13px] text-gray-500">
             <CheckCircle
               className="h-4 w-4 shrink-0"
               style={{ color: brandColor }}
               aria-hidden
             />
-            Trusted by parents protecting kids who game online
+            <span>Trusted by <strong className="font-extrabold text-gray-700">23,000+</strong> parents protecting kids who game online</span>
           </div>
         </div>
 
