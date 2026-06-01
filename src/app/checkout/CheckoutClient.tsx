@@ -200,9 +200,6 @@ export function CheckoutClient() {
               paypal: "never",
               amazonPay: "never",
               klarna: "never",
-              cashApp: "never",
-              affirm: "never",
-              crypto: "never",
             },
           },
         );

@@ -708,9 +708,6 @@ export function OfferClient() {
           paypal: "never",
           amazonPay: "never",
           klarna: "never",
-          cashApp: "never",
-          affirm: "never",
-          crypto: "never",
         },
       });
 
