@@ -27,6 +27,7 @@ export type WaitlistPatch = {
   paid_skip?: boolean;
   premium_position?: number;
   stripe_session_id?: string;
+  quiz_answers?: Record<string, string[]>;
 };
 
 export async function upsertWaitlistEmail(args: {

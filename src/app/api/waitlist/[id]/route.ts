@@ -10,6 +10,7 @@ const PatchSchema = z.object({
   kidsAges: z.array(z.number().int().min(0).max(25)).max(12).optional(),
   games: z.array(z.string().max(60)).max(50).optional(),
   concerns: z.array(z.string().max(140)).max(50).optional(),
+  quizAnswers: z.record(z.string(), z.array(z.string())).optional(),
 });
 
 export async function PATCH(
@@ -41,6 +42,10 @@ export async function PATCH(
   if (body.concerns !== undefined) {
     airtableFields["Concerns"] = body.concerns.join(", ");
     supabaseFields.concerns = body.concerns;
+  }
+  if (body.quizAnswers !== undefined) {
+    airtableFields["Quiz Answers"] = JSON.stringify(body.quizAnswers);
+    supabaseFields.quiz_answers = body.quizAnswers;
   }
 
   try {

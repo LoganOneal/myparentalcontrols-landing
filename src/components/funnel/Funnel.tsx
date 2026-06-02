@@ -100,9 +100,14 @@ export function Funnel({
     setSubmitting(true);
     setError(null);
     try {
-      const { joinWaitlist } = await import("@/lib/waitlist-client");
+      const { joinWaitlist, saveQuizAnswers } = await import("@/lib/waitlist-client");
       const result = await joinWaitlist(emailValue);
       setWaitlistRecord(result);
+
+      saveQuizAnswers(result.recordId, answers).catch((e) =>
+        console.error("quiz answers save failed", e),
+      );
+
       if (!currentStep) return;
       const nextVisible = getVisibleSteps(config, answers);
       const currentIdx = nextVisible.findIndex((s) => s.id === currentStep.id);

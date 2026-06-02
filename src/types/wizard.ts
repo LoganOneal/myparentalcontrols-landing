@@ -20,6 +20,7 @@ export type WaitlistRecord = {
     "Paid Skip"?: boolean;
     "Premium Position"?: number;
     "Stripe Session ID"?: string;
+    "Quiz Answers"?: string;
   };
 };
 
