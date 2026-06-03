@@ -497,7 +497,7 @@ export function CheckoutClient() {
           </div>
 
           <div className="space-y-3">
-            <label className="block">
+            <div className="block">
               <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                 Card number
               </span>
@@ -505,10 +505,10 @@ export function CheckoutClient() {
                 ref={cardNumberElementContainer}
                 className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
               />
-            </label>
+            </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <label className="block">
+              <div className="block">
                 <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                   Expiration date
                 </span>
@@ -516,9 +516,9 @@ export function CheckoutClient() {
                   ref={cardExpiryElementContainer}
                   className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
                 />
-              </label>
+              </div>
 
-              <label className="block">
+              <div className="block">
                 <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                   Security code
                 </span>
@@ -526,7 +526,7 @@ export function CheckoutClient() {
                   ref={cardCvcElementContainer}
                   className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
                 />
-              </label>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
