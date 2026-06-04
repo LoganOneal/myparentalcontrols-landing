@@ -173,6 +173,16 @@
     min-height: 100vh;
     overflow-x: clip;
   }
+  /* Stripe Elements render in iframes that break when ancestor elements use
+     overflow-x: clip or when the wildcard * rule applies outline/border
+     properties to the iframe. This ensures the iframe can receive focus and
+     keyboard input. */
+  .StripeElement iframe,
+  .__PrivateStripeElement iframe {
+    outline: none !important;
+    border: none !important;
+    overflow: visible !important;
+  }
 }
 
 /* Hide horizontal scrollbar on carousels — keeps native scroll behavior intact. */

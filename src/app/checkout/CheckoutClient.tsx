@@ -19,6 +19,15 @@ import {
 } from "@/lib/plans";
 import type { FunnelCompletion } from "@/types/funnel";
 
+function useDisableBodyClip() {
+  useEffect(() => {
+    document.body.style.overflowX = "visible";
+    return () => {
+      document.body.style.overflowX = "";
+    };
+  }, []);
+}
+
 const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
 const stripePromise = publishableKey ? loadStripe(publishableKey) : null;
 const stripeFieldStyle = {
@@ -70,6 +79,7 @@ function parsePlanId(value: string | null): KodaPlanId {
 }
 
 export function CheckoutClient() {
+  useDisableBodyClip();
   const router = useRouter();
   const [completion, setCompletion] = useState<
     FunnelCompletion | null | undefined
@@ -497,34 +507,34 @@ export function CheckoutClient() {
           </div>
 
           <div className="space-y-3">
-            <div className="block">
+            <div>
               <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                 Card number
               </span>
               <div
                 ref={cardNumberElementContainer}
-                className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
+                className="h-14 rounded-2xl border border-gray-200 bg-white px-4 pt-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="block">
+              <div>
                 <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                   Expiration date
                 </span>
                 <div
                   ref={cardExpiryElementContainer}
-                  className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
+                  className="h-14 rounded-2xl border border-gray-200 bg-white px-4 pt-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
                 />
               </div>
 
-              <div className="block">
+              <div>
                 <span className="mb-1.5 block text-[13px] font-medium leading-none text-gray-950">
                   Security code
                 </span>
                 <div
                   ref={cardCvcElementContainer}
-                  className="flex h-14 items-center rounded-2xl border border-gray-200 bg-white px-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
+                  className="h-14 rounded-2xl border border-gray-200 bg-white px-4 pt-4 shadow-[0_5px_14px_-12px_rgba(15,23,42,0.55)]"
                 />
               </div>
             </div>
