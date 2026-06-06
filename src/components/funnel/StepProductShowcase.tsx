@@ -58,36 +58,31 @@ const SLIDE_TEMPLATES: SlideTemplate[] = [
     id: "evidence-review",
     image: "/images/app-ui-screenshots/evidence-review.png",
     title: () => "See exactly what happened — with proof.",
-    description: (games, comms) =>
-      `When something risky happens in ${games}, you get the screen recording, chat transcript, and AI analysis — not just a vague alert.`,
+    description: () => "Screen recordings, chats, and AI analysis in one place.",
   },
   {
     id: "live-monitoring",
     image: "/images/app-ui-screenshots/activity-live-monitoring.png",
     title: (games) => `Live monitoring across ${games}.`,
-    description: (_games, comms) =>
-      `See real-time activity including ${comms} — the places most parental controls can't reach.`,
+    description: () => "See activity and conversations as they happen.",
   },
   {
     id: "alerts",
     image: "/images/app-ui-screenshots/alerts-suspicious-contact.png",
     title: () => "Alerts ranked by what needs your attention.",
-    description: (_games, comms) =>
-      `Koda scans ${comms} for grooming patterns, inappropriate content, and suspicious contacts — then ranks by urgency so you know what to check first.`,
+    description: () => "The riskiest alerts rise to the top.",
   },
   {
     id: "gaming-time",
     image: "/images/app-ui-screenshots/gaming-time.png",
     title: () => "Gaming time patterns, not just totals.",
-    description: (games) =>
-      `See late-night sessions, bedtime misses, and exactly how long your child spends in ${games} — broken down by day.`,
+    description: () => "Spot late nights, long sessions, and missed bedtimes.",
   },
   {
     id: "insights",
     image: "/images/app-ui-screenshots/insights-overview.png",
     title: () => "A daily safety snapshot at a glance.",
-    description: () =>
-      `Start your day with risk status, wellbeing score, and recent trends — one calm view instead of scattered notifications.`,
+    description: () => "Risk status, wellbeing, and trends in one calm view.",
   },
 ];
 
@@ -136,26 +131,20 @@ export function StepProductShowcase({
   const slide = SLIDE_TEMPLATES[current];
 
   return (
-    <div className="flex flex-col flex-1 animate-in fade-in slide-in-from-right-4 duration-300">
-      <div className="mb-5 sm:mb-6 text-center">
-        <h1 className="text-[22px] sm:text-[26px] font-bold leading-[1.2] tracking-tight text-gray-900">
-          How Koda protects your child
-        </h1>
-      </div>
-
+    <div className="flex h-full min-h-0 flex-1 flex-col animate-in fade-in slide-in-from-right-4 duration-300">
       <div
-        className="relative mb-4 sm:mb-5 overflow-hidden rounded-2xl"
+        className="relative mb-3 min-h-0 flex-1 overflow-hidden rounded-2xl sm:mb-5 sm:flex-none"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         <div
-          className="flex transition-transform duration-300 ease-in-out"
+          className="flex h-full transition-transform duration-300 ease-in-out sm:h-auto"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {SLIDE_TEMPLATES.map((s) => (
-            <div key={s.id} className="w-full flex-shrink-0">
-              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#06b6d4]">
+            <div key={s.id} className="h-full w-full flex-shrink-0 sm:h-auto">
+              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#06b6d4] sm:h-auto sm:aspect-[3/4]">
                 <Image
                   src={s.image}
                   alt={s.title(games, comms)}
@@ -169,7 +158,7 @@ export function StepProductShowcase({
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-1.5 mb-3">
+      <div className="mb-2 flex items-center justify-center gap-1.5 sm:mb-3">
         {SLIDE_TEMPLATES.map((s, index) => (
           <button
             key={s.id}
@@ -185,16 +174,16 @@ export function StepProductShowcase({
         ))}
       </div>
 
-      <div className="mb-4 text-center">
-        <h2 className="text-[17px] sm:text-[20px] font-bold text-gray-900 leading-tight mb-1.5">
+      <div className="mb-2 text-center sm:mb-4">
+        <h2 className="mb-1 text-[18px] font-bold leading-tight text-gray-900 sm:text-[20px]">
           {slide.title(games, comms)}
         </h2>
-        <p className="text-[14px] sm:text-[15px] text-gray-500 leading-relaxed">
+        <p className="text-[13px] leading-snug text-gray-500 sm:text-[15px] sm:leading-relaxed">
           {slide.description(games, comms)}
         </p>
       </div>
 
-      <div className="mt-auto">
+      <div className="sticky bottom-0 z-10 mt-auto bg-[#FAFBFC] pt-2 pb-[calc(env(safe-area-inset-bottom)+0.25rem)]">
         {hasSeenAll ? (
           <button
             type="button"
@@ -213,11 +202,6 @@ export function StepProductShowcase({
           >
             Next
           </button>
-        )}
-        {!hasSeenAll && (
-          <p className="mt-1.5 text-center text-[12px] text-gray-400">
-            {current + 1} of {SLIDE_TEMPLATES.length}
-          </p>
         )}
       </div>
     </div>

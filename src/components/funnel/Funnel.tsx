@@ -142,6 +142,7 @@ export function Funnel({
   const showProgress = !["loading-interstitial", "value-prop", "coverage-explainer", "product-showcase"].includes(currentStep.type);
   const gameOptions =
     config.steps.find((step) => step.id === "online-spaces")?.options ?? [];
+  const isProductShowcase = currentStep.type === "product-showcase";
 
   return (
     <div className="min-h-[100dvh] flex flex-col bg-[#FAFBFC]">
@@ -174,8 +175,8 @@ export function Funnel({
         </div>
       </header>
 
-      <main className="flex-1 flex items-stretch sm:items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
-        <div className="w-full max-w-[520px] flex flex-col min-h-[480px]">
+      <main className={`flex-1 flex items-stretch sm:items-center justify-center px-4 sm:px-6 ${isProductShowcase ? "py-3 sm:py-10" : "py-6 sm:py-10"}`}>
+        <div className={`w-full max-w-[520px] flex flex-col ${isProductShowcase ? "min-h-0" : "min-h-[480px]"}`}>
           {currentStep.type === "single-select" && (
             <StepSingleSelect
               key={currentStep.id}

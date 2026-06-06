@@ -51,13 +51,13 @@ export function StepEmailCapture({
       }}
       className="flex flex-1 flex-col animate-in fade-in slide-in-from-bottom-4 duration-300"
     >
-      <div className="mx-auto mb-7 max-w-[460px] text-center">
+      <div className="mx-auto mb-5 max-w-[460px] text-center sm:mb-7">
         <KodaLogo
-          height={34}
-          className="mb-7 justify-center"
+          height={32}
+          className="mb-5 justify-center sm:mb-7"
           color={brandColor}
         />
-        <h1 className="text-[30px] font-black leading-[1.12] tracking-tight text-gray-900 sm:text-[34px]">
+        <h1 className="text-[28px] font-black leading-[1.1] tracking-tight text-gray-900 sm:text-[34px]">
           {title}
         </h1>
         {subtitle && (
@@ -78,7 +78,7 @@ export function StepEmailCapture({
           placeholder="Enter your email"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="h-16 w-full rounded-[22px] border-2 border-gray-200 bg-white px-5 text-[17px] font-semibold text-gray-900 shadow-[0_14px_34px_-28px_rgba(15,23,42,0.65)] transition-all placeholder:text-gray-400 focus:outline-none"
+          className="h-15 w-full rounded-[22px] border-2 border-gray-200 bg-white px-5 text-[17px] font-semibold text-gray-900 shadow-[0_14px_34px_-28px_rgba(15,23,42,0.65)] transition-all placeholder:text-gray-400 focus:outline-none sm:h-16"
           style={inputFocusStyle}
           onFocus={(e) => {
             e.currentTarget.style.borderColor = brandColor;
@@ -90,7 +90,7 @@ export function StepEmailCapture({
         {error && <p className="text-sm text-red-600">{error}</p>}
       </div>
 
-      <p className="mx-auto mt-4 max-w-[390px] text-center text-[12.5px] font-medium leading-relaxed text-gray-500">
+      <p className="mx-auto mt-3 max-w-[390px] text-center text-[12px] font-medium leading-snug text-gray-500 sm:mt-4 sm:text-[12.5px] sm:leading-relaxed">
         We respect your privacy and never spam. Read our{" "}
         <a
           href="/privacy"
@@ -102,8 +102,19 @@ export function StepEmailCapture({
         to understand how we use your data.
       </p>
 
-      <div className="mt-auto pt-8">
-        <div className="mb-5 rounded-[24px] border border-blue-100 bg-white p-4 shadow-[0_22px_50px_-38px_rgba(37,99,235,0.75)]">
+      <div className="sticky bottom-0 z-10 mt-4 bg-[#FAFBFC] pt-2 pb-[calc(env(safe-area-inset-bottom)+0.25rem)] sm:mt-6">
+        <button
+          type="submit"
+          disabled={!valid || submitting}
+          className="h-14 w-full rounded-full text-[17px] font-bold text-white transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60"
+          style={{ backgroundColor: brandColor }}
+        >
+          {submitting ? "Creating your plan..." : "Continue"}
+        </button>
+      </div>
+
+      <div className="mt-5 sm:mt-auto sm:pt-8">
+        <div className="rounded-[24px] border border-blue-100 bg-white p-4 shadow-[0_22px_50px_-38px_rgba(37,99,235,0.75)]">
           <div className="mb-3 flex items-center justify-between gap-4">
             <div className="flex -space-x-3">
               {PARENT_AVATARS.map((src, index) => (
@@ -140,15 +151,6 @@ export function StepEmailCapture({
             <span>Trusted by <strong className="font-extrabold text-gray-700">23,000+</strong> parents protecting kids who game online</span>
           </div>
         </div>
-
-        <button
-          type="submit"
-          disabled={!valid || submitting}
-          className="h-14 w-full rounded-full text-[17px] font-bold text-white transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60"
-          style={{ backgroundColor: brandColor }}
-        >
-          {submitting ? "Creating your plan..." : "Continue"}
-        </button>
       </div>
     </form>
   );
