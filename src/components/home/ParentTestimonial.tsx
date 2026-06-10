@@ -214,7 +214,7 @@ export function ParentTestimonial() {
       <div className="rounded-lg bg-white">
         <div className="mx-auto max-w-[1120px] px-5 py-10 sm:px-8 sm:py-14 lg:py-18">
           <div
-            className="relative"
+            className="relative lg:hidden"
             onFocus={() => setIsPaused(true)}
             onBlur={() => setIsPaused(false)}
             onPointerEnter={() => setIsPaused(true)}
@@ -298,6 +298,35 @@ export function ParentTestimonial() {
                 );
               })}
             </div>
+          </div>
+
+          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-6">
+            {TESTIMONIALS.map((testimonial, index) => (
+              <article
+                key={testimonial.quote}
+                className={`flex min-h-[300px] flex-col justify-between rounded-[28px] p-8 text-left shadow-[0_24px_54px_-34px_rgba(15,23,42,0.45)] ring-1 ${CARD_COLORS[index]}`}
+              >
+                <blockquote>
+                  <p className="text-[27px] font-semibold leading-[1.12] tracking-tight text-[rgb(30,30,30)]">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                </blockquote>
+
+                <div className="mt-8 flex items-center gap-4">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-white ring-4 ring-white shadow-[0_12px_28px_-14px_rgba(15,23,42,0.45)]">
+                    <IllustratedFace index={testimonial.avatar} />
+                  </div>
+                  <div className="min-w-0 text-left">
+                    <p className="text-lg font-extrabold leading-tight text-[rgb(30,30,30)]">
+                      {testimonial.name}
+                    </p>
+                    <p className="mt-1 text-base font-medium leading-snug text-gray-700">
+                      {testimonial.detail}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>
