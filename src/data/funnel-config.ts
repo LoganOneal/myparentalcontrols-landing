@@ -239,7 +239,7 @@ export const funnelConfig: FunnelConfig = {
       id: "summary",
       type: "summary",
       title: "Here's what changes with Koda.",
-      subtitle: "Instead of finding out after the fact, you'll get alerted when a conversation or gameplay moment starts to turn risky.",
+      subtitle: "Early warnings before risky moments escalate.",
     },
   ],
 };

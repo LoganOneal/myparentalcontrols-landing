@@ -354,19 +354,39 @@ export function StepSummary({
 
   return (
     <div className="flex flex-1 flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
-      <div className="mb-5 text-center">
-        <div className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-[13px] font-black text-blue-700 shadow-[0_12px_28px_-24px_rgba(37,99,235,0.9)]">
+      <div className="mb-4 text-center">
+        <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-[13px] font-black text-blue-700 shadow-[0_12px_28px_-24px_rgba(37,99,235,0.9)]">
           <ShieldCheck className="h-4 w-4" aria-hidden />
           Recommended for your family
         </div>
-        <h1 className="mx-auto max-w-[430px] text-[32px] font-black leading-[1.08] tracking-tight text-gray-950 sm:text-[40px]">
+        <h1 className="mx-auto max-w-[430px] text-[30px] font-black leading-[1.08] tracking-tight text-gray-950 sm:text-[40px]">
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-4 max-w-[420px] text-[16px] font-medium leading-relaxed text-slate-500">
+          <p className="mx-auto mt-3 max-w-[420px] text-[15px] font-medium leading-snug text-slate-500 sm:text-[16px] sm:leading-relaxed">
             {subtitle}
           </p>
         )}
+      </div>
+
+      <div className="sticky bottom-0 z-10 bg-[#FAFBFC] pt-2 pb-[calc(env(safe-area-inset-bottom)+0.25rem)]">
+        <button
+          type="button"
+          onClick={onGetStarted}
+          disabled={submitting}
+          className="flex h-[58px] w-full items-center justify-center gap-3 rounded-2xl text-[17px] font-black text-white shadow-[0_18px_42px_-28px_rgba(37,99,235,0.95)] transition-all duration-200 disabled:opacity-40 sm:h-[60px]"
+          style={{ backgroundColor: brandColor }}
+        >
+          <Heart className="h-6 w-6" aria-hidden />
+          <span>{submitting ? "Setting up..." : "Continue to protect my child"}</span>
+          {!submitting && <ChevronRight className="h-6 w-6" aria-hidden />}
+        </button>
+        <div className="mt-2 flex items-center justify-center gap-2 text-[12px] font-semibold text-slate-500 sm:mt-3">
+          <LockKeyhole className="h-4 w-4" aria-hidden />
+          <span>Secure checkout</span>
+          <span aria-hidden>•</span>
+          <span>Cancel anytime</span>
+        </div>
       </div>
 
       <PlanCurveGraphic context={monitorContext} />
@@ -390,25 +410,6 @@ export function StepSummary({
         </div>
       </div>
 
-      <div className="mt-auto pt-5">
-        <button
-          type="button"
-          onClick={onGetStarted}
-          disabled={submitting}
-          className="flex h-[60px] w-full items-center justify-center gap-3 rounded-2xl text-[17px] font-black text-white shadow-[0_18px_42px_-28px_rgba(37,99,235,0.95)] transition-all duration-200 disabled:opacity-40"
-          style={{ backgroundColor: brandColor }}
-        >
-          <Heart className="h-6 w-6" aria-hidden />
-          <span>{submitting ? "Setting up..." : "Continue to protect my child"}</span>
-          {!submitting && <ChevronRight className="h-6 w-6" aria-hidden />}
-        </button>
-        <div className="mt-3 flex items-center justify-center gap-2 text-[12px] font-semibold text-slate-500">
-          <LockKeyhole className="h-4 w-4" aria-hidden />
-          <span>Secure checkout</span>
-          <span aria-hidden>•</span>
-          <span>Cancel anytime</span>
-        </div>
-      </div>
     </div>
   );
 }
