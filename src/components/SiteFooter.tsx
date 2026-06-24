@@ -11,6 +11,8 @@ const FOOTER_FONT_STACK =
   '-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif';
 
 const NAV_TITLE_COLOR = "rgb(153, 153, 153)";
+const FIGMA_COMMUNITY_FILE_URL =
+  "https://www.figma.com/community/file/1651705913598943234";
 
 type NavLink = { label: string; href: string };
 
@@ -43,6 +45,7 @@ const NAV_COLUMNS: NavColumn[] = [
       { label: "Koda Parental Controls Guide", href: "/blog/what-is-koda-safety" },
       { label: "Safety & Privacy", href: "/safety-privacy" },
       { label: "Game Safety", href: "/game-safety" },
+      { label: "Figma Community File", href: FIGMA_COMMUNITY_FILE_URL },
       { label: "Manage Subscription", href: "/manage-subscription" },
     ],
   },
@@ -68,6 +71,37 @@ function FooterLogo() {
   return (
     <Link href="/" className="inline-flex items-center gap-2" aria-label="Koda home">
       <KodaLogo height={42} markSrc="/seo/logo-no-bg.svg" />
+    </Link>
+  );
+}
+
+function isExternalHref(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
+function FooterTextLink({
+  link,
+  className,
+}: {
+  link: NavLink;
+  className: string;
+}) {
+  if (isExternalHref(link.href)) {
+    return (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {link.label}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={link.href} className={className}>
+      {link.label}
     </Link>
   );
 }
@@ -103,12 +137,10 @@ export function SiteFooter() {
               <ul className="mt-[18px] space-y-3 list-none p-0">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      href={link.href}
+                    <FooterTextLink
+                      link={link}
                       className="text-white text-base no-underline hover:underline"
-                    >
-                      {link.label}
-                    </Link>
+                    />
                   </li>
                 ))}
               </ul>
@@ -146,12 +178,10 @@ export function SiteFooter() {
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 list-none p-0 m-0">
               {QUICK_LINKS.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
+                  <FooterTextLink
+                    link={link}
                     className="text-[11px] text-white no-underline hover:underline"
-                  >
-                    {link.label}
-                  </Link>
+                  />
                 </li>
               ))}
             </ul>
