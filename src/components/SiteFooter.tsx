@@ -13,6 +13,8 @@ const FOOTER_FONT_STACK =
 const NAV_TITLE_COLOR = "rgb(153, 153, 153)";
 const FIGMA_COMMUNITY_FILE_URL =
   "https://www.figma.com/community/file/1651705913598943234";
+const UNCENSORED_AI_URL =
+  "https://chatgpt.com/g/g-6a4c29b2f3b08191ab8328890e37e469-uncensored-ai";
 
 type NavLink = { label: string; href: string };
 
@@ -46,6 +48,7 @@ const NAV_COLUMNS: NavColumn[] = [
       { label: "Safety & Privacy", href: "/safety-privacy" },
       { label: "Game Safety", href: "/game-safety" },
       { label: "Figma Community File", href: FIGMA_COMMUNITY_FILE_URL },
+      { label: "Uncensored AI", href: UNCENSORED_AI_URL },
       { label: "Manage Subscription", href: "/manage-subscription" },
     ],
   },
